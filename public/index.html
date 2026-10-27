@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI Radar — Curated Best-in-Class AI Tools</title>
 <meta name="description" content="An independent, highly curated index of battle-tested, high-traction AI software, agents, and models. Zero wrappers or noise." />
+
+<!-- Free, 100% Privacy-Friendly View Counter (No Cookies, GDPR/DPDP Compliant) -->
+<!-- Replace YOUR_PANEL_KEY with goatcounter code or goatcounter.com free account if desired -->
+<script data-goatcounter="https://ai-radar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
 <style>
   :root {
     --bg: #090b10; --card: #11151e; --card-hi: #171d2b; --line: #1f2737;
@@ -17,7 +22,11 @@
   
   /* Hero */
   header { padding: 48px 0 24px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 50% 0%, #151d2f 0%, var(--bg) 70%); }
-  .editorial-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(79, 140, 246, 0.1); color: var(--accent); border: 1px solid rgba(79, 140, 246, 0.25); padding: 5px 12px; border-radius: 999px; margin-bottom: 16px; }
+  .top-stats { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+  .editorial-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(79, 140, 246, 0.1); color: var(--accent); border: 1px solid rgba(79, 140, 246, 0.25); padding: 5px 12px; border-radius: 999px; }
+  .visitor-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; background: #131a29; border: 1px solid var(--line); color: var(--muted); padding: 5px 12px; border-radius: 999px; }
+  .visitor-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); }
+
   h1 { font-size: 34px; margin: 0 0 10px; font-weight: 800; letter-spacing: -0.03em; }
   .subtitle { font-size: 16px; color: var(--muted); max-width: 680px; margin: 0 0 28px; line-height: 1.6; }
   
@@ -61,7 +70,10 @@
 <body>
 <header>
   <div class="wrap">
-    <div class="editorial-badge">✓ AI Thought-Leader Curated</div>
+    <div class="top-stats">
+      <div class="editorial-badge">✓ AI Thought-Leader Curated</div>
+      <div class="visitor-pill"><span class="dot"></span> Live Telemetry Active</div>
+    </div>
     <h1>The Elite AI Radar</h1>
     <p class="subtitle">An independent index of high-utility, verified AI tools, open-source models, and developer frameworks. Filtered for production polish — zero thin wrappers or hobby projects.</p>
     <div class="controls">
@@ -82,7 +94,7 @@
 
 <footer>
   <div class="wrap">
-    100% Independent Curation. Automated telemetry via GitHub, Hacker News, & Hugging Face official APIs. Clean IP & ready for public utility.
+    100% Independent Curation. Automated telemetry via GitHub, Hacker News, & Hugging Face official APIs. Clean IP & privacy-compliant analytics.
   </div>
 </footer>
 
@@ -157,12 +169,10 @@ function render() {
 
 async function init() {
   try {
-    // Read from static snapshot data/tools.json
     const res = await fetch("./data/tools.json");
     const json = await res.json();
     allTools = json.tools || [];
 
-    // Render category buttons
     const catBar = $("#category-bar");
     (json.categories || []).forEach(cat => {
       const btn = document.createElement("button");

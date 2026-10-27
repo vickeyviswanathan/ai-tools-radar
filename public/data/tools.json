@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T14:13:56.882Z",
+  "updatedAt": "2026-10-27T14:17:23.847Z",
   "categories": [
     "Coding",
     "Agents & Automation",
@@ -13,6 +13,66 @@
   ],
   "tools": [
     {
+      "id": 104,
+      "name": "universal modder",
+      "tagline": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
+      "url": "https://github.com/rehan-remade/universal-modder",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source breakthrough with 9,053 verified GitHub stars.",
+      "launched_at": 1790744435,
+      "score": 37.48941288028735,
+      "signal_summary": "github:9053.0",
+      "signals": [
+        "github:9053.0"
+      ]
+    },
+    {
+      "id": 105,
+      "name": "AIHOT",
+      "tagline": "一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。",
+      "url": "https://aihot.news/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source breakthrough with 8,723 verified GitHub stars.",
+      "launched_at": 1790638805,
+      "score": 34.283807877457214,
+      "signal_summary": "github:8723.0",
+      "signals": [
+        "github:8723.0"
+      ]
+    },
+    {
+      "id": 127,
+      "name": "coucou",
+      "tagline": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Scre…",
+      "url": "https://louis-cfm.github.io/coucou/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source breakthrough with 6,599 verified GitHub stars.",
+      "launched_at": 1790546052,
+      "score": 24.81751669343166,
+      "signal_summary": "github:6599.0",
+      "signals": [
+        "github:6599.0"
+      ]
+    },
+    {
+      "id": 109,
+      "name": "shaders",
+      "tagline": "WebGPU components for React, Vue, Svelte, Solid, JS & Framer",
+      "url": "https://shaders.com/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source breakthrough with 5,576 verified GitHub stars.",
+      "launched_at": 1790699786,
+      "score": 22.58010333421725,
+      "signal_summary": "github:5576.0",
+      "signals": [
+        "github:5576.0"
+      ]
+    },
+    {
       "id": 100,
       "name": "RTK (Rust Token Killer)",
       "tagline": "CLI proxy that condenses command outputs by 60–90% to save LLM tokens and execution costs.",
@@ -21,10 +81,55 @@
       "category": "Coding",
       "why_it_matters": "Essential AI CLI infrastructure that slashes LLM context token usage by up to 90% without losing error signals.",
       "launched_at": 1791900834,
-      "score": 11.540087880271724,
+      "score": 11.537732508150222,
       "signal_summary": "github:1250.0",
       "signals": [
         "github:1250.0"
+      ]
+    },
+    {
+      "id": 124,
+      "name": "anti slop",
+      "tagline": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
+      "url": "https://antislop.ai.id/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source breakthrough with 7,292 verified GitHub stars.",
+      "launched_at": 1786098596,
+      "score": 8.2197958399938,
+      "signal_summary": "github:7292.0",
+      "signals": [
+        "github:7292.0"
+      ]
+    },
+    {
+      "id": 128,
+      "name": "rakazo",
+      "tagline": "Open-source Grok Bot alternative. Choose your own model and sandbox.",
+      "url": "https://rakazo.com/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source breakthrough with 6,008 verified GitHub stars.",
+      "launched_at": 1786602536,
+      "score": 7.405784384345766,
+      "signal_summary": "github:6008.0",
+      "signals": [
+        "github:6008.0"
+      ]
+    },
+    {
+      "id": 129,
+      "name": "OpenMausBot",
+      "tagline": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "url": "https://www.openmausbot.com/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source breakthrough with 5,739 verified GitHub stars.",
+      "launched_at": 1786474735,
+      "score": 6.91120300842376,
+      "signal_summary": "github:5739.0",
+      "signals": [
+        "github:5739.0"
       ]
     },
     {
@@ -36,7 +141,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792997771,
-      "score": 4.7674057019869345,
+      "score": 4.757544790813873,
       "signal_summary": "github:32.0",
       "signals": [
         "github:32.0"
@@ -51,7 +156,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1793104329,
-      "score": 4.1657845825251885,
+      "score": 4.089331322889129,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -66,130 +171,70 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792966377,
-      "score": 3.944260364536484,
+      "score": 3.937792772283053,
       "signal_summary": "github:35.0",
       "signals": [
         "github:35.0"
       ]
     },
     {
-      "id": 90,
-      "name": "SkillTotal",
-      "tagline": "SkillTotal – scan packages before Claude Code installs them",
-      "url": "https://github.com/pezhik/skilltotal",
+      "id": 114,
+      "name": "Fuxi",
+      "tagline": "FuXi is a fast, self-contained AI coding agent that lives in your terminal — edit code, run commands, and drive tools, with cost-aware routing across LLM providers.",
+      "url": "https://www.fuxicode.com/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1793105900,
-      "score": 2.4218033740579306,
-      "signal_summary": "hn:1.0",
+      "why_it_matters": "Production open-source breakthrough with 3,204 verified GitHub stars.",
+      "launched_at": 1785828731,
+      "score": 3.451802669489567,
+      "signal_summary": "github:3204.0",
       "signals": [
-        "hn:1.0"
+        "github:3204.0"
       ]
     },
     {
-      "id": 91,
-      "name": "ssh zydra.sh, a GPU Linux desktop in your terminal, with Do…",
-      "tagline": "ssh zydra.sh, a GPU Linux desktop in your terminal, with Doom",
-      "url": "https://zydra.sh/",
+      "id": 118,
+      "name": "deepseek harness",
+      "tagline": "DeepSeek Harness: Everything is a Plugin.",
+      "url": "https://deepseek.com/harness",
       "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1793105840,
-      "score": 2.407028786938853,
-      "signal_summary": "hn:1.0",
+      "category": "Agents & Automation",
+      "why_it_matters": "Production open-source breakthrough with 2,63,422 verified GitHub stars.",
+      "launched_at": 1786622192,
+      "score": 325.8875911481074,
+      "signal_summary": "github:263422.0",
       "signals": [
-        "hn:1.0"
+        "github:263422.0"
       ]
     },
     {
-      "id": 92,
-      "name": "Cordane",
-      "tagline": "Cordane – run coding agents on machines you own, no open ports",
-      "url": "https://github.com/cordane/cordane",
+      "id": 103,
+      "name": "solidcraft",
+      "tagline": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
+      "url": "https://solidcraft.io/",
       "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1793105806,
-      "score": 2.398729672168057,
-      "signal_summary": "hn:1.0",
+      "category": "Agents & Automation",
+      "why_it_matters": "Production open-source breakthrough with 10,984 verified GitHub stars.",
+      "launched_at": 1791399468,
+      "score": 67.0165382207201,
+      "signal_summary": "github:10984.0",
       "signals": [
-        "hn:1.0"
+        "github:10984.0"
       ]
     },
     {
-      "id": 35,
-      "name": "arkdraw",
-      "tagline": "Arkdraw is an open-source diagramming app for creating flowcharts, UML, ER diagrams, network maps, wireframes, and mind maps with a built-in AI assistant that generates and edits diagrams from natura…",
-      "url": "https://arkdraw.com/",
+      "id": 116,
+      "name": "earshot",
+      "tagline": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
+      "url": "https://github.com/Leonxlnx/earshot",
       "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1792781376,
-      "score": 2.203550087605025,
-      "signal_summary": "github:51.0",
+      "category": "Agents & Automation",
+      "why_it_matters": "Production open-source breakthrough with 2,997 verified GitHub stars.",
+      "launched_at": 1792047166,
+      "score": 32.25964439922647,
+      "signal_summary": "github:2997.0",
       "signals": [
-        "github:51.0"
-      ]
-    },
-    {
-      "id": 97,
-      "name": "Friday, an open",
-      "tagline": "Friday, an open-source harness for coding agents that work as a team",
-      "url": "https://github.com/splashxmoon/friday",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1793104815,
-      "score": 2.1779942090391025,
-      "signal_summary": "hn:1.0",
-      "signals": [
-        "hn:1.0"
-      ]
-    },
-    {
-      "id": 34,
-      "name": "call of duty modern warfare resocket 4 fps optimizer",
-      "tagline": "Lightweight desktop tool for Call of Duty: Modern Warfare 4. Smart FPS optimization, performance tuning, process management and real-time monitoring. Designed to improve frame rates and stability. Re…",
-      "url": "https://github.com/Demonwave56032/call-of-duty-modern-warfare-resocket-4-fps-optimizer",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1792739150,
-      "score": 2.0244030221400577,
-      "signal_summary": "github:54.0",
-      "signals": [
-        "github:54.0"
-      ]
-    },
-    {
-      "id": 32,
-      "name": "runic",
-      "tagline": "Runic macOS Menu Bar App for AI Usage Cost and Token Tracking",
-      "url": "https://github.com/Eljot19/runic",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1792699770,
-      "score": 1.9308411746140712,
-      "signal_summary": "github:58.0",
-      "signals": [
-        "github:58.0"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Minecraft as one C file that runs inside a PDF, a terminal…",
-      "tagline": "Minecraft as one C file that runs inside a PDF, a terminal and a Kindle",
-      "url": "https://github.com/pragyaangaur/Can-It-Run-Minecraft",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1793103215,
-      "score": 1.8913353887107889,
-      "signal_summary": "hn:1.0",
-      "signals": [
-        "hn:1.0"
+        "github:2997.0"
       ]
     },
     {
@@ -201,10 +246,70 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 408 verified GitHub stars.",
       "launched_at": 1792881283,
-      "score": 26.912238385499503,
+      "score": 26.883981643393287,
       "signal_summary": "github:408.0",
       "signals": [
         "github:408.0"
+      ]
+    },
+    {
+      "id": 120,
+      "name": "moli",
+      "tagline": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
+      "url": "https://browser.lexmount.com/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Production open-source breakthrough with 21,105 verified GitHub stars.",
+      "launched_at": 1786368030,
+      "score": 24.934362445936145,
+      "signal_summary": "github:21105.0",
+      "signals": [
+        "github:21105.0"
+      ]
+    },
+    {
+      "id": 121,
+      "name": "artemis",
+      "tagline": "ARTEMIS turns natural-language instructions into reliable Android automation. It automates end-to-end workflows, captures logs, and integrates seamlessly with AI coding assistants such as Antigravity…",
+      "url": "https://github.com/google/artemis",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Production open-source breakthrough with 15,113 verified GitHub stars.",
+      "launched_at": 1786643977,
+      "score": 18.772289201273527,
+      "signal_summary": "github:15113.0",
+      "signals": [
+        "github:15113.0"
+      ]
+    },
+    {
+      "id": 123,
+      "name": "reef",
+      "tagline": "Infrastructure for continually self‑improving agents",
+      "url": "https://reefinfra.ai/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Production open-source breakthrough with 7,749 verified GitHub stars.",
+      "launched_at": 1788140358,
+      "score": 13.194614612795498,
+      "signal_summary": "github:7749.0",
+      "signals": [
+        "github:7749.0"
+      ]
+    },
+    {
+      "id": 126,
+      "name": "monid",
+      "tagline": "Monid - OpenRouter for agent tools. Join our community at https://discord.gg/rQzztcgJV8",
+      "url": "https://monid.ai/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Production open-source breakthrough with 6,736 verified GitHub stars.",
+      "launched_at": 1787715918,
+      "score": 10.396970679082656,
+      "signal_summary": "github:6736.0",
+      "signals": [
+        "github:6736.0"
       ]
     },
     {
@@ -216,160 +321,55 @@
       "category": "Agents & Automation",
       "why_it_matters": "Trending community demo & model with 54 likes on Hugging Face.",
       "launched_at": 1793017074,
-      "score": 9.931985531245454,
+      "score": 9.907507783777938,
       "signal_summary": "huggingface:54.0",
       "signals": [
         "huggingface:54.0"
       ]
     },
     {
-      "id": 24,
-      "name": "dafeiyu cleaner",
-      "tagline": "DeepSeek 蓝色大肥鱼消除计划：识别并清理 B 站（Bilibili）评论区中由 DeepSeek 大模型、AI Agent 驱动的机器人账号（大肥鱼）的 Chrome / Edge / Firefox 浏览器插件。离线规则 + DeepSeek API 精判，AI 评论检测、空间主页鉴定、鲸鱼娘一键清场。DeepSeek AI bot detector for Bilibili comm…",
-      "url": "https://www.bilibili.com/video/BV1Ywn46EEyF",
+      "id": 108,
+      "name": "OpenBot",
+      "tagline": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "url": "https://www.copilotkit.ai/openbot",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1792726773,
-      "score": 4.003653706861304,
-      "signal_summary": "github:111.0",
+      "why_it_matters": "Production open-source breakthrough with 7,305 verified GitHub stars.",
+      "launched_at": 1786927499,
+      "score": 9.574706736588677,
+      "signal_summary": "github:7305.0",
       "signals": [
-        "github:111.0"
+        "github:7305.0"
       ]
     },
     {
-      "id": 102,
-      "name": "Libretto",
-      "tagline": "Browser automation CLI & typed workflow engine for live site inspection, prototyping, and resilient AI interaction.",
-      "url": "https://github.com/saffron-health/libretto",
-      "emoji": "🌐",
+      "id": 125,
+      "name": "dsh routing suite",
+      "tagline": "dsh-routing-suite — injector + router-standard kit: install the runtime injector first, then the task-aware reasoning-mode router preset (measured P1-P23).",
+      "url": "https://github.com/yjh051108/dsh-routing-suite",
+      "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Next-gen browser automation framework with live inspection REPL, snapshot diffs, and anti-bot mitigation.",
-      "launched_at": 1790518434,
-      "score": 3.119135545869871,
-      "signal_summary": "github:840.0",
+      "why_it_matters": "Production open-source breakthrough with 7,004 verified GitHub stars.",
+      "launched_at": 1786742455,
+      "score": 8.861376589740603,
+      "signal_summary": "github:7004.0",
       "signals": [
-        "github:840.0"
+        "github:7004.0"
       ]
     },
     {
-      "id": 30,
-      "name": "37studio",
-      "tagline": "Open-source AI alternative to Buffer and Opus Clip: Claude Code makes on-brand videos, posts them to 9 platforms and drafts replies. Self-hosted, your own keys.",
-      "url": "https://studio.shaitrish.com/",
+      "id": 117,
+      "name": "nanoMuse",
+      "tagline": "nanoMuse: an open-source personal agent for every device you own. One agent with a name and a look of its own that does things, keeps working while the app is closed, remembers you, and asks before a…",
+      "url": "https://nanomuse.cn/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1792715212,
-      "score": 2.5076957800172672,
-      "signal_summary": "github:72.0",
+      "why_it_matters": "Production open-source breakthrough with 2,706 verified GitHub stars.",
+      "launched_at": 1790143986,
+      "score": 8.54883028920664,
+      "signal_summary": "github:2706.0",
       "signals": [
-        "github:72.0"
-      ]
-    },
-    {
-      "id": 88,
-      "name": "CiteWing",
-      "tagline": "CiteWing – AI backlink outreach agent",
-      "url": "https://citewing.com/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1793106233,
-      "score": 2.506917556058622,
-      "signal_summary": "hn:1.0",
-      "signals": [
-        "hn:1.0"
-      ]
-    },
-    {
-      "id": 89,
-      "name": "Hashling, an open",
-      "tagline": "Hashling, an open-source Mac security agent your own AI can talk to",
-      "url": "https://github.com/0xArx/hashling",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1793106047,
-      "score": 2.458713045276738,
-      "signal_summary": "hn:1.0",
-      "signals": [
-        "hn:1.0"
-      ]
-    },
-    {
-      "id": 93,
-      "name": "AGBoss Dependency injection and static validation for AI ag…",
-      "tagline": "AGBoss Dependency injection and static validation for AI agents",
-      "url": "https://github.com/agbossjs/agboss",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1793105805,
-      "score": 2.398486374790312,
-      "signal_summary": "hn:1.0",
-      "signals": [
-        "hn:1.0"
-      ]
-    },
-    {
-      "id": 94,
-      "name": "Self",
-      "tagline": "Self-hosted Google Business Profile manager with agent approvals",
-      "url": "https://github.com/synectus/OpenGMB",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1793105465,
-      "score": 2.318309879732167,
-      "signal_summary": "hn:1.0",
-      "signals": [
-        "hn:1.0"
-      ]
-    },
-    {
-      "id": 96,
-      "name": "Change my page if the agent allows it",
-      "tagline": "Change my page if the agent allows it",
-      "url": "https://actera.dev/try",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1793105078,
-      "score": 2.2328442301479865,
-      "signal_summary": "hn:1.0",
-      "signals": [
-        "hn:1.0"
-      ]
-    },
-    {
-      "id": 22,
-      "name": "Ultron",
-      "tagline": "Autonomous desktop intelligence with MCU Ultron persona, mood-aware workspace orchestration, cyber security sentry, and full PC control.",
-      "url": "https://github.com/AbuZar-Ansarii/Ultron",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1792317779,
-      "score": 2.01614662074082,
-      "signal_summary": "github:132.0",
-      "signals": [
-        "github:132.0"
-      ]
-    },
-    {
-      "id": 14,
-      "name": "Limma",
-      "tagline": "Limma – MCP for total recall and precision in data retrieval for agents",
-      "url": "https://limma.ai/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1793069443,
-      "score": 0.8892261839888613,
-      "signal_summary": "hn:2.0",
-      "signals": [
-        "hn:2.0"
+        "github:2706.0"
       ]
     },
     {
@@ -381,7 +381,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1793107815,
-      "score": 2.998997803445892,
+      "score": 2.924864898860282,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -396,7 +396,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 232 likes on Hugging Face.",
       "launched_at": 1791979853,
-      "score": 2.3215586358605194,
+      "score": 2.3210518961923876,
       "signal_summary": "huggingface:232.0",
       "signals": [
         "huggingface:232.0"
@@ -411,10 +411,25 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 170 likes on Hugging Face.",
       "launched_at": 1791966846,
-      "score": 1.6780953233682192,
+      "score": 1.677733175264128,
       "signal_summary": "huggingface:170.0",
       "signals": [
         "huggingface:170.0"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "FIBO 2.0 Edit Turbo",
+      "tagline": "Fibo 2.0 Edit Turbo image editing in 4 steps",
+      "url": "https://huggingface.co/spaces/briaai/Fibo-2.0-editing",
+      "emoji": "⚡",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 77 likes on Hugging Face.",
+      "launched_at": 1792418444,
+      "score": 1.3816044318404956,
+      "signal_summary": "huggingface:77.0",
+      "signals": [
+        "huggingface:77.0"
       ]
     },
     {
@@ -426,25 +441,10 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 480 likes on Hugging Face.",
       "launched_at": 1789899359,
-      "score": 1.3792917307934942,
+      "score": 1.3791852788545311,
       "signal_summary": "huggingface:480.0",
       "signals": [
         "huggingface:480.0"
-      ]
-    },
-    {
-      "id": 60,
-      "name": "FIBO 2.0 Edit Turbo",
-      "tagline": "Fibo 2.0 Edit Turbo image editing in 4 steps",
-      "url": "https://huggingface.co/spaces/briaai/Fibo-2.0-editing",
-      "emoji": "⚡",
-      "category": "Image & Design",
-      "why_it_matters": "Trending community demo & model with 76 likes on Hugging Face.",
-      "launched_at": 1792418444,
-      "score": 1.36414599572294,
-      "signal_summary": "huggingface:76.0",
-      "signals": [
-        "huggingface:76.0"
       ]
     },
     {
@@ -456,7 +456,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 236 likes on Hugging Face.",
       "launched_at": 1791183939,
-      "score": 1.2497089950155607,
+      "score": 1.2495484780552926,
       "signal_summary": "huggingface:236.0",
       "signals": [
         "huggingface:236.0"
@@ -471,7 +471,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 404 likes on Hugging Face.",
       "launched_at": 1790050655,
-      "score": 1.229960214062061,
+      "score": 1.2298606048906595,
       "signal_summary": "huggingface:404.0",
       "signals": [
         "huggingface:404.0"
@@ -486,7 +486,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 109 likes on Hugging Face.",
       "launched_at": 1792068881,
-      "score": 1.2027646228342925,
+      "score": 1.2024798071439238,
       "signal_summary": "huggingface:109.0",
       "signals": [
         "huggingface:109.0"
@@ -501,7 +501,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1792759826,
-      "score": 1.1228921958911482,
+      "score": 1.1221131538571958,
       "signal_summary": "huggingface:28.0",
       "signals": [
         "huggingface:28.0"
@@ -516,7 +516,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 1019 likes on Hugging Face.",
       "launched_at": 1784116156,
-      "score": 0.852237185702341,
+      "score": 0.8522136684182902,
       "signal_summary": "huggingface:1019.0",
       "signals": [
         "huggingface:1019.0"
@@ -531,7 +531,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 267 likes on Hugging Face.",
       "launched_at": 1789814899,
-      "score": 0.7437474198664252,
+      "score": 0.7436914862201868,
       "signal_summary": "huggingface:267.0",
       "signals": [
         "huggingface:267.0"
@@ -546,10 +546,25 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 739 likes on Hugging Face.",
       "launched_at": 1785342238,
-      "score": 0.736784167811914,
+      "score": 0.7367606305180241,
       "signal_summary": "huggingface:739.0",
       "signals": [
         "huggingface:739.0"
+      ]
+    },
+    {
+      "id": 122,
+      "name": "lemo opuscar",
+      "tagline": "A toolbox of film styles made in code for Claude Code: 59 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By L…",
+      "url": "https://lemomo-ai.github.io/lemo-opuscar/",
+      "emoji": null,
+      "category": "Video",
+      "why_it_matters": "Production open-source breakthrough with 8,490 verified GitHub stars.",
+      "launched_at": 1790417441,
+      "score": 30.11317763387261,
+      "signal_summary": "github:8490.0",
+      "signals": [
+        "github:8490.0"
       ]
     },
     {
@@ -559,12 +574,12 @@
       "url": "https://huggingface.co/spaces/vamo455/Omni-videos-custom-auto_prompt_high-quality",
       "emoji": "🏆",
       "category": "Video",
-      "why_it_matters": "Trending community demo & model with 367 likes on Hugging Face.",
+      "why_it_matters": "Trending community demo & model with 368 likes on Hugging Face.",
       "launched_at": 1788837788,
-      "score": 0.749057317437795,
-      "signal_summary": "huggingface:367.0",
+      "score": 0.7510547545392139,
+      "signal_summary": "huggingface:368.0",
       "signals": [
-        "huggingface:367.0"
+        "huggingface:368.0"
       ]
     },
     {
@@ -576,7 +591,7 @@
       "category": "Video",
       "why_it_matters": null,
       "launched_at": 1791983627,
-      "score": 0.7334087034010127,
+      "score": 0.7332480854967408,
       "signal_summary": "github:73.0",
       "signals": [
         "github:73.0"
@@ -591,7 +606,7 @@
       "category": "Video",
       "why_it_matters": null,
       "launched_at": 1792487317,
-      "score": 0.691145428547164,
+      "score": 0.6908731560512925,
       "signal_summary": "huggingface:34.0",
       "signals": [
         "huggingface:34.0"
@@ -606,7 +621,7 @@
       "category": "Video",
       "why_it_matters": "Trending community demo & model with 201 likes on Hugging Face.",
       "launched_at": 1789289929,
-      "score": 0.4690645745365192,
+      "score": 0.4690341362847114,
       "signal_summary": "huggingface:201.0",
       "signals": [
         "huggingface:201.0"
@@ -621,7 +636,7 @@
       "category": "Video",
       "why_it_matters": "Trending community demo & model with 63 likes on Hugging Face.",
       "launched_at": 1791390316,
-      "score": 0.3819936895036193,
+      "score": 0.3819387635340366,
       "signal_summary": "huggingface:63.0",
       "signals": [
         "huggingface:63.0"
@@ -636,7 +651,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Trending community demo & model with 148 likes on Hugging Face.",
       "launched_at": 1791922869,
-      "score": 1.3966412147665344,
+      "score": 1.3963508991045768,
       "signal_summary": "huggingface:148.0",
       "signals": [
         "huggingface:148.0"
@@ -651,7 +666,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792675162,
-      "score": 1.367572533250115,
+      "score": 1.3668051880726844,
       "signal_summary": "github:44.0",
       "signals": [
         "github:44.0"
@@ -666,7 +681,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Trending community demo & model with 47 likes on Hugging Face.",
       "launched_at": 1792494494,
-      "score": 0.9686266868901985,
+      "score": 0.9682407090859347,
       "signal_summary": "huggingface:47.0",
       "signals": [
         "huggingface:47.0"
@@ -681,7 +696,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792075004,
-      "score": 0.7334148116648234,
+      "score": 0.7332401187133608,
       "signal_summary": "huggingface:66.0",
       "signals": [
         "huggingface:66.0"
@@ -696,7 +711,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792106320,
-      "score": 0.3112164261380389,
+      "score": 0.31114000219299925,
       "signal_summary": "github:27.0",
       "signals": [
         "github:27.0"
@@ -711,10 +726,25 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source breakthrough with 153 verified GitHub stars.",
       "launched_at": 1792991612,
-      "score": 21.46399308458437,
+      "score": 21.421762719716725,
       "signal_summary": "github:153.0",
       "signals": [
         "github:153.0"
+      ]
+    },
+    {
+      "id": 106,
+      "name": "codex with chatgpt",
+      "tagline": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
+      "url": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+      "emoji": null,
+      "category": "Chat & Assistants",
+      "why_it_matters": "Production open-source breakthrough with 7,567 verified GitHub stars.",
+      "launched_at": 1787921844,
+      "score": 12.237250895798553,
+      "signal_summary": "github:7567.0",
+      "signals": [
+        "github:7567.0"
       ]
     },
     {
@@ -726,7 +756,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792792307,
-      "score": 1.6183712988242804,
+      "score": 1.6171364803589674,
       "signal_summary": "github:36.0",
       "signals": [
         "github:36.0"
@@ -741,7 +771,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792813087,
-      "score": 1.4598076737252215,
+      "score": 1.4586178970132302,
       "signal_summary": "github:30.0",
       "signals": [
         "github:30.0"
@@ -756,7 +786,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792304638,
-      "score": 0.5392102373292147,
+      "score": 0.5390455354234162,
       "signal_summary": "github:36.0",
       "signals": [
         "github:36.0"
@@ -771,7 +801,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792486256,
-      "score": 0.52745736876395,
+      "score": 0.5272499292253173,
       "signal_summary": "github:26.0",
       "signals": [
         "github:26.0"
@@ -786,7 +816,7 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source breakthrough with 288 verified GitHub stars.",
       "launched_at": 1793007273,
-      "score": 47.376971077483084,
+      "score": 47.270556721645306,
       "signal_summary": "github:288.0",
       "signals": [
         "github:288.0"
@@ -801,7 +831,7 @@
       "category": "Productivity",
       "why_it_matters": null,
       "launched_at": 1792677611,
-      "score": 1.971200172296592,
+      "score": 1.9700879789612,
       "signal_summary": "github:63.0",
       "signals": [
         "github:63.0"
@@ -816,7 +846,7 @@
       "category": "Productivity",
       "why_it_matters": null,
       "launched_at": 1791965538,
-      "score": 0.27601566137162825,
+      "score": 0.27595616231662706,
       "signal_summary": "github:28.0",
       "signals": [
         "github:28.0"
@@ -831,7 +861,7 @@
       "category": "Research & Data",
       "why_it_matters": "Groundbreaking agentic reverse-engineering harness supporting native, managed, firmware, and WebAssembly targets.",
       "launched_at": 1791382434,
-      "score": 5.909748908670341,
+      "score": 5.9089030192470196,
       "signal_summary": "github:980.0",
       "signals": [
         "github:980.0"
@@ -846,7 +876,7 @@
       "category": "Research & Data",
       "why_it_matters": null,
       "launched_at": 1793107102,
-      "score": 2.7570905144393527,
+      "score": 2.693452624097635,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -861,7 +891,7 @@
       "category": "Research & Data",
       "why_it_matters": null,
       "launched_at": 1792726775,
-      "score": 2.633049686525205,
+      "score": 2.6313773049518887,
       "signal_summary": "github:73.0",
       "signals": [
         "github:73.0"
@@ -876,10 +906,40 @@
       "category": "Research & Data",
       "why_it_matters": "Trending community demo & model with 178 likes on Hugging Face.",
       "launched_at": 1790607131,
-      "score": 0.6890800783587957,
+      "score": 0.6890119040400314,
       "signal_summary": "huggingface:178.0",
       "signals": [
         "huggingface:178.0"
+      ]
+    },
+    {
+      "id": 141,
+      "name": "browser search",
+      "tagline": "A skill for AI agents: search the web with SearXNG, browse with Camofox, bypass protections with CloakBrowser. Anti-hallucination by design. Self-hosted, free, unlimited.",
+      "url": "https://github.com/Johell1NS/browser-search",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Production open-source breakthrough with 539 verified GitHub stars.",
+      "launched_at": 1782135793,
+      "score": 0.3550844599605283,
+      "signal_summary": "github:539.0",
+      "signals": [
+        "github:539.0"
+      ]
+    },
+    {
+      "id": 119,
+      "name": "dsh our free model",
+      "tagline": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there…",
+      "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Production open-source breakthrough with 46,316 verified GitHub stars.",
+      "launched_at": 1790266639,
+      "score": 153.90761072840655,
+      "signal_summary": "github:46316.0",
+      "signals": [
+        "github:46316.0"
       ]
     },
     {
@@ -891,7 +951,7 @@
       "category": "Models & Infra",
       "why_it_matters": null,
       "launched_at": 1793105397,
-      "score": 6.908585454679042,
+      "score": 6.77093273949982,
       "signal_summary": "hn:3.0",
       "signals": [
         "hn:3.0"
@@ -906,7 +966,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source breakthrough with 151 verified GitHub stars.",
       "launched_at": 1792619650,
-      "score": 4.07267156115297,
+      "score": 4.070641003564157,
       "signal_summary": "github:151.0",
       "signals": [
         "github:151.0"
@@ -921,7 +981,7 @@
       "category": "Models & Infra",
       "why_it_matters": null,
       "launched_at": 1793102728,
-      "score": 3.634877136105108,
+      "score": 3.5752236521486824,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -936,7 +996,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Trending community demo & model with 826 likes on Hugging Face.",
       "launched_at": 1789675516,
-      "score": 2.189534739477884,
+      "score": 2.1893767425302735,
       "signal_summary": "huggingface:826.0",
       "signals": [
         "huggingface:826.0"
@@ -951,7 +1011,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Trending community demo & model with 65 likes on Hugging Face.",
       "launched_at": 1792077236,
-      "score": 0.7241623561972357,
+      "score": 0.7239894971343658,
       "signal_summary": "huggingface:65.0",
       "signals": [
         "huggingface:65.0"

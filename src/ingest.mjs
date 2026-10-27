@@ -1,24 +1,25 @@
-// Ingestion engine with High-Bar Editorial Quality Filters + Featured Hall of Fame
+// Ingestion engine with Broad AI Queries + High-Bar Editorial Quality Filters
 import { getDb, tx, now, setMeta } from "./db.mjs";
 import { canonicalKey, categorize, clip } from "./classify.mjs";
-import { fetchHackerNews, fetchGitHub, fetchHuggingFace } from "./sources.mjs";
+import { fetchHackerNews, fetchHuggingFace } from "./sources.mjs";
+import { fetchGitHubBroad } from "./sources-broad.mjs";
 import { evaluateQuality } from "./quality.mjs";
 import { FEATURED_LEADERS } from "./featured.mjs";
 
 export async function runIngestion() {
-  console.log(`[Ingest] Starting sync across open sources...`);
+  console.log(`[Ingest] Starting broad sync across open sources...`);
   const startTime = Date.now();
   const db = getDb();
 
-  // Run source collectors concurrently
+  // Run broad multi-topic queries
   const [hnResults, ghResults, hfResults] = await Promise.allSettled([
     fetchHackerNews(),
-    fetchGitHub(),
+    fetchGitHubBroad(),
     fetchHuggingFace(),
   ]);
 
   const rawItems = [
-    ...FEATURED_LEADERS, // Always seed our featured Hall-of-Fame tools (RTK, REA, Libretto, etc.)
+    ...FEATURED_LEADERS,
     ...(hnResults.status === "fulfilled" ? hnResults.value : []),
     ...(ghResults.status === "fulfilled" ? ghResults.value : []),
     ...(hfResults.status === "fulfilled" ? hfResults.value : []),
@@ -31,7 +32,6 @@ export async function runIngestion() {
   let rejectedCount = 0;
 
   tx((d) => {
-    // Add editorial column if not exists
     try {
       d.exec(`ALTER TABLE items ADD COLUMN why_it_matters TEXT;`);
     } catch {}
@@ -59,7 +59,6 @@ export async function runIngestion() {
     `);
 
     for (const item of rawItems) {
-      // Check if it's explicitly featured
       const isPreFeatured = FEATURED_LEADERS.some(f => f.url === item.url);
       let whyItMatters = item.whyItMatters;
 
@@ -104,7 +103,6 @@ export async function runIngestion() {
       }
     }
 
-    // Momentum decay score with boost for featured tools
     const computeScore = d.prepare(`
       UPDATE items
       SET score = (
