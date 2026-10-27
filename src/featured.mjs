@@ -1,6 +1,8 @@
 // Featured Editorial Hall-of-Fame & Canonical AI Developer Infrastructure
-// Directly guaranteed high-authority tools that must always anchor the index
+// Directly guaranteed high-authority tools & apps that anchor the index
+
 export const FEATURED_LEADERS = [
+  // --- Coding & Agentic Dev ---
   {
     source: "github",
     sourceId: "rtk-ai/rtk",
@@ -13,8 +15,66 @@ export const FEATURED_LEADERS = [
     tags: ["cli", "rust", "token-optimization", "llm-cost", "developer-tools"],
     metric: 1250,
     whyItMatters: "Essential AI CLI infrastructure that slashes LLM context token usage by up to 90% without losing error signals.",
-    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 14
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
+  {
+    source: "github",
+    sourceId: "paul-gauthier/aider",
+    sourceUrl: "https://github.com/paul-gauthier/aider",
+    name: "Aider",
+    tagline: "AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.",
+    url: "https://github.com/paul-gauthier/aider",
+    emoji: "💻",
+    category: "Coding",
+    tags: ["terminal", "pair-programming", "git", "cli", "coding-agent"],
+    metric: 34500,
+    whyItMatters: "The gold standard for terminal-based AI pair programming with robust repository-wide AST parsing.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "continuedev/continue",
+    sourceUrl: "https://github.com/continuedev/continue",
+    name: "Continue",
+    tagline: "The leading open-source AI code assistant for VS Code and JetBrains connecting any model and codebase.",
+    url: "https://github.com/continuedev/continue",
+    emoji: "⏩",
+    category: "Coding",
+    tags: ["vscode", "jetbrains", "autocomplete", "code-assistant", "open-source"],
+    metric: 24200,
+    whyItMatters: "The most customizable open-source alternative to Copilot that respects privacy and local LLM backends.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
+  },
+  {
+    source: "github",
+    sourceId: "All-Hands-AI/OpenHands",
+    sourceUrl: "https://github.com/All-Hands-AI/OpenHands",
+    name: "OpenHands",
+    tagline: "Autonomous software development agent capable of writing code, running bash commands, and browsing the web.",
+    url: "https://github.com/All-Hands-AI/OpenHands",
+    emoji: "🙌",
+    category: "Coding",
+    tags: ["autonomous-agent", "software-engineering", "docker", "coding-agent"],
+    metric: 45000,
+    whyItMatters: "Community-driven autonomous developer agent capable of resolving end-to-end GitHub issues in isolated sandboxes.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "cline/cline",
+    sourceUrl: "https://github.com/cline/cline",
+    name: "Cline",
+    tagline: "Autonomous coding agent inside VS Code with file editing, shell command execution, and browser interaction.",
+    url: "https://github.com/cline/cline",
+    emoji: "🤖",
+    category: "Coding",
+    tags: ["vscode", "agent", "autonomous-coding", "developer-tools"],
+    metric: 32000,
+    whyItMatters: "Pioneering interactive coding agent extension with strict permission controls and iterative browser verification.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+
+  // --- Reverse Engineering & Security ---
   {
     source: "github",
     sourceId: "morluto/rea",
@@ -27,8 +87,38 @@ export const FEATURED_LEADERS = [
     tags: ["reverse-engineering", "decompilation", "binary-analysis", "security", "ai-agents"],
     metric: 382000,
     whyItMatters: "Massive industry-standard agentic reverse-engineering harness with over 380k+ stars across global AI developer teams.",
-    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 20
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
+  {
+    source: "github",
+    sourceId: "NationalSecurityAgency/ghidra",
+    sourceUrl: "https://github.com/NationalSecurityAgency/ghidra",
+    name: "Ghidra",
+    tagline: "Software reverse engineering (SRE) framework with disassembler, decompiler, and headless analysis.",
+    url: "https://github.com/NationalSecurityAgency/ghidra",
+    emoji: "🐉",
+    category: "Research & Data",
+    tags: ["sre", "decompiler", "disassembler", "security-tools"],
+    metric: 54000,
+    whyItMatters: "World-class extensible reverse-engineering platform powering both automated static analysis and AI security workflows.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 5
+  },
+  {
+    source: "github",
+    sourceId: "frida/frida",
+    sourceUrl: "https://github.com/frida/frida",
+    name: "Frida",
+    tagline: "Dynamic instrumentation toolkit for developers, reverse-engineers, and AI security telemetry.",
+    url: "https://github.com/frida/frida",
+    emoji: "💉",
+    category: "Research & Data",
+    tags: ["dynamic-instrumentation", "hooking", "security", "runtime"],
+    metric: 16800,
+    whyItMatters: "Essential dynamic hook framework enabling AI agents to trace system calls and inspect live process memory.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 4
+  },
+
+  // --- Agents & Automation ---
   {
     source: "github",
     sourceId: "saffron-health/libretto",
@@ -41,6 +131,284 @@ export const FEATURED_LEADERS = [
     tags: ["browser-automation", "playwright", "workflows", "web-agent", "scraping"],
     metric: 840,
     whyItMatters: "Next-gen browser automation framework with live inspection REPL, snapshot diffs, and anti-bot mitigation.",
-    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 30
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "browser-use/browser-use",
+    sourceUrl: "https://github.com/browser-use/browser-use",
+    name: "Browser-Use",
+    tagline: "Make websites accessible for AI agents with Playwright, visual grounding, and multi-tab orchestration.",
+    url: "https://github.com/browser-use/browser-use",
+    emoji: "🌍",
+    category: "Agents & Automation",
+    tags: ["browser-agent", "playwright", "vision", "automation"],
+    metric: 29500,
+    whyItMatters: "Fastest-growing autonomous browser agent library allowing LLMs to interact with any web application effortlessly.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "crewAIInc/crewAI",
+    sourceUrl: "https://github.com/crewAIInc/crewAI",
+    name: "CrewAI",
+    tagline: "Cutting-edge framework for orchestrating role-playing, autonomous AI agents to solve complex tasks collaboratively.",
+    url: "https://github.com/crewAIInc/crewAI",
+    emoji: "👥",
+    category: "Agents & Automation",
+    tags: ["multi-agent", "autonomous-agents", "orchestration", "workflow"],
+    metric: 26000,
+    whyItMatters: "The standard multi-agent coordination architecture enabling specialized agent personas to collaborate sequentially and hierarchically.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "modelcontextprotocol/servers",
+    sourceUrl: "https://github.com/modelcontextprotocol/servers",
+    name: "MCP Servers (Anthropic)",
+    tagline: "Reference implementations for the Model Context Protocol connecting LLMs with external tools and data stores.",
+    url: "https://github.com/modelcontextprotocol/servers",
+    emoji: "🔌",
+    category: "Agents & Automation",
+    tags: ["mcp", "anthropic", "standards", "integrations", "tools"],
+    metric: 16500,
+    whyItMatters: "The universal interoperability standard defining how AI models securely query databases, run code, and invoke APIs.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "langgenius/dify",
+    sourceUrl: "https://github.com/langgenius/dify",
+    name: "Dify",
+    tagline: "Open-source LLM app development platform combining BaaS, RAG pipeline orchestration, and visual agent builder.",
+    url: "https://github.com/langgenius/dify",
+    emoji: "🛠️",
+    category: "Agents & Automation",
+    tags: ["llmops", "rag", "agent-builder", "workflow", "production-ai"],
+    metric: 69000,
+    whyItMatters: "Production-grade visual AI workflow builder with built-in model routing, knowledge retrieval, and prompt observability.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
+  },
+
+  // --- Models & Infra ---
+  {
+    source: "github",
+    sourceId: "ollama/ollama",
+    sourceUrl: "https://github.com/ollama/ollama",
+    name: "Ollama",
+    tagline: "Get up and running with Llama 3, DeepSeek-R1, Mistral, and local LLMs with one command on macOS, Linux, and Windows.",
+    url: "https://github.com/ollama/ollama",
+    emoji: "🦙",
+    category: "Models & Infra",
+    tags: ["local-llm", "llama", "deepseek", "inference", "cli"],
+    metric: 125000,
+    whyItMatters: "The undisputed runtime for local LLMs, packaging model weights, GPU acceleration, and REST APIs into zero-fuss binaries.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "vllm-project/vllm",
+    sourceUrl: "https://github.com/vllm-project/vllm",
+    name: "vLLM",
+    tagline: "High-throughput and memory-efficient LLM serving engine powered by PagedAttention and CUDA kernels.",
+    url: "https://github.com/vllm-project/vllm",
+    emoji: "🚀",
+    category: "Models & Infra",
+    tags: ["serving", "paged-attention", "high-throughput", "cuda", "inference"],
+    metric: 39000,
+    whyItMatters: "State-of-the-art enterprise serving engine that maximizes GPU KV cache utilization and cuts serving costs by 4–8x.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "ggerganov/llama.cpp",
+    sourceUrl: "https://github.com/ggerganov/llama.cpp",
+    name: "llama.cpp",
+    tagline: "Pure C/C++ LLM inference engine supporting 4-bit, 5-bit, and 8-bit quantization on CPU and Apple Silicon.",
+    url: "https://github.com/ggerganov/llama.cpp",
+    emoji: "🧱",
+    category: "Models & Infra",
+    tags: ["c-plus-plus", "quantization", "apple-silicon", "gguf", "inference"],
+    metric: 74500,
+    whyItMatters: "The architectural foundation of consumer LLM inference that created the ubiquitous GGUF quantization ecosystem.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
+  },
+  {
+    source: "app",
+    sourceId: "lmstudio-ai",
+    sourceUrl: "https://lmstudio.ai",
+    name: "LM Studio",
+    tagline: "Discover, download, and run local LLMs offline with an intuitive desktop GUI and local OpenAI-compatible server.",
+    url: "https://lmstudio.ai",
+    emoji: "🖥️",
+    category: "Models & Infra",
+    tags: ["desktop-app", "local-llm", "gui", "offline", "developer-tools"],
+    metric: 95000,
+    whyItMatters: "The most polished desktop application for developers to test, benchmark, and serve local open-weight models with zero setup.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+
+  // --- Chat & Assistants ---
+  {
+    source: "github",
+    sourceId: "open-webui/open-webui",
+    sourceUrl: "https://github.com/open-webui/open-webui",
+    name: "Open WebUI",
+    tagline: "User-friendly, self-hosted AI interface inspired by ChatGPT with full Ollama, RAG, and pipeline support.",
+    url: "https://github.com/open-webui/open-webui",
+    emoji: "💬",
+    category: "Chat & Assistants",
+    tags: ["chatgpt-alternative", "ollama-ui", "self-hosted", "webui", "rag"],
+    metric: 66000,
+    whyItMatters: "The gold standard private web UI for teams and power users seeking ChatGPT features without data leakage.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "janhq/jan",
+    sourceUrl: "https://github.com/janhq/jan",
+    name: "Jan",
+    tagline: "100% offline, privacy-first open-source desktop ChatGPT alternative running local models on Mac, Windows, and Linux.",
+    url: "https://github.com/janhq/jan",
+    emoji: "🤖",
+    category: "Chat & Assistants",
+    tags: ["desktop", "offline-chat", "privacy", "local-ai", "cross-platform"],
+    metric: 26000,
+    whyItMatters: "Completely air-gapped desktop assistant giving users sovereign local intelligence on consumer laptops.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
+  },
+  {
+    source: "github",
+    sourceId: "Mintplex-Labs/anything-llm",
+    sourceUrl: "https://github.com/Mintplex-Labs/anything-llm",
+    name: "AnythingLLM",
+    tagline: "The all-in-one desktop AI application for RAG, enterprise documents, workspaces, and multi-user access.",
+    url: "https://github.com/Mintplex-Labs/anything-llm",
+    emoji: "📚",
+    category: "Chat & Assistants",
+    tags: ["desktop-rag", "document-chat", "all-in-one", "vector-search", "enterprise"],
+    metric: 32000,
+    whyItMatters: "Turn any document, PDF, or GitHub repository into an interactive AI knowledge base with zero configuration.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
+  },
+
+  // --- Image & Design ---
+  {
+    source: "github",
+    sourceId: "comfyanonymous/ComfyUI",
+    sourceUrl: "https://github.com/comfyanonymous/ComfyUI",
+    name: "ComfyUI",
+    tagline: "Modular node-based graphical interface and backend pipeline for Stable Diffusion, SDXL, and Flux models.",
+    url: "https://github.com/comfyanonymous/ComfyUI",
+    emoji: "🎨",
+    category: "Image & Design",
+    tags: ["stable-diffusion", "flux", "node-ui", "generative-art", "workflows"],
+    metric: 62000,
+    whyItMatters: "Industry-standard node-graph architecture powering advanced generative image pipelines and production VFX studios.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "lllyasviel/Fooocus",
+    sourceUrl: "https://github.com/lllyasviel/Fooocus",
+    name: "Fooocus",
+    tagline: "Image generating software combining the prompt simplicity of Midjourney with the local control of Stable Diffusion.",
+    url: "https://github.com/lllyasviel/Fooocus",
+    emoji: "🖼️",
+    category: "Image & Design",
+    tags: ["image-generation", "offline", "midjourney-alternative", "sdxl"],
+    metric: 44000,
+    whyItMatters: "Zero-prompt-engineering image creation providing Midjourney-level quality on consumer desktop GPUs.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 4
+  },
+
+  // --- Audio & Voice ---
+  {
+    source: "github",
+    sourceId: "ggerganov/whisper.cpp",
+    sourceUrl: "https://github.com/ggerganov/whisper.cpp",
+    name: "Whisper.cpp",
+    tagline: "High-performance inference of OpenAI's Whisper speech-to-text model in plain C/C++ without external dependencies.",
+    url: "https://github.com/ggerganov/whisper.cpp",
+    emoji: "🎙️",
+    category: "Audio & Voice",
+    tags: ["speech-to-text", "whisper", "audio-transcription", "c-plus-plus"],
+    metric: 36000,
+    whyItMatters: "Ultra-fast local speech transcription running in real time even on low-power devices and embedded chips.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
+  },
+  {
+    source: "github",
+    sourceId: "hexgrad/kokoro",
+    sourceUrl: "https://github.com/hexgrad/kokoro",
+    name: "Kokoro",
+    tagline: "Open-weight 82M parameter text-to-speech voice model with exceptional human cadence, pitch, and speed.",
+    url: "https://github.com/hexgrad/kokoro",
+    emoji: "🗣️",
+    category: "Audio & Voice",
+    tags: ["tts", "text-to-speech", "voice-synthesis", "open-weights"],
+    metric: 10500,
+    whyItMatters: "Breakthrough ultra-compact voice synthesis model that out-competes models 10x its size in natural speech quality.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+
+  // --- Research & Data ---
+  {
+    source: "github",
+    sourceId: "infiniflow/ragflow",
+    sourceUrl: "https://github.com/infiniflow/ragflow",
+    name: "RAGFlow",
+    tagline: "Open-source RAG engine based on deep document understanding and multi-structured document parsing.",
+    url: "https://github.com/infiniflow/ragflow",
+    emoji: "📑",
+    category: "Research & Data",
+    tags: ["rag", "deep-parsing", "document-understanding", "enterprise-search"],
+    metric: 28000,
+    whyItMatters: "Eliminates RAG hallucinations through OCR-level document layout analysis of complex tables and diagrams.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "qdrant/qdrant",
+    sourceUrl: "https://github.com/qdrant/qdrant",
+    name: "Qdrant",
+    tagline: "Vector similarity search engine and vector database written in Rust with extended payload filtering.",
+    url: "https://github.com/qdrant/qdrant",
+    emoji: "🔎",
+    category: "Research & Data",
+    tags: ["vector-database", "rust", "similarity-search", "embeddings"],
+    metric: 22000,
+    whyItMatters: "Ultra-fast production vector database powering enterprise semantic search and recommendation systems.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 4
+  },
+
+  // --- Productivity ---
+  {
+    source: "github",
+    sourceId: "danielmiessler/fabric",
+    sourceUrl: "https://github.com/danielmiessler/fabric",
+    name: "Fabric",
+    tagline: "Open-source framework for augmenting humans using AI prompts, modular patterns, and terminal pipelines.",
+    url: "https://github.com/danielmiessler/fabric",
+    emoji: "🧵",
+    category: "Productivity",
+    tags: ["prompt-patterns", "cli", "augmentation", "productivity"],
+    metric: 27500,
+    whyItMatters: "Community-driven prompt architecture turning routine cognitive tasks into reusable terminal commands.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
+  },
+  {
+    source: "github",
+    sourceId: "mem0ai/mem0",
+    sourceUrl: "https://github.com/mem0ai/mem0",
+    name: "Mem0",
+    tagline: "The intelligent memory layer for AI assistants and autonomous agents, adapting dynamically across conversations.",
+    url: "https://github.com/mem0ai/mem0",
+    emoji: "🧠",
+    category: "Productivity",
+    tags: ["long-term-memory", "ai-memory", "personalization", "agent-context"],
+    metric: 25000,
+    whyItMatters: "Solves context amnesia by providing persistent, adaptive personal memory graph storage for AI agents.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   }
 ];

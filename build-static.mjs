@@ -34,7 +34,7 @@ async function build() {
       WHERE i.status = 'active' AND i.category = ?
       GROUP BY i.id
       ORDER BY i.score DESC, i.launched_at DESC
-      LIMIT 12
+      LIMIT 25
     `).all(cat);
 
     tools.push(...rows.map(r => ({

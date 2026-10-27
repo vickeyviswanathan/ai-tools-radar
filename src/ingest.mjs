@@ -57,7 +57,8 @@ export async function runIngestion() {
         emoji = COALESCE(items.emoji, excluded.emoji),
         category = COALESCE(items.category, excluded.category),
         tags = COALESCE(items.tags, excluded.tags),
-        why_it_matters = COALESCE(excluded.why_it_matters, items.why_it_matters)
+        why_it_matters = COALESCE(excluded.why_it_matters, items.why_it_matters),
+        launched_at = excluded.launched_at
       RETURNING id
     `);
 

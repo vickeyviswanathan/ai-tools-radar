@@ -4,14 +4,18 @@ import { config, userAgent } from "./config.mjs";
 import { isBlocked, isListLike, cleanUrl } from "./classify.mjs";
 
 const GITHUB_TOPIC_QUERIES = [
-  "topic:mcp created:>2026-08-01 stars:>25",
-  "topic:ai-agents created:>2026-08-01 stars:>40",
-  "topic:llm-tool created:>2026-08-01 stars:>30",
-  "topic:reverse-engineering ai created:>2026-05-01 stars:>40",
-  "topic:browser-automation ai created:>2026-05-01 stars:>30",
+  "topic:mcp OR topic:model-context-protocol stars:>20",
+  "topic:ai-agents OR topic:autonomous-agents stars:>40",
+  "topic:llm-tool OR topic:llm-app stars:>30",
+  "topic:reverse-engineering ai stars:>40",
+  "topic:browser-automation ai stars:>30",
   "topic:token-optimization OR topic:context-window stars:>20",
   "topic:vllm OR topic:ollama OR topic:local-ai stars:>50",
-  "topic:ai-coding OR topic:coding-agent stars:>40"
+  "topic:ai-coding OR topic:coding-agent stars:>40",
+  "topic:rag OR topic:vector-database stars:>80",
+  "topic:comfyui OR topic:diffusion stars:>80",
+  "topic:tts OR topic:speech-to-text stars:>50",
+  "topic:deepseek OR topic:reasoning-model stars:>50"
 ];
 
 async function fetchGitHubQuery(q) {
