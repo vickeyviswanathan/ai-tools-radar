@@ -1,0 +1,22 @@
+{
+  "name": "ai-tools-radar",
+  "version": "1.0.0",
+  "description": "Simple UI for new & trending AI tools from theresanaiforthat.com (scraped with Libretto)",
+  "scripts": {
+    "start": "node server.mjs",
+    "scrape:day": "set TAAFT_PERIOD=day&& libretto run ./workflows/taaft-radar.ts --headless",
+    "scrape:week": "set TAAFT_PERIOD=week&& libretto run ./workflows/taaft-radar.ts --headless",
+    "scrape:month": "set TAAFT_PERIOD=month&& libretto run ./workflows/taaft-radar.ts --headless",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^26.6.5",
+    "libretto": "^0.6.45",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "zod": "^4.6.7"
+  }
+}

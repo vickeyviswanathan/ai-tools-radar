@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Radar — Curated Best-in-Class AI Tools</title>
+<meta name="description" content="An independent, highly curated index of battle-tested, high-traction AI software, agents, and models. Zero wrappers or noise." />
+<style>
+  :root {
+    --bg: #090b10; --card: #11151e; --card-hi: #171d2b; --line: #1f2737;
+    --text: #eef2f8; --muted: #7e8b9f; --accent: #4f8cf6; --badge: #1f2a3f;
+    --gold: #f59e0b; --green: #10b981;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+  
+  /* Hero */
+  header { padding: 48px 0 24px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 50% 0%, #151d2f 0%, var(--bg) 70%); }
+  .editorial-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(79, 140, 246, 0.1); color: var(--accent); border: 1px solid rgba(79, 140, 246, 0.25); padding: 5px 12px; border-radius: 999px; margin-bottom: 16px; }
+  h1 { font-size: 34px; margin: 0 0 10px; font-weight: 800; letter-spacing: -0.03em; }
+  .subtitle { font-size: 16px; color: var(--muted); max-width: 680px; margin: 0 0 28px; line-height: 1.6; }
+  
+  /* Filters */
+  .controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  input[type=search] { background: var(--card); border: 1px solid var(--line); color: var(--text); border-radius: 10px; padding: 10px 16px; font-size: 14px; min-width: 280px; flex: 1; outline: none; }
+  input[type=search]:focus { border-color: var(--accent); }
+  .category-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .cat-pill { background: var(--card); border: 1px solid var(--line); color: var(--muted); padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+  .cat-pill:hover, .cat-pill.active { background: var(--accent); color: #040914; border-color: var(--accent); }
+
+  /* Grid */
+  main { padding: 40px 0 80px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 18px; }
+  .card { display: flex; flex-direction: column; padding: 22px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; text-decoration: none; color: inherit; transition: transform .15s, border-color .15s; position: relative; }
+  .card:hover { transform: translateY(-3px); border-color: #33415c; background: var(--card-hi); }
+  
+  .card-top { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }
+  .icon-box { width: 44px; height: 44px; border-radius: 10px; background: #192131; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-size: 24px; flex: none; }
+  .name { font-weight: 700; font-size: 17px; margin-bottom: 3px; color: #fff; line-height: 1.3; }
+  .tag { color: #a4b3cc; font-size: 13px; margin: 0; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  
+  /* Editorial highlight */
+  .why-box { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--green); border-radius: 0 8px 8px 0; padding: 8px 12px; margin: 14px 0 16px; font-size: 12px; color: #c0ded4; line-height: 1.4; }
+  .why-box strong { color: var(--green); }
+
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; margin-top: auto; }
+  .pill { background: #0c0f16; border: 1px solid var(--line); color: var(--muted); padding: 4px 10px; border-radius: 999px; }
+  .pill.source-gh { color: #d0d7de; border-color: #30363d; font-weight: 600; }
+  .pill.source-hn { color: #ff7700; border-color: #663300; font-weight: 600; }
+  .pill.source-hf { color: #ffd21e; border-color: #665200; font-weight: 600; }
+  .pill.cat { color: var(--accent); background: rgba(79, 140, 246, 0.08); border-color: rgba(79, 140, 246, 0.2); }
+
+  /* Ad Slot */
+  .ad-slot { grid-column: 1 / -1; background: #0c1017; border: 1px dashed #283347; border-radius: 14px; padding: 22px; text-align: center; color: var(--muted); font-size: 13px; }
+
+  footer { border-top: 1px solid var(--line); padding: 36px 0; text-align: center; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="editorial-badge">✓ AI Thought-Leader Curated</div>
+    <h1>The Elite AI Radar</h1>
+    <p class="subtitle">An independent index of high-utility, verified AI tools, open-source models, and developer frameworks. Filtered for production polish — zero thin wrappers or hobby projects.</p>
+    <div class="controls">
+      <input type="search" id="q" placeholder="Search curated tools, agents, repositories..." />
+    </div>
+    <div class="category-pills" id="category-bar">
+      <button class="cat-pill active" data-cat="">All Pillars</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="grid" id="grid"></div>
+  <div id="empty-state" style="text-align: center; padding: 80px 0; color: var(--muted); display: none;">
+    No tools match your criteria.
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    100% Independent Curation. Automated telemetry via GitHub, Hacker News, & Hugging Face official APIs. Clean IP & ready for public utility.
+  </div>
+</footer>
+
+<script>
+let allTools = [];
+let activeCat = "";
+let searchQ = "";
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s || "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+function renderSignals(signals = []) {
+  return signals.map(s => {
+    const [src, metric] = s.split(":");
+    const num = Number(metric);
+    const fmt = num >= 1000 ? (num/1000).toFixed(1) + "k" : num;
+    if (src === "github") return `<span class="pill source-gh">★ ${fmt} stars</span>`;
+    if (src === "hn") return `<span class="pill source-hn">▲ ${fmt} pts</span>`;
+    if (src === "huggingface") return `<span class="pill source-hf">♥ ${fmt} likes</span>`;
+    return "";
+  }).join("");
+}
+
+function render() {
+  const filtered = allTools.filter(t => {
+    if (activeCat && t.category !== activeCat) return false;
+    if (searchQ && ![t.name, t.tagline, t.why_it_matters].join(" ").toLowerCase().includes(searchQ)) return false;
+    return true;
+  });
+
+  const grid = $("#grid");
+  const empty = $("#empty-state");
+
+  if (!filtered.length) {
+    grid.innerHTML = "";
+    empty.style.display = "block";
+    return;
+  }
+  empty.style.display = "none";
+
+  let html = "";
+  filtered.forEach((tool, idx) => {
+    html += `
+      <a class="card" href="${esc(tool.url)}" target="_blank" rel="noopener">
+        <div class="card-top">
+          <div class="icon-box">${esc(tool.emoji || "⚡")}</div>
+          <div style="flex: 1; min-width: 0;">
+            <div class="name">${esc(tool.name)}</div>
+            <p class="tag">${esc(tool.tagline)}</p>
+          </div>
+        </div>
+        ${tool.why_it_matters ? `<div class="why-box"><strong>Why it matters:</strong> ${esc(tool.why_it_matters)}</div>` : ""}
+        <div class="meta">
+          <span class="pill cat">${esc(tool.category)}</span>
+          ${renderSignals(tool.signals)}
+        </div>
+      </a>
+    `;
+
+    // Native Ad placeholder every 8 items
+    if ((idx + 1) % 8 === 0) {
+      html += `
+        <div class="ad-slot">
+          <strong>Sponsored Showcase</strong> • Reserved for verified developer & enterprise AI partners
+        </div>
+      `;
+    }
+  });
+
+  grid.innerHTML = html;
+}
+
+async function init() {
+  try {
+    // Read from static snapshot data/tools.json
+    const res = await fetch("./data/tools.json");
+    const json = await res.json();
+    allTools = json.tools || [];
+
+    // Render category buttons
+    const catBar = $("#category-bar");
+    (json.categories || []).forEach(cat => {
+      const btn = document.createElement("button");
+      btn.className = "cat-pill";
+      btn.textContent = cat;
+      btn.onclick = () => {
+        document.querySelectorAll(".cat-pill").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeCat = cat;
+        render();
+      };
+      catBar.appendChild(btn);
+    });
+
+    render();
+  } catch (err) {
+    console.error("Failed to load tools.json", err);
+  }
+}
+
+$("#category-bar button").onclick = (e) => {
+  document.querySelectorAll(".cat-pill").forEach(b => b.classList.remove("active"));
+  e.target.classList.add("active");
+  activeCat = "";
+  render();
+};
+
+let debounce;
+$("#q").oninput = (e) => {
+  clearTimeout(debounce);
+  debounce = setTimeout(() => {
+    searchQ = e.target.value.toLowerCase().trim();
+    render();
+  }, 200);
+};
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,946 @@
+{
+  "updatedAt": "2026-10-27T14:12:19.020Z",
+  "categories": [
+    "Coding",
+    "Agents & Automation",
+    "Image & Design",
+    "Video",
+    "Audio & Voice",
+    "Chat & Assistants",
+    "Productivity",
+    "Research & Data",
+    "Models & Infra"
+  ],
+  "tools": [
+    {
+      "id": 44,
+      "name": "call of duty modern warfare resocket 4 fps optimizer",
+      "tagline": "Lightweight desktop tool for Call of Duty: Modern Warfare 4. Smart FPS optimization, performance tuning, process management and real-time monitoring. Designed to improve frame rates and stability. Re…",
+      "url": "https://github.com/Orderlight93426/call-of-duty-modern-warfare-resocket-4-fps-optimizer",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1792997771,
+      "score": 4.772087231755453,
+      "signal_summary": "github:32.0",
+      "signals": [
+        "github:32.0"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "TeamOnly, a place IT can approve for vibe",
+      "tagline": "TeamOnly, a place IT can approve for vibe-coded internal apps",
+      "url": "https://teamonly.dev/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1793104329,
+      "score": 4.202900110820427,
+      "signal_summary": "hn:2.0",
+      "signals": [
+        "hn:2.0"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Flashmind Gemini 3.8 Flash Smart agent",
+      "tagline": "flashmind — Gemini 3.8 Flash Smart Agent. Gives Gemini Flash persistent memory (Engram), coding skills, and no-hallucination rules. Works in Gemini CLI, Antigravity, Cursor, VS Code, Claude Code and…",
+      "url": "https://github.com/Hvftpie13/Flashmind_Gemini-3.8-Flash_Smart-agent",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1792966377,
+      "score": 3.947329112993147,
+      "signal_summary": "github:35.0",
+      "signals": [
+        "github:35.0"
+      ]
+    },
+    {
+      "id": 90,
+      "name": "SkillTotal",
+      "tagline": "SkillTotal – scan packages before Claude Code installs them",
+      "url": "https://github.com/pezhik/skilltotal",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1793105900,
+      "score": 2.446295843983844,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 91,
+      "name": "ssh zydra.sh, a GPU Linux desktop in your terminal, with Do…",
+      "tagline": "ssh zydra.sh, a GPU Linux desktop in your terminal, with Doom",
+      "url": "https://zydra.sh/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1793105840,
+      "score": 2.4312468752109653,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 92,
+      "name": "Cordane",
+      "tagline": "Cordane – run coding agents on machines you own, no open ports",
+      "url": "https://github.com/cordane/cordane",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1793105806,
+      "score": 2.42279425817825,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "arkdraw",
+      "tagline": "Arkdraw is an open-source diagramming app for creating flowcharts, UML, ER diagrams, network maps, wireframes, and mind maps with a built-in AI assistant that generates and edits diagrams from natura…",
+      "url": "https://arkdraw.com/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1792781376,
+      "score": 2.204320980936959,
+      "signal_summary": "github:51.0",
+      "signals": [
+        "github:51.0"
+      ]
+    },
+    {
+      "id": 97,
+      "name": "Friday, an open",
+      "tagline": "Friday, an open-source harness for coding agents that work as a team",
+      "url": "https://github.com/splashxmoon/friday",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1793104815,
+      "score": 2.1981411085998652,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "call of duty modern warfare resocket 4 fps optimizer",
+      "tagline": "Lightweight desktop tool for Call of Duty: Modern Warfare 4. Smart FPS optimization, performance tuning, process management and real-time monitoring. Designed to improve frame rates and stability. Re…",
+      "url": "https://github.com/Demonwave56032/call-of-duty-modern-warfare-resocket-4-fps-optimizer",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1792739150,
+      "score": 2.025032206894407,
+      "signal_summary": "github:54.0",
+      "signals": [
+        "github:54.0"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "runic",
+      "tagline": "Runic macOS Menu Bar App for AI Usage Cost and Token Tracking",
+      "url": "https://github.com/Eljot19/runic",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1792699770,
+      "score": 1.931384711333821,
+      "signal_summary": "github:58.0",
+      "signals": [
+        "github:58.0"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Minecraft as one C file that runs inside a PDF, a terminal…",
+      "tagline": "Minecraft as one C file that runs inside a PDF, a terminal and a Kindle",
+      "url": "https://github.com/pragyaangaur/Can-It-Run-Minecraft",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1793103215,
+      "score": 1.9068749368871145,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "purrge",
+      "tagline": "🐾 Purrge — macOS AI 磁盘清理工具，支持 Claude Code 和 Codex：空间不足时提醒，AI 逐项判断能清什么，你勾选确认后才清理",
+      "url": "https://github.com/RabbittuX/purrge",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1792506955,
+      "score": 1.6472668305192029,
+      "signal_summary": "github:78.0",
+      "signals": [
+        "github:78.0"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "CVEngine",
+      "tagline": "AI-first external attack surface assessment with continuous discovery, evidence-based vulnerability validation, and developer-agent MCP integration.",
+      "url": "https://github.com/hevnsnt/CVEngine",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1792881283,
+      "score": 26.793646565093557,
+      "signal_summary": "github:406.0",
+      "signals": [
+        "github:406.0"
+      ]
+    },
+    {
+      "id": 68,
+      "name": "GEAR",
+      "tagline": "Recursive self-improvement of LLM agent harnesses",
+      "url": "https://huggingface.co/spaces/WizardTY/GEAR",
+      "emoji": "⚙️",
+      "category": "Agents & Automation",
+      "why_it_matters": "Trending community demo & model with 54 likes on Hugging Face.",
+      "launched_at": 1793017074,
+      "score": 9.943612735063098,
+      "signal_summary": "huggingface:54.0",
+      "signals": [
+        "huggingface:54.0"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "dafeiyu cleaner",
+      "tagline": "DeepSeek 蓝色大肥鱼消除计划：识别并清理 B 站（Bilibili）评论区中由 DeepSeek 大模型、AI Agent 驱动的机器人账号（大肥鱼）的 Chrome / Edge / Firefox 浏览器插件。离线规则 + DeepSeek API 精判，AI 评论检测、空间主页鉴定、鲸鱼娘一键清场。DeepSeek AI bot detector for Bilibili comm…",
+      "url": "https://www.bilibili.com/video/BV1Ywn46EEyF",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1792726773,
+      "score": 4.0048586292138175,
+      "signal_summary": "github:111.0",
+      "signals": [
+        "github:111.0"
+      ]
+    },
+    {
+      "id": 88,
+      "name": "CiteWing",
+      "tagline": "CiteWing – AI backlink outreach agent",
+      "url": "https://citewing.com/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1793106233,
+      "score": 2.5330182621170456,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "37studio",
+      "tagline": "Open-source AI alternative to Buffer and Opus Clip: Claude Code makes on-brand videos, posts them to 9 platforms and drafts replies. Self-hosted, your own keys.",
+      "url": "https://studio.shaitrish.com/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1792715212,
+      "score": 2.5084287980341613,
+      "signal_summary": "github:72.0",
+      "signals": [
+        "github:72.0"
+      ]
+    },
+    {
+      "id": 89,
+      "name": "Hashling, an open",
+      "tagline": "Hashling, an open-source Mac security agent your own AI can talk to",
+      "url": "https://github.com/0xArx/hashling",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1793106047,
+      "score": 2.4838971624091863,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 93,
+      "name": "AGBoss Dependency injection and static validation for AI ag…",
+      "tagline": "AGBoss Dependency injection and static validation for AI agents",
+      "url": "https://github.com/agbossjs/agboss",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1793105805,
+      "score": 2.422546467474255,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 94,
+      "name": "Self",
+      "tagline": "Self-hosted Google Business Profile manager with agent approvals",
+      "url": "https://github.com/synectus/OpenGMB",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1793105465,
+      "score": 2.3409102333124454,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 96,
+      "name": "Change my page if the agent allows it",
+      "tagline": "Change my page if the agent allows it",
+      "url": "https://actera.dev/try",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1793105078,
+      "score": 2.2539348060209243,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Ultron",
+      "tagline": "Autonomous desktop intelligence with MCU Ultron persona, mood-aware workspace orchestration, cyber security sentry, and full PC control.",
+      "url": "https://github.com/AbuZar-Ansarii/Ultron",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1792317779,
+      "score": 2.0164430872361523,
+      "signal_summary": "github:132.0",
+      "signals": [
+        "github:132.0"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Limma",
+      "tagline": "Limma – MCP for total recall and precision in data retrieval for agents",
+      "url": "https://limma.ai/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1793069443,
+      "score": 0.8914009276382596,
+      "signal_summary": "hn:2.0",
+      "signals": [
+        "hn:2.0"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Agent outputs slop texts, so I make a superfast HTML skill…",
+      "tagline": "Agent outputs slop texts, so I make a superfast HTML skill visualize it",
+      "url": "https://github.com/QingYunA/answer-me-with-html",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1793067570,
+      "score": 0.8514568354417483,
+      "signal_summary": "hn:2.0",
+      "signals": [
+        "hn:2.0"
+      ]
+    },
+    {
+      "id": 85,
+      "name": "Valen",
+      "tagline": "Valen – Open multimodal decision models for text, images and video",
+      "url": "https://valen-team.github.io/",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": null,
+      "launched_at": 1793107815,
+      "score": 3.035307241450055,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 56,
+      "name": "FLUX 3 Image Klein",
+      "tagline": "5.6B open weights. Text-to-image, editing, bounding boxes",
+      "url": "https://huggingface.co/spaces/black-forest-labs/flux-3-image-klein",
+      "emoji": "🌲",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 232 likes on Hugging Face.",
+      "launched_at": 1791979853,
+      "score": 2.321798612345462,
+      "signal_summary": "huggingface:232.0",
+      "signals": [
+        "huggingface:232.0"
+      ]
+    },
+    {
+      "id": 62,
+      "name": "MOSS-Image Workflow",
+      "tagline": "MOSS-Image text-to-image as a gr.Workflow node canvas.",
+      "url": "https://huggingface.co/spaces/OpenMOSS-Team/MOSS-Image",
+      "emoji": "🖼",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 170 likes on Hugging Face.",
+      "launched_at": 1791966846,
+      "score": 1.6782668251173343,
+      "signal_summary": "huggingface:170.0",
+      "signals": [
+        "huggingface:170.0"
+      ]
+    },
+    {
+      "id": 78,
+      "name": "Qwen-Image-2.1",
+      "tagline": "Interactive AI space by Qwen",
+      "url": "https://huggingface.co/spaces/Qwen/Qwen-Image-2.1",
+      "emoji": "🎨",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 480 likes on Hugging Face.",
+      "launched_at": 1789899359,
+      "score": 1.379342133583856,
+      "signal_summary": "huggingface:480.0",
+      "signals": [
+        "huggingface:480.0"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "FIBO 2.0 Edit Turbo",
+      "tagline": "Fibo 2.0 Edit Turbo image editing in 4 steps",
+      "url": "https://huggingface.co/spaces/briaai/Fibo-2.0-editing",
+      "emoji": "⚡",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 76 likes on Hugging Face.",
+      "launched_at": 1792418444,
+      "score": 1.3643754724712078,
+      "signal_summary": "huggingface:76.0",
+      "signals": [
+        "huggingface:76.0"
+      ]
+    },
+    {
+      "id": 72,
+      "name": "Krea 2 Turbo Image Generator",
+      "tagline": "Krea 2 Turbo text2image and image editing",
+      "url": "https://huggingface.co/spaces/Aura1in/Krea-2-Turbo_v2",
+      "emoji": "🖌️",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 236 likes on Hugging Face.",
+      "launched_at": 1791183939,
+      "score": 1.249785001738085,
+      "signal_summary": "huggingface:236.0",
+      "signals": [
+        "huggingface:236.0"
+      ]
+    },
+    {
+      "id": 65,
+      "name": "Viggle Turbo for Qwen-Image-2.1",
+      "tagline": "6-step Qwen-Image-2.1, T2I + editing, vs-base comparison",
+      "url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo",
+      "emoji": "⚡",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 404 likes on Hugging Face.",
+      "launched_at": 1790050655,
+      "score": 1.230007377186108,
+      "signal_summary": "huggingface:404.0",
+      "signals": [
+        "huggingface:404.0"
+      ]
+    },
+    {
+      "id": 74,
+      "name": "LTX 2.3 10Eros Image-to-Video",
+      "tagline": "ltx 2.3 improved image-to-video with 10eros & native audio",
+      "url": "https://huggingface.co/spaces/rdata92/LTX-2.3-10Eros",
+      "emoji": "🎬",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 109 likes on Hugging Face.",
+      "launched_at": 1792068881,
+      "score": 1.2028995062532348,
+      "signal_summary": "huggingface:109.0",
+      "signals": [
+        "huggingface:109.0"
+      ]
+    },
+    {
+      "id": 82,
+      "name": "Qwen Image 2.1 Realtime",
+      "tagline": "Real-time t2i & editing with a Qwen-Image-2.1 2-step LoRA",
+      "url": "https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime",
+      "emoji": "⚡",
+      "category": "Image & Design",
+      "why_it_matters": null,
+      "launched_at": 1792759826,
+      "score": 1.1232613636566062,
+      "signal_summary": "huggingface:28.0",
+      "signals": [
+        "huggingface:28.0"
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Wan2.2 14B Preview",
+      "tagline": "generate a video from an image with a text prompt",
+      "url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
+      "emoji": "🐌",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 1019 likes on Hugging Face.",
+      "launched_at": 1784116156,
+      "score": 0.8522483199039729,
+      "signal_summary": "huggingface:1019.0",
+      "signals": [
+        "huggingface:1019.0"
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Qwen 2511 + Flux.2 Klein",
+      "tagline": "Edit images with Qwen and enhance with FLUX.2 Klein",
+      "url": "https://huggingface.co/spaces/AST-1320/Qwen-2511-Plus-Flux.2-klein",
+      "emoji": "✨️",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 267 likes on Hugging Face.",
+      "launched_at": 1789814899,
+      "score": 0.7437739032199224,
+      "signal_summary": "huggingface:267.0",
+      "signals": [
+        "huggingface:267.0"
+      ]
+    },
+    {
+      "id": 76,
+      "name": "Qwen-Image-Edit-2511-LoRAs-Fast",
+      "tagline": "AnyPose pose still with a strong pose-reference lock",
+      "url": "https://huggingface.co/spaces/kulkas2pintu/QWEN_EDIT_IMAGE",
+      "emoji": "🎃",
+      "category": "Image & Design",
+      "why_it_matters": "Trending community demo & model with 739 likes on Hugging Face.",
+      "launched_at": 1785342238,
+      "score": 0.7367953115526497,
+      "signal_summary": "huggingface:739.0",
+      "signals": [
+        "huggingface:739.0"
+      ]
+    },
+    {
+      "id": 63,
+      "name": "Omni Video Factory",
+      "tagline": "text to video, image to video, video extend",
+      "url": "https://huggingface.co/spaces/vamo455/Omni-videos-custom-auto_prompt_high-quality",
+      "emoji": "🏆",
+      "category": "Video",
+      "why_it_matters": "Trending community demo & model with 367 likes on Hugging Face.",
+      "launched_at": 1788837788,
+      "score": 0.7490779002620817,
+      "signal_summary": "huggingface:367.0",
+      "signals": [
+        "huggingface:367.0"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "ai motion library",
+      "tagline": "Biblioteca de Motion apenasdouglas: 24 efeitos de animação com o nome em português e o termo pra pedir pra IA. Receitas pra canal dark, tema escuro e claro, skill pro Claude Code. Motion graphics pro…",
+      "url": "https://apenasdouglas.github.io/ai-motion-library/",
+      "emoji": null,
+      "category": "Video",
+      "why_it_matters": null,
+      "launched_at": 1791983627,
+      "score": 0.7334847672269408,
+      "signal_summary": "github:73.0",
+      "signals": [
+        "github:73.0"
+      ]
+    },
+    {
+      "id": 79,
+      "name": "FastH3-Omni",
+      "tagline": "FastVideo 8-step video+audio from image/video/audio refs",
+      "url": "https://huggingface.co/spaces/FastVideo/FastH3-Omni",
+      "emoji": "🎬",
+      "category": "Video",
+      "why_it_matters": null,
+      "launched_at": 1792487317,
+      "score": 0.6912743991245277,
+      "signal_summary": "huggingface:34.0",
+      "signals": [
+        "huggingface:34.0"
+      ]
+    },
+    {
+      "id": 55,
+      "name": "minimax h3 turbo + lora's",
+      "tagline": "Video generation with a synchronized soundtrack",
+      "url": "https://huggingface.co/spaces/wank3r/minimax-h3",
+      "emoji": "🎬",
+      "category": "Video",
+      "why_it_matters": "Trending community demo & model with 201 likes on Hugging Face.",
+      "launched_at": 1789289929,
+      "score": 0.4690789861797142,
+      "signal_summary": "huggingface:201.0",
+      "signals": [
+        "huggingface:201.0"
+      ]
+    },
+    {
+      "id": 73,
+      "name": "MiniMax H3 Turbo LoRA",
+      "tagline": "Video generation with a synchronized soundtrack",
+      "url": "https://huggingface.co/spaces/baka999/MiniMax-H3-Turbo-Lora-UNCENSORED",
+      "emoji": "🎬",
+      "category": "Video",
+      "why_it_matters": "Trending community demo & model with 63 likes on Hugging Face.",
+      "launched_at": 1791390316,
+      "score": 0.38201969815379,
+      "signal_summary": "huggingface:63.0",
+      "signals": [
+        "huggingface:63.0"
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Drama 3",
+      "tagline": "Direct Fish Audio Drama 3, streaming on ZeroGPU",
+      "url": "https://huggingface.co/spaces/fishaudio/Drama-3",
+      "emoji": "🎭",
+      "category": "Audio & Voice",
+      "why_it_matters": "Trending community demo & model with 148 likes on Hugging Face.",
+      "launched_at": 1791922869,
+      "score": 1.3967786974953458,
+      "signal_summary": "huggingface:148.0",
+      "signals": [
+        "huggingface:148.0"
+      ]
+    },
+    {
+      "id": 38,
+      "name": "apple music effect",
+      "tagline": "Recreates the new Apple Music liquid brand identity with webgl + opus 5.5.",
+      "url": "https://apple-music-effect.transitivebullsh.it/",
+      "emoji": null,
+      "category": "Audio & Voice",
+      "why_it_matters": null,
+      "launched_at": 1792675162,
+      "score": 1.3679360929651674,
+      "signal_summary": "github:44.0",
+      "signals": [
+        "github:44.0"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Phonon",
+      "tagline": "Text-to-speech that runs in your browser",
+      "url": "https://huggingface.co/spaces/gradium/phonon",
+      "emoji": "⚫",
+      "category": "Audio & Voice",
+      "why_it_matters": "Trending community demo & model with 47 likes on Hugging Face.",
+      "launched_at": 1792494494,
+      "score": 0.968809518744814,
+      "signal_summary": "huggingface:47.0",
+      "signals": [
+        "huggingface:47.0"
+      ]
+    },
+    {
+      "id": 83,
+      "name": "Speech to Decisions with Granite",
+      "tagline": "Live speech, heard and sized up by one Granite Switch model",
+      "url": "https://huggingface.co/spaces/ibm-granite/speech-to-decisions",
+      "emoji": "⚡",
+      "category": "Audio & Voice",
+      "why_it_matters": null,
+      "launched_at": 1792075004,
+      "score": 0.7334975431561632,
+      "signal_summary": "huggingface:66.0",
+      "signals": [
+        "huggingface:66.0"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "voice ai assistant",
+      "tagline": "Python voice AI assistant: microphone STT, Google Gemini answers, offline TTS with pyttsx3. Clean env-based setup.",
+      "url": "https://github.com/ahmedbadr-dev/voice-ai-assistant",
+      "emoji": null,
+      "category": "Audio & Voice",
+      "why_it_matters": null,
+      "launched_at": 1792106320,
+      "score": 0.31125261952699795,
+      "signal_summary": "github:27.0",
+      "signals": [
+        "github:27.0"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "astrbot for android",
+      "tagline": "在 Android 手机上本地部署和管理 AstrBot 与 NapCat，内置 PRoot Ubuntu 运行环境，支持原生管理界面、WebUI、日志、备份恢复和独立更新，无需 Root。",
+      "url": "https://github.com/JunWan666/astrbot-for-android",
+      "emoji": null,
+      "category": "Chat & Assistants",
+      "why_it_matters": null,
+      "launched_at": 1792991612,
+      "score": 21.20320235945,
+      "signal_summary": "github:151.0",
+      "signals": [
+        "github:151.0"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "AnythingLLM Desktop",
+      "tagline": "AnythingLLM Desktop — The enhanced all-in-one AI desktop app.",
+      "url": "https://github.com/QuickButlerPace65/AnythingLLM-Desktop",
+      "emoji": null,
+      "category": "Chat & Assistants",
+      "why_it_matters": null,
+      "launched_at": 1792792307,
+      "score": 1.6189565019540526,
+      "signal_summary": "github:36.0",
+      "signals": [
+        "github:36.0"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Emblem",
+      "tagline": "An iPhone assistant that answers with native SwiftUI pages",
+      "url": "https://github.com/kaanarici/Emblem",
+      "emoji": null,
+      "category": "Chat & Assistants",
+      "why_it_matters": null,
+      "launched_at": 1792813087,
+      "score": 1.4603715704047049,
+      "signal_summary": "github:30.0",
+      "signals": [
+        "github:30.0"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "yahont ce",
+      "tagline": "Self-hosted AI-платформа с расширенными возможностями: RAG, агенты, веб-поиск, исследования, коннекторы, любые LLM и гибкие настройки",
+      "url": "https://www.yahont.ai/",
+      "emoji": null,
+      "category": "Chat & Assistants",
+      "why_it_matters": null,
+      "launched_at": 1792304638,
+      "score": 0.5392882443268093,
+      "signal_summary": "github:36.0",
+      "signals": [
+        "github:36.0"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "wuch ai",
+      "tagline": "说一句，界面在画布上长出来 · https://wuch-ai.net",
+      "url": "https://wuch-ai.net/",
+      "emoji": null,
+      "category": "Chat & Assistants",
+      "why_it_matters": null,
+      "launched_at": 1792486256,
+      "score": 0.52755562904931,
+      "signal_summary": "github:26.0",
+      "signals": [
+        "github:26.0"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Adobe Acrobat Pro",
+      "tagline": "Open-source AI tool / repository",
+      "url": "https://github.com/free-cracks/Adobe-Acrobat-Pro",
+      "emoji": null,
+      "category": "Productivity",
+      "why_it_matters": "Production open-source breakthrough with 288 verified GitHub stars.",
+      "launched_at": 1793007273,
+      "score": 47.42750412841764,
+      "signal_summary": "github:288.0",
+      "signals": [
+        "github:288.0"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "ai native",
+      "tagline": "지능을 전기처럼 쓰는 시대 — AI 네이티브 핸드북 2026 (PDF·EPUB, CC BY-NC-ND 4.0)",
+      "url": "https://github.com/hollobit/ai-native",
+      "emoji": null,
+      "category": "Productivity",
+      "why_it_matters": null,
+      "launched_at": 1792677611,
+      "score": 1.9717271195035668,
+      "signal_summary": "github:63.0",
+      "signals": [
+        "github:63.0"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "HowToLiveWithAI",
+      "tagline": "面向普通年轻人的 AI 学习指南：认识基础知识、选择值得学的技能，从可检查的小事开始。含六章正文、学习练习、研究资料及 HTML/PDF 阅读版。",
+      "url": "https://kkk-bot.github.io/HowToLiveWithAI/",
+      "emoji": null,
+      "category": "Productivity",
+      "why_it_matters": null,
+      "launched_at": 1791965538,
+      "score": 0.2760438382100846,
+      "signal_summary": "github:28.0",
+      "signals": [
+        "github:28.0"
+      ]
+    },
+    {
+      "id": 87,
+      "name": "Which big sites block AI training crawlers but let AI searc…",
+      "tagline": "Which big sites block AI training crawlers but let AI search in",
+      "url": "https://getkavel.com/ai-crawlers/",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": null,
+      "launched_at": 1793107102,
+      "score": 2.7881884024568517,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "litpage",
+      "tagline": "Open-source, self-hosted workspace for pages, databases and AI. One Node.js process with SQLite.",
+      "url": "https://github.com/litmers-dev/litpage",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": null,
+      "launched_at": 1792726775,
+      "score": 2.6338421218588666,
+      "signal_summary": "github:73.0",
+      "signals": [
+        "github:73.0"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "SimReady Central USD Search",
+      "tagline": "Interactive AI space by nvidia",
+      "url": "https://huggingface.co/spaces/nvidia/simready-central",
+      "emoji": "🔎",
+      "category": "Research & Data",
+      "why_it_matters": "Trending community demo & model with 178 likes on Hugging Face.",
+      "launched_at": 1790607131,
+      "score": 0.6891123584367095,
+      "signal_summary": "huggingface:178.0",
+      "signals": [
+        "huggingface:178.0"
+      ]
+    },
+    {
+      "id": 95,
+      "name": "llmrun",
+      "tagline": "llmrun – which open LLMs run on your GPU, and how good they are",
+      "url": "https://llmrun.dev/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": null,
+      "launched_at": 1793105397,
+      "score": 6.97555720642448,
+      "signal_summary": "hn:3.0",
+      "signals": [
+        "hn:3.0"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "AbliteratedOutTheBox",
+      "tagline": "llama.cpp fork that abliterates at inference",
+      "url": "https://github.com/heterodoxin/AbliteratedOutTheBox",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Production open-source breakthrough with 151 verified GitHub stars.",
+      "launched_at": 1792619650,
+      "score": 4.073633535738143,
+      "signal_summary": "github:151.0",
+      "signals": [
+        "github:151.0"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "FoundationForecast",
+      "tagline": "FoundationForecast: unified API for time series foundation models",
+      "url": "https://github.com/TimeCopilot/foundationforecast",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": null,
+      "launched_at": 1793102728,
+      "score": 3.663759236801147,
+      "signal_summary": "hn:2.0",
+      "signals": [
+        "hn:2.0"
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Jev Decision Index",
+      "tagline": "Benchmarks and news on various repros of TypeSafe's Jev",
+      "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index",
+      "emoji": "🔬",
+      "category": "Models & Infra",
+      "why_it_matters": "Trending community demo & model with 826 likes on Hugging Face.",
+      "launched_at": 1789675516,
+      "score": 2.189609547256123,
+      "signal_summary": "huggingface:826.0",
+      "signals": [
+        "huggingface:826.0"
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Introducing Carbon-X",
+      "tagline": "The best open model for DNA understanding",
+      "url": "https://huggingface.co/spaces/HuggingFaceBio/Carbon-X-Release",
+      "emoji": "🧬",
+      "category": "Models & Infra",
+      "why_it_matters": "Trending community demo & model with 65 likes on Hugging Face.",
+      "launched_at": 1792077236,
+      "score": 0.7242442192478873,
+      "signal_summary": "huggingface:65.0",
+      "signals": [
+        "huggingface:65.0"
+      ]
+    }
+  ]
+}
