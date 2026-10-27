@@ -6,10 +6,6 @@
 <title>AI Radar — Curated Best-in-Class AI Tools</title>
 <meta name="description" content="An independent, highly curated index of battle-tested, high-traction AI software, agents, and models. Zero wrappers or noise." />
 
-<!-- Free, 100% Privacy-Friendly View Counter (No Cookies, GDPR/DPDP Compliant) -->
-<!-- Replace YOUR_PANEL_KEY with goatcounter code or goatcounter.com free account if desired -->
-<script data-goatcounter="https://ai-radar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
 <style>
   :root {
     --bg: #090b10; --card: #11151e; --card-hi: #171d2b; --line: #1f2737;
@@ -24,8 +20,10 @@
   header { padding: 48px 0 24px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 50% 0%, #151d2f 0%, var(--bg) 70%); }
   .top-stats { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
   .editorial-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(79, 140, 246, 0.1); color: var(--accent); border: 1px solid rgba(79, 140, 246, 0.25); padding: 5px 12px; border-radius: 999px; }
-  .visitor-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; background: #131a29; border: 1px solid var(--line); color: var(--muted); padding: 5px 12px; border-radius: 999px; }
-  .visitor-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); }
+  
+  .visitor-counter-wrap { display: inline-flex; align-items: center; gap: 10px; background: #131a29; border: 1px solid var(--line); padding: 5px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; color: #a4b3cc; }
+  .visitor-counter-wrap .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 10px var(--green); }
+  .visitor-badge-img { height: 18px; vertical-align: middle; border-radius: 4px; }
 
   h1 { font-size: 34px; margin: 0 0 10px; font-weight: 800; letter-spacing: -0.03em; }
   .subtitle { font-size: 16px; color: var(--muted); max-width: 680px; margin: 0 0 28px; line-height: 1.6; }
@@ -49,7 +47,6 @@
   .name { font-weight: 700; font-size: 17px; margin-bottom: 3px; color: #fff; line-height: 1.3; }
   .tag { color: #a4b3cc; font-size: 13px; margin: 0; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   
-  /* Editorial highlight */
   .why-box { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--green); border-radius: 0 8px 8px 0; padding: 8px 12px; margin: 14px 0 16px; font-size: 12px; color: #c0ded4; line-height: 1.4; }
   .why-box strong { color: var(--green); }
 
@@ -72,8 +69,15 @@
   <div class="wrap">
     <div class="top-stats">
       <div class="editorial-badge">✓ AI Thought-Leader Curated</div>
-      <div class="visitor-pill"><span class="dot"></span> Live Telemetry Active</div>
+      
+      <!-- Automatic Zero-Setup Live Visitor Counter -->
+      <div class="visitor-counter-wrap">
+        <span class="pulse-dot"></span>
+        <span>Live Views:</span>
+        <img class="visitor-badge-img" src="https://visitor-badge.laobi.icu/badge?page_id=elite-ai-radar.main" alt="Live Views" />
+      </div>
     </div>
+
     <h1>The Elite AI Radar</h1>
     <p class="subtitle">An independent index of high-utility, verified AI tools, open-source models, and developer frameworks. Filtered for production polish — zero thin wrappers or hobby projects.</p>
     <div class="controls">
@@ -94,7 +98,7 @@
 
 <footer>
   <div class="wrap">
-    100% Independent Curation. Automated telemetry via GitHub, Hacker News, & Hugging Face official APIs. Clean IP & privacy-compliant analytics.
+    100% Independent Curation. Automated telemetry via GitHub, Hacker News, & Hugging Face official APIs. Clean IP & live visitor telemetry.
   </div>
 </footer>
 
