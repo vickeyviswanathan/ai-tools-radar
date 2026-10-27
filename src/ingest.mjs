@@ -1,8 +1,9 @@
-// Ingestion engine with High-Bar Editorial Quality Filters
+// Ingestion engine with High-Bar Editorial Quality Filters + Featured Hall of Fame
 import { getDb, tx, now, setMeta } from "./db.mjs";
 import { canonicalKey, categorize, clip } from "./classify.mjs";
 import { fetchHackerNews, fetchGitHub, fetchHuggingFace } from "./sources.mjs";
 import { evaluateQuality } from "./quality.mjs";
+import { FEATURED_LEADERS } from "./featured.mjs";
 
 export async function runIngestion() {
   console.log(`[Ingest] Starting sync across open sources...`);
@@ -17,6 +18,7 @@ export async function runIngestion() {
   ]);
 
   const rawItems = [
+    ...FEATURED_LEADERS, // Always seed our featured Hall-of-Fame tools (RTK, REA, Libretto, etc.)
     ...(hnResults.status === "fulfilled" ? hnResults.value : []),
     ...(ghResults.status === "fulfilled" ? ghResults.value : []),
     ...(hfResults.status === "fulfilled" ? hfResults.value : []),
@@ -43,7 +45,7 @@ export async function runIngestion() {
         emoji = COALESCE(items.emoji, excluded.emoji),
         category = COALESCE(items.category, excluded.category),
         tags = COALESCE(items.tags, excluded.tags),
-        why_it_matters = COALESCE(items.why_it_matters, excluded.why_it_matters)
+        why_it_matters = COALESCE(excluded.why_it_matters, items.why_it_matters)
       RETURNING id
     `);
 
@@ -57,16 +59,22 @@ export async function runIngestion() {
     `);
 
     for (const item of rawItems) {
-      // Apply strict quality gate
-      const qCheck = evaluateQuality(item);
-      if (!qCheck.pass) {
-        rejectedCount++;
-        continue;
+      // Check if it's explicitly featured
+      const isPreFeatured = FEATURED_LEADERS.some(f => f.url === item.url);
+      let whyItMatters = item.whyItMatters;
+
+      if (!isPreFeatured) {
+        const qCheck = evaluateQuality(item);
+        if (!qCheck.pass) {
+          rejectedCount++;
+          continue;
+        }
+        whyItMatters = qCheck.whyItMatters;
       }
       passedCount++;
 
       const key = canonicalKey(item.url);
-      const category = categorize(`${item.name} ${item.tagline || ""} ${(item.tags || []).join(" ")}`);
+      const category = item.category || categorize(`${item.name} ${item.tagline || ""} ${(item.tags || []).join(" ")}`);
       const tagsJson = JSON.stringify(item.tags || []);
 
       const row = upsertItem.get(
@@ -77,7 +85,7 @@ export async function runIngestion() {
         item.emoji || null,
         category,
         tagsJson,
-        qCheck.whyItMatters,
+        whyItMatters,
         item.launchedAt || currentTs,
         currentTs,
         currentTs
@@ -96,7 +104,7 @@ export async function runIngestion() {
       }
     }
 
-    // Momentum decay score
+    // Momentum decay score with boost for featured tools
     const computeScore = d.prepare(`
       UPDATE items
       SET score = (

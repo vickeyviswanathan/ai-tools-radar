@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T14:12:19.020Z",
+  "updatedAt": "2026-10-27T14:13:56.882Z",
   "categories": [
     "Coding",
     "Agents & Automation",
@@ -13,6 +13,21 @@
   ],
   "tools": [
     {
+      "id": 100,
+      "name": "RTK (Rust Token Killer)",
+      "tagline": "CLI proxy that condenses command outputs by 60–90% to save LLM tokens and execution costs.",
+      "url": "https://github.com/rtk-ai/rtk",
+      "emoji": "⚡",
+      "category": "Coding",
+      "why_it_matters": "Essential AI CLI infrastructure that slashes LLM context token usage by up to 90% without losing error signals.",
+      "launched_at": 1791900834,
+      "score": 11.540087880271724,
+      "signal_summary": "github:1250.0",
+      "signals": [
+        "github:1250.0"
+      ]
+    },
+    {
       "id": 44,
       "name": "call of duty modern warfare resocket 4 fps optimizer",
       "tagline": "Lightweight desktop tool for Call of Duty: Modern Warfare 4. Smart FPS optimization, performance tuning, process management and real-time monitoring. Designed to improve frame rates and stability. Re…",
@@ -21,7 +36,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792997771,
-      "score": 4.772087231755453,
+      "score": 4.7674057019869345,
       "signal_summary": "github:32.0",
       "signals": [
         "github:32.0"
@@ -36,7 +51,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1793104329,
-      "score": 4.202900110820427,
+      "score": 4.1657845825251885,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -51,7 +66,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792966377,
-      "score": 3.947329112993147,
+      "score": 3.944260364536484,
       "signal_summary": "github:35.0",
       "signals": [
         "github:35.0"
@@ -66,7 +81,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1793105900,
-      "score": 2.446295843983844,
+      "score": 2.4218033740579306,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -81,7 +96,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1793105840,
-      "score": 2.4312468752109653,
+      "score": 2.407028786938853,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -96,7 +111,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1793105806,
-      "score": 2.42279425817825,
+      "score": 2.398729672168057,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -111,7 +126,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792781376,
-      "score": 2.204320980936959,
+      "score": 2.203550087605025,
       "signal_summary": "github:51.0",
       "signals": [
         "github:51.0"
@@ -126,7 +141,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1793104815,
-      "score": 2.1981411085998652,
+      "score": 2.1779942090391025,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -141,7 +156,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792739150,
-      "score": 2.025032206894407,
+      "score": 2.0244030221400577,
       "signal_summary": "github:54.0",
       "signals": [
         "github:54.0"
@@ -156,7 +171,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792699770,
-      "score": 1.931384711333821,
+      "score": 1.9308411746140712,
       "signal_summary": "github:58.0",
       "signals": [
         "github:58.0"
@@ -171,25 +186,10 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1793103215,
-      "score": 1.9068749368871145,
+      "score": 1.8913353887107889,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
-      ]
-    },
-    {
-      "id": 27,
-      "name": "purrge",
-      "tagline": "🐾 Purrge — macOS AI 磁盘清理工具，支持 Claude Code 和 Codex：空间不足时提醒，AI 逐项判断能清什么，你勾选确认后才清理",
-      "url": "https://github.com/RabbittuX/purrge",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1792506955,
-      "score": 1.6472668305192029,
-      "signal_summary": "github:78.0",
-      "signals": [
-        "github:78.0"
       ]
     },
     {
@@ -199,12 +199,12 @@
       "url": "https://github.com/hevnsnt/CVEngine",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": null,
+      "why_it_matters": "Production open-source breakthrough with 408 verified GitHub stars.",
       "launched_at": 1792881283,
-      "score": 26.793646565093557,
-      "signal_summary": "github:406.0",
+      "score": 26.912238385499503,
+      "signal_summary": "github:408.0",
       "signals": [
-        "github:406.0"
+        "github:408.0"
       ]
     },
     {
@@ -216,7 +216,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Trending community demo & model with 54 likes on Hugging Face.",
       "launched_at": 1793017074,
-      "score": 9.943612735063098,
+      "score": 9.931985531245454,
       "signal_summary": "huggingface:54.0",
       "signals": [
         "huggingface:54.0"
@@ -231,25 +231,25 @@
       "category": "Agents & Automation",
       "why_it_matters": null,
       "launched_at": 1792726773,
-      "score": 4.0048586292138175,
+      "score": 4.003653706861304,
       "signal_summary": "github:111.0",
       "signals": [
         "github:111.0"
       ]
     },
     {
-      "id": 88,
-      "name": "CiteWing",
-      "tagline": "CiteWing – AI backlink outreach agent",
-      "url": "https://citewing.com/",
-      "emoji": null,
+      "id": 102,
+      "name": "Libretto",
+      "tagline": "Browser automation CLI & typed workflow engine for live site inspection, prototyping, and resilient AI interaction.",
+      "url": "https://github.com/saffron-health/libretto",
+      "emoji": "🌐",
       "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1793106233,
-      "score": 2.5330182621170456,
-      "signal_summary": "hn:1.0",
+      "why_it_matters": "Next-gen browser automation framework with live inspection REPL, snapshot diffs, and anti-bot mitigation.",
+      "launched_at": 1790518434,
+      "score": 3.119135545869871,
+      "signal_summary": "github:840.0",
       "signals": [
-        "hn:1.0"
+        "github:840.0"
       ]
     },
     {
@@ -261,10 +261,25 @@
       "category": "Agents & Automation",
       "why_it_matters": null,
       "launched_at": 1792715212,
-      "score": 2.5084287980341613,
+      "score": 2.5076957800172672,
       "signal_summary": "github:72.0",
       "signals": [
         "github:72.0"
+      ]
+    },
+    {
+      "id": 88,
+      "name": "CiteWing",
+      "tagline": "CiteWing – AI backlink outreach agent",
+      "url": "https://citewing.com/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1793106233,
+      "score": 2.506917556058622,
+      "signal_summary": "hn:1.0",
+      "signals": [
+        "hn:1.0"
       ]
     },
     {
@@ -276,7 +291,7 @@
       "category": "Agents & Automation",
       "why_it_matters": null,
       "launched_at": 1793106047,
-      "score": 2.4838971624091863,
+      "score": 2.458713045276738,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -291,7 +306,7 @@
       "category": "Agents & Automation",
       "why_it_matters": null,
       "launched_at": 1793105805,
-      "score": 2.422546467474255,
+      "score": 2.398486374790312,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -306,7 +321,7 @@
       "category": "Agents & Automation",
       "why_it_matters": null,
       "launched_at": 1793105465,
-      "score": 2.3409102333124454,
+      "score": 2.318309879732167,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -321,7 +336,7 @@
       "category": "Agents & Automation",
       "why_it_matters": null,
       "launched_at": 1793105078,
-      "score": 2.2539348060209243,
+      "score": 2.2328442301479865,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -336,7 +351,7 @@
       "category": "Agents & Automation",
       "why_it_matters": null,
       "launched_at": 1792317779,
-      "score": 2.0164430872361523,
+      "score": 2.01614662074082,
       "signal_summary": "github:132.0",
       "signals": [
         "github:132.0"
@@ -351,22 +366,7 @@
       "category": "Agents & Automation",
       "why_it_matters": null,
       "launched_at": 1793069443,
-      "score": 0.8914009276382596,
-      "signal_summary": "hn:2.0",
-      "signals": [
-        "hn:2.0"
-      ]
-    },
-    {
-      "id": 15,
-      "name": "Agent outputs slop texts, so I make a superfast HTML skill…",
-      "tagline": "Agent outputs slop texts, so I make a superfast HTML skill visualize it",
-      "url": "https://github.com/QingYunA/answer-me-with-html",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1793067570,
-      "score": 0.8514568354417483,
+      "score": 0.8892261839888613,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -381,7 +381,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1793107815,
-      "score": 3.035307241450055,
+      "score": 2.998997803445892,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -396,7 +396,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 232 likes on Hugging Face.",
       "launched_at": 1791979853,
-      "score": 2.321798612345462,
+      "score": 2.3215586358605194,
       "signal_summary": "huggingface:232.0",
       "signals": [
         "huggingface:232.0"
@@ -411,7 +411,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 170 likes on Hugging Face.",
       "launched_at": 1791966846,
-      "score": 1.6782668251173343,
+      "score": 1.6780953233682192,
       "signal_summary": "huggingface:170.0",
       "signals": [
         "huggingface:170.0"
@@ -426,7 +426,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 480 likes on Hugging Face.",
       "launched_at": 1789899359,
-      "score": 1.379342133583856,
+      "score": 1.3792917307934942,
       "signal_summary": "huggingface:480.0",
       "signals": [
         "huggingface:480.0"
@@ -441,7 +441,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 76 likes on Hugging Face.",
       "launched_at": 1792418444,
-      "score": 1.3643754724712078,
+      "score": 1.36414599572294,
       "signal_summary": "huggingface:76.0",
       "signals": [
         "huggingface:76.0"
@@ -456,7 +456,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 236 likes on Hugging Face.",
       "launched_at": 1791183939,
-      "score": 1.249785001738085,
+      "score": 1.2497089950155607,
       "signal_summary": "huggingface:236.0",
       "signals": [
         "huggingface:236.0"
@@ -471,7 +471,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 404 likes on Hugging Face.",
       "launched_at": 1790050655,
-      "score": 1.230007377186108,
+      "score": 1.229960214062061,
       "signal_summary": "huggingface:404.0",
       "signals": [
         "huggingface:404.0"
@@ -486,7 +486,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 109 likes on Hugging Face.",
       "launched_at": 1792068881,
-      "score": 1.2028995062532348,
+      "score": 1.2027646228342925,
       "signal_summary": "huggingface:109.0",
       "signals": [
         "huggingface:109.0"
@@ -501,7 +501,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1792759826,
-      "score": 1.1232613636566062,
+      "score": 1.1228921958911482,
       "signal_summary": "huggingface:28.0",
       "signals": [
         "huggingface:28.0"
@@ -516,7 +516,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 1019 likes on Hugging Face.",
       "launched_at": 1784116156,
-      "score": 0.8522483199039729,
+      "score": 0.852237185702341,
       "signal_summary": "huggingface:1019.0",
       "signals": [
         "huggingface:1019.0"
@@ -531,7 +531,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 267 likes on Hugging Face.",
       "launched_at": 1789814899,
-      "score": 0.7437739032199224,
+      "score": 0.7437474198664252,
       "signal_summary": "huggingface:267.0",
       "signals": [
         "huggingface:267.0"
@@ -546,7 +546,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 739 likes on Hugging Face.",
       "launched_at": 1785342238,
-      "score": 0.7367953115526497,
+      "score": 0.736784167811914,
       "signal_summary": "huggingface:739.0",
       "signals": [
         "huggingface:739.0"
@@ -561,7 +561,7 @@
       "category": "Video",
       "why_it_matters": "Trending community demo & model with 367 likes on Hugging Face.",
       "launched_at": 1788837788,
-      "score": 0.7490779002620817,
+      "score": 0.749057317437795,
       "signal_summary": "huggingface:367.0",
       "signals": [
         "huggingface:367.0"
@@ -576,7 +576,7 @@
       "category": "Video",
       "why_it_matters": null,
       "launched_at": 1791983627,
-      "score": 0.7334847672269408,
+      "score": 0.7334087034010127,
       "signal_summary": "github:73.0",
       "signals": [
         "github:73.0"
@@ -591,7 +591,7 @@
       "category": "Video",
       "why_it_matters": null,
       "launched_at": 1792487317,
-      "score": 0.6912743991245277,
+      "score": 0.691145428547164,
       "signal_summary": "huggingface:34.0",
       "signals": [
         "huggingface:34.0"
@@ -606,7 +606,7 @@
       "category": "Video",
       "why_it_matters": "Trending community demo & model with 201 likes on Hugging Face.",
       "launched_at": 1789289929,
-      "score": 0.4690789861797142,
+      "score": 0.4690645745365192,
       "signal_summary": "huggingface:201.0",
       "signals": [
         "huggingface:201.0"
@@ -621,7 +621,7 @@
       "category": "Video",
       "why_it_matters": "Trending community demo & model with 63 likes on Hugging Face.",
       "launched_at": 1791390316,
-      "score": 0.38201969815379,
+      "score": 0.3819936895036193,
       "signal_summary": "huggingface:63.0",
       "signals": [
         "huggingface:63.0"
@@ -636,7 +636,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Trending community demo & model with 148 likes on Hugging Face.",
       "launched_at": 1791922869,
-      "score": 1.3967786974953458,
+      "score": 1.3966412147665344,
       "signal_summary": "huggingface:148.0",
       "signals": [
         "huggingface:148.0"
@@ -651,7 +651,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792675162,
-      "score": 1.3679360929651674,
+      "score": 1.367572533250115,
       "signal_summary": "github:44.0",
       "signals": [
         "github:44.0"
@@ -666,7 +666,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Trending community demo & model with 47 likes on Hugging Face.",
       "launched_at": 1792494494,
-      "score": 0.968809518744814,
+      "score": 0.9686266868901985,
       "signal_summary": "huggingface:47.0",
       "signals": [
         "huggingface:47.0"
@@ -681,7 +681,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792075004,
-      "score": 0.7334975431561632,
+      "score": 0.7334148116648234,
       "signal_summary": "huggingface:66.0",
       "signals": [
         "huggingface:66.0"
@@ -696,7 +696,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792106320,
-      "score": 0.31125261952699795,
+      "score": 0.3112164261380389,
       "signal_summary": "github:27.0",
       "signals": [
         "github:27.0"
@@ -709,12 +709,12 @@
       "url": "https://github.com/JunWan666/astrbot-for-android",
       "emoji": null,
       "category": "Chat & Assistants",
-      "why_it_matters": null,
+      "why_it_matters": "Production open-source breakthrough with 153 verified GitHub stars.",
       "launched_at": 1792991612,
-      "score": 21.20320235945,
-      "signal_summary": "github:151.0",
+      "score": 21.46399308458437,
+      "signal_summary": "github:153.0",
       "signals": [
-        "github:151.0"
+        "github:153.0"
       ]
     },
     {
@@ -726,7 +726,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792792307,
-      "score": 1.6189565019540526,
+      "score": 1.6183712988242804,
       "signal_summary": "github:36.0",
       "signals": [
         "github:36.0"
@@ -741,7 +741,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792813087,
-      "score": 1.4603715704047049,
+      "score": 1.4598076737252215,
       "signal_summary": "github:30.0",
       "signals": [
         "github:30.0"
@@ -756,7 +756,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792304638,
-      "score": 0.5392882443268093,
+      "score": 0.5392102373292147,
       "signal_summary": "github:36.0",
       "signals": [
         "github:36.0"
@@ -771,7 +771,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792486256,
-      "score": 0.52755562904931,
+      "score": 0.52745736876395,
       "signal_summary": "github:26.0",
       "signals": [
         "github:26.0"
@@ -786,7 +786,7 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source breakthrough with 288 verified GitHub stars.",
       "launched_at": 1793007273,
-      "score": 47.42750412841764,
+      "score": 47.376971077483084,
       "signal_summary": "github:288.0",
       "signals": [
         "github:288.0"
@@ -801,7 +801,7 @@
       "category": "Productivity",
       "why_it_matters": null,
       "launched_at": 1792677611,
-      "score": 1.9717271195035668,
+      "score": 1.971200172296592,
       "signal_summary": "github:63.0",
       "signals": [
         "github:63.0"
@@ -816,10 +816,25 @@
       "category": "Productivity",
       "why_it_matters": null,
       "launched_at": 1791965538,
-      "score": 0.2760438382100846,
+      "score": 0.27601566137162825,
       "signal_summary": "github:28.0",
       "signals": [
         "github:28.0"
+      ]
+    },
+    {
+      "id": 101,
+      "name": "REA (Reverse Engineer Anything)",
+      "tagline": "Decompile, analyze binaries, extract managed artifacts, and inspect runtime evidence for AI coding agents.",
+      "url": "https://github.com/morluto/rea",
+      "emoji": "🔬",
+      "category": "Research & Data",
+      "why_it_matters": "Groundbreaking agentic reverse-engineering harness supporting native, managed, firmware, and WebAssembly targets.",
+      "launched_at": 1791382434,
+      "score": 5.909748908670341,
+      "signal_summary": "github:980.0",
+      "signals": [
+        "github:980.0"
       ]
     },
     {
@@ -831,7 +846,7 @@
       "category": "Research & Data",
       "why_it_matters": null,
       "launched_at": 1793107102,
-      "score": 2.7881884024568517,
+      "score": 2.7570905144393527,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -846,7 +861,7 @@
       "category": "Research & Data",
       "why_it_matters": null,
       "launched_at": 1792726775,
-      "score": 2.6338421218588666,
+      "score": 2.633049686525205,
       "signal_summary": "github:73.0",
       "signals": [
         "github:73.0"
@@ -861,7 +876,7 @@
       "category": "Research & Data",
       "why_it_matters": "Trending community demo & model with 178 likes on Hugging Face.",
       "launched_at": 1790607131,
-      "score": 0.6891123584367095,
+      "score": 0.6890800783587957,
       "signal_summary": "huggingface:178.0",
       "signals": [
         "huggingface:178.0"
@@ -876,7 +891,7 @@
       "category": "Models & Infra",
       "why_it_matters": null,
       "launched_at": 1793105397,
-      "score": 6.97555720642448,
+      "score": 6.908585454679042,
       "signal_summary": "hn:3.0",
       "signals": [
         "hn:3.0"
@@ -891,7 +906,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source breakthrough with 151 verified GitHub stars.",
       "launched_at": 1792619650,
-      "score": 4.073633535738143,
+      "score": 4.07267156115297,
       "signal_summary": "github:151.0",
       "signals": [
         "github:151.0"
@@ -906,7 +921,7 @@
       "category": "Models & Infra",
       "why_it_matters": null,
       "launched_at": 1793102728,
-      "score": 3.663759236801147,
+      "score": 3.634877136105108,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -921,7 +936,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Trending community demo & model with 826 likes on Hugging Face.",
       "launched_at": 1789675516,
-      "score": 2.189609547256123,
+      "score": 2.189534739477884,
       "signal_summary": "huggingface:826.0",
       "signals": [
         "huggingface:826.0"
@@ -936,7 +951,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Trending community demo & model with 65 likes on Hugging Face.",
       "launched_at": 1792077236,
-      "score": 0.7242442192478873,
+      "score": 0.7241623561972357,
       "signal_summary": "huggingface:65.0",
       "signals": [
         "huggingface:65.0"
