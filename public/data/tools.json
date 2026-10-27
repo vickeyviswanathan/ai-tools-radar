@@ -208,36 +208,6 @@
       ]
     },
     {
-      "id": 103,
-      "name": "solidcraft",
-      "tagline": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
-      "url": "https://solidcraft.io/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Production open-source breakthrough with 10,991 verified GitHub stars.",
-      "launched_at": 1791399468,
-      "score": 67.0084722029427,
-      "signal_summary": "github:10991.0",
-      "signals": [
-        "github:10991.0"
-      ]
-    },
-    {
-      "id": 116,
-      "name": "earshot",
-      "tagline": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
-      "url": "https://github.com/Leonxlnx/earshot",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Production open-source breakthrough with 3,001 verified GitHub stars.",
-      "launched_at": 1792047166,
-      "score": 32.263462258784244,
-      "signal_summary": "github:3001.0",
-      "signals": [
-        "github:3001.0"
-      ]
-    },
-    {
       "id": 18,
       "name": "CVEngine",
       "tagline": "AI-first external attack surface assessment with continuous discovery, evidence-based vulnerability validation, and developer-agent MCP integration.",
