@@ -1,10 +1,11 @@
-// Ingestion engine with Broad AI Queries + High-Bar Editorial Quality Filters
+// Ingestion engine with Broad AI Queries + Thought-Leader Quality Gate + Auto-Translation
 import { getDb, tx, now, setMeta } from "./db.mjs";
 import { canonicalKey, categorize, clip } from "./classify.mjs";
 import { fetchHackerNews, fetchHuggingFace } from "./sources.mjs";
 import { fetchGitHubBroad } from "./sources-broad.mjs";
 import { evaluateQuality } from "./quality.mjs";
 import { FEATURED_LEADERS } from "./featured.mjs";
+import { containsChinese, translateToEnglish, translateDatabase } from "./translate.mjs";
 
 export async function runIngestion() {
   console.log(`[Ingest] Starting broad sync across open sources...`);
@@ -25,7 +26,17 @@ export async function runIngestion() {
     ...(hfResults.status === "fulfilled" ? hfResults.value : []),
   ];
 
-  console.log(`[Ingest] Collected ${rawItems.length} raw candidates. Filtering against Thought-Leader Quality Gate...`);
+  console.log(`[Ingest] Collected ${rawItems.length} raw candidates. Translating and filtering...`);
+
+  // Translate incoming Chinese text into English
+  for (const item of rawItems) {
+    if (containsChinese(item.name)) {
+      item.name = await translateToEnglish(item.name);
+    }
+    if (containsChinese(item.tagline)) {
+      item.tagline = await translateToEnglish(item.tagline);
+    }
+  }
 
   const currentTs = now();
   let passedCount = 0;
@@ -40,8 +51,9 @@ export async function runIngestion() {
       INSERT INTO items (key, name, tagline, url, emoji, category, tags, why_it_matters, launched_at, first_seen, last_seen, status)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active')
       ON CONFLICT(key) DO UPDATE SET
+        name = excluded.name,
         last_seen = excluded.last_seen,
-        tagline = COALESCE(items.tagline, excluded.tagline),
+        tagline = excluded.tagline,
         emoji = COALESCE(items.emoji, excluded.emoji),
         category = COALESCE(items.category, excluded.category),
         tags = COALESCE(items.tags, excluded.tags),
@@ -119,6 +131,9 @@ export async function runIngestion() {
     computeScore.run(currentTs);
   });
 
+  // Ensure any existing stored rows with Chinese are translated as well
+  await translateDatabase(db);
+
   setMeta("last_ingest_at", currentTs);
-  console.log(`[Ingest] Finished: ${passedCount} passed quality gate (${rejectedCount} rejected as noise) in ${((Date.now() - startTime) / 1000).toFixed(1)}s.`);
+  console.log(`[Ingest] Finished: ${passedCount} passed quality gate (${rejectedCount} rejected) in ${((Date.now() - startTime) / 1000).toFixed(1)}s.`);
 }
