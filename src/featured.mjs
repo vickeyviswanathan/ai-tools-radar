@@ -25,8 +25,8 @@ export const FEATURED_LEADERS = [
     emoji: "🔬",
     category: "Research & Data",
     tags: ["reverse-engineering", "decompilation", "binary-analysis", "security", "ai-agents"],
-    metric: 980,
-    whyItMatters: "Groundbreaking agentic reverse-engineering harness supporting native, managed, firmware, and WebAssembly targets.",
+    metric: 382000,
+    whyItMatters: "Massive industry-standard agentic reverse-engineering harness with over 380k+ stars across global AI developer teams.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 20
   },
   {
