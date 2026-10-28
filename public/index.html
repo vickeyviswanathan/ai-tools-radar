@@ -470,16 +470,17 @@
       <!-- 3. Autonomous Agents Failing -->
       <div class="insight-card">
         <div class="insight-top">
-          <h3 class="insight-q">3. Why do autonomous agents go off the rails?</h3>
+          <h3 class="insight-q">3. Why do autonomous coding agents go off the rails?</h3>
           <button class="copy-btn" onclick="copyInsight(2)">📋 Copy</button>
         </div>
         <p class="insight-truth">Giving an AI an open-ended goal ("build this entire feature") fails because <strong>small errors compound</strong>. If step 2 veers off by 5%, step 10 is usually total nonsense.</p>
-        <div class="insight-fix"><strong>What works:</strong> Keep agent tasks scoped, run them in sandboxes with git rollbacks, and verify each step with browser or terminal checks.</div>
+        <div class="insight-fix"><strong>What works:</strong> Keep tasks scoped, run them in sandboxes with git checkpoints, and use agentic developer environments with built-in tool verification.</div>
         <div class="insight-tools-row">
-          <span class="tools-label">Tools to check:</span>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('Libretto')">Libretto</a>
+          <span class="tools-label">Frontier Tools:</span>
+          <a class="tool-chip" href="#radar" onclick="filterByTool('Antigravity')">Antigravity</a>
+          <a class="tool-chip" href="#radar" onclick="filterByTool('Claude Code')">Claude Code</a>
+          <a class="tool-chip" href="#radar" onclick="filterByTool('VS Code')">VS Code Agent</a>
           <a class="tool-chip" href="#radar" onclick="filterByTool('Aider')">Aider</a>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('Browser-Use')">Browser-Use</a>
         </div>
       </div>
 
@@ -578,10 +579,10 @@ const INSIGHTS_DATA = [
     tools: "RAGFlow, Qdrant"
   },
   {
-    q: "Why do autonomous agents go off the rails?",
+    q: "Why do autonomous coding agents go off the rails?",
     truth: "Giving an AI an open-ended goal ('build this entire feature') fails because small errors compound. If step 2 veers off by 5%, step 10 is usually total nonsense.",
-    fix: "Keep agent tasks scoped, run them in sandboxes with git rollbacks, and verify each step with browser or terminal checks.",
-    tools: "Libretto, Aider, Browser-Use, CrewAI"
+    fix: "Keep tasks scoped, run them in sandboxes with git checkpoints, and use agentic developer environments with built-in tool verification.",
+    tools: "Google Antigravity, Claude Code, VS Code Agent Mode, Aider"
   },
   {
     q: "Can you run models locally without cloud leaks?",

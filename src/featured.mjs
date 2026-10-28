@@ -2,7 +2,91 @@
 // Directly guaranteed high-authority tools & apps that anchor the index
 
 export const FEATURED_LEADERS = [
-  // --- Coding & Agentic Dev ---
+  // --- Frontier AI Coding Agents & IDEs ---
+  {
+    source: "app",
+    sourceId: "google-antigravity",
+    sourceUrl: "https://antigravity.google",
+    name: "Google Antigravity",
+    tagline: "Next-gen agentic AI coding environment with deep workspace reasoning, terminal tools, and multi-agent coordination.",
+    url: "https://antigravity.google",
+    emoji: "🚀",
+    category: "Coding",
+    tags: ["google", "agentic-coding", "ide", "deepmind", "developer-tools"],
+    metric: 88000,
+    whyItMatters: "Pioneering agentic coding platform that pairs developers with autonomous coding agents capable of end-to-end task execution.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
+  },
+  {
+    source: "app",
+    sourceId: "anthropic-claude-code",
+    sourceUrl: "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code",
+    name: "Claude Code",
+    tagline: "Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.",
+    url: "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code",
+    emoji: "⚡",
+    category: "Coding",
+    tags: ["anthropic", "claude", "terminal", "coding-agent", "cli"],
+    metric: 75000,
+    whyItMatters: "High-velocity CLI coding agent that operates directly in your local repo with fine-grained permission controls.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
+  },
+  {
+    source: "app",
+    sourceId: "openai-codex",
+    sourceUrl: "https://openai.com/index/openai-codex/",
+    name: "OpenAI Codex",
+    tagline: "Foundational AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.",
+    url: "https://openai.com/index/openai-codex/",
+    emoji: "🧠",
+    category: "Coding",
+    tags: ["openai", "codex", "code-generation", "foundational-model"],
+    metric: 110000,
+    whyItMatters: "The foundational language model architecture that pioneered automated code translation, refactoring, and agentic workflows.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
+  },
+  {
+    source: "app",
+    sourceId: "kimi-code",
+    sourceUrl: "https://kimi.ai",
+    name: "Kimi Code",
+    tagline: "Moonshot AI's high-context reasoning and coding model optimized for full-repository understanding and multi-file logic.",
+    url: "https://kimi.ai",
+    emoji: "🌙",
+    category: "Coding",
+    tags: ["kimi", "moonshot", "reasoning", "long-context", "coding"],
+    metric: 52000,
+    whyItMatters: "Exceptional million-token context reasoning capable of tracking large enterprise codebases and multi-package dependencies.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "app",
+    sourceId: "vscode-agent-mode",
+    sourceUrl: "https://code.visualstudio.com/docs/copilot/copilot-chat",
+    name: "VS Code with In-Built AI Agents",
+    tagline: "Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.",
+    url: "https://code.visualstudio.com/docs/copilot/copilot-chat",
+    emoji: "📐",
+    category: "Coding",
+    tags: ["vscode", "microsoft", "in-built-agents", "copilot-agent", "developer-tools"],
+    metric: 92000,
+    whyItMatters: "Brings autonomous multi-file refactoring and command execution directly into the world's most widely used code editor.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "app",
+    sourceId: "amazon-kiro-q-developer",
+    sourceUrl: "https://aws.amazon.com/q/developer/",
+    name: "Amazon Q Developer / Kiro IDE",
+    tagline: "AWS's generative AI coding companion and cloud-native development environment for code transformation and security scanning.",
+    url: "https://aws.amazon.com/q/developer/",
+    emoji: "☁️",
+    category: "Coding",
+    tags: ["amazon", "aws", "q-developer", "kiro-ide", "cloud-coding"],
+    metric: 48000,
+    whyItMatters: "Specialized in enterprise Java/Node upgrades, automated vulnerability patching, and deep AWS cloud infrastructure wiring.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
   {
     source: "github",
     sourceId: "rtk-ai/rtk",
@@ -15,7 +99,7 @@ export const FEATURED_LEADERS = [
     tags: ["cli", "rust", "token-optimization", "llm-cost", "developer-tools"],
     metric: 1250,
     whyItMatters: "Essential AI CLI infrastructure that slashes LLM context token usage by up to 90% without losing error signals.",
-    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
     source: "github",
@@ -131,7 +215,7 @@ export const FEATURED_LEADERS = [
     tags: ["browser-automation", "playwright", "workflows", "web-agent", "scraping"],
     metric: 840,
     whyItMatters: "Next-gen browser automation framework with live inspection REPL, snapshot diffs, and anti-bot mitigation.",
-    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
     source: "github",
@@ -173,7 +257,7 @@ export const FEATURED_LEADERS = [
     tags: ["mcp", "anthropic", "standards", "integrations", "tools"],
     metric: 16500,
     whyItMatters: "The universal interoperability standard defining how AI models securely query databases, run code, and invoke APIs.",
-    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
     source: "github",
@@ -203,7 +287,7 @@ export const FEATURED_LEADERS = [
     tags: ["local-llm", "llama", "deepseek", "inference", "cli"],
     metric: 125000,
     whyItMatters: "The undisputed runtime for local LLMs, packaging model weights, GPU acceleration, and REST APIs into zero-fuss binaries.",
-    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
     source: "github",
