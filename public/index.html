@@ -159,85 +159,6 @@
     color: var(--text-muted);
   }
 
-  /* Frontier Table with Prominent Links */
-  .table-wrap {
-    overflow-x: auto;
-    margin: 16px 0 30px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 18px;
-  }
-  table.frontier-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13.5px;
-    text-align: left;
-    min-width: 860px;
-  }
-  table.frontier-table th {
-    background: #141b29;
-    padding: 14px 18px;
-    color: #94a3b8;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid var(--line);
-  }
-  table.frontier-table td {
-    padding: 16px 18px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    vertical-align: middle;
-    color: #cbd5e1;
-    line-height: 1.5;
-  }
-  table.frontier-table tr:hover td {
-    background: var(--card-hover);
-  }
-  table.frontier-table a.tool-link {
-    color: #60a5fa;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-  }
-  table.frontier-table a.tool-link:hover {
-    color: #93c5fd;
-    text-decoration: underline;
-  }
-  .tag-env {
-    display: inline-block;
-    padding: 3px 9px;
-    border-radius: 4px;
-    background: rgba(59, 130, 246, 0.1);
-    color: #60a5fa;
-    border: 1px solid rgba(59, 130, 246, 0.25);
-    font-size: 11px;
-    font-weight: 600;
-  }
-  .btn-open {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background: #1b2438;
-    border: 1px solid #334155;
-    color: #f1f5f9;
-    padding: 6px 14px;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.15s;
-    white-space: nowrap;
-  }
-  .btn-open:hover {
-    background: var(--accent);
-    color: #040914;
-    border-color: var(--accent);
-  }
-
   /* Unfiltered Reality Cards */
   .reality-grid {
     display: grid;
@@ -556,7 +477,7 @@
     <!-- Quick Jump Navigation -->
     <nav class="nav-jump">
       <a href="#radar" class="nav-link" onclick="selectCategory('')">🧭 All Tools</a>
-      <a href="#radar" class="nav-link" onclick="selectCategory('Coding')">🛠️ Coding Agents Matrix</a>
+      <a href="#radar" class="nav-link" onclick="selectCategory('Coding')">💻 Coding Tools</a>
       <a href="#realities" class="nav-link">⚡ 4 Production Realities</a>
     </nav>
   </div>
@@ -579,164 +500,6 @@
 
       <div class="category-pills" id="category-bar">
         <button class="cat-pill active" data-cat="" onclick="selectCategory('')">All Pillars</button>
-      </div>
-    </div>
-
-    <!-- Frontier AI Coding Tools Comparison Table (Appears when 'Coding' is selected) -->
-    <div id="coding-table-block" style="display: none; margin-bottom: 30px;">
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-        <h3 style="margin: 0; font-size: 16px; font-weight: 700; color: #f1f5f9; display: flex; align-items: center; gap: 8px;">
-          🛠️ Frontier Coding Agents & Developer Environments
-        </h3>
-        <span style="font-size: 12px; color: var(--text-muted);">Direct official links</span>
-      </div>
-
-      <div class="table-wrap" style="margin: 0 0 20px;">
-        <table class="frontier-table">
-          <thead>
-            <tr>
-              <th style="width: 210px;">Tool Name</th>
-              <th>Primary Strength & The Honest Reality</th>
-              <th style="width: 140px;">Environment</th>
-              <th style="width: 150px;">Where It Runs</th>
-              <th style="width: 110px;">Direct Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://antigravity.google" target="_blank" rel="noopener">
-                  Google Antigravity ↗
-                </a>
-              </td>
-              <td>Best-in-class for complex multi-agent delegation, subagent workspaces, and deep full-codebase context. Built for end-to-end task execution rather than simple line autocomplete.</td>
-              <td><span class="tag-env">Agentic IDE</span></td>
-              <td>Google DeepMind</td>
-              <td><a class="btn-open" href="https://antigravity.google" target="_blank" rel="noopener">Open Site ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank" rel="noopener">
-                  Claude Code ↗
-                </a>
-              </td>
-              <td>Anthropic's high-velocity terminal agent. Excels at repo-wide refactoring, bash command execution, and automated git commits. Strictly a CLI tool (no visual GUI).</td>
-              <td><span class="tag-env">Terminal CLI</span></td>
-              <td>Anthropic API</td>
-              <td><a class="btn-open" href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank" rel="noopener">Open Docs ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://code.visualstudio.com/docs/copilot/copilot-chat" target="_blank" rel="noopener">
-                  VS Code Agent Mode ↗
-                </a>
-              </td>
-              <td>Microsoft's native agent mode inside Visual Studio Code. Seamless for everyday multi-file edits and in-editor debugging without switching windows.</td>
-              <td><span class="tag-env">VS Code Editor</span></td>
-              <td>Microsoft Copilot</td>
-              <td><a class="btn-open" href="https://code.visualstudio.com/docs/copilot/copilot-chat" target="_blank" rel="noopener">Open Docs ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://openai.com/index/openai-codex/" target="_blank" rel="noopener">
-                  OpenAI Codex ↗
-                </a>
-              </td>
-              <td>The foundational language model architecture that proved automated code generation, syntax synthesis, and agentic API invocation at scale.</td>
-              <td><span class="tag-env">API & Platform</span></td>
-              <td>OpenAI Cloud</td>
-              <td><a class="btn-open" href="https://openai.com/index/openai-codex/" target="_blank" rel="noopener">Open Site ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://kimi.ai" target="_blank" rel="noopener">
-                  Kimi Code ↗
-                </a>
-              </td>
-              <td>Moonshot AI's high-context reasoning model designed specifically for massive enterprise monorepos and multi-package dependency tracking.</td>
-              <td><span class="tag-env">Cloud / Web</span></td>
-              <td>Moonshot AI</td>
-              <td><a class="btn-open" href="https://kimi.ai" target="_blank" rel="noopener">Open Site ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://aws.amazon.com/q/developer/" target="_blank" rel="noopener">
-                  Amazon Q / Kiro IDE ↗
-                </a>
-              </td>
-              <td>Specialized in enterprise cloud migrations (Java/Node updates), automated vulnerability patching, and deep AWS infrastructure wiring.</td>
-              <td><span class="tag-env">Cloud IDE / IDE</span></td>
-              <td>AWS Cloud</td>
-              <td><a class="btn-open" href="https://aws.amazon.com/q/developer/" target="_blank" rel="noopener">Open Site ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://github.com/All-Hands-AI/OpenHands" target="_blank" rel="noopener">
-                  OpenHands ↗
-                </a>
-              </td>
-              <td>Autonomous software development agent capable of writing code, running bash commands, and resolving end-to-end GitHub issues in Docker sandboxes.</td>
-              <td><span class="tag-env">Docker / Web</span></td>
-              <td>Open Source</td>
-              <td><a class="btn-open" href="https://github.com/All-Hands-AI/OpenHands" target="_blank" rel="noopener">GitHub ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://github.com/cline/cline" target="_blank" rel="noopener">
-                  Cline ↗
-                </a>
-              </td>
-              <td>Autonomous coding agent extension for VS Code with file editing, shell command execution, and iterative browser verification.</td>
-              <td><span class="tag-env">VS Code Extension</span></td>
-              <td>Open Source</td>
-              <td><a class="btn-open" href="https://github.com/cline/cline" target="_blank" rel="noopener">GitHub ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://github.com/continuedev/continue" target="_blank" rel="noopener">
-                  Continue ↗
-                </a>
-              </td>
-              <td>The leading open-source Copilot alternative for VS Code and JetBrains connecting any local (Ollama) or cloud model to your codebase.</td>
-              <td><span class="tag-env">IDE Extension</span></td>
-              <td>Open Source</td>
-              <td><a class="btn-open" href="https://github.com/continuedev/continue" target="_blank" rel="noopener">GitHub ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://github.com/paul-gauthier/aider" target="_blank" rel="noopener">
-                  Aider ↗
-                </a>
-              </td>
-              <td>The gold standard for terminal-based pair programming with local git checkpoints. 100% open-source, brings your own API keys or local models.</td>
-              <td><span class="tag-env">Terminal CLI</span></td>
-              <td>Any LLM / Local</td>
-              <td><a class="btn-open" href="https://github.com/paul-gauthier/aider" target="_blank" rel="noopener">GitHub ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">
-                  RTK (Token Killer) ↗
-                </a>
-              </td>
-              <td>Sits invisibly as a CLI proxy to strip repetitive compiler hex noise and whitespace before sending to LLMs — slashing terminal context costs by 60–90%.</td>
-              <td><span class="tag-env">CLI Proxy</span></td>
-              <td>100% Local & Free</td>
-              <td><a class="btn-open" href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">GitHub ↗</a></td>
-            </tr>
-            <tr>
-              <td>
-                <a class="tool-link" href="https://github.com/morluto/rea" target="_blank" rel="noopener">
-                  REA (Reverse Engineer) ↗
-                </a>
-              </td>
-              <td>Over 380k+ stars. Decompiles binaries, extracts managed code, and inspects dynamic runtime evidence so AI coding agents understand compiled code.</td>
-              <td><span class="tag-env">CLI & Harness</span></td>
-              <td>100% Open Source</td>
-              <td><a class="btn-open" href="https://github.com/morluto/rea" target="_blank" rel="noopener">GitHub ↗</a></td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
 
@@ -904,33 +667,9 @@ function renderSignals(signals = []) {
 }
 
 function render() {
-  const tableBlock = $("#coding-table-block");
   const grid = $("#grid");
   const empty = $("#empty-state");
   const countBadge = $("#tool-count-badge");
-
-  if (activeCat === "Coding") {
-    // Show table exclusively for Coding — zero duplicate cards
-    if (tableBlock) tableBlock.style.display = "block";
-    if (grid) grid.style.display = "none";
-
-    const rows = document.querySelectorAll("#coding-table-block tbody tr");
-    let matchCount = 0;
-    rows.forEach(r => {
-      const text = r.textContent.toLowerCase();
-      const match = !searchQ || text.includes(searchQ);
-      r.style.display = match ? "" : "none";
-      if (match) matchCount++;
-    });
-
-    countBadge.textContent = `${matchCount} frontier coding tools & environments`;
-    if (empty) empty.style.display = matchCount === 0 ? "block" : "none";
-    return;
-  }
-
-  // For All Pillars and other categories:
-  if (tableBlock) tableBlock.style.display = "none";
-  if (grid) grid.style.display = "grid";
 
   const filtered = allTools.filter(t => {
     if (activeCat && t.category !== activeCat) return false;
@@ -938,13 +677,15 @@ function render() {
     return true;
   });
 
-  countBadge.textContent = `${filtered.length} verified tools indexed`;
+  const catLabel = activeCat ? `${activeCat} tools` : `verified tools indexed`;
+  countBadge.textContent = `${filtered.length} ${catLabel}`;
 
   if (!filtered.length) {
     grid.innerHTML = "";
     empty.style.display = "block";
     return;
   }
+  empty.style.display = "none";
   empty.style.display = "none";
 
   let html = "";
