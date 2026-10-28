@@ -29,22 +29,64 @@ async function build() {
 
   const tools = [];
 
-  for (const cat of categories) {
-    const rows = db.prepare(`
-      SELECT i.id, i.name, i.tagline, i.url, i.emoji, i.category, i.why_it_matters, i.launched_at, i.score,
-             GROUP_CONCAT(s.source || ':' || s.metric, ',') as signal_summary
-      FROM items i
-      LEFT JOIN signals s ON s.item_id = i.id
-      WHERE i.status = 'active' AND i.category = ?
-      GROUP BY i.id
-      ORDER BY i.score DESC, i.launched_at DESC
-      LIMIT 25
-    `).all(cat);
+  // Ranking = the real popularity number shown on the card: GitHub stars or Hugging Face likes.
+  // Tools with neither (closed-source products) fall back to their seeded popularity estimate.
+  const rankOf = (signals) => {
+    const nums = (src) => signals.filter(s => s.startsWith(src + ":")).map(s => Number(s.split(":")[1]) || 0);
+    const real = [...nums("github"), ...nums("huggingface")];
+    if (real.length) return Math.max(...real);
+    return Math.max(0, ...nums("app"), ...nums("hn"));
+  };
 
-    tools.push(...rows.map(r => ({
-      ...r,
-      signals: (r.signal_summary || "").split(",").filter(Boolean)
-    })));
+  // The same project can be stored twice (once by its GitHub repo, once by its homepage, e.g.
+  // github.com/ollama/ollama and ollama.com). Merge them into one card, keyed by the GitHub repo.
+  const repoOf = new Map(
+    db.prepare(`SELECT item_id, source_id FROM signals WHERE source = 'github'`).all()
+      .map(r => [r.item_id, String(r.source_id).toLowerCase()])
+  );
+  const normName = (n) => String(n).toLowerCase().replace(/[^a-z0-9]/g, "");
+  const preference = (t) => (t.emoji ? 4 : 0) + (/github\.com/i.test(t.url) ? 2 : 0) + (t.why_it_matters ? 1 : 0);
+
+  const all = db.prepare(`
+    SELECT i.id, i.name, i.tagline, i.url, i.emoji, i.category, i.why_it_matters, i.launched_at, i.score,
+           GROUP_CONCAT(s.source || ':' || s.metric, ',') as signal_summary
+    FROM items i
+    LEFT JOIN signals s ON s.item_id = i.id
+    WHERE i.status = 'active'
+    GROUP BY i.id
+  `).all().map(r => {
+    const signals = (r.signal_summary || "").split(",").filter(Boolean);
+    return { ...r, signals, rank: rankOf(signals), repo: repoOf.get(r.id) || null };
+  });
+
+  const winners = new Map();
+  for (const t of all) {
+    const key = t.repo ? `repo:${t.repo}` : `name:${normName(t.name)}`;
+    const cur = winners.get(key);
+    if (!cur || preference(t) > preference(cur) || (preference(t) === preference(cur) && t.rank > cur.rank)) {
+      winners.set(key, cur ? { ...t, rank: Math.max(t.rank, cur.rank) } : t);
+    } else {
+      cur.rank = Math.max(cur.rank, t.rank);
+    }
+  }
+  // Second pass: same name but different keys (e.g. a repo and its non-GitHub homepage entry)
+  const byName = new Map();
+  for (const t of winners.values()) {
+    const k = normName(t.name);
+    const cur = byName.get(k);
+    if (!cur || preference(t) > preference(cur)) byName.set(k, cur ? { ...t, rank: Math.max(t.rank, cur.rank) } : t);
+    else cur.rank = Math.max(cur.rank, t.rank);
+  }
+  const deduped = [...byName.values()];
+
+  for (const cat of categories) {
+    const ranked = deduped
+      .filter(t => t.category === cat)
+      .sort((a, b) => b.rank - a.rank)
+      .slice(0, 25)
+      .map(({ repo, signal_summary, ...rest }) => rest);
+
+    tools.push(...ranked);
   }
 
   const output = {

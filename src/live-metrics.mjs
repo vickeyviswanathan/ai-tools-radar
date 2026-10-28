@@ -68,8 +68,8 @@ export async function refreshLiveMetrics() {
             updates.push({
               itemId: item.rowId,
               source: "github",
-              sourceId: item.repo,
-              sourceUrl: `https://github.com/${item.repo}`,
+              sourceId: data.full_name || item.repo,
+              sourceUrl: data.html_url || `https://github.com/${item.repo}`,
               metric: stars,
               extra: JSON.stringify({ stars, forks: data.forks_count })
             });
@@ -130,6 +130,8 @@ export async function refreshLiveMetrics() {
       INSERT INTO signals (item_id, source, source_id, source_url, metric, extra, updated_at)
       VALUES (?, ?, ?, ?, ?, ?, ?)
       ON CONFLICT(item_id, source) DO UPDATE SET
+        source_id = excluded.source_id,
+        source_url = excluded.source_url,
         metric = excluded.metric,
         extra = excluded.extra,
         updated_at = excluded.updated_at

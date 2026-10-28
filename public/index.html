@@ -800,7 +800,7 @@ function render() {
     if (activeCat && t.category !== activeCat) return false;
     if (searchQ && ![t.name, t.tagline, t.why_it_matters].join(" ").toLowerCase().includes(searchQ)) return false;
     return true;
-  });
+  }).sort((a, b) => (b.rank || 0) - (a.rank || 0));
 
   const catLabel = activeCat ? `${activeCat} tools` : `verified tools indexed`;
   countBadge.textContent = `${filtered.length} ${catLabel}`;
