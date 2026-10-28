@@ -313,6 +313,57 @@
   .search-bar {
     width: 100%;
     position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .search-bar input[type=search] { flex: 1; min-width: 0; }
+  .layout-toggle {
+    display: inline-flex;
+    flex: none;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--card);
+    overflow: hidden;
+  }
+  .layout-btn {
+    width: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .layout-btn:hover { color: #fff; background: #172033; }
+  .layout-btn.active { background: var(--accent); color: #040914; }
+
+  /* List layout: same data, one compact row per tool */
+  .grid.list { grid-template-columns: 1fr; gap: 8px; }
+  .tool-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .tool-row:hover { border-color: #2b3952; background: var(--card-hover); }
+  .tool-row .row-rank { width: 28px; flex: none; text-align: right; font-size: 12px; color: #64748b; font-variant-numeric: tabular-nums; }
+  .tool-row .row-icon { width: 34px; height: 34px; flex: none; border-radius: 9px; background: #172033; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .tool-row .row-main { flex: 1; min-width: 0; }
+  .tool-row .row-name { font-weight: 600; font-size: 15px; color: #fff; display: flex; gap: 6px; align-items: center; }
+  .tool-row .row-tag { margin: 2px 0 0; font-size: 13px; color: #94a3b8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tool-row .row-meta { display: flex; gap: 8px; align-items: center; flex: none; font-size: 12px; }
+  @media (max-width: 720px) {
+    .tool-row .row-meta .badge.cat, .tool-row .row-rank { display: none; }
+    .tool-row { gap: 10px; padding: 10px 12px; }
   }
   input[type=search] {
     width: 100%;
@@ -544,6 +595,14 @@
 
       <div class="search-bar">
         <input type="search" id="q" placeholder="Filter by name, use case, or keyword (press '/' to focus search)..." />
+        <div class="layout-toggle" role="group" aria-label="Layout">
+          <button type="button" id="layout-cards" class="layout-btn active" title="Card view" aria-label="Card view" onclick="setLayout('cards')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </button>
+          <button type="button" id="layout-list" class="layout-btn" title="List view" aria-label="List view" onclick="setLayout('list')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg>
+          </button>
+        </div>
       </div>
 
       <div class="category-pills" id="category-bar">
@@ -776,6 +835,8 @@ const REALITIES_DATA = [
 
 let allTools = [];
 let renderedTools = [];
+let layout = (() => { try { return localStorage.getItem("radar-layout") === "list" ? "list" : "cards"; } catch { return "cards"; } })();
+const SHARE_ICON = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>`;
 let activeCat = "";
 let searchQ = "";
 
@@ -861,7 +922,28 @@ function render() {
 
   let html = "";
   renderedTools = filtered;
+  grid.classList.toggle("list", layout === "list");
+
   filtered.forEach((tool, idx) => {
+    if (layout === "list") {
+      html += `
+        <a class="tool-row" href="${esc(tool.url)}" target="_blank" rel="noopener">
+          <span class="row-rank">${idx + 1}</span>
+          <div class="row-icon">${esc(tool.emoji || "⚡")}</div>
+          <div class="row-main">
+            <div class="row-name">${esc(tool.name)} <span class="tool-name-link">↗</span></div>
+            <p class="row-tag">${esc(tool.tagline)}</p>
+          </div>
+          <div class="row-meta">
+            <span class="badge cat">${esc(tool.category)}</span>
+            ${renderSignals(tool.signals)}
+          </div>
+          <button class="share-btn" type="button" title="Share this tool" aria-label="Share ${esc(tool.name)}" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
+        </a>
+      `;
+      return;
+    }
+
     html += `
       <a class="tool-card" href="${esc(tool.url)}" target="_blank" rel="noopener">
         <div class="tool-top">
@@ -870,9 +952,7 @@ function render() {
             <div class="tool-name">${esc(tool.name)} <span class="tool-name-link">↗</span></div>
             <p class="tool-tag">${esc(tool.tagline)}</p>
           </div>
-          <button class="share-btn" type="button" title="Share this tool" aria-label="Share ${esc(tool.name)}" onclick="shareTool(event, ${idx})">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-          </button>
+          <button class="share-btn" type="button" title="Share this tool" aria-label="Share ${esc(tool.name)}" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
         </div>
         ${tool.why_it_matters ? `<div class="why-box"><strong>Why it matters:</strong> ${esc(tool.why_it_matters)}</div>` : ""}
         <div class="tool-meta">
@@ -917,6 +997,19 @@ function switchView(viewName) {
   }
 }
 
+function setLayout(mode) {
+  layout = mode === "list" ? "list" : "cards";
+  try { localStorage.setItem("radar-layout", layout); } catch {}
+  syncLayoutButtons();
+  render();
+}
+
+function syncLayoutButtons() {
+  const c = $("#layout-cards"), l = $("#layout-list");
+  if (c) c.classList.toggle("active", layout === "cards");
+  if (l) l.classList.toggle("active", layout === "list");
+}
+
 function selectCategory(cat) {
   activeCat = cat;
   document.querySelectorAll(".cat-pill").forEach(btn => {
@@ -944,6 +1037,7 @@ async function init() {
       catBar.appendChild(btn);
     });
 
+    syncLayoutButtons();
     render();
 
     if (window.location.hash === "#realities") {
