@@ -414,7 +414,7 @@
 <header>
   <div class="wrap">
     <div class="top-bar">
-      <div class="leader-badge">★ Plain-English AI for Leaders</div>
+      <div class="leader-badge">Practical Notes & Tools</div>
       
       <!-- Automatic Zero-Setup Live Visitor Counter -->
       <div class="visitor-pill">
@@ -424,30 +424,30 @@
       </div>
     </div>
 
-    <h1>The AI Reality Radar</h1>
-    <p class="subtitle">Zero consultant buzzwords. Understand what actually works in production, why AI projects break, and the battle-tested open-source tools solving each problem.</p>
+    <h1>AI Systems Radar</h1>
+    <p class="subtitle">A practical look at how engineering teams actually run AI in production — where it breaks, what inflates your bills, and the open-source tools worth using.</p>
   </div>
 </header>
 
 <main class="wrap">
-  <!-- 6 Eye-Openers Section -->
+  <!-- 6 Common Failure Modes Section -->
   <section class="insights-section">
     <div class="section-header">
-      <h2 class="section-title">💡 6 Eye-Openers Every Leader Needs to Know</h2>
-      <span class="section-note">Click any tool to highlight it in the radar below • Share insights directly with your team</span>
+      <h2 class="section-title">💡 6 Common Failure Modes (and the fixes)</h2>
+      <span class="section-note">Click any tool to view it below • Copy any note directly to your team's Slack</span>
     </div>
 
     <div class="insights-grid" id="insights-grid">
       <!-- 1. Cost & Token Waste -->
       <div class="insight-card">
         <div class="insight-top">
-          <h3 class="insight-q">1. Why is our AI bill exploding?</h3>
+          <h3 class="insight-q">1. Why is your API bill growing so fast?</h3>
           <button class="copy-btn" onclick="copyInsight(0)">📋 Copy</button>
         </div>
-        <p class="insight-truth">Every single character sent to an AI costs money. Unfiltered terminal logs, repetitive chat history, and bloated system prompts waste <strong>up to 80% of your bill</strong> on noise the model doesn't need.</p>
-        <div class="insight-fix"><strong>The Fix:</strong> Strip and condense command outputs *before* sending them to the LLM. You cut costs by 60–90% instantly without losing error signals.</div>
+        <p class="insight-truth">Every character sent into a model costs money. Unfiltered terminal logs, repetitive chat history, and bloated system prompts easily waste <strong>70–80% of your tokens</strong> on noise the model doesn't need.</p>
+        <div class="insight-fix"><strong>What works:</strong> Strip and compress command outputs before passing them to the model. You get the same accuracy at a fraction of the cost.</div>
         <div class="insight-tools-row">
-          <span class="tools-label">Proven Tools:</span>
+          <span class="tools-label">Tools to check:</span>
           <a class="tool-chip" href="#radar" onclick="filterByTool('RTK')">RTK (Token Killer)</a>
         </div>
       </div>
@@ -455,13 +455,13 @@
       <!-- 2. Long Document Hallucinations -->
       <div class="insight-card">
         <div class="insight-top">
-          <h3 class="insight-q">2. Why do big documents break the AI?</h3>
+          <h3 class="insight-q">2. Why do models choke on long documents?</h3>
           <button class="copy-btn" onclick="copyInsight(1)">📋 Copy</button>
         </div>
-        <p class="insight-truth">Just because a model accepts a 200-page PDF doesn't mean it reads it accurately. Models suffer from <strong>"lost-in-the-middle"</strong> and miss critical facts buried in long contexts.</p>
-        <div class="insight-fix"><strong>The Fix:</strong> Never dump raw PDFs into an LLM. Use deep document layout parsing (OCR, tables) and feed the model only the 2 exact paragraphs needed.</div>
+        <p class="insight-truth">Even models with large context windows suffer from <strong>"lost in the middle"</strong> — they overlook specific details buried inside 100-page PDFs.</p>
+        <div class="insight-fix"><strong>What works:</strong> Don't dump full files into the prompt. Parse the layout properly, retrieve the relevant chunks with vector search, and pass only what's needed.</div>
         <div class="insight-tools-row">
-          <span class="tools-label">Proven Tools:</span>
+          <span class="tools-label">Tools to check:</span>
           <a class="tool-chip" href="#radar" onclick="filterByTool('RAGFlow')">RAGFlow</a>
           <a class="tool-chip" href="#radar" onclick="filterByTool('Qdrant')">Qdrant</a>
         </div>
@@ -470,13 +470,13 @@
       <!-- 3. Autonomous Agents Failing -->
       <div class="insight-card">
         <div class="insight-top">
-          <h3 class="insight-q">3. Why do "AI Agents" fail in production?</h3>
+          <h3 class="insight-q">3. Why do autonomous agents go off the rails?</h3>
           <button class="copy-btn" onclick="copyInsight(2)">📋 Copy</button>
         </div>
-        <p class="insight-truth">Giving an AI an open-ended goal ("build my whole app") fails because <strong>errors compound</strong>. If step 2 hallucinates by 5%, step 10 ends in complete chaos.</p>
-        <div class="insight-fix"><strong>The Fix:</strong> Limit agents to tight, verifiable loops with real browser/terminal sandboxes and automatic rollback checks before running code.</div>
+        <p class="insight-truth">Giving an AI an open-ended goal ("build this entire feature") fails because <strong>small errors compound</strong>. If step 2 veers off by 5%, step 10 is usually total nonsense.</p>
+        <div class="insight-fix"><strong>What works:</strong> Keep agent tasks scoped, run them in sandboxes with git rollbacks, and verify each step with browser or terminal checks.</div>
         <div class="insight-tools-row">
-          <span class="tools-label">Proven Tools:</span>
+          <span class="tools-label">Tools to check:</span>
           <a class="tool-chip" href="#radar" onclick="filterByTool('Libretto')">Libretto</a>
           <a class="tool-chip" href="#radar" onclick="filterByTool('Aider')">Aider</a>
           <a class="tool-chip" href="#radar" onclick="filterByTool('Browser-Use')">Browser-Use</a>
@@ -486,13 +486,13 @@
       <!-- 4. Private / Offline AI -->
       <div class="insight-card">
         <div class="insight-top">
-          <h3 class="insight-q">4. Can we run AI privately (zero data leaks)?</h3>
+          <h3 class="insight-q">4. Can you run models locally without cloud leaks?</h3>
           <button class="copy-btn" onclick="copyInsight(3)">📋 Copy</button>
         </div>
-        <p class="insight-truth">You do not have to send confidential customer data or code to third-party cloud APIs. Today's <strong>open-weight models match cloud models</strong> for 90% of business tasks.</p>
-        <div class="insight-fix"><strong>The Fix:</strong> Run models locally on laptops or private company servers. Set up in 5 minutes with zero cloud subscriptions or leaks.</div>
+        <p class="insight-truth">You don't need cloud APIs for internal code or customer data. Today's <strong>open-weight models match closed models</strong> for most everyday engineering tasks.</p>
+        <div class="insight-fix"><strong>What works:</strong> Use lightweight runtimes to host models on an office Mac or Linux server with zero recurring API costs and zero data leaving the building.</div>
         <div class="insight-tools-row">
-          <span class="tools-label">Proven Tools:</span>
+          <span class="tools-label">Tools to check:</span>
           <a class="tool-chip" href="#radar" onclick="filterByTool('Ollama')">Ollama</a>
           <a class="tool-chip" href="#radar" onclick="filterByTool('vLLM')">vLLM</a>
           <a class="tool-chip" href="#radar" onclick="filterByTool('LM Studio')">LM Studio</a>
@@ -502,13 +502,13 @@
       <!-- 5. Connecting AI to Databases -->
       <div class="insight-card">
         <div class="insight-top">
-          <h3 class="insight-q">5. How do we connect AI to company data safely?</h3>
+          <h3 class="insight-q">5. How do you connect models to your tools safely?</h3>
           <button class="copy-btn" onclick="copyInsight(4)">📋 Copy</button>
         </div>
-        <p class="insight-truth">Writing custom glue code between ChatGPT and internal databases breaks constantly, creates security hazards, and locks you into one vendor.</p>
-        <div class="insight-fix"><strong>The Fix:</strong> Standardize on <strong>MCP (Model Context Protocol)</strong> — the universal open plug that allows any AI model to query databases and tools securely.</div>
+        <p class="insight-truth">Writing custom glue code for every internal database and API is brittle, hard to maintain, and creates security holes.</p>
+        <div class="insight-fix"><strong>What works:</strong> Adopt <strong>MCP (Model Context Protocol)</strong>. It provides a single open standard so any model can safely query your tools and data.</div>
         <div class="insight-tools-row">
-          <span class="tools-label">Proven Tools:</span>
+          <span class="tools-label">Tools to check:</span>
           <a class="tool-chip" href="#radar" onclick="filterByTool('MCP Servers')">MCP Servers</a>
           <a class="tool-chip" href="#radar" onclick="filterByTool('Dify')">Dify</a>
         </div>
@@ -517,13 +517,13 @@
       <!-- 6. Verifying AI Code & Security -->
       <div class="insight-card">
         <div class="insight-top">
-          <h3 class="insight-q">6. How do we know what AI code actually touches?</h3>
+          <h3 class="insight-q">6. How do you verify what AI code actually does?</h3>
           <button class="copy-btn" onclick="copyInsight(5)">📋 Copy</button>
         </div>
-        <p class="insight-truth">Blindly approving code generated by AI assistants is a massive supply-chain and security liability. Teams often don't know what network calls or binaries were modified.</p>
-        <div class="insight-fix"><strong>The Fix:</strong> Use automated reverse-engineering and dynamic runtime inspection to verify what files, binaries, and system calls were touched.</div>
+        <p class="insight-truth">Blindly approving code generated by AI assistants introduces supply-chain risk and unseen network calls that teams miss during code review.</p>
+        <div class="insight-fix"><strong>What works:</strong> Use decompilers and dynamic instrumentation to inspect binary changes, syscalls, and runtime behavior before deploying.</div>
         <div class="insight-tools-row">
-          <span class="tools-label">Proven Tools:</span>
+          <span class="tools-label">Tools to check:</span>
           <a class="tool-chip" href="#radar" onclick="filterByTool('REA')">REA (382k★)</a>
           <a class="tool-chip" href="#radar" onclick="filterByTool('Frida')">Frida</a>
         </div>
@@ -535,12 +535,12 @@
   <section id="radar">
     <div class="radar-header">
       <div class="section-header">
-        <h2 class="section-title">🧭 The Curated Tools Radar</h2>
-        <span class="section-note" id="tool-count-badge">Loading verified tools...</span>
+        <h2 class="section-title">🧭 Curated Tools Directory</h2>
+        <span class="section-note" id="tool-count-badge">Loading tools...</span>
       </div>
 
       <div class="search-bar">
-        <input type="search" id="q" placeholder="Search by name, problem, or technology (e.g., 'token', 'local llm', 'ollama', 'security')..." />
+        <input type="search" id="q" placeholder="Filter by name, use case, or keyword (e.g. token, local llm, rag, agent)..." />
       </div>
 
       <div class="category-pills" id="category-bar">
@@ -559,46 +559,46 @@
 
 <footer>
   <div class="wrap">
-    <strong>100% Independent Curation.</strong> Automated continuous updates via official GitHub, Hacker News, & Hugging Face APIs every 6 hours. Zero proprietary scrapers. Strict thought-leader quality gate.
+    Updated continuously via official GitHub, Hacker News, & Hugging Face APIs every 6 hours. Zero affiliate fluff, zero unvetted wrappers.
   </div>
 </footer>
 
 <script>
 const INSIGHTS_DATA = [
   {
-    q: "Why is our AI bill exploding?",
-    truth: "Every character sent into an AI costs money. Unfiltered terminal logs, repetitive chat history, and bloated system prompts waste up to 80% of your bill on noise the model doesn't need.",
-    fix: "Strip and condense command outputs before sending them to the LLM. You cut costs by 60–90% instantly without losing error signals.",
-    tools: "RTK (Rust Token Killer)"
+    q: "Why is your API bill growing so fast?",
+    truth: "Every character sent into a model costs money. Unfiltered terminal logs, repetitive chat history, and bloated system prompts easily waste 70–80% of your tokens on noise the model doesn't need.",
+    fix: "Strip and compress command outputs before passing them to the model. You get the same accuracy at a fraction of the cost.",
+    tools: "RTK (Token Killer)"
   },
   {
-    q: "Why do big documents break the AI?",
-    truth: "Just because a model accepts a 200-page PDF doesn't mean it reads it accurately. Models suffer from 'lost-in-the-middle' and miss critical facts buried in long contexts.",
-    fix: "Never dump raw PDFs into an LLM. Use deep document layout parsing (OCR, tables) and feed the model only the 2 exact paragraphs needed.",
+    q: "Why do models choke on long documents?",
+    truth: "Even models with large context windows suffer from 'lost in the middle' — they overlook specific details buried inside 100-page PDFs.",
+    fix: "Don't dump full files into the prompt. Parse the layout properly, retrieve the relevant chunks with vector search, and pass only what's needed.",
     tools: "RAGFlow, Qdrant"
   },
   {
-    q: "Why do 'AI Agents' fail in production?",
-    truth: "Giving an AI an open-ended goal ('build my whole app') fails because errors compound. If step 2 hallucinates by 5%, step 10 ends in complete chaos.",
-    fix: "Limit agents to tight, verifiable loops with real browser/terminal sandboxes and automatic rollback checks before running code.",
+    q: "Why do autonomous agents go off the rails?",
+    truth: "Giving an AI an open-ended goal ('build this entire feature') fails because small errors compound. If step 2 veers off by 5%, step 10 is usually total nonsense.",
+    fix: "Keep agent tasks scoped, run them in sandboxes with git rollbacks, and verify each step with browser or terminal checks.",
     tools: "Libretto, Aider, Browser-Use, CrewAI"
   },
   {
-    q: "Can we run AI privately (zero data leaks)?",
-    truth: "You do not have to send confidential customer data or code to third-party cloud APIs. Today's open-weight models match cloud models for 90% of business tasks.",
-    fix: "Run models locally on laptops or private company servers. Set up in 5 minutes with zero cloud subscriptions or leaks.",
+    q: "Can you run models locally without cloud leaks?",
+    truth: "You don't need cloud APIs for internal code or customer data. Today's open-weight models match closed models for most everyday engineering tasks.",
+    fix: "Use lightweight runtimes to host models on an office Mac or Linux server with zero recurring API costs and zero data leaving the building.",
     tools: "Ollama, vLLM, LM Studio, Jan"
   },
   {
-    q: "How do we connect AI to company data safely?",
-    truth: "Writing custom glue code between ChatGPT and internal databases breaks constantly, creates security hazards, and locks you into one vendor.",
-    fix: "Standardize on MCP (Model Context Protocol) — the universal open plug that allows any AI model to query databases and tools securely.",
+    q: "How do you connect models to your tools safely?",
+    truth: "Writing custom glue code for every internal database and API is brittle, hard to maintain, and creates security holes.",
+    fix: "Adopt MCP (Model Context Protocol). It provides a single open standard so any model can safely query your tools and data.",
     tools: "MCP Servers (Anthropic), Dify"
   },
   {
-    q: "How do we know what AI code actually touches?",
-    truth: "Blindly approving code generated by AI assistants is a massive supply-chain and security liability. Teams often don't know what network calls or binaries were modified.",
-    fix: "Use automated reverse-engineering and dynamic runtime inspection to verify what files, binaries, and system calls were touched.",
+    q: "How do you verify what AI code actually does?",
+    truth: "Blindly approving code generated by AI assistants introduces supply-chain risk and unseen network calls that teams miss during code review.",
+    fix: "Use decompilers and dynamic instrumentation to inspect binary changes, syscalls, and runtime behavior before deploying.",
     tools: "REA (Reverse Engineer Anything), Frida, Ghidra"
   }
 ];
@@ -619,9 +619,9 @@ function showToast(msg) {
 
 function copyInsight(idx) {
   const d = INSIGHTS_DATA[idx];
-  const text = `💡 AI Insight for Leaders: ${d.q}\n\n• The Reality: ${d.truth}\n• The Fix: ${d.fix}\n• Battle-tested tools: ${d.tools}\n\nCurated via https://vickeyviswanathan.github.io/ai-tools-radar/`;
+  const text = `Takeaway: ${d.q}\n\n• The problem: ${d.truth}\n• What works: ${d.fix}\n• Tools worth checking: ${d.tools}\n\nFrom https://vickeyviswanathan.github.io/ai-tools-radar/`;
   navigator.clipboard.writeText(text).then(() => {
-    showToast("Copied insight to clipboard! Paste directly into Slack or LinkedIn.");
+    showToast("Copied to clipboard — ready to paste into Slack or Teams.");
   }).catch(() => {
     showToast("Copied to clipboard!");
   });
@@ -657,7 +657,7 @@ function render() {
   const empty = $("#empty-state");
   const countBadge = $("#tool-count-badge");
 
-  countBadge.textContent = `${filtered.length} battle-tested tools indexed`;
+  countBadge.textContent = `${filtered.length} tools indexed`;
 
   if (!filtered.length) {
     grid.innerHTML = "";
@@ -677,7 +677,7 @@ function render() {
             <p class="tool-tag">${esc(tool.tagline)}</p>
           </div>
         </div>
-        ${tool.why_it_matters ? `<div class="why-box"><strong>Why leaders care:</strong> ${esc(tool.why_it_matters)}</div>` : ""}
+        ${tool.why_it_matters ? `<div class="why-box"><strong>Why it matters:</strong> ${esc(tool.why_it_matters)}</div>` : ""}
         <div class="tool-meta">
           <span class="badge cat">${esc(tool.category)}</span>
           ${renderSignals(tool.signals)}
