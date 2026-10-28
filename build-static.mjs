@@ -3,10 +3,14 @@ import { writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { getDb, now, getMeta } from "./src/db.mjs";
 import { runIngestion } from "./src/ingest.mjs";
+import { refreshLiveMetrics } from "./src/live-metrics.mjs";
 
 async function build() {
   console.log("Ingesting latest top-tier tools...");
   await runIngestion();
+
+  console.log("Refreshing live stars and likes via GitHub & HuggingFace APIs...");
+  await refreshLiveMetrics();
 
   const db = getDb();
   
