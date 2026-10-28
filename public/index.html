@@ -671,6 +671,39 @@
             </tr>
             <tr>
               <td>
+                <a class="tool-link" href="https://github.com/All-Hands-AI/OpenHands" target="_blank" rel="noopener">
+                  OpenHands ↗
+                </a>
+              </td>
+              <td>Autonomous software development agent capable of writing code, running bash commands, and resolving end-to-end GitHub issues in Docker sandboxes.</td>
+              <td><span class="tag-env">Docker / Web</span></td>
+              <td>Open Source</td>
+              <td><a class="btn-open" href="https://github.com/All-Hands-AI/OpenHands" target="_blank" rel="noopener">GitHub ↗</a></td>
+            </tr>
+            <tr>
+              <td>
+                <a class="tool-link" href="https://github.com/cline/cline" target="_blank" rel="noopener">
+                  Cline ↗
+                </a>
+              </td>
+              <td>Autonomous coding agent extension for VS Code with file editing, shell command execution, and iterative browser verification.</td>
+              <td><span class="tag-env">VS Code Extension</span></td>
+              <td>Open Source</td>
+              <td><a class="btn-open" href="https://github.com/cline/cline" target="_blank" rel="noopener">GitHub ↗</a></td>
+            </tr>
+            <tr>
+              <td>
+                <a class="tool-link" href="https://github.com/continuedev/continue" target="_blank" rel="noopener">
+                  Continue ↗
+                </a>
+              </td>
+              <td>The leading open-source Copilot alternative for VS Code and JetBrains connecting any local (Ollama) or cloud model to your codebase.</td>
+              <td><span class="tag-env">IDE Extension</span></td>
+              <td>Open Source</td>
+              <td><a class="btn-open" href="https://github.com/continuedev/continue" target="_blank" rel="noopener">GitHub ↗</a></td>
+            </tr>
+            <tr>
+              <td>
                 <a class="tool-link" href="https://github.com/paul-gauthier/aider" target="_blank" rel="noopener">
                   Aider ↗
                 </a>
@@ -872,24 +905,38 @@ function renderSignals(signals = []) {
 
 function render() {
   const tableBlock = $("#coding-table-block");
-  if (tableBlock) {
-    // Option 1: Show table ONLY when Coding category is selected
-    if (activeCat === "Coding") {
-      tableBlock.style.display = searchQ && !searchQ.includes("code") && !searchQ.includes("agent") && !searchQ.includes("anti") && !searchQ.includes("claude") ? "none" : "block";
-    } else {
-      tableBlock.style.display = "none";
-    }
+  const grid = $("#grid");
+  const empty = $("#empty-state");
+  const countBadge = $("#tool-count-badge");
+
+  if (activeCat === "Coding") {
+    // Show table exclusively for Coding — zero duplicate cards
+    if (tableBlock) tableBlock.style.display = "block";
+    if (grid) grid.style.display = "none";
+
+    const rows = document.querySelectorAll("#coding-table-block tbody tr");
+    let matchCount = 0;
+    rows.forEach(r => {
+      const text = r.textContent.toLowerCase();
+      const match = !searchQ || text.includes(searchQ);
+      r.style.display = match ? "" : "none";
+      if (match) matchCount++;
+    });
+
+    countBadge.textContent = `${matchCount} frontier coding tools & environments`;
+    if (empty) empty.style.display = matchCount === 0 ? "block" : "none";
+    return;
   }
+
+  // For All Pillars and other categories:
+  if (tableBlock) tableBlock.style.display = "none";
+  if (grid) grid.style.display = "grid";
 
   const filtered = allTools.filter(t => {
     if (activeCat && t.category !== activeCat) return false;
     if (searchQ && ![t.name, t.tagline, t.why_it_matters].join(" ").toLowerCase().includes(searchQ)) return false;
     return true;
   });
-
-  const grid = $("#grid");
-  const empty = $("#empty-state");
-  const countBadge = $("#tool-count-badge");
 
   countBadge.textContent = `${filtered.length} verified tools indexed`;
 
