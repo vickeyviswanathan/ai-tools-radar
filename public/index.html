@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI Systems Radar — The Unfiltered Truth on AI in Production</title>
-<meta name="description" content="An unfiltered reality check on running AI in production: what vendors don't tell you, why systems break, and the battle-tested open-source tools solving each problem." />
+<title>AI Tools Radar — Frontier Coding Agents, Local Models, & Production Reality</title>
+<meta name="description" content="An open, independent directory of battle-tested AI developer tools, coding agents, and local models — with direct links and the unfiltered truth on what actually works in production." />
 
 <!-- OpenGraph / Twitter Social Sharing Cards -->
-<meta property="og:title" content="AI Systems Radar — The Unfiltered Truth on AI in Production" />
-<meta property="og:description" content="What vendors don't tell you, why systems break in production, and the battle-tested tools solving each problem." />
+<meta property="og:title" content="AI Tools Radar — Curated Tools & Unfiltered Reality" />
+<meta property="og:description" content="Direct links to frontier coding agents, local model infrastructure, and the unfiltered truth on what actually works in production." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://vickeyviswanathan.github.io/ai-tools-radar/" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="AI Systems Radar — Unfiltered AI Reality" />
-<meta name="twitter:description" content="Exposing the context window lie, token cost bleeds, agent failure loops, and the real frontier coding tools." />
+<meta name="twitter:title" content="AI Tools Radar" />
+<meta name="twitter:description" content="Frontier coding agents (Antigravity, Claude Code, Codex, VS Code), local models, and production AI realities." />
 
 <style>
   :root {
@@ -43,9 +43,9 @@
   }
   .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 
-  /* Hero Section */
+  /* Header */
   header {
-    padding: 44px 0 32px;
+    padding: 40px 0 28px;
     border-bottom: 1px solid var(--line);
     background: radial-gradient(circle at 50% -10%, #152238 0%, var(--bg) 75%);
   }
@@ -55,7 +55,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   .site-badge {
     display: inline-flex;
@@ -93,7 +93,7 @@
 
   h1 {
     font-size: 38px;
-    margin: 0 0 12px;
+    margin: 0 0 10px;
     font-weight: 800;
     letter-spacing: -0.03em;
     background: linear-gradient(180deg, #ffffff 40%, #cbd5e1 100%);
@@ -101,16 +101,41 @@
     -webkit-text-fill-color: transparent;
   }
   .subtitle {
-    font-size: 17px;
+    font-size: 16.5px;
     color: var(--text-muted);
-    max-width: 860px;
-    margin: 0;
+    max-width: 840px;
+    margin: 0 0 24px;
     line-height: 1.6;
   }
 
-  /* Unfiltered Truth Section */
+  /* Quick Nav Bar */
+  .nav-jump {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .nav-link {
+    background: #111726;
+    border: 1px solid var(--line);
+    color: #cbd5e1;
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .nav-link:hover {
+    background: var(--accent);
+    color: #040914;
+    border-color: var(--accent);
+  }
+
+  /* Sections */
   .section-wrap {
-    padding: 40px 0 20px;
+    padding: 44px 0 20px;
   }
   .section-header {
     display: flex;
@@ -133,11 +158,92 @@
     font-size: 13px;
     color: var(--text-muted);
   }
+
+  /* Frontier Table with Prominent Links */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 16px 0 30px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+  table.frontier-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    text-align: left;
+    min-width: 860px;
+  }
+  table.frontier-table th {
+    background: #141b29;
+    padding: 14px 18px;
+    color: #94a3b8;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--line);
+  }
+  table.frontier-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    vertical-align: middle;
+    color: #cbd5e1;
+    line-height: 1.5;
+  }
+  table.frontier-table tr:hover td {
+    background: var(--card-hover);
+  }
+  table.frontier-table a.tool-link {
+    color: #60a5fa;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  table.frontier-table a.tool-link:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+  }
+  .tag-env {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 4px;
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .btn-open {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #1b2438;
+    border: 1px solid #334155;
+    color: #f1f5f9;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .btn-open:hover {
+    background: var(--accent);
+    color: #040914;
+    border-color: var(--accent);
+  }
+
+  /* Unfiltered Reality Cards */
   .reality-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   .reality-card {
     background: var(--card);
@@ -234,67 +340,20 @@
     background: #172033;
     border: 1px solid #2d3b55;
     color: #60a5fa;
-    padding: 3px 9px;
+    padding: 4px 10px;
     border-radius: 6px;
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
   }
   .tool-chip:hover {
     background: var(--accent);
     color: #040914;
     border-color: var(--accent);
-  }
-
-  /* Comparison Table */
-  .table-wrap {
-    overflow-x: auto;
-    margin: 20px 0 50px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 18px;
-  }
-  table.frontier-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13.5px;
-    text-align: left;
-    min-width: 820px;
-  }
-  table.frontier-table th {
-    background: #141b29;
-    padding: 14px 18px;
-    color: #94a3b8;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid var(--line);
-  }
-  table.frontier-table td {
-    padding: 14px 18px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    vertical-align: top;
-    color: #cbd5e1;
-    line-height: 1.45;
-  }
-  table.frontier-table tr:hover td {
-    background: var(--card-hover);
-  }
-  table.frontier-table td strong {
-    color: #fff;
-    font-weight: 700;
-  }
-  .tag-env {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    background: rgba(59, 130, 246, 0.1);
-    color: #60a5fa;
-    border: 1px solid rgba(59, 130, 246, 0.25);
-    font-size: 11px;
-    font-weight: 600;
   }
 
   /* Directory Controls */
@@ -397,6 +456,12 @@
     margin-bottom: 3px;
     color: #fff;
     line-height: 1.3;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tool-name-link {
+    color: #60a5fa;
   }
   .tool-tag {
     color: #94a3b8;
@@ -475,7 +540,7 @@
 <header>
   <div class="wrap">
     <div class="top-bar">
-      <div class="site-badge">Unfiltered AI Reality</div>
+      <div class="site-badge">Direct Links & Unfiltered Reality</div>
       
       <!-- Automatic Zero-Setup Live Visitor Counter -->
       <div class="visitor-pill">
@@ -485,17 +550,176 @@
       </div>
     </div>
 
-    <h1>AI Systems Radar</h1>
-    <p class="subtitle">An unfiltered reality check on running AI in production: what vendors don't tell you, why systems break, and the battle-tested open-source tools solving each problem.</p>
+    <h1>AI Tools Radar</h1>
+    <p class="subtitle">An open, curated directory of battle-tested AI developer tools, coding agents, and local models. Every tool has a direct link, with the honest truth on what works in production.</p>
+
+    <!-- Quick Jump Navigation -->
+    <nav class="nav-jump">
+      <a href="#coding-table" class="nav-link">🛠️ Frontier Coding Agents</a>
+      <a href="#radar" class="nav-link">🧭 Tools Directory (130+ Indexed)</a>
+      <a href="#realities" class="nav-link">⚡ 4 Production Realities</a>
+    </nav>
   </div>
 </header>
 
 <main class="wrap">
-  <!-- The 4 Unfiltered Realities Section -->
-  <section class="section-wrap">
+  <!-- Section 1: Frontier AI Coding Tools Comparison Table -->
+  <section class="section-wrap" id="coding-table">
     <div class="section-header">
-      <h2 class="section-title">⚡ The 4 Realities Vendors Sweep Under the Rug</h2>
-      <span class="section-note">Click any tool to jump to its details • Click Copy to share the unfiltered truth with your team</span>
+      <div>
+        <h2 class="section-title">🛠️ Frontier AI Coding Tools: The Comparison Table</h2>
+        <span class="section-note">Click any tool name or button to visit the official website or repository</span>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="frontier-table">
+        <thead>
+          <tr>
+            <th style="width: 210px;">Tool Name</th>
+            <th>Primary Strength & The Honest Reality</th>
+            <th style="width: 140px;">Environment</th>
+            <th style="width: 150px;">Where It Runs</th>
+            <th style="width: 110px;">Direct Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a class="tool-link" href="https://antigravity.google" target="_blank" rel="noopener">
+                Google Antigravity ↗
+              </a>
+            </td>
+            <td>Best-in-class for complex multi-agent delegation, subagent workspaces, and deep full-codebase context. Built for end-to-end task execution rather than simple line autocomplete.</td>
+            <td><span class="tag-env">Agentic IDE</span></td>
+            <td>Google DeepMind</td>
+            <td><a class="btn-open" href="https://antigravity.google" target="_blank" rel="noopener">Open Site ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a class="tool-link" href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank" rel="noopener">
+                Claude Code ↗
+              </a>
+            </td>
+            <td>Anthropic's high-velocity terminal agent. Excels at repo-wide refactoring, bash command execution, and automated git commits. Strictly a CLI tool (no visual GUI).</td>
+            <td><span class="tag-env">Terminal CLI</span></td>
+            <td>Anthropic API</td>
+            <td><a class="btn-open" href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank" rel="noopener">Open Docs ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a class="tool-link" href="https://code.visualstudio.com/docs/copilot/copilot-chat" target="_blank" rel="noopener">
+                VS Code Agent Mode ↗
+              </a>
+            </td>
+            <td>Microsoft's native agent mode inside Visual Studio Code. Seamless for everyday multi-file edits and in-editor debugging without switching windows.</td>
+            <td><span class="tag-env">VS Code Editor</span></td>
+            <td>Microsoft Copilot</td>
+            <td><a class="btn-open" href="https://code.visualstudio.com/docs/copilot/copilot-chat" target="_blank" rel="noopener">Open Docs ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a class="tool-link" href="https://openai.com/index/openai-codex/" target="_blank" rel="noopener">
+                OpenAI Codex ↗
+              </a>
+            </td>
+            <td>The foundational language model architecture that proved automated code generation, syntax synthesis, and agentic API invocation at scale.</td>
+            <td><span class="tag-env">API & Platform</span></td>
+            <td>OpenAI Cloud</td>
+            <td><a class="btn-open" href="https://openai.com/index/openai-codex/" target="_blank" rel="noopener">Open Site ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a class="tool-link" href="https://kimi.ai" target="_blank" rel="noopener">
+                Kimi Code ↗
+              </a>
+            </td>
+            <td>Moonshot AI's high-context reasoning model designed specifically for massive enterprise monorepos and multi-package dependency tracking.</td>
+            <td><span class="tag-env">Cloud / Web</span></td>
+            <td>Moonshot AI</td>
+            <td><a class="btn-open" href="https://kimi.ai" target="_blank" rel="noopener">Open Site ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a class="tool-link" href="https://aws.amazon.com/q/developer/" target="_blank" rel="noopener">
+                Amazon Q / Kiro IDE ↗
+              </a>
+            </td>
+            <td>Specialized in enterprise cloud migrations (Java/Node updates), automated vulnerability patching, and deep AWS infrastructure wiring.</td>
+            <td><span class="tag-env">Cloud IDE / IDE</span></td>
+            <td>AWS Cloud</td>
+            <td><a class="btn-open" href="https://aws.amazon.com/q/developer/" target="_blank" rel="noopener">Open Site ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a class="tool-link" href="https://github.com/paul-gauthier/aider" target="_blank" rel="noopener">
+                Aider ↗
+              </a>
+            </td>
+            <td>The gold standard for terminal-based pair programming with local git checkpoints. 100% open-source, brings your own API keys or local models.</td>
+            <td><span class="tag-env">Terminal CLI</span></td>
+            <td>Any LLM / Local</td>
+            <td><a class="btn-open" href="https://github.com/paul-gauthier/aider" target="_blank" rel="noopener">GitHub ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a class="tool-link" href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">
+                RTK (Token Killer) ↗
+              </a>
+            </td>
+            <td>Sits invisibly as a CLI proxy to strip repetitive compiler hex noise and whitespace before sending to LLMs — slashing terminal context costs by 60–90%.</td>
+            <td><span class="tag-env">CLI Proxy</span></td>
+            <td>100% Local & Free</td>
+            <td><a class="btn-open" href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">GitHub ↗</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a class="tool-link" href="https://github.com/morluto/rea" target="_blank" rel="noopener">
+                REA (Reverse Engineer) ↗
+              </a>
+            </td>
+            <td>Over 380k+ stars. Decompiles binaries, extracts managed code, and inspects dynamic runtime evidence so AI coding agents understand compiled code.</td>
+            <td><span class="tag-env">CLI & Harness</span></td>
+            <td>100% Open Source</td>
+            <td><a class="btn-open" href="https://github.com/morluto/rea" target="_blank" rel="noopener">GitHub ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Section 2: Curated Tools Directory -->
+  <section class="section-wrap" id="radar">
+    <div class="radar-header">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">🧭 The Curated Tools Directory</h2>
+          <span class="section-note" id="tool-count-badge">Loading verified tools...</span>
+        </div>
+      </div>
+
+      <div class="search-bar">
+        <input type="search" id="q" placeholder="Filter by name, use case, or keyword (press '/' to focus search)..." />
+      </div>
+
+      <div class="category-pills" id="category-bar">
+        <button class="cat-pill active" data-cat="">All Pillars</button>
+      </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+    <div id="empty-state" style="text-align: center; padding: 80px 0; color: var(--text-muted); display: none;">
+      No tools match your criteria. Try clearing search or selecting "All Pillars".
+    </div>
+  </section>
+
+  <!-- Section 3: The 4 Unfiltered Realities -->
+  <section class="section-wrap" id="realities">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">⚡ 4 Production Realities Vendors Don't Tell You</h2>
+        <span class="section-note">Hard technical mechanisms behind why AI projects fail in production</span>
+      </div>
     </div>
 
     <div class="reality-grid">
@@ -510,8 +734,8 @@
         <div class="truth-box"><strong>What Actually Works:</strong> Never dump raw files into an LLM. Use layout-aware OCR parsing and hybrid search to pass only the exact 2 paragraphs where the answer lives.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('RAGFlow')">RAGFlow</a>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('Qdrant')">Qdrant</a>
+          <a class="tool-chip" href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener">RAGFlow ↗</a>
+          <a class="tool-chip" href="https://github.com/qdrant/qdrant" target="_blank" rel="noopener">Qdrant ↗</a>
         </div>
       </div>
 
@@ -526,7 +750,7 @@
         <div class="truth-box"><strong>What Actually Works:</strong> Strip stack traces, memory addresses, and repetitive logs *before* tokenization using specialized CLI proxies. You get identical answers at an 80% discount.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('RTK')">RTK (Token Killer)</a>
+          <a class="tool-chip" href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">RTK (Token Killer) ↗</a>
         </div>
       </div>
 
@@ -541,10 +765,10 @@
         <div class="truth-box"><strong>What Actually Works:</strong> Restrict agents to tight loops with mandatory git rollback checkpoints and automated test execution on every step.</div>
         <div class="tools-row">
           <span class="tools-label">Frontier Tools:</span>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('Antigravity')">Antigravity</a>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('Claude Code')">Claude Code</a>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('VS Code')">VS Code Agent</a>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('Aider')">Aider</a>
+          <a class="tool-chip" href="https://antigravity.google" target="_blank" rel="noopener">Antigravity ↗</a>
+          <a class="tool-chip" href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank" rel="noopener">Claude Code ↗</a>
+          <a class="tool-chip" href="https://code.visualstudio.com/docs/copilot/copilot-chat" target="_blank" rel="noopener">VS Code ↗</a>
+          <a class="tool-chip" href="https://github.com/paul-gauthier/aider" target="_blank" rel="noopener">Aider ↗</a>
         </div>
       </div>
 
@@ -559,111 +783,11 @@
         <div class="truth-box"><strong>What Actually Works:</strong> Keep the base model frozen and run open-weight models on-premise or in your private VPC for zero ongoing API fees and zero data leaks.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('Ollama')">Ollama</a>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('vLLM')">vLLM</a>
-          <a class="tool-chip" href="#radar" onclick="filterByTool('LM Studio')">LM Studio</a>
+          <a class="tool-chip" href="https://github.com/ollama/ollama" target="_blank" rel="noopener">Ollama ↗</a>
+          <a class="tool-chip" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vLLM ↗</a>
+          <a class="tool-chip" href="https://lmstudio.ai" target="_blank" rel="noopener">LM Studio ↗</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Frontier Coding Tools Table -->
-  <section class="section-wrap">
-    <div class="section-header">
-      <h2 class="section-title">🛠️ Frontier AI Coding Tools: The Unbiased Reality</h2>
-      <span class="section-note">Where each tool genuinely shines vs. its architectural constraints</span>
-    </div>
-
-    <div class="table-wrap">
-      <table class="frontier-table">
-        <thead>
-          <tr>
-            <th style="width: 180px;">Tool</th>
-            <th>The Honest Reality & Primary Strength</th>
-            <th style="width: 140px;">Environment</th>
-            <th style="width: 160px;">Where It Runs</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Google Antigravity</strong></td>
-            <td>Best-in-class for complex multi-agent delegation, subagent workspaces, and deep full-codebase context. Built for end-to-end task execution rather than simple line autocomplete.</td>
-            <td><span class="tag-env">Agentic IDE</span></td>
-            <td>Google DeepMind</td>
-          </tr>
-          <tr>
-            <td><strong>Claude Code</strong></td>
-            <td>Anthropic's high-velocity terminal agent. Excels at repo-wide refactoring, bash commands, and automated git commits. Strictly a CLI tool (no visual GUI).</td>
-            <td><span class="tag-env">Terminal CLI</span></td>
-            <td>Anthropic API (Local CLI)</td>
-          </tr>
-          <tr>
-            <td><strong>VS Code with In-Built AI Agents</strong></td>
-            <td>Microsoft's native agent mode inside Visual Studio Code. Seamless for everyday multi-file edits and in-editor debugging without switching windows.</td>
-            <td><span class="tag-env">VS Code Editor</span></td>
-            <td>Microsoft Copilot</td>
-          </tr>
-          <tr>
-            <td><strong>OpenAI Codex</strong></td>
-            <td>The foundational language model architecture that proved automated code generation, syntax synthesis, and agentic API invocation at scale.</td>
-            <td><span class="tag-env">API & Platform</span></td>
-            <td>OpenAI Cloud</td>
-          </tr>
-          <tr>
-            <td><strong>Kimi Code</strong></td>
-            <td>Moonshot AI's high-context reasoning model designed specifically for massive enterprise monorepos and multi-package dependency tracking.</td>
-            <td><span class="tag-env">Cloud / Web</span></td>
-            <td>Moonshot AI</td>
-          </tr>
-          <tr>
-            <td><strong>Amazon Q / Kiro IDE</strong></td>
-            <td>Specialized in enterprise cloud migrations (Java/Node updates), automated vulnerability patching, and deep AWS infrastructure wiring. Locked to AWS.</td>
-            <td><span class="tag-env">Cloud IDE / VS Code</span></td>
-            <td>AWS Cloud</td>
-          </tr>
-          <tr>
-            <td><strong>Aider</strong></td>
-            <td>The gold standard for terminal-based pair programming with local git checkpoints. 100% open-source, brings your own API keys or local models.</td>
-            <td><span class="tag-env">Terminal CLI</span></td>
-            <td>Any LLM / Open Source</td>
-          </tr>
-          <tr>
-            <td><strong>RTK (Rust Token Killer)</strong></td>
-            <td>Sits invisibly as a CLI proxy to strip repetitive compiler hex noise and whitespace before sending to LLMs — slashing terminal context costs by 60–90%.</td>
-            <td><span class="tag-env">CLI Proxy</span></td>
-            <td>100% Local & Free</td>
-          </tr>
-          <tr>
-            <td><strong>REA (Reverse Engineer Anything)</strong></td>
-            <td>Over 380k+ stars. Decompiles binaries, extracts managed code, and inspects dynamic runtime evidence so AI coding agents understand compiled code without guessing.</td>
-            <td><span class="tag-env">CLI & Agent Harness</span></td>
-            <td>100% Open Source</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Curated Radar Section -->
-  <section id="radar">
-    <div class="radar-header">
-      <div class="section-header">
-        <h2 class="section-title">🧭 Curated Tools Directory</h2>
-        <span class="section-note" id="tool-count-badge">Loading tools...</span>
-      </div>
-
-      <div class="search-bar">
-        <input type="search" id="q" placeholder="Filter by name, use case, or keyword (press '/' to focus)..." />
-      </div>
-
-      <div class="category-pills" id="category-bar">
-        <button class="cat-pill active" data-cat="">All Pillars</button>
-      </div>
-    </div>
-
-    <div class="grid" id="grid"></div>
-    <div id="empty-state" style="text-align: center; padding: 80px 0; color: var(--text-muted); display: none;">
-      No tools match your criteria. Try clearing search or selecting "All Pillars".
     </div>
   </section>
 </main>
@@ -734,13 +858,6 @@ function copyReality(idx) {
   });
 }
 
-function filterByTool(name) {
-  $("#q").value = name;
-  searchQ = name.toLowerCase().trim();
-  render();
-  document.getElementById("radar").scrollIntoView({ behavior: "smooth" });
-}
-
 function renderSignals(signals = []) {
   return signals.map(s => {
     const [src, metric] = s.split(":");
@@ -780,7 +897,7 @@ function render() {
         <div class="tool-top">
           <div class="tool-icon">${esc(tool.emoji || "⚡")}</div>
           <div style="flex: 1; min-width: 0;">
-            <div class="tool-name">${esc(tool.name)}</div>
+            <div class="tool-name">${esc(tool.name)} <span class="tool-name-link">↗</span></div>
             <p class="tool-tag">${esc(tool.tagline)}</p>
           </div>
         </div>

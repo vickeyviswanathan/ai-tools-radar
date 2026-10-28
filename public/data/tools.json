@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T05:46:58.210Z",
+  "updatedAt": "2026-10-28T06:03:03.946Z",
   "categories": [
     "Coding",
     "Agents & Automation",
@@ -20,8 +20,8 @@
       "emoji": "🚀",
       "category": "Coding",
       "why_it_matters": "Pioneering agentic coding platform that pairs developers with autonomous coding agents capable of end-to-end task execution.",
-      "launched_at": 1793080011,
-      "score": 17639.069885556924,
+      "launched_at": 1793080975,
+      "score": 17638.843763203593,
       "signal_summary": "app:88000.0",
       "signals": [
         "app:88000.0"
@@ -35,8 +35,8 @@
       "emoji": "⚡",
       "category": "Coding",
       "why_it_matters": "High-velocity CLI coding agent that operates directly in your local repo with fine-grained permission controls.",
-      "launched_at": 1793080011,
-      "score": 15033.298197917833,
+      "launched_at": 1793080975,
+      "score": 15033.105480003063,
       "signal_summary": "app:75000.0",
       "signals": [
         "app:75000.0"
@@ -50,8 +50,8 @@
       "emoji": "📐",
       "category": "Coding",
       "why_it_matters": "Brings autonomous multi-file refactoring and command execution directly into the world's most widely used code editor.",
-      "launched_at": 1792993611,
-      "score": 8414.020299655182,
+      "launched_at": 1792994575,
+      "score": 8413.96420871061,
       "signal_summary": "app:92000.0",
       "signals": [
         "app:92000.0"
@@ -65,8 +65,8 @@
       "emoji": "🧠",
       "category": "Coding",
       "why_it_matters": "The foundational language model architecture that pioneered automated code translation, refactoring, and agentic workflows.",
-      "launched_at": 1792907211,
-      "score": 6284.936985535608,
+      "launched_at": 1792908175,
+      "score": 6284.908675869415,
       "signal_summary": "app:110000.0",
       "signals": [
         "app:110000.0"
@@ -80,8 +80,8 @@
       "emoji": "🌙",
       "category": "Coding",
       "why_it_matters": "Exceptional million-token context reasoning capable of tracking large enterprise codebases and multi-package dependencies.",
-      "launched_at": 1792993611,
-      "score": 4755.750604152929,
+      "launched_at": 1792994575,
+      "score": 4755.718900575563,
       "signal_summary": "app:52000.0",
       "signals": [
         "app:52000.0"
@@ -95,8 +95,8 @@
       "emoji": "☁️",
       "category": "Coding",
       "why_it_matters": "Specialized in enterprise Java/Node upgrades, automated vulnerability patching, and deep AWS cloud infrastructure wiring.",
-      "launched_at": 1792993611,
-      "score": 4389.923634602704,
+      "launched_at": 1792994575,
+      "score": 4389.894369762058,
       "signal_summary": "app:48000.0",
       "signals": [
         "app:48000.0"
@@ -110,8 +110,8 @@
       "emoji": "🙌",
       "category": "Coding",
       "why_it_matters": "Community-driven autonomous developer agent capable of resolving end-to-end GitHub issues in isolated sandboxes.",
-      "launched_at": 1792993611,
-      "score": 4115.553407440035,
+      "launched_at": 1792994575,
+      "score": 4115.525971651929,
       "signal_summary": "github:45000.0",
       "signals": [
         "github:45000.0"
@@ -125,8 +125,8 @@
       "emoji": "💻",
       "category": "Coding",
       "why_it_matters": "The gold standard for terminal-based AI pair programming with robust repository-wide AST parsing.",
-      "launched_at": 1792993611,
-      "score": 3155.257612370693,
+      "launched_at": 1792994575,
+      "score": 3155.236578266479,
       "signal_summary": "github:34500.0",
       "signals": [
         "github:34500.0"
@@ -140,8 +140,8 @@
       "emoji": "🤖",
       "category": "Coding",
       "why_it_matters": "Pioneering interactive coding agent extension with strict permission controls and iterative browser verification.",
-      "launched_at": 1792993611,
-      "score": 2926.6157564018026,
+      "launched_at": 1792994575,
+      "score": 2926.5962465080383,
       "signal_summary": "github:32000.0",
       "signals": [
         "github:32000.0"
@@ -155,8 +155,8 @@
       "emoji": "⏩",
       "category": "Coding",
       "why_it_matters": "The most customizable open-source alternative to Copilot that respects privacy and local LLM backends.",
-      "launched_at": 1792907211,
-      "score": 1382.6861368178338,
+      "launched_at": 1792908175,
+      "score": 1382.6799086912713,
       "signal_summary": "github:24200.0",
       "signals": [
         "github:24200.0"
@@ -170,8 +170,8 @@
       "emoji": "⚡",
       "category": "Coding",
       "why_it_matters": "Essential AI CLI infrastructure that slashes LLM context token usage by up to 90% without losing error signals.",
-      "launched_at": 1793080011,
-      "score": 250.5549699652972,
+      "launched_at": 1793080975,
+      "score": 250.55175800005105,
       "signal_summary": "github:1250.0",
       "signals": [
         "github:1250.0"
@@ -184,12 +184,12 @@
       "url": "https://dsc.gg/jcodesmore",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 37,571 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 37,574 verified GitHub stars.",
       "launched_at": 1773400479,
-      "score": 12.221514073819645,
-      "signal_summary": "github:37571.0",
+      "score": 12.22177418417621,
+      "signal_summary": "github:37574.0",
       "signals": [
-        "github:37571.0"
+        "github:37574.0"
       ]
     },
     {
@@ -201,7 +201,7 @@
       "category": "Coding",
       "why_it_matters": "Production open-source breakthrough with 5,741 verified GitHub stars.",
       "launched_at": 1786474735,
-      "score": 6.8445937537819725,
+      "score": 6.843410753003257,
       "signal_summary": "github:5741.0",
       "signals": [
         "github:5741.0"
@@ -216,7 +216,7 @@
       "category": "Coding",
       "why_it_matters": "Production open-source breakthrough with 3,204 verified GitHub stars.",
       "launched_at": 1785828731,
-      "score": 3.420372184695214,
+      "score": 3.419833004358275,
       "signal_summary": "github:3204.0",
       "signals": [
         "github:3204.0"
@@ -231,7 +231,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792997771,
-      "score": 3.009892764794594,
+      "score": 2.990190760614589,
       "signal_summary": "github:32.0",
       "signals": [
         "github:32.0"
@@ -246,7 +246,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792966377,
-      "score": 2.857550471885386,
+      "score": 2.841664724785888,
       "signal_summary": "github:37.0",
       "signals": [
         "github:37.0"
@@ -261,7 +261,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1793128340,
-      "score": 2.3958979894998294,
+      "score": 2.336026709121409,
       "signal_summary": "hn:5.0",
       "signals": [
         "hn:5.0"
@@ -276,7 +276,7 @@
       "category": "Coding",
       "why_it_matters": "Production open-source breakthrough with 1,318 verified GitHub stars.",
       "launched_at": 1788138138,
-      "score": 2.2132443322410573,
+      "score": 2.2127354638175007,
       "signal_summary": "github:1318.0",
       "signals": [
         "github:1318.0"
@@ -291,25 +291,10 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792781376,
-      "score": 1.8676755394418523,
+      "score": 1.86217656016358,
       "signal_summary": "github:52.0",
       "signals": [
         "github:52.0"
-      ]
-    },
-    {
-      "id": 237,
-      "name": "CleanCode",
-      "tagline": "CleanCode – Claude Code and Codex collaborating on one canvas",
-      "url": "https://github.com/chen-985211/cleancode",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1793134646,
-      "score": 1.7210006049514266,
-      "signal_summary": "hn:3.0",
-      "signals": [
-        "hn:3.0"
       ]
     },
     {
@@ -321,7 +306,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792739150,
-      "score": 1.7155659070873257,
+      "score": 1.711004505477737,
       "signal_summary": "github:54.0",
       "signals": [
         "github:54.0"
@@ -336,10 +321,25 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792506955,
-      "score": 1.7104795552215197,
+      "score": 1.7075131593904183,
       "signal_summary": "github:90.0",
       "signals": [
         "github:90.0"
+      ]
+    },
+    {
+      "id": 237,
+      "name": "CleanCode",
+      "tagline": "CleanCode – Claude Code and Codex collaborating on one canvas",
+      "url": "https://github.com/chen-985211/cleancode",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1793134646,
+      "score": 1.6712204054086106,
+      "signal_summary": "hn:3.0",
+      "signals": [
+        "hn:3.0"
       ]
     },
     {
@@ -351,7 +351,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792699770,
-      "score": 1.660443613807108,
+      "score": 1.6563948562789117,
       "signal_summary": "github:58.0",
       "signals": [
         "github:58.0"
@@ -366,7 +366,7 @@
       "category": "Coding",
       "why_it_matters": null,
       "launched_at": 1792687536,
-      "score": 1.4715920182318565,
+      "score": 1.4680938635574585,
       "signal_summary": "github:53.0",
       "signals": [
         "github:53.0"
@@ -381,7 +381,7 @@
       "category": "Coding",
       "why_it_matters": "Production open-source breakthrough with 248 verified GitHub stars.",
       "launched_at": 1790199875,
-      "score": 0.7835208583627913,
+      "score": 0.7832158577651107,
       "signal_summary": "github:248.0",
       "signals": [
         "github:248.0"
@@ -395,8 +395,8 @@
       "emoji": "🛠️",
       "category": "Agents & Automation",
       "why_it_matters": "Production-grade visual AI workflow builder with built-in model routing, knowledge retrieval, and prompt observability.",
-      "launched_at": 1792907211,
-      "score": 3942.3695636541543,
+      "launched_at": 1792908175,
+      "score": 3942.351805772633,
       "signal_summary": "github:69000.0",
       "signals": [
         "github:69000.0"
@@ -410,8 +410,8 @@
       "emoji": "🔌",
       "category": "Agents & Automation",
       "why_it_matters": "The universal interoperability standard defining how AI models securely query databases, run code, and invoke APIs.",
-      "launched_at": 1793080011,
-      "score": 3307.325603541923,
+      "launched_at": 1793080975,
+      "score": 3307.2832056006737,
       "signal_summary": "github:16500.0",
       "signals": [
         "github:16500.0"
@@ -425,8 +425,8 @@
       "emoji": "🌍",
       "category": "Agents & Automation",
       "why_it_matters": "Fastest-growing autonomous browser agent library allowing LLMs to interact with any web application effortlessly.",
-      "launched_at": 1792993611,
-      "score": 2697.9739004329117,
+      "launched_at": 1792994575,
+      "score": 2697.955914749598,
       "signal_summary": "github:29500.0",
       "signals": [
         "github:29500.0"
@@ -440,8 +440,8 @@
       "emoji": "👥",
       "category": "Agents & Automation",
       "why_it_matters": "The standard multi-agent coordination architecture enabling specialized agent personas to collaborate sequentially and hierarchically.",
-      "launched_at": 1792993611,
-      "score": 2377.8753020764643,
+      "launched_at": 1792994575,
+      "score": 2377.8594502877813,
       "signal_summary": "github:26000.0",
       "signals": [
         "github:26000.0"
@@ -456,7 +456,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 2,63,447 verified GitHub stars.",
       "launched_at": 1786622192,
-      "score": 322.59174549451075,
+      "score": 322.5347348949506,
       "signal_summary": "github:263447.0",
       "signals": [
         "github:263447.0"
@@ -470,8 +470,8 @@
       "emoji": "🌐",
       "category": "Agents & Automation",
       "why_it_matters": "Next-gen browser automation framework with live inspection REPL, snapshot diffs, and anti-bot mitigation.",
-      "launched_at": 1793080011,
-      "score": 168.37293981667972,
+      "launched_at": 1793080975,
+      "score": 168.3707813760343,
       "signal_summary": "github:840.0",
       "signals": [
         "github:840.0"
@@ -486,7 +486,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 10,995 verified GitHub stars.",
       "launched_at": 1791399468,
-      "score": 64.56093805117317,
+      "score": 64.5188238774801,
       "signal_summary": "github:10995.0",
       "signals": [
         "github:10995.0"
@@ -501,7 +501,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 3,001 verified GitHub stars.",
       "launched_at": 1792047166,
-      "score": 30.393013838425574,
+      "score": 30.361799037823076,
       "signal_summary": "github:3001.0",
       "signals": [
         "github:3001.0"
@@ -514,12 +514,12 @@
       "url": "https://browser.lexmount.com/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 21,228 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 21,230 verified GitHub stars.",
       "launched_at": 1786368030,
-      "score": 24.833234812029627,
-      "signal_summary": "github:21228.0",
+      "score": 24.831349259370644,
+      "signal_summary": "github:21230.0",
       "signals": [
-        "github:21228.0"
+        "github:21230.0"
       ]
     },
     {
@@ -531,7 +531,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 408 verified GitHub stars.",
       "launched_at": 1792881283,
-      "score": 21.6706471040694,
+      "score": 21.58511575187927,
       "signal_summary": "github:424.0",
       "signals": [
         "github:424.0"
@@ -546,7 +546,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 15,115 verified GitHub stars.",
       "launched_at": 1786643977,
-      "score": 18.58249339705663,
+      "score": 18.57919841809586,
       "signal_summary": "github:15115.0",
       "signals": [
         "github:15115.0"
@@ -561,7 +561,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 1,278 verified GitHub stars.",
       "launched_at": 1792164874,
-      "score": 14.775993700338994,
+      "score": 14.759049249024642,
       "signal_summary": "github:1278.0",
       "signals": [
         "github:1278.0"
@@ -576,7 +576,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 7,749 verified GitHub stars.",
       "launched_at": 1788140358,
-      "score": 13.019353639983247,
+      "score": 13.016358914379254,
       "signal_summary": "github:7749.0",
       "signals": [
         "github:7749.0"
@@ -591,7 +591,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source framework with 29,504 verified GitHub stars.",
       "launched_at": 1776076301,
-      "score": 11.426950432356481,
+      "score": 11.426176533907622,
       "signal_summary": "github:29504.0",
       "signals": [
         "github:29504.0"
@@ -606,7 +606,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 6,736 verified GitHub stars.",
       "launched_at": 1787715918,
-      "score": 10.269599046974918,
+      "score": 10.267420494993342,
       "signal_summary": "github:6736.0",
       "signals": [
         "github:6736.0"
@@ -621,7 +621,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source framework with 30,710 verified GitHub stars.",
       "launched_at": 1773526223,
-      "score": 10.066461701645903,
+      "score": 10.065868425392907,
       "signal_summary": "github:30710.0",
       "signals": [
         "github:30710.0"
@@ -634,12 +634,12 @@
       "url": "https://browser-use.com/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 1,19,337 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,19,338 verified GitHub stars.",
       "launched_at": 1730390456,
-      "score": 9.703452746928722,
-      "signal_summary": "github:119337.0",
+      "score": 9.703355085095293,
+      "signal_summary": "github:119338.0",
       "signals": [
-        "github:119337.0"
+        "github:119338.0"
       ]
     },
     {
@@ -649,12 +649,12 @@
       "url": "https://www.copilotkit.ai/openbot",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 7,436 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 7,444 verified GitHub stars.",
       "launched_at": 1786927499,
-      "score": 9.642065494283647,
-      "signal_summary": "github:7436.0",
+      "score": 9.650649672710504,
+      "signal_summary": "github:7444.0",
       "signals": [
-        "github:7436.0"
+        "github:7444.0"
       ]
     },
     {
@@ -666,7 +666,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 7,004 verified GitHub stars.",
       "launched_at": 1786742455,
-      "score": 8.769235187770397,
+      "score": 8.767656453331158,
       "signal_summary": "github:7004.0",
       "signals": [
         "github:7004.0"
@@ -681,7 +681,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 2,707 verified GitHub stars.",
       "launched_at": 1790143986,
-      "score": 8.36341026526283,
+      "score": 8.360214683442642,
       "signal_summary": "github:2707.0",
       "signals": [
         "github:2707.0"
@@ -696,7 +696,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 4,737 verified GitHub stars.",
       "launched_at": 1788299549,
-      "score": 8.271730533269814,
+      "score": 8.26976573172373,
       "signal_summary": "github:4737.0",
       "signals": [
         "github:4737.0"
@@ -709,12 +709,12 @@
       "url": "https://lite.ego.app/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 20,211 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 20,215 verified GitHub stars.",
       "launched_at": 1776343869,
-      "score": 7.977331438257724,
-      "signal_summary": "github:20211.0",
+      "score": 7.978361280001251,
+      "signal_summary": "github:20215.0",
       "signals": [
-        "github:20211.0"
+        "github:20215.0"
       ]
     },
     {
@@ -726,7 +726,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 5,372 verified GitHub stars.",
       "launched_at": 1787375255,
-      "score": 7.61609801338292,
+      "score": 7.614577269127944,
       "signal_summary": "github:5372.0",
       "signals": [
         "github:5372.0"
@@ -741,7 +741,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 5,092 verified GitHub stars.",
       "launched_at": 1787408184,
-      "score": 7.26863715970612,
+      "score": 7.267177506816026,
       "signal_summary": "github:5092.0",
       "signals": [
         "github:5092.0"
@@ -756,7 +756,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source breakthrough with 4,131 verified GitHub stars.",
       "launched_at": 1787883747,
-      "score": 6.538589884558559,
+      "score": 6.537158816013065,
       "signal_summary": "github:4131.0",
       "signals": [
         "github:4131.0"
@@ -770,8 +770,8 @@
       "emoji": "🎨",
       "category": "Image & Design",
       "why_it_matters": "Industry-standard node-graph architecture powering advanced generative image pipelines and production VFX studios.",
-      "launched_at": 1792993611,
-      "score": 5670.318028028492,
+      "launched_at": 1792994575,
+      "score": 5670.280227609324,
       "signal_summary": "github:62000.0",
       "signals": [
         "github:62000.0"
@@ -785,8 +785,8 @@
       "emoji": "🖼️",
       "category": "Image & Design",
       "why_it_matters": "Zero-prompt-engineering image creation providing Midjourney-level quality on consumer desktop GPUs.",
-      "launched_at": 1792820811,
-      "score": 1794.6139752115366,
+      "launched_at": 1792821775,
+      "score": 1794.6078712225121,
       "signal_summary": "github:44000.0",
       "signals": [
         "github:44000.0"
@@ -801,7 +801,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 241 likes on Hugging Face.",
       "launched_at": 1791979853,
-      "score": 2.2765512597382256,
+      "score": 2.274344875551322,
       "signal_summary": "huggingface:241.0",
       "signals": [
         "huggingface:241.0"
@@ -816,7 +816,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 172 likes on Hugging Face.",
       "launched_at": 1791966846,
-      "score": 1.6037666489724174,
+      "score": 1.602229051500562,
       "signal_summary": "huggingface:172.0",
       "signals": [
         "huggingface:172.0"
@@ -831,7 +831,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 92 likes on Hugging Face.",
       "launched_at": 1792418444,
-      "score": 1.505547261594845,
+      "score": 1.5032418638387812,
       "signal_summary": "huggingface:92.0",
       "signals": [
         "huggingface:92.0"
@@ -846,7 +846,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 483 likes on Hugging Face.",
       "launched_at": 1789899359,
-      "score": 1.3594852367238601,
+      "score": 1.3590045863877738,
       "signal_summary": "huggingface:483.0",
       "signals": [
         "huggingface:483.0"
@@ -861,7 +861,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1792759826,
-      "score": 1.3473625880476627,
+      "score": 1.3436016325128113,
       "signal_summary": "huggingface:40.0",
       "signals": [
         "huggingface:40.0"
@@ -874,12 +874,12 @@
       "url": "https://huggingface.co/spaces/Aura1in/Krea-2-Turbo_v2",
       "emoji": "🖌️",
       "category": "Image & Design",
-      "why_it_matters": "Top-trending community model with 243 likes on Hugging Face.",
+      "why_it_matters": "Top-trending community model with 244 likes on Hugging Face.",
       "launched_at": 1791183939,
-      "score": 1.243453803363638,
-      "signal_summary": "huggingface:243.0",
+      "score": 1.2478446121431257,
+      "signal_summary": "huggingface:244.0",
       "signals": [
-        "huggingface:243.0"
+        "huggingface:244.0"
       ]
     },
     {
@@ -891,7 +891,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 408 likes on Hugging Face.",
       "launched_at": 1790050655,
-      "score": 1.2154663987231233,
+      "score": 1.2150158548542145,
       "signal_summary": "huggingface:408.0",
       "signals": [
         "huggingface:408.0"
@@ -906,7 +906,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 113 likes on Hugging Face.",
       "launched_at": 1792068881,
-      "score": 1.171468903422065,
+      "score": 1.1702421329460129,
       "signal_summary": "huggingface:113.0",
       "signals": [
         "huggingface:113.0"
@@ -921,7 +921,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 1038 likes on Hugging Face.",
       "launched_at": 1784116156,
-      "score": 0.8616929299528867,
+      "score": 0.8615827750901798,
       "signal_summary": "huggingface:1038.0",
       "signals": [
         "huggingface:1038.0"
@@ -936,7 +936,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 274 likes on Hugging Face.",
       "launched_at": 1789814899,
-      "score": 0.7480061325993795,
+      "score": 0.7477483207872895,
       "signal_summary": "huggingface:274.0",
       "signals": [
         "huggingface:274.0"
@@ -951,7 +951,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 744 likes on Hugging Face.",
       "launched_at": 1785342238,
-      "score": 0.7354107590521274,
+      "score": 0.7353020310573497,
       "signal_summary": "huggingface:744.0",
       "signals": [
         "huggingface:744.0"
@@ -966,7 +966,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 2870 likes on Hugging Face.",
       "launched_at": 1765595058,
-      "score": 0.626266230732433,
+      "score": 0.6262399353644869,
       "signal_summary": "huggingface:2870.0",
       "signals": [
         "huggingface:2870.0"
@@ -981,7 +981,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1793107815,
-      "score": 0.6119249541736019,
+      "score": 0.6013273480020762,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -996,7 +996,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 2299 likes on Hugging Face.",
       "launched_at": 1765338625,
-      "score": 0.49612673704971155,
+      "score": 0.4961060978186209,
       "signal_summary": "huggingface:2299.0",
       "signals": [
         "huggingface:2299.0"
@@ -1011,7 +1011,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1793128409,
-      "score": 0.48005734621960944,
+      "score": 0.46804326751459974,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -1026,7 +1026,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1792410183,
-      "score": 0.371504738200923,
+      "score": 0.37094201167217566,
       "signal_summary": "github:23.0",
       "signals": [
         "github:23.0"
@@ -1041,7 +1041,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1792239955,
-      "score": 0.3298436826363294,
+      "score": 0.3294350499648241,
       "signal_summary": "github:26.0",
       "signals": [
         "github:26.0"
@@ -1056,7 +1056,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending community demo & model with 177 likes on Hugging Face.",
       "launched_at": 1788504458,
-      "score": 0.3254241354105218,
+      "score": 0.32534344520167074,
       "signal_summary": "huggingface:177.0",
       "signals": [
         "huggingface:177.0"
@@ -1071,7 +1071,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1793108428,
-      "score": 0.3094181774336924,
+      "score": 0.3040099461097837,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -1086,7 +1086,7 @@
       "category": "Image & Design",
       "why_it_matters": null,
       "launched_at": 1772190376,
-      "score": 0.1490325033228498,
+      "score": 0.14902427909759333,
       "signal_summary": "huggingface:492.0",
       "signals": [
         "huggingface:492.0"
@@ -1101,7 +1101,7 @@
       "category": "Image & Design",
       "why_it_matters": "Top-trending community model with 94 likes on Hugging Face.",
       "launched_at": 1786666645,
-      "score": 0.11604756946841299,
+      "score": 0.11602692067109392,
       "signal_summary": "huggingface:94.0",
       "signals": [
         "huggingface:94.0"
@@ -1116,7 +1116,7 @@
       "category": "Video",
       "why_it_matters": "Production open-source breakthrough with 8,503 verified GitHub stars.",
       "launched_at": 1790417441,
-      "score": 29.428400298973703,
+      "score": 29.41604079964381,
       "signal_summary": "github:8503.0",
       "signals": [
         "github:8503.0"
@@ -1131,7 +1131,7 @@
       "category": "Video",
       "why_it_matters": "Top-trending community model with 372 likes on Hugging Face.",
       "launched_at": 1788837788,
-      "score": 0.7475138533129385,
+      "score": 0.7473142585016398,
       "signal_summary": "huggingface:372.0",
       "signals": [
         "huggingface:372.0"
@@ -1146,7 +1146,7 @@
       "category": "Video",
       "why_it_matters": null,
       "launched_at": 1792487317,
-      "score": 0.7341848765014924,
+      "score": 0.7329479949062722,
       "signal_summary": "huggingface:40.0",
       "signals": [
         "huggingface:40.0"
@@ -1161,7 +1161,7 @@
       "category": "Video",
       "why_it_matters": null,
       "launched_at": 1791983627,
-      "score": 0.692202954880527,
+      "score": 0.6915299610347906,
       "signal_summary": "github:73.0",
       "signals": [
         "github:73.0"
@@ -1174,12 +1174,12 @@
       "url": "https://huggingface.co/spaces/wank3r/minimax-h3",
       "emoji": "🎬",
       "category": "Video",
-      "why_it_matters": "Top-trending community model with 204 likes on Hugging Face.",
+      "why_it_matters": "Top-trending community model with 205 likes on Hugging Face.",
       "launched_at": 1789289929,
-      "score": 0.4678426752645793,
-      "signal_summary": "huggingface:204.0",
+      "score": 0.469995879504132,
+      "signal_summary": "huggingface:205.0",
       "signals": [
-        "huggingface:204.0"
+        "huggingface:205.0"
       ]
     },
     {
@@ -1191,7 +1191,7 @@
       "category": "Video",
       "why_it_matters": "Top-trending community model with 63 likes on Hugging Face.",
       "launched_at": 1791390316,
-      "score": 0.367649241579644,
+      "score": 0.36741064792023437,
       "signal_summary": "huggingface:63.0",
       "signals": [
         "huggingface:63.0"
@@ -1206,7 +1206,7 @@
       "category": "Video",
       "why_it_matters": null,
       "launched_at": 1790276412,
-      "score": 0.1499496931851929,
+      "score": 0.14988978092933578,
       "signal_summary": "huggingface:46.0",
       "signals": [
         "huggingface:46.0"
@@ -1220,8 +1220,8 @@
       "emoji": "🎙️",
       "category": "Audio & Voice",
       "why_it_matters": "Ultra-fast local speech transcription running in real time even on low-power devices and embedded chips.",
-      "launched_at": 1792907211,
-      "score": 2056.8884679934717,
+      "launched_at": 1792908175,
+      "score": 2056.8792030118084,
       "signal_summary": "github:36000.0",
       "signals": [
         "github:36000.0"
@@ -1235,8 +1235,8 @@
       "emoji": "🗣️",
       "category": "Audio & Voice",
       "why_it_matters": "Breakthrough ultra-compact voice synthesis model that out-competes models 10x its size in natural speech quality.",
-      "launched_at": 1792993611,
-      "score": 960.2957950693415,
+      "launched_at": 1792994575,
+      "score": 960.2893933854501,
       "signal_summary": "github:10500.0",
       "signals": [
         "github:10500.0"
@@ -1251,7 +1251,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Top-trending community model with 149 likes on Hugging Face.",
       "launched_at": 1791922869,
-      "score": 1.3308989184663285,
+      "score": 1.3296677569494804,
       "signal_summary": "huggingface:149.0",
       "signals": [
         "huggingface:149.0"
@@ -1266,7 +1266,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792675162,
-      "score": 1.1853960718764134,
+      "score": 1.182648043102304,
       "signal_summary": "github:44.0",
       "signals": [
         "github:44.0"
@@ -1281,7 +1281,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Trending community demo & model with 50 likes on Hugging Face.",
       "launched_at": 1792494494,
-      "score": 1.096670391479302,
+      "score": 1.094803335772398,
       "signal_summary": "huggingface:59.0",
       "signals": [
         "huggingface:59.0"
@@ -1296,7 +1296,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792691082,
-      "score": 0.7002729419557978,
+      "score": 0.6985961013016427,
       "signal_summary": "huggingface:25.0",
       "signals": [
         "huggingface:25.0"
@@ -1311,7 +1311,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792075004,
-      "score": 0.6887994339862149,
+      "score": 0.6880741020841923,
       "signal_summary": "huggingface:66.0",
       "signals": [
         "huggingface:66.0"
@@ -1326,7 +1326,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1793137453,
-      "score": 0.6275044898809887,
+      "score": 0.6079852760828128,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -1341,7 +1341,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792599651,
-      "score": 0.5913873637388362,
+      "score": 0.5901964201657426,
       "signal_summary": "github:26.0",
       "signals": [
         "github:26.0"
@@ -1356,7 +1356,7 @@
       "category": "Audio & Voice",
       "why_it_matters": null,
       "launched_at": 1792106320,
-      "score": 0.29173190661450055,
+      "score": 0.2914156970073899,
       "signal_summary": "github:27.0",
       "signals": [
         "github:27.0"
@@ -1370,8 +1370,8 @@
       "emoji": "💬",
       "category": "Chat & Assistants",
       "why_it_matters": "The gold standard private web UI for teams and power users seeking ChatGPT features without data leakage.",
-      "launched_at": 1792993611,
-      "score": 6036.144997578717,
+      "launched_at": 1792994575,
+      "score": 6036.104758422829,
       "signal_summary": "github:66000.0",
       "signals": [
         "github:66000.0"
@@ -1385,8 +1385,8 @@
       "emoji": "📚",
       "category": "Chat & Assistants",
       "why_it_matters": "Turn any document, PDF, or GitHub repository into an interactive AI knowledge base with zero configuration.",
-      "launched_at": 1792907211,
-      "score": 1828.3453048830859,
+      "launched_at": 1792908175,
+      "score": 1828.3370693438296,
       "signal_summary": "github:32000.0",
       "signals": [
         "github:32000.0"
@@ -1400,8 +1400,8 @@
       "emoji": "🤖",
       "category": "Chat & Assistants",
       "why_it_matters": "Completely air-gapped desktop assistant giving users sovereign local intelligence on consumer laptops.",
-      "launched_at": 1792907211,
-      "score": 1485.5305602175074,
+      "launched_at": 1792908175,
+      "score": 1485.5238688418617,
       "signal_summary": "github:26000.0",
       "signals": [
         "github:26000.0"
@@ -1416,7 +1416,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source breakthrough with 153 verified GitHub stars.",
       "launched_at": 1792991612,
-      "score": 16.787000329727125,
+      "score": 16.680813668995377,
       "signal_summary": "github:186.0",
       "signals": [
         "github:186.0"
@@ -1431,7 +1431,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source breakthrough with 7,567 verified GitHub stars.",
       "launched_at": 1787921844,
-      "score": 12.081462225255038,
+      "score": 12.078798838358658,
       "signal_summary": "github:7567.0",
       "signals": [
         "github:7567.0"
@@ -1446,7 +1446,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1793163154,
-      "score": 5.55847580256326,
+      "score": 5.0001509711582575,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -1461,7 +1461,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1793156960,
-      "score": 3.181599921673291,
+      "score": 2.973700234635103,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -1476,7 +1476,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792792307,
-      "score": 1.3376124457688034,
+      "score": 1.3335615403038035,
       "signal_summary": "github:36.0",
       "signals": [
         "github:36.0"
@@ -1491,7 +1491,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792813087,
-      "score": 1.1922109870792248,
+      "score": 1.1883929323299607,
       "signal_summary": "github:30.0",
       "signals": [
         "github:30.0"
@@ -1506,7 +1506,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792486256,
-      "score": 0.6045807541399946,
+      "score": 0.6035637864408802,
       "signal_summary": "github:33.0",
       "signals": [
         "github:33.0"
@@ -1521,7 +1521,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1792304638,
-      "score": 0.5254541909515064,
+      "score": 0.5247548266962875,
       "signal_summary": "github:38.0",
       "signals": [
         "github:38.0"
@@ -1536,7 +1536,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": null,
       "launched_at": 1793127078,
-      "score": 0.46362980376958524,
+      "score": 0.4523512700506081,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -1551,7 +1551,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source framework with 7,829 verified GitHub stars.",
       "launched_at": 1675958862,
-      "score": 0.30094736738544003,
+      "score": 0.3009443942623678,
       "signal_summary": "github:7829.0",
       "signals": [
         "github:7829.0"
@@ -1565,8 +1565,8 @@
       "emoji": "🧠",
       "category": "Productivity",
       "why_it_matters": "Solves context amnesia by providing persistent, adaptive personal memory graph storage for AI agents.",
-      "launched_at": 1792993611,
-      "score": 2286.4185596889083,
+      "launched_at": 1792994575,
+      "score": 2286.403317584405,
       "signal_summary": "github:25000.0",
       "signals": [
         "github:25000.0"
@@ -1580,8 +1580,8 @@
       "emoji": "🧵",
       "category": "Productivity",
       "why_it_matters": "Community-driven prompt architecture turning routine cognitive tasks into reusable terminal commands.",
-      "launched_at": 1792907211,
-      "score": 1571.234246383902,
+      "launched_at": 1792908175,
+      "score": 1571.2271689673537,
       "signal_summary": "github:27500.0",
       "signals": [
         "github:27500.0"
@@ -1596,7 +1596,7 @@
       "category": "Productivity",
       "why_it_matters": null,
       "launched_at": 1793007273,
-      "score": 28.956347977012218,
+      "score": 28.75604864597275,
       "signal_summary": "github:288.0",
       "signals": [
         "github:288.0"
@@ -1611,7 +1611,7 @@
       "category": "Productivity",
       "why_it_matters": null,
       "launched_at": 1792677611,
-      "score": 1.7615338408727517,
+      "score": 1.7574300686451751,
       "signal_summary": "github:65.0",
       "signals": [
         "github:65.0"
@@ -1625,8 +1625,8 @@
       "emoji": "🔬",
       "category": "Research & Data",
       "why_it_matters": "Massive industry-standard agentic reverse-engineering harness with over 380k+ stars across global AI developer teams.",
-      "launched_at": 1793080011,
-      "score": 76569.59882139483,
+      "launched_at": 1793080975,
+      "score": 76568.6172448156,
       "signal_summary": "github:382000.0",
       "signals": [
         "github:382000.0"
@@ -1640,8 +1640,8 @@
       "emoji": "📑",
       "category": "Research & Data",
       "why_it_matters": "Eliminates RAG hallucinations through OCR-level document layout analysis of complex tables and diagrams.",
-      "launched_at": 1792993611,
-      "score": 2560.7887868515772,
+      "launched_at": 1792994575,
+      "score": 2560.7717156945337,
       "signal_summary": "github:28000.0",
       "signals": [
         "github:28000.0"
@@ -1655,8 +1655,8 @@
       "emoji": "🐉",
       "category": "Research & Data",
       "why_it_matters": "World-class extensible reverse-engineering platform powering both automated static analysis and AI security workflows.",
-      "launched_at": 1792734411,
-      "score": 1693.3770006035154,
+      "launched_at": 1792735375,
+      "score": 1693.3723739757265,
       "signal_summary": "github:54000.0",
       "signals": [
         "github:54000.0"
@@ -1670,8 +1670,8 @@
       "emoji": "🔎",
       "category": "Research & Data",
       "why_it_matters": "Ultra-fast production vector database powering enterprise semantic search and recommendation systems.",
-      "launched_at": 1792820811,
-      "score": 897.3069876057683,
+      "launched_at": 1792821775,
+      "score": 897.3039356112561,
       "signal_summary": "github:22000.0",
       "signals": [
         "github:22000.0"
@@ -1685,8 +1685,8 @@
       "emoji": "💉",
       "category": "Research & Data",
       "why_it_matters": "Essential dynamic hook framework enabling AI agents to trace system calls and inspect live process memory.",
-      "launched_at": 1792820811,
-      "score": 685.2162450807685,
+      "launched_at": 1792821775,
+      "score": 685.2139144667773,
       "signal_summary": "github:16800.0",
       "signals": [
         "github:16800.0"
@@ -1701,7 +1701,7 @@
       "category": "Research & Data",
       "why_it_matters": null,
       "launched_at": 1792726775,
-      "score": 2.4573501122880654,
+      "score": 2.4509969478409914,
       "signal_summary": "github:80.0",
       "signals": [
         "github:80.0"
@@ -1714,12 +1714,12 @@
       "url": "https://huggingface.co/spaces/nvidia/simready-central",
       "emoji": "🔎",
       "category": "Research & Data",
-      "why_it_matters": "Top-trending community model with 206 likes on Hugging Face.",
+      "why_it_matters": "Top-trending community model with 207 likes on Hugging Face.",
       "launched_at": 1790607131,
-      "score": 0.7766464094140492,
-      "signal_summary": "huggingface:206.0",
+      "score": 0.7800645589296314,
+      "signal_summary": "huggingface:207.0",
       "signals": [
-        "huggingface:206.0"
+        "huggingface:207.0"
       ]
     },
     {
@@ -1731,7 +1731,7 @@
       "category": "Research & Data",
       "why_it_matters": null,
       "launched_at": 1793107102,
-      "score": 0.6040621819111333,
+      "score": 0.5937111222933152,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -1746,7 +1746,7 @@
       "category": "Research & Data",
       "why_it_matters": "Production open-source breakthrough with 539 verified GitHub stars.",
       "launched_at": 1782135793,
-      "score": 0.3529324256930322,
+      "score": 0.3528954024163785,
       "signal_summary": "github:539.0",
       "signals": [
         "github:539.0"
@@ -1760,8 +1760,8 @@
       "emoji": "🦙",
       "category": "Models & Infra",
       "why_it_matters": "The undisputed runtime for local LLMs, packaging model weights, GPU acceleration, and REST APIs into zero-fuss binaries.",
-      "launched_at": 1793080011,
-      "score": 25055.49699652972,
+      "launched_at": 1793080975,
+      "score": 25055.175800005105,
       "signal_summary": "github:125000.0",
       "signals": [
         "github:125000.0"
@@ -1775,8 +1775,8 @@
       "emoji": "🖥️",
       "category": "Models & Infra",
       "why_it_matters": "The most polished desktop application for developers to test, benchmark, and serve local open-weight models with zero setup.",
-      "launched_at": 1792993611,
-      "score": 8688.390526817851,
+      "launched_at": 1792994575,
+      "score": 8688.332606820739,
       "signal_summary": "app:95000.0",
       "signals": [
         "app:95000.0"
@@ -1790,8 +1790,8 @@
       "emoji": "🧱",
       "category": "Models & Infra",
       "why_it_matters": "The architectural foundation of consumer LLM inference that created the ubiquitous GGUF quantization ecosystem.",
-      "launched_at": 1792907211,
-      "score": 4256.6164129309345,
+      "launched_at": 1792908175,
+      "score": 4256.597239566104,
       "signal_summary": "github:74500.0",
       "signals": [
         "github:74500.0"
@@ -1805,8 +1805,8 @@
       "emoji": "🚀",
       "category": "Models & Infra",
       "why_it_matters": "State-of-the-art enterprise serving engine that maximizes GPU KV cache utilization and cuts serving costs by 4–8x.",
-      "launched_at": 1792993611,
-      "score": 3566.812953114697,
+      "launched_at": 1792994575,
+      "score": 3566.7891754316715,
       "signal_summary": "github:39000.0",
       "signals": [
         "github:39000.0"
@@ -1821,7 +1821,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source breakthrough with 46,387 verified GitHub stars.",
       "launched_at": 1790266639,
-      "score": 150.6014016134593,
+      "score": 150.54143118926328,
       "signal_summary": "github:46387.0",
       "signals": [
         "github:46387.0"
@@ -1836,7 +1836,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source breakthrough with 151 verified GitHub stars.",
       "launched_at": 1792619650,
-      "score": 3.6788585095939754,
+      "score": 3.6711830298556407,
       "signal_summary": "github:155.0",
       "signals": [
         "github:155.0"
@@ -1851,7 +1851,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Top-trending community model with 831 likes on Hugging Face.",
       "launched_at": 1789675516,
-      "score": 2.160553685648917,
+      "score": 2.1598386801451723,
       "signal_summary": "huggingface:831.0",
       "signals": [
         "huggingface:831.0"
@@ -1866,7 +1866,7 @@
       "category": "Models & Infra",
       "why_it_matters": null,
       "launched_at": 1793148941,
-      "score": 0.9926866185492337,
+      "score": 0.9480270427673435,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -1881,7 +1881,7 @@
       "category": "Models & Infra",
       "why_it_matters": null,
       "launched_at": 1793125514,
-      "score": 0.8912007997925279,
+      "score": 0.8702105571489509,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -1896,7 +1896,7 @@
       "category": "Models & Infra",
       "why_it_matters": null,
       "launched_at": 1793105397,
-      "score": 0.8789872151297432,
+      "score": 0.8642957722175183,
       "signal_summary": "hn:3.0",
       "signals": [
         "hn:3.0"
@@ -1911,7 +1911,7 @@
       "category": "Models & Infra",
       "why_it_matters": null,
       "launched_at": 1792077236,
-      "score": 0.6904824749141028,
+      "score": 0.6897538919089001,
       "signal_summary": "huggingface:66.0",
       "signals": [
         "huggingface:66.0"
@@ -1926,7 +1926,7 @@
       "category": "Models & Infra",
       "why_it_matters": null,
       "launched_at": 1793102728,
-      "score": 0.5596171623328082,
+      "score": 0.5506106459267447,
       "signal_summary": "hn:2.0",
       "signals": [
         "hn:2.0"
@@ -1941,7 +1941,7 @@
       "category": "Models & Infra",
       "why_it_matters": null,
       "launched_at": 1793129675,
-      "score": 0.49670136938488063,
+      "score": 0.4839210837962666,
       "signal_summary": "hn:1.0",
       "signals": [
         "hn:1.0"
@@ -1956,7 +1956,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Top-trending community model with 146 likes on Hugging Face.",
       "launched_at": 1787691939,
-      "score": 0.22142137146995594,
+      "score": 0.22137460545068677,
       "signal_summary": "huggingface:146.0",
       "signals": [
         "huggingface:146.0"
