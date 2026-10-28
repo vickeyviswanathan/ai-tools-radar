@@ -555,14 +555,15 @@
 
     <!-- Quick Jump Navigation -->
     <nav class="nav-jump">
-      <a href="#radar" class="nav-link">🧭 The Curated Tools Directory</a>
+      <a href="#radar" class="nav-link" onclick="selectCategory('')">🧭 All Tools</a>
+      <a href="#radar" class="nav-link" onclick="selectCategory('Coding')">🛠️ Coding Agents Matrix</a>
       <a href="#realities" class="nav-link">⚡ 4 Production Realities</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
-  <!-- Section 1: Curated Tools Directory (Featuring Frontier Coding Table) -->
+  <!-- Section 1: Curated Tools Directory -->
   <section class="section-wrap" id="radar">
     <div class="radar-header">
       <div class="section-header">
@@ -577,12 +578,12 @@
       </div>
 
       <div class="category-pills" id="category-bar">
-        <button class="cat-pill active" data-cat="">All Pillars</button>
+        <button class="cat-pill active" data-cat="" onclick="selectCategory('')">All Pillars</button>
       </div>
     </div>
 
-    <!-- Frontier AI Coding Tools Comparison Table (Integrated directly inside Directory) -->
-    <div id="coding-table-block" style="margin-bottom: 30px;">
+    <!-- Frontier AI Coding Tools Comparison Table (Appears when 'Coding' is selected) -->
+    <div id="coding-table-block" style="display: none; margin-bottom: 30px;">
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
         <h3 style="margin: 0; font-size: 16px; font-weight: 700; color: #f1f5f9; display: flex; align-items: center; gap: 8px;">
           🛠️ Frontier Coding Agents & Developer Environments
@@ -872,8 +873,8 @@ function renderSignals(signals = []) {
 function render() {
   const tableBlock = $("#coding-table-block");
   if (tableBlock) {
-    // Show table when viewing All or Coding category; hide when filtering to other specific categories
-    if (!activeCat || activeCat === "Coding") {
+    // Option 1: Show table ONLY when Coding category is selected
+    if (activeCat === "Coding") {
       tableBlock.style.display = searchQ && !searchQ.includes("code") && !searchQ.includes("agent") && !searchQ.includes("anti") && !searchQ.includes("claude") ? "none" : "block";
     } else {
       tableBlock.style.display = "none";
@@ -931,6 +932,14 @@ function render() {
   grid.innerHTML = html;
 }
 
+function selectCategory(cat) {
+  activeCat = cat;
+  document.querySelectorAll(".cat-pill").forEach(btn => {
+    btn.classList.toggle("active", (btn.dataset.cat || "") === cat);
+  });
+  render();
+}
+
 async function init() {
   try {
     const res = await fetch("./data/tools.json?v=" + Date.now());
@@ -941,13 +950,9 @@ async function init() {
     (json.categories || []).forEach(cat => {
       const btn = document.createElement("button");
       btn.className = "cat-pill";
+      btn.dataset.cat = cat;
       btn.textContent = cat;
-      btn.onclick = () => {
-        document.querySelectorAll(".cat-pill").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        activeCat = cat;
-        render();
-      };
+      btn.onclick = () => selectCategory(cat);
       catBar.appendChild(btn);
     });
 
@@ -956,13 +961,6 @@ async function init() {
     console.error("Failed to load tools.json", err);
   }
 }
-
-$("#category-bar button").onclick = (e) => {
-  document.querySelectorAll(".cat-pill").forEach(b => b.classList.remove("active"));
-  e.target.classList.add("active");
-  activeCat = "";
-  render();
-};
 
 let debounce;
 $("#q").oninput = (e) => {
