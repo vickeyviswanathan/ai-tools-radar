@@ -108,29 +108,50 @@
     line-height: 1.6;
   }
 
-  /* Quick Nav Bar */
-  .nav-jump {
+  /* Primary View Toggle */
+  .view-toggle {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
-    padding-top: 14px;
+    padding-top: 18px;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
+    flex-wrap: wrap;
   }
-  .nav-link {
+  .view-tab {
     background: #111726;
     border: 1px solid var(--line);
-    color: #cbd5e1;
-    padding: 7px 16px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.15s;
+    color: #94a3b8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s ease;
   }
-  .nav-link:hover {
+  .view-tab:hover {
+    color: #fff;
+    border-color: #384860;
+    background: #172033;
+  }
+  .view-tab.active {
     background: var(--accent);
     color: #040914;
     border-color: var(--accent);
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+  }
+  .view-tab .tab-count {
+    background: rgba(255, 255, 255, 0.08);
+    color: inherit;
+    padding: 2px 7px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 700;
+  }
+  .view-tab.active .tab-count {
+    background: rgba(0, 0, 0, 0.2);
+    color: #040914;
   }
 
   /* Sections */
@@ -474,12 +495,15 @@
     <h1>AI Tools Radar</h1>
     <p class="subtitle">An open, curated directory of battle-tested AI developer tools, coding agents, and local models. Every tool has a direct link, with the honest truth on what works in production.</p>
 
-    <!-- Quick Jump Navigation -->
-    <nav class="nav-jump">
-      <a href="#radar" class="nav-link" onclick="selectCategory('')">🧭 All Tools</a>
-      <a href="#radar" class="nav-link" onclick="selectCategory('Coding')">💻 Coding Tools</a>
-      <a href="#realities" class="nav-link">⚡ 4 Production Realities</a>
-    </nav>
+    <!-- Primary View Switcher -->
+    <div class="view-toggle">
+      <button class="view-tab active" id="tab-tools" onclick="switchView('tools')">
+        🧭 Curated Tools Directory <span class="tab-count" id="tab-tools-count">130</span>
+      </button>
+      <button class="view-tab" id="tab-realities" onclick="switchView('realities')">
+        ⚡ 4 Production Realities <span class="tab-count">4</span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -510,7 +534,7 @@
   </section>
 
   <!-- Section 2: The 4 Unfiltered Realities -->
-  <section class="section-wrap" id="realities">
+  <section class="section-wrap" id="realities" style="display: none;">
     <div class="section-header">
       <div>
         <h2 class="section-title">⚡ 4 Production Realities Vendors Don't Tell You</h2>
@@ -592,9 +616,10 @@
 
 <footer>
   <div class="wrap">
-    <strong>100% Independent Curation.</strong> Automated continuous updates via official GitHub, Hacker News, & Hugging Face APIs every 6 hours. Zero affiliate fluff, zero unvetted wrappers.
+    Synced automatically from GitHub, Hacker News, and Hugging Face every 6 hours. All code and data are open source.
     <br /><br />
-    <a href="https://github.com/vickeyviswanathan/ai-tools-radar/issues/new" target="_blank" rel="noopener">Propose a Verified Open-Source Tool via GitHub</a>
+    <a href="https://github.com/vickeyviswanathan/ai-tools-radar" target="_blank" rel="noopener">GitHub Repository</a> • 
+    <a href="https://github.com/vickeyviswanathan/ai-tools-radar/issues/new" target="_blank" rel="noopener">Suggest a Tool</a>
   </div>
 </footer>
 
@@ -720,6 +745,28 @@ function render() {
   grid.innerHTML = html;
 }
 
+function switchView(viewName) {
+  const radarSection = $("#radar");
+  const realitiesSection = $("#realities");
+  const tabTools = $("#tab-tools");
+  const tabRealities = $("#tab-realities");
+
+  if (viewName === "realities") {
+    if (radarSection) radarSection.style.display = "none";
+    if (realitiesSection) realitiesSection.style.display = "block";
+    if (tabRealities) tabRealities.classList.add("active");
+    if (tabTools) tabTools.classList.remove("active");
+    if (history.replaceState) history.replaceState(null, "", "#realities");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    if (radarSection) radarSection.style.display = "block";
+    if (realitiesSection) realitiesSection.style.display = "none";
+    if (tabTools) tabTools.classList.add("active");
+    if (tabRealities) tabRealities.classList.remove("active");
+    if (history.replaceState) history.replaceState(null, "", "#tools");
+  }
+}
+
 function selectCategory(cat) {
   activeCat = cat;
   document.querySelectorAll(".cat-pill").forEach(btn => {
@@ -734,6 +781,9 @@ async function init() {
     const json = await res.json();
     allTools = json.tools || [];
 
+    const tabToolsCount = $("#tab-tools-count");
+    if (tabToolsCount) tabToolsCount.textContent = allTools.length;
+
     const catBar = $("#category-bar");
     (json.categories || []).forEach(cat => {
       const btn = document.createElement("button");
@@ -745,6 +795,12 @@ async function init() {
     });
 
     render();
+
+    if (window.location.hash === "#realities") {
+      switchView("realities");
+    } else {
+      switchView("tools");
+    }
   } catch (err) {
     console.error("Failed to load tools.json", err);
   }
