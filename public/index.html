@@ -501,7 +501,7 @@
         🧭 Curated Tools Directory <span class="tab-count" id="tab-tools-count">130</span>
       </button>
       <button class="view-tab" id="tab-realities" onclick="switchView('realities')">
-        ⚡ 4 Production Realities <span class="tab-count">4</span>
+        ⚡ 8 Production Realities <span class="tab-count">8</span>
       </button>
     </div>
   </div>
@@ -533,11 +533,11 @@
     </div>
   </section>
 
-  <!-- Section 2: The 4 Unfiltered Realities -->
+  <!-- Section 2: The 8 Unfiltered Realities -->
   <section class="section-wrap" id="realities" style="display: none;">
     <div class="section-header">
       <div>
-        <h2 class="section-title">⚡ 4 Production Realities Vendors Don't Tell You</h2>
+        <h2 class="section-title">⚡ 8 Production Realities Vendors Don't Tell You</h2>
         <span class="section-note">Hard technical mechanisms behind why AI projects fail in production</span>
       </div>
     </div>
@@ -608,6 +608,73 @@
           <a class="tool-chip" href="https://lmstudio.ai" target="_blank" rel="noopener">LM Studio ↗</a>
         </div>
       </div>
+
+      <!-- 5. The Agent Security Blindspot -->
+      <div class="reality-card">
+        <div class="reality-top">
+          <h3 class="reality-title">5. The Agent Security Blindspot</h3>
+          <button class="copy-btn" onclick="copyReality(4)">📋 Copy</button>
+        </div>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Give your AI agent terminal access, browser control, and API keys to automate your entire workflow!"</div>
+        <p class="reality-body">LLMs fundamentally cannot separate system instructions from untrusted data. When an agent browses a live website, parses a user PDF, or scans an incoming pull request containing indirect prompt injections, it can be tricked into running destructive bash commands or exfiltrating private credentials.</p>
+        <div class="truth-box"><strong>What Actually Works:</strong> Run agents inside disposable, ephemeral Docker sandboxes with no access to production credentials, and enforce human approval on destructive operations.</div>
+        <div class="tools-row">
+          <span class="tools-label">Proven Tools:</span>
+          <a class="tool-chip" href="https://github.com/All-Hands-AI/OpenHands" target="_blank" rel="noopener">OpenHands ↗</a>
+          <a class="tool-chip" href="https://github.com/cline/cline" target="_blank" rel="noopener">Cline ↗</a>
+        </div>
+      </div>
+
+      <!-- 6. The Structured JSON Illusion -->
+      <div class="reality-card">
+        <div class="reality-top">
+          <h3 class="reality-title">6. The Structured JSON Illusion</h3>
+          <button class="copy-btn" onclick="copyReality(5)">📋 Copy</button>
+        </div>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Just tell the LLM to output valid JSON matching your schema — instant API integration!"</div>
+        <p class="reality-body">Under real production load, unconstrained LLM prompting randomly yields trailing commas, markdown fences (<code>```json</code>), or truncated brackets mid-stream, silently crashing downstream microservices.</p>
+        <div class="truth-box"><strong>What Actually Works:</strong> Never rely on raw prompting for JSON. Use constrained grammar sampling at the model engine level (forcing logits to only output valid schema tokens).</div>
+        <div class="tools-row">
+          <span class="tools-label">Proven Tools:</span>
+          <a class="tool-chip" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vLLM ↗</a>
+          <a class="tool-chip" href="https://github.com/dottxt-ai/outlines" target="_blank" rel="noopener">Outlines ↗</a>
+          <a class="tool-chip" href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener">llama.cpp ↗</a>
+        </div>
+      </div>
+
+      <!-- 7. The Pure Vector Search Trap -->
+      <div class="reality-card">
+        <div class="reality-top">
+          <h3 class="reality-title">7. The Pure Vector Search Trap</h3>
+          <button class="copy-btn" onclick="copyReality(6)">📋 Copy</button>
+        </div>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Embed your documents into a vector database and semantic search will magically find every answer!"</div>
+        <p class="reality-body">Dense embeddings capture vague conceptual similarity, but fail completely on exact part numbers, error codes (e.g. <code>ERR_403_AUTH</code>), function names, or dates. They blur critical specific technical identifiers into generic concepts.</p>
+        <div class="truth-box"><strong>What Actually Works:</strong> Use hybrid search combining BM25 exact keyword matching with dense vectors, followed by a cross-encoder reranker.</div>
+        <div class="tools-row">
+          <span class="tools-label">Proven Tools:</span>
+          <a class="tool-chip" href="https://github.com/qdrant/qdrant" target="_blank" rel="noopener">Qdrant ↗</a>
+          <a class="tool-chip" href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener">RAGFlow ↗</a>
+          <a class="tool-chip" href="https://github.com/meilisearch/meilisearch" target="_blank" rel="noopener">Meilisearch ↗</a>
+        </div>
+      </div>
+
+      <!-- 8. The Silent Model Regression Trap -->
+      <div class="reality-card">
+        <div class="reality-top">
+          <h3 class="reality-title">8. The Silent Model Regression Trap</h3>
+          <button class="copy-btn" onclick="copyReality(7)">📋 Copy</button>
+        </div>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Auto-upgrade to the newest flagship model release for instant free intelligence!"</div>
+        <p class="reality-body">Providers constantly change backend quantization, routing, and system prompts. A "better" model version frequently breaks previously working prompt templates, changes edge-case formatting, or increases latency without warning.</p>
+        <div class="truth-box"><strong>What Actually Works:</strong> Never upgrade production model versions without an automated CI/CD eval suite testing against a frozen golden dataset of edge cases.</div>
+        <div class="tools-row">
+          <span class="tools-label">Proven Tools:</span>
+          <a class="tool-chip" href="https://github.com/promptfoo/promptfoo" target="_blank" rel="noopener">Promptfoo ↗</a>
+          <a class="tool-chip" href="https://github.com/confident-ai/deepeval" target="_blank" rel="noopener">DeepEval ↗</a>
+          <a class="tool-chip" href="https://github.com/langfuse/langfuse" target="_blank" rel="noopener">Langfuse ↗</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -652,6 +719,34 @@ const REALITIES_DATA = [
     reality: "Fine-tuning teaches an LLM tone and syntax, not facts. A fine-tuned model hallucinates wrong answers in the exact corporate voice of your company. That is why 90% of enterprise fine-tuning POCs fail and waste $50k+.",
     fix: "Keep the base model frozen and run open-weight models on-premise or in your private VPC for zero ongoing API fees and zero data leaks.",
     tools: "Ollama, vLLM, LM Studio, Jan"
+  },
+  {
+    title: "The Agent Security Blindspot",
+    myth: "Give your AI agent terminal access, browser control, and API keys to automate your entire workflow!",
+    reality: "LLMs fundamentally cannot separate system instructions from untrusted data. When an agent browses a live website, parses a user PDF, or scans an incoming pull request containing indirect prompt injections, it can be tricked into running destructive bash commands or exfiltrating private credentials.",
+    fix: "Run agents inside disposable, ephemeral Docker sandboxes with no access to production credentials, and enforce human approval on destructive operations.",
+    tools: "OpenHands, Cline"
+  },
+  {
+    title: "The Structured JSON Illusion",
+    myth: "Just tell the LLM to output valid JSON matching your schema — instant API integration!",
+    reality: "Under real production load, unconstrained LLM prompting randomly yields trailing commas, markdown fences, or truncated brackets mid-stream, silently crashing downstream microservices.",
+    fix: "Never rely on raw prompting for JSON. Use constrained grammar sampling at the model engine level (forcing logits to only output valid schema tokens).",
+    tools: "vLLM (Guided Decoding), Outlines, llama.cpp"
+  },
+  {
+    title: "The Pure Vector Search Trap",
+    myth: "Embed your documents into a vector database and semantic search will magically find every answer!",
+    reality: "Dense embeddings capture vague conceptual similarity, but fail completely on exact part numbers, error codes (ERR_403_AUTH), function names, or dates. They blur critical specific technical identifiers into generic concepts.",
+    fix: "Use hybrid search combining BM25 exact keyword matching with dense vectors, followed by a cross-encoder reranker.",
+    tools: "Qdrant, RAGFlow, Meilisearch"
+  },
+  {
+    title: "The Silent Model Regression Trap",
+    myth: "Auto-upgrade to the newest flagship model release for instant free intelligence!",
+    reality: "Providers constantly change backend quantization, routing, and system prompts. A 'better' model version frequently breaks previously working prompt templates, changes edge-case formatting, or increases latency without warning.",
+    fix: "Never upgrade production model versions without an automated CI/CD eval suite testing against a frozen golden dataset of edge cases.",
+    tools: "Promptfoo, DeepEval, Langfuse"
   }
 ];
 
