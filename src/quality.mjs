@@ -1,17 +1,17 @@
-// Hard Quality Gate & Anti-Wrapper Filters for Thought-Leader Index
+// Thought-Leader Quality Gate & Anti-Wrapper Filters
 import { cleanUrl } from "./classify.mjs";
 
-// Thin wrappers, toy clones, course tutorials, or generic templates
+// Thin wrappers, toy clones, course tutorials, or generic personal hobby posts
 const REJECT_PATTERNS = [
   /\b(simple|toy|basic|starter|sample|boilerplate|template)\b.*(wrapper|prompt|chatgpt|openai)/i,
   /\bchat[- ]?with[- ]?(pdf|your[- ]?pdf|csv|docs?)\b/i,
   /\bcourse\b|\btutorial\b|\bhomework\b|\blearn[- ]?ai\b|\bbootcamp\b/i,
   /\bcurated[- ]?list\b|\bawesome[- ]?\w+\b|\bcollection[- ]?of\b/i,
   /\bcrack(ed)?\b|\bfree[- ]?credits\b|\bapi[- ]?relay\b|中转|破解|公益站/i,
+  /\bI made\b|\busing AI ofc\b|\bintroducing\b|\brandom\b|\btest\b/i,
+  /\breddit\b|\bbenchmark using\b/i
 ];
 
-// Domains typically indicating an unpolished personal playground rather than a production product
-// (Allowed only if stars/points exceed exceptional threshold > 1500)
 const FREE_SUBDOMAIN_PATTERNS = [
   /\.vercel\.app$/i,
   /\.pages\.dev$/i,
@@ -25,32 +25,32 @@ const FREE_SUBDOMAIN_PATTERNS = [
 export function evaluateQuality(item) {
   const text = `${item.name} ${item.tagline || ""} ${(item.tags || []).join(" ")}`;
   
-  // 1. Anti-Wrapper / Anti-Junk checks
+  // 1. Anti-Wrapper / Anti-Junk / Anti-Noise checks
   for (const pat of REJECT_PATTERNS) {
     if (pat.test(text)) {
       return { pass: false, reason: "Matches template, tutorial, or thin-wrapper pattern" };
     }
   }
 
-  // 2. Strict Thresholds per source
+  // 2. Strict Thresholds per source for automated discovery
   if (item.source === "github") {
-    // Must have at least 150 stars to prove genuine community traction
-    if ((item.metric || 0) < 150) {
-      return { pass: false, reason: "Insufficient GitHub stars (< 150)" };
+    // Must have at least 250 verified stars to prove genuine community adoption
+    if ((item.metric || 0) < 250) {
+      return { pass: false, reason: "Insufficient GitHub stars (< 250)" };
     }
   }
 
   if (item.source === "hn") {
-    // Must have at least 30 upvotes or 10 comments to prove real peer discussion
-    if ((item.metric || 0) < 30 && (item.comments || 0) < 10) {
+    // Must have at least 60 upvotes and 15 comments to prove real peer discussion
+    if ((item.metric || 0) < 60 || (item.comments || 0) < 15) {
       return { pass: false, reason: "Insufficient Hacker News traction" };
     }
   }
 
   if (item.source === "huggingface") {
-    // Must have at least 40 likes
-    if ((item.metric || 0) < 40) {
-      return { pass: false, reason: "Insufficient Hugging Face likes (< 40)" };
+    // Must have at least 60 likes
+    if ((item.metric || 0) < 60) {
+      return { pass: false, reason: "Insufficient Hugging Face likes (< 60)" };
     }
   }
 
@@ -67,14 +67,14 @@ export function evaluateQuality(item) {
     }
   }
 
-  // 4. Synthesize a professional editorial "Why it matters" highlight
+  // 4. Clean editorial summary
   let whyItMatters = "";
   if (item.source === "github") {
-    whyItMatters = `Production open-source breakthrough with ${item.metric.toLocaleString()} verified GitHub stars.`;
+    whyItMatters = `Production open-source framework with ${item.metric.toLocaleString()} verified GitHub stars.`;
   } else if (item.source === "hn") {
-    whyItMatters = `Ranked in top community discussions with ${item.metric} upvotes on Hacker News.`;
+    whyItMatters = `Peer-vetted engineering discussion with ${item.metric} upvotes on Hacker News.`;
   } else if (item.source === "huggingface") {
-    whyItMatters = `Trending community demo & model with ${item.metric} likes on Hugging Face.`;
+    whyItMatters = `Top-trending community model with ${item.metric} likes on Hugging Face.`;
   } else {
     whyItMatters = "Verified high-utility AI tool vetted for production.";
   }
