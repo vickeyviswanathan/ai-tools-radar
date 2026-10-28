@@ -1,5 +1,6 @@
 // Thought-Leader Quality Gate & Anti-Wrapper Filters
 import { cleanUrl } from "./classify.mjs";
+import { isEditoriallyBlocked } from "./blocklist.mjs";
 
 // Thin wrappers, toy clones, course tutorials, or generic personal hobby posts
 const REJECT_PATTERNS = [
@@ -9,8 +10,24 @@ const REJECT_PATTERNS = [
   /\bcurated[- ]?list\b|\bawesome[- ]?\w+\b|\bcollection[- ]?of\b/i,
   /\bcrack(ed)?\b|\bfree[- ]?credits\b|\bapi[- ]?relay\b|中转|破解|公益站/i,
   /\bI made\b|\busing AI ofc\b|\bintroducing\b|\brandom\b|\btest\b/i,
-  /\breddit\b|\bbenchmark using\b/i
+  /\breddit\b|\bbenchmark using\b/i,
+  // Learning material, not tools
+  /\bfor beginners\b|\bfrom scratch\b|\bhandbook\b|\bcookbook\b|\bnotebooks\b|\blessons?\b|\bcheat ?sheet\b|\bmade with ml\b/i,
+  // Leaked / copied proprietary material, unofficial access to other people's services
+  /\bleaked?\b|\bsystem prompts?\b|\breverse[- ]engineered api\b|\bunofficial api\b/i,
+  // Free-API relays, scrapers of social platforms, watermark removal, downloaders
+  /\bfree (gpt|llm|model|api)\b|\bapi free\b|\bwatermarks?\b|\b(youtube|tiktok|douyin|instagram) (download|scrap)\w*|\bdownloader\b/i,
+  // Hype and profanity have no place on a reference site
+  /\bslop\b|\bmaxxing\b|\buncensored\b|\b(shit|fuck\w*|bitch|damn)\b/i,
+  // Throwaway experiments
+  /\bcolab\b|\bdreambooth\b/i,
 ];
+
+// Anything still written in a non-English script after translation is dropped.
+const NON_ENGLISH_SCRIPT = /[\u0400-\u04FF\u0590-\u06FF\u0900-\u097F\u0E00-\u0E7F\u1100-\u11FF\u3040-\u30FF\u3400-\u9FFF\uAC00-\uD7AF]/;
+
+// Placeholder descriptions the scrapers fall back to when a repo has none.
+const PLACEHOLDER_TAGLINE = /^(open-source ai tool \/ repository|high-utility open-source ai infrastructure)$/i;
 
 const FREE_SUBDOMAIN_PATTERNS = [
   /\.vercel\.app$/i,
@@ -24,7 +41,35 @@ const FREE_SUBDOMAIN_PATTERNS = [
 
 export function evaluateQuality(item) {
   const text = `${item.name} ${item.tagline || ""} ${(item.tags || []).join(" ")}`;
-  
+
+  // 0. Basic presentability: a real name, a real English description, not editorially blocked
+  if (isEditoriallyBlocked(item.name)) {
+    return { pass: false, reason: "Editorially blocked" };
+  }
+  if (String(item.name || "").trim().length < 3) {
+    return { pass: false, reason: "Name too short to be meaningful" };
+  }
+  const tagline = String(item.tagline || "").trim();
+  if (tagline.length < 15 || PLACEHOLDER_TAGLINE.test(tagline)) {
+    return { pass: false, reason: "Missing or placeholder description" };
+  }
+  if (NON_ENGLISH_SCRIPT.test(String(item.name || ""))) {
+    return { pass: false, reason: "Name not in English" };
+  }
+  // Many projects write a bilingual description. Keep the English half; drop the entry only when
+  // there is no usable English left.
+  let cleanTagline = tagline;
+  if (NON_ENGLISH_SCRIPT.test(tagline)) {
+    cleanTagline = tagline
+      .replace(new RegExp(NON_ENGLISH_SCRIPT.source, "g"), " ")
+      .replace(/[|｜（）()【】\[\]、。，；：]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (cleanTagline.length < 25 || !/[a-z]{3,}.*\s.*[a-z]{3,}/i.test(cleanTagline)) {
+      return { pass: false, reason: "Description not in English" };
+    }
+  }
+
   // 1. Anti-Wrapper / Anti-Junk / Anti-Noise checks
   for (const pat of REJECT_PATTERNS) {
     if (pat.test(text)) {
@@ -34,23 +79,23 @@ export function evaluateQuality(item) {
 
   // 2. Strict Thresholds per source for automated discovery
   if (item.source === "github") {
-    // Must have at least 250 verified stars to prove genuine community adoption
-    if ((item.metric || 0) < 250) {
-      return { pass: false, reason: "Insufficient GitHub stars (< 250)" };
+    // Must have at least 1,000 stars to prove genuine community adoption
+    if ((item.metric || 0) < 1000) {
+      return { pass: false, reason: "Insufficient GitHub stars (< 1000)" };
     }
   }
 
   if (item.source === "hn") {
-    // Must have at least 60 upvotes and 15 comments to prove real peer discussion
-    if ((item.metric || 0) < 60 || (item.comments || 0) < 15) {
+    // Must have real peer discussion (comments are only known at ingest time)
+    if ((item.metric || 0) < 150 || (item.comments !== undefined && item.comments < 30)) {
       return { pass: false, reason: "Insufficient Hacker News traction" };
     }
   }
 
   if (item.source === "huggingface") {
-    // Must have at least 60 likes
-    if ((item.metric || 0) < 60) {
-      return { pass: false, reason: "Insufficient Hugging Face likes (< 60)" };
+    // Spaces are cheap to make; require clear community adoption
+    if ((item.metric || 0) < 500) {
+      return { pass: false, reason: "Insufficient Hugging Face likes (< 500)" };
     }
   }
 
@@ -79,5 +124,5 @@ export function evaluateQuality(item) {
     whyItMatters = "Verified high-utility AI tool vetted for production.";
   }
 
-  return { pass: true, whyItMatters };
+  return { pass: true, whyItMatters, cleanTagline };
 }

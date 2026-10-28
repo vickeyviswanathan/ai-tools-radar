@@ -3,6 +3,7 @@ import { writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { getDb, now, getMeta } from "./src/db.mjs";
 import { runIngestion } from "./src/ingest.mjs";
+import { evaluateQuality } from "./src/quality.mjs";
 import { refreshLiveMetrics } from "./src/live-metrics.mjs";
 
 async function build() {
@@ -45,6 +46,7 @@ async function build() {
       .map(r => [r.item_id, String(r.source_id).toLowerCase()])
   );
   const normName = (n) => String(n).toLowerCase().replace(/[^a-z0-9]/g, "");
+  const rejectedAtBuild = [];
   const preference = (t) => (t.emoji ? 4 : 0) + (/github\.com/i.test(t.url) ? 2 : 0) + (t.why_it_matters ? 1 : 0);
 
   const all = db.prepare(`
@@ -57,6 +59,16 @@ async function build() {
   `).all().map(r => {
     const signals = (r.signal_summary || "").split(",").filter(Boolean);
     return { ...r, signals, rank: rankOf(signals), repo: repoOf.get(r.id) || null };
+  }).filter(t => {
+    // Hand-picked tools (seeded with an "app" signal) are always kept. Everything the scrapers
+    // found must pass the quality gate today, which also cleans out rows stored under older, looser rules.
+    if (t.signals.some(s => s.startsWith("app:"))) return true;
+    const source = t.signals.some(s => s.startsWith("github:")) ? "github"
+      : t.signals.some(s => s.startsWith("huggingface:")) ? "huggingface" : "hn";
+    const verdict = evaluateQuality({ name: t.name, tagline: t.tagline, url: t.url, tags: [], source, metric: t.rank });
+    if (!verdict.pass) rejectedAtBuild.push(`${t.name} (${verdict.reason})`);
+    else t.tagline = verdict.cleanTagline; // English-only description
+    return verdict.pass;
   });
 
   const winners = new Map();
@@ -97,6 +109,7 @@ async function build() {
 
   mkdirSync("./public/data", { recursive: true });
   writeFileSync("./public/data/tools.json", JSON.stringify(output, null, 2), "utf-8");
+  console.log(`[Gate] Dropped ${rejectedAtBuild.length} stored entries at build time:\n  ` + rejectedAtBuild.join("\n  "));
   console.log(`Generated public/data/tools.json with ${tools.length} curated tools across ${categories.length} categories.`);
 }
 

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T13:46:12.138Z",
+  "updatedAt": "2026-10-28T14:18:03.545Z",
   "categories": [
     "Coding",
     "Agents & Automation",
@@ -19,28 +19,13 @@
       "url": "https://ecc.tools/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 2,91,387 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 2,91,410 verified GitHub stars.",
       "launched_at": 1768697511,
-      "score": 73.27164668911115,
+      "score": 73.26984774174919,
       "signals": [
-        "github:291390.0"
+        "github:291410.0"
       ],
-      "rank": 291390
-    },
-    {
-      "id": 285,
-      "name": "ponytail",
-      "tagline": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "url": "https://ponytail.dev/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Production open-source framework with 1,78,731 verified GitHub stars.",
-      "launched_at": 1781225557,
-      "score": 106.10975744380917,
-      "signals": [
-        "github:178731.0"
-      ],
-      "rank": 178731
+      "rank": 291410
     },
     {
       "id": 286,
@@ -49,28 +34,13 @@
       "url": "https://ccswitch.io/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 1,49,672 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,49,682 verified GitHub stars.",
       "launched_at": 1754316976,
-      "score": 21.62521139339726,
+      "score": 21.625386244329444,
       "signals": [
-        "github:149672.0"
+        "github:149682.0"
       ],
-      "rank": 149672
-    },
-    {
-      "id": 330,
-      "name": "system prompts and models of ai tools",
-      "tagline": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI,…",
-      "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Production open-source framework with 1,44,306 verified GitHub stars.",
-      "launched_at": 1741192709,
-      "score": 14.707776201765817,
-      "signals": [
-        "github:144306.0"
-      ],
-      "rank": 144306
+      "rank": 149682
     },
     {
       "id": 288,
@@ -79,43 +49,13 @@
       "url": "https://www.graphify.com/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 1,37,413 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,37,438 verified GitHub stars.",
       "launched_at": 1775231347,
-      "score": 50.13081522212656,
+      "score": 50.13429461382415,
       "signals": [
-        "github:137413.0"
+        "github:137440.0"
       ],
-      "rank": 137413
-    },
-    {
-      "id": 415,
-      "name": "ui",
-      "tagline": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.",
-      "url": "https://ui.shadcn.com/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Production open-source framework with 1,26,792 verified GitHub stars.",
-      "launched_at": 1672836207,
-      "score": 4.721171191969789,
-      "signals": [
-        "github:126792.0"
-      ],
-      "rank": 126792
-    },
-    {
-      "id": 289,
-      "name": "caveman",
-      "tagline": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
-      "url": "https://docs.caveman.so/caveman",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Production open-source framework with 1,15,682 verified GitHub stars.",
-      "launched_at": 1775296980,
-      "score": 42.38864726220522,
-      "signals": [
-        "github:115682.0"
-      ],
-      "rank": 115682
+      "rank": 137440
     },
     {
       "id": 255,
@@ -125,8 +65,8 @@
       "emoji": "🧠",
       "category": "Coding",
       "why_it_matters": "The foundational language model architecture that pioneered automated code translation, refactoring, and agentic workflows.",
-      "launched_at": 1792935740,
-      "score": 6279.901545104527,
+      "launched_at": 1792937635,
+      "score": 6279.675406856636,
       "signals": [
         "app:110000.0"
       ],
@@ -140,12 +80,12 @@
       "emoji": "🙌",
       "category": "Coding",
       "why_it_matters": "Community-driven autonomous developer agent capable of resolving end-to-end GitHub issues in isolated sandboxes.",
-      "launched_at": 1793022140,
-      "score": 8411.628811164623,
+      "launched_at": 1793024035,
+      "score": 8411.637390802278,
       "signals": [
-        "github:92083.0"
+        "github:92088.0"
       ],
-      "rank": 92083
+      "rank": 92088
     },
     {
       "id": 257,
@@ -155,27 +95,12 @@
       "emoji": "📐",
       "category": "Coding",
       "why_it_matters": "Brings autonomous multi-file refactoring and command execution directly into the world's most widely used code editor.",
-      "launched_at": 1793022140,
-      "score": 8404.046899288092,
+      "launched_at": 1793024035,
+      "score": 8403.599165513526,
       "signals": [
         "app:92000.0"
       ],
       "rank": 92000
-    },
-    {
-      "id": 295,
-      "name": "archify",
-      "tagline": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
-      "url": "https://archify.si/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Production open-source framework with 90,806 verified GitHub stars.",
-      "launched_at": 1776230857,
-      "score": 35.482894297362414,
-      "signals": [
-        "github:90807.0"
-      ],
-      "rank": 90807
     },
     {
       "id": 321,
@@ -184,13 +109,13 @@
       "url": "https://understand-anything.com/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 88,689 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 88,693 verified GitHub stars.",
       "launched_at": 1773541851,
-      "score": 29.04825029552823,
+      "score": 29.04618661258339,
       "signals": [
-        "github:88689.0"
+        "github:88693.0"
       ],
-      "rank": 88689
+      "rank": 88693
     },
     {
       "id": 100,
@@ -200,12 +125,12 @@
       "emoji": "⚡",
       "category": "Coding",
       "why_it_matters": "Essential AI CLI infrastructure that slashes LLM context token usage by up to 90% without losing error signals.",
-      "launched_at": 1793108540,
-      "score": 16968.34293718189,
+      "launched_at": 1793110435,
+      "score": 16967.206091490883,
       "signals": [
-        "github:84847.0"
+        "github:84850.0"
       ],
-      "rank": 84847
+      "rank": 84850
     },
     {
       "id": 322,
@@ -214,13 +139,13 @@
       "url": "https://omniroute.online/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 82,072 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 82,084 verified GitHub stars.",
       "launched_at": 1770986311,
-      "score": 23.21446338796507,
+      "score": 23.215754116593136,
       "signals": [
-        "github:82072.0"
+        "github:82085.0"
       ],
-      "rank": 82072
+      "rank": 82085
     },
     {
       "id": 331,
@@ -229,13 +154,13 @@
       "url": "https://docs.headroomlabs.ai/docs",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 78,104 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 78,108 verified GitHub stars.",
       "launched_at": 1767815931,
-      "score": 18.82413626360948,
+      "score": 18.823407070770912,
       "signals": [
-        "github:78104.0"
+        "github:78108.0"
       ],
-      "rank": 78104
+      "rank": 78108
     },
     {
       "id": 254,
@@ -245,8 +170,8 @@
       "emoji": "⚡",
       "category": "Coding",
       "why_it_matters": "High-velocity CLI coding agent that operates directly in your local repo with fine-grained permission controls.",
-      "launched_at": 1793108540,
-      "score": 14999.06561562155,
+      "launched_at": 1793110435,
+      "score": 14997.530428542324,
       "signals": [
         "app:75000.0"
       ],
@@ -259,13 +184,13 @@
       "url": "https://openspec.dev/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 73,237 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 73,238 verified GitHub stars.",
       "launched_at": 1754390265,
-      "score": 10.605557771798392,
+      "score": 10.605078605150053,
       "signals": [
-        "github:73237.0"
+        "github:73238.0"
       ],
-      "rank": 73237
+      "rank": 73238
     },
     {
       "id": 170,
@@ -275,12 +200,12 @@
       "emoji": "🤖",
       "category": "Coding",
       "why_it_matters": "Pioneering interactive coding agent extension with strict permission controls and iterative browser verification.",
-      "launched_at": 1793022140,
-      "score": 6483.539486129039,
+      "launched_at": 1793024035,
+      "score": 6483.376756193686,
       "signals": [
-        "github:70976.0"
+        "github:70978.0"
       ],
-      "rank": 70976
+      "rank": 70978
     },
     {
       "id": 324,
@@ -289,13 +214,13 @@
       "url": "https://omo.dev/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 70,431 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 70,429 verified GitHub stars.",
       "launched_at": 1764726005,
-      "score": 14.789252303449405,
+      "score": 14.787646466300327,
       "signals": [
-        "github:70431.0"
+        "github:70429.0"
       ],
-      "rank": 70431
+      "rank": 70429
     },
     {
       "id": 310,
@@ -304,13 +229,13 @@
       "url": "http://openinterpreter.com/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 68,707 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 68,708 verified GitHub stars.",
       "launched_at": 1689318644,
-      "score": 3.0528621259125295,
+      "score": 3.052839450480941,
       "signals": [
-        "github:68707.0"
+        "github:68708.0"
       ],
-      "rank": 68707
+      "rank": 68708
     },
     {
       "id": 334,
@@ -319,43 +244,13 @@
       "url": "https://linkedin.com/in/shanraisshan",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 68,237 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 68,240 verified GitHub stars.",
       "launched_at": 1761920128,
-      "score": 12.8006668399827,
+      "score": 12.800107603680702,
       "signals": [
-        "github:68238.0"
+        "github:68240.0"
       ],
-      "rank": 68238
-    },
-    {
-      "id": 697,
-      "name": "get shit done",
-      "tagline": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
-      "url": "https://github.com/gsd-build/get-shit-done",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Production open-source framework with 64,199 verified GitHub stars.",
-      "launched_at": 1765721832,
-      "score": 14.068955001662612,
-      "signals": [
-        "github:64199.0"
-      ],
-      "rank": 64199
-    },
-    {
-      "id": 328,
-      "name": "diagram design",
-      "tagline": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "url": "https://diagramdesign.dev/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Production open-source framework with 62,254 verified GitHub stars.",
-      "launched_at": 1776362476,
-      "score": 24.55412320904539,
-      "signals": [
-        "github:62254.0"
-      ],
-      "rank": 62254
+      "rank": 68240
     },
     {
       "id": 582,
@@ -364,13 +259,13 @@
       "url": "https://docs.litellm.ai/docs/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Production open-source framework with 62,230 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 62,231 verified GitHub stars.",
       "launched_at": 1690416592,
-      "score": 2.8005504275281625,
+      "score": 2.8005332109320786,
       "signals": [
-        "github:62230.0"
+        "github:62231.0"
       ],
-      "rank": 62230
+      "rank": 62231
     },
     {
       "id": 256,
@@ -380,12 +275,117 @@
       "emoji": "🌙",
       "category": "Coding",
       "why_it_matters": "Exceptional million-token context reasoning capable of tracking large enterprise codebases and multi-package dependencies.",
-      "launched_at": 1793022140,
-      "score": 4750.113464815008,
+      "launched_at": 1793024035,
+      "score": 4749.8603978989495,
       "signals": [
         "app:52000.0"
       ],
       "rank": 52000
+    },
+    {
+      "id": 167,
+      "name": "Aider",
+      "tagline": "AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.",
+      "url": "https://github.com/paul-gauthier/aider",
+      "emoji": "💻",
+      "category": "Coding",
+      "why_it_matters": "The gold standard for terminal-based AI pair programming with robust repository-wide AST parsing.",
+      "launched_at": 1793024035,
+      "score": 4548.082674457434,
+      "signals": [
+        "github:49791.0"
+      ],
+      "rank": 49791
+    },
+    {
+      "id": 573,
+      "name": "Umi OCR",
+      "tagline": "OCR software, free and offline. OCR / PDF / /",
+      "url": "https://github.com/hiroi-sora/Umi-OCR",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source framework with 48,247 verified GitHub stars.",
+      "launched_at": 1648440106,
+      "score": 1.4395945246461817,
+      "signals": [
+        "github:48247.0"
+      ],
+      "rank": 48247
+    },
+    {
+      "id": 258,
+      "name": "Amazon Q Developer / Kiro IDE",
+      "tagline": "AWS's generative AI coding companion and cloud-native development environment for code transformation and security scanning.",
+      "url": "https://aws.amazon.com/q/developer/",
+      "emoji": "☁️",
+      "category": "Coding",
+      "why_it_matters": "Specialized in enterprise Java/Node upgrades, automated vulnerability patching, and deep AWS cloud infrastructure wiring.",
+      "launched_at": 1793024035,
+      "score": 4384.486521137492,
+      "signals": [
+        "app:48000.0"
+      ],
+      "rank": 48000
+    },
+    {
+      "id": 312,
+      "name": "Codewhale",
+      "tagline": "Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome",
+      "url": "https://codewhale.net/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source framework with 41,132 verified GitHub stars.",
+      "launched_at": 1768846861,
+      "score": 10.418049588023734,
+      "signals": [
+        "github:41132.0"
+      ],
+      "rank": 41132
+    },
+    {
+      "id": 223,
+      "name": "ai website cloner template",
+      "tagline": "Clone any website with one command using AI coding agents",
+      "url": "https://dsc.gg/jcodesmore",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source framework with 37,697 verified GitHub stars.",
+      "launched_at": 1773400479,
+      "score": 12.239759786295982,
+      "signals": [
+        "github:37697.0"
+      ],
+      "rank": 37697
+    },
+    {
+      "id": 297,
+      "name": "medusa",
+      "tagline": "The world's most flexible commerce platform for agents and developers",
+      "url": "https://medusajs.com/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source framework with 36,982 verified GitHub stars.",
+      "launched_at": 1579354744,
+      "score": 0.69091329090741,
+      "signals": [
+        "github:36982.0"
+      ],
+      "rank": 36982
+    },
+    {
+      "id": 370,
+      "name": "next ai draw io",
+      "tagline": "Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.",
+      "url": "https://next-ai-drawio.jiang.jp/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Production open-source framework with 36,463 verified GitHub stars.",
+      "launched_at": 1742742228,
+      "score": 3.8535238146878914,
+      "signals": [
+        "github:36463.0"
+      ],
+      "rank": 36463
     },
     {
       "id": 118,
@@ -394,13 +394,13 @@
       "url": "https://deepseek.com/harness",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 2,64,498 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 2,64,532 verified GitHub stars.",
       "launched_at": 1786622192,
-      "score": 322.1899555456559,
+      "score": 322.1147069946517,
       "signals": [
-        "github:264503.0"
+        "github:264533.0"
       ],
-      "rank": 264503
+      "rank": 264533
     },
     {
       "id": 284,
@@ -409,13 +409,13 @@
       "url": "https://hermes-agent.nousresearch.com/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 2,57,949 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 2,57,959 verified GitHub stars.",
       "launched_at": 1753222948,
-      "score": 36.04931278659857,
+      "score": 36.04851147871805,
       "signals": [
-        "github:257951.0"
+        "github:257960.0"
       ],
-      "rank": 257951
+      "rank": 257960
     },
     {
       "id": 346,
@@ -424,13 +424,13 @@
       "url": "https://n8n.io/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 2,08,866 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 2,08,868 verified GitHub stars.",
       "launched_at": 1561195461,
-      "score": 3.5385859593890627,
+      "score": 3.538601955252567,
       "signals": [
-        "github:208866.0"
+        "github:208869.0"
       ],
-      "rank": 208866
+      "rank": 208869
     },
     {
       "id": 376,
@@ -441,7 +441,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source framework with 1,87,802 verified GitHub stars.",
       "launched_at": 1678958467,
-      "score": 7.44498421010611,
+      "score": 7.444835396377933,
       "signals": [
         "github:187802.0"
       ],
@@ -454,13 +454,13 @@
       "url": "https://github.com/anthropics/skills",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 1,84,406 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,84,410 verified GitHub stars.",
       "launched_at": 1758556411,
-      "score": 30.6024093987736,
+      "score": 30.601222139923028,
       "signals": [
-        "github:184406.0"
+        "github:184411.0"
       ],
-      "rank": 184406
+      "rank": 184411
     },
     {
       "id": 176,
@@ -470,12 +470,12 @@
       "emoji": "🛠️",
       "category": "Agents & Automation",
       "why_it_matters": "Production-grade visual AI workflow builder with built-in model routing, knowledge retrieval, and prompt observability.",
-      "launched_at": 1792935740,
-      "score": 9123.326784699764,
+      "launched_at": 1792937635,
+      "score": 9123.055343123076,
       "signals": [
-        "github:159806.0"
+        "github:159807.0"
       ],
-      "rank": 159806
+      "rank": 159807
     },
     {
       "id": 414,
@@ -486,7 +486,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source framework with 1,56,098 verified GitHub stars.",
       "launched_at": 1675895283,
-      "score": 5.9947550065165505,
+      "score": 5.9946383095304405,
       "signals": [
         "github:156098.0"
       ],
@@ -499,9 +499,9 @@
       "url": "https://docs.langchain.com/langchain/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 44,047 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 44,048 verified GitHub stars.",
       "launched_at": 1691605992,
-      "score": 6.782039549014269,
+      "score": 6.781887110968937,
       "signals": [
         "github:148611.0"
       ],
@@ -515,28 +515,27 @@
       "emoji": "🌍",
       "category": "Agents & Automation",
       "why_it_matters": "Fastest-growing autonomous browser agent library allowing LLMs to interact with any web application effortlessly.",
-      "launched_at": 1793022140,
-      "score": 10903.154671795957,
+      "launched_at": 1793024035,
+      "score": 10902.847826031088,
       "signals": [
-        "github:119358.0"
+        "github:119361.0"
       ],
-      "rank": 119358
+      "rank": 119361
     },
     {
-      "id": 238,
-      "name": "Agent Skills",
-      "tagline": "Agent Skills – 51 SKILL.md workflows for coding agents and marketers",
-      "url": "https://github.com/milad-ahmd/agent-skills",
+      "id": 290,
+      "name": "agent skills",
+      "tagline": "Production-grade engineering skills for AI coding agents.",
+      "url": "https://skills.addy.ie/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1793132216,
-      "score": 1.7013188904735532,
+      "why_it_matters": "Production open-source framework with 1,11,345 verified GitHub stars.",
+      "launched_at": 1771186826,
+      "score": 31.835988165967304,
       "signals": [
-        "github:4.0",
-        "hn:2.0"
+        "github:111346.0"
       ],
-      "rank": 111334
+      "rank": 111346
     },
     {
       "id": 291,
@@ -545,13 +544,13 @@
       "url": "https://orca.dev/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 1,08,657 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,08,685 verified GitHub stars.",
       "launched_at": 1773718137,
-      "score": 35.975093997638005,
+      "score": 35.980478515586874,
       "signals": [
-        "github:108657.0"
+        "github:108686.0"
       ],
-      "rank": 108657
+      "rank": 108686
     },
     {
       "id": 365,
@@ -560,13 +559,13 @@
       "url": "https://geminicli.com/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 1,08,592 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,08,590 verified GitHub stars.",
       "launched_at": 1744909471,
-      "score": 12.09766032615073,
+      "score": 12.096865496055536,
       "signals": [
-        "github:108592.0"
+        "github:108590.0"
       ],
-      "rank": 108592
+      "rank": 108590
     },
     {
       "id": 292,
@@ -575,13 +574,13 @@
       "url": "https://paperclip.ing/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 1,08,183 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,08,194 verified GitHub stars.",
       "launched_at": 1772463711,
-      "score": 33.23428559004163,
+      "score": 33.23461963460924,
       "signals": [
-        "github:108183.0"
+        "github:108196.0"
       ],
-      "rank": 108183
+      "rank": 108196
     },
     {
       "id": 294,
@@ -590,13 +589,13 @@
       "url": "https://claude-mem.ai/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 1,03,888 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,03,896 verified GitHub stars.",
       "launched_at": 1756673403,
-      "score": 16.179465088850602,
+      "score": 16.179699528120796,
       "signals": [
-        "github:103888.0"
+        "github:103896.0"
       ],
-      "rank": 103888
+      "rank": 103896
     },
     {
       "id": 175,
@@ -606,27 +605,12 @@
       "emoji": "🔌",
       "category": "Agents & Automation",
       "why_it_matters": "The universal interoperability standard defining how AI models securely query databases, run code, and invoke APIs.",
-      "launched_at": 1793108540,
-      "score": 18325.258406541783,
+      "launched_at": 1793110435,
+      "score": 18323.38277637587,
       "signals": [
         "github:91632.0"
       ],
       "rank": 91632
-    },
-    {
-      "id": 327,
-      "name": "impeccable",
-      "tagline": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
-      "url": "https://impeccable.style/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 91,466 verified GitHub stars.",
-      "launched_at": 1763257924,
-      "score": 18.08347605270342,
-      "signals": [
-        "github:91474.0"
-      ],
-      "rank": 91474
     },
     {
       "id": 350,
@@ -635,13 +619,13 @@
       "url": "https://worldmonitor.app/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 89,707 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 89,708 verified GitHub stars.",
       "launched_at": 1767893166,
-      "score": 21.699817284415932,
+      "score": 21.698101385532976,
       "signals": [
-        "github:89707.0"
+        "github:89708.0"
       ],
-      "rank": 89707
+      "rank": 89708
     },
     {
       "id": 386,
@@ -650,13 +634,13 @@
       "url": "https://deerflow.tech/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 84,554 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 84,560 verified GitHub stars.",
       "launched_at": 1746586219,
-      "score": 9.82786322282946,
+      "score": 9.827962927002563,
       "signals": [
-        "github:84555.0"
+        "github:84560.0"
       ],
-      "rank": 84555
+      "rank": 84560
     },
     {
       "id": 675,
@@ -665,13 +649,13 @@
       "url": "https://lobehub.com/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 83,555 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 83,556 verified GitHub stars.",
       "launched_at": 1684653552,
-      "score": 3.5219691054228104,
+      "score": 3.521937163877762,
       "signals": [
-        "github:83555.0"
+        "github:83556.0"
       ],
-      "rank": 83555
+      "rank": 83556
     },
     {
       "id": 323,
@@ -680,28 +664,13 @@
       "url": "https://cognitum.one/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 79,887 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 79,889 verified GitHub stars.",
       "launched_at": 1748899460,
-      "score": 9.870086039994957,
+      "score": 9.870195029594582,
       "signals": [
-        "github:79887.0"
+        "github:79892.0"
       ],
-      "rank": 79887
-    },
-    {
-      "id": 395,
-      "name": "ai agents for beginners",
-      "tagline": "18 Lessons to Get Started Building AI Agents",
-      "url": "https://aka.ms/ai-agents-beginners",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 78,039 verified GitHub stars.",
-      "launched_at": 1732790572,
-      "score": 6.645520023448047,
-      "signals": [
-        "github:78039.0"
-      ],
-      "rank": 78039
+      "rank": 79892
     },
     {
       "id": 387,
@@ -710,13 +679,13 @@
       "url": "https://atoms.dev/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 71,052 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 71,053 verified GitHub stars.",
       "launched_at": 1688115895,
-      "score": 3.11374714218109,
+      "score": 3.113723302218974,
       "signals": [
-        "github:71052.0"
+        "github:71053.0"
       ],
-      "rank": 71052
+      "rank": 71053
     },
     {
       "id": 335,
@@ -725,24 +694,24 @@
       "url": "https://context7.com/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Production open-source framework with 63,830 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 63,832 verified GitHub stars.",
       "launched_at": 1743032439,
-      "score": 6.792913874461054,
+      "score": 6.792817526195971,
       "signals": [
-        "github:63830.0"
+        "github:63832.0"
       ],
-      "rank": 63830
+      "rank": 63832
     },
     {
       "id": 366,
       "name": "TrendRadar",
-      "tagline": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 + RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 + AI 分析简报直推手机，也支持接入 MCP 架构，…",
+      "tagline": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 AI ！ + RSS AI + AI + AI MCP …",
       "url": "https://trendradar.sandev.cc/",
       "emoji": null,
       "category": "Agents & Automation",
       "why_it_matters": "Production open-source framework with 63,257 verified GitHub stars.",
       "launched_at": 1745840536,
-      "score": 7.213696624962144,
+      "score": 7.213348824131388,
       "signals": [
         "github:63257.0"
       ],
@@ -756,12 +725,42 @@
       "emoji": "👥",
       "category": "Agents & Automation",
       "why_it_matters": "The standard multi-agent coordination architecture enabling specialized agent personas to collaborate sequentially and hierarchically.",
-      "launched_at": 1793022140,
-      "score": 5500.083302240609,
+      "launched_at": 1793024035,
+      "score": 5499.698936482651,
       "signals": [
-        "github:60210.0"
+        "github:60209.0"
       ],
-      "rank": 60210
+      "rank": 60209
+    },
+    {
+      "id": 397,
+      "name": "Flowise",
+      "tagline": "Build AI Agents, Visually",
+      "url": "https://flowiseai.com/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Production open-source framework with 55,529 verified GitHub stars.",
+      "launched_at": 1680265389,
+      "score": 2.2318801554505034,
+      "signals": [
+        "github:55529.0"
+      ],
+      "rank": 55529
+    },
+    {
+      "id": 398,
+      "name": "hindsight",
+      "tagline": "Hindsight: Agent Memory That Learns",
+      "url": "https://hindsight.vectorize.io/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Production open-source framework with 54,602 verified GitHub stars.",
+      "launched_at": 1761824988,
+      "score": 10.204896404164906,
+      "signals": [
+        "github:54603.0"
+      ],
+      "rank": 54603
     },
     {
       "id": 648,
@@ -772,7 +771,7 @@
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 1,65,173 verified GitHub stars.",
       "launched_at": 1661177126,
-      "score": 5.504449109139743,
+      "score": 5.504353901855199,
       "signals": [
         "github:165173.0"
       ],
@@ -786,27 +785,12 @@
       "emoji": "🎨",
       "category": "Image & Design",
       "why_it_matters": "Industry-standard node-graph architecture powering advanced generative image pipelines and production VFX studios.",
-      "launched_at": 1793022140,
-      "score": 13127.760695039033,
+      "launched_at": 1793024035,
+      "score": 13127.42667469322,
       "signals": [
-        "github:143711.0"
+        "github:143715.0"
       ],
-      "rank": 143711
-    },
-    {
-      "id": 287,
-      "name": "ui ux pro max skill",
-      "tagline": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
-      "url": "https://www.uupm.cc/",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 1,41,885 verified GitHub stars.",
-      "launched_at": 1764502591,
-      "score": 29.515637055688405,
-      "signals": [
-        "github:141887.0"
-      ],
-      "rank": 141887
+      "rank": 143715
     },
     {
       "id": 326,
@@ -815,39 +799,24 @@
       "url": "https://open-design.ai/",
       "emoji": null,
       "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 1,04,545 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,04,554 verified GitHub stars.",
       "launched_at": 1777350320,
-      "score": 44.33816235603469,
+      "score": 44.33474418439463,
       "signals": [
-        "github:104548.0"
+        "github:104555.0"
       ],
-      "rank": 104548
-    },
-    {
-      "id": 293,
-      "name": "taste skill",
-      "tagline": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
-      "url": "https://tasteskill.dev/",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 1,04,073 verified GitHub stars.",
-      "launched_at": 1771537445,
-      "score": 30.33875131820322,
-      "signals": [
-        "github:104074.0"
-      ],
-      "rank": 104074
+      "rank": 104555
     },
     {
       "id": 506,
-      "name": "notebooks",
-      "tagline": "250+ Fine-tuning & RL Notebooks for text, vision, audio, embedding, TTS models.",
+      "name": "unsloth",
+      "tagline": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
       "url": "https://unsloth.ai/docs",
       "emoji": null,
       "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 5,760 verified GitHub stars.",
-      "launched_at": 1733696090,
-      "score": 6.82159831028877,
+      "why_it_matters": "Production open-source framework with 78,668 verified GitHub stars.",
+      "launched_at": 1701276609,
+      "score": 4.04786384479302,
       "signals": [
         "github:78668.0"
       ],
@@ -861,8 +830,8 @@
       "emoji": "🖼️",
       "category": "Image & Design",
       "why_it_matters": "Zero-prompt-engineering image creation providing Midjourney-level quality on consumer desktop GPUs.",
-      "launched_at": 1792849340,
-      "score": 2189.49014667134,
+      "launched_at": 1792851235,
+      "score": 2189.430601417549,
       "signals": [
         "github:53714.0"
       ],
@@ -875,28 +844,13 @@
       "url": "https://localai.io/",
       "emoji": null,
       "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 50,022 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 50,023 verified GitHub stars.",
       "launched_at": 1679180282,
-      "score": 1.9876388230571713,
+      "score": 1.9876387504383484,
       "signals": [
-        "github:50022.0"
+        "github:50023.0"
       ],
-      "rank": 50022
-    },
-    {
-      "id": 575,
-      "name": "ShareX",
-      "tagline": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types…",
-      "url": "https://getsharex.com/",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 40,475 verified GitHub stars.",
-      "launched_at": 1381275130,
-      "score": 0.34432241909115285,
-      "signals": [
-        "github:40475.0"
-      ],
-      "rank": 40475
+      "rank": 50023
     },
     {
       "id": 650,
@@ -905,13 +859,13 @@
       "url": "https://huggingface.co/docs/diffusers",
       "emoji": null,
       "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 34,824 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 34,823 verified GitHub stars.",
       "launched_at": 1653926642,
-      "score": 1.0884069312155156,
+      "score": 1.0883578316891656,
       "signals": [
-        "github:34824.0"
+        "github:34823.0"
       ],
-      "rank": 34824
+      "rank": 34823
     },
     {
       "id": 651,
@@ -922,26 +876,11 @@
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 28,899 verified GitHub stars.",
       "launched_at": 1660698267,
-      "score": 0.9588944416288716,
+      "score": 0.9588779161217508,
       "signals": [
         "github:28899.0"
       ],
       "rank": 28899
-    },
-    {
-      "id": 340,
-      "name": "GDevelop",
-      "tagline": "🎮 Open-source, cross-platform 2D/3D/multiplayer game engine designed for everyone.",
-      "url": "https://gdevelop.io/",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 28,146 verified GitHub stars.",
-      "launched_at": 1404071918,
-      "score": 0.25636898402209624,
-      "signals": [
-        "github:28146.0"
-      ],
-      "rank": 28146
     },
     {
       "id": 652,
@@ -952,7 +891,7 @@
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 23,301 verified GitHub stars.",
       "launched_at": 1636985800,
-      "score": 0.6345490429642051,
+      "score": 0.6345397671415773,
       "signals": [
         "github:23301.0"
       ],
@@ -967,26 +906,11 @@
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 16,119 verified GitHub stars.",
       "launched_at": 1735009226,
-      "score": 1.4356722746421084,
+      "score": 1.435615938352517,
       "signals": [
         "github:16119.0"
       ],
       "rank": 16119
-    },
-    {
-      "id": 518,
-      "name": "stable diffusion webui colab",
-      "tagline": "stable diffusion webui colab",
-      "url": "https://github.com/camenduru/stable-diffusion-webui-colab",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 15,901 verified GitHub stars.",
-      "launched_at": 1664937959,
-      "score": 0.548605574086528,
-      "signals": [
-        "github:15901.0"
-      ],
-      "rank": 15901
     },
     {
       "id": 653,
@@ -997,7 +921,7 @@
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 13,595 verified GitHub stars.",
       "launched_at": 1662430260,
-      "score": 0.4582729621291412,
+      "score": 0.45826495969081604,
       "signals": [
         "github:13595.0"
       ],
@@ -1012,7 +936,7 @@
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 10,834 verified GitHub stars.",
       "launched_at": 1684829670,
-      "score": 0.45756013171802923,
+      "score": 0.4575504903178583,
       "signals": [
         "github:10834.0"
       ],
@@ -1027,7 +951,7 @@
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 10,796 verified GitHub stars.",
       "launched_at": 1693608733,
-      "score": 0.5046011098574819,
+      "score": 0.5045895400079348,
       "signals": [
         "github:10796.0"
       ],
@@ -1036,13 +960,13 @@
     {
       "id": 621,
       "name": "InternVL",
-      "tagline": "[CVPR 2024 Oral] InternVL Family: A Pioneering Open-Source Alternative to GPT-4o. 接近GPT-4o表现的开源多模态对话模型",
+      "tagline": "CVPR 2024 Oral InternVL Family: A Pioneering Open-Source Alternative to GPT-4o. GPT-4o",
       "url": "https://internvl.readthedocs.io/en/latest/",
       "emoji": null,
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 10,171 verified GitHub stars.",
       "launched_at": 1700640488,
-      "score": 0.5190489264027948,
+      "score": 0.5190361211975222,
       "signals": [
         "github:10171.0"
       ],
@@ -1057,7 +981,7 @@
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 9,035 verified GitHub stars.",
       "launched_at": 1682114955,
-      "score": 0.3704192396046388,
+      "score": 0.3704116251167259,
       "signals": [
         "github:9035.0"
       ],
@@ -1070,28 +994,13 @@
       "url": "https://lykos.ai/",
       "emoji": null,
       "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 8,967 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 8,968 verified GitHub stars.",
       "launched_at": 1686633638,
-      "score": 0.3864155836817297,
+      "score": 0.3864503957132056,
       "signals": [
-        "github:8967.0"
+        "github:8968.0"
       ],
-      "rank": 8967
-    },
-    {
-      "id": 640,
-      "name": "fast stable diffusion",
-      "tagline": "fast-stable-diffusion + DreamBooth",
-      "url": "https://github.com/TheLastBen/fast-stable-diffusion",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 7,910 verified GitHub stars.",
-      "launched_at": 1663749820,
-      "score": 0.2699025165475869,
-      "signals": [
-        "github:7910.0"
-      ],
-      "rank": 7910
+      "rank": 8968
     },
     {
       "id": 641,
@@ -1102,7 +1011,7 @@
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 7,304 verified GitHub stars.",
       "launched_at": 1671566994,
-      "score": 0.2685666462371464,
+      "score": 0.2685616042133048,
       "signals": [
         "github:7304.0"
       ],
@@ -1117,41 +1026,116 @@
       "category": "Image & Design",
       "why_it_matters": "Production open-source framework with 6,724 verified GitHub stars.",
       "launched_at": 1748789588,
-      "score": 0.8282885541942495,
+      "score": 0.8282459675237737,
       "signals": [
         "github:6724.0"
       ],
       "rank": 6724
     },
     {
-      "id": 643,
-      "name": "remove ai watermarks",
-      "tagline": "Remove visible and invisible AI watermarks from images and video, and AI provenance metadata from images, video, and audio. Python library, CLI, and agent skill for SynthID, C2PA, EXIF, IPTC, XMP, an…",
-      "url": "https://raiw.cc/",
+      "id": 645,
+      "name": "SwarmUI",
+      "tagline": "SwarmUI (formerly StableSwarmUI), A Modular Stable Diffusion Web-User-Interface, with an emphasis on making powertools easily accessible, high performance, and extensibility.",
+      "url": "https://github.com/mcmonkeyprojects/SwarmUI",
       "emoji": null,
       "category": "Image & Design",
-      "why_it_matters": "Production open-source framework with 6,165 verified GitHub stars.",
-      "launched_at": 1774462524,
-      "score": 2.138839086857534,
+      "why_it_matters": "Production open-source framework with 4,712 verified GitHub stars.",
+      "launched_at": 1718951093,
+      "score": 0.31326402905591505,
       "signals": [
-        "github:6165.0"
+        "github:4712.0"
       ],
-      "rank": 6165
+      "rank": 4712
     },
     {
-      "id": 413,
-      "name": "MoneyPrinterTurbo",
-      "tagline": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
-      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "id": 646,
+      "name": "ComfyUI LTXVideo",
+      "tagline": "LTX-Video Support for ComfyUI",
+      "url": "https://ltx.io/model/ltx-2",
       "emoji": null,
-      "category": "Video",
-      "why_it_matters": "Production open-source framework with 1,36,027 verified GitHub stars.",
-      "launched_at": 1710125854,
-      "score": 7.903583594906539,
+      "category": "Image & Design",
+      "why_it_matters": "Production open-source framework with 4,222 verified GitHub stars.",
+      "launched_at": 1732206365,
+      "score": 0.35538875799174785,
       "signals": [
-        "github:136030.0"
+        "github:4222.0"
       ],
-      "rank": 136030
+      "rank": 4222
+    },
+    {
+      "id": 647,
+      "name": "ComfyUI 3D Pack",
+      "tagline": "An extensive node suite that enables ComfyUI to process 3D inputs (Mesh & UV Texture, etc) using cutting edge algorithms (3DGS, NeRF, etc.)",
+      "url": "https://github.com/MrForExample/ComfyUI-3D-Pack",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Production open-source framework with 3,892 verified GitHub stars.",
+      "launched_at": 1704491354,
+      "score": 0.20900267928086336,
+      "signals": [
+        "github:3892.0"
+      ],
+      "rank": 3892
+    },
+    {
+      "id": 469,
+      "name": "OGAM",
+      "tagline": "The Swiss Army Knife of Offline AI. Chat, see, speak, and generate images on your phone or Mac — GGUF LLMs, vision, Whisper speech-to-text, Stable Diffusion, tool calling, and local-network servers.…",
+      "url": "https://www.producthunt.com/products/off-grid-ai?launch=off-grid-ai",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Production open-source framework with 3,294 verified GitHub stars.",
+      "launched_at": 1769684458,
+      "score": 0.8700954772601854,
+      "signals": [
+        "github:3294.0"
+      ],
+      "rank": 3294
+    },
+    {
+      "id": 69,
+      "name": "TRELLIS.2",
+      "tagline": "High-fidelity 3D Generation from images",
+      "url": "https://huggingface.co/spaces/microsoft/TRELLIS.2",
+      "emoji": "🏢",
+      "category": "Image & Design",
+      "why_it_matters": "Top-trending community model with 2300 likes on Hugging Face.",
+      "launched_at": 1765338625,
+      "score": 0.49568833911076066,
+      "signals": [
+        "huggingface:2300.0"
+      ],
+      "rank": 2300
+    },
+    {
+      "id": 481,
+      "name": "onediff",
+      "tagline": "OneDiff: An out-of-the-box acceleration library for diffusion models.",
+      "url": "https://github.com/siliconflow/onediff/wiki",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Production open-source framework with 1,963 verified GitHub stars.",
+      "launched_at": 1663745653,
+      "score": 0.06697709605847912,
+      "signals": [
+        "github:1963.0"
+      ],
+      "rank": 1963
+    },
+    {
+      "id": 567,
+      "name": "yft design",
+      "tagline": "yft-design is a powerful, visually stunning online design tool built with Vue3, fabric.js, and Element Plus. fabric.js / …",
+      "url": "https://yft.design/",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Production open-source framework with 1,670 verified GitHub stars.",
+      "launched_at": 1684986127,
+      "score": 0.07065120633541654,
+      "signals": [
+        "github:1670.0"
+      ],
+      "rank": 1670
     },
     {
       "id": 332,
@@ -1160,73 +1144,28 @@
       "url": "https://www.openmontage.video/",
       "emoji": null,
       "category": "Video",
-      "why_it_matters": "Production open-source framework with 72,626 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 72,632 verified GitHub stars.",
       "launched_at": 1774797802,
-      "score": 25.748836319448497,
+      "score": 25.74776873233848,
       "signals": [
-        "github:72628.0"
+        "github:72634.0"
       ],
-      "rank": 72628
+      "rank": 72634
     },
     {
       "id": 638,
       "name": "Pixelle Video",
-      "tagline": "🚀 AI 全自动短视频引擎 | AI Fully Automated Short Video Engine",
+      "tagline": "🚀 AI AI Fully Automated Short Video Engine",
       "url": "https://aidc-ai.github.io/Pixelle-Video/zh",
       "emoji": null,
       "category": "Video",
-      "why_it_matters": "Production open-source framework with 29,495 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 29,496 verified GitHub stars.",
       "launched_at": 1762497267,
-      "score": 5.6579550771320335,
+      "score": 5.657726125086021,
       "signals": [
-        "github:29495.0"
+        "github:29496.0"
       ],
-      "rank": 29495
-    },
-    {
-      "id": 683,
-      "name": "YoutubeDownloader",
-      "tagline": "Downloads videos and playlists from YouTube",
-      "url": "https://github.com/Tyrrrz/YoutubeDownloader/releases",
-      "emoji": null,
-      "category": "Video",
-      "why_it_matters": "Production open-source framework with 16,563 verified GitHub stars.",
-      "launched_at": 1542367850,
-      "score": 0.25552731485275687,
-      "signals": [
-        "github:16563.0"
-      ],
-      "rank": 16563
-    },
-    {
-      "id": 360,
-      "name": "Concat",
-      "tagline": "The truly free, open-source, local-first, cross-platform CapCut replacement. Scriptable through a JSON-RPC API & MCP.",
-      "url": "https://concat.standalones.org/",
-      "emoji": null,
-      "category": "Video",
-      "why_it_matters": "Production open-source framework with 12,310 verified GitHub stars.",
-      "launched_at": 1787682887,
-      "score": 18.519010444623138,
-      "signals": [
-        "github:12312.0"
-      ],
-      "rank": 12312
-    },
-    {
-      "id": 122,
-      "name": "lemo opuscar",
-      "tagline": "A toolbox of film styles made in code for Claude Code: 59 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By L…",
-      "url": "https://lemomo-ai.github.io/lemo-opuscar/",
-      "emoji": null,
-      "category": "Video",
-      "why_it_matters": "Production open-source breakthrough with 8,503 verified GitHub stars.",
-      "launched_at": 1790417441,
-      "score": 30.684969367735693,
-      "signals": [
-        "github:8977.0"
-      ],
-      "rank": 8977
+      "rank": 29496
     },
     {
       "id": 612,
@@ -1237,131 +1176,11 @@
       "category": "Video",
       "why_it_matters": "Production open-source framework with 1,953 verified GitHub stars.",
       "launched_at": 1729579385,
-      "score": 0.1562891263743332,
+      "score": 0.1562835169179531,
       "signals": [
         "github:1953.0"
       ],
       "rank": 1953
-    },
-    {
-      "id": 271,
-      "name": "motionmaxxing",
-      "tagline": "Looksmaxxing for motion graphics. An agent skill that turns AI slop videos into films that look made by a motion designer.",
-      "url": "https://github.com/Tejashmakwana/motionmaxxing",
-      "emoji": null,
-      "category": "Video",
-      "why_it_matters": "Production open-source framework with 1,090 verified GitHub stars.",
-      "launched_at": 1791310729,
-      "score": 5.926461050267237,
-      "signals": [
-        "github:1090.0"
-      ],
-      "rank": 1090
-    },
-    {
-      "id": 617,
-      "name": "MOSS VL",
-      "tagline": "An open-weight 11B model series for long-form and real-time video understanding",
-      "url": "https://openmoss.ai/MOSS-VL/",
-      "emoji": null,
-      "category": "Video",
-      "why_it_matters": "Production open-source framework with 798 verified GitHub stars.",
-      "launched_at": 1775645653,
-      "score": 0.2993885987327286,
-      "signals": [
-        "github:798.0"
-      ],
-      "rank": 798
-    },
-    {
-      "id": 63,
-      "name": "Omni Video Factory",
-      "tagline": "text to video, image to video, video extend",
-      "url": "https://huggingface.co/spaces/vamo455/Omni-videos-custom-auto_prompt_high-quality",
-      "emoji": "🏆",
-      "category": "Video",
-      "why_it_matters": "Top-trending community model with 373 likes on Hugging Face.",
-      "launched_at": 1788837788,
-      "score": 0.7436113625723423,
-      "signals": [
-        "huggingface:373.0"
-      ],
-      "rank": 373
-    },
-    {
-      "id": 55,
-      "name": "minimax h3 turbo + lora's",
-      "tagline": "Video generation with a synchronized soundtrack",
-      "url": "https://huggingface.co/spaces/wank3r/minimax-h3",
-      "emoji": "🎬",
-      "category": "Video",
-      "why_it_matters": "Top-trending community model with 210 likes on Hugging Face.",
-      "launched_at": 1789289929,
-      "score": 0.47736538961755604,
-      "signals": [
-        "huggingface:210.0"
-      ],
-      "rank": 210
-    },
-    {
-      "id": 28,
-      "name": "ai motion library",
-      "tagline": "Biblioteca de Motion apenasdouglas: 24 efeitos de animação com o nome em português e o termo pra pedir pra IA. Receitas pra canal dark, tema escuro e claro, skill pro Claude Code. Motion graphics pro…",
-      "url": "https://apenasdouglas.github.io/ai-motion-library/",
-      "emoji": null,
-      "category": "Video",
-      "why_it_matters": null,
-      "launched_at": 1791983627,
-      "score": 0.6726831403078495,
-      "signals": [
-        "github:73.0"
-      ],
-      "rank": 73
-    },
-    {
-      "id": 73,
-      "name": "MiniMax H3 Turbo LoRA",
-      "tagline": "Video generation with a synchronized soundtrack",
-      "url": "https://huggingface.co/spaces/baka999/MiniMax-H3-Turbo-Lora-UNCENSORED",
-      "emoji": "🎬",
-      "category": "Video",
-      "why_it_matters": "Top-trending community model with 66 likes on Hugging Face.",
-      "launched_at": 1791390316,
-      "score": 0.3778457276427475,
-      "signals": [
-        "huggingface:66.0"
-      ],
-      "rank": 66
-    },
-    {
-      "id": 166,
-      "name": "H3EROS",
-      "tagline": "Video generation with a synchronized soundtrack",
-      "url": "https://huggingface.co/spaces/Daankular/H3EROS",
-      "emoji": "🎬",
-      "category": "Video",
-      "why_it_matters": null,
-      "launched_at": 1790276412,
-      "score": 0.17073603055360437,
-      "signals": [
-        "huggingface:53.0"
-      ],
-      "rank": 53
-    },
-    {
-      "id": 79,
-      "name": "FastH3-Omni",
-      "tagline": "FastVideo 8-step video+audio from image/video/audio refs",
-      "url": "https://huggingface.co/spaces/FastVideo/FastH3-Omni",
-      "emoji": "🎬",
-      "category": "Video",
-      "why_it_matters": null,
-      "launched_at": 1792487317,
-      "score": 0.7688517304957725,
-      "signals": [
-        "huggingface:44.0"
-      ],
-      "rank": 44
     },
     {
       "id": 657,
@@ -1370,13 +1189,13 @@
       "url": "https://voicestudio.sh/",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 92,373 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 92,419 verified GitHub stars.",
       "launched_at": 1775770826,
-      "score": 34.95476341014737,
+      "score": 34.96834598531462,
       "signals": [
-        "github:92373.0"
+        "github:92421.0"
       ],
-      "rank": 92373
+      "rank": 92421
     },
     {
       "id": 658,
@@ -1385,13 +1204,13 @@
       "url": "https://github.com/RVC-Boss/GPT-SoVITS",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 64,034 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 64,037 verified GitHub stars.",
       "launched_at": 1705255521,
-      "score": 3.4746379481813645,
+      "score": 3.4747105118815207,
       "signals": [
-        "github:64034.0"
+        "github:64037.0"
       ],
-      "rank": 64034
+      "rank": 64037
     },
     {
       "id": 186,
@@ -1401,12 +1220,12 @@
       "emoji": "🎙️",
       "category": "Audio & Voice",
       "why_it_matters": "Ultra-fast local speech transcription running in real time even on low-power devices and embedded chips.",
-      "launched_at": 1792935740,
-      "score": 3124.5364687597344,
+      "launched_at": 1792937635,
+      "score": 3124.4810426606414,
       "signals": [
-        "github:54730.0"
+        "github:54731.0"
       ],
-      "rank": 54730
+      "rank": 54731
     },
     {
       "id": 659,
@@ -1415,13 +1234,13 @@
       "url": "http://coqui.ai/",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 46,159 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 46,158 verified GitHub stars.",
       "launched_at": 1589989528,
-      "score": 0.9168074386341486,
+      "score": 0.916777274413798,
       "signals": [
-        "github:46159.0"
+        "github:46158.0"
       ],
-      "rank": 46159
+      "rank": 46158
     },
     {
       "id": 660,
@@ -1430,13 +1249,13 @@
       "url": "https://voxcpm.com/",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 40,775 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 40,776 verified GitHub stars.",
       "launched_at": 1757994109,
-      "score": 6.6371884187699255,
+      "score": 6.636920722613836,
       "signals": [
-        "github:40775.0"
+        "github:40776.0"
       ],
-      "rank": 40775
+      "rank": 40776
     },
     {
       "id": 662,
@@ -1445,28 +1264,13 @@
       "url": "https://research.myshell.ai/open-voice",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 38,098 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 38,097 verified GitHub stars.",
       "launched_at": 1701260221,
-      "score": 1.9599629098966522,
+      "score": 1.9598627866633034,
       "signals": [
-        "github:38098.0"
+        "github:38097.0"
       ],
-      "rank": 38098
-    },
-    {
-      "id": 663,
-      "name": "MockingBird",
-      "tagline": "🚀Clone a voice in 5 seconds to generate arbitrary speech in real-time",
-      "url": "https://github.com/babysor/MockingBird",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 36,880 verified GitHub stars.",
-      "launched_at": 1628308419,
-      "score": 0.9412573629815933,
-      "signals": [
-        "github:36880.0"
-      ],
-      "rank": 36880
+      "rank": 38097
     },
     {
       "id": 669,
@@ -1475,13 +1279,13 @@
       "url": "https://handy.computer/",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 34,959 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 34,963 verified GitHub stars.",
       "launched_at": 1739414549,
-      "score": 3.4221709235697513,
+      "score": 3.4224171857284427,
       "signals": [
-        "github:34959.0"
+        "github:34963.0"
       ],
-      "rank": 34959
+      "rank": 34963
     },
     {
       "id": 670,
@@ -1490,13 +1294,13 @@
       "url": "https://github.com/mozilla/DeepSpeech",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 26,775 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 26,776 verified GitHub stars.",
       "launched_at": 1464879893,
-      "score": 0.2990417414507564,
+      "score": 0.29905083013650735,
       "signals": [
-        "github:26775.0"
+        "github:26776.0"
       ],
-      "rank": 26775
+      "rank": 26776
     },
     {
       "id": 437,
@@ -1505,13 +1309,13 @@
       "url": "https://docs.mozilla.ai/llamafile",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 26,506 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 26,507 verified GitHub stars.",
       "launched_at": 1694380352,
-      "score": 1.25049790954125,
+      "score": 1.250516190199579,
       "signals": [
-        "github:26506.0"
+        "github:26507.0"
       ],
-      "rank": 26506
+      "rank": 26507
     },
     {
       "id": 496,
@@ -1520,9 +1324,9 @@
       "url": "https://github.com/SYSTRAN/faster-whisper",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 26,252 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 26,251 verified GitHub stars.",
       "launched_at": 1676107047,
-      "score": 1.0103261514616273,
+      "score": 1.0103064483651885,
       "signals": [
         "github:26251.0"
       ],
@@ -1537,7 +1341,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Production open-source framework with 24,895 verified GitHub stars.",
       "launched_at": 1670553263,
-      "score": 0.9063126758643724,
+      "score": 0.9062958015379827,
       "signals": [
         "github:24895.0"
       ],
@@ -1550,13 +1354,13 @@
       "url": "https://github.com/index-tts/index-tts",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 24,777 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 24,778 verified GitHub stars.",
       "launched_at": 1738814885,
-      "score": 2.3933894984292916,
+      "score": 2.3933856027028666,
       "signals": [
-        "github:24777.0"
+        "github:24778.0"
       ],
-      "rank": 24777
+      "rank": 24778
     },
     {
       "id": 508,
@@ -1567,7 +1371,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Production open-source framework with 24,171 verified GitHub stars.",
       "launched_at": 1719975562,
-      "score": 1.6340066342115755,
+      "score": 1.63395567864927,
       "signals": [
         "github:24171.0"
       ],
@@ -1582,7 +1386,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Production open-source framework with 20,859 verified GitHub stars.",
       "launched_at": 1669256891,
-      "score": 0.7498594103388543,
+      "score": 0.7498455949849966,
       "signals": [
         "github:20859.0"
       ],
@@ -1595,13 +1399,13 @@
       "url": "https://pyvideotrans.com/",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 19,568 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 19,569 verified GitHub stars.",
       "launched_at": 1696263199,
-      "score": 0.9447361217819568,
+      "score": 0.9447621455740405,
       "signals": [
-        "github:19568.0"
+        "github:19569.0"
       ],
-      "rank": 19568
+      "rank": 19569
     },
     {
       "id": 666,
@@ -1612,7 +1416,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Production open-source framework with 19,408 verified GitHub stars.",
       "launched_at": 1745046957,
-      "score": 2.1695523665691616,
+      "score": 2.1694494876039863,
       "signals": [
         "github:19408.0"
       ],
@@ -1627,7 +1431,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Production open-source framework with 15,568 verified GitHub stars.",
       "launched_at": 1662011253,
-      "score": 0.5227700360178033,
+      "score": 0.5227609364762874,
       "signals": [
         "github:15568.0"
       ],
@@ -1642,7 +1446,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Production open-source framework with 15,509 verified GitHub stars.",
       "launched_at": 1429550596,
-      "score": 0.15322301675218983,
+      "score": 0.15322205457316243,
       "signals": [
         "github:15509.0"
       ],
@@ -1655,13 +1459,13 @@
       "url": "https://altic.dev/fluid",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Production open-source framework with 12,559 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 12,563 verified GitHub stars.",
       "launched_at": 1758476102,
-      "score": 2.0787303492721656,
+      "score": 2.078759139940663,
       "signals": [
-        "github:12561.0"
+        "github:12562.0"
       ],
-      "rank": 12561
+      "rank": 12562
     },
     {
       "id": 187,
@@ -1671,12 +1475,12 @@
       "emoji": "🗣️",
       "category": "Audio & Voice",
       "why_it_matters": "Breakthrough ultra-compact voice synthesis model that out-competes models 10x its size in natural speech quality.",
-      "launched_at": 1793022140,
-      "score": 889.3673979507485,
+      "launched_at": 1793024035,
+      "score": 889.2286725681976,
       "signals": [
-        "github:9736.0"
+        "github:9735.0"
       ],
-      "rank": 9736
+      "rank": 9735
     },
     {
       "id": 465,
@@ -1687,7 +1491,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Production open-source framework with 9,620 verified GitHub stars.",
       "launched_at": 1719975406,
-      "score": 0.6570216325085817,
+      "score": 0.6570011437084076,
       "signals": [
         "github:9620.0",
         "huggingface:99.0"
@@ -1703,7 +1507,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Production open-source framework with 1,882 verified GitHub stars.",
       "launched_at": 1764127748,
-      "score": 0.38544865452397464,
+      "score": 0.38541838246949756,
       "signals": [
         "github:1882.0"
       ],
@@ -1718,7 +1522,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Production open-source framework with 1,643 verified GitHub stars.",
       "launched_at": 1767769109,
-      "score": 0.395110916321277,
+      "score": 0.3950754429846769,
       "signals": [
         "github:1643.0"
       ],
@@ -1733,7 +1537,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Production open-source framework with 1,134 verified GitHub stars.",
       "launched_at": 1769603510,
-      "score": 0.3714748900341563,
+      "score": 0.3714389464997848,
       "signals": [
         "github:1412.0"
       ],
@@ -1747,27 +1551,12 @@
       "emoji": "💬",
       "category": "Chat & Assistants",
       "why_it_matters": "The gold standard private web UI for teams and power users seeking ChatGPT features without data leakage.",
-      "launched_at": 1793022140,
-      "score": 14344.794573726154,
+      "launched_at": 1793024035,
+      "score": 14344.213027778065,
       "signals": [
-        "github:157034.0"
+        "github:157036.0"
       ],
-      "rank": 157034
-    },
-    {
-      "id": 416,
-      "name": "generative ai for beginners",
-      "tagline": "21 Lessons, Get Started Building with Generative AI",
-      "url": "https://github.com/microsoft/generative-ai-for-beginners",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 1,22,325 verified GitHub stars.",
-      "launched_at": 1687192139,
-      "score": 5.304703438945775,
-      "signals": [
-        "github:122325.0"
-      ],
-      "rank": 122325
+      "rank": 157036
     },
     {
       "id": 425,
@@ -1778,26 +1567,11 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source framework with 88,911 verified GitHub stars.",
       "launched_at": 1678472874,
-      "score": 3.506780615992563,
+      "score": 3.5067108175403288,
       "signals": [
         "github:88911.0"
       ],
       "rank": 88911
-    },
-    {
-      "id": 333,
-      "name": "system prompts leaks",
-      "tagline": "Documented system prompts from Anthropic - Claude Fable 5.1, Opus 5.5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Gr…",
-      "url": "https://github.com/asgeirtj/system_prompts_leaks",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 70,350 verified GitHub stars.",
-      "launched_at": 1746240236,
-      "score": 8.104689613840463,
-      "signals": [
-        "github:70351.0"
-      ],
-      "rank": 70351
     },
     {
       "id": 183,
@@ -1807,27 +1581,12 @@
       "emoji": "📚",
       "category": "Chat & Assistants",
       "why_it_matters": "Turn any document, PDF, or GitHub repository into an interactive AI knowledge base with zero configuration.",
-      "launched_at": 1792935740,
-      "score": 3863.224160506166,
+      "launched_at": 1792937635,
+      "score": 3863.08504642347,
       "signals": [
         "github:67669.0"
       ],
       "rank": 67669
-    },
-    {
-      "id": 421,
-      "name": "CL4R1T4S",
-      "tagline": "LEAKED SYSTEM PROMPTS FOR CHATGPT, CLAUDE, GEMINI, GROK, PERPLEXITY, CURSOR, LOVABLE, REPLIT, AND MORE! - AI SYSTEMS TRANSPARENCY FOR ALL! 👐",
-      "url": "https://github.com/elder-plinius/CL4R1T4S",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 51,557 verified GitHub stars.",
-      "launched_at": 1741118596,
-      "score": 5.245756832462227,
-      "signals": [
-        "github:51557.0"
-      ],
-      "rank": 51557
     },
     {
       "id": 182,
@@ -1837,8 +1596,8 @@
       "emoji": "🤖",
       "category": "Chat & Assistants",
       "why_it_matters": "Completely air-gapped desktop assistant giving users sovereign local intelligence on consumer laptops.",
-      "launched_at": 1792935740,
-      "score": 2576.243973858063,
+      "launched_at": 1792937635,
+      "score": 2576.151203725569,
       "signals": [
         "github:45126.0"
       ],
@@ -1851,13 +1610,13 @@
       "url": "https://chatboxai.app/",
       "emoji": null,
       "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 42,166 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 42,165 verified GitHub stars.",
       "launched_at": 1678105335,
-      "score": 1.6567182102680698,
+      "score": 1.656646050885105,
       "signals": [
-        "github:42166.0"
+        "github:42165.0"
       ],
-      "rank": 42166
+      "rank": 42165
     },
     {
       "id": 661,
@@ -1866,43 +1625,28 @@
       "url": "https://2noise.com/",
       "emoji": null,
       "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 39,959 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 39,958 verified GitHub stars.",
       "launched_at": 1716834409,
-      "score": 2.5685290675660295,
+      "score": 2.5683879867578656,
       "signals": [
-        "github:39959.0"
+        "github:39958.0"
       ],
-      "rank": 39959
+      "rank": 39958
     },
     {
       "id": 427,
       "name": "Langchain Chatchat",
-      "tagline": "Langchain-Chatchat（原Langchain-ChatGLM）基于 Langchain 与 ChatGLM, Qwen 与 Llama 等语言模型的 RAG 与 Agent 应用 | Langchain-Chatchat (formerly langchain-ChatGLM), local knowledge based LLM (like ChatGLM, Qwen and L…",
+      "tagline": "Langchain-Chatchat Langchain-ChatGLM Langchain ChatGLM, Qwen Llama RAG Agent Langchain-Chatchat formerly langchain-ChatGLM , local knowledge based LLM like ChatGLM, Qwen and L…",
       "url": "https://github.com/chatchat-space/Langchain-Chatchat",
       "emoji": null,
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source framework with 38,714 verified GitHub stars.",
       "launched_at": 1680264765,
-      "score": 1.5560550805363056,
+      "score": 1.5560236176507904,
       "signals": [
         "github:38714.0"
       ],
       "rank": 38714
-    },
-    {
-      "id": 679,
-      "name": "librepods",
-      "tagline": "AirPods liberated from Apple's ecosystem.",
-      "url": "https://github.com/librepods-org/librepods",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 30,504 verified GitHub stars.",
-      "launched_at": 1727379071,
-      "score": 2.343497937116088,
-      "signals": [
-        "github:30504.0"
-      ],
-      "rank": 30504
     },
     {
       "id": 619,
@@ -1913,7 +1657,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source framework with 25,075 verified GitHub stars.",
       "launched_at": 1681747991,
-      "score": 1.0239708401921632,
+      "score": 1.0239498603360233,
       "signals": [
         "github:25075.0"
       ],
@@ -1922,17 +1666,17 @@
     {
       "id": 432,
       "name": "kirara ai",
-      "tagline": "🤖 可 DIY 的 多模态 AI 聊天机器人 | 🚀 快速接入 微信、 QQ、Telegram、等聊天平台 | 🦈支持DeepSeek、Grok、Claude、Ollama、Gemini、OpenAI | 工作流系统、网页搜索、AI画图、人设调教、虚拟女仆、语音对话 |",
+      "tagline": "🤖 DIY AI 🚀 QQ Telegram 🦈 DeepSeek Grok Claude Ollama Gemini OpenAI AI",
       "url": "https://kirara-docs.app.lss233.com/",
       "emoji": null,
       "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 19,233 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 19,234 verified GitHub stars.",
       "launched_at": 1670246098,
-      "score": 0.6980867562263923,
+      "score": 0.6981100868833866,
       "signals": [
-        "github:19233.0"
+        "github:19234.0"
       ],
-      "rank": 19233
+      "rank": 19234
     },
     {
       "id": 667,
@@ -1943,7 +1687,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source framework with 17,617 verified GitHub stars.",
       "launched_at": 1549801512,
-      "score": 0.2817789366149395,
+      "score": 0.28177629297197954,
       "signals": [
         "github:17617.0"
       ],
@@ -1958,41 +1702,11 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source framework with 10,921 verified GitHub stars.",
       "launched_at": 1690056774,
-      "score": 0.4894234879811776,
+      "score": 0.48941265256671196,
       "signals": [
         "github:10921.0"
       ],
       "rank": 10921
-    },
-    {
-      "id": 622,
-      "name": "minimind v",
-      "tagline": "👀 Train a 65M-parameter VLM from scratch in just 2h!",
-      "url": "https://jingyaogong.github.io/minimind-v",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 8,799 verified GitHub stars.",
-      "launched_at": 1726034034,
-      "score": 0.6597800211258774,
-      "signals": [
-        "github:8799.0"
-      ],
-      "rank": 8799
-    },
-    {
-      "id": 195,
-      "name": "EdgeGPT",
-      "tagline": "Reverse engineered API of Microsoft's Bing Chat AI",
-      "url": "https://github.com/acheong08/EdgeGPT",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 7,828 verified GitHub stars.",
-      "launched_at": 1675958862,
-      "score": 0.3008205166024525,
-      "signals": [
-        "github:7828.0"
-      ],
-      "rank": 7828
     },
     {
       "id": 106,
@@ -2003,11 +1717,11 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source breakthrough with 7,567 verified GitHub stars.",
       "launched_at": 1787921844,
-      "score": 12.026481840534032,
+      "score": 12.022868424822281,
       "signals": [
-        "github:7582.0"
+        "github:7583.0"
       ],
-      "rank": 7582
+      "rank": 7583
     },
     {
       "id": 467,
@@ -2016,13 +1730,13 @@
       "url": "https://scisharp.github.io/LLamaSharp",
       "emoji": null,
       "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 3,819 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 3,818 verified GitHub stars.",
       "launched_at": 1683655401,
-      "score": 0.15921809904301085,
+      "score": 0.15917308989254278,
       "signals": [
-        "github:3819.0"
+        "github:3818.0"
       ],
-      "rank": 3819
+      "rank": 3818
     },
     {
       "id": 545,
@@ -2033,7 +1747,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source framework with 2,939 verified GitHub stars.",
       "launched_at": 1725333653,
-      "score": 0.21765034774541306,
+      "score": 0.21764302461693646,
       "signals": [
         "github:2939.0"
       ],
@@ -2048,71 +1762,11 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Production open-source framework with 2,743 verified GitHub stars.",
       "launched_at": 1697510611,
-      "score": 0.13450536526922055,
+      "score": 0.13450215548521474,
       "signals": [
         "github:2743.0"
       ],
       "rank": 2743
-    },
-    {
-      "id": 272,
-      "name": "open intelligent ui",
-      "tagline": "An open-source take on ChatGPT's Intelligent UI: answers stream as interactive UI (maps, photos, charts, drawings and working tools). Built with OpenUI.",
-      "url": "https://www.openui.com/demo/intelligent-ui",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 865 verified GitHub stars.",
-      "launched_at": 1791437865,
-      "score": 5.112636632647636,
-      "signals": [
-        "github:865.0"
-      ],
-      "rank": 865
-    },
-    {
-      "id": 275,
-      "name": "whirl",
-      "tagline": "The AI chat app that sweats the details. Every top model, real memory, living documents, and your own tools.",
-      "url": "https://whirl.chat/",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source framework with 509 verified GitHub stars.",
-      "launched_at": 1790949042,
-      "score": 2.2433750994312436,
-      "signals": [
-        "github:509.0"
-      ],
-      "rank": 509
-    },
-    {
-      "id": 21,
-      "name": "astrbot for android",
-      "tagline": "Deploy and manage AstrBot and NapCat locally on Android phones, built-in PRoot Ubuntu runtime environment, support native management interface, WebUI, logs, backup recovery and independent updates, no root required.",
-      "url": "https://github.com/JunWan666/astrbot-for-android",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Production open-source breakthrough with 153 verified GitHub stars.",
-      "launched_at": 1792991612,
-      "score": 15.822667090278376,
-      "signals": [
-        "github:209.0"
-      ],
-      "rank": 209
-    },
-    {
-      "id": 40,
-      "name": "yahont ce",
-      "tagline": "Self-hosted AI-платформа с расширенными возможностями: RAG, агенты, веб-поиск, исследования, коннекторы, любые LLM и гибкие настройки",
-      "url": "https://www.yahont.ai/",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": null,
-      "launched_at": 1792304638,
-      "score": 0.5186539441077217,
-      "signals": [
-        "github:39.0"
-      ],
-      "rank": 39
     },
     {
       "id": 527,
@@ -2123,7 +1777,7 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source framework with 91,849 verified GitHub stars.",
       "launched_at": 1588934296,
-      "score": 1.8129964561650471,
+      "score": 1.812976188106945,
       "signals": [
         "github:91849.0"
       ],
@@ -2136,13 +1790,13 @@
       "url": "https://opendatalab.github.io/MinerU/",
       "emoji": null,
       "category": "Productivity",
-      "why_it_matters": "Production open-source framework with 82,671 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 82,672 verified GitHub stars.",
       "launched_at": 1709196754,
-      "score": 4.739652332972167,
+      "score": 4.7395808238338155,
       "signals": [
-        "github:82671.0"
+        "github:82672.0"
       ],
-      "rank": 82671
+      "rank": 82672
     },
     {
       "id": 549,
@@ -2151,13 +1805,13 @@
       "url": "https://docling-project.github.io/docling",
       "emoji": null,
       "category": "Productivity",
-      "why_it_matters": "Production open-source framework with 69,738 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 69,739 verified GitHub stars.",
       "launched_at": 1720511426,
-      "score": 4.756159835689811,
+      "score": 4.756146820747911,
       "signals": [
-        "github:69738.0"
+        "github:69740.0"
       ],
-      "rank": 69738
+      "rank": 69740
     },
     {
       "id": 191,
@@ -2167,12 +1821,12 @@
       "emoji": "🧠",
       "category": "Productivity",
       "why_it_matters": "Solves context amnesia by providing persistent, adaptive personal memory graph storage for AI agents.",
-      "launched_at": 1793022140,
-      "score": 6209.951220222867,
+      "launched_at": 1793024035,
+      "score": 6209.894409437734,
       "signals": [
-        "github:67981.0"
+        "github:67984.0"
       ],
-      "rank": 67981
+      "rank": 67984
     },
     {
       "id": 574,
@@ -2181,13 +1835,13 @@
       "url": "http://docs.paperless-ngx.com/",
       "emoji": null,
       "category": "Productivity",
-      "why_it_matters": "Production open-source framework with 47,191 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 47,195 verified GitHub stars.",
       "launched_at": 1644703012,
-      "score": 1.3656922594126903,
+      "score": 1.3657870152241869,
       "signals": [
-        "github:47191.0"
+        "github:47195.0"
       ],
-      "rank": 47191
+      "rank": 47195
     },
     {
       "id": 190,
@@ -2197,8 +1851,8 @@
       "emoji": "🧵",
       "category": "Productivity",
       "why_it_matters": "Community-driven prompt architecture turning routine cognitive tasks into reusable terminal commands.",
-      "launched_at": 1792935740,
-      "score": 2539.078374713853,
+      "launched_at": 1792937635,
+      "score": 2538.986942908626,
       "signals": [
         "github:44475.0"
       ],
@@ -2211,13 +1865,13 @@
       "url": "http://ocrmypdf.readthedocs.io/",
       "emoji": null,
       "category": "Productivity",
-      "why_it_matters": "Production open-source framework with 35,174 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 35,173 verified GitHub stars.",
       "launched_at": 1387527988,
-      "score": 0.304769651265159,
+      "score": 0.30475927110123696,
       "signals": [
-        "github:35174.0"
+        "github:35173.0"
       ],
-      "rank": 35174
+      "rank": 35173
     },
     {
       "id": 429,
@@ -2228,26 +1882,11 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source framework with 32,266 verified GitHub stars.",
       "launched_at": 1735217534,
-      "score": 2.886231850980545,
+      "score": 2.8861181873627424,
       "signals": [
         "github:32266.0"
       ],
       "rank": 32266
-    },
-    {
-      "id": 339,
-      "name": "frontend slides",
-      "tagline": "Create beautiful slides on the web using a coding agent's frontend skills",
-      "url": "https://github.com/zarazhangrui/frontend-slides",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Production open-source framework with 31,471 verified GitHub stars.",
-      "launched_at": 1769560954,
-      "score": 8.261904173650311,
-      "signals": [
-        "github:31472.0"
-      ],
-      "rank": 31472
     },
     {
       "id": 561,
@@ -2256,13 +1895,13 @@
       "url": "https://opendataloader.org/",
       "emoji": null,
       "category": "Productivity",
-      "why_it_matters": "Production open-source framework with 30,102 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 30,103 verified GitHub stars.",
       "launched_at": 1747115282,
-      "score": 3.5470208336580473,
+      "score": 3.546962915313169,
       "signals": [
-        "github:30102.0"
+        "github:30103.0"
       ],
-      "rank": 30102
+      "rank": 30103
     },
     {
       "id": 562,
@@ -2271,13 +1910,13 @@
       "url": "https://firecrawl.github.io/pdf-inspector/",
       "emoji": null,
       "category": "Productivity",
-      "why_it_matters": "Production open-source framework with 19,756 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 19,757 verified GitHub stars.",
       "launched_at": 1770407087,
-      "score": 5.418125511434378,
+      "score": 5.417857004544184,
       "signals": [
-        "github:19756.0"
+        "github:19757.0"
       ],
-      "rank": 19756
+      "rank": 19757
     },
     {
       "id": 550,
@@ -2286,13 +1925,13 @@
       "url": "https://www.unstructured.io/",
       "emoji": null,
       "category": "Productivity",
-      "why_it_matters": "Production open-source framework with 15,630 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 15,631 verified GitHub stars.",
       "launched_at": 1664229221,
-      "score": 0.5357016652161493,
+      "score": 0.5357264535592563,
       "signals": [
-        "github:15630.0"
+        "github:15631.0"
       ],
-      "rank": 15630
+      "rank": 15631
     },
     {
       "id": 563,
@@ -2303,7 +1942,7 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source framework with 10,275 verified GitHub stars.",
       "launched_at": 1325870018,
-      "score": 0.07512662263716789,
+      "score": 0.07512625553567624,
       "signals": [
         "github:10275.0"
       ],
@@ -2318,7 +1957,7 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source framework with 9,066 verified GitHub stars.",
       "launched_at": 1747128019,
-      "score": 1.0686319457147635,
+      "score": 1.0685789830712376,
       "signals": [
         "github:9066.0"
       ],
@@ -2333,7 +1972,7 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source framework with 6,451 verified GitHub stars.",
       "launched_at": 1739340659,
-      "score": 0.6304553055262383,
+      "score": 0.6304285768360327,
       "signals": [
         "github:6451.0"
       ],
@@ -2348,7 +1987,7 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source framework with 4,269 verified GitHub stars.",
       "launched_at": 1706725987,
-      "score": 0.23638091386239252,
+      "score": 0.23637467184982625,
       "signals": [
         "github:4269.0"
       ],
@@ -2363,7 +2002,7 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source framework with 1,666 verified GitHub stars.",
       "launched_at": 1730829195,
-      "score": 0.13653404344871525,
+      "score": 0.13652904484309727,
       "signals": [
         "github:1666.0"
       ],
@@ -2378,7 +2017,7 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source framework with 1,578 verified GitHub stars.",
       "launched_at": 1753952759,
-      "score": 0.22545930768793943,
+      "score": 0.22544619081889047,
       "signals": [
         "github:1578.0"
       ],
@@ -2393,7 +2032,7 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source framework with 1,144 verified GitHub stars.",
       "launched_at": 1762383386,
-      "score": 0.21847804727910847,
+      "score": 0.2184618597463925,
       "signals": [
         "github:1144.0"
       ],
@@ -2408,87 +2047,11 @@
       "category": "Productivity",
       "why_it_matters": "Production open-source framework with 1,084 verified GitHub stars.",
       "launched_at": 1782304476,
-      "score": 0.7207478239576233,
+      "score": 0.720596823183156,
       "signals": [
         "github:1084.0"
       ],
       "rank": 1084
-    },
-    {
-      "id": 571,
-      "name": "marker api",
-      "tagline": "Easily deployable 🚀 API to convert PDF to markdown quickly with high accuracy.",
-      "url": "https://github.com/adithya-s-k/marker-api",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Production open-source framework with 984 verified GitHub stars.",
-      "launched_at": 1715369879,
-      "score": 0.0618251650643,
-      "signals": [
-        "github:984.0"
-      ],
-      "rank": 984
-    },
-    {
-      "id": 559,
-      "name": "vision parse",
-      "tagline": "Parse PDFs into markdown using Vision LLMs",
-      "url": "https://github.com/iamarunbrahma/vision-parse",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Production open-source framework with 485 verified GitHub stars.",
-      "launched_at": 1734356901,
-      "score": 0.04262353878367266,
-      "signals": [
-        "github:485.0"
-      ],
-      "rank": 485
-    },
-    {
-      "id": 251,
-      "name": "Adobe Acrobat Pro",
-      "tagline": "Open-source AI tool / repository",
-      "url": "https://github.com/free-cracks/Adobe-Acrobat-Pro",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": null,
-      "launched_at": 1793007273,
-      "score": 23.920761409270362,
-      "signals": [
-        "github:288.0"
-      ],
-      "rank": 288
-    },
-    {
-      "id": 31,
-      "name": "ai native",
-      "tagline": "지능을 전기처럼 쓰는 시대 — AI 네이티브 핸드북 2026 (PDF·EPUB, CC BY-NC-ND 4.0)",
-      "url": "https://github.com/hollobit/ai-native",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": null,
-      "launched_at": 1792677611,
-      "score": 1.6465282079308772,
-      "signals": [
-        "github:65.0"
-      ],
-      "rank": 65
-    },
-    {
-      "id": 276,
-      "name": "ReplySlip",
-      "tagline": "ReplySlip – An open-source async task inbox for AI agents",
-      "url": "https://github.com/klahrich/replyslip",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": null,
-      "launched_at": 1793190370,
-      "score": 4.737328489533049,
-      "signals": [
-        "github:1.0",
-        "hn:1.0"
-      ],
-      "rank": 1
     },
     {
       "id": 101,
@@ -2498,12 +2061,12 @@
       "emoji": "🔬",
       "category": "Research & Data",
       "why_it_matters": "Massive industry-standard agentic reverse-engineering harness with over 380k+ stars across global AI developer teams.",
-      "launched_at": 1793108540,
-      "score": 80077.01150868033,
+      "launched_at": 1793110435,
+      "score": 80098.81051275885,
       "signals": [
-        "github:400410.0"
+        "github:400560.0"
       ],
-      "rank": 400410
+      "rank": 400561
     },
     {
       "id": 373,
@@ -2512,13 +2075,13 @@
       "url": "https://firecrawl.dev/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 1,96,266 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,96,275 verified GitHub stars.",
       "launched_at": 1713214949,
-      "score": 11.933898298733565,
+      "score": 11.934165630555617,
       "signals": [
-        "github:196266.0"
+        "github:196276.0"
       ],
-      "rank": 196266
+      "rank": 196276
     },
     {
       "id": 171,
@@ -2529,11 +2092,11 @@
       "category": "Research & Data",
       "why_it_matters": "World-class extensible reverse-engineering platform powering both automated static analysis and AI security workflows.",
       "launched_at": 1551410868,
-      "score": 1.5362537440993458,
+      "score": 1.5364165814991564,
       "signals": [
-        "github:95286.0"
+        "github:95297.0"
       ],
-      "rank": 95286
+      "rank": 95297
     },
     {
       "id": 188,
@@ -2543,12 +2106,12 @@
       "emoji": "📑",
       "category": "Research & Data",
       "why_it_matters": "Eliminates RAG hallucinations through OCR-level document layout analysis of complex tables and diagrams.",
-      "launched_at": 1793022140,
-      "score": 8496.308718508537,
+      "launched_at": 1793024035,
+      "score": 8496.130099803366,
       "signals": [
-        "github:93010.0"
+        "github:93013.0"
       ],
-      "rank": 93010
+      "rank": 93013
     },
     {
       "id": 349,
@@ -2557,13 +2120,13 @@
       "url": "https://scrapling.readthedocs.io/en/latest/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 90,150 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 90,152 verified GitHub stars.",
       "launched_at": 1728851393,
-      "score": 7.116442137359992,
+      "score": 7.116347481195614,
       "signals": [
-        "github:90150.0"
+        "github:90152.0"
       ],
-      "rank": 90150
+      "rank": 90152
     },
     {
       "id": 351,
@@ -2572,13 +2135,13 @@
       "url": "https://crawl4ai.com/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 86,446 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 86,448 verified GitHub stars.",
       "launched_at": 1715248130,
-      "score": 5.42126346855819,
+      "score": 5.421292794285777,
       "signals": [
-        "github:86446.0"
+        "github:86449.0"
       ],
-      "rank": 86446
+      "rank": 86449
     },
     {
       "id": 530,
@@ -2589,7 +2152,7 @@
       "category": "Research & Data",
       "why_it_matters": "Production open-source framework with 59,695 verified GitHub stars.",
       "launched_at": 1524483928,
-      "score": 0.8478989106684701,
+      "score": 0.8478917051816452,
       "signals": [
         "github:59695.0"
       ],
@@ -2604,7 +2167,7 @@
       "category": "Research & Data",
       "why_it_matters": "Production open-source framework with 58,756 verified GitHub stars.",
       "launched_at": 1689756217,
-      "score": 2.623966198916075,
+      "score": 2.6239082753452783,
       "signals": [
         "github:58756.0"
       ],
@@ -2617,13 +2180,13 @@
       "url": "https://buymeacoffee.com/crucify020v",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 54,298 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 54,304 verified GitHub stars.",
       "launched_at": 1772087461,
-      "score": 16.324838223610204,
+      "score": 16.324575919207437,
       "signals": [
-        "github:54299.0"
+        "github:54304.0"
       ],
-      "rank": 54299
+      "rank": 54304
     },
     {
       "id": 507,
@@ -2634,26 +2197,11 @@
       "category": "Research & Data",
       "why_it_matters": "Production open-source framework with 12,932 verified GitHub stars.",
       "launched_at": 1770675390,
-      "score": 14.662128152412281,
+      "score": 14.6606419615569,
       "signals": [
         "github:52708.0"
       ],
       "rank": 52708
-    },
-    {
-      "id": 583,
-      "name": "Made With ML",
-      "tagline": "Learn how to develop, deploy and iterate on production-grade ML applications.",
-      "url": "https://madewithml.com/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 49,833 verified GitHub stars.",
-      "launched_at": 1541389467,
-      "score": 0.765220420991371,
-      "signals": [
-        "github:49833.0"
-      ],
-      "rank": 49833
     },
     {
       "id": 189,
@@ -2663,12 +2211,12 @@
       "emoji": "🔎",
       "category": "Research & Data",
       "why_it_matters": "Ultra-fast production vector database powering enterprise semantic search and recommendation systems.",
-      "launched_at": 1792849340,
-      "score": 1438.69484169425,
+      "launched_at": 1792851235,
+      "score": 1438.7779977070531,
       "signals": [
-        "github:35295.0"
+        "github:35298.0"
       ],
-      "rank": 35295
+      "rank": 35298
     },
     {
       "id": 172,
@@ -2678,27 +2226,12 @@
       "emoji": "💉",
       "category": "Research & Data",
       "why_it_matters": "Essential dynamic hook framework enabling AI agents to trace system calls and inspect live process memory.",
-      "launched_at": 1792849340,
-      "score": 917.8379869791593,
+      "launched_at": 1792851235,
+      "score": 917.8945472934763,
       "signals": [
-        "github:22517.0"
+        "github:22519.0"
       ],
-      "rank": 22517
-    },
-    {
-      "id": 356,
-      "name": "Douyin TikTok Download API",
-      "tagline": "🚀 自托管的抖音、TikTok、B 站数据采集与无水印视频下载 API，支持 AI agent 通过 MCP 调用与离线语音转文字，Docker 一键部署。| Self-hosted TikTok, Douyin & Bilibili scraper and no-watermark video downloader — async REST API, MCP server for AI ag…",
-      "url": "https://douyin.wtf/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 20,959 verified GitHub stars.",
-      "launched_at": 1636248909,
-      "score": 0.5675558857457267,
-      "signals": [
-        "github:20959.0"
-      ],
-      "rank": 20959
+      "rank": 22519
     },
     {
       "id": 358,
@@ -2707,13 +2240,13 @@
       "url": "https://xerj.org/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 17,275 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 17,284 verified GitHub stars.",
       "launched_at": 1782793965,
-      "score": 12.138710898119964,
+      "score": 12.139560391460462,
       "signals": [
-        "github:17277.0"
+        "github:17282.0"
       ],
-      "rank": 17277
+      "rank": 17282
     },
     {
       "id": 535,
@@ -2722,13 +2255,13 @@
       "url": "https://www.memvid.com/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 17,037 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 17,048 verified GitHub stars.",
       "launched_at": 1748361668,
-      "score": 2.074917068204608,
+      "score": 2.075907319250117,
       "signals": [
-        "github:17039.0"
+        "github:17048.0"
       ],
-      "rank": 17039
+      "rank": 17048
     },
     {
       "id": 536,
@@ -2737,13 +2270,13 @@
       "url": "https://weaviate.io/developers/weaviate/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 16,922 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 16,923 verified GitHub stars.",
       "launched_at": 1459350197,
-      "score": 0.18524637279900247,
+      "score": 0.1852560526915394,
       "signals": [
-        "github:16922.0"
+        "github:16923.0"
       ],
-      "rank": 16922
+      "rank": 16923
     },
     {
       "id": 537,
@@ -2752,13 +2285,13 @@
       "url": "https://zvec.org/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 16,159 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 16,160 verified GitHub stars.",
       "launched_at": 1764920738,
-      "score": 3.4211565742866035,
+      "score": 3.421092054290857,
       "signals": [
-        "github:16159.0"
+        "github:16160.0"
       ],
-      "rank": 16159
+      "rank": 16160
     },
     {
       "id": 510,
@@ -2769,7 +2302,7 @@
       "category": "Research & Data",
       "why_it_matters": "Production open-source framework with 15,048 verified GitHub stars.",
       "launched_at": 1741104854,
-      "score": 1.5306003685377718,
+      "score": 1.5305332800880238,
       "signals": [
         "github:15048.0"
       ],
@@ -2782,13 +2315,13 @@
       "url": "https://getsemantica.ai/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 14,286 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 14,287 verified GitHub stars.",
       "launched_at": 1750848060,
-      "score": 1.8629322766606073,
+      "score": 1.8629622341814864,
       "signals": [
-        "github:14286.0"
+        "github:14287.0"
       ],
-      "rank": 14286
+      "rank": 14287
     },
     {
       "id": 451,
@@ -2797,13 +2330,13 @@
       "url": "http://orchestra-research.com/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 14,042 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 14,043 verified GitHub stars.",
       "launched_at": 1762150386,
-      "score": 2.6575748208383287,
+      "score": 2.6575686375807934,
       "signals": [
-        "github:14042.0"
+        "github:14043.0"
       ],
-      "rank": 14042
+      "rank": 14043
     },
     {
       "id": 513,
@@ -2814,7 +2347,7 @@
       "category": "Research & Data",
       "why_it_matters": "Production open-source framework with 11,787 verified GitHub stars.",
       "launched_at": 1545955092,
-      "score": 0.18501568860869502,
+      "score": 0.18501397979988726,
       "signals": [
         "github:11787.0"
       ],
@@ -2827,28 +2360,13 @@
       "url": "https://digup.arahim.dev/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 5,956 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 5,957 verified GitHub stars.",
       "launched_at": 1791491871,
-      "score": 36.54130146108613,
+      "score": 36.49870241115003,
       "signals": [
-        "github:5956.0"
+        "github:5957.0"
       ],
-      "rank": 5956
-    },
-    {
-      "id": 598,
-      "name": "LLM Engineers Handbook",
-      "tagline": "The LLM's practical guide: From the fundamentals to deploying advanced LLM and RAG apps to AWS using LLMOps best practices",
-      "url": "https://www.amazon.com/LLM-Engineers-Handbook-engineering-production/dp/1836200072/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Production open-source framework with 5,403 verified GitHub stars.",
-      "launched_at": 1712660163,
-      "score": 0.32581421522064596,
-      "signals": [
-        "github:5403.0"
-      ],
-      "rank": 5403
+      "rank": 5957
     },
     {
       "id": 515,
@@ -2859,11 +2377,56 @@
       "category": "Research & Data",
       "why_it_matters": "Production open-source framework with 5,241 verified GitHub stars.",
       "launched_at": 1721776213,
-      "score": 0.36504697006956305,
+      "score": 0.36503529931208945,
       "signals": [
         "github:5241.0"
       ],
       "rank": 5241
+    },
+    {
+      "id": 543,
+      "name": "memgraph",
+      "tagline": "High-performance open-source in-memory graph database for GraphRAG, AI memory, agentic AI, and real-time graph analytics. Cypher-compatible, built in C++.",
+      "url": "https://memgraph.com/",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Production open-source framework with 4,634 verified GitHub stars.",
+      "launched_at": 1600683244,
+      "score": 0.09820765544884914,
+      "signals": [
+        "github:4634.0"
+      ],
+      "rank": 4634
+    },
+    {
+      "id": 544,
+      "name": "LongMemory",
+      "tagline": "Local persistent memory store for LLM applications including claude desktop, github copilot, codex, antigravity, etc.",
+      "url": "https://cavira.app/projects/longmemory",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Production open-source framework with 4,548 verified GitHub stars.",
+      "launched_at": 1760890369,
+      "score": 0.8205723259949497,
+      "signals": [
+        "github:4548.0"
+      ],
+      "rank": 4548
+    },
+    {
+      "id": 611,
+      "name": "contextgem",
+      "tagline": "Extract structured data and insights from documents using LLMs and decision models",
+      "url": "https://contextgem.shcherbak.ai/",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Production open-source framework with 2,030 verified GitHub stars.",
+      "launched_at": 1728678969,
+      "score": 0.15972883757433304,
+      "signals": [
+        "github:2030.0"
+      ],
+      "rank": 2030
     },
     {
       "id": 177,
@@ -2873,12 +2436,12 @@
       "emoji": "🦙",
       "category": "Models & Infra",
       "why_it_matters": "The undisputed runtime for local LLMs, packaging model weights, GPU acceleration, and REST APIs into zero-fuss binaries.",
-      "launched_at": 1793108540,
-      "score": 37017.493951812445,
+      "launched_at": 1793110435,
+      "score": 37013.50516349769,
       "signals": [
-        "github:185099.0"
+        "github:185098.0"
       ],
-      "rank": 185099
+      "rank": 185098
     },
     {
       "id": 412,
@@ -2887,13 +2450,13 @@
       "url": "https://huggingface.co/transformers",
       "emoji": null,
       "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 1,68,271 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 1,68,274 verified GitHub stars.",
       "launched_at": 1540821360,
-      "score": 2.5769403196965412,
+      "score": 2.576962945417435,
       "signals": [
-        "github:168271.0"
+        "github:168274.0"
       ],
-      "rank": 168271
+      "rank": 168274
     },
     {
       "id": 179,
@@ -2903,27 +2466,12 @@
       "emoji": "🧱",
       "category": "Models & Infra",
       "why_it_matters": "The architectural foundation of consumer LLM inference that created the ubiquitous GGUF quantization ecosystem.",
-      "launched_at": 1792935740,
-      "score": 7571.2776628342035,
+      "launched_at": 1792937635,
+      "score": 7571.062110297581,
       "signals": [
-        "github:132620.0"
+        "github:132621.0"
       ],
-      "rank": 132620
-    },
-    {
-      "id": 417,
-      "name": "LLMs from scratch",
-      "tagline": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
-      "url": "https://amzn.to/4fqvn0D",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 1,07,440 verified GitHub stars.",
-      "launched_at": 1690136157,
-      "score": 4.819363070484199,
-      "signals": [
-        "github:107440.0"
-      ],
-      "rank": 107440
+      "rank": 132621
     },
     {
       "id": 178,
@@ -2933,12 +2481,12 @@
       "emoji": "🚀",
       "category": "Models & Infra",
       "why_it_matters": "State-of-the-art enterprise serving engine that maximizes GPU KV cache utilization and cuts serving costs by 4–8x.",
-      "launched_at": 1793022140,
-      "score": 8747.333945456838,
+      "launched_at": 1793024035,
+      "score": 8747.233296607677,
       "signals": [
-        "github:95758.0"
+        "github:95762.0"
       ],
-      "rank": 95758
+      "rank": 95762
     },
     {
       "id": 180,
@@ -2948,8 +2496,8 @@
       "emoji": "🖥️",
       "category": "Models & Infra",
       "why_it_matters": "The most polished desktop application for developers to test, benchmark, and serve local open-weight models with zero setup.",
-      "launched_at": 1793022140,
-      "score": 8678.091906873573,
+      "launched_at": 1793024035,
+      "score": 8677.62957308462,
       "signals": [
         "app:95000.0"
       ],
@@ -2962,13 +2510,13 @@
       "url": "https://llamafactory.readthedocs.io/",
       "emoji": null,
       "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 75,757 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 75,758 verified GitHub stars.",
       "launched_at": 1685268552,
-      "score": 3.2151181603023624,
+      "score": 3.2150925770056897,
       "signals": [
-        "github:75757.0"
+        "github:75758.0"
       ],
-      "rank": 75757
+      "rank": 75758
     },
     {
       "id": 676,
@@ -2977,28 +2525,13 @@
       "url": "https://www.newapi.ai/",
       "emoji": null,
       "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 50,872 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 50,875 verified GitHub stars.",
       "launched_at": 1699644816,
-      "score": 2.5629930754305494,
+      "score": 2.563081657921872,
       "signals": [
-        "github:50872.0"
+        "github:50875.0"
       ],
-      "rank": 50872
-    },
-    {
-      "id": 119,
-      "name": "dsh our free model",
-      "tagline": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there…",
-      "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 48,329 verified GitHub stars.",
-      "launched_at": 1790266639,
-      "score": 155.0733824913866,
-      "signals": [
-        "github:48331.0"
-      ],
-      "rank": 48331
+      "rank": 50875
     },
     {
       "id": 531,
@@ -3009,26 +2542,11 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source framework with 46,510 verified GitHub stars.",
       "launched_at": 1568616223,
-      "score": 0.8193130786146441,
+      "score": 0.8193047478858462,
       "signals": [
         "github:46510.0"
       ],
       "rank": 46510
-    },
-    {
-      "id": 405,
-      "name": "GPT API free",
-      "tagline": "免费大模型API，支持免费调用GPT、DeepSeek等主流模型，免费额度10000点，每日刷新！另付费价格最低官方1-2折！",
-      "url": "https://api.chatanywhere.tech/",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 44,983 verified GitHub stars.",
-      "launched_at": 1682253728,
-      "score": 1.8469929562869125,
-      "signals": [
-        "github:44983.0"
-      ],
-      "rank": 44983
     },
     {
       "id": 418,
@@ -3037,13 +2555,13 @@
       "url": "https://github.com/lyogavin/airllm",
       "emoji": null,
       "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 41,066 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 41,071 verified GitHub stars.",
       "launched_at": 1686587321,
-      "score": 1.7687376101625119,
+      "score": 1.7689150745260895,
       "signals": [
-        "github:41066.0"
+        "github:41071.0"
       ],
-      "rank": 41066
+      "rank": 41071
     },
     {
       "id": 523,
@@ -3052,13 +2570,13 @@
       "url": "https://github.com/AlexsJones/llmfit",
       "emoji": null,
       "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 38,442 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 38,441 verified GitHub stars.",
       "launched_at": 1771171891,
-      "score": 10.983514099862447,
+      "score": 10.982090007350424,
       "signals": [
-        "github:38442.0"
+        "github:38441.0"
       ],
-      "rank": 38442
+      "rank": 38441
     },
     {
       "id": 631,
@@ -3069,7 +2587,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source framework with 38,313 verified GitHub stars.",
       "launched_at": 1704687352,
-      "score": 2.0629517529196053,
+      "score": 2.0628985320344153,
       "signals": [
         "github:38313.0"
       ],
@@ -3082,13 +2600,13 @@
       "url": "https://langfuse.com/",
       "emoji": null,
       "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 36,642 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 36,643 verified GitHub stars.",
       "launched_at": 1684432029,
-      "score": 1.5407415650826595,
+      "score": 1.5407512659233698,
       "signals": [
-        "github:36642.0"
+        "github:36643.0"
       ],
-      "rank": 36642
+      "rank": 36643
     },
     {
       "id": 585,
@@ -3099,26 +2617,11 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source framework with 28,570 verified GitHub stars.",
       "launched_at": 1528214758,
-      "score": 0.41266975875456463,
+      "score": 0.412666202492558,
       "signals": [
         "github:28570.0"
       ],
       "rank": 28570
-    },
-    {
-      "id": 586,
-      "name": "llm action",
-      "tagline": "本项目旨在分享大模型相关技术原理以及实战经验（大模型工程化、大模型应用落地）",
-      "url": "https://www.zhihu.com/column/c_1456193767213043713",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 25,228 verified GitHub stars.",
-      "launched_at": 1684819756,
-      "score": 1.065355357331967,
-      "signals": [
-        "github:25228.0"
-      ],
-      "rank": 25228
     },
     {
       "id": 509,
@@ -3129,7 +2632,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source framework with 21,854 verified GitHub stars.",
       "launched_at": 1669348269,
-      "score": 0.786324231980333,
+      "score": 0.7863097341130386,
       "signals": [
         "github:21854.0"
       ],
@@ -3138,32 +2641,17 @@
     {
       "id": 497,
       "name": "Chinese LLaMA Alpaca",
-      "tagline": "中文LLaMA&Alpaca大语言模型+本地CPU/GPU训练部署 (Chinese LLaMA & Alpaca LLMs)",
+      "tagline": "LLaMA&Alpaca + CPU/GPU Chinese LLaMA & Alpaca LLMs",
       "url": "https://github.com/ymcui/Chinese-LLaMA-Alpaca/wiki",
       "emoji": null,
       "category": "Models & Infra",
       "why_it_matters": "Production open-source framework with 18,923 verified GitHub stars.",
       "launched_at": 1678878579,
-      "score": 0.7495304046149381,
+      "score": 0.7495154331295554,
       "signals": [
         "github:18923.0"
       ],
       "rank": 18923
-    },
-    {
-      "id": 450,
-      "name": "llama cookbook",
-      "tagline": "Welcome to the Llama Cookbook! This is your go to guide for Building with Llama: Getting started with Inference, Fine-Tuning, RAG. We also show you how to solve end to end problems using Llama model…",
-      "url": "https://www.llama.com/",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 18,578 verified GitHub stars.",
-      "launched_at": 1689579228,
-      "score": 0.8279690023495322,
-      "signals": [
-        "github:18578.0"
-      ],
-      "rank": 18578
     },
     {
       "id": 517,
@@ -3174,7 +2662,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source framework with 15,975 verified GitHub stars.",
       "launched_at": 1690902399,
-      "score": 0.7230252832643849,
+      "score": 0.7230091437927679,
       "signals": [
         "github:15975.0"
       ],
@@ -3189,7 +2677,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source framework with 13,317 verified GitHub stars.",
       "launched_at": 1687275029,
-      "score": 0.5780427216696681,
+      "score": 0.5780302603653226,
       "signals": [
         "github:13317.0"
       ],
@@ -3204,7 +2692,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source framework with 12,640 verified GitHub stars.",
       "launched_at": 1681446347,
-      "score": 0.514499738847463,
+      "score": 0.5144892258564105,
       "signals": [
         "github:12640.0"
       ],
@@ -3219,7 +2707,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Production open-source framework with 12,572 verified GitHub stars.",
       "launched_at": 1681864072,
-      "score": 0.5140366566353647,
+      "score": 0.5140261136996895,
       "signals": [
         "github:12572.0"
       ],
@@ -3232,13 +2720,88 @@
       "url": "https://lmcache.ai/",
       "emoji": null,
       "category": "Models & Infra",
-      "why_it_matters": "Production open-source framework with 12,202 verified GitHub stars.",
+      "why_it_matters": "Production open-source framework with 12,203 verified GitHub stars.",
       "launched_at": 1716930364,
-      "score": 0.7855823495592796,
+      "score": 0.7855588296891236,
       "signals": [
         "github:12203.0"
       ],
       "rank": 12203
+    },
+    {
+      "id": 594,
+      "name": "phoenix",
+      "tagline": "AI Observability & Evaluation",
+      "url": "https://arize.com/docs/phoenix",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Production open-source framework with 12,044 verified GitHub stars.",
+      "launched_at": 1668037475,
+      "score": 0.4279046090176797,
+      "signals": [
+        "github:12044.0"
+      ],
+      "rank": 12044
+    },
+    {
+      "id": 654,
+      "name": "openvino",
+      "tagline": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "url": "https://docs.openvino.ai/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Production open-source framework with 11,082 verified GitHub stars.",
+      "launched_at": 1539600880,
+      "score": 0.16873111155079404,
+      "signals": [
+        "github:11082.0"
+      ],
+      "rank": 11082
+    },
+    {
+      "id": 632,
+      "name": "runanywhere sdks",
+      "tagline": "Production ready toolkit to run AI locally",
+      "url": "https://www.runanywhere.ai/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Production open-source framework with 10,334 verified GitHub stars.",
+      "launched_at": 1753147414,
+      "score": 1.4408533265685979,
+      "signals": [
+        "github:10334.0"
+      ],
+      "rank": 10334
+    },
+    {
+      "id": 439,
+      "name": "Soup",
+      "tagline": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
+      "url": "https://trysoup.dev/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Production open-source framework with 9,750 verified GitHub stars.",
+      "launched_at": 1771585501,
+      "score": 2.8495184668007005,
+      "signals": [
+        "github:9750.0"
+      ],
+      "rank": 9750
+    },
+    {
+      "id": 455,
+      "name": "inference",
+      "tagline": "Swap GPT for any LLM by changing a single line of code. Xinference lets you run open-source, speech, and multimodal models on cloud, on-prem, or your laptop — all through one unified, production-read…",
+      "url": "https://inference.readthedocs.io/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Production open-source framework with 9,630 verified GitHub stars.",
+      "launched_at": 1686726304,
+      "score": 0.41541081398683954,
+      "signals": [
+        "github:9630.0"
+      ],
+      "rank": 9630
     }
   ]
 }
