@@ -39,8 +39,12 @@ export async function refreshLiveMetrics() {
 
   // 1. Process GitHub Repositories
   const ghItems = [];
+  // Repos whose card links to a homepage (e.g. ecc.tools) are still tracked via the repo stored on their GitHub signal
+  const signalRepos = new Map(
+    db.prepare(`SELECT item_id, source_id FROM signals WHERE source = 'github'`).all().map(r => [r.item_id, r.source_id])
+  );
   for (const row of rows) {
-    const repo = extractGitHubRepo(row.url);
+    const repo = extractGitHubRepo(row.url) || signalRepos.get(row.id);
     if (repo) ghItems.push({ rowId: row.id, name: row.name, repo });
   }
 

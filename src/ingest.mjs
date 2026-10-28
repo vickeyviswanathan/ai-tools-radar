@@ -73,7 +73,7 @@ export async function runIngestion() {
 
     for (const item of rawItems) {
       const isPreFeatured = FEATURED_LEADERS.some(f => f.url === item.url);
-      let whyItMatters = item.whyItMatters;
+      let whyItMatters = item.whyItMatters ?? null;
 
       if (!isPreFeatured) {
         const qCheck = evaluateQuality(item);
