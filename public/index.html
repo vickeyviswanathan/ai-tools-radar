@@ -364,6 +364,7 @@
     margin-bottom: 80px;
   }
   .tool-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 22px;
@@ -385,6 +386,24 @@
     align-items: flex-start;
     gap: 14px;
     margin-bottom: 12px;
+  }
+  .share-btn {
+    flex: none;
+    width: 32px; height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--line);
+    color: #94a3b8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .share-btn:hover {
+    color: #fff;
+    border-color: var(--accent);
+    background: rgba(59, 130, 246, 0.15);
   }
   .tool-icon {
     width: 46px; height: 46px;
@@ -756,6 +775,7 @@ const REALITIES_DATA = [
 ];
 
 let allTools = [];
+let renderedTools = [];
 let activeCat = "";
 let searchQ = "";
 
@@ -767,6 +787,32 @@ function showToast(msg) {
   t.textContent = msg;
   t.classList.add("show");
   setTimeout(() => t.classList.remove("show"), 2800);
+}
+
+// Share a single tool: the message carries the tool's own link (e.g. its GitHub repo).
+function shareTool(ev, idx) {
+  // The card is a link; keep the click from opening it.
+  ev.preventDefault();
+  ev.stopPropagation();
+  const tool = renderedTools[idx];
+  if (!tool) return;
+
+  const siteUrl = "https://vickeyviswanathan.github.io/ai-tools-radar/";
+  const text = `${tool.name}: ${tool.tagline}\n${tool.url}\n\nvia AI Tools Radar: ${siteUrl}`;
+
+  // On phones, open the share sheet so WhatsApp is one tap away.
+  const isTouch = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+  if (isTouch && navigator.share) {
+    navigator.share({ text }).catch(() => {});
+    return;
+  }
+
+  const done = () => showToast(`Copied ${tool.name} - ready to paste into WhatsApp`);
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => showToast("Could not copy - please copy the link from the card"));
+  } else {
+    showToast("Could not copy - please copy the link from the card");
+  }
 }
 
 function copyReality(idx) {
@@ -814,6 +860,7 @@ function render() {
   empty.style.display = "none";
 
   let html = "";
+  renderedTools = filtered;
   filtered.forEach((tool, idx) => {
     html += `
       <a class="tool-card" href="${esc(tool.url)}" target="_blank" rel="noopener">
@@ -823,6 +870,9 @@ function render() {
             <div class="tool-name">${esc(tool.name)} <span class="tool-name-link">↗</span></div>
             <p class="tool-tag">${esc(tool.tagline)}</p>
           </div>
+          <button class="share-btn" type="button" title="Share this tool" aria-label="Share ${esc(tool.name)}" onclick="shareTool(event, ${idx})">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         ${tool.why_it_matters ? `<div class="why-box"><strong>Why it matters:</strong> ${esc(tool.why_it_matters)}</div>` : ""}
         <div class="tool-meta">
