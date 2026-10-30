@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-30T18:39:39.041Z",
+  "updatedAt": "2026-10-30T19:02:41.687Z",
   "categories": [
     {
       "id": "all",
       "label": "🔥 All Cybersecurity News",
-      "count": 14
+      "count": 16
     },
     {
       "id": "india-bfsi",
@@ -14,7 +14,7 @@
     {
       "id": "crypto-heists",
       "label": "🌐 Crypto & Exchange Heists",
-      "count": 2
+      "count": 4
     },
     {
       "id": "global-ransomware",
@@ -35,7 +35,7 @@
       "badgeType": "regulatory",
       "ref": "Moneycontrol.com Live Wire",
       "date": "2026-10-30",
-      "timeAgo": "10 hours ago",
+      "timeAgo": "11 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
       "incident": "AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank investigates suspected Salesforce data breach; AU Small Finance Bank breach reported, hackers threaten to leak Aadhaar and customer records. Verified across multiple open wires including: BusinessLine, India Today, ThePrint, Business Standard.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
@@ -125,11 +125,29 @@
       "badgeType": "regulatory",
       "ref": "Lawful Talks Live Wire",
       "date": "2026-10-30",
-      "timeAgo": "2 hours ago",
+      "timeAgo": "3 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
       "incident": "Fraud Due to Bank Negligence? Supreme Court Says the Bank Pays.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on Lawful Talks."
+    },
+    {
+      "id": "live-crypto-heists-1959085837",
+      "category": "crypto-heists",
+      "severity": "high",
+      "impactBadge": "🔒 Assets Frozen",
+      "title": "‘Biggest hack in history’: Crypto giant freezes assets after $8.9b heist",
+      "sourceName": "SMH.com.au",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOenpUcWJESExLSm14QmdHTHF1T0dXR09jTVpCRDgxbVFKUVN5T0J3VjM0VHFhR1VNNzBmaUE1bHdaSllxaDZObHhJN001X0ZSaWh3T3ZzbTFob29Ub0ZCR2RuWlZTYlM3dUZVSnBWWHNsRjJCN1lBcDBWcHc0ZF90THhpMU91aXBkenBQc25icXRvNjFBN0U3TnNkX1hNaFZta0Uyc3hjLXNrT1JuajhwUzFoRElwNGtXM1EyaUczR2xDYVd1VklHTA?oc=5",
+      "provenanceBadge": "⛓️ Crypto Wire",
+      "badgeType": "onchain",
+      "ref": "SMH.com.au Live Wire",
+      "date": "2026-10-30",
+      "timeAgo": "12 hours ago",
+      "entities": "Binance, Global Exchanges & Digital Assets",
+      "incident": "‘Biggest hack in history’: Crypto giant freezes assets after $8.9b heist.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on SMH.com.au."
     },
     {
       "id": "live-crypto-heists-15917467890",
@@ -168,22 +186,22 @@
       "consequence": "Read open-access reporting on Reuters."
     },
     {
-      "id": "live-global-ransomware-5707601159",
-      "category": "global-ransomware",
+      "id": "live-crypto-heists-3576309623",
+      "category": "crypto-heists",
       "severity": "high",
       "impactBadge": "🚨 Breaking Wire",
-      "title": "New cybersecurity blind spot: When AI looks like a trusted employee",
-      "sourceName": "The Financial Express",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5",
-      "provenanceBadge": "🏛️ Statutory Wire",
-      "badgeType": "statutory",
-      "ref": "The Financial Express Live Wire",
-      "date": "2026-10-30",
-      "timeAgo": "9 hours ago",
-      "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "New cybersecurity blind spot: When AI looks like a trusted employee.",
+      "title": "Bitcoin ‘Goes to Zero’ After a Hack, Chamath Palihapitiya Predicts",
+      "sourceName": "Yahoo Finance",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOalREVGdETGFHV0VfWnhRdWVhVTVGbGJkcjk5NHo2R3pTM3FyTXBDQVpVUmFOS1I4V1phNGNFREZrd1Y3T2J2dGZEaElIbzhPNU05M0ZoVzlDTV9TSlNNcUZnNXE5MVlSNUFjWEFGblRrOGhmOGxuNFNBNUFNVng0MjdwVjdETDZSd0xyRzZSdU9LaVI0NlhrRlZqVQ?oc=5",
+      "provenanceBadge": "⛓️ Crypto Wire",
+      "badgeType": "onchain",
+      "ref": "Yahoo Finance Live Wire",
+      "date": "2026-10-23",
+      "timeAgo": "6 days ago",
+      "entities": "Binance, Global Exchanges & Digital Assets",
+      "incident": "Bitcoin ‘Goes to Zero’ After a Hack, Chamath Palihapitiya Predicts.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on The Financial Express."
+      "consequence": "Read open-access reporting on Yahoo Finance."
     },
     {
       "id": "live-global-ransomware-12643287449",
@@ -204,6 +222,24 @@
       "consequence": "Read open-access reporting on Reuters."
     },
     {
+      "id": "live-global-ransomware-5660613474",
+      "category": "global-ransomware",
+      "severity": "high",
+      "impactBadge": "🚨 Breaking Wire",
+      "title": "Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users",
+      "sourceName": "Deccan Chronicle",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5",
+      "provenanceBadge": "🏛️ Statutory Wire",
+      "badgeType": "statutory",
+      "ref": "Deccan Chronicle Live Wire",
+      "date": "2026-10-29",
+      "timeAgo": "1 day ago",
+      "entities": "Global Enterprise Infrastructure & Critical Systems",
+      "incident": "Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on Deccan Chronicle."
+    },
+    {
       "id": "live-global-ransomware-5107877601",
       "category": "global-ransomware",
       "severity": "high",
@@ -222,58 +258,58 @@
       "consequence": "Read open-access reporting on Reuters."
     },
     {
-      "id": "live-global-ransomware-9023916946",
-      "category": "global-ransomware",
-      "severity": "high",
-      "impactBadge": "🔒 Assets Frozen",
-      "title": "Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say",
-      "sourceName": "New York Post",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5",
-      "provenanceBadge": "🏛️ Statutory Wire",
-      "badgeType": "statutory",
-      "ref": "New York Post Live Wire",
-      "date": "2026-10-29",
-      "timeAgo": "1 day ago",
-      "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say.",
-      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on New York Post."
-    },
-    {
-      "id": "live-global-ransomware-1246487518",
+      "id": "live-global-ransomware-5792857321",
       "category": "global-ransomware",
       "severity": "high",
       "impactBadge": "⚠️ Data Breach",
-      "title": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees",
-      "sourceName": "Deccan Chronicle",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5",
-      "provenanceBadge": "🏛️ Statutory Wire",
+      "title": "Three South Korean financial firms including Bithumb report data breaches, Yonhap says",
+      "sourceName": "Reuters",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5",
+      "provenanceBadge": "🚨 Reuters Wire",
       "badgeType": "statutory",
-      "ref": "Deccan Chronicle Live Wire",
-      "date": "2026-10-29",
-      "timeAgo": "1 day ago",
+      "ref": "Reuters Live Wire",
+      "date": "2026-10-28",
+      "timeAgo": "2 days ago",
       "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees.",
+      "incident": "Three South Korean financial firms including Bithumb report data breaches, Yonhap says.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on Deccan Chronicle."
+      "consequence": "Read open-access reporting on Reuters."
     },
     {
-      "id": "live-global-ransomware-6179949802",
+      "id": "live-global-ransomware-25291081211",
       "category": "global-ransomware",
       "severity": "high",
-      "impactBadge": "🚨 Breaking Wire",
-      "title": "Major hack exposes details of thousands of US immigration agents",
-      "sourceName": "Latest news from Azerbaijan",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSExNWFFFbkJvYnFEbnFQTXhjcExDMWxyaVFJNWlkRXpjTmhDYUJnRlZSeno1bTFlcXVvVW5vcWYwRllyVXdVa2gtakhnVkV1dWhQMTk5QnZFcEdTWVlQOU95OVRKRGFnclk0M2JlV3YzNG9nUU5DUzJMVUQtSU5xX2hiWl9RQzlBWW9nZHFn?oc=5",
-      "provenanceBadge": "🏛️ Statutory Wire",
+      "impactBadge": "🚨 Reuters Exclusive",
+      "title": "EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms",
+      "sourceName": "Reuters",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDV3WWJ5Ulh3Q05tT203WGNGVE1UNmFvZ2ZoclFXemtrWXFhNlRhUmtabmlPZXRaYU1sQ251VWhSSWJMODNJQkRrMk9MNFdfb1RVT2VJQTR4akpfM0JQNk9wMkpMV2tFY2tHc2ZpTGMwcHlLNFU3UDBrZk5MbGFrb2ZqX25XRVZCQmI5Z29LbDI5cjF2S0JodjVNcVVmV3RyUFR1SW5RZUwwY2JlSWJrRUMyNEgta3dl?oc=5",
+      "provenanceBadge": "🚨 Reuters Wire",
       "badgeType": "statutory",
-      "ref": "Latest news from Azerbaijan Live Wire",
-      "date": "2026-10-29",
-      "timeAgo": "1 day ago",
+      "ref": "Reuters Live Wire",
+      "date": "2026-10-27",
+      "timeAgo": "3 days ago",
       "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "Major hack exposes details of thousands of US immigration agents.",
+      "incident": "EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on Latest news from Azerbaijan."
+      "consequence": "Read open-access reporting on Reuters."
+    },
+    {
+      "id": "live-global-ransomware-14143546150",
+      "category": "global-ransomware",
+      "severity": "high",
+      "impactBadge": "🚨 Reuters Exclusive",
+      "title": "EXCLUSIVE: How one hacker used AI agents and a few thousand dollars to break into scores of sites",
+      "sourceName": "Reuters",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSUVKUWRvY0tQeUZscHhGcDBLYjI5VVZaYXRFRklFbmEzX29RaVFuMmt6cDlpMURENUtWRFpBQVBnNngwcWJla3NJZllZVDFBb2NKU21YUnBkMTNKb1NEM3BNLXk2OXpVbVpyZXM3NHVaOUNrWGZzRWhGQlRFSDhPa0E4TVdCTnBuZjNBS2R2UU9ySzV1c2hCbUVycmFHUTNpVk1vX0kxSEEyMUllRlpsakRfNEdZUlJUWVBVRTFqYkZiYm5jR1E?oc=5",
+      "provenanceBadge": "🚨 Reuters Wire",
+      "badgeType": "statutory",
+      "ref": "Reuters Live Wire",
+      "date": "2026-10-26",
+      "timeAgo": "4 days ago",
+      "entities": "Global Enterprise Infrastructure & Critical Systems",
+      "incident": "EXCLUSIVE: How one hacker used AI agents and a few thousand dollars to break into scores of sites.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on Reuters."
     }
   ]
 }
