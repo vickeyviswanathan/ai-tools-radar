@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="32" viewBox="0 0 210 32" role="img" aria-label="Cipherati: Featured Tool">
+  <title>Featured on Cipherati</title>
+  <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#0f172a"/>
+    <stop offset="55%" stop-color="#0f172a"/>
+    <stop offset="55%" stop-color="#0284c7"/>
+    <stop offset="100%" stop-color="#06b6d4"/>
+  </linearGradient>
+  <clipPath id="clip">
+    <rect width="210" height="32" rx="6"/>
+  </clipPath>
+  <g clip-path="url(#clip)">
+    <rect width="210" height="32" fill="url(#bg)"/>
+    <circle cx="16" cy="16" r="5" fill="#10b981"/>
+    <circle cx="16" cy="16" r="8" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.6"/>
+    <!-- Radar dot -->
+    <text x="32" y="20" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">CIPHERATI</text>
+    <text x="122" y="20" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">FEATURED TOOL</text>
+  </g>
+  <rect width="210" height="32" rx="6" fill="none" stroke="#334155" stroke-width="1"/>
+</svg>
