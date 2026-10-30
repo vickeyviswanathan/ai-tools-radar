@@ -1,6 +1,7 @@
 // Thought-Leader Quality Gate & Anti-Wrapper Filters
 import { cleanUrl } from "./classify.mjs";
 import { isEditoriallyBlocked } from "./blocklist.mjs";
+import { signalWhySentence } from "./seo-publish.mjs";
 
 // Thin wrappers, toy clones, course tutorials, or generic personal hobby posts
 const REJECT_PATTERNS = [
@@ -31,10 +32,6 @@ const PLACEHOLDER_TAGLINE = /^(open-source ai tool \/ repository|high-utility op
 
 // Promo fragments scrapers pick up from READMEs that add no information.
 const PROMO_FRAGMENT = /\s*(only\s+)?official\s+(website|site|repo(sitory)?)\s*[:=]?\s*\S+\.?\s*$/i;
-
-// Compact, locale-independent number formatting (291K / 1.4M) so the site
-// never shows environment-dependent grouping like "2,91,410".
-const fmtCompact = (n) => new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(n);
 
 const FREE_SUBDOMAIN_PATTERNS = [
   /\.vercel\.app$/i,
@@ -119,17 +116,8 @@ export function evaluateQuality(item) {
     }
   }
 
-  // 4. Clean editorial summary
-  let whyItMatters = "";
-  if (item.source === "github") {
-    whyItMatters = `Production open-source framework with ${fmtCompact(item.metric)} verified GitHub stars.`;
-  } else if (item.source === "hn") {
-    whyItMatters = `Peer-vetted engineering discussion with ${item.metric} upvotes on Hacker News.`;
-  } else if (item.source === "huggingface") {
-    whyItMatters = `Top-trending community model with ${item.metric} likes on Hugging Face.`;
-  } else {
-    whyItMatters = "Verified high-utility AI tool vetted for production.";
-  }
+  // 4. Clean editorial summary: one line of adoption proof, not badge repetition
+  const whyItMatters = signalWhySentence(item.source, item.metric);
 
   return { pass: true, whyItMatters, cleanTagline };
 }

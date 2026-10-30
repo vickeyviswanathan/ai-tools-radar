@@ -5,7 +5,7 @@ import { getDb, now, getMeta } from "./src/db.mjs";
 import { runIngestion } from "./src/ingest.mjs";
 import { evaluateQuality } from "./src/quality.mjs";
 import { refreshLiveMetrics } from "./src/live-metrics.mjs";
-import { publishSeoArtifacts } from "./src/seo-publish.mjs";
+import { publishSeoArtifacts, normalizeWhyItMatters } from "./src/seo-publish.mjs";
 
 async function build() {
   console.log("Ingesting latest top-tier tools...");
@@ -105,7 +105,7 @@ async function build() {
   const output = {
     updatedAt: new Date().toISOString(),
     categories,
-    tools
+    tools: normalizeWhyItMatters(tools)
   };
 
   mkdirSync("./public/data", { recursive: true });

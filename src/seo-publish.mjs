@@ -8,6 +8,36 @@ const SITE_URL = "https://vickeyviswanathan.github.io/ai-tools-radar/";
 const esc = (s) => String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const BOILERPLATE_WHY = /verified GitHub stars\.$|upvotes on Hacker News\.$|likes on Hugging Face\.$|vetted for production\.$/;
 
+const fmtCompact = (n) => new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(n);
+
+// One-line adoption proof, phrased as information rather than badge repetition.
+// Used for fresh ingests (quality.mjs) and to backfill older stored rows at build.
+export function signalWhySentence(source, metric) {
+  const n = fmtCompact(metric || 0);
+  if (source === "github") return `Battle-tested in the open — ${n} GitHub stars from real production users.`;
+  if (source === "hn") return `Earned ${metric} upvotes of practitioner scrutiny on Hacker News.`;
+  if (source === "huggingface") return `Trending with the builder community — ${n} Hugging Face likes.`;
+  return "Editorially vetted as a production-ready AI tool.";
+}
+
+// Older stored rows carry boilerplate why_it_matters text. Rewrite those from
+// live signals so every card — existing or newly ingested — says something useful.
+export function normalizeWhyItMatters(tools) {
+  for (const t of tools) {
+    if (t.why_it_matters && !BOILERPLATE_WHY.test(t.why_it_matters)) continue;
+    const metricOf = (src) => {
+      const s = (t.signals || []).find(x => x.startsWith(src + ":"));
+      return s ? Number(s.split(":")[1]) || 0 : 0;
+    };
+    const gh = metricOf("github"), hf = metricOf("huggingface"), hn = metricOf("hn");
+    if (gh) t.why_it_matters = signalWhySentence("github", gh);
+    else if (hf) t.why_it_matters = signalWhySentence("huggingface", hf);
+    else if (hn) t.why_it_matters = signalWhySentence("hn", hn);
+    else t.why_it_matters = signalWhySentence("app", 0);
+  }
+  return tools;
+}
+
 function staticSignals(signals = []) {
   return signals.map(s => {
     const [src, metric] = s.split(":");
