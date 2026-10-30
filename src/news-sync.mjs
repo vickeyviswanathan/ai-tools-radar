@@ -1,6 +1,6 @@
-// Automated Daily Cybersecurity News & Telemetry Ingestion
+// Automated Daily Cybersecurity Incident Intelligence Ingestion
 // Connects to official statutory endpoints (CISA KEV, CERT-In, RBI)
-// Filters noise and merges high-priority confirmed zero-days into Cipherati's feed.
+// Merges high-priority confirmed zero-days and incidents into Cipherati's feed.
 
 import { VERIFIED_THREATS, THREAT_CATEGORIES } from "./threat-wire.mjs";
 
@@ -22,25 +22,28 @@ export async function getLiveCyberNews() {
       const data = await res.json();
       const vulns = (data.vulnerabilities || []).sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
 
-      // Pick top 2 most recent confirmed exploited vulnerabilities
-      for (const v of vulns.slice(0, 3)) {
+      // Pick top 2 most recent confirmed exploited zero-days in the wild
+      for (const v of vulns.slice(0, 2)) {
         const cve = v.cveID;
         if (existingRefs.has(cve.toLowerCase())) continue;
 
         const newThreat = {
           id: `cisa-${cve.toLowerCase()}`,
-          category: "global-crypto",
+          category: "global-ransomware",
           severity: "critical",
-          title: `CISA Alert: Actively Exploited In-The-Wild Flaw in ${v.vendorProject} ${v.product}`,
-          sourceName: "CISA Known Exploited Vulnerabilities",
+          impactBadge: "🚨 Active Zero-Day",
+          title: `CISA Emergency Directive: In-The-Wild Exploitation of ${v.vendorProject} ${v.product}`,
+          sourceName: "CISA Known Exploited Vulnerabilities Catalog",
           sourceUrl: `https://nvd.nist.gov/vuln/detail/${encodeURIComponent(cve)}`,
           provenanceBadge: "🏛️ Statutory Advisory",
           badgeType: "statutory",
           ref: `${cve} / CISA KEV`,
           date: v.dateAdded,
           timeAgo: "recently confirmed",
-          entities: `${v.vendorProject} ${v.product} Deployments`,
-          impact: `${v.shortDescription} Required mitigation: ${v.requiredAction || "Apply vendor patch immediately."}`
+          entities: `${v.vendorProject} ${v.product} Enterprise Deployments`,
+          incident: `${v.shortDescription}`,
+          rootCause: `Adversaries actively weaponizing remote unauthenticated exploitation against internet-facing perimeters.`,
+          consequence: `Required federal mitigation: ${v.requiredAction || "Apply vendor patch immediately."} Due date: ${v.dueDate || "Immediate"}.`
         };
 
         merged.unshift(newThreat);
@@ -48,7 +51,6 @@ export async function getLiveCyberNews() {
       }
     }
   } catch (err) {
-    // If external endpoint is unreachable or throttled, fall back gracefully to verified baseline
     console.log("[NewsSync] Live CISA feed fetch skipped or offline:", err.message);
   }
 

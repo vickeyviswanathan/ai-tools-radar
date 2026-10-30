@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T12:21:14.104Z",
+  "updatedAt": "2026-10-30T12:58:38.588Z",
   "categories": [
     "Coding",
     "Agents & Automation",
@@ -22,11 +22,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 293.1K GitHub stars from real production users.",
       "launched_at": 1768697511,
-      "score": 73.08829283776022,
+      "score": 73.08303850438945,
       "signals": [
-        "github:293050.0"
+        "github:293061.0"
       ],
-      "rank": 293050
+      "rank": 293061
     },
     {
       "id": 286,
@@ -37,11 +37,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 150.3K GitHub stars from real production users.",
       "launched_at": 1754316976,
-      "score": 21.605504893064854,
+      "score": 21.606598389921665,
       "signals": [
-        "github:150310.0"
+        "github:150328.0"
       ],
-      "rank": 150310
+      "rank": 150328
     },
     {
       "id": 288,
@@ -52,11 +52,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 139.1K GitHub stars from real production users.",
       "launched_at": 1775231347,
-      "score": 50.187980131577724,
+      "score": 50.190610692162615,
       "signals": [
-        "github:139112.0"
+        "github:139140.0"
       ],
-      "rank": 139112
+      "rank": 139140
     },
     {
       "id": 255,
@@ -66,27 +66,12 @@
       "emoji": "🧠",
       "category": "Coding",
       "why_it_matters": "The foundational language model architecture that pioneered automated code translation, refactoring, and agentic workflows.",
-      "launched_at": 1793103327,
-      "score": 6275.607469823479,
+      "launched_at": 1793105622,
+      "score": 6276.878181060477,
       "signals": [
         "app:110000.0"
       ],
       "rank": 110000
-    },
-    {
-      "id": 169,
-      "name": "OpenHands",
-      "tagline": "Autonomous software development agent capable of writing code, running bash commands, and browsing the web.",
-      "url": "https://github.com/All-Hands-AI/OpenHands",
-      "emoji": "🙌",
-      "category": "Coding",
-      "why_it_matters": "Community-driven autonomous developer agent capable of resolving end-to-end GitHub issues in isolated sandboxes.",
-      "launched_at": 1793189727,
-      "score": 8418.726440662545,
-      "signals": [
-        "github:92254.0"
-      ],
-      "rank": 92254
     },
     {
       "id": 257,
@@ -96,8 +81,8 @@
       "emoji": "📐",
       "category": "Coding",
       "why_it_matters": "Brings autonomous multi-file refactoring and command execution directly into the world's most widely used code editor.",
-      "launched_at": 1793189727,
-      "score": 8395.547429281702,
+      "launched_at": 1793192022,
+      "score": 8398.062077053431,
       "signals": [
         "app:92000.0"
       ],
@@ -112,11 +97,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 89K GitHub stars from real production users.",
       "launched_at": 1773541851,
-      "score": 28.850553954073366,
+      "score": 28.847922528148548,
       "signals": [
-        "github:88988.0"
+        "github:88992.0"
       ],
-      "rank": 88988
+      "rank": 88992
     },
     {
       "id": 100,
@@ -126,12 +111,12 @@
       "emoji": "⚡",
       "category": "Coding",
       "why_it_matters": "Essential AI CLI infrastructure that slashes LLM context token usage by up to 90% without losing error signals.",
-      "launched_at": 1793276127,
-      "score": 16975.320239478726,
+      "launched_at": 1793278422,
+      "score": 249.64260503172088,
       "signals": [
-        "github:85047.0"
+        "github:1250.0"
       ],
-      "rank": 85047
+      "rank": 85051
     },
     {
       "id": 322,
@@ -142,11 +127,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 82.7K GitHub stars from real production users.",
       "launched_at": 1770986311,
-      "score": 23.18806670869337,
+      "score": 23.186951675250395,
       "signals": [
-        "github:82722.0"
+        "github:82728.0"
       ],
-      "rank": 82722
+      "rank": 82728
     },
     {
       "id": 331,
@@ -157,11 +142,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 78.3K GitHub stars from real production users.",
       "launched_at": 1767815931,
-      "score": 18.729042201963566,
+      "score": 18.728737158380532,
       "signals": [
-        "github:78326.0"
+        "github:78333.0"
       ],
-      "rank": 78326
+      "rank": 78333
     },
     {
       "id": 254,
@@ -171,8 +156,8 @@
       "emoji": "⚡",
       "category": "Coding",
       "why_it_matters": "High-velocity CLI coding agent that operates directly in your local repo with fine-grained permission controls.",
-      "launched_at": 1793276127,
-      "score": 14969.946241030308,
+      "launched_at": 1793278422,
+      "score": 14978.556301903252,
       "signals": [
         "app:75000.0"
       ],
@@ -187,26 +172,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 73.4K GitHub stars from real production users.",
       "launched_at": 1754390265,
-      "score": 10.577899626915892,
+      "score": 10.57788724792763,
       "signals": [
-        "github:73425.0"
+        "github:73430.0"
       ],
-      "rank": 73425
-    },
-    {
-      "id": 170,
-      "name": "Cline",
-      "tagline": "Autonomous coding agent inside VS Code with file editing, shell command execution, and browser interaction.",
-      "url": "https://github.com/cline/cline",
-      "emoji": "🤖",
-      "category": "Coding",
-      "why_it_matters": "Pioneering interactive coding agent extension with strict permission controls and iterative browser verification.",
-      "launched_at": 1793189727,
-      "score": 6485.012853418205,
-      "signals": [
-        "github:71064.0"
-      ],
-      "rank": 71064
+      "rank": 73430
     },
     {
       "id": 324,
@@ -217,7 +187,7 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 70.5K GitHub stars from real production users.",
       "launched_at": 1764726005,
-      "score": 14.698939584577534,
+      "score": 14.697554176595215,
       "signals": [
         "github:70496.0"
       ],
@@ -232,7 +202,7 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 68.7K GitHub stars from real production users.",
       "launched_at": 1689318644,
-      "score": 3.048021667104353,
+      "score": 3.0479425767589023,
       "signals": [
         "github:68731.0"
       ],
@@ -247,11 +217,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 68.3K GitHub stars from real production users.",
       "launched_at": 1761920128,
-      "score": 12.734999201934958,
+      "score": 12.734092351547353,
       "signals": [
-        "github:68325.0"
+        "github:68326.0"
       ],
-      "rank": 68325
+      "rank": 68326
     },
     {
       "id": 582,
@@ -262,11 +232,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 62.4K GitHub stars from real production users.",
       "launched_at": 1690416592,
-      "score": 2.8014538620121003,
+      "score": 2.8014253084912126,
       "signals": [
-        "github:62372.0"
+        "github:62373.0"
       ],
-      "rank": 62372
+      "rank": 62373
     },
     {
       "id": 256,
@@ -276,27 +246,27 @@
       "emoji": "🌙",
       "category": "Coding",
       "why_it_matters": "Exceptional million-token context reasoning capable of tracking large enterprise codebases and multi-package dependencies.",
-      "launched_at": 1793189727,
-      "score": 4745.309416550527,
+      "launched_at": 1793192022,
+      "score": 4746.730739204113,
       "signals": [
         "app:52000.0"
       ],
       "rank": 52000
     },
     {
-      "id": 167,
-      "name": "Aider",
-      "tagline": "AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.",
-      "url": "https://github.com/paul-gauthier/aider",
-      "emoji": "💻",
+      "id": 573,
+      "name": "Umi OCR",
+      "tagline": "OCR software, free and offline. OCR / PDF / /",
+      "url": "https://github.com/hiroi-sora/Umi-OCR",
+      "emoji": null,
       "category": "Coding",
-      "why_it_matters": "The gold standard for terminal-based AI pair programming with robust repository-wide AST parsing.",
-      "launched_at": 1793189727,
-      "score": 4546.918980558588,
+      "why_it_matters": "Battle-tested in the open — 48.3K GitHub stars from real production users.",
+      "launched_at": 1648440106,
+      "score": 1.438991698023208,
       "signals": [
-        "github:49826.0"
+        "github:48294.0"
       ],
-      "rank": 49826
+      "rank": 48294
     },
     {
       "id": 258,
@@ -306,12 +276,27 @@
       "emoji": "☁️",
       "category": "Coding",
       "why_it_matters": "Specialized in enterprise Java/Node upgrades, automated vulnerability patching, and deep AWS cloud infrastructure wiring.",
-      "launched_at": 1793189727,
-      "score": 4380.28561527741,
+      "launched_at": 1793192022,
+      "score": 4381.5976054191815,
       "signals": [
         "app:48000.0"
       ],
       "rank": 48000
+    },
+    {
+      "id": 169,
+      "name": "OpenHands",
+      "tagline": "Autonomous software development agent capable of writing code, running bash commands, and browsing the web.",
+      "url": "https://github.com/All-Hands-AI/OpenHands",
+      "emoji": "🙌",
+      "category": "Coding",
+      "why_it_matters": "Community-driven autonomous developer agent capable of resolving end-to-end GitHub issues in isolated sandboxes.",
+      "launched_at": 1793192022,
+      "score": 4107.747755080482,
+      "signals": [
+        "github:45000.0"
+      ],
+      "rank": 45000
     },
     {
       "id": 312,
@@ -322,7 +307,7 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 41.2K GitHub stars from real production users.",
       "launched_at": 1768846861,
-      "score": 10.338590077611103,
+      "score": 10.337451915673197,
       "signals": [
         "github:41152.0"
       ],
@@ -337,11 +322,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 38K GitHub stars from real production users.",
       "launched_at": 1773400479,
-      "score": 12.218503651950678,
+      "score": 12.22038737309772,
       "signals": [
-        "github:38010.0"
+        "github:38021.0"
       ],
-      "rank": 38010
+      "rank": 38021
     },
     {
       "id": 297,
@@ -352,11 +337,11 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 37K GitHub stars from real production users.",
       "launched_at": 1579354744,
-      "score": 0.6907935129807139,
+      "score": 0.6908034629011683,
       "signals": [
-        "github:37010.0"
+        "github:37011.0"
       ],
-      "rank": 37010
+      "rank": 37011
     },
     {
       "id": 370,
@@ -367,26 +352,41 @@
       "category": "Coding",
       "why_it_matters": "Battle-tested in the open — 36.5K GitHub stars from real production users.",
       "launched_at": 1742742228,
-      "score": 3.842697688698279,
+      "score": 3.842492766319692,
       "signals": [
         "github:36504.0"
       ],
       "rank": 36504
     },
     {
-      "id": 168,
-      "name": "Continue",
-      "tagline": "The leading open-source AI code assistant for VS Code and JetBrains connecting any model and codebase.",
-      "url": "https://github.com/continuedev/continue",
-      "emoji": "⏩",
+      "id": 298,
+      "name": "DeepSeek Reasonix",
+      "tagline": "A reliable coding agent for complex software engineering tasks.",
+      "url": "http://reasonix.io/",
+      "emoji": null,
       "category": "Coding",
-      "why_it_matters": "The most customizable open-source alternative to Copilot that respects privacy and local LLM backends.",
-      "launched_at": 1793103327,
-      "score": 2075.001084408634,
+      "why_it_matters": "Battle-tested in the open — 36K GitHub stars from real production users.",
+      "launched_at": 1776760022,
+      "score": 14.43398414421573,
       "signals": [
-        "github:36371.0"
+        "github:36003.0"
       ],
-      "rank": 36371
+      "rank": 36003
+    },
+    {
+      "id": 167,
+      "name": "Aider",
+      "tagline": "AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.",
+      "url": "https://github.com/paul-gauthier/aider",
+      "emoji": "💻",
+      "category": "Coding",
+      "why_it_matters": "The gold standard for terminal-based AI pair programming with robust repository-wide AST parsing.",
+      "launched_at": 1793192022,
+      "score": 3149.2732788950366,
+      "signals": [
+        "github:34500.0"
+      ],
+      "rank": 34500
     },
     {
       "id": 118,
@@ -395,13 +395,13 @@
       "url": "https://deepseek.com/harness",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 266.4K GitHub stars from real production users.",
+      "why_it_matters": "Battle-tested in the open — 266.5K GitHub stars from real production users.",
       "launched_at": 1786622192,
-      "score": 314.8995229184142,
+      "score": 314.8078295605168,
       "signals": [
-        "github:266446.0"
+        "github:266475.0"
       ],
-      "rank": 266446
+      "rank": 266475
     },
     {
       "id": 284,
@@ -412,11 +412,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 258.7K GitHub stars from real production users.",
       "launched_at": 1753222948,
-      "score": 35.97349220339705,
+      "score": 35.97204633954904,
       "signals": [
-        "github:258705.0"
+        "github:258712.0"
       ],
-      "rank": 258705
+      "rank": 258712
     },
     {
       "id": 346,
@@ -427,11 +427,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 209.1K GitHub stars from real production users.",
       "launched_at": 1561195461,
-      "score": 3.5395639606889295,
+      "score": 3.5395397259168875,
       "signals": [
-        "github:209105.0"
+        "github:209106.0"
       ],
-      "rank": 209105
+      "rank": 209106
     },
     {
       "id": 376,
@@ -442,7 +442,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 187.8K GitHub stars from real production users.",
       "launched_at": 1678958467,
-      "score": 7.4328377611763194,
+      "score": 7.432662357385474,
       "signals": [
         "github:187826.0"
       ],
@@ -457,11 +457,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 185K GitHub stars from real production users.",
       "launched_at": 1758556411,
-      "score": 30.51630240178834,
+      "score": 30.51806034021312,
       "signals": [
-        "github:184956.0"
+        "github:184981.0"
       ],
-      "rank": 184956
+      "rank": 184981
     },
     {
       "id": 176,
@@ -471,12 +471,12 @@
       "emoji": "🛠️",
       "category": "Agents & Automation",
       "why_it_matters": "Production-grade visual AI workflow builder with built-in model routing, knowledge retrieval, and prompt observability.",
-      "launched_at": 1793103327,
-      "score": 9127.528758996259,
+      "launched_at": 1793105622,
+      "score": 3937.314495392481,
       "signals": [
-        "github:159989.0"
+        "github:69000.0"
       ],
-      "rank": 159989
+      "rank": 159991
     },
     {
       "id": 414,
@@ -487,7 +487,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 156.2K GitHub stars from real production users.",
       "launched_at": 1675895283,
-      "score": 5.986785059193569,
+      "score": 5.986647463881846,
       "signals": [
         "github:156158.0"
       ],
@@ -501,12 +501,12 @@
       "emoji": "🌍",
       "category": "Agents & Automation",
       "why_it_matters": "Fastest-growing autonomous browser agent library allowing LLMs to interact with any web application effortlessly.",
-      "launched_at": 1793189727,
-      "score": 10910.378908152845,
+      "launched_at": 1793192022,
+      "score": 2692.8568616638718,
       "signals": [
-        "github:119558.0"
+        "github:29500.0"
       ],
-      "rank": 119558
+      "rank": 119560
     },
     {
       "id": 290,
@@ -517,11 +517,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 111.9K GitHub stars from real production users.",
       "launched_at": 1771186826,
-      "score": 31.6999340589133,
+      "score": 31.697776110439523,
       "signals": [
-        "github:111873.0"
+        "github:111879.0"
       ],
-      "rank": 111873
+      "rank": 111879
     },
     {
       "id": 291,
@@ -532,11 +532,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 110.7K GitHub stars from real production users.",
       "launched_at": 1773718137,
-      "score": 36.26921307658613,
+      "score": 36.27274967393712,
       "signals": [
-        "github:110678.0"
+        "github:110704.0"
       ],
-      "rank": 110678
+      "rank": 110704
     },
     {
       "id": 292,
@@ -547,11 +547,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 108.8K GitHub stars from real production users.",
       "launched_at": 1772463711,
-      "score": 33.113845534425565,
+      "score": 33.11078631397428,
       "signals": [
-        "github:108838.0"
+        "github:108842.0"
       ],
-      "rank": 108838
+      "rank": 108842
     },
     {
       "id": 365,
@@ -562,11 +562,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 108.6K GitHub stars from real production users.",
       "launched_at": 1744909471,
-      "score": 12.051200706039126,
+      "score": 12.050640239147947,
       "signals": [
-        "github:108626.0"
+        "github:108627.0"
       ],
-      "rank": 108626
+      "rank": 108627
     },
     {
       "id": 294,
@@ -577,26 +577,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 105.4K GitHub stars from real production users.",
       "launched_at": 1756673403,
-      "score": 16.319834717202767,
+      "score": 16.32715213034585,
       "signals": [
-        "github:105367.0"
+        "github:105422.0"
       ],
-      "rank": 105367
-    },
-    {
-      "id": 175,
-      "name": "MCP Servers (Anthropic)",
-      "tagline": "Reference implementations for the Model Context Protocol connecting LLMs with external tools and data stores.",
-      "url": "https://github.com/modelcontextprotocol/servers",
-      "emoji": "🔌",
-      "category": "Agents & Automation",
-      "why_it_matters": "The universal interoperability standard defining how AI models securely query databases, run code, and invoke APIs.",
-      "launched_at": 1793276127,
-      "score": 18301.857075717227,
-      "signals": [
-        "github:91693.0"
-      ],
-      "rank": 91693
+      "rank": 105422
     },
     {
       "id": 350,
@@ -607,11 +592,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 89.8K GitHub stars from real production users.",
       "launched_at": 1767893166,
-      "score": 21.546004389661856,
+      "score": 21.543961162397547,
       "signals": [
-        "github:89780.0"
+        "github:89781.0"
       ],
-      "rank": 89780
+      "rank": 89781
     },
     {
       "id": 386,
@@ -622,11 +607,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 84.7K GitHub stars from real production users.",
       "launched_at": 1746586219,
-      "score": 9.804111045324122,
+      "score": 9.803660981990951,
       "signals": [
-        "github:84715.0"
+        "github:84716.0"
       ],
-      "rank": 84715
+      "rank": 84716
     },
     {
       "id": 675,
@@ -637,7 +622,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 83.6K GitHub stars from real production users.",
       "launched_at": 1684653552,
-      "score": 3.5175108454683106,
+      "score": 3.517423489252578,
       "signals": [
         "github:83604.0"
       ],
@@ -652,11 +637,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 80.2K GitHub stars from real production users.",
       "launched_at": 1748899460,
-      "score": 9.867368174793718,
+      "score": 9.867507022791473,
       "signals": [
-        "github:80228.0"
+        "github:80234.0"
       ],
-      "rank": 80228
+      "rank": 80234
     },
     {
       "id": 387,
@@ -667,11 +652,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 71.1K GitHub stars from real production users.",
       "launched_at": 1688115895,
-      "score": 3.1092368093857496,
+      "score": 3.1092445296886995,
       "signals": [
-        "github:71085.0"
+        "github:71087.0"
       ],
-      "rank": 71085
+      "rank": 71087
     },
     {
       "id": 335,
@@ -680,13 +665,13 @@
       "url": "https://context7.com/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 63.9K GitHub stars from real production users.",
+      "why_it_matters": "Battle-tested in the open — 64K GitHub stars from real production users.",
       "launched_at": 1743032439,
-      "score": 6.77826746769703,
+      "score": 6.778115895877535,
       "signals": [
-        "github:63948.0"
+        "github:63950.0"
       ],
-      "rank": 63948
+      "rank": 63950
     },
     {
       "id": 366,
@@ -697,7 +682,7 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 63.3K GitHub stars from real production users.",
       "launched_at": 1745840536,
-      "score": 7.1894030581672785,
+      "score": 7.188994672510663,
       "signals": [
         "github:63312.0"
       ],
@@ -712,26 +697,11 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 62.6K GitHub stars from real production users.",
       "launched_at": 1768714215,
-      "score": 15.61649456259251,
+      "score": 15.617280421034803,
       "signals": [
-        "github:62564.0"
+        "github:62574.0"
       ],
-      "rank": 62564
-    },
-    {
-      "id": 174,
-      "name": "CrewAI",
-      "tagline": "Cutting-edge framework for orchestrating role-playing, autonomous AI agents to solve complex tasks collaboratively.",
-      "url": "https://github.com/crewAIInc/crewAI",
-      "emoji": "👥",
-      "category": "Agents & Automation",
-      "why_it_matters": "The standard multi-agent coordination architecture enabling specialized agent personas to collaborate sequentially and hierarchically.",
-      "launched_at": 1793189727,
-      "score": 5502.186268490336,
-      "signals": [
-        "github:60294.0"
-      ],
-      "rank": 60294
+      "rank": 62574
     },
     {
       "id": 311,
@@ -740,13 +710,13 @@
       "url": "https://github.com/bojieli/ai-agent-book",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 56.6K GitHub stars from real production users.",
+      "why_it_matters": "Battle-tested in the open — 56.7K GitHub stars from real production users.",
       "launched_at": 1757385704,
-      "score": 8.982785778831394,
+      "score": 8.982587503698133,
       "signals": [
-        "github:56648.0"
+        "github:56651.0"
       ],
-      "rank": 56648
+      "rank": 56651
     },
     {
       "id": 398,
@@ -757,176 +727,41 @@
       "category": "Agents & Automation",
       "why_it_matters": "Battle-tested in the open — 56.4K GitHub stars from real production users.",
       "launched_at": 1761824988,
-      "score": 10.473166483645146,
+      "score": 10.474127119783068,
       "signals": [
-        "github:56394.0"
+        "github:56404.0"
       ],
-      "rank": 56394
+      "rank": 56404
     },
     {
-      "id": 765,
-      "name": "Trivy",
-      "tagline": "Comprehensive security scanner for container images, Kubernetes, code repositories, and Cloud configurations.",
-      "url": "https://github.com/aquasecurity/trivy",
-      "emoji": "🛡️",
-      "category": "Cybersecurity",
-      "why_it_matters": "Fast, accurate multi-target scanner generating actionable SBOMs and vulnerability reports across enterprise CI/CD.",
-      "launched_at": 1792671327,
-      "score": 697.9466830803444,
+      "id": 397,
+      "name": "Flowise",
+      "tagline": "Build AI Agents, Visually",
+      "url": "https://flowiseai.com/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 55.5K GitHub stars from real production users.",
+      "launched_at": 1680265389,
+      "score": 2.228221613881726,
       "signals": [
-        "github:38854.0"
+        "github:55537.0"
       ],
-      "rank": 38854
+      "rank": 55537
     },
     {
-      "id": 764,
-      "name": "sqlmap",
-      "tagline": "Automatic SQL injection and database takeover penetration testing tool.",
-      "url": "https://github.com/sqlmapproject/sqlmap",
-      "emoji": "💉",
-      "category": "Cybersecurity",
-      "why_it_matters": "Industry-standard automated engine for auditing and proving relational database injection vulnerabilities.",
-      "launched_at": 1792584927,
-      "score": 606.2169265204665,
+      "id": 367,
+      "name": "chrome devtools mcp",
+      "tagline": "Chrome DevTools for coding agents",
+      "url": "https://developer.chrome.com/docs/devtools/agents",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 54.5K GitHub stars from real production users.",
+      "launched_at": 1757587195,
+      "score": 8.696753104935773,
       "signals": [
-        "github:38815.0"
+        "github:54480.0"
       ],
-      "rank": 38815
-    },
-    {
-      "id": 766,
-      "name": "Nuclei",
-      "tagline": "Fast and customizable vulnerability scanner based on simple YAML-based DSL templates.",
-      "url": "https://github.com/projectdiscovery/nuclei",
-      "emoji": "🎯",
-      "category": "Cybersecurity",
-      "why_it_matters": "Powers continuous security monitoring and bug bounty hunting with thousands of community-verified zero-day templates.",
-      "launched_at": 1792757727,
-      "score": 683.1607613156133,
-      "signals": [
-        "github:32460.0"
-      ],
-      "rank": 32460
-    },
-    {
-      "id": 773,
-      "name": "Promptfoo",
-      "tagline": "LLM red-teaming, automated penetration testing, and security evaluation for production AI apps.",
-      "url": "https://github.com/promptfoo/promptfoo",
-      "emoji": "🥋",
-      "category": "Cybersecurity",
-      "why_it_matters": "Essential security testing CLI to probe LLM pipelines for prompt injections, hallucination, and PII leakage.",
-      "launched_at": 1793189727,
-      "score": 2429.6896772241885,
-      "signals": [
-        "github:26625.0"
-      ],
-      "rank": 26625
-    },
-    {
-      "id": 770,
-      "name": "Wazuh",
-      "tagline": "Open-source XDR and SIEM for threat detection, file integrity monitoring, incident response, and compliance.",
-      "url": "https://github.com/wazuh/wazuh",
-      "emoji": "🦅",
-      "category": "Cybersecurity",
-      "why_it_matters": "Unified open-source security platform protecting enterprise servers and cloud workloads against active intrusion.",
-      "launched_at": 1793103327,
-      "score": 999.0767091958978,
-      "signals": [
-        "github:17512.0"
-      ],
-      "rank": 17512
-    },
-    {
-      "id": 771,
-      "name": "Semgrep",
-      "tagline": "Fast, open-source static analysis engine (SAST) for finding security bugs and enforcing code standards in CI.",
-      "url": "https://github.com/semgrep/semgrep",
-      "emoji": "🔍",
-      "category": "Cybersecurity",
-      "why_it_matters": "Readable pattern syntax allows security teams to write custom vulnerability rules in minutes without complex AST learning.",
-      "launched_at": 1793103327,
-      "score": 990.1197058071498,
-      "signals": [
-        "github:17355.0"
-      ],
-      "rank": 17355
-    },
-    {
-      "id": 768,
-      "name": "OWASP ZAP",
-      "tagline": "The world's most widely used open-source web application dynamic security scanner (DAST).",
-      "url": "https://github.com/zaproxy/zaproxy",
-      "emoji": "⚡",
-      "category": "Cybersecurity",
-      "why_it_matters": "Flagship OWASP project for finding security vulnerabilities in web applications and REST APIs during active testing.",
-      "launched_at": 1792930527,
-      "score": 503.6077877115383,
-      "signals": [
-        "github:16074.0"
-      ],
-      "rank": 16074
-    },
-    {
-      "id": 769,
-      "name": "OWASP Amass",
-      "tagline": "In-depth attack surface mapping and external asset discovery via information gathering and graph analysis.",
-      "url": "https://github.com/owasp-amass/amass",
-      "emoji": "🌐",
-      "category": "Cybersecurity",
-      "why_it_matters": "Definitive OWASP reconnaissance framework for discovering shadow IT, unmapped DNS, and exposed perimeter hosts.",
-      "launched_at": 1793016927,
-      "score": 628.9995000338645,
-      "signals": [
-        "github:15439.0"
-      ],
-      "rank": 15439
-    },
-    {
-      "id": 772,
-      "name": "Falco",
-      "tagline": "Cloud-native runtime security and container threat detection powered by eBPF kernel event monitoring.",
-      "url": "https://github.com/falcosecurity/falco",
-      "emoji": "🦅",
-      "category": "Cybersecurity",
-      "why_it_matters": "CNCF graduated project providing real-time anomaly detection and intrusion alerting inside production Kubernetes clusters.",
-      "launched_at": 1793189727,
-      "score": 870.4905100860669,
-      "signals": [
-        "github:9539.0"
-      ],
-      "rank": 9539
-    },
-    {
-      "id": 774,
-      "name": "OWASP DefectDojo",
-      "tagline": "Open-source vulnerability management and orchestration platform aggregating reports from 150+ security tools.",
-      "url": "https://github.com/DefectDojo/django-DefectDojo",
-      "emoji": "🥋",
-      "category": "Cybersecurity",
-      "why_it_matters": "Central nervous system for enterprise AppSec teams to track, deduplicate, and triage findings across scans.",
-      "launched_at": 1793189727,
-      "score": 471.79326314550434,
-      "signals": [
-        "github:5170.0"
-      ],
-      "rank": 5170
-    },
-    {
-      "id": 775,
-      "name": "OWASP Coraza",
-      "tagline": "Enterprise-grade, high-performance Web Application Firewall (WAF) written in Go with full ModSecurity CRS support.",
-      "url": "https://github.com/corazawaf/coraza",
-      "emoji": "🛡️",
-      "category": "Cybersecurity",
-      "why_it_matters": "Modern memory-safe WAF engine deployable as an Envoy proxy plugin or native Golang middleware against zero-days.",
-      "launched_at": 1793276127,
-      "score": 793.8063493410338,
-      "signals": [
-        "github:3977.0"
-      ],
-      "rank": 3977
+      "rank": 54480
     },
     {
       "id": 648,
@@ -937,11 +772,11 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 165.2K GitHub stars from real production users.",
       "launched_at": 1661177126,
-      "score": 5.496334886338274,
+      "score": 5.496189353555009,
       "signals": [
-        "github:165181.0"
+        "github:165180.0"
       ],
-      "rank": 165181
+      "rank": 165180
     },
     {
       "id": 184,
@@ -951,12 +786,12 @@
       "emoji": "🎨",
       "category": "Image & Design",
       "why_it_matters": "Industry-standard node-graph architecture powering advanced generative image pipelines and production VFX studios.",
-      "launched_at": 1793189727,
-      "score": 13150.529976565967,
+      "launched_at": 1793192022,
+      "score": 5659.563573666443,
       "signals": [
-        "github:144106.0"
+        "github:62000.0"
       ],
-      "rank": 144106
+      "rank": 144114
     },
     {
       "id": 326,
@@ -967,11 +802,11 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 105K GitHub stars from real production users.",
       "launched_at": 1777350320,
-      "score": 43.96171327883487,
+      "score": 43.955142427783464,
       "signals": [
-        "github:104978.0"
+        "github:104980.0"
       ],
-      "rank": 104978
+      "rank": 104980
     },
     {
       "id": 506,
@@ -982,26 +817,11 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 78.8K GitHub stars from real production users.",
       "launched_at": 1701276609,
-      "score": 4.045536441650598,
+      "score": 4.045520522322539,
       "signals": [
-        "github:78793.0"
+        "github:78795.0"
       ],
-      "rank": 78793
-    },
-    {
-      "id": 185,
-      "name": "Fooocus",
-      "tagline": "Image generating software combining the prompt simplicity of Midjourney with the local control of Stable Diffusion.",
-      "url": "https://github.com/lllyasviel/Fooocus",
-      "emoji": "🖼️",
-      "category": "Image & Design",
-      "why_it_matters": "Zero-prompt-engineering image creation providing Midjourney-level quality on consumer desktop GPUs.",
-      "launched_at": 1793016927,
-      "score": 2189.703745600111,
-      "signals": [
-        "github:53747.0"
-      ],
-      "rank": 53747
+      "rank": 78795
     },
     {
       "id": 649,
@@ -1012,11 +832,26 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 50.1K GitHub stars from real production users.",
       "launched_at": 1679180282,
-      "score": 1.9860792469038668,
+      "score": 1.9860322873804503,
       "signals": [
         "github:50071.0"
       ],
       "rank": 50071
+    },
+    {
+      "id": 185,
+      "name": "Fooocus",
+      "tagline": "Image generating software combining the prompt simplicity of Midjourney with the local control of Stable Diffusion.",
+      "url": "https://github.com/lllyasviel/Fooocus",
+      "emoji": "🖼️",
+      "category": "Image & Design",
+      "why_it_matters": "Zero-prompt-engineering image creation providing Midjourney-level quality on consumer desktop GPUs.",
+      "launched_at": 1793019222,
+      "score": 1792.8758774096364,
+      "signals": [
+        "github:44000.0"
+      ],
+      "rank": 44000
     },
     {
       "id": 650,
@@ -1027,7 +862,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 34.8K GitHub stars from real production users.",
       "launched_at": 1653926642,
-      "score": 1.0873353534781582,
+      "score": 1.087314300112534,
       "signals": [
         "github:34840.0"
       ],
@@ -1042,7 +877,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 28.9K GitHub stars from real production users.",
       "launched_at": 1660698267,
-      "score": 0.9581686837158653,
+      "score": 0.9581491844157598,
       "signals": [
         "github:28921.0"
       ],
@@ -1057,7 +892,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 23.3K GitHub stars from real production users.",
       "launched_at": 1636985800,
-      "score": 0.6335691979150343,
+      "score": 0.6335582594119022,
       "signals": [
         "github:23295.0"
       ],
@@ -1072,7 +907,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 16.1K GitHub stars from real production users.",
       "launched_at": 1735009226,
-      "score": 1.4332073379468944,
+      "score": 1.4331410349970901,
       "signals": [
         "github:16147.0"
       ],
@@ -1087,7 +922,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 13.6K GitHub stars from real production users.",
       "launched_at": 1662430260,
-      "score": 0.4575012594992938,
+      "score": 0.45749182592741733,
       "signals": [
         "github:13593.0"
       ],
@@ -1102,11 +937,11 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 10.8K GitHub stars from real production users.",
       "launched_at": 1684829670,
-      "score": 0.4571754328992951,
+      "score": 0.45720621503912817,
       "signals": [
-        "github:10845.0"
+        "github:10846.0"
       ],
-      "rank": 10845
+      "rank": 10846
     },
     {
       "id": 655,
@@ -1117,7 +952,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 10.8K GitHub stars from real production users.",
       "launched_at": 1693608733,
-      "score": 0.5040962545520857,
+      "score": 0.5040826117296853,
       "signals": [
         "github:10807.0"
       ],
@@ -1126,13 +961,13 @@
     {
       "id": 621,
       "name": "InternVL",
-      "tagline": "[CVPR2024 Oral] InternVL Family: A Pioneering Open-Source Alternative to GPT-4o. Open source multimodal dialogue model close to GPT-4o performance",
+      "tagline": "CVPR 2024 Oral InternVL Family: A Pioneering Open-Source Alternative to GPT-4o. GPT-4o",
       "url": "https://internvl.readthedocs.io/en/latest/",
       "emoji": null,
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 10.2K GitHub stars from real production users.",
       "launched_at": 1700640488,
-      "score": 0.5179224380287772,
+      "score": 0.5179073581230966,
       "signals": [
         "github:10171.0"
       ],
@@ -1147,7 +982,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 9K GitHub stars from real production users.",
       "launched_at": 1682114955,
-      "score": 0.3696673165097434,
+      "score": 0.36965834542014503,
       "signals": [
         "github:9033.0"
       ],
@@ -1162,7 +997,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 9K GitHub stars from real production users.",
       "launched_at": 1686633638,
-      "score": 0.38581601944123195,
+      "score": 0.3858062600822474,
       "signals": [
         "github:8970.0"
       ],
@@ -1177,7 +1012,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 7.3K GitHub stars from real production users.",
       "launched_at": 1671566994,
-      "score": 0.2681595941101077,
+      "score": 0.26815364995621804,
       "signals": [
         "github:7305.0"
       ],
@@ -1192,7 +1027,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 6.7K GitHub stars from real production users.",
       "launched_at": 1748789588,
-      "score": 0.8247953852141071,
+      "score": 0.8247454345605518,
       "signals": [
         "github:6726.0"
       ],
@@ -1207,7 +1042,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 4.7K GitHub stars from real production users.",
       "launched_at": 1718951093,
-      "score": 0.3130895632959283,
+      "score": 0.31307820444889817,
       "signals": [
         "github:4722.0"
       ],
@@ -1222,7 +1057,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 4.2K GitHub stars from real production users.",
       "launched_at": 1732206365,
-      "score": 0.35473618303189847,
+      "score": 0.3547205242513748,
       "signals": [
         "github:4228.0"
       ],
@@ -1237,7 +1072,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 3.9K GitHub stars from real production users.",
       "launched_at": 1704491354,
-      "score": 0.20880270263130293,
+      "score": 0.20879635969947669,
       "signals": [
         "github:3897.0"
       ],
@@ -1252,7 +1087,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 3.3K GitHub stars from real production users.",
       "launched_at": 1769684458,
-      "score": 0.8656713887255166,
+      "score": 0.8655727183119535,
       "signals": [
         "github:3305.0"
       ],
@@ -1267,7 +1102,7 @@
       "category": "Image & Design",
       "why_it_matters": "Trending with the builder community — 2.3K Hugging Face likes.",
       "launched_at": 1765338625,
-      "score": 0.4940972790982936,
+      "score": 0.49404969164214146,
       "signals": [
         "huggingface:2309.0"
       ],
@@ -1282,7 +1117,7 @@
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 2K GitHub stars from real production users.",
       "launched_at": 1663745653,
-      "score": 0.06684021662577323,
+      "score": 0.06683882441008052,
       "signals": [
         "github:1962.0"
       ],
@@ -1291,13 +1126,13 @@
     {
       "id": 567,
       "name": "yft design",
-      "tagline": "yft-design is a powerful, visually stunning online design tool built with Vue3, fabric.js, and Element Plus. [Finalized design] based on fabric.js open source version. A beautiful and powerful online…",
+      "tagline": "yft-design is a powerful, visually stunning online design tool built with Vue3, fabric.js, and Element Plus. fabric.js / …",
       "url": "https://yft.design/",
       "emoji": null,
       "category": "Image & Design",
       "why_it_matters": "Battle-tested in the open — 1.7K GitHub stars from real production users.",
       "launched_at": 1684986127,
-      "score": 0.0705637323139294,
+      "score": 0.07056197450984927,
       "signals": [
         "github:1671.0"
       ],
@@ -1312,26 +1147,26 @@
       "category": "Video",
       "why_it_matters": "Battle-tested in the open — 73.2K GitHub stars from real production users.",
       "launched_at": 1774797802,
-      "score": 25.662902544449487,
+      "score": 25.661276060918873,
       "signals": [
-        "github:73178.0"
+        "github:73184.0"
       ],
-      "rank": 73178
+      "rank": 73184
     },
     {
       "id": 638,
       "name": "Pixelle Video",
-      "tagline": "🚀 AI Fully Automated Short Video Engine",
+      "tagline": "🚀 AI AI Fully Automated Short Video Engine",
       "url": "https://aidc-ai.github.io/Pixelle-Video/zh",
       "emoji": null,
       "category": "Video",
       "why_it_matters": "Battle-tested in the open — 29.6K GitHub stars from real production users.",
       "launched_at": 1762497267,
-      "score": 5.635951036896697,
+      "score": 5.635648741666346,
       "signals": [
-        "github:29573.0"
+        "github:29574.0"
       ],
-      "rank": 29573
+      "rank": 29574
     },
     {
       "id": 612,
@@ -1342,7 +1177,7 @@
       "category": "Video",
       "why_it_matters": "Battle-tested in the open — 2K GitHub stars from real production users.",
       "launched_at": 1729579385,
-      "score": 0.15603541541082946,
+      "score": 0.15602881132253513,
       "signals": [
         "github:1956.0"
       ],
@@ -1357,11 +1192,11 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 95K GitHub stars from real production users.",
       "launched_at": 1775770826,
-      "score": 35.53359165230565,
+      "score": 35.547964473720015,
       "signals": [
-        "github:94988.0"
+        "github:95041.0"
       ],
-      "rank": 94988
+      "rank": 95041
     },
     {
       "id": 658,
@@ -1372,11 +1207,11 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 64.3K GitHub stars from real production users.",
       "launched_at": 1705255521,
-      "score": 3.4785584008329953,
+      "score": 3.478614224470528,
       "signals": [
-        "github:64253.0"
+        "github:64256.0"
       ],
-      "rank": 64253
+      "rank": 64256
     },
     {
       "id": 186,
@@ -1386,10 +1221,10 @@
       "emoji": "🎙️",
       "category": "Audio & Voice",
       "why_it_matters": "Ultra-fast local speech transcription running in real time even on low-power devices and embedded chips.",
-      "launched_at": 1793103327,
-      "score": 3126.1082846270683,
+      "launched_at": 1793105622,
+      "score": 2054.251041074338,
       "signals": [
-        "github:54795.0"
+        "github:36000.0"
       ],
       "rank": 54795
     },
@@ -1402,7 +1237,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 46.2K GitHub stars from real production users.",
       "launched_at": 1589989528,
-      "score": 0.916158094016186,
+      "score": 0.9161459316096917,
       "signals": [
         "github:46172.0"
       ],
@@ -1417,11 +1252,11 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 40.8K GitHub stars from real production users.",
       "launched_at": 1757994109,
-      "score": 6.610123305444525,
+      "score": 6.6097806739438125,
       "signals": [
-        "github:40841.0"
+        "github:40842.0"
       ],
-      "rank": 40841
+      "rank": 40842
     },
     {
       "id": 662,
@@ -1432,11 +1267,11 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 38.1K GitHub stars from real production users.",
       "launched_at": 1701260221,
-      "score": 1.9563479288076135,
+      "score": 1.9563419156472779,
       "signals": [
-        "github:38111.0"
+        "github:38112.0"
       ],
-      "rank": 38111
+      "rank": 38112
     },
     {
       "id": 669,
@@ -1447,11 +1282,11 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 35.1K GitHub stars from real production users.",
       "launched_at": 1739414549,
-      "score": 3.426280104050437,
+      "score": 3.426498740766254,
       "signals": [
-        "github:35132.0"
+        "github:35136.0"
       ],
-      "rank": 35132
+      "rank": 35136
     },
     {
       "id": 670,
@@ -1462,7 +1297,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 26.8K GitHub stars from real production users.",
       "launched_at": 1464879893,
-      "score": 0.29886967078203375,
+      "score": 0.2988672142639931,
       "signals": [
         "github:26776.0"
       ],
@@ -1477,7 +1312,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 26.5K GitHub stars from real production users.",
       "launched_at": 1694380352,
-      "score": 1.248803040067928,
+      "score": 1.2487689791151368,
       "signals": [
         "github:26524.0"
       ],
@@ -1492,11 +1327,11 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 26.3K GitHub stars from real production users.",
       "launched_at": 1676107047,
-      "score": 1.0112816097350357,
+      "score": 1.011296745512436,
       "signals": [
-        "github:26321.0"
+        "github:26322.0"
       ],
-      "rank": 26321
+      "rank": 26322
     },
     {
       "id": 671,
@@ -1507,11 +1342,11 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 24.9K GitHub stars from real production users.",
       "launched_at": 1670553263,
-      "score": 0.9065357560196975,
+      "score": 0.9065885170796082,
       "signals": [
-        "github:24942.0"
+        "github:24944.0"
       ],
-      "rank": 24942
+      "rank": 24944
     },
     {
       "id": 664,
@@ -1522,7 +1357,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 24.8K GitHub stars from real production users.",
       "launched_at": 1738814885,
-      "score": 2.3888924073164133,
+      "score": 2.3887741835837843,
       "signals": [
         "github:24822.0"
       ],
@@ -1537,7 +1372,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 24.2K GitHub stars from real production users.",
       "launched_at": 1719975562,
-      "score": 1.631009507804359,
+      "score": 1.6309495090707473,
       "signals": [
         "github:24193.0"
       ],
@@ -1552,7 +1387,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 20.9K GitHub stars from real production users.",
       "launched_at": 1669256891,
-      "score": 0.7496125004740575,
+      "score": 0.7495961934750297,
       "signals": [
         "github:20886.0"
       ],
@@ -1567,7 +1402,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 19.6K GitHub stars from real production users.",
       "launched_at": 1696263199,
-      "score": 0.9438381262033012,
+      "score": 0.9438118840010505,
       "signals": [
         "github:19590.0"
       ],
@@ -1582,7 +1417,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 19.4K GitHub stars from real production users.",
       "launched_at": 1745046957,
-      "score": 2.16062969636048,
+      "score": 2.1605089797557695,
       "signals": [
         "github:19409.0"
       ],
@@ -1597,11 +1432,11 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 15.6K GitHub stars from real production users.",
       "launched_at": 1662011253,
-      "score": 0.5238131334274837,
+      "score": 0.5238358946148552,
       "signals": [
-        "github:15623.0"
+        "github:15624.0"
       ],
-      "rank": 15623
+      "rank": 15624
     },
     {
       "id": 673,
@@ -1612,7 +1447,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 15.5K GitHub stars from real production users.",
       "launched_at": 1429550596,
-      "score": 0.1531382484775207,
+      "score": 0.15313711200601632,
       "signals": [
         "github:15509.0"
       ],
@@ -1627,7 +1462,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 12.6K GitHub stars from real production users.",
       "launched_at": 1758476102,
-      "score": 2.0746426659444706,
+      "score": 2.0744821471156514,
       "signals": [
         "github:12609.0"
       ],
@@ -1641,12 +1476,12 @@
       "emoji": "🗣️",
       "category": "Audio & Voice",
       "why_it_matters": "Breakthrough ultra-compact voice synthesis model that out-competes models 10x its size in natural speech quality.",
-      "launched_at": 1793189727,
-      "score": 892.8482179140453,
+      "launched_at": 1793192022,
+      "score": 958.474476185446,
       "signals": [
-        "github:9784.0"
+        "github:10500.0"
       ],
-      "rank": 9784
+      "rank": 10500
     },
     {
       "id": 465,
@@ -1657,7 +1492,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 9.6K GitHub stars from real production users.",
       "launched_at": 1719975406,
-      "score": 0.6562313915228164,
+      "score": 0.6562072512780325,
       "signals": [
         "github:9635.0",
         "huggingface:99.0"
@@ -1673,7 +1508,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Trending with the builder community — 2.4K Hugging Face likes.",
       "launched_at": 1768986616,
-      "score": 0.598499234847646,
+      "score": 0.5984329692429533,
       "signals": [
         "huggingface:2366.0"
       ],
@@ -1688,7 +1523,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 1.9K GitHub stars from real production users.",
       "launched_at": 1764127748,
-      "score": 0.3825935792887868,
+      "score": 0.38255825666795307,
       "signals": [
         "github:1881.0"
       ],
@@ -1703,7 +1538,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 1.7K GitHub stars from real production users.",
       "launched_at": 1767769109,
-      "score": 0.39463091700619574,
+      "score": 0.3945893013525269,
       "signals": [
         "github:1654.0"
       ],
@@ -1718,7 +1553,7 @@
       "category": "Audio & Voice",
       "why_it_matters": "Battle-tested in the open — 1.1K GitHub stars from real production users.",
       "launched_at": 1769603510,
-      "score": 0.29581255044307364,
+      "score": 0.29577894814968875,
       "signals": [
         "github:1134.0"
       ],
@@ -1732,12 +1567,12 @@
       "emoji": "💬",
       "category": "Chat & Assistants",
       "why_it_matters": "The gold standard private web UI for teams and power users seeking ChatGPT features without data leakage.",
-      "launched_at": 1793189727,
-      "score": 14349.450651847521,
+      "launched_at": 1793192022,
+      "score": 6024.696707451375,
       "signals": [
-        "github:157244.0"
+        "github:66000.0"
       ],
-      "rank": 157244
+      "rank": 157245
     },
     {
       "id": 425,
@@ -1748,7 +1583,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 88.9K GitHub stars from real production users.",
       "launched_at": 1678472874,
-      "score": 3.501031756552354,
+      "score": 3.500949486636749,
       "signals": [
         "github:88921.0"
       ],
@@ -1762,27 +1597,12 @@
       "emoji": "📚",
       "category": "Chat & Assistants",
       "why_it_matters": "Turn any document, PDF, or GitHub repository into an interactive AI knowledge base with zero configuration.",
-      "launched_at": 1793103327,
-      "score": 3865.032538710284,
+      "launched_at": 1793105622,
+      "score": 1826.0009253994115,
       "signals": [
-        "github:67747.0"
+        "github:32000.0"
       ],
       "rank": 67747
-    },
-    {
-      "id": 182,
-      "name": "Jan",
-      "tagline": "100% offline, privacy-first open-source desktop ChatGPT alternative running local models on Mac, Windows, and Linux.",
-      "url": "https://github.com/janhq/jan",
-      "emoji": "🤖",
-      "category": "Chat & Assistants",
-      "why_it_matters": "Completely air-gapped desktop assistant giving users sovereign local intelligence on consumer laptops.",
-      "launched_at": 1793103327,
-      "score": 2576.8214780865187,
-      "signals": [
-        "github:45167.0"
-      ],
-      "rank": 45167
     },
     {
       "id": 426,
@@ -1793,7 +1613,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 42.2K GitHub stars from real production users.",
       "launched_at": 1678105335,
-      "score": 1.655002157738855,
+      "score": 1.6549633912409198,
       "signals": [
         "github:42196.0"
       ],
@@ -1808,7 +1628,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 40K GitHub stars from real production users.",
       "launched_at": 1716834409,
-      "score": 2.5619677139712493,
+      "score": 2.5618773366282506,
       "signals": [
         "github:39962.0"
       ],
@@ -1823,11 +1643,26 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 38.7K GitHub stars from real production users.",
       "launched_at": 1680264765,
-      "score": 1.5533665165045119,
+      "score": 1.5533294360329741,
       "signals": [
         "github:38716.0"
       ],
       "rank": 38716
+    },
+    {
+      "id": 182,
+      "name": "Jan",
+      "tagline": "100% offline, privacy-first open-source desktop ChatGPT alternative running local models on Mac, Windows, and Linux.",
+      "url": "https://github.com/janhq/jan",
+      "emoji": "🤖",
+      "category": "Chat & Assistants",
+      "why_it_matters": "Completely air-gapped desktop assistant giving users sovereign local intelligence on consumer laptops.",
+      "launched_at": 1793105622,
+      "score": 1483.6257518870218,
+      "signals": [
+        "github:26000.0"
+      ],
+      "rank": 26000
     },
     {
       "id": 619,
@@ -1838,7 +1673,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 25.1K GitHub stars from real production users.",
       "launched_at": 1681747991,
-      "score": 1.0222876537357326,
+      "score": 1.0222629264090424,
       "signals": [
         "github:25079.0"
       ],
@@ -1853,7 +1688,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 19.3K GitHub stars from real production users.",
       "launched_at": 1670246098,
-      "score": 0.6975979237997016,
+      "score": 0.6975826263998991,
       "signals": [
         "github:19251.0"
       ],
@@ -1868,7 +1703,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 17.6K GitHub stars from real production users.",
       "launched_at": 1549801512,
-      "score": 0.2816259960192925,
+      "score": 0.2816228741775915,
       "signals": [
         "github:17622.0"
       ],
@@ -1883,7 +1718,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 10.9K GitHub stars from real production users.",
       "launched_at": 1690056774,
-      "score": 0.48864900228770214,
+      "score": 0.48863623219103636,
       "signals": [
         "github:10925.0"
       ],
@@ -1898,7 +1733,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 7.6K GitHub stars from real production users.",
       "launched_at": 1787921844,
-      "score": 11.585065499440883,
+      "score": 11.579326841039888,
       "signals": [
         "github:7583.0"
       ],
@@ -1913,7 +1748,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 3.8K GitHub stars from real production users.",
       "launched_at": 1683655401,
-      "score": 0.15896765055421863,
+      "score": 0.15896373856139498,
       "signals": [
         "github:3820.0"
       ],
@@ -1928,7 +1763,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 2.9K GitHub stars from real production users.",
       "launched_at": 1725333653,
-      "score": 0.2172280952359817,
+      "score": 0.21721947493233484,
       "signals": [
         "github:2942.0"
       ],
@@ -1943,7 +1778,7 @@
       "category": "Chat & Assistants",
       "why_it_matters": "Battle-tested in the open — 2.7K GitHub stars from real production users.",
       "launched_at": 1697510611,
-      "score": 0.13427191168822905,
+      "score": 0.1342681298514862,
       "signals": [
         "github:2744.0"
       ],
@@ -1958,11 +1793,11 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 92K GitHub stars from real production users.",
       "launched_at": 1588934296,
-      "score": 1.8138736575895864,
+      "score": 1.8139285786492567,
       "signals": [
-        "github:91984.0"
+        "github:91988.0"
       ],
-      "rank": 91984
+      "rank": 91988
     },
     {
       "id": 560,
@@ -1973,7 +1808,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 82.8K GitHub stars from real production users.",
       "launched_at": 1709196754,
-      "score": 4.736098926129471,
+      "score": 4.735947012285124,
       "signals": [
         "github:82807.0"
       ],
@@ -1988,11 +1823,11 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 69.9K GitHub stars from real production users.",
       "launched_at": 1720511426,
-      "score": 4.751252459906598,
+      "score": 4.751212412695367,
       "signals": [
-        "github:69859.0"
+        "github:69861.0"
       ],
-      "rank": 69859
+      "rank": 69861
     },
     {
       "id": 191,
@@ -2002,12 +1837,12 @@
       "emoji": "🧠",
       "category": "Productivity",
       "why_it_matters": "Solves context amnesia by providing persistent, adaptive personal memory graph storage for AI agents.",
-      "launched_at": 1793189727,
-      "score": 6214.165192873552,
+      "launched_at": 1793192022,
+      "score": 2282.0820861558236,
       "signals": [
-        "github:68096.0"
+        "github:25000.0"
       ],
-      "rank": 68096
+      "rank": 68095
     },
     {
       "id": 574,
@@ -2018,26 +1853,11 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 47.4K GitHub stars from real production users.",
       "launched_at": 1644703012,
-      "score": 1.3685830795029192,
+      "score": 1.3686160244946493,
       "signals": [
-        "github:47355.0"
+        "github:47357.0"
       ],
-      "rank": 47355
-    },
-    {
-      "id": 190,
-      "name": "Fabric",
-      "tagline": "Open-source framework for augmenting humans using AI prompts, modular patterns, and terminal pipelines.",
-      "url": "https://github.com/danielmiessler/fabric",
-      "emoji": "🧵",
-      "category": "Productivity",
-      "why_it_matters": "Community-driven prompt architecture turning routine cognitive tasks into reusable terminal commands.",
-      "launched_at": 1793103327,
-      "score": 2538.3691195896004,
-      "signals": [
-        "github:44493.0"
-      ],
-      "rank": 44493
+      "rank": 47357
     },
     {
       "id": 577,
@@ -2048,7 +1868,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 35.2K GitHub stars from real production users.",
       "launched_at": 1387527988,
-      "score": 0.3048350082163168,
+      "score": 0.30483298021194877,
       "signals": [
         "github:35199.0"
       ],
@@ -2063,7 +1883,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 32.3K GitHub stars from real production users.",
       "launched_at": 1735217534,
-      "score": 2.8807015318854097,
+      "score": 2.8805677876937335,
       "signals": [
         "github:32316.0"
       ],
@@ -2078,11 +1898,26 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 30.1K GitHub stars from real production users.",
       "launched_at": 1747115282,
-      "score": 3.5335853301184574,
+      "score": 3.5334963914569695,
       "signals": [
-        "github:30119.0"
+        "github:30120.0"
       ],
-      "rank": 30119
+      "rank": 30120
+    },
+    {
+      "id": 190,
+      "name": "Fabric",
+      "tagline": "Open-source framework for augmenting humans using AI prompts, modular patterns, and terminal pipelines.",
+      "url": "https://github.com/danielmiessler/fabric",
+      "emoji": "🧵",
+      "category": "Productivity",
+      "why_it_matters": "Community-driven prompt architecture turning routine cognitive tasks into reusable terminal commands.",
+      "launched_at": 1793105622,
+      "score": 1569.2195452651192,
+      "signals": [
+        "github:27500.0"
+      ],
+      "rank": 27500
     },
     {
       "id": 562,
@@ -2093,7 +1928,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 19.8K GitHub stars from real production users.",
       "launched_at": 1770407087,
-      "score": 5.378278351695049,
+      "score": 5.3776460387954605,
       "signals": [
         "github:19784.0"
       ],
@@ -2108,7 +1943,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 15.6K GitHub stars from real production users.",
       "launched_at": 1664229221,
-      "score": 0.5353458837373304,
+      "score": 0.5353346912582423,
       "signals": [
         "github:15644.0"
       ],
@@ -2123,7 +1958,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 10.3K GitHub stars from real production users.",
       "launched_at": 1325870018,
-      "score": 0.07513081950979995,
+      "score": 0.07513038560152446,
       "signals": [
         "github:10280.0"
       ],
@@ -2138,7 +1973,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 9.1K GitHub stars from real production users.",
       "launched_at": 1747128019,
-      "score": 1.0639819912646518,
+      "score": 1.0639198703608959,
       "signals": [
         "github:9066.0"
       ],
@@ -2153,7 +1988,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 6.5K GitHub stars from real production users.",
       "launched_at": 1739340659,
-      "score": 0.6296651251762383,
+      "score": 0.6296336604957965,
       "signals": [
         "github:6467.0"
       ],
@@ -2168,7 +2003,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 4.3K GitHub stars from real production users.",
       "launched_at": 1706725987,
-      "score": 0.23583187296682592,
+      "score": 0.23582452419134328,
       "signals": [
         "github:4269.0"
       ],
@@ -2183,7 +2018,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 1.7K GitHub stars from real production users.",
       "launched_at": 1730829195,
-      "score": 0.13609472872766407,
+      "score": 0.13608885350987035,
       "signals": [
         "github:1666.0"
       ],
@@ -2198,7 +2033,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 1.6K GitHub stars from real production users.",
       "launched_at": 1753952759,
-      "score": 0.22445062421621045,
+      "score": 0.22443525079998866,
       "signals": [
         "github:1579.0"
       ],
@@ -2213,7 +2048,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 1.2K GitHub stars from real production users.",
       "launched_at": 1762383386,
-      "score": 0.218198026496725,
+      "score": 0.2181790155004765,
       "signals": [
         "github:1150.0"
       ],
@@ -2228,7 +2063,7 @@
       "category": "Productivity",
       "why_it_matters": "Battle-tested in the open — 1.1K GitHub stars from real production users.",
       "launched_at": 1782304476,
-      "score": 0.7083099515559255,
+      "score": 0.708137162797287,
       "signals": [
         "github:1085.0"
       ],
@@ -2242,12 +2077,12 @@
       "emoji": "🔬",
       "category": "Research & Data",
       "why_it_matters": "Massive industry-standard agentic reverse-engineering harness with over 380k+ stars across global AI developer teams.",
-      "launched_at": 1793276127,
-      "score": 81895.98510116289,
+      "launched_at": 1793278422,
+      "score": 76290.7800976939,
       "signals": [
-        "github:410302.0"
+        "github:382000.0"
       ],
-      "rank": 410302
+      "rank": 410411
     },
     {
       "id": 373,
@@ -2258,26 +2093,26 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 196.9K GitHub stars from real production users.",
       "launched_at": 1713214949,
-      "score": 11.943541769525861,
+      "score": 11.943988567626446,
       "signals": [
-        "github:196919.0"
+        "github:196933.0"
       ],
-      "rank": 196919
+      "rank": 196933
     },
     {
       "id": 171,
-      "name": "Ghidra",
-      "tagline": "NSA software reverse engineering framework for binary disassembly, decompiler analysis, and malware inspection.",
+      "name": "ghidra",
+      "tagline": "Ghidra is a software reverse engineering (SRE) framework",
       "url": "https://github.com/NationalSecurityAgency/ghidra",
       "emoji": "🐉",
       "category": "Research & Data",
       "why_it_matters": "The gold-standard open-source reverse engineering platform for auditing compiled firmware and native binaries.",
-      "launched_at": 1792498527,
-      "score": 1323.411080976785,
+      "launched_at": 1551410868,
+      "score": 1.5473142636953179,
       "signals": [
-        "github:96045.0"
+        "github:96053.0"
       ],
-      "rank": 96045
+      "rank": 96053
     },
     {
       "id": 188,
@@ -2287,12 +2122,12 @@
       "emoji": "📑",
       "category": "Research & Data",
       "why_it_matters": "Eliminates RAG hallucinations through OCR-level document layout analysis of complex tables and diagrams.",
-      "launched_at": 1793189727,
-      "score": 8503.411962557908,
+      "launched_at": 1793192022,
+      "score": 2555.9319364945227,
       "signals": [
-        "github:93182.0"
+        "github:28000.0"
       ],
-      "rank": 93182
+      "rank": 93184
     },
     {
       "id": 349,
@@ -2303,11 +2138,11 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 90.4K GitHub stars from real production users.",
       "launched_at": 1728851393,
-      "score": 7.113132388915293,
+      "score": 7.113464251510154,
       "signals": [
-        "github:90390.0"
+        "github:90398.0"
       ],
-      "rank": 90390
+      "rank": 90398
     },
     {
       "id": 351,
@@ -2318,11 +2153,11 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 86.6K GitHub stars from real production users.",
       "launched_at": 1715248130,
-      "score": 5.415742600518656,
+      "score": 5.41568052904916,
       "signals": [
-        "github:86581.0"
+        "github:86583.0"
       ],
-      "rank": 86581
+      "rank": 86583
     },
     {
       "id": 530,
@@ -2333,7 +2168,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 59.7K GitHub stars from real production users.",
       "launched_at": 1524483928,
-      "score": 0.8475906614806081,
+      "score": 0.8475821505407901,
       "signals": [
         "github:59718.0"
       ],
@@ -2348,7 +2183,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 58.8K GitHub stars from real production users.",
       "launched_at": 1689756217,
-      "score": 2.618691254312793,
+      "score": 2.6186230173183693,
       "signals": [
         "github:58752.0"
       ],
@@ -2363,7 +2198,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 54.6K GitHub stars from real production users.",
       "launched_at": 1772087461,
-      "score": 16.268838911648825,
+      "score": 16.26677521871599,
       "signals": [
         "github:54629.0"
       ],
@@ -2377,27 +2212,12 @@
       "emoji": "🔎",
       "category": "Research & Data",
       "why_it_matters": "Ultra-fast production vector database powering enterprise semantic search and recommendation systems.",
-      "launched_at": 1793016927,
-      "score": 1439.499924522089,
+      "launched_at": 1793019222,
+      "score": 896.4379387048182,
       "signals": [
-        "github:35333.0"
+        "github:22000.0"
       ],
       "rank": 35333
-    },
-    {
-      "id": 172,
-      "name": "Frida",
-      "tagline": "Dynamic instrumentation toolkit for developers, reverse-engineers, and AI security telemetry.",
-      "url": "https://github.com/frida/frida",
-      "emoji": "💉",
-      "category": "Research & Data",
-      "why_it_matters": "Essential dynamic hook framework enabling AI agents to trace system calls and inspect live process memory.",
-      "launched_at": 1793016927,
-      "score": 918.7083830405884,
-      "signals": [
-        "github:22550.0"
-      ],
-      "rank": 22550
     },
     {
       "id": 358,
@@ -2408,11 +2228,11 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 17.6K GitHub stars from real production users.",
       "launched_at": 1782793965,
-      "score": 12.153422599123001,
+      "score": 12.152387847351227,
       "signals": [
-        "github:17633.0"
+        "github:17636.0"
       ],
-      "rank": 17633
+      "rank": 17636
     },
     {
       "id": 535,
@@ -2423,7 +2243,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 17.3K GitHub stars from real production users.",
       "launched_at": 1748361668,
-      "score": 2.099827985623717,
+      "score": 2.099702026373547,
       "signals": [
         "github:17321.0"
       ],
@@ -2438,11 +2258,26 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 16.9K GitHub stars from real production users.",
       "launched_at": 1459350197,
-      "score": 0.1852222691894589,
+      "score": 0.1852207719838414,
       "signals": [
         "github:16930.0"
       ],
       "rank": 16930
+    },
+    {
+      "id": 172,
+      "name": "Frida",
+      "tagline": "Dynamic instrumentation toolkit for developers, reverse-engineers, and AI security telemetry.",
+      "url": "https://github.com/frida/frida",
+      "emoji": "💉",
+      "category": "Research & Data",
+      "why_it_matters": "Essential dynamic hook framework enabling AI agents to trace system calls and inspect live process memory.",
+      "launched_at": 1793019222,
+      "score": 684.5526077382248,
+      "signals": [
+        "github:16800.0"
+      ],
+      "rank": 16800
     },
     {
       "id": 537,
@@ -2453,7 +2288,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 16.2K GitHub stars from real production users.",
       "launched_at": 1764920738,
-      "score": 3.398016351864447,
+      "score": 3.397693889179293,
       "signals": [
         "github:16164.0"
       ],
@@ -2468,11 +2303,11 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 15.1K GitHub stars from real production users.",
       "launched_at": 1741104854,
-      "score": 1.5258220776138025,
+      "score": 1.525641940282576,
       "signals": [
-        "github:15059.0"
+        "github:15058.0"
       ],
-      "rank": 15059
+      "rank": 15058
     },
     {
       "id": 701,
@@ -2483,7 +2318,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 14.3K GitHub stars from real production users.",
       "launched_at": 1750848060,
-      "score": 1.8612553878294882,
+      "score": 1.8611372114363893,
       "signals": [
         "github:14341.0"
       ],
@@ -2498,7 +2333,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 14.1K GitHub stars from real production users.",
       "launched_at": 1762150386,
-      "score": 2.654364420001971,
+      "score": 2.654134878370661,
       "signals": [
         "github:14116.0"
       ],
@@ -2513,7 +2348,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 13K GitHub stars from real production users.",
       "launched_at": 1770675390,
-      "score": 3.570458840231755,
+      "score": 3.570034106761258,
       "signals": [
         "github:12950.0"
       ],
@@ -2528,7 +2363,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 11.8K GitHub stars from real production users.",
       "launched_at": 1545955092,
-      "score": 0.18489654518344828,
+      "score": 0.18489452745722063,
       "signals": [
         "github:11789.0"
       ],
@@ -2543,11 +2378,11 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 6K GitHub stars from real production users.",
       "launched_at": 1791491871,
-      "score": 33.055823689304816,
+      "score": 33.013842605349424,
       "signals": [
-        "github:6028.0"
+        "github:6029.0"
       ],
-      "rank": 6028
+      "rank": 6029
     },
     {
       "id": 515,
@@ -2558,7 +2393,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 5.2K GitHub stars from real production users.",
       "launched_at": 1721776213,
-      "score": 0.3642987031305357,
+      "score": 0.3642849649046606,
       "signals": [
         "github:5245.0"
       ],
@@ -2573,7 +2408,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 4.6K GitHub stars from real production users.",
       "launched_at": 1600683244,
-      "score": 0.09812740818558074,
+      "score": 0.09812603320519017,
       "signals": [
         "github:4635.0"
       ],
@@ -2588,7 +2423,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 4.6K GitHub stars from real production users.",
       "launched_at": 1760890369,
-      "score": 0.8169818069465692,
+      "score": 0.8169138973556039,
       "signals": [
         "github:4556.0"
       ],
@@ -2603,7 +2438,7 @@
       "category": "Research & Data",
       "why_it_matters": "Battle-tested in the open — 2K GitHub stars from real production users.",
       "launched_at": 1728678969,
-      "score": 0.159943584178672,
+      "score": 0.15993690889892995,
       "signals": [
         "github:2039.0"
       ],
@@ -2617,12 +2452,12 @@
       "emoji": "🦙",
       "category": "Models & Infra",
       "why_it_matters": "The undisputed runtime for local LLMs, packaging model weights, GPU acceleration, and REST APIs into zero-fuss binaries.",
-      "launched_at": 1793276127,
-      "score": 36992.134356568386,
+      "launched_at": 1793278422,
+      "score": 24964.26050317209,
       "signals": [
-        "github:185332.0"
+        "github:125000.0"
       ],
-      "rank": 185332
+      "rank": 185335
     },
     {
       "id": 412,
@@ -2633,26 +2468,11 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 168.3K GitHub stars from real production users.",
       "launched_at": 1540821360,
-      "score": 2.5760495324428447,
+      "score": 2.5760372940073886,
       "signals": [
-        "github:168347.0"
+        "github:168348.0"
       ],
-      "rank": 168347
-    },
-    {
-      "id": 179,
-      "name": "llama.cpp",
-      "tagline": "Pure C/C++ LLM inference engine supporting 4-bit, 5-bit, and 8-bit quantization on CPU and Apple Silicon.",
-      "url": "https://github.com/ggerganov/llama.cpp",
-      "emoji": "🧱",
-      "category": "Models & Infra",
-      "why_it_matters": "The architectural foundation of consumer LLM inference that created the ubiquitous GGUF quantization ecosystem.",
-      "launched_at": 1793103327,
-      "score": 7577.967172742846,
-      "signals": [
-        "github:132828.0"
-      ],
-      "rank": 132828
+      "rank": 168348
     },
     {
       "id": 178,
@@ -2662,12 +2482,12 @@
       "emoji": "🚀",
       "category": "Models & Infra",
       "why_it_matters": "State-of-the-art enterprise serving engine that maximizes GPU KV cache utilization and cuts serving costs by 4–8x.",
-      "launched_at": 1793189727,
-      "score": 8752.175683125539,
+      "launched_at": 1793192022,
+      "score": 3560.048054403085,
       "signals": [
-        "github:95908.0"
+        "github:39000.0"
       ],
-      "rank": 95908
+      "rank": 95909
     },
     {
       "id": 180,
@@ -2677,8 +2497,8 @@
       "emoji": "🖥️",
       "category": "Models & Infra",
       "why_it_matters": "The most polished desktop application for developers to test, benchmark, and serve local open-weight models with zero setup.",
-      "launched_at": 1793189727,
-      "score": 8669.31528023654,
+      "launched_at": 1793192022,
+      "score": 8671.91192739213,
       "signals": [
         "app:95000.0"
       ],
@@ -2693,11 +2513,26 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 75.8K GitHub stars from real production users.",
       "launched_at": 1685268552,
-      "score": 3.210784560483201,
+      "score": 3.2107467278946116,
       "signals": [
-        "github:75796.0"
+        "github:75797.0"
       ],
-      "rank": 75796
+      "rank": 75797
+    },
+    {
+      "id": 179,
+      "name": "llama.cpp",
+      "tagline": "Pure C/C++ LLM inference engine supporting 4-bit, 5-bit, and 8-bit quantization on CPU and Apple Silicon.",
+      "url": "https://github.com/ggerganov/llama.cpp",
+      "emoji": "🧱",
+      "category": "Models & Infra",
+      "why_it_matters": "The architectural foundation of consumer LLM inference that created the ubiquitous GGUF quantization ecosystem.",
+      "launched_at": 1793105622,
+      "score": 4251.158404445505,
+      "signals": [
+        "github:74500.0"
+      ],
+      "rank": 74500
     },
     {
       "id": 676,
@@ -2708,11 +2543,11 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 51K GitHub stars from real production users.",
       "launched_at": 1699644816,
-      "score": 2.565985852374503,
+      "score": 2.5659622060017755,
       "signals": [
-        "github:51041.0"
+        "github:51042.0"
       ],
-      "rank": 51041
+      "rank": 51042
     },
     {
       "id": 531,
@@ -2723,11 +2558,11 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 46.5K GitHub stars from real production users.",
       "launched_at": 1568616223,
-      "score": 0.8190545685377654,
+      "score": 0.819009529504667,
       "signals": [
-        "github:46537.0"
+        "github:46535.0"
       ],
-      "rank": 46537
+      "rank": 46535
     },
     {
       "id": 418,
@@ -2738,11 +2573,11 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 41.3K GitHub stars from real production users.",
       "launched_at": 1686587321,
-      "score": 1.7754205795101858,
+      "score": 1.775461665760246,
       "signals": [
-        "github:41299.0"
+        "github:41301.0"
       ],
-      "rank": 41299
+      "rank": 41301
     },
     {
       "id": 523,
@@ -2753,11 +2588,11 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 38.5K GitHub stars from real production users.",
       "launched_at": 1771171891,
-      "score": 10.895319195721079,
+      "score": 10.894277221252285,
       "signals": [
-        "github:38482.0"
+        "github:38483.0"
       ],
-      "rank": 38482
+      "rank": 38483
     },
     {
       "id": 631,
@@ -2768,7 +2603,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 38.3K GitHub stars from real production users.",
       "launched_at": 1704687352,
-      "score": 2.057571880001902,
+      "score": 2.0575092377020567,
       "signals": [
         "github:38300.0"
       ],
@@ -2783,11 +2618,11 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 36.8K GitHub stars from real production users.",
       "launched_at": 1684432029,
-      "score": 1.5425119385213886,
+      "score": 1.5425156784346075,
       "signals": [
-        "github:36752.0"
+        "github:36753.0"
       ],
-      "rank": 36752
+      "rank": 36753
     },
     {
       "id": 585,
@@ -2798,7 +2633,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 28.6K GitHub stars from real production users.",
       "launched_at": 1528214758,
-      "score": 0.41277507221877724,
+      "score": 0.41277086908850974,
       "signals": [
         "github:28599.0"
       ],
@@ -2813,7 +2648,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 25.2K GitHub stars from real production users.",
       "launched_at": 1684819756,
-      "score": 1.0636330597587276,
+      "score": 1.0636066043406172,
       "signals": [
         "github:25234.0"
       ],
@@ -2828,11 +2663,11 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 21.9K GitHub stars from real production users.",
       "launched_at": 1669348269,
-      "score": 0.785371505685168,
+      "score": 0.7853903298217935,
       "signals": [
-        "github:21863.0"
+        "github:21864.0"
       ],
-      "rank": 21863
+      "rank": 21864
     },
     {
       "id": 497,
@@ -2843,7 +2678,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 18.9K GitHub stars from real production users.",
       "launched_at": 1678878579,
-      "score": 0.748212852796266,
+      "score": 0.7481952084183223,
       "signals": [
         "github:18923.0"
       ],
@@ -2858,11 +2693,11 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 16K GitHub stars from real production users.",
       "launched_at": 1690902399,
-      "score": 0.7225989697222918,
+      "score": 0.722625099576269,
       "signals": [
-        "github:15997.0"
+        "github:15998.0"
       ],
-      "rank": 15997
+      "rank": 15998
     },
     {
       "id": 538,
@@ -2873,7 +2708,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 13.3K GitHub stars from real production users.",
       "launched_at": 1687275029,
-      "score": 0.5775094269964051,
+      "score": 0.577494730370133,
       "signals": [
         "github:13330.0"
       ],
@@ -2888,7 +2723,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 12.6K GitHub stars from real production users.",
       "launched_at": 1681446347,
-      "score": 0.5139402647007433,
+      "score": 0.5139278668992111,
       "signals": [
         "github:12649.0"
       ],
@@ -2903,7 +2738,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 12.6K GitHub stars from real production users.",
       "launched_at": 1681864072,
-      "score": 0.5131905021485921,
+      "score": 0.5131780760576139,
       "signals": [
         "github:12574.0"
       ],
@@ -2918,7 +2753,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 12.2K GitHub stars from real production users.",
       "launched_at": 1716930364,
-      "score": 0.7857613827993761,
+      "score": 0.7857336290661328,
       "signals": [
         "github:12238.0"
       ],
@@ -2933,7 +2768,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 12.1K GitHub stars from real production users.",
       "launched_at": 1668037475,
-      "score": 0.4282894328720151,
+      "score": 0.42828020655152804,
       "signals": [
         "github:12074.0"
       ],
@@ -2948,7 +2783,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 11.1K GitHub stars from real production users.",
       "launched_at": 1539600880,
-      "score": 0.16869008550005118,
+      "score": 0.1686882907242569,
       "signals": [
         "github:11088.0"
       ],
@@ -2963,7 +2798,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 10.3K GitHub stars from real production users.",
       "launched_at": 1753147414,
-      "score": 1.4338663272562293,
+      "score": 1.4337700829541136,
       "signals": [
         "github:10335.0"
       ],
@@ -2978,7 +2813,7 @@
       "category": "Models & Infra",
       "why_it_matters": "Battle-tested in the open — 9.8K GitHub stars from real production users.",
       "launched_at": 1771585501,
-      "score": 2.841752016957859,
+      "score": 2.8413998474503384,
       "signals": [
         "github:9813.0"
       ],
