@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-30T18:15:07.106Z",
+  "updatedAt": "2026-10-30T18:24:12.680Z",
   "categories": [
     {
       "id": "all",
-      "label": "🔥 All Live Incidents",
+      "label": "🔥 All Cybersecurity News",
       "count": 16
     },
     {
@@ -37,9 +37,9 @@
       "date": "2026-10-30",
       "timeAgo": "10 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
-      "incident": "AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank investigates suspected Salesforce data breach; AU Small Finance Bank breach reported, hackers threaten to leak Aadhaar and customer records. Verified across multiple open wires including: BusinessLine, India Today, ThePrint, Business Standard.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on Moneycontrol.com. Verified across multiple open wires including: BusinessLine, India Today, ThePrint, Business Standard."
+      "incident": "AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank investigates suspected Salesforce data breach; AU Small Finance Bank probes potential data leak on Salesforce platform. Verified across multiple open wires including: BusinessLine, Business Standard, ThePrint, CNBC TV18.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on Moneycontrol.com. Verified across multiple open wires including: BusinessLine, Business Standard, ThePrint, CNBC TV18."
     },
     {
       "id": "live-india-bfsi-6469460485",
@@ -55,9 +55,9 @@
       "date": "2026-10-30",
       "timeAgo": "10 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
-      "incident": "CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, https://www.fintechbiznews.com/, MillenniumPost.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on The Hindu. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, https://www.fintechbiznews.com/, MillenniumPost."
+      "incident": "CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; Bank fraud case: CBI books Chandra Proteco &amp; its 3 directors. Verified across multiple open wires including: BW Police World, MillenniumPost, Rediff MoneyWiz, The 420.in.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on The Hindu. Verified across multiple open wires including: BW Police World, MillenniumPost, Rediff MoneyWiz, The 420.in."
     },
     {
       "id": "live-india-bfsi-10931990812",
@@ -71,11 +71,29 @@
       "badgeType": "regulatory",
       "ref": "NDTV Live Wire",
       "date": "2026-10-30",
-      "timeAgo": "8 hours ago",
+      "timeAgo": "9 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
       "incident": "How To Avoid UPI Fraud? PhonePe Shares 3 Checks Every User Must Follow.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on NDTV."
+    },
+    {
+      "id": "live-india-bfsi-10134829711",
+      "category": "india-bfsi",
+      "severity": "high",
+      "impactBadge": "🚨 Breaking Wire",
+      "title": "Fraud Due to Bank Negligence? Supreme Court Says the Bank Pays",
+      "sourceName": "Lawful Talks",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNbi15OTFBTy01TGM0ZlhsbXcwem1QYVVMUkdPNThMLUF0SzNVY3RRVmZ0WWd5cXRDaUg4MHdEMnVnc09TXzNjU0lRV0xzb2RObXNpNTloNkdUSDZIcDFhUm5KX0JURURoTkNHd1pudS1SaEQ3LUd6TTU1MmlTSE1HcTdzU1Nral9HOG5HMWxoRVl6MG1q?oc=5",
+      "provenanceBadge": "🏦 BFSI Wire",
+      "badgeType": "regulatory",
+      "ref": "Lawful Talks Live Wire",
+      "date": "2026-10-30",
+      "timeAgo": "2 hours ago",
+      "entities": "Indian Banking Infrastructure & NBFCs",
+      "incident": "Fraud Due to Bank Negligence? Supreme Court Says the Bank Pays.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on Lawful Talks."
     },
     {
       "id": "live-india-bfsi-278622367",
@@ -92,7 +110,7 @@
       "timeAgo": "5 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
       "incident": "SC Seeks Strict Bank Liability, Mandatory Compensation for Victims of Digital Arrest, Cyber Fraud.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on KNN India."
     },
     {
@@ -110,26 +128,8 @@
       "timeAgo": "13 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
       "incident": "Delhi Police Bust ₹5.17 Crore Bank Fraud Network, Two Arrested.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on The 420.in."
-    },
-    {
-      "id": "live-india-bfsi-10134829711",
-      "category": "india-bfsi",
-      "severity": "high",
-      "impactBadge": "🚨 Breaking Wire",
-      "title": "Fraud Due to Bank Negligence? Supreme Court Says the Bank Pays",
-      "sourceName": "Lawful Talks",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNbi15OTFBTy01TGM0ZlhsbXcwem1QYVVMUkdPNThMLUF0SzNVY3RRVmZ0WWd5cXRDaUg4MHdEMnVnc09TXzNjU0lRV0xzb2RObXNpNTloNkdUSDZIcDFhUm5KX0JURURoTkNHd1pudS1SaEQ3LUd6TTU1MmlTSE1HcTdzU1Nral9HOG5HMWxoRVl6MG1q?oc=5",
-      "provenanceBadge": "🏦 BFSI Wire",
-      "badgeType": "regulatory",
-      "ref": "Lawful Talks Live Wire",
-      "date": "2026-10-30",
-      "timeAgo": "2 hours ago",
-      "entities": "Indian Banking Infrastructure & NBFCs",
-      "incident": "Fraud Due to Bank Negligence? Supreme Court Says the Bank Pays.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on Lawful Talks."
     },
     {
       "id": "live-crypto-heists-1959085837",
@@ -146,7 +146,7 @@
       "timeAgo": "11 hours ago",
       "entities": "Binance, Global Exchanges & Digital Assets",
       "incident": "‘Biggest hack in history’: Crypto giant freezes assets after $8.9b heist.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on SMH.com.au."
     },
     {
@@ -163,9 +163,9 @@
       "date": "2026-10-29",
       "timeAgo": "19 hours ago",
       "entities": "Binance, Global Exchanges & Digital Assets",
-      "incident": "Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History. Verified across multiple open wires including: Yahoo Finance, TRM Labs, CNBC, NBC News.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on Reuters. Verified across multiple open wires including: Yahoo Finance, TRM Labs, CNBC, NBC News."
+      "incident": "Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; Binance Suffers \"Largest Bank Heist In Human History,\" And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack. Verified across multiple open wires including: Yahoo Finance, 24/7 Wall St., Radio Royal, TRM Labs.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on Reuters. Verified across multiple open wires including: Yahoo Finance, 24/7 Wall St., Radio Royal, TRM Labs."
     },
     {
       "id": "live-crypto-heists-799466515",
@@ -182,7 +182,7 @@
       "timeAgo": "19 hours ago",
       "entities": "Binance, Global Exchanges & Digital Assets",
       "incident": "Polymarket resumes trading after third-party security breach, to reimburse users.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on Reuters."
     },
     {
@@ -200,26 +200,26 @@
       "timeAgo": "6 days ago",
       "entities": "Binance, Global Exchanges & Digital Assets",
       "incident": "Bitcoin ‘Goes to Zero’ After a Hack, Chamath Palihapitiya Predicts.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on Yahoo Finance."
     },
     {
-      "id": "live-global-ransomware-1246487518",
+      "id": "live-global-ransomware-5707601159",
       "category": "global-ransomware",
       "severity": "high",
-      "impactBadge": "⚠️ Data Breach",
-      "title": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees",
-      "sourceName": "Deccan Chronicle",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5",
+      "impactBadge": "🚨 Breaking Wire",
+      "title": "New cybersecurity blind spot: When AI looks like a trusted employee",
+      "sourceName": "The Financial Express",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5",
       "provenanceBadge": "🏛️ Statutory Wire",
       "badgeType": "statutory",
-      "ref": "Deccan Chronicle Live Wire",
-      "date": "2026-10-29",
-      "timeAgo": "1 day ago",
+      "ref": "The Financial Express Live Wire",
+      "date": "2026-10-30",
+      "timeAgo": "8 hours ago",
       "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on Deccan Chronicle."
+      "incident": "New cybersecurity blind spot: When AI looks like a trusted employee.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on The Financial Express."
     },
     {
       "id": "live-global-ransomware-12643287449",
@@ -236,7 +236,7 @@
       "timeAgo": "1 day ago",
       "entities": "Global Enterprise Infrastructure & Critical Systems",
       "incident": "France's Sopra Steria raises 2026 growth target again as defence, cybersecurity lift Q3 sales.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on Reuters."
     },
     {
@@ -254,62 +254,62 @@
       "timeAgo": "1 day ago",
       "entities": "Global Enterprise Infrastructure & Critical Systems",
       "incident": "Chinese AI model carries out complex cyberattacks in controlled tests, researchers say.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on Reuters."
     },
     {
-      "id": "live-global-ransomware-5660613474",
+      "id": "live-global-ransomware-9023916946",
       "category": "global-ransomware",
       "severity": "high",
-      "impactBadge": "🚨 Breaking Wire",
-      "title": "Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users",
+      "impactBadge": "🔒 Assets Frozen",
+      "title": "Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say",
+      "sourceName": "New York Post",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5",
+      "provenanceBadge": "🏛️ Statutory Wire",
+      "badgeType": "statutory",
+      "ref": "New York Post Live Wire",
+      "date": "2026-10-29",
+      "timeAgo": "1 day ago",
+      "entities": "Global Enterprise Infrastructure & Critical Systems",
+      "incident": "Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on New York Post."
+    },
+    {
+      "id": "live-global-ransomware-1246487518",
+      "category": "global-ransomware",
+      "severity": "high",
+      "impactBadge": "⚠️ Data Breach",
+      "title": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees",
       "sourceName": "Deccan Chronicle",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5",
       "provenanceBadge": "🏛️ Statutory Wire",
       "badgeType": "statutory",
       "ref": "Deccan Chronicle Live Wire",
       "date": "2026-10-29",
       "timeAgo": "1 day ago",
       "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "incident": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on Deccan Chronicle."
     },
     {
-      "id": "live-global-ransomware-792151822",
+      "id": "live-global-ransomware-6179949802",
       "category": "global-ransomware",
       "severity": "high",
       "impactBadge": "🚨 Breaking Wire",
-      "title": "Google launches Gemini 4 Carbon AI model with cybersecurity focus",
-      "sourceName": "Ada Derana",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5",
+      "title": "Major hack exposes details of thousands of US immigration agents",
+      "sourceName": "Latest news from Azerbaijan",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSExNWFFFbkJvYnFEbnFQTXhjcExDMWxyaVFJNWlkRXpjTmhDYUJnRlZSeno1bTFlcXVvVW5vcWYwRllyVXdVa2gtakhnVkV1dWhQMTk5QnZFcEdTWVlQOU95OVRKRGFnclk0M2JlV3YzNG9nUU5DUzJMVUQtSU5xX2hiWl9RQzlBWW9nZHFn?oc=5",
       "provenanceBadge": "🏛️ Statutory Wire",
       "badgeType": "statutory",
-      "ref": "Ada Derana Live Wire",
+      "ref": "Latest news from Azerbaijan Live Wire",
       "date": "2026-10-29",
       "timeAgo": "1 day ago",
       "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "Google launches Gemini 4 Carbon AI model with cybersecurity focus.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on Ada Derana."
-    },
-    {
-      "id": "live-global-ransomware-5792857321",
-      "category": "global-ransomware",
-      "severity": "high",
-      "impactBadge": "⚠️ Data Breach",
-      "title": "Three South Korean financial firms including Bithumb report data breaches, Yonhap says",
-      "sourceName": "Reuters",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5",
-      "provenanceBadge": "🚨 Reuters Wire",
-      "badgeType": "statutory",
-      "ref": "Reuters Live Wire",
-      "date": "2026-10-28",
-      "timeAgo": "2 days ago",
-      "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "Three South Korean financial firms including Bithumb report data breaches, Yonhap says.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on Reuters."
+      "incident": "Major hack exposes details of thousands of US immigration agents.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on Latest news from Azerbaijan."
     }
   ]
 }

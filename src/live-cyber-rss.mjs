@@ -349,7 +349,7 @@ export async function getLiveCyberRss() {
                 category === "crypto-heists" ? "Binance, Global Exchanges & Digital Assets" :
                 "Global Enterprise Infrastructure & Critical Systems",
       incident: synthesizedSummary + crossWireNote,
-      rootCause: "Live incident telemetry verified by official news wires and forensic security desks.",
+      rootCause: "Verified reporting confirmed by official news wires and security researchers.",
       consequence: `Read open-access reporting on ${item.source}.${crossWireNote}`
     });
   }
@@ -365,7 +365,7 @@ export async function getLiveCyberRss() {
   const finalThreats = [...indiaSelected, ...cryptoSelected, ...globalSelected];
 
   const categories = [
-    { id: "all", label: "🔥 All Live Incidents", count: finalThreats.length },
+    { id: "all", label: "🔥 All Cybersecurity News", count: finalThreats.length },
     { id: "india-bfsi", label: "🇮🇳 India, Banks & NBFCs", count: indiaSelected.length },
     { id: "crypto-heists", label: "🌐 Crypto & Exchange Heists", count: cryptoSelected.length },
     { id: "global-ransomware", label: "🚨 Reuters & Global Wire", count: globalSelected.length }
