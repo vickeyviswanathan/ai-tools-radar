@@ -193,13 +193,18 @@ function updateThreatsInHtml(categories, threats) {
   html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${threats.length} live incidents</span>`);
 
   const containerStartTag = '<div class="threat-cards-grid" id="threats-container">';
-  const containerEndIdx = html.indexOf('</div>\n  </section>', html.indexOf(containerStartTag));
-
-  if (containerEndIdx !== -1) {
-    const beforeContainer = html.slice(0, html.indexOf(containerStartTag) + containerStartTag.length);
-    const afterContainer = html.slice(containerEndIdx);
-    const newCardsHtml = "\n" + generateCardsHtml(threats) + "\n    ";
-    html = beforeContainer + newCardsHtml + afterContainer;
+  const startIdx = html.indexOf(containerStartTag);
+  if (startIdx !== -1) {
+    const emptyStateIdx = html.indexOf('<div class="threat-empty-state"', startIdx);
+    const endSectionIdx = html.indexOf('</section>', startIdx);
+    const searchLimit = emptyStateIdx !== -1 ? emptyStateIdx : endSectionIdx;
+    const containerClosingDiv = html.lastIndexOf('</div>', searchLimit);
+    if (containerClosingDiv > startIdx) {
+      const beforeContainer = html.slice(0, startIdx + containerStartTag.length);
+      const afterContainer = html.slice(containerClosingDiv);
+      const newCardsHtml = "\n" + generateCardsHtml(threats) + "\n    ";
+      html = beforeContainer + newCardsHtml + afterContainer;
+    }
   }
 
   writeFileSync(indexPath, html, "utf8");

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T13:49:31.164Z",
+  "updatedAt": "2026-10-30T13:58:10.436Z",
   "categories": [
     {
       "id": "all",
@@ -35,29 +35,11 @@
       "badgeType": "regulatory",
       "ref": "Moneycontrol.com Live Wire",
       "date": "2026-10-30",
-      "timeAgo": "5 hours ago",
+      "timeAgo": "6 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
-      "incident": "AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank probes potential data leak from SaaS platform after hacker group claims breach; AU Small Finance Bank investigates suspected Salesforce data breach. Verified across multiple open wires including: ThePrint, BusinessLine, TradingView, ETLegalWorld.com.",
+      "incident": "AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank breach reported, hackers threaten to leak Aadhaar and customer records; AU Small Finance Bank probes potential data leak from SaaS platform after hacker group claims breach. Verified across multiple open wires including: India Today, ThePrint, BusinessLine, ETLegalWorld.com.",
       "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on Moneycontrol.com. Verified across multiple open wires including: ThePrint, BusinessLine, TradingView, ETLegalWorld.com."
-    },
-    {
-      "id": "live-india-bfsi-5919567293",
-      "category": "india-bfsi",
-      "severity": "high",
-      "impactBadge": "🚨 Financial Fraud Probe",
-      "title": "Rs 35 Crore PNB Fraud: Bank Settles Rs 43 Lakh Claims, Promises To Pay Customers",
-      "sourceName": "NDTV",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQYWMxLTc5OXFmZld2VU0zbkFUVXJSSXVPS0tqNkN3eWhBNGVJMWlQbWJrZURBZlpzU016a19DSHJLTF9uc3RHaGQyMzNsaUV1VmRTUVU5bE9RbUVEeHQwandLSldMSnVWb1lvSXhOZ21FNjBlYlNYSTFMM3NLemJfNzV2QWhqSml4ZUZzYTJCWmp1S1JzcHRjVGk4dldDRDIyRXByQ04zaWVFcFZzdG82cm1lZ3NSekdqYUo4c0V6bm1nQdIBygFBVV95cUxQUGI0S2FoMndRaE4wbVlYM0ZMQXNKd1RjODdHZUJ6U2lqUlVBRGN4U3VQU1BVZXpjNE5LMHpIQVY1LUlJUFhzMFZESUZaX3NjUjM1NXo5cFZDb05WZFA4NkM4ekVxWnRVaWt3RUsxZ25QemgyU3FfUzFtcDdwTnhjTUI0Q2N5b0lkaFdVRE9kZWxFVHdZVWpkTGtrblZPME9mTVUtbTYxR0ROSWhoSm5uZGk5LXprNlN4VkVLYXl3SHZFUGF0RjV6clZn?oc=5",
-      "provenanceBadge": "🏦 BFSI Wire",
-      "badgeType": "regulatory",
-      "ref": "NDTV Live Wire",
-      "date": "2026-10-30",
-      "timeAgo": "11 hours ago",
-      "entities": "Indian Banking Infrastructure & NBFCs",
-      "incident": "Rs 35 Crore PNB Fraud: Bank Settles Rs 43 Lakh Claims, Promises To Pay Customers. Key developments: PNB Rs 35 Crore Fraud: Take These 5 Steps If Money Disappears From Your Bank Account; PNB fund misappropriation case: Bank says genuine claims to be honoured, FIR registered in Gr Noida. Verified across multiple open wires including: The Hindu, ThePrint, Brut, Firstpost.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on NDTV. Verified across multiple open wires including: The Hindu, ThePrint, Brut, Firstpost."
+      "consequence": "Read open-access reporting on Moneycontrol.com. Verified across multiple open wires including: India Today, ThePrint, BusinessLine, ETLegalWorld.com."
     },
     {
       "id": "live-india-bfsi-6469460485",
@@ -73,9 +55,27 @@
       "date": "2026-10-30",
       "timeAgo": "6 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
-      "incident": "CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost.",
+      "incident": "CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost, ETV Bharat.",
       "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on The Hindu. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost."
+      "consequence": "Read open-access reporting on The Hindu. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost, ETV Bharat."
+    },
+    {
+      "id": "live-india-bfsi-10931990812",
+      "category": "india-bfsi",
+      "severity": "high",
+      "impactBadge": "🚨 Breaking Wire",
+      "title": "How To Avoid UPI Fraud? PhonePe Shares 3 Checks Every User Must Follow",
+      "sourceName": "NDTV",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORHFZbHJ5aUpGdWZJdkxBR3ZrVGVLbGR2aDk0VTd3VVhrdy1ueUpNYV9UUm9tckd5b3ludVBRN3pMb0NheHdCdnhxMm9NMUNKeHFNdUJCNi0yT3dtT3cweXJyMWVIYmE4cFhaVU1HQllWWlR3NUE5NlVIX2l3eDFFMmhXQnRIbE44dC1uNzBIN1BRdnRLM3JYaGZYU1BCWFFtQjlTSjVPMnJWWVVNY0cweEJKSdIBuwFBVV95cUxOSkpnZkdtV1p0bHRaOGZuYmRxSlFES1Rna1NqdnhkWlVobGtQXzdOTS0wcUE2RkZ4ZkhNcF80dElZN0NVUHBmajJfRnRwQWVVOXhhLTJtTzY2eXR5bDdFa3ViV2g1dXhWQUhoYWE5bnZhX3kzU1dNMU5xbGlTSUk0X3BxYWZDUno2VFJmSW1qVG55UHNKN1ZNN0hUZDd5ZEUxX3U2bFgwbUZ2NjhScXNNdGYxemVkNS1SUXpz?oc=5",
+      "provenanceBadge": "🏦 BFSI Wire",
+      "badgeType": "regulatory",
+      "ref": "NDTV Live Wire",
+      "date": "2026-10-30",
+      "timeAgo": "4 hours ago",
+      "entities": "Indian Banking Infrastructure & NBFCs",
+      "incident": "How To Avoid UPI Fraud? PhonePe Shares 3 Checks Every User Must Follow.",
+      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "consequence": "Read open-access reporting on NDTV."
     },
     {
       "id": "live-india-bfsi-3538865005",
@@ -107,7 +107,7 @@
       "badgeType": "regulatory",
       "ref": "The Tribune Live Wire",
       "date": "2026-10-30",
-      "timeAgo": "6 hours ago",
+      "timeAgo": "7 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
       "incident": "Rs 280 crore bank fraud case: ED conducts raids at 8 premises in West Bengal.",
       "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
@@ -145,9 +145,9 @@
       "date": "2026-10-29",
       "timeAgo": "15 hours ago",
       "entities": "Binance, Global Exchanges & Digital Assets",
-      "incident": "Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; Crypto industry suffers 'largest bank heist in human history' as billions stolen in Binance hack. Verified across multiple open wires including: Yahoo Finance, Yahoo Finance UK, 24/7 Wall St., Radio Royal.",
+      "incident": "Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History. Verified across multiple open wires including: Yahoo Finance, TRM Labs, Elliptic, NBC News.",
       "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on Reuters. Verified across multiple open wires including: Yahoo Finance, Yahoo Finance UK, 24/7 Wall St., Radio Royal."
+      "consequence": "Read open-access reporting on Reuters. Verified across multiple open wires including: Yahoo Finance, TRM Labs, Elliptic, NBC News."
     },
     {
       "id": "live-crypto-heists-799466515",
@@ -186,24 +186,6 @@
       "consequence": "Read open-access reporting on The Financial Express."
     },
     {
-      "id": "live-global-ransomware-1246487518",
-      "category": "global-ransomware",
-      "severity": "high",
-      "impactBadge": "⚠️ Data Breach",
-      "title": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees",
-      "sourceName": "Deccan Chronicle",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5",
-      "provenanceBadge": "🏛️ Statutory Wire",
-      "badgeType": "statutory",
-      "ref": "Deccan Chronicle Live Wire",
-      "date": "2026-10-29",
-      "timeAgo": "1 day ago",
-      "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees.",
-      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on Deccan Chronicle."
-    },
-    {
       "id": "live-global-ransomware-12643287449",
       "category": "global-ransomware",
       "severity": "high",
@@ -220,6 +202,24 @@
       "incident": "France's Sopra Steria raises 2026 growth target again as defence, cybersecurity lift Q3 sales.",
       "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
       "consequence": "Read open-access reporting on Reuters."
+    },
+    {
+      "id": "live-global-ransomware-1246487518",
+      "category": "global-ransomware",
+      "severity": "high",
+      "impactBadge": "⚠️ Data Breach",
+      "title": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees",
+      "sourceName": "Deccan Chronicle",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5",
+      "provenanceBadge": "🏛️ Statutory Wire",
+      "badgeType": "statutory",
+      "ref": "Deccan Chronicle Live Wire",
+      "date": "2026-10-29",
+      "timeAgo": "1 day ago",
+      "entities": "Global Enterprise Infrastructure & Critical Systems",
+      "incident": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees.",
+      "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
+      "consequence": "Read open-access reporting on Deccan Chronicle."
     },
     {
       "id": "live-global-ransomware-5660613474",
@@ -258,22 +258,22 @@
       "consequence": "Read open-access reporting on Ada Derana."
     },
     {
-      "id": "live-global-ransomware-25291081211",
+      "id": "live-global-ransomware-5792857321",
       "category": "global-ransomware",
       "severity": "high",
-      "impactBadge": "🚨 Reuters Exclusive",
-      "title": "EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms",
+      "impactBadge": "⚠️ Data Breach",
+      "title": "Three South Korean financial firms including Bithumb report data breaches, Yonhap says",
       "sourceName": "Reuters",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDV3WWJ5Ulh3Q05tT203WGNGVE1UNmFvZ2ZoclFXemtrWXFhNlRhUmtabmlPZXRaYU1sQ251VWhSSWJMODNJQkRrMk9MNFdfb1RVT2VJQTR4akpfM0JQNk9wMkpMV2tFY2tHc2ZpTGMwcHlLNFU3UDBrZk5MbGFrb2ZqX25XRVZCQmI5Z29LbDI5cjF2S0JodjVNcVVmV3RyUFR1SW5RZUwwY2JlSWJrRUMyNEgta3dl?oc=5",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5",
       "provenanceBadge": "🚨 Reuters Wire",
       "badgeType": "statutory",
       "ref": "Reuters Live Wire",
-      "date": "2026-10-27",
+      "date": "2026-10-28",
       "timeAgo": "2 days ago",
       "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms. Key developments: KB Kookmin Bank finds 2,091 more people affected by data leak; KB Kookmin Bank identifies 2,210 affected in Korea data leak review. Verified across multiple open wires including: The Korea Times, Chosunbiz.",
+      "incident": "Three South Korean financial firms including Bithumb report data breaches, Yonhap says.",
       "rootCause": "Live incident telemetry verified by official news wires and forensic security desks.",
-      "consequence": "Read open-access reporting on Reuters. Verified across multiple open wires including: The Korea Times, Chosunbiz."
+      "consequence": "Read open-access reporting on Reuters."
     }
   ]
 }
