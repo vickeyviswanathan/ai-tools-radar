@@ -1918,24 +1918,28 @@
     flex-shrink: 0;
   }
 
+
+  .radar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .radar-col .visitor-pill {
+    padding: 3px 8px;
+    gap: 6px;
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+  }
+
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <div class="top-bar">
-
-      <div class="top-actions">
-        <!-- Automatic Zero-Setup Live Visitor Counter -->
-        <div class="visitor-pill">
-          <span class="pulse-dot"></span>
-          <span>Live Views:</span>
-          <img src="https://visitor-badge.laobi.icu/badge?page_id=elite-ai-radar.main" alt="Live Views" />
-        </div>
-      </div>
-    </div>
-
     <div class="header-flex">
       <div class="header-text">
         <h1 style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
@@ -1955,7 +1959,13 @@
           <span>Synced <strong id="stat-synced">—</strong></span>
         </div>
       </div>
-      <div class="radar-anim" aria-hidden="true"></div>
+            <div class="radar-col">
+        <div class="radar-anim" aria-hidden="true"></div>
+        <div class="visitor-pill" title="Live visitors counter">
+          <span class="pulse-dot"></span>
+          <img src="https://visitor-badge.laobi.icu/badge?page_id=elite-ai-radar.main" alt="visitors counter" />
+        </div>
+      </div>
     </div>
 
     <!-- Primary View Switcher -->
@@ -5106,7 +5116,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank investigates suspected Salesforce data breach; AU Small Finance Bank probes potential data leak from SaaS platform after hacker group claims breach. Verified across multiple open wires including: BusinessLine, ThePrint, Business Standard, TradingView.
+          AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank investigates suspected Salesforce data breach; AU Small Finance Bank breach reported, hackers threaten to leak Aadhaar and customer records. Verified across multiple open wires including: BusinessLine, India Today, ThePrint, Business Standard.
         </div>
       </div>
 
@@ -5148,7 +5158,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost, The 420.in.
+          CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, https://www.fintechbiznews.com/, MillenniumPost.
         </div>
       </div>
 
@@ -5400,7 +5410,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; Binance Suffers &quot;Largest Bank Heist In Human History,&quot; And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack. Verified across multiple open wires including: Yahoo Finance, 24/7 Wall St., TRM Labs, NBC News.
+          Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History. Verified across multiple open wires including: Yahoo Finance, TRM Labs, CNBC, NBC News.
         </div>
       </div>
 
