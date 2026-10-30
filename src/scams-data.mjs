@@ -1,0 +1,70 @@
+// Curated, verified 2026 scams with statutory law enforcement and regulatory provenance.
+// All external action links point strictly to official government portals (.gov.in / .org.in / revoke.cash).
+
+export const SCAMS_DATA = [
+  {
+    id: "traffic-echallan-apk",
+    tag: "Traffic Challan APK",
+    severity: "critical",
+    title: "The Fake Traffic Fine Message (e-Challan APK)",
+    scam: "You get an SMS claiming your vehicle was caught overspeeding on camera with a pending fine of ₹1,000, and a link to download an app (echallan.apk) to pay before court action. If you install it, the app silently reads all your incoming SMS, steals your bank OTPs, and drains your account.",
+    protection: "Traffic police never send app files to pay fines. Never install any file ending in .apk. Always check and pay traffic fines only on the official government website: echallan.parivahan.gov.in.",
+    sourceName: "I4C (Ministry of Home Affairs) Cyber Alert",
+    sourceUrl: "https://cybercrime.gov.in/",
+    verifiedDate: "2026-10-30",
+    actionLinkText: "Official Portal: echallan.parivahan.gov.in ↗",
+    actionUrl: "https://echallan.parivahan.gov.in/"
+  },
+  {
+    id: "whatsapp-wedding-card-apk",
+    tag: "Wedding Card Virus",
+    severity: "critical",
+    title: "The WhatsApp \"Wedding Card\" Virus",
+    scam: "You receive a message from a friend or relative on WhatsApp saying: \"My cousin is getting married next week, wedding card and venue attached.\" The attached file looks like an invite, but ends in .apk. Installing it infects your phone with a virus that hijacks your WhatsApp, sends the same scam to all your family contacts, and steals your net banking logins.",
+    protection: "Real wedding cards are always photos or PDFs, never an .apk software file. If someone sends an APK file, do not tap it. Call that person on a regular call to tell them their WhatsApp is compromised.",
+    sourceName: "CERT-In Cyber Security Advisory",
+    sourceUrl: "https://www.cert-in.org.in/",
+    verifiedDate: "2026-10-30",
+    actionLinkText: "National Cyber Helpline: Dial 1930 ↗",
+    actionUrl: "https://cybercrime.gov.in/"
+  },
+  {
+    id: "fastag-blacklist-panic",
+    tag: "FASTag Toll Alert",
+    severity: "high",
+    title: "The FASTag Highway Blacklist Trap",
+    scam: "You get an urgent SMS saying your FASTag is blacklisted or KYC is expired, demanding a ₹45 pending fee within 2 hours or your vehicle will be stopped at the next toll plaza. The link opens a fake cloned website that captures your bank account and debit card details.",
+    protection: "Highway authorities never send SMS links to collect ₹45 or update KYC. Never click links in SMS. If you want to check your FASTag, open your own banking app or Paytm directly.",
+    sourceName: "NPCI & Cyber Crime Coordination Centre",
+    sourceUrl: "https://www.npci.org.in/",
+    verifiedDate: "2026-10-30",
+    actionLinkText: "NPCI Official Portal ↗",
+    actionUrl: "https://www.npci.org.in/"
+  },
+  {
+    id: "esim-5g-upgrade-hijack",
+    tag: "eSIM Hijack",
+    severity: "critical",
+    title: "The \"5G Plus Upgrade\" Number Steal",
+    scam: "A caller claiming to be from Airtel or Jio says they are upgrading your SIM to 5G for free. They tell you to send a simple SMS like eSIM <email> to 121. The moment you do this, your physical SIM card stops working permanently, and your phone number transfers to the scammer's phone. All your bank SMS OTPs now go to them.",
+    protection: "Never send an eSIM request to any email given by a caller. Telecom companies never call you to set up an eSIM. To upgrade your SIM, always visit an official Airtel/Jio store in person.",
+    sourceName: "DoT (Department of Telecommunications) / Sanchar Saathi",
+    sourceUrl: "https://sancharsaathi.gov.in/",
+    verifiedDate: "2026-10-30",
+    actionLinkText: "Sanchar Saathi Portal ↗",
+    actionUrl: "https://sancharsaathi.gov.in/"
+  },
+  {
+    id: "accidental-upi-transfer-trap",
+    tag: "Wrong UPI Transfer",
+    severity: "high",
+    title: "The \"Wrong UPI Transfer\" Crying Call",
+    scam: "You get a genuine bank alert that ₹30,000 was credited to your account. Seconds later, a crying person calls saying: \"Sir, my child is in the hospital, I sent money to your number by mistake. Please send it back to my UPI ID.\" If you send the money back yourself, you lose your own money—because the original transfer was made using stolen funds. Within 48 hours, cyber police freeze your bank account for receiving criminal money.",
+    protection: "Never transfer the money back yourself. Tell the caller: \"I will not touch this money. Please call your bank and file a wrong-transfer dispute. My bank will reverse it officially.\"",
+    sourceName: "Reserve Bank of India (RBI Sachet Advisory)",
+    sourceUrl: "https://sachet.rbi.org.in/",
+    verifiedDate: "2026-10-30",
+    actionLinkText: "RBI Sachet Portal ↗",
+    actionUrl: "https://sachet.rbi.org.in/"
+  }
+];

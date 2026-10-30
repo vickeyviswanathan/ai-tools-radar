@@ -1617,6 +1617,147 @@
   border-radius: 12px;
 }
 
+
+/* Scam Defense Playbook */
+.scam-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .scam-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.scam-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  min-width: 0;
+  max-width: 100%;
+}
+.scam-card:hover {
+  border-color: rgba(239, 68, 68, 0.4);
+  transform: translateY(-2px);
+}
+.scam-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.scam-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.scam-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.scam-badge-tag {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+.scam-badge-sev-critical {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+.scam-badge-sev-high {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+.scam-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #f8fafc;
+  margin: 0 0 10px 0;
+}
+.scam-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  margin-bottom: 14px;
+}
+.scam-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #cbd5e1;
+  margin: 0;
+}
+.scam-protect-box {
+  background: rgba(16, 185, 129, 0.08);
+  border-left: 3px solid #10b981;
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+}
+.scam-protect-box strong {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #34d399;
+  margin-bottom: 4px;
+}
+.scam-protect-box p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #e2e8f0;
+  margin: 0;
+}
+.scam-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: auto;
+}
+.scam-source-pill {
+  font-size: 11px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.scam-source-name {
+  color: #94a3b8;
+  font-weight: 500;
+}
+.scam-verify-btn {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #34d399;
+  text-decoration: none;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  transition: all 0.15s ease;
+}
+.scam-verify-btn:hover {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
 </style>
 </head>
 <body>
@@ -4788,18 +4929,18 @@
     <div class="section-header">
       <div>
         <h2 class="section-title">🛡️ Cybersecurity News</h2>
-        <span class="section-note">High-impact verified incident intelligence: bank glitches, exchange heists, asset freezes, and ransomware post-mortems.</span>
+        <span class="section-note">Verified cybersecurity reporting and analysis across banking, enterprise defense, and global security developments.</span>
       </div>
-      <span class="reality-count-pill" id="threat-count-badge">Showing all 16 live incidents</span>
+      <span class="reality-count-pill" id="threat-count-badge">Showing all 16 verified news stories</span>
     </div>
 
     <!-- Cybersecurity News Sub-Tabs & Live Filter -->
     <div class="threat-filter-box">
       <div class="threat-search-bar">
-        <input type="search" id="threat-q" placeholder="Filter incidents by bank, entity, CVE, or keyword (e.g. 'Binance', 'WazirX', 'UCO Bank', 'RBI', 'Ransomware')..." oninput="onThreatSearch(event)" />
+        <input type="search" id="threat-q" placeholder="Filter cybersecurity news by entity, bank, or topic (e.g. 'Binance', 'WazirX', 'UCO Bank', 'RBI', 'Ransomware')..." oninput="onThreatSearch(event)" />
       </div>
       <div class="threat-subtabs" id="threat-subtabs">
-        <button type="button" class="threat-tab-btn active" data-cat="all" onclick="selectThreatCategory('all', this)">🔥 All Live Incidents (14)</button>
+        <button type="button" class="threat-tab-btn active" data-cat="all" onclick="selectThreatCategory('all', this)">🔥 All Cybersecurity News (14)</button>
         <button type="button" class="threat-tab-btn" data-cat="india-bfsi" onclick="selectThreatCategory('india-bfsi', this)">🇮🇳 India, Banks &amp; NBFCs (6)</button>
         <button type="button" class="threat-tab-btn" data-cat="crypto-heists" onclick="selectThreatCategory('crypto-heists', this)">🌐 Crypto &amp; Exchange Heists (2)</button>
         <button type="button" class="threat-tab-btn" data-cat="global-ransomware" onclick="selectThreatCategory('global-ransomware', this)">🚨 Reuters &amp; Global Wire (6)</button>
@@ -4814,11 +4955,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-30</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">9 hours ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-3521709493')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -4858,11 +4997,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-30</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">9 hours ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-6469460485')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -4879,7 +5016,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost, ETV Bharat.
+          CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, https://www.fintechbiznews.com/, MillenniumPost.
         </div>
       </div>
 
@@ -4902,11 +5039,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-30</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">8 hours ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-10931990812')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -4946,11 +5081,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-30</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">4 hours ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-278622367')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -4990,11 +5123,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-30</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">12 hours ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-3538865005')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -5034,11 +5165,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-30</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">1 hour ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-10134829711')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -5078,11 +5207,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-onchain">⛓️ Crypto Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-30</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">10 hours ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-1959085837')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -5122,11 +5249,9 @@
           <span class="threat-badge threat-sev threat-sev-critical">CRITICAL</span>
           <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-29</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">18 hours ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-15917467890')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -5166,11 +5291,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-29</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">18 hours ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-799466515')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -5210,11 +5333,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-onchain">⛓️ Crypto Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-23</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">6 days ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-3576309623')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -5247,23 +5368,21 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5707601159">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-1246487518">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-30</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">7 hours ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-1246487518')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
-          New cybersecurity blind spot: When AI looks like a trusted employee <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
+          Data Leak Exposes Information on over 40,000 US Homeland Security Employees <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5275,18 +5394,18 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          New cybersecurity blind spot: When AI looks like a trusted employee.
+          Data Leak Exposes Information on over 40,000 US Homeland Security Employees.
         </div>
       </div>
 
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">The Financial Express</span>
-          <span class="threat-ref">The Financial Express Live Wire</span>
+          <span class="threat-source-name">Deccan Chronicle</span>
+          <span class="threat-ref">Deccan Chronicle Live Wire</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on The Financial Express ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Deccan Chronicle ↗
         </a>
       </div>
     </article>
@@ -5298,11 +5417,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-29</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">1 day ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-12643287449')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -5342,11 +5459,9 @@
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-29</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">1 day ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5107877601')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -5379,23 +5494,21 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-9023916946">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5660613474">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🔒 Assets Frozen</span>
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-29</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">1 day ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5660613474')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
-          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5" target="_blank" rel="noopener noreferrer">
+          Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5407,51 +5520,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">New York Post</span>
-          <span class="threat-ref">New York Post Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on New York Post ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-1246487518">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
-        </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-29</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">1 day ago</span>
-        </div>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
-          Data Leak Exposes Information on over 40,000 US Homeland Security Employees <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Data Leak Exposes Information on over 40,000 US Homeland Security Employees.
+          Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users.
         </div>
       </div>
 
@@ -5461,29 +5530,27 @@
           <span class="threat-source-name">Deccan Chronicle</span>
           <span class="threat-ref">Deccan Chronicle Live Wire</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5" target="_blank" rel="noopener noreferrer">
           Read on Deccan Chronicle ↗
         </a>
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-6179949802">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-792151822">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
           <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">2026-10-29</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">1 day ago</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-792151822')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQSExNWFFFbkJvYnFEbnFQTXhjcExDMWxyaVFJNWlkRXpjTmhDYUJnRlZSeno1bTFlcXVvVW5vcWYwRllyVXdVa2gtakhnVkV1dWhQMTk5QnZFcEdTWVlQOU95OVRKRGFnclk0M2JlV3YzNG9nUU5DUzJMVUQtSU5xX2hiWl9RQzlBWW9nZHFn?oc=5" target="_blank" rel="noopener noreferrer">
-          Major hack exposes details of thousands of US immigration agents <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5" target="_blank" rel="noopener noreferrer">
+          Google launches Gemini 4 Carbon AI model with cybersecurity focus <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5495,18 +5562,60 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          Major hack exposes details of thousands of US immigration agents.
+          Google launches Gemini 4 Carbon AI model with cybersecurity focus.
         </div>
       </div>
 
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Latest news from Azerbaijan</span>
-          <span class="threat-ref">Latest news from Azerbaijan Live Wire</span>
+          <span class="threat-source-name">Ada Derana</span>
+          <span class="threat-ref">Ada Derana Live Wire</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQSExNWFFFbkJvYnFEbnFQTXhjcExDMWxyaVFJNWlkRXpjTmhDYUJnRlZSeno1bTFlcXVvVW5vcWYwRllyVXdVa2gtakhnVkV1dWhQMTk5QnZFcEdTWVlQOU95OVRKRGFnclk0M2JlV3YzNG9nUU5DUzJMVUQtSU5xX2hiWl9RQzlBWW9nZHFn?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Latest news from Azerbaijan ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Ada Derana ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5792857321">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5792857321')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Three South Korean financial firms including Bithumb report data breaches, Yonhap says <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Three South Korean financial firms including Bithumb report data breaches, Yonhap says.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Reuters</span>
+          <span class="threat-ref">Reuters Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Reuters ↗
         </a>
       </div>
     </article>
@@ -5519,6 +5628,195 @@
     </div>
   </section>
 
+  <!-- Section 4: Scam Defense Playbook -->
+  <section class="section-wrap" id="scams" style="display: none;">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">🚨 Scam Defense Playbook</h2>
+        <span class="section-note">Protect yourself and your family from the latest 2026 digital fraud, APK malware, and phone traps.</span>
+      </div>
+      <span class="reality-count-pill" id="scam-count-badge">Showing all 5 verified scams</span>
+    </div>
+
+    <!-- Scam Search -->
+    <div class="threat-filter-box">
+      <div class="threat-search-bar">
+        <input type="search" id="scam-q" placeholder="Search scams (e.g. 'e-Challan', 'wedding card', 'FASTag', '5G', 'UPI', 'OTP')..." oninput="onScamSearch(event)" />
+      </div>
+    </div>
+
+    <div class="scam-grid" id="scams-container">
+      <article class="scam-card" id="scam-traffic-echallan-apk">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-tag">Traffic Challan APK</span>
+            <span class="scam-badge scam-badge-sev-critical">CRITICAL</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('traffic-echallan-apk')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The Fake Traffic Fine Message (e-Challan APK)</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">You get an SMS claiming your vehicle was caught overspeeding on camera with a pending fine of ₹1,000, and a link to download an app (echallan.apk) to pay before court action. If you install it, the app silently reads all your incoming SMS, steals your bank OTPs, and drains your account.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Traffic police never send app files to pay fines. Never install any file ending in .apk. Always check and pay traffic fines only on the official government website: echallan.parivahan.gov.in.</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">I4C (Ministry of Home Affairs) Cyber Alert</span>
+          </div>
+          <a class="scam-verify-btn" href="https://echallan.parivahan.gov.in/" target="_blank" rel="noopener noreferrer">
+            Official Portal: echallan.parivahan.gov.in ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="scam-card" id="scam-whatsapp-wedding-card-apk">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-tag">Wedding Card Virus</span>
+            <span class="scam-badge scam-badge-sev-critical">CRITICAL</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('whatsapp-wedding-card-apk')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The WhatsApp &quot;Wedding Card&quot; Virus</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">You receive a message from a friend or relative on WhatsApp saying: &quot;My cousin is getting married next week, wedding card and venue attached.&quot; The attached file looks like an invite, but ends in .apk. Installing it infects your phone with a virus that hijacks your WhatsApp, sends the same scam to all your family contacts, and steals your net banking logins.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Real wedding cards are always photos or PDFs, never an .apk software file. If someone sends an APK file, do not tap it. Call that person on a regular call to tell them their WhatsApp is compromised.</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">CERT-In Cyber Security Advisory</span>
+          </div>
+          <a class="scam-verify-btn" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">
+            National Cyber Helpline: Dial 1930 ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="scam-card" id="scam-fastag-blacklist-panic">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-tag">FASTag Toll Alert</span>
+            <span class="scam-badge scam-badge-sev-high">HIGH</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('fastag-blacklist-panic')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The FASTag Highway Blacklist Trap</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">You get an urgent SMS saying your FASTag is blacklisted or KYC is expired, demanding a ₹45 pending fee within 2 hours or your vehicle will be stopped at the next toll plaza. The link opens a fake cloned website that captures your bank account and debit card details.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Highway authorities never send SMS links to collect ₹45 or update KYC. Never click links in SMS. If you want to check your FASTag, open your own banking app or Paytm directly.</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">NPCI &amp; Cyber Crime Coordination Centre</span>
+          </div>
+          <a class="scam-verify-btn" href="https://www.npci.org.in/" target="_blank" rel="noopener noreferrer">
+            NPCI Official Portal ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="scam-card" id="scam-esim-5g-upgrade-hijack">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-tag">eSIM Hijack</span>
+            <span class="scam-badge scam-badge-sev-critical">CRITICAL</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('esim-5g-upgrade-hijack')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The &quot;5G Plus Upgrade&quot; Number Steal</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">A caller claiming to be from Airtel or Jio says they are upgrading your SIM to 5G for free. They tell you to send a simple SMS like eSIM &lt;email&gt; to 121. The moment you do this, your physical SIM card stops working permanently, and your phone number transfers to the scammer&#39;s phone. All your bank SMS OTPs now go to them.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Never send an eSIM request to any email given by a caller. Telecom companies never call you to set up an eSIM. To upgrade your SIM, always visit an official Airtel/Jio store in person.</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">DoT (Department of Telecommunications) / Sanchar Saathi</span>
+          </div>
+          <a class="scam-verify-btn" href="https://sancharsaathi.gov.in/" target="_blank" rel="noopener noreferrer">
+            Sanchar Saathi Portal ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="scam-card" id="scam-accidental-upi-transfer-trap">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-tag">Wrong UPI Transfer</span>
+            <span class="scam-badge scam-badge-sev-high">HIGH</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('accidental-upi-transfer-trap')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The &quot;Wrong UPI Transfer&quot; Crying Call</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">You get a genuine bank alert that ₹30,000 was credited to your account. Seconds later, a crying person calls saying: &quot;Sir, my child is in the hospital, I sent money to your number by mistake. Please send it back to my UPI ID.&quot; If you send the money back yourself, you lose your own money—because the original transfer was made using stolen funds. Within 48 hours, cyber police freeze your bank account for receiving criminal money.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Never transfer the money back yourself. Tell the caller: &quot;I will not touch this money. Please call your bank and file a wrong-transfer dispute. My bank will reverse it officially.&quot;</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">Reserve Bank of India (RBI Sachet Advisory)</span>
+          </div>
+          <a class="scam-verify-btn" href="https://sachet.rbi.org.in/" target="_blank" rel="noopener noreferrer">
+            RBI Sachet Portal ↗
+          </a>
+        </div>
+      </article>
+    </div>
+    <div id="scam-empty-state" class="threat-empty-state" style="display: none; margin-top: 16px;">
+      <p style="font-size: 15px; color: #fff; margin-bottom: 6px;">No scams match your search.</p>
+      <p style="font-size: 13px; color: #94a3b8;">Try searching &quot;challan&quot;, &quot;wedding&quot;, &quot;fastag&quot;, or &quot;upi&quot;.</p>
+    </div>
+  </section>
+
 </main>
 
 <div id="toast">Copied takeaway to clipboard!</div>
@@ -5526,7 +5824,7 @@
 <footer>
   <div class="wrap">
     <div class="about-block">
-      <strong>Built by Vivek Viswanathan.</strong> Tracking what actually works when AI meets production, alongside live cybersecurity, banking defense, and crypto incident intelligence — zero vendor hype.
+      <strong>Built by Vivek Viswanathan.</strong> Tracking what actually works when AI meets production, verified cybersecurity news on Cipherati, scam defense, and digital safety intelligence — zero vendor hype.
       <a href="https://www.linkedin.com/in/vickeyviswanathan" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
     </div>
     Synced automatically from live open-source and global statutory feeds every 6 hours. All code and data are open source.
@@ -6517,6 +6815,8 @@ function routeHash(hash, categories) {
       const btn = document.querySelector(`.threat-tab-btn[onclick*="${m[1]}"]`);
       if (btn) selectThreatCategory(m[1], btn);
     }
+  } else if (hash.startsWith("#scams")) {
+    switchView("scams");
   } else if (catMatch) {
     const cat = decodeURIComponent(catMatch[1]);
     switchView("tools");
@@ -6731,6 +7031,93 @@ function renderThreatCards(threats) {
 
 // Call loadThreats on page load
 loadThreats();
+
+// --- Universal Share Handler (WhatsApp on mobile, formatted clipboard on desktop) ---
+function handleUnifiedShare(text, toastMsg) {
+  const isTouch = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+  if (isTouch && navigator.share) {
+    navigator.share({ text }).catch(() => {});
+    return;
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => showToast(toastMsg)).catch(() => showToast("Could not copy link — please copy manually"));
+  } else {
+    showToast("Could not copy link — please copy manually");
+  }
+}
+
+function shareScam(id) {
+  const item = SCAMS_DATA.find(s => s.id === id);
+  if (!item) return;
+  const text = "🚨 " + item.title + "\n\n" + item.scam + "\n\nHow to protect yourself: " + item.protection + "\n\n📌 Verified by: " + item.sourceName + "\n🛡️ More Scam Defense & Cybersecurity News on Cipherati: " + SITE_URL + "#scams";
+  handleUnifiedShare(text, "Copied scam warning — ready to paste into WhatsApp!");
+}
+
+function shareThreat(id) {
+  const item = THREATS_DATA.find(t => t.id === id);
+  if (!item) return;
+  const text = "🛡️ " + item.title + "\n\n" + (item.incident || "") + "\n\n📌 Source: " + item.sourceName + (item.ref ? " (" + item.ref + ")" : "") + "\n🔗 Read: " + item.sourceUrl + "\n\nCybersecurity News on Cipherati: " + SITE_URL + "#news";
+  handleUnifiedShare(text, "Copied cybersecurity news — ready to paste into WhatsApp!");
+}
+
+function shareRealityCard(idx) {
+  const d = REALITIES_DATA[idx];
+  if (!d) return;
+  const deepLink = SITE_URL + "#realities/" + (idx + 1);
+  const text = "⚡ " + d.title + "\n\nThe Trap: " + d.trap + "\nThe Reality: " + d.reality + "\n\nRead more on Cipherati: " + deepLink;
+  handleUnifiedShare(text, "Copied AI reality takeaway — ready to paste into WhatsApp!");
+}
+
+// --- Scam Defense Client Logic ---
+let SCAMS_DATA = [{"id":"traffic-echallan-apk","tag":"Traffic Challan APK","severity":"critical","title":"The Fake Traffic Fine Message (e-Challan APK)","scam":"You get an SMS claiming your vehicle was caught overspeeding on camera with a pending fine of ₹1,000, and a link to download an app (echallan.apk) to pay before court action. If you install it, the app silently reads all your incoming SMS, steals your bank OTPs, and drains your account.","protection":"Traffic police never send app files to pay fines. Never install any file ending in .apk. Always check and pay traffic fines only on the official government website: echallan.parivahan.gov.in.","sourceName":"I4C (Ministry of Home Affairs) Cyber Alert","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"Official Portal: echallan.parivahan.gov.in ↗","actionUrl":"https://echallan.parivahan.gov.in/"},{"id":"whatsapp-wedding-card-apk","tag":"Wedding Card Virus","severity":"critical","title":"The WhatsApp \"Wedding Card\" Virus","scam":"You receive a message from a friend or relative on WhatsApp saying: \"My cousin is getting married next week, wedding card and venue attached.\" The attached file looks like an invite, but ends in .apk. Installing it infects your phone with a virus that hijacks your WhatsApp, sends the same scam to all your family contacts, and steals your net banking logins.","protection":"Real wedding cards are always photos or PDFs, never an .apk software file. If someone sends an APK file, do not tap it. Call that person on a regular call to tell them their WhatsApp is compromised.","sourceName":"CERT-In Cyber Security Advisory","sourceUrl":"https://www.cert-in.org.in/","verifiedDate":"2026-10-30","actionLinkText":"National Cyber Helpline: Dial 1930 ↗","actionUrl":"https://cybercrime.gov.in/"},{"id":"fastag-blacklist-panic","tag":"FASTag Toll Alert","severity":"high","title":"The FASTag Highway Blacklist Trap","scam":"You get an urgent SMS saying your FASTag is blacklisted or KYC is expired, demanding a ₹45 pending fee within 2 hours or your vehicle will be stopped at the next toll plaza. The link opens a fake cloned website that captures your bank account and debit card details.","protection":"Highway authorities never send SMS links to collect ₹45 or update KYC. Never click links in SMS. If you want to check your FASTag, open your own banking app or Paytm directly.","sourceName":"NPCI & Cyber Crime Coordination Centre","sourceUrl":"https://www.npci.org.in/","verifiedDate":"2026-10-30","actionLinkText":"NPCI Official Portal ↗","actionUrl":"https://www.npci.org.in/"},{"id":"esim-5g-upgrade-hijack","tag":"eSIM Hijack","severity":"critical","title":"The \"5G Plus Upgrade\" Number Steal","scam":"A caller claiming to be from Airtel or Jio says they are upgrading your SIM to 5G for free. They tell you to send a simple SMS like eSIM <email> to 121. The moment you do this, your physical SIM card stops working permanently, and your phone number transfers to the scammer's phone. All your bank SMS OTPs now go to them.","protection":"Never send an eSIM request to any email given by a caller. Telecom companies never call you to set up an eSIM. To upgrade your SIM, always visit an official Airtel/Jio store in person.","sourceName":"DoT (Department of Telecommunications) / Sanchar Saathi","sourceUrl":"https://sancharsaathi.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"Sanchar Saathi Portal ↗","actionUrl":"https://sancharsaathi.gov.in/"},{"id":"accidental-upi-transfer-trap","tag":"Wrong UPI Transfer","severity":"high","title":"The \"Wrong UPI Transfer\" Crying Call","scam":"You get a genuine bank alert that ₹30,000 was credited to your account. Seconds later, a crying person calls saying: \"Sir, my child is in the hospital, I sent money to your number by mistake. Please send it back to my UPI ID.\" If you send the money back yourself, you lose your own money—because the original transfer was made using stolen funds. Within 48 hours, cyber police freeze your bank account for receiving criminal money.","protection":"Never transfer the money back yourself. Tell the caller: \"I will not touch this money. Please call your bank and file a wrong-transfer dispute. My bank will reverse it officially.\"","sourceName":"Reserve Bank of India (RBI Sachet Advisory)","sourceUrl":"https://sachet.rbi.org.in/","verifiedDate":"2026-10-30","actionLinkText":"RBI Sachet Portal ↗","actionUrl":"https://sachet.rbi.org.in/"}];
+let scamSearchQ = "";
+
+function onScamSearch(ev) {
+  scamSearchQ = (ev.target.value || "").toLowerCase().trim();
+  filterScams();
+}
+
+function filterScams() {
+  const countBadge = document.getElementById("scam-count-badge");
+  const emptyState = document.getElementById("scam-empty-state");
+  let matchCount = 0;
+
+  SCAMS_DATA.forEach(s => {
+    const card = document.getElementById("scam-" + s.id);
+    if (!card) return;
+    const fullText = (s.title + " " + s.scam + " " + s.protection + " " + s.tag + " " + s.sourceName).toLowerCase();
+    const matches = !scamSearchQ || fullText.includes(scamSearchQ);
+    card.style.display = matches ? "flex" : "none";
+    if (matches) matchCount++;
+  });
+
+  if (countBadge) {
+    countBadge.textContent = scamSearchQ
+      ? "Showing " + matchCount + " of " + SCAMS_DATA.length + " scams"
+      : "Showing all " + SCAMS_DATA.length + " verified scams";
+  }
+  if (emptyState) {
+    emptyState.style.display = matchCount === 0 ? "block" : "none";
+  }
+}
+
+async function loadScams() {
+  try {
+    const res = await fetch("./data/scams.json?v=" + Date.now());
+    const data = await res.json();
+    if (data.scams && data.scams.length) {
+      SCAMS_DATA = data.scams;
+      const countEl = document.getElementById("tab-scams-count");
+      if (countEl) countEl.textContent = SCAMS_DATA.length;
+      filterScams();
+    }
+  } catch (err) {
+    // Seamlessly falls back to pre-rendered cards
+  }
+}
+
+loadScams();
+
 
 </script>
 </body>

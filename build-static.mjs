@@ -7,6 +7,7 @@ import { evaluateQuality } from "./src/quality.mjs";
 import { refreshLiveMetrics } from "./src/live-metrics.mjs";
 import { publishSeoArtifacts, normalizeWhyItMatters } from "./src/seo-publish.mjs";
 import { getLiveCyberNews } from "./src/news-sync.mjs";
+import { validateAndSanitizeScams, generateScamsHtml } from "./src/scam-guard.mjs";
 
 async function build() {
   if (process.env.FULL_INGEST === "true" || process.env.GITHUB_EVENT_NAME === "schedule") {
@@ -124,12 +125,22 @@ async function build() {
   };
   writeFileSync("./public/data/threats.json", JSON.stringify(threatOutput, null, 2), "utf-8");
 
+  // Safeguard-validated Scam Intelligence
+  const sanitizedScams = validateAndSanitizeScams();
+  const scamsOutput = {
+    updatedAt: output.updatedAt,
+    scams: sanitizedScams
+  };
+  writeFileSync("./public/data/scams.json", JSON.stringify(scamsOutput, null, 2), "utf-8");
+
   updateThreatsInHtml(threatCategories, liveThreats);
+  updateScamsInHtml(sanitizedScams);
 
   publishSeoArtifacts(tools, output.updatedAt);
   console.log(`[Gate] Dropped ${rejectedAtBuild.length} stored entries at build time:\n  ` + rejectedAtBuild.join("\n  "));
   console.log(`Generated public/data/tools.json with ${tools.length} curated tools across ${categories.length} categories.`);
   console.log(`Generated public/data/threats.json with ${liveThreats.length} verified threat intelligence records.`);
+  console.log(`Generated public/data/scams.json with ${sanitizedScams.length} verified scam defense playbooks.`);
 }
 
 function updateThreatsInHtml(categories, threats) {
@@ -150,11 +161,9 @@ function updateThreatsInHtml(categories, threats) {
           <span class="threat-badge threat-sev ${severityClass}">${item.severity.toUpperCase()}</span>
           <span class="threat-badge threat-prov threat-prov-${esc(item.badgeType)}">${esc(item.provenanceBadge)}</span>
         </div>
-        <div class="threat-meta-time">
-          <span class="threat-date">${esc(item.date)}</span>
-          <span class="threat-sep">·</span>
-          <span class="threat-ago">${esc(item.timeAgo)}</span>
-        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('${esc(item.id)}')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
       </div>
 
       <h3 class="threat-title">
@@ -190,7 +199,7 @@ function updateThreatsInHtml(categories, threats) {
   }
 
   html = html.replace(/<span class="tab-count" id="tab-threats-count">\d+<\/span>/, `<span class="tab-count" id="tab-threats-count">${threats.length}</span>`);
-  html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${threats.length} live incidents</span>`);
+  html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${threats.length} verified news stories</span>`);
 
   const containerStartTag = '<div class="threat-cards-grid" id="threats-container">';
   const startIdx = html.indexOf(containerStartTag);
@@ -203,6 +212,31 @@ function updateThreatsInHtml(categories, threats) {
       const beforeContainer = html.slice(0, startIdx + containerStartTag.length);
       const afterContainer = html.slice(containerClosingDiv);
       const newCardsHtml = "\n" + generateCardsHtml(threats) + "\n    ";
+      html = beforeContainer + newCardsHtml + afterContainer;
+    }
+  }
+
+  writeFileSync(indexPath, html, "utf8");
+}
+
+function updateScamsInHtml(scams) {
+  const indexPath = "./public/index.html";
+  let html = readFileSync(indexPath, "utf8");
+
+  html = html.replace(/<span class="tab-count" id="tab-scams-count">\d*<\/span>/, `<span class="tab-count" id="tab-scams-count">${scams.length}</span>`);
+  html = html.replace(/<span class="reality-count-pill" id="scam-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="scam-count-badge">Showing all ${scams.length} verified scams</span>`);
+
+  const containerStartTag = '<div class="scam-grid" id="scams-container">';
+  const startIdx = html.indexOf(containerStartTag);
+  if (startIdx !== -1) {
+    const emptyStateIdx = html.indexOf('<div id="scam-empty-state"', startIdx);
+    const endSectionIdx = html.indexOf('</section>', startIdx);
+    const searchLimit = emptyStateIdx !== -1 ? emptyStateIdx : endSectionIdx;
+    const containerClosingDiv = html.lastIndexOf('</div>', searchLimit);
+    if (containerClosingDiv > startIdx) {
+      const beforeContainer = html.slice(0, startIdx + containerStartTag.length);
+      const afterContainer = html.slice(containerClosingDiv);
+      const newCardsHtml = "\n" + generateScamsHtml(scams) + "\n    ";
       html = beforeContainer + newCardsHtml + afterContainer;
     }
   }
