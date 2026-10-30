@@ -3,7 +3,7 @@
 // after fetch). Imported by build-static.mjs and covered by tools/test-seo.mjs.
 import { readFileSync, writeFileSync } from "node:fs";
 
-const SITE_URL = "https://vickeyviswanathan.github.io/ai-tools-radar/";
+const SITE_URL = "https://cipherati.com/";
 
 const esc = (s) => String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const BOILERPLATE_WHY = /verified GitHub stars\.$|upvotes on Hacker News\.$|likes on Hugging Face\.$|vetted for production\.$/;

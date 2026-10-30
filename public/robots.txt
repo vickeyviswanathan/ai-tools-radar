@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vickeyviswanathan.github.io/ai-tools-radar/sitemap.xml
+Sitemap: https://cipherati.com/sitemap.xml
