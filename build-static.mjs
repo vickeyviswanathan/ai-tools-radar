@@ -121,10 +121,85 @@ async function build() {
   };
   writeFileSync("./public/data/threats.json", JSON.stringify(threatOutput, null, 2), "utf-8");
 
+  updateThreatsInHtml(threatCategories, liveThreats);
+
   publishSeoArtifacts(tools, output.updatedAt);
   console.log(`[Gate] Dropped ${rejectedAtBuild.length} stored entries at build time:\n  ` + rejectedAtBuild.join("\n  "));
   console.log(`Generated public/data/tools.json with ${tools.length} curated tools across ${categories.length} categories.`);
   console.log(`Generated public/data/threats.json with ${liveThreats.length} verified threat intelligence records.`);
+}
+
+function updateThreatsInHtml(categories, threats) {
+  const indexPath = "./public/index.html";
+  let html = readFileSync(indexPath, "utf8");
+
+  const esc = (s) => String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  function generateCardsHtml(items) {
+    return items.map(item => {
+      const severityClass = item.severity === "critical" ? "threat-sev-critical" : item.severity === "high" ? "threat-sev-high" : "threat-sev-medium";
+      const impactBadgeHtml = item.impactBadge ? `<span class="threat-badge threat-badge-impact">${esc(item.impactBadge)}</span>` : "";
+
+      return `    <article class="threat-card" data-category="${esc(item.category)}" id="threat-${esc(item.id)}">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          ${impactBadgeHtml}
+          <span class="threat-badge threat-sev ${severityClass}">${item.severity.toUpperCase()}</span>
+          <span class="threat-badge threat-prov threat-prov-${esc(item.badgeType)}">${esc(item.provenanceBadge)}</span>
+        </div>
+        <div class="threat-meta-time">
+          <span class="threat-date">${esc(item.date)}</span>
+          <span class="threat-sep">·</span>
+          <span class="threat-ago">${esc(item.timeAgo)}</span>
+        </div>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">
+          ${esc(item.title)} <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">${esc(item.entities)}</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          ${esc(item.incident)}
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">${esc(item.sourceName)}</span>
+          <span class="threat-ref">${esc(item.ref)}</span>
+        </div>
+        <a class="threat-verify-btn" href="${esc(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">
+          Read on ${esc(item.sourceName)} ↗
+        </a>
+      </div>
+    </article>`;
+    }).join("\n\n");
+  }
+
+  html = html.replace(/<span class="tab-count" id="tab-threats-count">\d+<\/span>/, `<span class="tab-count" id="tab-threats-count">${threats.length}</span>`);
+  html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${threats.length} live incidents</span>`);
+
+  const containerStartTag = '<div class="threat-cards-grid" id="threats-container">';
+  const containerEndIdx = html.indexOf('</div>\n  </section>', html.indexOf(containerStartTag));
+
+  if (containerEndIdx !== -1) {
+    const beforeContainer = html.slice(0, html.indexOf(containerStartTag) + containerStartTag.length);
+    const afterContainer = html.slice(containerEndIdx);
+    const newCardsHtml = "\n" + generateCardsHtml(threats) + "\n    ";
+    html = beforeContainer + newCardsHtml + afterContainer;
+  }
+
+  writeFileSync(indexPath, html, "utf8");
 }
 
 build().catch(console.error);
