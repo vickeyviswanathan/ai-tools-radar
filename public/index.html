@@ -6794,10 +6794,23 @@ let THREATS_DATA = [{"id":"cisa-cve-2026-76418","category":"global-ransomware","
 let activeThreatCategory = "all";
 let threatSearchQ = "";
 
+const THREAT_CATEGORY_ALIASES = {
+  "global-crypto": ["crypto-heists", "global-crypto"],
+  "ai-security": ["global-ransomware", "ai-security"],
+  "crypto-heists": ["crypto-heists", "global-crypto"],
+  "global-ransomware": ["global-ransomware", "ai-security"],
+  "india-bfsi": ["india-bfsi"]
+};
+
 function selectThreatCategory(catId, btnEl) {
   activeThreatCategory = catId;
   document.querySelectorAll(".threat-tab-btn").forEach(b => b.classList.remove("active"));
-  if (btnEl) btnEl.classList.add("active");
+  if (btnEl) {
+    btnEl.classList.add("active");
+  } else {
+    const matchingBtn = document.querySelector(`.threat-tab-btn[data-cat="${catId}"]`);
+    if (matchingBtn) matchingBtn.classList.add("active");
+  }
   filterThreats();
 }
 
@@ -6833,7 +6846,12 @@ function filterThreats() {
     ].join(" ").toLowerCase();
 
     let matches = true;
-    if (cat !== "all" && t.category !== cat) matches = false;
+    if (cat !== "all") {
+      const allowed = THREAT_CATEGORY_ALIASES[cat] || [cat];
+      if (!allowed.includes(t.category)) {
+        matches = false;
+      }
+    }
     if (query && !fullText.includes(query)) matches = false;
 
     card.style.display = matches ? "flex" : "none";
@@ -6853,10 +6871,24 @@ function filterThreats() {
   }
 }
 
+function renderThreatSubtabs(categories) {
+  const container = document.getElementById("threat-subtabs");
+  if (!container || !categories || !categories.length) return;
+  const esc = (s) => String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  container.innerHTML = categories.map(c => {
+    const isActive = activeThreatCategory === c.id;
+    return `<button type="button" class="threat-tab-btn ${isActive ? 'active' : ''}" data-cat="${esc(c.id)}" onclick="selectThreatCategory('${esc(c.id)}', this)">${esc(c.label)} (${c.count})</button>`;
+  }).join("");
+}
+
 async function loadThreats() {
   try {
     const res = await fetch("./data/threats.json?v=" + Date.now());
     const data = await res.json();
+    if (data.categories && data.categories.length) {
+      renderThreatSubtabs(data.categories);
+    }
     if (data.threats && data.threats.length) {
       THREATS_DATA = data.threats;
       const countEl = document.getElementById("tab-threats-count");
