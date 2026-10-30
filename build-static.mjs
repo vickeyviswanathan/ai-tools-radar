@@ -6,7 +6,7 @@ import { runIngestion } from "./src/ingest.mjs";
 import { evaluateQuality } from "./src/quality.mjs";
 import { refreshLiveMetrics } from "./src/live-metrics.mjs";
 import { publishSeoArtifacts, normalizeWhyItMatters } from "./src/seo-publish.mjs";
-import { VERIFIED_THREATS, THREAT_CATEGORIES } from "./src/threat-wire.mjs";
+import { getLiveCyberNews } from "./src/news-sync.mjs";
 
 async function build() {
   console.log("Ingesting latest top-tier tools...");
@@ -113,17 +113,18 @@ async function build() {
   mkdirSync("./public/data", { recursive: true });
   writeFileSync("./public/data/tools.json", JSON.stringify(output, null, 2), "utf-8");
   
+  const { categories: threatCategories, threats: liveThreats } = await getLiveCyberNews();
   const threatOutput = {
     updatedAt: output.updatedAt,
-    categories: THREAT_CATEGORIES,
-    threats: VERIFIED_THREATS
+    categories: threatCategories,
+    threats: liveThreats
   };
   writeFileSync("./public/data/threats.json", JSON.stringify(threatOutput, null, 2), "utf-8");
 
   publishSeoArtifacts(tools, output.updatedAt);
   console.log(`[Gate] Dropped ${rejectedAtBuild.length} stored entries at build time:\n  ` + rejectedAtBuild.join("\n  "));
   console.log(`Generated public/data/tools.json with ${tools.length} curated tools across ${categories.length} categories.`);
-  console.log(`Generated public/data/threats.json with ${VERIFIED_THREATS.length} verified threat intelligence records.`);
+  console.log(`Generated public/data/threats.json with ${liveThreats.length} verified threat intelligence records.`);
 }
 
 build().catch(console.error);

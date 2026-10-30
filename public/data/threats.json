@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-30T12:21:14.104Z",
+  "updatedAt": "2026-10-30T12:36:18.898Z",
   "categories": [
     {
       "id": "all",
       "label": "🔥 All Intelligence",
-      "count": 16
+      "count": 19
     },
     {
       "id": "india-bfsi",
@@ -14,7 +14,7 @@
     {
       "id": "global-crypto",
       "label": "🌐 Global & Crypto",
-      "count": 6
+      "count": 9
     },
     {
       "id": "ai-security",
@@ -23,6 +23,51 @@
     }
   ],
   "threats": [
+    {
+      "id": "cisa-cve-2026-41709",
+      "category": "global-crypto",
+      "severity": "critical",
+      "title": "CISA Alert: Actively Exploited In-The-Wild Flaw in Broadcom VMware ESX",
+      "sourceName": "CISA Known Exploited Vulnerabilities",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2026-41709",
+      "provenanceBadge": "🏛️ Statutory Advisory",
+      "badgeType": "statutory",
+      "ref": "CVE-2026-41709 / CISA KEV",
+      "date": "2026-10-28",
+      "timeAgo": "recently confirmed",
+      "entities": "Broadcom VMware ESX Deployments",
+      "impact": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged. Required mitigation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    },
+    {
+      "id": "cisa-cve-2026-76418",
+      "category": "global-crypto",
+      "severity": "critical",
+      "title": "CISA Alert: Actively Exploited In-The-Wild Flaw in Cisco Secure Firewall ASA Software and Cisco Secure FTD Software",
+      "sourceName": "CISA Known Exploited Vulnerabilities",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418",
+      "provenanceBadge": "🏛️ Statutory Advisory",
+      "badgeType": "statutory",
+      "ref": "CVE-2026-76418 / CISA KEV",
+      "date": "2026-10-29",
+      "timeAgo": "recently confirmed",
+      "entities": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Deployments",
+      "impact": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. Required mitigation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    },
+    {
+      "id": "cisa-cve-2026-97229",
+      "category": "global-crypto",
+      "severity": "critical",
+      "title": "CISA Alert: Actively Exploited In-The-Wild Flaw in GitLab Community Edition and Enterprise Edition",
+      "sourceName": "CISA Known Exploited Vulnerabilities",
+      "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229",
+      "provenanceBadge": "🏛️ Statutory Advisory",
+      "badgeType": "statutory",
+      "ref": "CVE-2026-97229 / CISA KEV",
+      "date": "2026-10-29",
+      "timeAgo": "recently confirmed",
+      "entities": "GitLab Community Edition and Enterprise Edition Deployments",
+      "impact": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation. Required mitigation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+    },
     {
       "id": "in-certin-2026-cisco",
       "category": "india-bfsi",
