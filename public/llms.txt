@@ -1,0 +1,60 @@
+# Cipherati
+> An open, curated directory of battle-tested AI developer tools, coding agents, and local models — with direct links, production realities, verified cybersecurity news, and citizen scam defense.
+
+- Website: https://cipherati.com/
+- National Cyber Crime Helpline (India): 1930
+- Official Cybercrime Reporting Portal: https://cybercrime.gov.in/
+- Spam Reporting (Chakshu): https://sancharsaathi.gov.in/
+
+## Core Sections
+- [Curated Tools Directory](https://cipherati.com/#tools): 187 production-ready developer tools, coding agents, and local model infrastructure.
+- [AI Realities in Production](https://cipherati.com/#realities): 18 hard truths and traps when deploying AI agents and LLMs.
+- [Cybersecurity News](https://cipherati.com/#news): 15 verified reporting stories across banking, enterprise defense, and critical CVEs.
+- [Scam Alerts & Citizen Defense](https://cipherati.com/#scams): 15 verified playbooks against digital arrest, APK malware, and financial fraud.
+
+## Emergency Cyber Crime Reporting (Golden Hour Protocol)
+If funds are unauthorizedly debited or someone is targeted by online fraud:
+1. **Immediate Call (Golden Hour)**: Dial 1930 or contact bank fraud desk within 2 hours to freeze stolen money before ATM withdrawal.
+2. **Preserve Evidence**: Save screenshots of transaction UTR numbers, WhatsApp chats, fake APK files, and phone logs.
+3. **Register e-FIR**: File a formal financial fraud complaint on https://cybercrime.gov.in.
+4. **Notify Bank Branch**: Submit complaint acknowledgement receipt to home bank branch within 24 hours to secure RBI zero-liability protection.
+
+## Key 2026 Citizen Scam Defense Rules
+- **Digital Arrest**: Indian law has NO concept of 'Digital Arrest'. Police, CBI, ED, and customs never conduct interrogations or place citizens under arrest via Skype or WhatsApp video call.
+- **WhatsApp Wedding Cards / Traffic Fines (APKs)**: Genuine wedding cards are images or PDFs; genuine traffic fines are viewed on echallan.parivahan.gov.in. Never install any file ending in .apk sent via chat or SMS.
+- **Accidental UPI Transfer**: Never send money back directly via UPI. The incoming funds are stolen; sending money flags your account as a criminal mule. Direct the caller to their bank.
+- **Fake IPO WhatsApp Groups**: SEBI-registered brokerages never conduct institutional IPO bidding or accept investments via WhatsApp groups or personal accounts.
+
+## Top Curated AI Developer Tools
+- [ECC](https://ecc.tools/): The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
+- [cc switch](https://ccswitch.io/): A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.
+- [graphify](https://www.graphify.com/): Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing,…
+- [OpenAI Codex](https://openai.com/index/openai-codex/): Foundational AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.
+- [VS Code with In-Built AI Agents](https://code.visualstudio.com/docs/copilot/copilot-chat): Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.
+- [Understand Anything](https://understand-anything.com/): Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…
+- [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk): CLI proxy that condenses command outputs by 60–90% to save LLM tokens and execution costs.
+- [OmniRoute](https://omniroute.online/): Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Clin…
+- [headroom](https://docs.headroomlabs.ai/docs): Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
+- [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code): Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.
+- [OpenSpec](https://openspec.dev/): Spec-driven development (SDD) for AI coding assistants.
+- [oh my openagent](https://omo.dev/): OmO: Just type "mass ulw" keyword with your prompt. Now you are the master of graph engineering.
+- [openinterpreter](http://openinterpreter.com/): A coding agent for open models like Kimi K3 and GLM 5.3
+- [claude code best practice](https://linkedin.com/in/shanraisshan): from vibe coding to agentic engineering - practice makes claude perfect
+- [litellm](https://docs.litellm.ai/docs/): The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthrop…
+- [Kimi Code](https://kimi.ai): Moonshot AI's high-context reasoning and coding model optimized for full-repository understanding and multi-file logic.
+- [Umi OCR](https://github.com/hiroi-sora/Umi-OCR): OCR software, free and offline. OCR / PDF / /
+- [Amazon Q Developer / Kiro IDE](https://aws.amazon.com/q/developer/): AWS's generative AI coding companion and cloud-native development environment for code transformation and security scanning.
+- [OpenHands](https://github.com/All-Hands-AI/OpenHands): Autonomous software development agent capable of writing code, running bash commands, and browsing the web.
+- [Codewhale](https://codewhale.net/): Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome
+- [ai website cloner template](https://dsc.gg/jcodesmore): Clone any website with one command using AI coding agents
+- [medusa](https://medusajs.com/): The world's most flexible commerce platform for agents and developers
+- [next ai draw io](https://next-ai-drawio.jiang.jp/): Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
+- [DeepSeek Reasonix](http://reasonix.io/): A reliable coding agent for complex software engineering tasks.
+- [Aider](https://github.com/paul-gauthier/aider): AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
+- [deepseek harness](https://deepseek.com/harness): DeepSeek Harness: Everything is a Plugin.
+- [hermes agent](https://hermes-agent.nousresearch.com/): The agent that grows with you
+- [n8n](https://n8n.io/): Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.
+- [AutoGPT](https://agpt.co/): AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.
+- [skills](https://github.com/anthropics/skills): Public repository for Agent Skills
+
+For complete listings and full data exports, visit https://cipherati.com/llms-full.txt or https://cipherati.com/data/tools.json.

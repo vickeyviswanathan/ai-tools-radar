@@ -138,6 +138,7 @@ async function build() {
   updateScamsInHtml(sanitizedScams);
 
   publishSeoArtifacts(tools, output.updatedAt);
+  generateLlmsTxt(tools, sanitizedScams);
   console.log(`[Gate] Dropped ${rejectedAtBuild.length} stored entries at build time:\n  ` + rejectedAtBuild.join("\n  "));
   console.log(`Generated public/data/tools.json with ${tools.length} curated tools across ${categories.length} categories.`);
   console.log(`Generated public/data/threats.json with ${liveThreats.length} verified threat intelligence records.`);
@@ -253,4 +254,83 @@ function syncToolCountsInHtml(tools) {
   html = html.replace(/<strong id="stat-tools">\d+<\/strong>/, `<strong id="stat-tools">${tools.length}</strong>`);
   html = html.replace(/<span class="tab-count" id="tab-tools-count">\d*<\/span>/, `<span class="tab-count" id="tab-tools-count">${tools.length}</span>`);
   writeFileSync(indexPath, html, "utf8");
+}
+
+function generateLlmsTxt(tools, scams) {
+  const SITE_URL = "https://cipherati.com/";
+  
+  const llmsCompact = `# Cipherati
+> An open, curated directory of battle-tested AI developer tools, coding agents, and local models — with direct links, production realities, verified cybersecurity news, and citizen scam defense.
+
+- Website: https://cipherati.com/
+- National Cyber Crime Helpline (India): 1930
+- Official Cybercrime Reporting Portal: https://cybercrime.gov.in/
+- Spam Reporting (Chakshu): https://sancharsaathi.gov.in/
+
+## Core Sections
+- [Curated Tools Directory](https://cipherati.com/#tools): ${tools.length} production-ready developer tools, coding agents, and local model infrastructure.
+- [AI Realities in Production](https://cipherati.com/#realities): 18 hard truths and traps when deploying AI agents and LLMs.
+- [Cybersecurity News](https://cipherati.com/#news): 15 verified reporting stories across banking, enterprise defense, and critical CVEs.
+- [Scam Alerts & Citizen Defense](https://cipherati.com/#scams): ${scams.length} verified playbooks against digital arrest, APK malware, and financial fraud.
+
+## Emergency Cyber Crime Reporting (Golden Hour Protocol)
+If funds are unauthorizedly debited or someone is targeted by online fraud:
+1. **Immediate Call (Golden Hour)**: Dial 1930 or contact bank fraud desk within 2 hours to freeze stolen money before ATM withdrawal.
+2. **Preserve Evidence**: Save screenshots of transaction UTR numbers, WhatsApp chats, fake APK files, and phone logs.
+3. **Register e-FIR**: File a formal financial fraud complaint on https://cybercrime.gov.in.
+4. **Notify Bank Branch**: Submit complaint acknowledgement receipt to home bank branch within 24 hours to secure RBI zero-liability protection.
+
+## Key 2026 Citizen Scam Defense Rules
+- **Digital Arrest**: Indian law has NO concept of 'Digital Arrest'. Police, CBI, ED, and customs never conduct interrogations or place citizens under arrest via Skype or WhatsApp video call.
+- **WhatsApp Wedding Cards / Traffic Fines (APKs)**: Genuine wedding cards are images or PDFs; genuine traffic fines are viewed on echallan.parivahan.gov.in. Never install any file ending in .apk sent via chat or SMS.
+- **Accidental UPI Transfer**: Never send money back directly via UPI. The incoming funds are stolen; sending money flags your account as a criminal mule. Direct the caller to their bank.
+- **Fake IPO WhatsApp Groups**: SEBI-registered brokerages never conduct institutional IPO bidding or accept investments via WhatsApp groups or personal accounts.
+
+## Top Curated AI Developer Tools
+${tools.slice(0, 30).map(t => `- [${t.name}](${t.url}): ${t.tagline}`).join("\n")}
+
+For complete listings and full data exports, visit https://cipherati.com/llms-full.txt or https://cipherati.com/data/tools.json.
+`;
+  writeFileSync("./public/llms.txt", llmsCompact, "utf-8");
+
+  const llmsFull = `# Cipherati Full Knowledge Digest & LLM System Prompt Context
+Website: https://cipherati.com/
+Author: Vivek Viswanathan
+
+## About Cipherati
+Cipherati is an independent, practitioner-grade radar of battle-tested AI developer tools, coding agents, and production systems — combined with real-time cybersecurity news, statutory threat provenance, and citizen scam defense intelligence. Zero vendor hype.
+
+---
+
+## 1. Curated AI Developer Tools Directory (${tools.length} Tools)
+
+${tools.map((t, idx) => `### ${idx + 1}. ${t.name}
+- URL: ${t.url}
+- Category: ${t.category}
+- Tagline: ${t.tagline}
+- Why it matters: ${t.why_it_matters || "Verified open-source production utility."}
+`).join("\n")}
+
+---
+
+## 2. Citizen Scam Defense Playbooks (${scams.length} Verified Modus Operandi)
+
+${scams.map((s, idx) => `### Scam #${idx + 1}: ${s.title}
+- Platform: ${s.platform || "Digital"}
+- Severity: ${(s.severity || "high").toUpperCase()}
+- The Trap: ${s.scam}
+- Defense Rule: ${s.protection}
+- Statutory Authority: ${s.sourceName} (${s.sourceUrl})
+`).join("\n")}
+
+---
+
+## 3. Emergency Golden Hour Protocol for Financial Fraud
+1. Call 1930 (National Cyber Crime Helpline) within 2 hours.
+2. Screenshot all chats, transaction reference numbers (UTR), and caller IDs.
+3. Submit e-FIR on https://cybercrime.gov.in.
+4. Deliver dispute letter with complaint acknowledgement to your bank branch within 24 hours.
+`;
+  writeFileSync("./public/llms-full.txt", llmsFull, "utf-8");
+  console.log(`Generated public/llms.txt and public/llms-full.txt (${tools.length} tools, ${scams.length} scams).`);
 }

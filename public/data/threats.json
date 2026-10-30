@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-30T19:30:41.338Z",
+  "updatedAt": "2026-10-30T19:36:46.525Z",
   "categories": [
     {
       "id": "all",
       "label": "🔥 All Cybersecurity News",
-      "count": 15
+      "count": 16
     },
     {
       "id": "india-bfsi",
@@ -14,7 +14,7 @@
     {
       "id": "crypto-heists",
       "label": "🌐 Crypto & Exchange Heists",
-      "count": 3
+      "count": 4
     },
     {
       "id": "global-ransomware",
@@ -53,7 +53,7 @@
       "badgeType": "regulatory",
       "ref": "The Hindu Live Wire",
       "date": "2026-10-30",
-      "timeAgo": "11 hours ago",
+      "timeAgo": "12 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
       "incident": "CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, https://www.fintechbiznews.com/, MillenniumPost.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
@@ -132,22 +132,22 @@
       "consequence": "Read open-access reporting on Lawful Talks."
     },
     {
-      "id": "live-crypto-heists-10534249220",
+      "id": "live-crypto-heists-1959085837",
       "category": "crypto-heists",
       "severity": "high",
-      "impactBadge": "🚨 Breaking Wire",
-      "title": "How crypto hacking funds isolated North Korea’s nuclear programme",
-      "sourceName": "The Guardian",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUk0tVDZsMEx4M1NtS1BVd2FFWGlnMDJob2l5Nk41MWhSc05uOEhWRWNDUDNfbUdHTzFzT3p2VUl0a3o0RENWTXhTZTExc2o2eDQ3S2RiTm1VYS0yRDkzendqZ1kxeWVaMXRvUGd6Z1pWZDNHVEZQcEk5UjdaOWpnSmFjVXEtb2wzNDUxQ3VMeFV2SVVpYlBFdlZleFdtUzJDVnBWYkthV2Q1R211amc?oc=5",
+      "impactBadge": "🔒 Assets Frozen",
+      "title": "‘Biggest hack in history’: Crypto giant freezes assets after $8.9b heist",
+      "sourceName": "SMH.com.au",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOenpUcWJESExLSm14QmdHTHF1T0dXR09jTVpCRDgxbVFKUVN5T0J3VjM0VHFhR1VNNzBmaUE1bHdaSllxaDZObHhJN001X0ZSaWh3T3ZzbTFob29Ub0ZCR2RuWlZTYlM3dUZVSnBWWHNsRjJCN1lBcDBWcHc0ZF90THhpMU91aXBkenBQc25icXRvNjFBN0U3TnNkX1hNaFZta0Uyc3hjLXNrT1JuajhwUzFoRElwNGtXM1EyaUczR2xDYVd1VklHTA?oc=5",
       "provenanceBadge": "⛓️ Crypto Wire",
       "badgeType": "onchain",
-      "ref": "The Guardian Live Wire",
+      "ref": "SMH.com.au Live Wire",
       "date": "2026-10-30",
-      "timeAgo": "1 hour ago",
+      "timeAgo": "13 hours ago",
       "entities": "Binance, Global Exchanges & Digital Assets",
-      "incident": "How crypto hacking funds isolated North Korea’s nuclear programme.",
+      "incident": "‘Biggest hack in history’: Crypto giant freezes assets after $8.9b heist.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on The Guardian."
+      "consequence": "Read open-access reporting on SMH.com.au."
     },
     {
       "id": "live-crypto-heists-15917467890",
@@ -163,9 +163,9 @@
       "date": "2026-10-29",
       "timeAgo": "21 hours ago",
       "entities": "Binance, Global Exchanges & Digital Assets",
-      "incident": "Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History. Verified across multiple open wires including: Yahoo Finance, TRM Labs, NBC News, CNBC.",
+      "incident": "Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History. Verified across multiple open wires including: Yahoo Finance, TRM Labs, CNBC, NBC News.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on Reuters. Verified across multiple open wires including: Yahoo Finance, TRM Labs, NBC News, CNBC."
+      "consequence": "Read open-access reporting on Reuters. Verified across multiple open wires including: Yahoo Finance, TRM Labs, CNBC, NBC News."
     },
     {
       "id": "live-crypto-heists-799466515",
@@ -184,6 +184,24 @@
       "incident": "Polymarket resumes trading after third-party security breach, to reimburse users.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on Reuters."
+    },
+    {
+      "id": "live-crypto-heists-3576309623",
+      "category": "crypto-heists",
+      "severity": "high",
+      "impactBadge": "🚨 Breaking Wire",
+      "title": "Bitcoin ‘Goes to Zero’ After a Hack, Chamath Palihapitiya Predicts",
+      "sourceName": "Yahoo Finance",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOalREVGdETGFHV0VfWnhRdWVhVTVGbGJkcjk5NHo2R3pTM3FyTXBDQVpVUmFOS1I4V1phNGNFREZrd1Y3T2J2dGZEaElIbzhPNU05M0ZoVzlDTV9TSlNNcUZnNXE5MVlSNUFjWEFGblRrOGhmOGxuNFNBNUFNVng0MjdwVjdETDZSd0xyRzZSdU9LaVI0NlhrRlZqVQ?oc=5",
+      "provenanceBadge": "⛓️ Crypto Wire",
+      "badgeType": "onchain",
+      "ref": "Yahoo Finance Live Wire",
+      "date": "2026-10-23",
+      "timeAgo": "6 days ago",
+      "entities": "Binance, Global Exchanges & Digital Assets",
+      "incident": "Bitcoin ‘Goes to Zero’ After a Hack, Chamath Palihapitiya Predicts.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on Yahoo Finance."
     },
     {
       "id": "live-global-ransomware-1246487518",
