@@ -29,6 +29,13 @@ const NON_ENGLISH_SCRIPT = /[\u0400-\u04FF\u0590-\u06FF\u0900-\u097F\u0E00-\u0E7
 // Placeholder descriptions the scrapers fall back to when a repo has none.
 const PLACEHOLDER_TAGLINE = /^(open-source ai tool \/ repository|high-utility open-source ai infrastructure)$/i;
 
+// Promo fragments scrapers pick up from READMEs that add no information.
+const PROMO_FRAGMENT = /\s*(only\s+)?official\s+(website|site|repo(sitory)?)\s*[:=]?\s*\S+\.?\s*$/i;
+
+// Compact, locale-independent number formatting (291K / 1.4M) so the site
+// never shows environment-dependent grouping like "2,91,410".
+const fmtCompact = (n) => new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(n);
+
 const FREE_SUBDOMAIN_PATTERNS = [
   /\.vercel\.app$/i,
   /\.pages\.dev$/i,
@@ -58,9 +65,9 @@ export function evaluateQuality(item) {
   }
   // Many projects write a bilingual description. Keep the English half; drop the entry only when
   // there is no usable English left.
-  let cleanTagline = tagline;
+  let cleanTagline = tagline.replace(PROMO_FRAGMENT, "").trim();
   if (NON_ENGLISH_SCRIPT.test(tagline)) {
-    cleanTagline = tagline
+    cleanTagline = cleanTagline
       .replace(new RegExp(NON_ENGLISH_SCRIPT.source, "g"), " ")
       .replace(/[|｜（）()【】\[\]、。，；：]+/g, " ")
       .replace(/\s+/g, " ")
@@ -115,7 +122,7 @@ export function evaluateQuality(item) {
   // 4. Clean editorial summary
   let whyItMatters = "";
   if (item.source === "github") {
-    whyItMatters = `Production open-source framework with ${item.metric.toLocaleString()} verified GitHub stars.`;
+    whyItMatters = `Production open-source framework with ${fmtCompact(item.metric)} verified GitHub stars.`;
   } else if (item.source === "hn") {
     whyItMatters = `Peer-vetted engineering discussion with ${item.metric} upvotes on Hacker News.`;
   } else if (item.source === "huggingface") {

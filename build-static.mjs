@@ -5,6 +5,7 @@ import { getDb, now, getMeta } from "./src/db.mjs";
 import { runIngestion } from "./src/ingest.mjs";
 import { evaluateQuality } from "./src/quality.mjs";
 import { refreshLiveMetrics } from "./src/live-metrics.mjs";
+import { publishSeoArtifacts } from "./src/seo-publish.mjs";
 
 async function build() {
   console.log("Ingesting latest top-tier tools...");
@@ -109,6 +110,7 @@ async function build() {
 
   mkdirSync("./public/data", { recursive: true });
   writeFileSync("./public/data/tools.json", JSON.stringify(output, null, 2), "utf-8");
+  publishSeoArtifacts(tools, output.updatedAt);
   console.log(`[Gate] Dropped ${rejectedAtBuild.length} stored entries at build time:\n  ` + rejectedAtBuild.join("\n  "));
   console.log(`Generated public/data/tools.json with ${tools.length} curated tools across ${categories.length} categories.`);
 }
