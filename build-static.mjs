@@ -224,7 +224,7 @@ function updateScamsInHtml(scams) {
   let html = readFileSync(indexPath, "utf8");
 
   html = html.replace(/<span class="tab-count" id="tab-scams-count">\d*<\/span>/, `<span class="tab-count" id="tab-scams-count">${scams.length}</span>`);
-  html = html.replace(/<span class="reality-count-pill" id="scam-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="scam-count-badge">Showing all ${scams.length} verified scams</span>`);
+  html = html.replace(/<span class="reality-count-pill" id="scam-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="scam-count-badge">Showing all ${scams.length} verified scam alerts</span>`);
 
   const containerStartTag = '<div class="scam-grid" id="scams-container">';
   const startIdx = html.indexOf(containerStartTag);

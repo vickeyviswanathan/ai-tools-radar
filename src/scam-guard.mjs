@@ -11,6 +11,8 @@ const TRUSTED_DOMAINS = [
   "npci.org.in",
   "echallan.parivahan.gov.in",
   "parivahan.gov.in",
+  "indiapost.gov.in",
+  "sebi.gov.in",
   "reuters.com",
   "cisa.gov",
   "ftc.gov"
@@ -55,11 +57,20 @@ export function generateScamsHtml(scams) {
   const esc = (s) => String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   return scams.map((item, idx) => {
-    const sevClass = item.severity === "critical" ? "scam-badge-sev-critical" : "scam-badge-sev-high";
+    const sevClass = item.severity === "critical"
+      ? "scam-badge-sev-critical"
+      : item.severity === "high"
+      ? "scam-badge-sev-high"
+      : "scam-badge-sev-medium";
 
-    return `      <article class="scam-card" id="scam-${esc(item.id)}">
+    const platformBadgeHtml = item.platform
+      ? `<span class="scam-badge scam-badge-platform">${esc(item.platform)}</span>`
+      : "";
+
+    return `      <article class="scam-card" data-category="${esc(item.category || 'all')}" id="scam-${esc(item.id)}">
         <div class="scam-top-bar">
           <div class="scam-badge-group">
+            ${platformBadgeHtml}
             <span class="scam-badge scam-badge-tag">${esc(item.tag)}</span>
             <span class="scam-badge ${sevClass}">${item.severity.toUpperCase()}</span>
           </div>
