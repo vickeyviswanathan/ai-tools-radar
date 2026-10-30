@@ -36,6 +36,7 @@ export const isListLike = (text) => LIST_RE.test(text);
 
 // Our own taxonomy (ordered; first best match wins on ties).
 const CATEGORIES = [
+  ["Cybersecurity & AppSec", /\b(cybersecurity|security|appsec|infosec|vulnerabilit\w*|pentest\w*|red team\w*|blue team\w*|cve|owasp|waf|sast|dast|sbom|threat\w*|exploit\w*|reverse engineer\w*|malware|sandbox|siem|forensics?|cryptograph\w*|auth0?|keycloak|zero[- ]day|secret scan\w*)\b/i],
   ["Coding", /\b(code|coding|coder|developers?|ide|repos?|sdk|devops|debug\w*|terminal|cli|programming|sql|pull requests?|vibe[- ]?cod\w*|codebase|refactor\w*|typescript|python|rust|unit tests?)\b/i],
   ["Agents & Automation", /\b(agents?|agentic|automat\w*|workflows?|autonomous|mcp|browser use|computer use|n8n|zapier|rpa|orchestrat\w*)\b/i],
   ["Image & Design", /\b(images?|photos?|design\w*|logos?|art|illustrat\w*|diffusion|sdxl|flux|avatars?|figma|upscal\w*|drawing|sketch|3d|icons?|wallpapers?|ui mockups?)\b/i],
