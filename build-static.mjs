@@ -133,6 +133,7 @@ async function build() {
   };
   writeFileSync("./public/data/scams.json", JSON.stringify(scamsOutput, null, 2), "utf-8");
 
+  syncToolCountsInHtml(tools);
   updateThreatsInHtml(threatCategories, liveThreats);
   updateScamsInHtml(sanitizedScams);
 
@@ -245,3 +246,11 @@ function updateScamsInHtml(scams) {
 }
 
 build().catch(console.error);
+
+function syncToolCountsInHtml(tools) {
+  const indexPath = "./public/index.html";
+  let html = readFileSync(indexPath, "utf8");
+  html = html.replace(/<strong id="stat-tools">\d+<\/strong>/, `<strong id="stat-tools">${tools.length}</strong>`);
+  html = html.replace(/<span class="tab-count" id="tab-tools-count">\d*<\/span>/, `<span class="tab-count" id="tab-tools-count">${tools.length}</span>`);
+  writeFileSync(indexPath, html, "utf8");
+}
