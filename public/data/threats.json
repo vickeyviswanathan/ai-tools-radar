@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T19:02:41.687Z",
+  "updatedAt": "2026-10-30T19:17:44.862Z",
   "categories": [
     {
       "id": "all",
@@ -37,9 +37,9 @@
       "date": "2026-10-30",
       "timeAgo": "11 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
-      "incident": "AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank investigates suspected Salesforce data breach; AU Small Finance Bank breach reported, hackers threaten to leak Aadhaar and customer records. Verified across multiple open wires including: BusinessLine, India Today, ThePrint, Business Standard.",
+      "incident": "AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank investigates suspected Salesforce data breach; AU Small Finance Bank probes potential data leak from SaaS platform after hacker group claims breach. Verified across multiple open wires including: BusinessLine, ThePrint, Business Standard, TradingView.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on Moneycontrol.com. Verified across multiple open wires including: BusinessLine, India Today, ThePrint, Business Standard."
+      "consequence": "Read open-access reporting on Moneycontrol.com. Verified across multiple open wires including: BusinessLine, ThePrint, Business Standard, TradingView."
     },
     {
       "id": "live-india-bfsi-6469460485",
@@ -55,9 +55,9 @@
       "date": "2026-10-30",
       "timeAgo": "11 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
-      "incident": "CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, https://www.fintechbiznews.com/, MillenniumPost.",
+      "incident": "CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost, The 420.in.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on The Hindu. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, https://www.fintechbiznews.com/, MillenniumPost."
+      "consequence": "Read open-access reporting on The Hindu. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost, The 420.in."
     },
     {
       "id": "live-india-bfsi-10931990812",
@@ -107,7 +107,7 @@
       "badgeType": "regulatory",
       "ref": "The 420.in Live Wire",
       "date": "2026-10-30",
-      "timeAgo": "13 hours ago",
+      "timeAgo": "14 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
       "incident": "Delhi Police Bust ₹5.17 Crore Bank Fraud Network, Two Arrested.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
@@ -163,9 +163,9 @@
       "date": "2026-10-29",
       "timeAgo": "20 hours ago",
       "entities": "Binance, Global Exchanges & Digital Assets",
-      "incident": "Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History. Verified across multiple open wires including: Yahoo Finance, TRM Labs, NBC News, CNBC.",
+      "incident": "Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; Binance Suffers \"Largest Bank Heist In Human History,\" And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack. Verified across multiple open wires including: Yahoo Finance, 24/7 Wall St., TRM Labs, NBC News.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on Reuters. Verified across multiple open wires including: Yahoo Finance, TRM Labs, NBC News, CNBC."
+      "consequence": "Read open-access reporting on Reuters. Verified across multiple open wires including: Yahoo Finance, 24/7 Wall St., TRM Labs, NBC News."
     },
     {
       "id": "live-crypto-heists-799466515",
@@ -204,6 +204,24 @@
       "consequence": "Read open-access reporting on Yahoo Finance."
     },
     {
+      "id": "live-global-ransomware-5707601159",
+      "category": "global-ransomware",
+      "severity": "high",
+      "impactBadge": "🚨 Breaking Wire",
+      "title": "New cybersecurity blind spot: When AI looks like a trusted employee",
+      "sourceName": "The Financial Express",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5",
+      "provenanceBadge": "🏛️ Statutory Wire",
+      "badgeType": "statutory",
+      "ref": "The Financial Express Live Wire",
+      "date": "2026-10-30",
+      "timeAgo": "9 hours ago",
+      "entities": "Global Enterprise Infrastructure & Critical Systems",
+      "incident": "New cybersecurity blind spot: When AI looks like a trusted employee.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on The Financial Express."
+    },
+    {
       "id": "live-global-ransomware-12643287449",
       "category": "global-ransomware",
       "severity": "high",
@@ -220,24 +238,6 @@
       "incident": "France's Sopra Steria raises 2026 growth target again as defence, cybersecurity lift Q3 sales.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on Reuters."
-    },
-    {
-      "id": "live-global-ransomware-5660613474",
-      "category": "global-ransomware",
-      "severity": "high",
-      "impactBadge": "🚨 Breaking Wire",
-      "title": "Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users",
-      "sourceName": "Deccan Chronicle",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5",
-      "provenanceBadge": "🏛️ Statutory Wire",
-      "badgeType": "statutory",
-      "ref": "Deccan Chronicle Live Wire",
-      "date": "2026-10-29",
-      "timeAgo": "1 day ago",
-      "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users.",
-      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on Deccan Chronicle."
     },
     {
       "id": "live-global-ransomware-5107877601",
@@ -258,58 +258,58 @@
       "consequence": "Read open-access reporting on Reuters."
     },
     {
-      "id": "live-global-ransomware-5792857321",
+      "id": "live-global-ransomware-9023916946",
+      "category": "global-ransomware",
+      "severity": "high",
+      "impactBadge": "🔒 Assets Frozen",
+      "title": "Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say",
+      "sourceName": "New York Post",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5",
+      "provenanceBadge": "🏛️ Statutory Wire",
+      "badgeType": "statutory",
+      "ref": "New York Post Live Wire",
+      "date": "2026-10-29",
+      "timeAgo": "1 day ago",
+      "entities": "Global Enterprise Infrastructure & Critical Systems",
+      "incident": "Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say.",
+      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
+      "consequence": "Read open-access reporting on New York Post."
+    },
+    {
+      "id": "live-global-ransomware-1246487518",
       "category": "global-ransomware",
       "severity": "high",
       "impactBadge": "⚠️ Data Breach",
-      "title": "Three South Korean financial firms including Bithumb report data breaches, Yonhap says",
-      "sourceName": "Reuters",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5",
-      "provenanceBadge": "🚨 Reuters Wire",
+      "title": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees",
+      "sourceName": "Deccan Chronicle",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5",
+      "provenanceBadge": "🏛️ Statutory Wire",
       "badgeType": "statutory",
-      "ref": "Reuters Live Wire",
-      "date": "2026-10-28",
-      "timeAgo": "2 days ago",
+      "ref": "Deccan Chronicle Live Wire",
+      "date": "2026-10-29",
+      "timeAgo": "1 day ago",
       "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "Three South Korean financial firms including Bithumb report data breaches, Yonhap says.",
+      "incident": "Data Leak Exposes Information on over 40,000 US Homeland Security Employees.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on Reuters."
+      "consequence": "Read open-access reporting on Deccan Chronicle."
     },
     {
-      "id": "live-global-ransomware-25291081211",
+      "id": "live-global-ransomware-5660613474",
       "category": "global-ransomware",
       "severity": "high",
-      "impactBadge": "🚨 Reuters Exclusive",
-      "title": "EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms",
-      "sourceName": "Reuters",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDV3WWJ5Ulh3Q05tT203WGNGVE1UNmFvZ2ZoclFXemtrWXFhNlRhUmtabmlPZXRaYU1sQ251VWhSSWJMODNJQkRrMk9MNFdfb1RVT2VJQTR4akpfM0JQNk9wMkpMV2tFY2tHc2ZpTGMwcHlLNFU3UDBrZk5MbGFrb2ZqX25XRVZCQmI5Z29LbDI5cjF2S0JodjVNcVVmV3RyUFR1SW5RZUwwY2JlSWJrRUMyNEgta3dl?oc=5",
-      "provenanceBadge": "🚨 Reuters Wire",
+      "impactBadge": "🚨 Breaking Wire",
+      "title": "Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users",
+      "sourceName": "Deccan Chronicle",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5",
+      "provenanceBadge": "🏛️ Statutory Wire",
       "badgeType": "statutory",
-      "ref": "Reuters Live Wire",
-      "date": "2026-10-27",
-      "timeAgo": "3 days ago",
+      "ref": "Deccan Chronicle Live Wire",
+      "date": "2026-10-29",
+      "timeAgo": "1 day ago",
       "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms.",
+      "incident": "Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on Reuters."
-    },
-    {
-      "id": "live-global-ransomware-14143546150",
-      "category": "global-ransomware",
-      "severity": "high",
-      "impactBadge": "🚨 Reuters Exclusive",
-      "title": "EXCLUSIVE: How one hacker used AI agents and a few thousand dollars to break into scores of sites",
-      "sourceName": "Reuters",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSUVKUWRvY0tQeUZscHhGcDBLYjI5VVZaYXRFRklFbmEzX29RaVFuMmt6cDlpMURENUtWRFpBQVBnNngwcWJla3NJZllZVDFBb2NKU21YUnBkMTNKb1NEM3BNLXk2OXpVbVpyZXM3NHVaOUNrWGZzRWhGQlRFSDhPa0E4TVdCTnBuZjNBS2R2UU9ySzV1c2hCbUVycmFHUTNpVk1vX0kxSEEyMUllRlpsakRfNEdZUlJUWVBVRTFqYkZiYm5jR1E?oc=5",
-      "provenanceBadge": "🚨 Reuters Wire",
-      "badgeType": "statutory",
-      "ref": "Reuters Live Wire",
-      "date": "2026-10-26",
-      "timeAgo": "4 days ago",
-      "entities": "Global Enterprise Infrastructure & Critical Systems",
-      "incident": "EXCLUSIVE: How one hacker used AI agents and a few thousand dollars to break into scores of sites.",
-      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on Reuters."
+      "consequence": "Read open-access reporting on Deccan Chronicle."
     }
   ]
 }

@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script>
+  if (window.top !== window.self) {
+    try { window.top.location = window.self.location; } catch(e) { window.location = "about:blank"; }
+  }
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cipherati.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
@@ -1875,6 +1880,44 @@
     margin-top: 1px;
   }
 
+
+  /* Highlighting effect on deep-link scroll */
+  .card-highlight {
+    outline: 2px solid #3b82f6 !important;
+    box-shadow: 0 0 24px rgba(59, 130, 246, 0.5) !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+
+  /* Emergency Quick Banner on Default View */
+  .emergency-quick-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: #fca5a5;
+    transition: all 0.2s ease;
+  }
+  .emergency-quick-banner:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.6);
+    color: #ffffff;
+  }
+  .emergency-quick-banner strong {
+    color: #ffffff;
+  }
+  .emergency-quick-banner .eq-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
 </style>
 </head>
 <body>
@@ -1916,17 +1959,17 @@
     </div>
 
     <!-- Primary View Switcher -->
-    <div class="view-toggle">
-      <button class="view-tab active" id="tab-tools" onclick="switchView('tools')">
+    <div class="view-toggle" role="tablist" aria-label="Primary site navigation">
+      <button class="view-tab active" id="tab-tools" role="tab" aria-selected="true" aria-controls="grid-container" onclick="switchView('tools')">
         🧭 Curated Tools Directory <span class="tab-count" id="tab-tools-count"></span>
       </button>
-      <button class="view-tab" id="tab-realities" onclick="switchView('realities')">
+      <button class="view-tab" id="tab-realities" role="tab" aria-selected="false" aria-controls="realities" onclick="switchView('realities')">
         ⚡ AI Realities <span class="tab-count">18</span>
       </button>
-      <button class="view-tab" id="tab-threats" onclick="switchView('news')">
+      <button class="view-tab" id="tab-threats" role="tab" aria-selected="false" aria-controls="threats" onclick="switchView('news')">
         🛡️ Cybersecurity News <span class="tab-count" id="tab-threats-count">16</span>
       </button>
-      <button class="view-tab" id="tab-scams" onclick="switchView('scams')">
+      <button class="view-tab" id="tab-scams" role="tab" aria-selected="false" aria-controls="scams" onclick="switchView('scams')">
         🚨 Scam Alerts <span class="tab-count" id="tab-scams-count">15</span>
       </button>
     </div>
@@ -1936,6 +1979,12 @@
 <main class="wrap">
   <!-- Section 1: Curated Tools Directory -->
   <section class="section-wrap" id="radar">
+    <!-- Emergency Fast-Access Banner for Citizens in Panic -->
+    <div class="emergency-quick-banner" onclick="switchView('scams')" role="alert" title="Click to view National Cyber Helpline 1930 & Scam Alerts">
+      <span class="eq-icon">🚨</span>
+      <span class="eq-text"><strong>Need Emergency Cyber Fraud Help?</strong> Call <strong>1930</strong> (Toll-Free) or view the <strong>Scam Alerts &amp; Golden Hour Reporting Guide →</strong></span>
+    </div>
+
     <div class="radar-header">
       <div class="section-header">
         <div>
@@ -4632,11 +4681,9 @@
       <div class="reality-card" id="reality-0" data-category="Retrieval & Context" data-id="1">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Retrieval & Context · Trap #1</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(0, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(0, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(0)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(0)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">1. The Context Window Lie</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "1-million-token context window! Dump your entire company wiki or codebase into one prompt!"</div>
@@ -4655,11 +4702,9 @@
       <div class="reality-card" id="reality-1" data-category="Cost & Tokens" data-id="2">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Cost & Tokens · Trap #2</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(1, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(1, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(1)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(1)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">2. The Token Cost Bleed</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Per-token prices are dropping 10x every year — don't worry about cost optimization!"</div>
@@ -4677,11 +4722,9 @@
       <div class="reality-card" id="reality-2" data-category="Agents & Workflow" data-id="3">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Agents & Workflow · Trap #3</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(2, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(2, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(2)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(2)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">3. The Coding Agent Benchmark Myth</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Our autonomous coding agent resolves 60% of GitHub issues end-to-end without humans!"</div>
@@ -4700,11 +4743,9 @@
       <div class="reality-card" id="reality-3" data-category="Training & Models" data-id="4">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Training & Models · Trap #4</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(3, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(3, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(3)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(3)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">4. The Fine-Tuning Money Pit</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Fine-tune a private custom model on your company's proprietary data to teach it your domain!"</div>
@@ -4724,11 +4765,9 @@
       <div class="reality-card" id="reality-4" data-category="Security & Guardrails" data-id="5">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Security & Guardrails · Trap #5</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(4, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(4, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(4)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(4)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">5. The Agent Security Blindspot</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Give your AI agent terminal access, browser control, and API keys to automate your entire workflow!"</div>
@@ -4746,11 +4785,9 @@
       <div class="reality-card" id="reality-5" data-category="Reliability & APIs" data-id="6">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Reliability & APIs · Trap #6</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(5, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(5, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(5)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(5)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">6. The Structured JSON Illusion</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Just tell the LLM to output valid JSON matching your schema — instant API integration!"</div>
@@ -4769,11 +4806,9 @@
       <div class="reality-card" id="reality-6" data-category="Retrieval & Context" data-id="7">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Retrieval & Context · Trap #7</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(6, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(6, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(6)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(6)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">7. The Pure Vector Search Trap</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Embed your documents into a vector database and semantic search will magically find every answer!"</div>
@@ -4792,11 +4827,9 @@
       <div class="reality-card" id="reality-7" data-category="Evals & Testing" data-id="8">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Evals & Testing · Trap #8</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(7, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(7, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(7)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(7)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">8. The Silent Model Regression Trap</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Auto-upgrade to the newest flagship model release for instant free intelligence!"</div>
@@ -4815,11 +4848,9 @@
       <div class="reality-card" id="reality-8" data-category="Agents & Workflow" data-id="9">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Agents & Workflow · Trap #9</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(8, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(8, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(8)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(8)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">9. The Multi-Agent Runaway Loop Trap</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Deploy autonomous swarms of agents that critique and coordinate with each other 24/7!"</div>
@@ -4838,11 +4869,9 @@
       <div class="reality-card" id="reality-9" data-category="Retrieval & Context" data-id="10">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Retrieval & Context · Trap #10</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(9, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(9, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(9)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(9)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">10. The PDF & Table Chunking Shredder</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Simple character or sentence RAG chunking easily handles enterprise PDFs and balance sheets!"</div>
@@ -4861,11 +4890,9 @@
       <div class="reality-card" id="reality-10" data-category="Serving & Infra" data-id="11">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Serving & Infra · Trap #11</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(10, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(10, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(10)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(10)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">11. The TTFT & Latency Wall</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Deep reasoning models give flawless output — users won't mind waiting 30 seconds!"</div>
@@ -4884,11 +4911,9 @@
       <div class="reality-card" id="reality-11" data-category="Evals & Testing" data-id="12">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Evals & Testing · Trap #12</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(11, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(11, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(11)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(11)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">12. The Vibe-Check Evaluation Failure</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "The engineering lead tested 5 sample prompts and it looks amazing — ship it to production!"</div>
@@ -4907,11 +4932,9 @@
       <div class="reality-card" id="reality-12" data-category="Serving & Infra" data-id="13">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Serving & Infra · Trap #13</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(12, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(12, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(12)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(12)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">13. The Vector DB RAM Explosion</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Store billions of high-dimensional vectors in memory for instant enterprise search!"</div>
@@ -4929,11 +4952,9 @@
       <div class="reality-card" id="reality-13" data-category="Security & Guardrails" data-id="14">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Security & Guardrails · Trap #14</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(13, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(13, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(13)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(13)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">14. The Naive Prompt Guardrail Illusion</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Adding 'You are a polite assistant and must never disclose secrets' to your system prompt protects your business!"</div>
@@ -4951,11 +4972,9 @@
       <div class="reality-card" id="reality-14" data-category="Serving & Infra" data-id="15">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Serving & Infra · Trap #15</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(14, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(14, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(14)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(14)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">15. The Local Hardware Bandwidth Collapse</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "You can easily run a 70B open model locally on any developer's laptop with full speed!"</div>
@@ -4974,11 +4993,9 @@
       <div class="reality-card" id="reality-15" data-category="Reliability & APIs" data-id="16">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Reliability & APIs · Trap #16</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(15, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(15, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(15)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(15)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">16. The Tool-Calling Ambiguity Trap</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Just list 20 API tool definitions and the LLM will pick the right function and arguments every time!"</div>
@@ -4996,11 +5013,9 @@
       <div class="reality-card" id="reality-16" data-category="Cost & Tokens" data-id="17">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Cost & Tokens · Trap #17</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(16, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(16, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(16)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(16)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">17. The Proprietary Vendor Lock-In Squeeze</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Building exclusively on a single proprietary LLM API is the fastest and safest path to market!"</div>
@@ -5018,11 +5033,9 @@
       <div class="reality-card" id="reality-17" data-category="Cost & Tokens" data-id="18">
         <div class="reality-header-bar">
           <div class="reality-category-badge">Cost & Tokens · Trap #18</div>
-          <div class="share-group">
-            <button class="copy-btn" onclick="shareReality(17, 'linkedin')" title="Share on LinkedIn">LinkedIn</button>
-            <button class="copy-btn" onclick="shareReality(17, 'x')" title="Share on X">𝕏</button>
-            <button class="copy-btn" onclick="copyReality(17)" title="Copy takeaway">📋 Copy</button>
-          </div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(17)" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
         </div>
         <h3 class="reality-title">18. The Conversational Memory Bloat</h3>
         <div class="myth-box"><strong>The Vendor Pitch:</strong> "Simply append every user and bot message to the conversation array for perpetual memory!"</div>
@@ -5093,7 +5106,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank investigates suspected Salesforce data breach; AU Small Finance Bank breach reported, hackers threaten to leak Aadhaar and customer records. Verified across multiple open wires including: BusinessLine, India Today, ThePrint, Business Standard.
+          AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank investigates suspected Salesforce data breach; AU Small Finance Bank probes potential data leak from SaaS platform after hacker group claims breach. Verified across multiple open wires including: BusinessLine, ThePrint, Business Standard, TradingView.
         </div>
       </div>
 
@@ -5135,7 +5148,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, https://www.fintechbiznews.com/, MillenniumPost.
+          CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost, The 420.in.
         </div>
       </div>
 
@@ -5387,7 +5400,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History. Verified across multiple open wires including: Yahoo Finance, TRM Labs, NBC News, CNBC.
+          Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; Binance Suffers &quot;Largest Bank Heist In Human History,&quot; And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack. Verified across multiple open wires including: Yahoo Finance, 24/7 Wall St., TRM Labs, NBC News.
         </div>
       </div>
 
@@ -5487,6 +5500,48 @@
       </div>
     </article>
 
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5707601159">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5707601159')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
+          New cybersecurity blind spot: When AI looks like a trusted employee <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          New cybersecurity blind spot: When AI looks like a trusted employee.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Financial Express</span>
+          <span class="threat-ref">The Financial Express Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Financial Express ↗
+        </a>
+      </div>
+    </article>
+
     <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-12643287449">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5525,48 +5580,6 @@
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZWgzWENJclAySlJUMHZhTlFwUXVCbW9qWV8zTDRGdWJfQVAxTnRIQjJWcHNqNjFxQXFMeC1fcDFYZTUtUjFTSUM1S0tVVzZkem01M2MzR1ZBMTd6cXVTcTk3eTUxX2VYRHFsX2tMc2dsTGZrZ1RmMzdUbG5qTWhvazZYc0diaUxUMW5kRTV0cnNVc3lxaGNTeDB0cTFUN0NwZXBWRngtYjVXLWl2eHBHamVUaVJsenVOQlNWbGM2UWlQamNXN2pBQ1ptODA0dDM3Q2VNdzlrUkFfdw?oc=5" target="_blank" rel="noopener noreferrer">
           Read on Reuters ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5660613474">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5660613474')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5" target="_blank" rel="noopener noreferrer">
-          Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Deccan Chronicle</span>
-          <span class="threat-ref">Deccan Chronicle Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Deccan Chronicle ↗
         </a>
       </div>
     </article>
@@ -5613,21 +5626,63 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5792857321">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-9023916946">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🔒 Assets Frozen</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-9023916946')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
+          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">New York Post</span>
+          <span class="threat-ref">New York Post Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on New York Post ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-1246487518">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
           <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5792857321')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-1246487518')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Three South Korean financial firms including Bithumb report data breaches, Yonhap says <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
+          Data Leak Exposes Information on over 40,000 US Homeland Security Employees <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5639,37 +5694,37 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          Three South Korean financial firms including Bithumb report data breaches, Yonhap says.
+          Data Leak Exposes Information on over 40,000 US Homeland Security Employees.
         </div>
       </div>
 
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-          <span class="threat-ref">Reuters Live Wire</span>
+          <span class="threat-source-name">Deccan Chronicle</span>
+          <span class="threat-ref">Deccan Chronicle Live Wire</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Deccan Chronicle ↗
         </a>
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-25291081211">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5660613474">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-25291081211')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5660613474')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDV3WWJ5Ulh3Q05tT203WGNGVE1UNmFvZ2ZoclFXemtrWXFhNlRhUmtabmlPZXRaYU1sQ251VWhSSWJMODNJQkRrMk9MNFdfb1RVT2VJQTR4akpfM0JQNk9wMkpMV2tFY2tHc2ZpTGMwcHlLNFU3UDBrZk5MbGFrb2ZqX25XRVZCQmI5Z29LbDI5cjF2S0JodjVNcVVmV3RyUFR1SW5RZUwwY2JlSWJrRUMyNEgta3dl?oc=5" target="_blank" rel="noopener noreferrer">
-          EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5" target="_blank" rel="noopener noreferrer">
+          Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5681,60 +5736,18 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms.
+          Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users.
         </div>
       </div>
 
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-          <span class="threat-ref">Reuters Live Wire</span>
+          <span class="threat-source-name">Deccan Chronicle</span>
+          <span class="threat-ref">Deccan Chronicle Live Wire</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDV3WWJ5Ulh3Q05tT203WGNGVE1UNmFvZ2ZoclFXemtrWXFhNlRhUmtabmlPZXRaYU1sQ251VWhSSWJMODNJQkRrMk9MNFdfb1RVT2VJQTR4akpfM0JQNk9wMkpMV2tFY2tHc2ZpTGMwcHlLNFU3UDBrZk5MbGFrb2ZqX25XRVZCQmI5Z29LbDI5cjF2S0JodjVNcVVmV3RyUFR1SW5RZUwwY2JlSWJrRUMyNEgta3dl?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-14143546150">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-14143546150')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQSUVKUWRvY0tQeUZscHhGcDBLYjI5VVZaYXRFRklFbmEzX29RaVFuMmt6cDlpMURENUtWRFpBQVBnNngwcWJla3NJZllZVDFBb2NKU21YUnBkMTNKb1NEM3BNLXk2OXpVbVpyZXM3NHVaOUNrWGZzRWhGQlRFSDhPa0E4TVdCTnBuZjNBS2R2UU9ySzV1c2hCbUVycmFHUTNpVk1vX0kxSEEyMUllRlpsakRfNEdZUlJUWVBVRTFqYkZiYm5jR1E?oc=5" target="_blank" rel="noopener noreferrer">
-          EXCLUSIVE: How one hacker used AI agents and a few thousand dollars to break into scores of sites <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          EXCLUSIVE: How one hacker used AI agents and a few thousand dollars to break into scores of sites.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-          <span class="threat-ref">Reuters Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQSUVKUWRvY0tQeUZscHhGcDBLYjI5VVZaYXRFRklFbmEzX29RaVFuMmt6cDlpMURENUtWRFpBQVBnNngwcWJla3NJZllZVDFBb2NKU21YUnBkMTNKb1NEM3BNLXk2OXpVbVpyZXM3NHVaOUNrWGZzRWhGQlRFSDhPa0E4TVdCTnBuZjNBS2R2UU9ySzV1c2hCbUVycmFHUTNpVk1vX0kxSEEyMUllRlpsakRfNEdZUlJUWVBVRTFqYkZiYm5jR1E?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Deccan Chronicle ↗
         </a>
       </div>
     </article>
@@ -6953,6 +6966,14 @@ let renderedTools = [];
 let layout = (() => { try { return localStorage.getItem("radar-layout") === "list" ? "list" : "cards"; } catch { return "cards"; } })();
 const SHARE_ICON = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>`;
 let activeCat = "";
+function selectCategory(cat) {
+  activeCat = cat || "";
+  document.querySelectorAll("#category-bar .cat-pill").forEach(p => {
+    const pillCat = p.dataset && p.dataset.cat !== undefined ? p.dataset.cat : (p.getAttribute ? p.getAttribute("data-cat") : "");
+    p.classList.toggle("active", (pillCat || "") === (cat || ""));
+  });
+  if (typeof render === "function") render();
+}
 let searchQ = "";
 
 const $ = s => document.querySelector(s);
@@ -7024,7 +7045,7 @@ function shareReality(idx, network) {
 // Deep-link entry point used by the Executive Brief cards.
 function openReality(idx) {
   switchView("realities");
-  if (history.replaceState) history.replaceState(null, "", `#realities/${idx + 1}`);
+  if (typeof history !== "undefined" && history.replaceState) history.replaceState(null, "", `#realities/${idx + 1}`);
   setTimeout(() => {
     const card = document.getElementById(`reality-${idx}`);
     if (card) {
@@ -7161,14 +7182,26 @@ function switchView(viewName) {
   if (threatsSection) threatsSection.style.display = isThreats ? "block" : "none";
   if (scamsSection) scamsSection.style.display = isScams ? "block" : "none";
 
-  if (tabTools) tabTools.classList.toggle("active", isTools);
-  if (tabRealities) tabRealities.classList.toggle("active", isRealities);
-  if (tabThreats) tabThreats.classList.toggle("active", isThreats);
-  if (tabScams) tabScams.classList.toggle("active", isScams);
+  if (tabTools) {
+    tabTools.classList.toggle("active", isTools);
+    tabTools.setAttribute("aria-selected", isTools ? "true" : "false");
+  }
+  if (tabRealities) {
+    tabRealities.classList.toggle("active", isRealities);
+    tabRealities.setAttribute("aria-selected", isRealities ? "true" : "false");
+  }
+  if (tabThreats) {
+    tabThreats.classList.toggle("active", isThreats);
+    tabThreats.setAttribute("aria-selected", isThreats ? "true" : "false");
+  }
+  if (tabScams) {
+    tabScams.classList.toggle("active", isScams);
+    tabScams.setAttribute("aria-selected", isScams ? "true" : "false");
+  }
 
   const hash = isScams ? "#scams" : (isThreats ? "#news" : (isRealities ? "#realities" : "#tools"));
-  if (history.replaceState) history.replaceState(null, "", hash);
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  if (typeof history !== "undefined" && history.replaceState) history.replaceState(null, "", hash);
+  if (typeof window !== "undefined" && typeof window.scrollTo === "function") { try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch(e) { window.scrollTo(0, 0); } }
 
   if (isThreats && typeof filterThreats === "function") filterThreats();
   if (isRealities && typeof filterRealities === "function") filterRealities();
@@ -7182,6 +7215,7 @@ function bootstrapFromDom() {
   if (!cards.length) return;
   const list = [];
   cards.forEach(card => {
+    if (!card || !card.querySelector) return;
     const nameEl = card.querySelector(".tool-name");
     const tagEl = card.querySelector(".tool-tag");
     const catEl = card.querySelector(".badge.cat");
@@ -7323,12 +7357,36 @@ function routeHash(hash, categories) {
     }
   } else if (hash.startsWith("#scams")) {
     switchView("scams");
+    const sm = hash.match(/^#scams\/(.+)$/);
+    if (sm) {
+      setTimeout(() => {
+        const card = document.getElementById("scam-" + sm[1]) || document.getElementById(sm[1]);
+        if (card) {
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          card.classList.add("card-highlight");
+          setTimeout(() => card.classList.remove("card-highlight"), 2800);
+        }
+      }, 100);
+    }
+  } else if (hash.startsWith("#threats") || hash.startsWith("#news")) {
+    switchView("news");
+    const tm = hash.match(/^#(?:threats|news)\/(.+)$/);
+    if (tm) {
+      setTimeout(() => {
+        const card = document.getElementById("threat-" + tm[1]) || document.getElementById(tm[1]);
+        if (card) {
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          card.classList.add("card-highlight");
+          setTimeout(() => card.classList.remove("card-highlight"), 2800);
+        }
+      }, 100);
+    }
   } else if (catMatch) {
     const cat = decodeURIComponent(catMatch[1]);
     switchView("tools");
     if (categories.includes(cat)) selectCategory(cat);
   } else {
-    switchView(persona === "leaders" ? "realities" : "tools");
+    switchView(typeof persona !== "undefined" && persona === "leaders" ? "realities" : "tools");
   }
 }
 
@@ -7657,6 +7715,20 @@ async function loadScams() {
 
 loadScams();
 
+
+
+// Escape key search reset listener
+["q", "scam-q", "threat-q"].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        el.value = "";
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+    });
+  }
+});
 
 </script>
 </body>
