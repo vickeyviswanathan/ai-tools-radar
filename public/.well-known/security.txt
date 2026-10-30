@@ -1,6 +1,4 @@
-Contact: https://github.com/vickeyviswanathan/ai-tools-radar/security
-Contact: https://www.linkedin.com/in/vickeyviswanathan
+Contact: https://github.com/vickeyviswanathan/ai-tools-radar/security/advisories/new
 Expires: 2027-10-30T18:00:00.000Z
 Preferred-Languages: en
 Canonical: https://cipherati.com/.well-known/security.txt
-Policy: https://github.com/vickeyviswanathan/ai-tools-radar/blob/main/README.md
