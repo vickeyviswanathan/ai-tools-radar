@@ -21,7 +21,7 @@ async function build() {
   const categories = [
     "Coding",
     "Agents & Automation",
-    "Cybersecurity & AppSec",
+    "Cybersecurity",
     "Image & Design",
     "Video",
     "Audio & Voice",
