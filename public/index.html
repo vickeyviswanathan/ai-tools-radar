@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
 <title>AI Tools Radar — Frontier Coding Agents, Local Models, & Production Reality</title>
 <meta name="description" content="An open, independent directory of battle-tested AI developer tools, coding agents, and local models — with direct links and the unfiltered truth on what actually works in production." />
@@ -46,6 +46,10 @@
     --red-glow: rgba(239, 68, 68, 0.1);
   }
   * { box-sizing: border-box; }
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
   body {
     margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -53,6 +57,7 @@
     color: var(--text);
     -webkit-font-smoothing: antialiased;
     line-height: 1.55;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
   .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 
@@ -733,48 +738,134 @@
   .about-block strong { color: var(--text); }
 
 
-  /* Mobile Responsive Overhaul (Screens <= 720px) */
-  @media (max-width: 720px) {
+  .top-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* Tablet optimization (769px to 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
     .wrap {
-      padding: 0 14px;
+      padding: 0 20px;
+    }
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .reality-grid {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .brief-strip {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .tool-row .row-tag {
+      max-width: 320px;
+    }
+  }
+
+  /* Comprehensive Mobile Responsive Engine (<= 768px) */
+  @media (max-width: 768px) {
+    .wrap {
+      padding: 0 16px;
     }
     header {
-      padding: 20px 0 14px;
+      padding: 18px 0 12px;
     }
     .top-bar {
-      gap: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
       margin-bottom: 12px;
     }
-    .site-badge, .visitor-pill {
+    .site-badge {
+      align-self: flex-start;
       font-size: 11px;
       padding: 4px 10px;
       gap: 6px;
+    }
+    .top-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      width: 100%;
+    }
+    .persona-toggle {
+      display: inline-flex;
+      flex: none;
+    }
+    .persona-btn {
+      padding: 6px 12px;
+      font-size: 12px;
+      min-height: 34px;
+    }
+    .visitor-pill {
+      font-size: 11.5px;
+      padding: 4px 10px;
+      gap: 6px;
+      flex: none;
+    }
+
+    .header-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .header-text {
+      flex: 1;
+      min-width: 0;
+    }
+    .radar-anim {
+      width: 52px;
+      height: 52px;
+      margin-top: 2px;
+      flex-shrink: 0;
     }
     h1 {
       font-size: 26px;
       margin-bottom: 8px;
       line-height: 1.25;
+      letter-spacing: -0.01em;
     }
     .subtitle {
       font-size: 14px;
-      margin-bottom: 16px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .stats-strip {
+      font-size: 12px;
+      gap: 4px 10px;
+      margin-bottom: 14px;
       line-height: 1.5;
     }
+
     .view-toggle {
+      display: flex;
       gap: 6px;
       padding-top: 14px;
     }
     .view-tab {
-      flex: 1 1 calc(50% - 3px);
-      padding: 9px 8px;
+      flex: 1 1 0;
+      padding: 10px 8px;
       font-size: 12.5px;
+      line-height: 1.3;
       justify-content: center;
       text-align: center;
-      gap: 6px;
+      min-height: 48px;
+      border-radius: 10px;
+      gap: 5px;
     }
     .view-tab .tab-count {
-      font-size: 10.5px;
-      padding: 1px 5px;
+      font-size: 11px;
+      padding: 1px 6px;
     }
 
     .section-wrap {
@@ -787,19 +878,48 @@
       font-size: 12px;
     }
 
+    /* Executive Brief */
+    .brief-strip {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .brief-card {
+      padding: 16px;
+      border-radius: 14px;
+    }
+    .brief-card .brief-title {
+      font-size: 15px;
+    }
+    .brief-card .brief-impact {
+      font-size: 13px;
+    }
+    .brief-link {
+      padding: 6px 0;
+      font-size: 13px;
+      min-height: 36px;
+    }
+
+    /* Search & Layout Controls */
     .search-bar {
       gap: 8px;
+      align-items: stretch;
     }
     input[type=search] {
       padding: 12px 14px;
       font-size: 16px; /* 16px prevents iOS Safari auto-zoom on focus */
       border-radius: 10px;
+      min-height: 46px;
     }
     .layout-toggle {
       border-radius: 10px;
+      min-height: 46px;
     }
     .layout-btn {
-      width: 42px;
+      width: 44px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     /* Swipeable single-row category pills on mobile */
@@ -808,10 +928,11 @@
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       padding-bottom: 6px;
-      margin: 0 -14px;
-      padding-left: 14px;
-      padding-right: 14px;
+      margin: 0 -16px;
+      padding-left: 16px;
+      padding-right: 16px;
       scrollbar-width: none;
+      touch-action: pan-x;
     }
     .category-pills::-webkit-scrollbar {
       display: none;
@@ -819,24 +940,73 @@
     .cat-pill {
       white-space: nowrap;
       flex: none;
-      padding: 6px 12px;
-      font-size: 12px;
+      padding: 7px 14px;
+      font-size: 12.5px;
+      min-height: 36px;
+      border-radius: 999px;
     }
 
     /* Cards view responsive */
     .grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 12px;
       margin-bottom: 40px;
     }
     .tool-card {
       padding: 16px;
       border-radius: 14px;
+      min-height: auto;
+      min-width: 0;
+      max-width: 100%;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    .tool-card .tool-top {
+      gap: 10px;
+      margin-bottom: 10px;
+      min-width: 0;
+      max-width: 100%;
+    }
+    .tool-card .tool-icon {
+      width: 42px;
+      height: 42px;
+      font-size: 22px;
+    }
+    .tool-card .tool-name {
+      font-size: 15.5px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    .tool-card .tool-tag {
+      font-size: 12.5px;
+      min-height: auto;
+      -webkit-line-clamp: 3;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    .tool-card .why-box {
+      margin: 10px 0 12px;
+      padding: 8px 12px;
+      font-size: 12px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    .tool-card .tool-meta {
+      gap: 6px;
+      font-size: 11.5px;
+      min-width: 0;
+      max-width: 100%;
+    }
+    .tool-card .share-btn {
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      min-height: 38px;
     }
 
     /* List view mobile: responsive layout */
     .grid.list {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 8px;
       margin-bottom: 40px;
     }
@@ -845,9 +1015,12 @@
       flex-wrap: wrap;
       align-items: flex-start;
       padding: 12px 14px;
-      gap: 6px 10px;
       border-radius: 12px;
       position: relative;
+      min-width: 0;
+      max-width: 100%;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .tool-row .row-rank {
       display: none;
@@ -858,11 +1031,12 @@
       font-size: 18px;
       border-radius: 9px;
       flex: none;
+      margin-right: 10px;
     }
     .tool-row .row-main {
       flex: 1;
       min-width: 0;
-      padding-right: 38px; /* Leave clean space for absolute share button */
+      padding-right: 44px; /* Space for the absolute share button */
     }
     .tool-row .row-name {
       font-size: 15px;
@@ -870,107 +1044,174 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
+      word-break: break-word;
     }
     .tool-row .row-tag {
       margin: 3px 0 0;
       font-size: 12.5px;
       color: #94a3b8;
-      white-space: normal; /* Allow readable 2-line wrap */
+      white-space: normal;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
       line-height: 1.45;
     }
+    .tool-row .share-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      min-height: 38px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
     .tool-row .row-meta {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       gap: 6px;
-      padding-left: 46px; /* Indent under tool name/tagline */
-      margin-top: 2px;
-    }
-    .tool-row .row-meta .badge.cat {
-      display: inline-flex;
-      font-size: 11px;
-      padding: 2px 7px;
+      padding-left: 0;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
     .tool-row .row-meta .badge {
       font-size: 11px;
-      padding: 2px 7px;
-    }
-    .tool-row .share-btn {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 32px;
-      height: 32px;
-      z-index: 2;
+      padding: 2.5px 8px;
     }
 
     /* Production realities on mobile */
     .reality-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 14px;
     }
     .reality-card {
       padding: 16px;
       border-radius: 14px;
+      min-width: 0;
+      max-width: 100%;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    .reality-top {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      margin-bottom: 12px;
     }
     .reality-title {
-      font-size: 15.5px;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+    .share-group {
+      width: 100%;
+      display: flex;
+      gap: 6px;
+    }
+    .share-group .copy-btn {
+      flex: 1;
+      padding: 8px 10px;
+      font-size: 12px;
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .myth-box {
+      font-size: 12px;
+      padding: 8px 12px;
+      line-height: 1.45;
+      margin-bottom: 10px;
+      word-break: break-word;
     }
     .reality-body {
       font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      word-break: break-word;
     }
     .truth-box {
       font-size: 12.5px;
-      padding: 9px 12px;
+      padding: 10px 12px;
+      line-height: 1.45;
+      margin-bottom: 12px;
+      word-break: break-word;
     }
-    .myth-box {
-      font-size: 11.5px;
-      padding: 7px 10px;
+    .impact-box {
+      font-size: 12px;
+      padding: 8px 12px;
+      line-height: 1.45;
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .tools-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      padding-top: 10px;
+    }
+    .tools-label {
+      font-size: 11px;
+    }
+    .tool-chip {
+      padding: 5px 10px;
+      font-size: 12px;
+      min-height: 32px;
     }
 
     /* Toast on mobile */
     #toast {
       left: 14px;
       right: 14px;
-      bottom: 14px;
+      bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+      padding: 12px 16px;
+      font-size: 13px;
       text-align: center;
     }
 
-    /* New components on mobile */
+    footer {
+      padding: 30px 0 calc(30px + env(safe-area-inset-bottom, 0px));
+      font-size: 12.5px;
+    }
+    .about-block {
+      font-size: 13px;
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+  }
+
+  /* Extra small screens (<= 360px: iPhone SE 1st gen, Galaxy Fold) */
+  @media (max-width: 360px) {
+    .wrap {
+      padding: 0 10px;
+    }
+    .category-pills {
+      margin: 0 -10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    h1 {
+      font-size: 22px;
+    }
     .radar-anim {
-      width: 74px;
-      height: 74px;
+      width: 42px;
+      height: 42px;
     }
-    .header-flex {
-      gap: 14px;
-    }
-    .stats-strip {
-      font-size: 12px;
-      gap: 6px 12px;
-      margin-bottom: 12px;
-    }
-    .brief-strip {
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-    .brief-card {
-      padding: 14px 16px;
-      border-radius: 12px;
-    }
-    .persona-btn {
-      padding: 6px 10px;
+    .view-tab {
       font-size: 11.5px;
+      padding: 9px 4px;
     }
-    .impact-box {
-      font-size: 12px;
-      padding: 8px 11px;
-    }
-    .share-group {
-      flex-wrap: wrap;
+    .top-actions {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
     }
   }
 </style>
@@ -982,7 +1223,7 @@
     <div class="top-bar">
       <div class="site-badge">Direct Links & Unfiltered Reality</div>
 
-      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <div class="top-actions">
         <!-- Persona toggle: leaders land on the realities, builders on the directory -->
         <div class="persona-toggle" role="group" aria-label="Audience">
           <button type="button" id="persona-leaders" class="persona-btn" onclick="setPersona('leaders')">For Leaders</button>
@@ -1067,7 +1308,7 @@
       </div>
 
       <div class="search-bar">
-        <input type="search" id="q" placeholder="Filter by name, use case, or keyword (press '/' to focus search)..." />
+        <input type="search" id="q" placeholder="Filter 180+ tools by name, use case, or keyword..." />
         <div class="layout-toggle" role="group" aria-label="Layout">
           <button type="button" id="layout-cards" class="layout-btn active" title="Card view" aria-label="Card view" onclick="setLayout('cards')">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
@@ -4178,10 +4419,71 @@ function switchView(viewName) {
   }
 }
 
+function bootstrapFromDom() {
+  if (allTools.length > 0) return;
+  const cards = document.querySelectorAll("#grid .tool-card");
+  if (!cards.length) return;
+  const list = [];
+  cards.forEach(card => {
+    const nameEl = card.querySelector(".tool-name");
+    const tagEl = card.querySelector(".tool-tag");
+    const catEl = card.querySelector(".badge.cat");
+    const whyEl = card.querySelector(".why-box");
+    const ghBadge = card.querySelector(".badge.source-gh");
+    const hfBadge = card.querySelector(".badge.source-hf");
+    const hnBadge = card.querySelector(".badge.source-hn");
+    const iconEl = card.querySelector(".tool-icon");
+    const url = card.getAttribute("href") || "";
+    const name = nameEl ? nameEl.textContent.replace("↗", "").trim() : "";
+    const tagline = tagEl ? tagEl.textContent.trim() : "";
+    const category = catEl ? catEl.textContent.trim() : "";
+    const why = whyEl ? whyEl.textContent.replace(/^Why it matters:\s*/, "").trim() : "";
+    const signals = [];
+    if (ghBadge) {
+      const m = ghBadge.textContent.match(/([\d.]+)k/i);
+      if (m) signals.push(`github:${Math.round(parseFloat(m[1]) * 1000)}`);
+      else {
+        const m2 = ghBadge.textContent.match(/(\d+)/);
+        if (m2) signals.push(`github:${m2[1]}`);
+      }
+    }
+    if (hfBadge) {
+      const m = hfBadge.textContent.match(/([\d.]+)k/i);
+      if (m) signals.push(`huggingface:${Math.round(parseFloat(m[1]) * 1000)}`);
+      else {
+        const m2 = hfBadge.textContent.match(/(\d+)/);
+        if (m2) signals.push(`huggingface:${m2[1]}`);
+      }
+    }
+    if (hnBadge) {
+      const m = hnBadge.textContent.match(/(\d+)/);
+      if (m) signals.push(`hn:${m[1]}`);
+    }
+    list.push({
+      name,
+      tagline,
+      url,
+      category,
+      why_it_matters: why,
+      emoji: iconEl ? (iconEl.childNodes[0]?.textContent || "⚡").trim() : "⚡",
+      signals,
+      rank: signals[0] ? Number(signals[0].split(":")[1]) : 1000
+    });
+  });
+  if (list.length) {
+    allTools = list;
+    const tabToolsCount = $("#tab-tools-count");
+    if (tabToolsCount) tabToolsCount.textContent = allTools.length;
+    const statTools = $("#stat-tools");
+    if (statTools) statTools.textContent = allTools.length;
+  }
+}
+
 function setLayout(mode) {
   layout = mode === "list" ? "list" : "cards";
   try { localStorage.setItem("radar-layout", layout); } catch {}
   syncLayoutButtons();
+  if (!allTools.length) bootstrapFromDom();
   render();
 }
 
@@ -4226,6 +4528,7 @@ function timeAgo(iso) {
 }
 
 async function init() {
+  bootstrapFromDom();
   try {
     const res = await fetch("./data/tools.json?v=" + Date.now());
     const json = await res.json();
