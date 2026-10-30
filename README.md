@@ -57,7 +57,7 @@ Open an issue: [github.com/vickeyviswanathan/ai-tools-radar/issues/new](https://
 
 ## Author
 
-Built by **Vivek Viswanathan** — [LinkedIn](https://www.linkedin.com/in/vickeyviswanathan)
+Built by **Vivek Viswanathan** — tracking what works when AI meets production and continuously updated on cybersecurity defense, banking IT resilience, and crypto security. [Connect on LinkedIn](https://www.linkedin.com/in/vickeyviswanathan)
 
 ## License
 
