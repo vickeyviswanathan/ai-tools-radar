@@ -37,1896 +37,907 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <style>
+  /* ==========================================================================
+     CIPHERATI INDUSTRY-BENCHMARK DUAL-THEME SYSTEM (LAYOUT 1 + HYBRID)
+     Default: Crisp Cupertino Light Mode (:root)
+     Toggle:  Obsidian Precision Dark Mode (html[data-theme="dark"])
+     ========================================================================== */
   :root {
-    --bg: #fbfbfd;
+    --bg: #f8fafc;
+    --bg-sidebar: #ffffff;
     --card: #ffffff;
-    --card-hover: #ffffff;
-    --line: #e5e5ea;
-    --line-active: #0071e3;
-    --text: #1d1d1f;
-    --text-muted: #86868b;
-    --text-body: #424245;
-    --accent: #0071e3;
-    --accent-glow: rgba(0, 113, 227, 0.08);
-    --gold: #f59e0b;
-    --green: #34c759;
-    --green-glow: rgba(52, 199, 89, 0.08);
-    --red: #ff3b30;
-    --red-glow: rgba(255, 59, 48, 0.08);
+    --card-hover: #f8fafc;
+    --surface-subtle: #f1f5f9;
+    --surface-input: #ffffff;
+    --line: #e2e8f0;
+    --line-strong: #cbd5e1;
+    --line-active: #2563eb;
+    --text: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-fg: #ffffff;
+    --accent-soft: #eff6ff;
+    --accent-border: #bfdbfe;
+    --accent-text: #1d4ed8;
+    --gold: #d97706;
+    --gold-soft: #fffbeb;
+    --gold-border: #fde68a;
+    --gold-text: #92400e;
+    --green: #059669;
+    --green-soft: #ecfdf5;
+    --green-border: #a7f3d0;
+    --green-text: #065f46;
+    --red: #e11d48;
+    --red-soft: #fff1f2;
+    --red-border: #fecdd3;
+    --red-text: #881337;
+    --purple-soft: #f5f3ff;
+    --purple-border: #ddd6fe;
+    --purple-text: #6d28d9;
+    --header-bg: rgba(255, 255, 255, 0.94);
+    --hero-grad: linear-gradient(135deg, #1d4ed8 0%, #0f172a 100%);
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
+    --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.07), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+    --shadow-lg: 0 20px 40px -12px rgba(15, 23, 42, 0.16);
   }
+
+  html[data-theme="dark"] {
+    --bg: #090d16;
+    --bg-sidebar: #0d1321;
+    --card: #111827;
+    --card-hover: #172033;
+    --surface-subtle: #1e293b;
+    --surface-input: #0f1624;
+    --line: #1e293b;
+    --line-strong: #334155;
+    --line-active: #3b82f6;
+    --text: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+    --accent-fg: #ffffff;
+    --accent-soft: rgba(59, 130, 246, 0.15);
+    --accent-border: rgba(59, 130, 246, 0.35);
+    --accent-text: #60a5fa;
+    --gold: #f59e0b;
+    --gold-soft: rgba(245, 158, 11, 0.14);
+    --gold-border: rgba(245, 158, 11, 0.35);
+    --gold-text: #fcd34d;
+    --green: #10b981;
+    --green-soft: rgba(16, 185, 129, 0.14);
+    --green-border: rgba(16, 185, 129, 0.35);
+    --green-text: #6ee7b7;
+    --red: #f43f5e;
+    --red-soft: rgba(225, 29, 72, 0.18);
+    --red-border: rgba(244, 63, 94, 0.42);
+    --red-text: #fecdd3;
+    --purple-soft: rgba(139, 92, 246, 0.16);
+    --purple-border: rgba(139, 92, 246, 0.35);
+    --purple-text: #c4b5fd;
+    --header-bg: rgba(9, 13, 22, 0.92);
+    --hero-grad: linear-gradient(135deg, #1e3a8a 0%, #090d16 100%);
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.7);
+  }
+
   * { box-sizing: border-box; }
   html, body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
     max-width: 100vw;
-  }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", "Inter", sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: var(--bg);
     color: var(--text);
     -webkit-font-smoothing: antialiased;
-    line-height: 1.55;
-    padding-bottom: env(safe-area-inset-bottom, 0px);
+    line-height: 1.5;
   }
-  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 
-  /* Header */
-  header {
-    padding: 32px 0 24px;
-    border-bottom: 1px solid var(--line);
-    background: #ffffff;
+  /* ==========================================================================
+     APP SHELL: LEFT SIDEBAR + MAIN COMMAND PORTAL WORKSPACE
+     ========================================================================== */
+  .app-shell {
+    display: grid;
+    grid-template-columns: 264px minmax(0, 1fr);
+    min-height: 100vh;
+    max-width: 1640px;
+    margin: 0 auto;
   }
-  .top-bar {
+
+  /* Left Navigation Sidebar */
+  .app-sidebar {
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--line);
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 200;
+  }
+  .sidebar-brand {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 10px;
+    padding: 4px 8px 16px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 14px;
   }
-  .site-badge {
+  .sidebar-brand-left {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 20px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 12px;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    flex-shrink: 0;
+  }
+  .brand-title {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--text);
+    line-height: 1.15;
+    margin: 0;
+  }
+  .brand-sub {
+    font-size: 11px;
     font-weight: 600;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 2px;
+  }
+  .sidebar-close-btn {
+    display: none;
+    background: var(--surface-subtle);
+    border: 1px solid var(--line-strong);
+    color: var(--text);
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .sidebar-group-label {
+    font-size: 10.5px;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
-    background: var(--accent-glow);
-    color: var(--accent);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    padding: 5px 14px;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    padding: 0 10px;
+    margin: 12px 0 6px;
+  }
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .side-nav-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 9px 11px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    text-align: left;
+    transition: all 0.15s ease;
+  }
+  .side-nav-btn:hover {
+    background: var(--surface-subtle);
+    color: var(--text);
+  }
+  .side-nav-btn.active {
+    background: var(--accent-soft);
+    color: var(--accent-text);
+    border-color: var(--accent-border);
+    font-weight: 800;
+  }
+  .side-nav-pill {
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 2px 8px;
     border-radius: 999px;
+    background: var(--surface-subtle);
+    color: var(--text-secondary);
+  }
+  .side-nav-btn.active .side-nav-pill {
+    background: var(--accent);
+    color: #ffffff;
+  }
+
+  /* Golden Hour 1930 Emergency Card in Sidebar */
+  .sidebar-emergency-card {
+    background: var(--red-soft);
+    border: 1.5px solid var(--red-border);
+    border-radius: 14px;
+    padding: 14px;
+    margin-top: 16px;
+  }
+  .sidebar-emergency-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--red-text);
+    background: rgba(225, 29, 72, 0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+  }
+  .sidebar-emergency-card h4 {
+    margin: 0 0 4px;
+    font-size: 13.5px;
+    font-weight: 800;
+    color: var(--red-text);
+  }
+  html[data-theme="dark"] .sidebar-emergency-card h4 {
+    color: #ffffff;
+  }
+  .sidebar-emergency-card p {
+    margin: 0 0 10px;
+    font-size: 11.5px;
+    color: var(--red-text);
+    line-height: 1.4;
+  }
+  .sidebar-emergency-cta {
+    width: 100%;
+    background: var(--red);
+    color: #ffffff !important;
+    border: none;
+    border-radius: 9px;
+    padding: 9px 10px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(225, 29, 72, 0.25);
+    transition: transform 0.15s;
+  }
+  .sidebar-emergency-cta:hover {
+    transform: translateY(-1px);
+  }
+
+  /* Dual-Theme Segmented Pill in Sidebar Footer */
+  .sidebar-theme-switch {
+    margin-top: 12px;
+    background: var(--surface-subtle);
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    padding: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+  .theme-seg-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    padding: 7px 8px;
+    border-radius: 8px;
+    font-size: 11.5px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.15s;
+  }
+  .theme-seg-btn.active {
+    background: var(--card);
+    color: var(--text);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* ==========================================================================
+     MAIN WORKSPACE + STICKY TOP COMMAND BAR + TAB HEADERS
+     ========================================================================== */
+  .app-main {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header.top-portal-bar {
+    position: sticky;
+    top: 0;
+    z-index: 150;
+    background: var(--header-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 28px 12px;
+  }
+  .top-command-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .mobile-menu-btn {
+    display: none;
+    background: var(--card);
+    border: 1px solid var(--line-strong);
+    color: var(--text);
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .global-omnibox-wrap {
+    flex: 1;
+    max-width: 680px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .global-omnibox-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--text-muted);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .global-omnibox-input {
+    width: 100%;
+    background: var(--surface-subtle);
+    border: 1.5px solid var(--line-strong);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 10px 76px 10px 42px !important;
+    font-size: 13.5px;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.15s ease;
+  }
+  .global-omnibox-input:focus {
+    background: var(--surface-input);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+  }
+  .omnibox-kbd {
+    position: absolute;
+    right: 12px;
+    display: inline-flex;
+    gap: 3px;
+    pointer-events: none;
+  }
+  .omnibox-kbd kbd {
+    background: var(--card);
+    border: 1px solid var(--line-strong);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    font-family: inherit;
+  }
+
+  .top-actions-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .top-pill-btn {
+    background: var(--card);
+    border: 1px solid var(--line-strong);
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+    box-shadow: var(--shadow-sm);
+  }
+  .top-pill-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent-text);
+    background: var(--accent-soft);
+  }
+  .top-pill-btn.primary-dark {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+    font-weight: 800;
+  }
+  .top-pill-btn.primary-dark:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
   }
   .visitor-pill {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: #ffffff;
-    border: 1px solid #e5e5ea;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-    padding: 4px 12px;
+    gap: 6px;
+    background: var(--surface-subtle);
+    border: 1px solid var(--line);
+    padding: 5px 10px;
     border-radius: 999px;
-    font-size: 12px;
-    font-weight: 500;
-    color: #86868b;
   }
   .pulse-dot {
-    width: 8px; height: 8px;
+    width: 7px; height: 7px;
     border-radius: 50%;
     background: var(--green);
-    box-shadow: 0 0 10px var(--green);
+    box-shadow: 0 0 8px var(--green);
   }
-  .visitor-pill img { height: 18px; vertical-align: middle; border-radius: 4px; }
+  .visitor-pill img { height: 17px; vertical-align: middle; border-radius: 3px; }
 
-  h1 {
-    font-size: 32px;
-    margin: 0 0 10px;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    color: #1d1d1f;
-  }
-  .subtitle {
-    font-size: 16.5px;
-    color: var(--text-muted);
-    max-width: 840px;
-    margin: 0 0 14px;
-    line-height: 1.6;
-  }
-
-  /* Primary View Toggle */
+  /* Horizontal Tab Headers (Preserved & Synced with Sidebar) */
   .view-toggle {
-    display: inline-flex;
-    gap: 3px;
-    padding: 3px;
-    background: #f5f5f7;
-    border: 1px solid #e5e5ea;
-    border-radius: 999px;
-    margin-top: 18px;
-    flex-wrap: wrap;
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  .view-toggle::-webkit-scrollbar { display: none; }
   .view-tab {
-    background: transparent;
-    border: 1px solid transparent;
-    color: #6e6e73;
-    padding: 7px 16px;
+    background: var(--card);
+    border: 1px solid var(--line-strong);
+    color: var(--text-secondary);
+    padding: 7px 14px;
     border-radius: 999px;
-    font-size: 13.5px;
-    font-weight: 500;
+    font-size: 12.5px;
+    font-weight: 700;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     transition: all 0.15s ease;
+    white-space: nowrap;
+    flex: none;
   }
   .view-tab:hover {
-    color: #1d1d1f;
-    background: rgba(0, 0, 0, 0.03);
+    color: var(--accent-text);
+    border-color: var(--accent);
+    background: var(--accent-soft);
   }
   .view-tab.active {
-    background: #ffffff;
-    color: #1d1d1f;
-    font-weight: 600;
-    border-color: rgba(0, 0, 0, 0.04);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
-  .view-tab svg {
-    color: inherit;
-    flex-shrink: 0;
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
   }
   .view-tab .tab-count {
-    background: rgba(0, 0, 0, 0.05);
-    color: #86868b;
-    padding: 2px 7px;
+    background: var(--surface-subtle);
+    color: var(--text-secondary);
+    padding: 1px 7px;
     border-radius: 999px;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 10.5px;
+    font-weight: 800;
   }
   .view-tab.active .tab-count {
-    background: #f5f5f7;
-    color: #1d1d1f;
+    background: rgba(255, 255, 255, 0.24);
+    color: #ffffff;
   }
 
-  /* Sections */
-  .section-wrap {
-    padding: 44px 0 20px;
+  /* Workspace Content Container */
+  .workspace-body {
+    padding: 24px 28px 60px;
+    flex: 1;
+    min-width: 0;
   }
+
+  /* ==========================================================================
+     HERO BENTO ROW (ROYAL BLUE COMMAND CARD + LIVE CYBERSECURITY NEWS TICKER)
+     ========================================================================== */
+  .portal-hero-grid {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+  .hero-blue-banner {
+    background: var(--hero-grad);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 26px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 16px 36px -10px rgba(29, 78, 216, 0.35);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-kicker-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #e0f2fe;
+    font-size: 10.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  .hero-blue-banner h1 {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    margin: 0 0 8px;
+    color: #ffffff;
+    line-height: 1.2;
+  }
+  .hero-blue-banner p {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.86);
+    margin: 0 0 20px;
+    max-width: 620px;
+    line-height: 1.5;
+  }
+  .hero-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .hero-metric-box {
+    background: rgba(15, 23, 42, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    padding: 11px 13px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .hero-metric-box:hover {
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-2px);
+  }
+  .hero-metric-num {
+    font-size: 21px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 3px;
+  }
+  .hero-metric-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+  }
+
+  /* Right Live Cybersecurity News Card */
+  .hero-news-panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+  }
+  .hero-news-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .hero-news-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14.5px;
+    font-weight: 800;
+    color: var(--text);
+  }
+  .live-red-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--red);
+    box-shadow: 0 0 8px var(--red);
+  }
+  .hero-news-link {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--accent-text);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .hero-news-link:hover { text-decoration: underline; }
+  .hero-news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+  .hero-news-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 10px;
+    background: var(--surface-subtle);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .hero-news-item:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .hero-news-item-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hero-news-tag {
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 6px;
+    background: var(--red-soft);
+    color: var(--red-text);
+    border: 1px solid var(--red-border);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .hero-news-footer {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--green-text);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ==========================================================================
+     AI REALITIES DIAGNOSTIC RIBBON (EXACT MATCH TO YOUR APPROVED SCREENSHOT)
+     ========================================================================== */
+  .realities-ribbon {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+  .realities-ribbon-left {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 260px;
+  }
+  .realities-ribbon-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: var(--gold-soft);
+    border: 1px solid var(--gold-border);
+    color: var(--gold-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .realities-ribbon-left h3 {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0 0 2px;
+  }
+  .realities-ribbon-left p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .realities-ribbon-chips {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .realities-ribbon-chips::-webkit-scrollbar { display: none; }
+  .ribbon-symptom-btn {
+    background: var(--surface-subtle);
+    border: 1.5px solid var(--line-strong);
+    color: var(--text);
+    padding: 8px 13px;
+    border-radius: 11px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+    text-align: left;
+    line-height: 1.25;
+  }
+  .ribbon-symptom-btn:hover, .ribbon-symptom-btn.featured {
+    background: var(--gold-soft);
+    border-color: var(--gold-border);
+    color: var(--gold-text);
+    transform: translateY(-1px);
+  }
+
+  /* Emergency Quick Banner — High-Contrast Light & Dark Mode */
+  .emergency-quick-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    background: var(--red-soft);
+    border: 1.5px solid var(--red-border);
+    border-left: 5px solid var(--red);
+    border-radius: 12px;
+    padding: 11px 16px;
+    margin: 0 0 20px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--red-text);
+    transition: all 0.18s ease;
+    box-shadow: var(--shadow-sm);
+  }
+  .emergency-quick-banner:hover {
+    border-color: var(--red);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .emergency-quick-banner strong {
+    color: var(--red-text);
+    font-weight: 800;
+  }
+  html[data-theme="dark"] .emergency-quick-banner strong {
+    color: #ffffff;
+  }
+  .emergency-quick-banner .eq-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+  .emergency-quick-banner .eq-cta {
+    background: var(--red);
+    color: #ffffff !important;
+    font-size: 11.5px;
+    font-weight: 800;
+    padding: 6px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Sections & Directory Controls */
+  .section-wrap { padding: 4px 0 28px; }
   .section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
   .section-title {
-    font-size: 21px;
-    font-weight: 600;
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--text);
     display: flex;
     align-items: center;
-    gap: 10px;
-    letter-spacing: -0.01em;
+    gap: 8px;
+    letter-spacing: -0.015em;
     margin: 0;
   }
   .section-note {
-    font-size: 13.5px;
+    font-size: 12.5px;
     color: var(--text-muted);
+    font-weight: 600;
   }
 
-  /* Unfiltered Reality Cards */
-  .reality-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-  .reality-card {
-    background: #ffffff;
-    border: 1px solid #e5e5ea;
-    border-radius: 14px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-  }
-  .reality-card:hover {
-    transform: translateY(-2px);
-    border-color: #d2d2d7;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  }
-  .reality-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-  .reality-title {
-    font-size: 16.5px;
-    font-weight: 600;
-    color: #1d1d1f;
-    line-height: 1.35;
-    margin: 0;
-  }
-  .copy-btn {
-    background: transparent;
-    border: 1px solid var(--line);
-    color: #94a3b8;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: 600;
-    cursor: pointer;
-    flex: none;
-    transition: all 0.15s;
-  }
-  .copy-btn:hover {
-    border-color: #475569;
-    color: #fff;
-    background: #172033;
-  }
-  .myth-box {
-    background: #fef2f2;
-    border-left: 3px solid #ff3b30;
-    border-radius: 0 8px 8px 0;
-    padding: 8px 12px;
-    font-size: 12px;
-    color: #991b1b;
-    line-height: 1.45;
-    margin-bottom: 12px;
-  }
-  .myth-box strong { color: #b91c1c; }
-  .reality-body {
-    font-size: 13.5px;
-    color: #94a3b8;
-    margin: 0 0 14px;
-    line-height: 1.55;
-  }
-  .reality-body strong { color: #f1f5f9; }
-  .truth-box {
-    background: #f0fdf4;
-    border-left: 3px solid #34c759;
-    border-radius: 0 8px 8px 0;
-    padding: 10px 14px;
-    font-size: 13px;
-    color: #166534;
-    line-height: 1.45;
-    margin-top: auto;
-    margin-bottom: 14px;
-  }
-  .truth-box strong { color: #15803d; }
-  .tools-row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-  }
-  .tools-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #64748b;
-  }
-  .tool-chip {
-    background: #172033;
-    border: 1px solid #2d3b55;
-    color: #60a5fa;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.15s, border-color 0.15s;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .tool-chip:hover {
-    background: var(--accent);
-    color: #040914;
-    border-color: var(--accent);
-  }
-
-  /* Directory Controls */
   .radar-header {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 12px;
+    margin-bottom: 18px;
   }
   .search-bar {
     width: 100%;
-    position: relative;
     display: flex;
     gap: 10px;
     align-items: stretch;
-  }
-  .search-bar input[type=search] { flex: 1; min-width: 0; }
-  .layout-toggle {
-    display: inline-flex;
-    flex: none;
-    border: 1px solid #e5e5ea;
-    border-radius: 10px;
-    background: #f5f5f7;
-    overflow: hidden;
-    padding: 2px;
-    gap: 2px;
-  }
-  .layout-btn {
-    width: 38px;
-    height: 38px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: 0;
-    color: #6e6e73;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .layout-btn:hover { color: #1d1d1f; background: rgba(0, 0, 0, 0.04); }
-  .layout-btn.active { background: #ffffff; color: #1d1d1f; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); }
-
-  /* List layout: same data, one compact row per tool */
-  .grid.list { grid-template-columns: 1fr; gap: 8px; }
-  .tool-row {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 12px 16px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s, background 0.15s;
-  }
-  .tool-row:hover { border-color: #d2d2d7; background: #f5f5f7; }
-  .tool-row .row-rank { width: 28px; flex: none; text-align: right; font-size: 12px; color: #86868b; font-variant-numeric: tabular-nums; }
-  .tool-row .row-icon { width: 34px; height: 34px; flex: none; border-radius: 9px; background: #f5f5f7; border: 1px solid #e5e5ea; display: flex; align-items: center; justify-content: center; font-size: 18px; position: relative; }
-  .tool-row .row-main { flex: 1; min-width: 0; }
-  .tool-row .row-name { font-weight: 600; font-size: 15px; color: #1d1d1f; display: flex; gap: 6px; align-items: center; }
-  .tool-row .row-tag { margin: 2px 0 0; font-size: 13px; color: #6e6e73; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .tool-row .row-meta { display: flex; gap: 8px; align-items: center; flex: none; font-size: 12px; }
-  input[type=search] {
-    width: 100%;
-    background: #ffffff;
-    border: 1px solid #d2d2d7;
-    color: #1d1d1f;
-    border-radius: 12px;
-    padding: 12px 18px;
-    font-size: 14.5px;
-    outline: none;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  input[type=search]:focus {
-    border-color: #0071e3;
-    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
-  }
-  .category-pills {
-    display: flex;
-    gap: 8px;
     flex-wrap: wrap;
   }
-  .cat-pill {
-    background: #ffffff;
-    border: 1px solid #e5e5ea;
-    color: #6e6e73;
-    padding: 6px 14px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-    transition: all 0.15s ease;
-    user-select: none;
-  }
-  .cat-pill:hover {
-    border-color: #d2d2d7;
-    color: #1d1d1f;
-    background: #f5f5f7;
-  }
-  .cat-pill.active {
-    background: #1d1d1f;
-    color: #ffffff;
-    border-color: #1d1d1f;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Tools Grid */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 20px;
-    margin-bottom: 80px;
-  }
-  .tool-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 22px;
-    min-height: 232px;
-    background: #ffffff;
-    border: 1px solid #e5e5ea;
-    border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-  }
-  .tool-card:hover {
-    transform: translateY(-2px);
-    border-color: #d2d2d7;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  }
-  .tool-top {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin-bottom: 12px;
-  }
-  .share-btn {
-    flex: none;
-    width: 30px; height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #f5f5f7;
-    border: 1px solid #e5e5ea;
-    color: #6e6e73;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.15s ease;
-  }
-  .share-btn:hover {
-    color: #1d1d1f;
-    border-color: #d2d2d7;
-    background: #e5e5ea;
-  }
-  .tool-icon {
-    width: 44px; height: 44px;
-    border-radius: 10px;
-    background: #f5f5f7;
-    border: 1px solid #e5e5ea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    flex: none;
-    position: relative;
-  }
-  .tool-name {
-    font-weight: 600;
-    font-size: 16.5px;
-    margin-bottom: 3px;
-    color: #1d1d1f;
-    line-height: 1.3;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .tool-name-link {
-    color: #0071e3;
-  }
-  .tool-tag {
-    color: #6e6e73;
-    font-size: 13px;
-    margin: 0;
-    line-height: 1.45;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    min-height: 57px; /* 3 lines keeps every card the same visual rhythm */
-  }
-  .why-box {
-    background: #eff6ff;
-    border-left: 3px solid #0071e3;
-    border-radius: 0 8px 8px 0;
-    padding: 9px 13px;
-    margin: 14px 0 16px;
-    font-size: 12.5px;
-    color: #1e40af;
-    line-height: 1.45;
-  }
-  .why-box strong { color: #0071e3; }
-  .tool-meta {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 12px;
-    margin-top: auto;
-  }
-  .badge {
-    background: #090c13;
-    border: 1px solid var(--line);
-    color: var(--text-muted);
-    padding: 4px 10px;
-    border-radius: 999px;
-  }
-  .badge.source-gh { color: #1d1d1f; border-color: #d2d2d7; background: #ffffff; font-weight: 600; }
-  .badge.cat { color: #0071e3; background: #eff6ff; border-color: #bfdbfe; }
-
-  /* Toast Notification */
-  #toast {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background: #1e293b;
-    border: 1px solid var(--accent);
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-size: 13px;
-    font-weight: 600;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.2s ease;
-    pointer-events: none;
-    z-index: 1000;
-  }
-  #toast.show { opacity: 1; transform: translateY(0); }
-
-  footer {
-    border-top: 1px solid #e5e5ea;
-    background: #f5f5f7;
-    padding: 40px 0 60px;
-    text-align: center;
-    color: #86868b;
-    font-size: 13px;
-    line-height: 1.6;
-  }
-  footer a { color: #0071e3; text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-
-  /* Header layout with radar visual */
-  .header-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
-  .header-text { flex: 1; min-width: 0; }
-
-  /* Observatory Status Badge (Apple Minimalist) */
-  .radar-col {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    flex: none;
-  }
-  .radar-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #ffffff;
-    border: 1px solid #e5e5ea;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-    padding: 6px 12px;
-    border-radius: 10px;
-  }
-  .radar-icon-frame {
-    position: relative;
-    width: 26px;
-    height: 26px;
-    border-radius: 6px;
-    background: #f5f5f7;
-    border: 1px solid #e5e5ea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1d1d1f;
-  }
-  .radar-live-indicator {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #34c759;
-    box-shadow: 0 0 6px rgba(52, 199, 89, 0.5);
-  }
-  .radar-status-text {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    line-height: 1.25;
-  }
-  .radar-status-label {
-    font-size: 9.5px;
-    font-weight: 700;
-    color: #86868b;
-    letter-spacing: 0.08em;
-  }
-  .radar-status-val {
-    font-size: 12px;
-    font-weight: 600;
-    color: #1d1d1f;
-  }
-
-  /* Stats strip under the subtitle */
-  .stats-strip {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 18px;
-    font-size: 13px;
-    color: var(--text-muted);
-    margin: 0 0 18px;
-  }
-  .stats-strip strong { color: var(--text); font-weight: 600; }
-  .stats-strip .stat-sep { color: #334155; }
-
-  /* Persona toggle */
-  .persona-toggle {
-    display: inline-flex;
-    border: 1px solid #e5e5ea;
-    border-radius: 999px;
-    background: #f5f5f7;
-    overflow: hidden;
-    flex: none;
-    padding: 2px;
-    gap: 2px;
-  }
-  .persona-btn {
-    background: transparent;
-    border: 0;
-    color: #6e6e73;
-    padding: 6px 14px;
-    font-size: 12.5px;
-    font-weight: 500;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .persona-btn:hover { color: #1d1d1f; }
-  .persona-btn.active { background: #ffffff; color: #1d1d1f; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); }
-
-  /* Executive Brief strip */
-  .brief-strip {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 8px;
-  }
-  .brief-card {
-    background: linear-gradient(180deg, #111a2c 0%, var(--card) 100%);
-    border: 1px solid #24304a;
-    border-radius: 16px;
-    padding: 18px 20px;
-    cursor: pointer;
-    transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
-  }
-  .brief-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
-  }
-  .brief-card .brief-kicker {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--gold);
-    margin-bottom: 6px;
-  }
-  .brief-card .brief-title {
-    font-size: 15.5px;
-    font-weight: 600;
-    color: #fff;
-    margin: 0 0 6px;
-    line-height: 1.35;
-  }
-  .brief-card .brief-impact {
-    font-size: 13px;
-    color: #c7d2e0;
-    margin: 0;
-    line-height: 1.5;
-  }
-  .brief-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 4px;
-    background: none;
-    border: 0;
-    color: #60a5fa;
-    font-size: 13.5px;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 0;
-  }
-  .brief-link:hover { text-decoration: underline; }
-
-  /* Business impact box on reality cards */
-  .impact-box {
-    background: #fffbeb;
-    border-left: 3px solid #f59e0b;
-    border-radius: 0 8px 8px 0;
-    padding: 9px 13px;
-    font-size: 12.5px;
-    color: #92400e;
-    line-height: 1.45;
-    margin-bottom: 14px;
-  }
-  .impact-box strong { color: #b45309; }
-
-  /* Share button group on reality cards */
-  .share-group { display: flex; gap: 6px; flex: none; }
-  .share-group .copy-btn { display: inline-flex; align-items: center; gap: 4px; }
-
-  /* Decision badges on tool cards */
-  .badge.flag { color: #86efac; background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.25); }
-  .badge.flag.selfhost { color: #fcd34d; background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.25); }
-
-  /* Real site icons inside tool icons */
-  .tool-icon img, .row-icon img {
-    width: 24px; height: 24px;
-    border-radius: 6px;
-  }
-
-  /* Deep-linked reality card highlight */
-  .reality-card.deep-linked {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
-  }
-
-  /* About footer */
-  .about-block {
-    max-width: 640px;
-    margin: 0 auto 18px;
-    font-size: 13.5px;
-  }
-  .about-block strong { color: var(--text); }
-
-
-  .top-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  /* Tablet optimization (769px to 1024px) */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .wrap {
-      padding: 0 20px;
-    }
-    .grid {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 16px;
-    }
-    .reality-grid {
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 16px;
-    }
-    .brief-strip {
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 12px;
-    }
-    .tool-row .row-tag {
-      max-width: 320px;
-    }
-  }
-
-  /* Comprehensive Mobile Responsive Engine (<= 768px) */
-  @media (max-width: 768px) {
-    .wrap {
-      padding: 0 16px;
-    }
-    header {
-      padding: 18px 0 12px;
-    }
-    .top-bar {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    .site-badge {
-      align-self: flex-start;
-      font-size: 11px;
-      padding: 4px 10px;
-      gap: 6px;
-    }
-    .top-actions {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      width: 100%;
-    }
-    .persona-toggle {
-      display: inline-flex;
-      flex: none;
-    }
-    .persona-btn {
-      padding: 6px 12px;
-      font-size: 12px;
-      min-height: 34px;
-    }
-    .visitor-pill {
-      font-size: 11.5px;
-      padding: 4px 10px;
-      gap: 6px;
-      flex: none;
-    }
-
-    .header-flex {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .header-text {
-      flex: 1;
-      min-width: 0;
-    }
-    .radar-col {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 6px;
-      flex-shrink: 0;
-    }
-    .radar-badge {
-      padding: 4px 8px;
-      gap: 6px;
-    }
-    .radar-icon-frame {
-      width: 22px;
-      height: 22px;
-    }
-    .radar-status-text {
-      display: none;
-    }
-    h1 {
-      font-size: 26px;
-      margin-bottom: 8px;
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-    }
-    .subtitle {
-      font-size: 14px;
-      line-height: 1.5;
-      margin-bottom: 12px;
-    }
-    .stats-strip {
-      font-size: 12px;
-      gap: 4px 10px;
-      margin-bottom: 14px;
-      line-height: 1.5;
-    }
-
-    .view-toggle {
-      display: flex;
-      gap: 6px;
-      padding-top: 14px;
-    }
-    .view-tab {
-      flex: 1 1 0;
-      padding: 10px 8px;
-      font-size: 12.5px;
-      line-height: 1.3;
-      justify-content: center;
-      text-align: center;
-      min-height: 48px;
-      border-radius: 10px;
-      gap: 5px;
-    }
-    .view-tab .tab-count {
-      font-size: 11px;
-      padding: 1px 6px;
-    }
-
-    .section-wrap {
-      padding: 24px 0 16px;
-    }
-    .section-title {
-      font-size: 18px;
-    }
-    .section-note {
-      font-size: 12px;
-    }
-
-    /* Executive Brief */
-    .brief-strip {
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    .brief-card {
-      padding: 16px;
-      border-radius: 14px;
-    }
-    .brief-card .brief-title {
-      font-size: 15px;
-    }
-    .brief-card .brief-impact {
-      font-size: 13px;
-    }
-    .brief-link {
-      padding: 6px 0;
-      font-size: 13px;
-      min-height: 36px;
-    }
-
-    /* Search & Layout Controls */
-    .search-bar {
-      gap: 8px;
-      align-items: stretch;
-    }
-    input[type=search] {
-      padding: 12px 14px;
-      font-size: 16px; /* 16px prevents iOS Safari auto-zoom on focus */
-      border-radius: 10px;
-      min-height: 46px;
-    }
-    .layout-toggle {
-      border-radius: 10px;
-      min-height: 46px;
-    }
-    .layout-btn {
-      width: 44px;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Swipeable single-row category pills on mobile */
-    .category-pills {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 6px;
-      margin: 0 -16px;
-      padding-left: 16px;
-      padding-right: 16px;
-      scrollbar-width: none;
-      touch-action: pan-x;
-    }
-    .category-pills::-webkit-scrollbar {
-      display: none;
-    }
-    .cat-pill {
-      white-space: nowrap;
-      flex: none;
-      padding: 7px 14px;
-      font-size: 12.5px;
-      min-height: 36px;
-      border-radius: 999px;
-    }
-
-    /* Cards view responsive */
-    .grid {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 12px;
-      margin-bottom: 40px;
-    }
-    .tool-card {
-      padding: 16px;
-      border-radius: 14px;
-      min-height: auto;
-      min-width: 0;
-      max-width: 100%;
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-    .tool-card .tool-top {
-      gap: 10px;
-      margin-bottom: 10px;
-      min-width: 0;
-      max-width: 100%;
-    }
-    .tool-card .tool-icon {
-      width: 42px;
-      height: 42px;
-      font-size: 22px;
-    }
-    .tool-card .tool-name {
-      font-size: 15.5px;
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-    .tool-card .tool-tag {
-      font-size: 12.5px;
-      min-height: auto;
-      -webkit-line-clamp: 3;
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-    .tool-card .why-box {
-      margin: 10px 0 12px;
-      padding: 8px 12px;
-      font-size: 12px;
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-    .tool-card .tool-meta {
-      gap: 6px;
-      font-size: 11.5px;
-      min-width: 0;
-      max-width: 100%;
-    }
-    .tool-card .share-btn {
-      width: 38px;
-      height: 38px;
-      min-width: 38px;
-      min-height: 38px;
-    }
-
-    /* List view mobile: responsive layout */
-    .grid.list {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 8px;
-      margin-bottom: 40px;
-    }
-    .tool-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      padding: 12px 14px;
-      border-radius: 12px;
-      position: relative;
-      min-width: 0;
-      max-width: 100%;
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-    .tool-row .row-rank {
-      display: none;
-    }
-    .tool-row .row-icon {
-      width: 36px;
-      height: 36px;
-      font-size: 18px;
-      border-radius: 9px;
-      flex: none;
-      margin-right: 10px;
-    }
-    .tool-row .row-main {
-      flex: 1;
-      min-width: 0;
-      padding-right: 44px; /* Space for the absolute share button */
-    }
-    .tool-row .row-name {
-      font-size: 15px;
-      line-height: 1.35;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      word-break: break-word;
-    }
-    .tool-row .row-tag {
-      margin: 3px 0 0;
-      font-size: 12.5px;
-      color: #94a3b8;
-      white-space: normal;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      line-height: 1.45;
-    }
-    .tool-row .share-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 38px;
-      height: 38px;
-      min-width: 38px;
-      min-height: 38px;
-      z-index: 2;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .tool-row .row-meta {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px;
-      padding-left: 0;
-      margin-top: 8px;
-      padding-top: 8px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .tool-row .row-meta .badge {
-      font-size: 11px;
-      padding: 2.5px 8px;
-    }
-
-    
-    /* Symptom chips on mobile */
-    .symptom-chips {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 6px;
-      margin: 0 -16px 16px;
-      padding-left: 16px;
-      padding-right: 16px;
-      scrollbar-width: none;
-      touch-action: pan-x;
-    }
-    .symptom-chips::-webkit-scrollbar {
-      display: none;
-    }
-    .symptom-chip {
-      flex: none;
-      padding: 7px 13px;
-      font-size: 12px;
-      min-height: 36px;
-    }
-    .reality-count-pill {
-      font-size: 11px;
-      padding: 4px 10px;
-    }
-
-    /* Production realities on mobile */
-    .reality-grid {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 14px;
-    }
-    .reality-card {
-      padding: 16px;
-      border-radius: 14px;
-      min-width: 0;
-      max-width: 100%;
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-    .reality-top {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    .reality-title {
-      font-size: 16px;
-      line-height: 1.35;
-    }
-    .share-group {
-      width: 100%;
-      display: flex;
-      gap: 6px;
-    }
-    .share-group .copy-btn {
-      flex: 1;
-      padding: 8px 10px;
-      font-size: 12px;
-      min-height: 38px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .myth-box {
-      font-size: 12px;
-      padding: 8px 12px;
-      line-height: 1.45;
-      margin-bottom: 10px;
-      word-break: break-word;
-    }
-    .reality-body {
-      font-size: 13px;
-      line-height: 1.5;
-      margin-bottom: 12px;
-      word-break: break-word;
-    }
-    .truth-box {
-      font-size: 12.5px;
-      padding: 10px 12px;
-      line-height: 1.45;
-      margin-bottom: 12px;
-      word-break: break-word;
-    }
-    .impact-box {
-      font-size: 12px;
-      padding: 8px 12px;
-      line-height: 1.45;
-      margin-bottom: 12px;
-      word-break: break-word;
-    }
-    .tools-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px;
-      padding-top: 10px;
-    }
-    .tools-label {
-      font-size: 11px;
-    }
-    .tool-chip {
-      padding: 5px 10px;
-      font-size: 12px;
-      min-height: 32px;
-    }
-
-    /* Toast on mobile */
-    #toast {
-      left: 14px;
-      right: 14px;
-      bottom: calc(14px + env(safe-area-inset-bottom, 0px));
-      padding: 12px 16px;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    footer {
-      padding: 30px 0 calc(30px + env(safe-area-inset-bottom, 0px));
-      font-size: 12.5px;
-    }
-    .about-block {
-      font-size: 13px;
-      line-height: 1.55;
-      margin-bottom: 14px;
-    }
-  }
-
-  /* Extra small screens (<= 360px: iPhone SE 1st gen, Galaxy Fold) */
-  @media (max-width: 360px) {
-    .wrap {
-      padding: 0 10px;
-    }
-    .category-pills {
-      margin: 0 -10px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    h1 {
-      font-size: 22px;
-    }
-    
-    .view-tab {
-      font-size: 11.5px;
-      padding: 9px 4px;
-    }
-    .top-actions {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-    }
-  }
-
-/* --- Live Threat Wire Styles --- */
-.threat-filter-box {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 24px;
-}
-.threat-search-bar input {
-  width: 100%;
-  padding: 12px 16px;
-  background: #090d16;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  color: var(--text);
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-  box-sizing: border-box;
-}
-.threat-search-bar input:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-}
-.threat-subtabs {
-  display: flex;
-  gap: 8px;
-  margin-top: 12px;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding-bottom: 2px;
-}
-.threat-subtabs::-webkit-scrollbar {
-  display: none;
-}
-.threat-tab-btn {
-  background: #151d2f;
-  color: #94a3b8;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 7px 14px;
-  border-radius: 999px;
-  font-size: 12.5px;
-  font-weight: 500;
-  cursor: pointer;
-  white-space: nowrap;
-  flex: none;
-  transition: all 0.15s ease;
-}
-.threat-tab-btn:hover {
-  background: #1e293b;
-  color: #f8fafc;
-}
-.threat-tab-btn.active {
-  background: rgba(59, 130, 246, 0.2);
-  color: #60a5fa;
-  border-color: rgba(59, 130, 246, 0.5);
-  font-weight: 600;
-}
-.threat-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 16px;
-}
-@media (max-width: 640px) {
-  .threat-cards-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-.threat-card {
-  background: #ffffff;
-  border: 1px solid #e5e5ea;
-  border-radius: 14px;
-  padding: 18px 20px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-  min-width: 0;
-  max-width: 100%;
-}
-.threat-card:hover {
-  transform: translateY(-2px);
-  border-color: #d2d2d7;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-.threat-top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-.threat-badge-group {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-.threat-badge {
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 3px 8px;
-  border-radius: 6px;
-  text-transform: uppercase;
-}
-.threat-sev-critical {
-  background: rgba(239, 68, 68, 0.15);
-  color: #f87171;
-  border: 1px solid rgba(239, 68, 68, 0.35);
-}
-.threat-sev-high {
-  background: rgba(245, 158, 11, 0.15);
-  color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.35);
-}
-.threat-sev-medium {
-  background: rgba(234, 179, 8, 0.15);
-  color: #facc15;
-  border: 1px solid rgba(234, 179, 8, 0.35);
-}
-.threat-prov-statutory {
-  background: rgba(2, 132, 199, 0.15);
-  color: #38bdf8;
-  border: 1px solid rgba(2, 132, 199, 0.3);
-}
-.threat-prov-regulatory {
-  background: rgba(5, 150, 105, 0.15);
-  color: #34d399;
-  border: 1px solid rgba(5, 150, 105, 0.3);
-}
-.threat-prov-investigative {
-  background: rgba(124, 58, 237, 0.15);
-  color: #a78bfa;
-  border: 1px solid rgba(124, 58, 237, 0.3);
-}
-.threat-prov-onchain {
-  background: rgba(217, 119, 6, 0.15);
-  color: #fbbf24;
-  border: 1px solid rgba(217, 119, 6, 0.3);
-}
-.threat-prov-owasp {
-  background: rgba(13, 148, 136, 0.15);
-  color: #2dd4bf;
-  border: 1px solid rgba(13, 148, 136, 0.3);
-}
-.threat-meta-time {
-  font-size: 11px;
-  color: #64748b;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.threat-title {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.4;
-  margin: 0 0 10px 0;
-}
-.threat-title a {
-  color: #1d1d1f;
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-.threat-title a:hover {
-  color: #0071e3;
-}
-.threat-ext-icon {
-  font-size: 12px;
-  opacity: 0.6;
-  margin-left: 4px;
-}
-.threat-entities-row {
-  font-size: 12px;
-  margin-bottom: 10px;
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-.threat-entity-label {
-  color: #86868b;
-  font-weight: 500;
-}
-.threat-entity-value {
-  color: #1d1d1f;
-}
-.threat-impact-text {
-  font-size: 13px;
-  line-height: 1.5;
-  color: #cbd5e1;
-  background: rgba(15, 23, 42, 0.6);
-  border-left: 2px solid #3b82f6;
-  padding: 8px 12px;
-  border-radius: 0 6px 6px 0;
-  margin: 0 0 14px 0;
-  flex: 1;
-}
-.threat-badge-impact {
-  background: rgba(239, 68, 68, 0.2);
-  color: #fca5a5;
-  border: 1px solid rgba(239, 68, 68, 0.45);
-  font-weight: 700;
-  font-size: 11px;
-}
-.threat-breakdown {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 10px 0 14px 0;
-  font-size: 13px;
-  line-height: 1.5;
-  flex: 1;
-}
-.threat-point {
-  background: #f9fafb;
-  border: 1px solid #e5e5ea;
-  border-radius: 8px;
-  padding: 8px 12px;
-  border-left: 3px solid #0071e3;
-  color: #374151;
-}
-.threat-point.point-root {
-  border-left-color: #f59e0b;
-}
-.threat-point.point-outcome {
-  border-left-color: #34c759;
-}
-.threat-point strong {
-  color: #1d1d1f;
-  display: block;
-  font-size: 10.5px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 2px;
-}
-.threat-footer-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding-top: 10px;
-  border-top: 1px solid #e5e5ea;
-  margin-top: auto;
-}
-.threat-source-pill {
-  font-size: 11px;
-  color: #86868b;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-.threat-source-name {
-  color: #1d1d1f;
-  font-weight: 500;
-}
-.threat-ref {
-  background: rgba(255, 255, 255, 0.06);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: monospace;
-  font-size: 10.5px;
-  color: #cbd5e1;
-}
-.threat-verify-btn {
-  font-size: 11.5px;
-  font-weight: 600;
-  color: #60a5fa;
-  text-decoration: none;
-  background: rgba(59, 130, 246, 0.1);
-  padding: 4px 10px;
-  border-radius: 6px;
-  border: 1px solid rgba(59, 130, 246, 0.25);
-  transition: all 0.15s ease;
-}
-.threat-verify-btn:hover {
-  background: rgba(59, 130, 246, 0.2);
-  border-color: rgba(59, 130, 246, 0.4);
-}
-.threat-empty-state {
-  text-align: center;
-  padding: 48px 24px;
-  background: var(--card);
-  border: 1px dashed var(--line);
-  border-radius: 12px;
-}
-
-
-/* Scam Defense Playbook */
-.scam-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 16px;
-}
-@media (max-width: 640px) {
-  .scam-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-.scam-card {
-  background: #ffffff;
-  border: 1px solid #e5e5ea;
-  border-radius: 14px;
-  padding: 18px 20px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-  min-width: 0;
-  max-width: 100%;
-}
-.scam-card:hover {
-  transform: translateY(-2px);
-  border-color: #d2d2d7;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-.scam-top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-.scam-badge-group {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-.scam-badge {
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 3px 8px;
-  border-radius: 6px;
-  text-transform: uppercase;
-}
-
-.scam-badge-platform {
-  background: rgba(168, 85, 247, 0.15);
-  color: #c084fc;
-  border: 1px solid rgba(168, 85, 247, 0.35);
-}
-.scam-badge-sev-medium {
-  background: rgba(234, 179, 8, 0.15);
-  color: #facc15;
-  border: 1px solid rgba(234, 179, 8, 0.35);
-}
-
-.scam-badge-tag {
-  background: rgba(59, 130, 246, 0.15);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.3);
-}
-.scam-badge-sev-critical {
-  background: rgba(239, 68, 68, 0.15);
-  color: #f87171;
-  border: 1px solid rgba(239, 68, 68, 0.35);
-}
-.scam-badge-sev-high {
-  background: rgba(245, 158, 11, 0.15);
-  color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.35);
-}
-.scam-title {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: #1d1d1f;
-  margin: 0 0 10px 0;
-}
-.scam-body {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  flex: 1;
-  margin-bottom: 14px;
-}
-.scam-desc {
-  font-size: 13.5px;
-  line-height: 1.55;
-  color: #424245;
-  margin: 0;
-}
-.scam-protect-box {
-  background: #f0fdf4;
-  border-left: 3px solid #34c759;
-  border-radius: 0 8px 8px 0;
-  padding: 10px 14px;
-}
-.scam-protect-box strong {
-  display: block;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #15803d;
-  margin-bottom: 4px;
-}
-.scam-protect-box p {
-  font-size: 13px;
-  line-height: 1.5;
-  color: #166534;
-  margin: 0;
-}
-.scam-footer-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding-top: 10px;
-  border-top: 1px solid #e5e5ea;
-  margin-top: auto;
-}
-.scam-source-pill {
-  font-size: 11px;
-  color: #86868b;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.scam-source-name {
-  color: #1d1d1f;
-  font-weight: 500;
-}
-.scam-verify-btn {
-  font-size: 11.5px;
-  font-weight: 600;
-  color: #34d399;
-  text-decoration: none;
-  background: rgba(16, 185, 129, 0.1);
-  padding: 4px 10px;
-  border-radius: 6px;
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  transition: all 0.15s ease;
-}
-.scam-verify-btn:hover {
-  background: rgba(16, 185, 129, 0.2);
-  border-color: rgba(16, 185, 129, 0.4);
-}
-
-
-  /* Emergency Reporting & Action Box */
-  .scam-emergency-box {
-    background: #ffffff;
-    border: 1px solid #fecaca;
-    border-left: 4px solid #ff3b30;
-    border-radius: 14px;
-    padding: 20px 22px;
-    box-shadow: 0 4px 16px rgba(255, 59, 48, 0.06);
-    margin-bottom: 24px;
-  }
-  .scam-emergency-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 12px;
-    margin-bottom: 14px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  .scam-emergency-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #1d1d1f;
-    letter-spacing: -0.01em;
-  }
-  .scam-emergency-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.25fr;
-    gap: 20px;
-  }
-  @media (max-width: 768px) {
-    .scam-emergency-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-  }
-  .scam-emergency-col {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .scam-emergency-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    color: #cbd5e1;
-    text-decoration: none;
-    font-size: 13px;
-    transition: all 0.15s ease;
-  }
-  .scam-emergency-item:hover {
-    background: rgba(30, 41, 59, 0.8);
-    border-color: rgba(59, 130, 246, 0.4);
-    color: #ffffff;
-  }
-  .scam-emergency-item.emergency-hotline {
-    background: #ff3b30;
-    border-color: #e02424;
-    color: #ffffff !important;
-  }
-  .scam-emergency-item.emergency-hotline:hover {
-    background: #e02424;
-    border-color: #c81e1e;
-    color: #ffffff !important;
-  }
-  .scam-emergency-item .item-text strong {
-    color: #ffffff;
-  }
-  .scam-emergency-steps {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
-  }
-  .scam-step-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 13px;
-    line-height: 1.45;
-    color: #94a3b8;
-  }
-  .scam-step-item strong {
-    color: #e2e8f0;
-  }
-  .scam-step-item .step-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: rgba(59, 130, 246, 0.15);
-    color: #60a5fa;
-    font-size: 11px;
-    font-weight: 700;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-
-  /* Highlighting effect on deep-link scroll */
-  .card-highlight {
-    outline: 2px solid #0071e3 !important;
-    box-shadow: 0 0 16px rgba(0, 113, 227, 0.25) !important;
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
-  }
-
-  /* Emergency Quick Banner on Default View */
-  .emergency-quick-banner {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #fff1f2;
-    border: 1px solid #fecdd3;
-    border-left: 4px solid #ff3b30;
-    border-radius: 12px;
-    padding: 12px 18px;
-    margin-bottom: 24px;
-    cursor: pointer;
-    font-size: 13.5px;
-    line-height: 1.4;
-    color: #9f1239;
-    box-shadow: 0 2px 6px rgba(255, 59, 48, 0.04);
-    transition: all 0.15s ease;
-  }
-  .emergency-quick-banner:hover {
-    background: #ffe4e6;
-    border-color: #fda4af;
-  }
-  .emergency-quick-banner:hover {
-    background: rgba(239, 68, 68, 0.2);
-    border-color: rgba(239, 68, 68, 0.6);
-    color: #ffffff;
-  }
-  .emergency-quick-banner strong {
-    color: #ffffff;
-  }
-  .emergency-quick-banner .eq-icon {
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-
-
-  .radar-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-  }
-  .radar-col .visitor-pill {
-    padding: 3px 8px;
-    gap: 6px;
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 999px;
-  }
-
-
-  /* Search Input Wrapper & 1-Tap Clear Button (Gold Standard UX) */
   .search-input-wrap {
     position: relative;
     display: flex;
     align-items: center;
     flex: 1;
-    min-width: 0;
+    min-width: 240px;
   }
-  .search-input-wrap input[type=search] {
+  input[type=search], .threat-search-bar input {
     width: 100%;
-    padding-right: 38px !important;
+    background: var(--surface-input);
+    border: 1.5px solid var(--line-strong);
+    color: var(--text);
+    border-radius: 12px;
+    padding: 11px 38px 11px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    box-shadow: var(--shadow-sm);
+  }
+  input[type=search]:focus, .threat-search-bar input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
   }
   .search-input-wrap input[type=search]::-webkit-search-cancel-button {
     -webkit-appearance: none;
@@ -1937,140 +948,868 @@
     right: 12px;
     top: 50%;
     transform: translateY(-50%) scale(0.85);
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-    border: none;
-    background: #e5e5ea;
-    color: #6e6e73;
+    border: 1px solid var(--line-strong);
+    background: var(--surface-subtle);
+    color: var(--text-secondary);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 1;
+    font-size: 11px;
+    font-weight: 800;
     cursor: pointer;
     opacity: 0;
     pointer-events: none;
     transition: all 0.15s ease;
-    z-index: 2;
   }
   .search-clear-btn.visible {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(-50%) scale(1);
   }
-  .search-clear-btn:hover {
-    background: #d2d2d7;
-    color: #1d1d1f;
+
+  .layout-toggle {
+    display: inline-flex;
+    flex: none;
+    border: 1.5px solid var(--line-strong);
+    border-radius: 12px;
+    background: var(--card);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
   }
-  .search-clear-btn:active {
-    transform: translateY(-50%) scale(0.9);
+  .layout-btn {
+    padding: 0 13px;
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: transparent;
+    border: 0;
+    border-right: 1px solid var(--line);
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .layout-btn:last-child { border-right: 0; }
+  .layout-btn:hover { color: var(--accent-text); background: var(--accent-soft); }
+  .layout-btn.active { background: var(--accent); color: #ffffff; }
+
+  /* Category Pills & Symptom Chips — Tactile Rounded Capsules */
+  .category-pills, .symptom-chips, .threat-subtabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .cat-pill, .symptom-chip, .threat-tab-btn {
+    background: var(--card);
+    border: 1.5px solid var(--line-strong);
+    color: var(--text-secondary);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+    white-space: nowrap;
+    box-shadow: var(--shadow-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .cat-pill:hover, .symptom-chip:hover, .threat-tab-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent-text);
+    background: var(--accent-soft);
+    transform: translateY(-1px);
+  }
+  .cat-pill.active, .symptom-chip.active, .threat-tab-btn.active {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
   }
 
+  /* Tool Cards (Matches Layout 1 Screenshot: Category Pill + Share Top, Title, Tagline, + Compare & Inspect Footer) */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .tool-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+    box-shadow: var(--shadow-sm);
+  }
+  .tool-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+  }
+  .tool-card-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .tool-cat-kicker {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 9px;
+    border-radius: 6px;
+    background: var(--accent-soft);
+    color: var(--accent-text);
+    border: 1px solid var(--accent-border);
+  }
+  .tool-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .tool-icon {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: var(--surface-subtle);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    flex: none;
+  }
+  .tool-icon img, .row-icon img {
+    width: 22px; height: 22px;
+    border-radius: 4px;
+  }
+  .tool-name {
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: var(--text);
+    line-height: 1.28;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .tool-name-link { color: var(--accent); font-weight: 700; font-size: 13px; }
+  .tool-tag {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.48;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .why-box {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 8px 11px;
+    margin: 10px 0 12px;
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    line-height: 1.42;
+  }
+  .why-box strong { color: var(--accent-text); font-weight: 800; }
+  .tool-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .tool-meta-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .tool-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--line);
+  }
+  .compare-btn {
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 7px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .compare-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent-text);
+    background: var(--accent-soft);
+  }
+  .compare-btn.selected {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+  }
+  .inspect-btn {
+    background: transparent;
+    border: none;
+    color: var(--accent-text);
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: all 0.15s;
+  }
+  .inspect-btn:hover {
+    background: var(--accent-soft);
+  }
+
+  .badge {
+    background: var(--surface-subtle);
+    border: 1px solid var(--line);
+    color: var(--text-secondary);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 11px;
+  }
+  .badge.source-gh { color: var(--text); border-color: var(--line-strong); font-weight: 700; }
+  .badge.cat { color: var(--accent-text); background: var(--accent-soft); border-color: var(--accent-border); font-weight: 700; }
+  .badge.flag { color: var(--green-text); background: var(--green-soft); border-color: var(--green-border); font-weight: 700; }
+  .badge.flag.selfhost { color: var(--gold-text); background: var(--gold-soft); border-color: var(--gold-border); font-weight: 700; }
+
+  .share-btn {
+    flex: none;
+    width: 30px; height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-subtle);
+    border: 1px solid var(--line);
+    color: var(--text-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .share-btn:hover {
+    color: #ffffff;
+    border-color: var(--accent);
+    background: var(--accent);
+  }
+
+  /* List & Dense Spreadsheet Table Views */
+  .grid.list { grid-template-columns: 1fr; gap: 10px; }
+  .tool-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s;
+    box-shadow: var(--shadow-sm);
+  }
+  .tool-row:hover { border-color: var(--accent); }
+  .tool-row .row-rank { width: 26px; flex: none; text-align: right; font-size: 12px; color: var(--text-muted); font-weight: 700; }
+  .tool-row .row-icon { width: 34px; height: 34px; flex: none; border-radius: 8px; background: var(--surface-subtle); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-size: 17px; }
+  .tool-row .row-main { flex: 1; min-width: 0; }
+  .tool-row .row-name { font-weight: 800; font-size: 14.5px; color: var(--text); display: flex; gap: 6px; align-items: center; }
+  .tool-row .row-tag { margin: 2px 0 0; font-size: 12.5px; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tool-row .row-meta { display: flex; gap: 8px; align-items: center; flex: none; font-size: 12px; }
+
+  .grid.table-view {
+    display: block;
+    overflow-x: auto;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+  .tools-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
+  }
+  .tools-table th {
+    background: var(--surface-subtle);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  .tools-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-secondary);
+    vertical-align: middle;
+  }
+  .tools-table tr:last-child td { border-bottom: none; }
+  .tools-table tr:hover td { background: var(--card-hover); }
+  .tools-table .tbl-name { font-weight: 800; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+  .tools-table .tbl-name:hover { color: var(--accent); }
+
+  /* AI Realities, Cybersecurity News & Scam Alerts Grids */
+  .reality-count-pill {
+    font-size: 12px; font-weight: 700; color: var(--accent-text);
+    background: var(--accent-soft); border: 1px solid var(--accent-border);
+    padding: 5px 13px; border-radius: 999px;
+  }
+  .reality-diagnostic-box, .threat-filter-box {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; padding: 18px; margin-bottom: 20px; box-shadow: var(--shadow-sm);
+  }
+  .reality-search-bar { margin-bottom: 12px; }
+  .reality-grid, .threat-cards-grid, .scam-grid, .stacks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+  .reality-card, .threat-card, .scam-card, .stack-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+    box-shadow: var(--shadow-sm);
+    min-width: 0;
+  }
+  .reality-card:hover, .threat-card:hover, .stack-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+  }
+  .scam-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--red);
+    box-shadow: var(--shadow-md);
+  }
+  .reality-header-bar, .threat-top-bar, .scam-top-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 10px; margin-bottom: 12px; flex-wrap: wrap;
+  }
+  .reality-category-badge {
+    font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--accent-text); background: var(--accent-soft); border: 1px solid var(--accent-border);
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .reality-title, .threat-title, .scam-title {
+    font-size: 16px; font-weight: 800; color: var(--text); line-height: 1.35; margin: 0 0 10px;
+  }
+  .threat-title a { color: var(--text); text-decoration: none; }
+  .threat-title a:hover { color: var(--accent); }
+  .myth-box {
+    background: var(--red-soft); border-left: 3.5px solid var(--red);
+    border-radius: 0 8px 8px 0; padding: 9px 12px; font-size: 12.5px;
+    color: var(--red-text); line-height: 1.45; margin-bottom: 12px;
+  }
+  .myth-box strong { color: var(--red-text); font-weight: 800; }
+  .reality-body, .scam-desc { font-size: 13px; color: var(--text-secondary); margin: 0 0 12px; line-height: 1.55; }
+  .truth-box, .scam-protect-box {
+    background: var(--green-soft); border-left: 3.5px solid var(--green);
+    border-radius: 0 8px 8px 0; padding: 10px 13px; font-size: 12.5px;
+    color: var(--green-text); line-height: 1.48; margin-top: auto; margin-bottom: 12px;
+  }
+  .truth-box strong, .scam-protect-box strong { color: var(--green-text); font-weight: 800; }
+  .scam-protect-box p { margin: 4px 0 0; color: var(--green-text); }
+  .impact-box {
+    background: var(--gold-soft); border-left: 3.5px solid var(--gold);
+    border-radius: 0 8px 8px 0; padding: 9px 12px; font-size: 12px;
+    color: var(--gold-text); line-height: 1.45; margin-bottom: 12px;
+  }
+  .tools-row {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 7px;
+    padding-top: 10px; border-top: 1px solid var(--line);
+  }
+  .tools-label { font-size: 10.5px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); }
+  .tool-chip {
+    background: var(--accent-soft); border: 1px solid var(--accent-border);
+    color: var(--accent-text); padding: 4px 9px; border-radius: 7px;
+    font-size: 11.5px; font-weight: 700; text-decoration: none;
+  }
+  .tool-chip:hover { background: var(--accent); color: #ffffff; }
+
+  .threat-badge-group, .scam-badge-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .threat-badge, .scam-badge {
+    font-size: 10px; font-weight: 800; letter-spacing: 0.04em;
+    padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+  }
+  .threat-sev-critical, .threat-badge-impact, .scam-badge-sev-critical {
+    background: var(--red-soft); color: var(--red-text); border: 1px solid var(--red-border);
+  }
+  .threat-sev-high, .threat-prov-onchain, .scam-badge-sev-high, .threat-sev-medium, .scam-badge-sev-medium {
+    background: var(--gold-soft); color: var(--gold-text); border: 1px solid var(--gold-border);
+  }
+  .threat-prov-statutory, .scam-badge-tag {
+    background: var(--accent-soft); color: var(--accent-text); border: 1px solid var(--accent-border);
+  }
+  .threat-prov-regulatory, .threat-prov-owasp {
+    background: var(--green-soft); color: var(--green-text); border: 1px solid var(--green-border);
+  }
+  .threat-prov-investigative, .scam-badge-platform {
+    background: var(--purple-soft); color: var(--purple-text); border: 1px solid var(--purple-border);
+  }
+  .threat-meta-time { font-size: 11px; color: var(--text-muted); font-weight: 600; }
+  .threat-entities-row { font-size: 12px; margin-bottom: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .threat-entity-label { color: var(--text-muted); font-weight: 700; }
+  .threat-entity-value { color: var(--text-secondary); font-weight: 600; }
+  .threat-breakdown { display: flex; flex-direction: column; gap: 8px; margin: 6px 0 12px; font-size: 12.5px; flex: 1; }
+  .threat-point {
+    background: var(--surface-subtle); border-radius: 8px; padding: 9px 11px;
+    border-left: 3.5px solid var(--accent); color: var(--text-secondary);
+  }
+  .threat-point strong {
+    color: var(--text); display: block; font-size: 10px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;
+  }
+  .threat-footer-row, .scam-footer-row {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 8px; padding-top: 10px; border-top: 1px solid var(--line); margin-top: auto;
+  }
+  .threat-source-pill, .scam-source-pill { font-size: 11px; color: var(--text-muted); display: flex; align-items: center; gap: 5px; }
+  .threat-source-name, .scam-source-name { color: var(--text-secondary); font-weight: 700; }
+  .threat-ref { background: var(--surface-subtle); border: 1px solid var(--line); padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 10px; }
+  .threat-verify-btn, .scam-verify-btn {
+    font-size: 11.5px; font-weight: 700; color: var(--accent-text); text-decoration: none;
+    background: var(--accent-soft); padding: 5px 10px; border-radius: 7px; border: 1px solid var(--accent-border);
+  }
+
+  .scam-emergency-box {
+    background: var(--card); border: 1.5px solid var(--red-border);
+    border-left: 5px solid var(--red); border-radius: 16px;
+    padding: 18px 20px; margin-bottom: 22px; box-shadow: var(--shadow-sm);
+  }
+  .scam-emergency-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-bottom: 10px; margin-bottom: 14px; border-bottom: 1px solid var(--line);
+  }
+  .scam-emergency-title { font-size: 15px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+  .scam-emergency-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 18px; }
+  .scam-emergency-col { display: flex; flex-direction: column; gap: 10px; }
+  .scam-emergency-item {
+    display: flex; align-items: center; gap: 10px; padding: 10px 13px;
+    background: var(--surface-subtle); border: 1px solid var(--line-strong);
+    border-radius: 10px; color: var(--text); text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .scam-emergency-item.emergency-hotline {
+    background: var(--red-soft); border-color: var(--red-border); color: var(--red-text);
+  }
+  .scam-emergency-item.emergency-hotline .item-text strong { color: var(--red-text); font-weight: 800; }
+  html[data-theme="dark"] .scam-emergency-item.emergency-hotline .item-text strong { color: #ffffff; }
+  .scam-step-item { display: flex; align-items: flex-start; gap: 10px; font-size: 12.5px; color: var(--text-secondary); }
+  .scam-step-item .step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; border-radius: 50%; background: var(--accent-soft);
+    color: var(--accent-text); font-size: 11px; font-weight: 800; flex-shrink: 0;
+  }
+
+  .compare-table-wrap {
+    overflow-x: auto; background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; padding: 18px; margin-bottom: 24px; box-shadow: var(--shadow-sm);
+  }
+
+  /* Slide-Over Right Inspector Drawer */
+  .inspector-backdrop, .sidebar-backdrop {
+    position: fixed; inset: 0; background: rgba(15, 23, 42, 0.48);
+    backdrop-filter: blur(4px); z-index: 900; opacity: 0;
+    pointer-events: none; transition: opacity 0.2s ease;
+  }
+  .inspector-backdrop.open, .sidebar-backdrop.open { opacity: 1; pointer-events: auto; }
+  .inspector-drawer {
+    position: fixed; top: 0; right: 0; width: min(520px, 100vw); height: 100vh;
+    background: var(--card); border-left: 1px solid var(--line-strong);
+    box-shadow: var(--shadow-lg); z-index: 950; transform: translateX(100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex; flex-direction: column; overflow-y: auto; padding: 24px;
+  }
+  .inspector-drawer.open { transform: translateX(0); }
+
+  /* Mobile Bottom Navigation Bar (For 99% Mobile Users) */
+  .mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--header-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--line-strong);
+    z-index: 800;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+  }
+  .mob-nav-item {
+    background: transparent; border: none; color: var(--text-muted);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 2px; padding: 5px 2px; border-radius: 8px; font-size: 10px; font-weight: 700;
+    cursor: pointer;
+  }
+  .mob-nav-item .mob-icon { font-size: 15px; }
+  .mob-nav-item.active { color: var(--accent-text); background: var(--accent-soft); font-weight: 800; }
+
+  #toast {
+    position: fixed; bottom: 24px; right: 24px; background: var(--text); color: var(--bg);
+    padding: 12px 20px; border-radius: 10px; font-size: 13px; font-weight: 700;
+    box-shadow: var(--shadow-lg); opacity: 0; transform: translateY(10px);
+    transition: all 0.2s ease; pointer-events: none; z-index: 1000;
+  }
+  #toast.show { opacity: 1; transform: translateY(0); }
+
+  footer {
+    border-top: 1px solid var(--line); padding: 32px 28px 80px;
+    text-align: center; color: var(--text-muted); font-size: 12.5px;
+    background: var(--card);
+  }
+  footer a { color: var(--accent-text); text-decoration: none; font-weight: 600; }
+  .about-block { max-width: 680px; margin: 0 auto 12px; color: var(--text-secondary); }
+
+  /* ==========================================================================
+     RESPONSIVE BREAKPOINTS (TABLET & 99% MOBILE TRAFFIC)
+     ========================================================================== */
+  @media (max-width: 1120px) {
+    .portal-hero-grid { grid-template-columns: 1fr; }
+    .realities-ribbon { flex-direction: column; align-items: stretch; }
+  }
+
+  @media (max-width: 900px) {
+    .app-shell { display: block; width: 100%; max-width: 100%; overflow-x: hidden; }
+    .app-main { width: 100%; max-width: 100%; overflow-x: hidden; }
+    .app-sidebar {
+      position: fixed; top: 0; left: 0; bottom: 0; width: 280px;
+      transform: translateX(-100%);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 950;
+      box-shadow: var(--shadow-lg);
+    }
+    .app-sidebar.open { transform: translateX(0); }
+    .sidebar-close-btn { display: inline-flex; align-items: center; justify-content: center; }
+    .mobile-menu-btn { display: inline-flex; }
+    .mobile-bottom-nav { display: grid; }
+    header.top-portal-bar { padding: 10px 12px; width: 100%; max-width: 100%; }
+    .top-command-row { gap: 8px; }
+    .workspace-body { padding: 12px 12px 84px; width: 100%; max-width: 100%; overflow-x: hidden; }
+    .omnibox-kbd, .visitor-pill, .top-pill-btn.hide-mobile { display: none; }
+    .global-omnibox-input { padding: 9px 12px 9px 36px !important; font-size: 15px; }
+    .portal-hero-grid { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+    .hero-blue-banner { padding: 18px 16px; border-radius: 16px; width: 100%; }
+    .hero-blue-banner h1 { font-size: 20px; line-height: 1.25; }
+    .hero-blue-banner p { font-size: 12.5px; margin-bottom: 14px; }
+    .hero-metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; }
+    .hero-metric-box { padding: 10px; min-width: 0; }
+    .hero-metric-num { font-size: 18px; }
+    .hero-news-panel { padding: 14px; border-radius: 16px; width: 100%; min-width: 0; }
+    .hero-news-item { padding: 8px; gap: 6px; min-width: 0; }
+    .hero-news-item-title { font-size: 12px; }
+    .realities-ribbon { padding: 14px; width: 100%; min-width: 0; }
+    .realities-ribbon-left { min-width: 0; width: 100%; }
+    .realities-ribbon-chips { width: 100%; }
+    .emergency-quick-banner { flex-direction: column; align-items: stretch; padding: 12px 14px; width: 100%; }
+    .emergency-quick-banner .eq-cta { text-align: center; padding: 8px; }
+    .category-pills, .symptom-chips, .threat-subtabs {
+      flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; padding-bottom: 4px; width: 100%;
+    }
+    .category-pills::-webkit-scrollbar, .symptom-chips::-webkit-scrollbar { display: none; }
+    .search-input-wrap { min-width: 0; width: 100%; }
+    input[type=search], .threat-search-bar input { font-size: 16px; }
+    .layout-toggle { width: 100%; display: flex; }
+    .layout-btn { flex: 1; }
+    .grid, .reality-grid, .threat-cards-grid, .scam-grid, .stacks-grid, .scam-emergency-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 12px;
+      width: 100%;
+    }
+  }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <div class="header-flex">
-      <div class="header-text">
-        <h1 style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-          <span>Cipherati</span>
-          <span style="font-size:12px;font-weight:600;padding:3px 10px;border-radius:6px;background:rgba(59,130,246,0.15);color:#60a5fa;border:1px solid rgba(59,130,246,0.3);letter-spacing:0.04em;text-transform:uppercase;">AI Systems & Defense Radar</span>
-        </h1>
-        <p class="subtitle">An open, curated directory of battle-tested AI developer tools, coding agents, and local models — with direct links, production realities, verified cybersecurity news, and scam defense.</p>
-        <div class="stats-strip" id="stats-strip">
-          <span><strong id="stat-tools">187</strong> tools</span>
-          <span class="stat-sep">·</span>
-          <span><strong id="stat-realities">18</strong> AI realities</span>
-          <span class="stat-sep">·</span>
-          <span><strong id="stat-news">16</strong> cybersecurity news</span>
-          <span class="stat-sep">·</span>
-          <span><strong id="stat-scams">15</strong> scam alerts</span>
-          <span class="stat-sep">·</span>
-          <span>Synced <strong id="stat-synced">—</strong></span>
-        </div>
-      </div>
-            <div class="radar-col">
-        <div class="radar-badge" title="Cipherati Observatory Status">
-          <div class="radar-icon-frame">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 2a10 10 0 0 1 10 10"/>
-              <circle cx="12" cy="12" r="6"/>
-              <circle cx="12" cy="12" r="2"/>
-            </svg>
-            <span class="radar-live-indicator"></span>
+<div class="sidebar-backdrop" id="sidebar-backdrop" onclick="toggleMobileSidebar(false)"></div>
+<div class="app-shell">
+  <!-- Left Command Sidebar (Layout 1) -->
+  <aside class="app-sidebar" id="app-sidebar" aria-label="Sidebar Navigation">
+    <div>
+      <div class="sidebar-brand">
+        <a href="#tools" class="sidebar-brand-left" onclick="switchView('tools')">
+          <div class="brand-mark">C</div>
+          <div>
+            <div class="brand-title">Cipherati</div>
+            <span class="brand-sub">AI &amp; Cyber Intelligence</span>
           </div>
-          <div class="radar-status-text">
-            <span class="radar-status-label">OBSERVATORY</span>
-            <span class="radar-status-val">Operational</span>
-          </div>
-        </div>
-        <div class="visitor-pill" title="Live visitors counter">
-          <span class="pulse-dot"></span>
-          <img src="https://visitor-badge.laobi.icu/badge?page_id=elite-ai-radar.main" alt="visitors counter" />
-        </div>
+        </a>
+        <button type="button" class="sidebar-close-btn" onclick="toggleMobileSidebar(false)" aria-label="Close menu">✕</button>
       </div>
+
+      <div class="sidebar-group-label">DISCOVER</div>
+      <nav class="sidebar-nav">
+        <button type="button" class="side-nav-btn active" id="side-tab-tools" onclick="switchView('tools'); toggleMobileSidebar(false);">
+          <span>🏠 Home Portal</span>
+          <span class="side-nav-pill">Live</span>
+        </button>
+        <button type="button" class="side-nav-btn" id="side-tab-directory" onclick="switchView('tools'); document.getElementById('radar-directory-anchor').scrollIntoView({behavior:'smooth'}); toggleMobileSidebar(false);">
+          <span>🛠️ AI Tools Radar</span>
+          <span class="side-nav-pill" id="side-tools-count">187</span>
+        </button>
+        <button type="button" class="side-nav-btn" id="side-tab-threats" onclick="switchView('news'); toggleMobileSidebar(false);">
+          <span>🛡️ Cyber Threat Wire</span>
+          <span class="side-nav-pill" id="side-threats-count">15</span>
+        </button>
+        <button type="button" class="side-nav-btn" id="side-tab-realities" onclick="switchView('realities'); toggleMobileSidebar(false);">
+          <span>⚡ AI Production Fixes</span>
+          <span class="side-nav-pill">18</span>
+        </button>
+        <button type="button" class="side-nav-btn" id="side-tab-scams" onclick="switchView('scams'); toggleMobileSidebar(false);">
+          <span>🚨 1930 Scam Shield</span>
+          <span class="side-nav-pill" id="side-scams-count">15</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-group-label">CURATED STACKS</div>
+      <nav class="sidebar-nav">
+        <button type="button" class="side-nav-btn" onclick="filterByStackCategory('Coding'); toggleMobileSidebar(false);">
+          <span>🤖 Coding &amp; Autonomous Agents</span>
+        </button>
+        <button type="button" class="side-nav-btn" onclick="filterByStackCategory('Cybersecurity'); toggleMobileSidebar(false);">
+          <span>🔒 SecOps &amp; OSINT Arsenal</span>
+        </button>
+        <button type="button" class="side-nav-btn" onclick="filterByStackCategory('Models & Infra'); toggleMobileSidebar(false);">
+          <span>🧠 Local LLMs &amp; RAG Engines</span>
+        </button>
+        <button type="button" class="side-nav-btn" id="side-tab-compare" onclick="switchView('compare'); toggleMobileSidebar(false);">
+          <span>⚖️ Compare Tray</span>
+          <span class="side-nav-pill" id="side-compare-count">0/3</span>
+        </button>
+      </nav>
     </div>
 
-    <!-- Primary View Switcher -->
-    <div class="view-toggle" role="tablist" aria-label="Primary site navigation">
-      <button class="view-tab active" id="tab-tools" role="tab" aria-selected="true" aria-controls="grid-container" onclick="switchView('tools')">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-        <span>Tools Directory</span>
-        <span class="tab-count" id="tab-tools-count">187</span>
-      </button>
-      <button class="view-tab" id="tab-realities" role="tab" aria-selected="false" aria-controls="realities" onclick="switchView('realities')">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        <span>AI Realities</span>
-        <span class="tab-count">18</span>
-      </button>
-      <button class="view-tab" id="tab-threats" role="tab" aria-selected="false" aria-controls="threats" onclick="switchView('news')">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Cybersecurity News</span>
-        <span class="tab-count" id="tab-threats-count">15</span>
-      </button>
-      <button class="view-tab" id="tab-scams" role="tab" aria-selected="false" aria-controls="scams" onclick="switchView('scams')">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        <span>Scam Alerts</span>
-        <span class="tab-count" id="tab-scams-count">15</span>
-      </button>
-    </div>
-  </div>
-</header>
+    <div>
+      <div class="sidebar-emergency-card">
+        <span class="sidebar-emergency-badge">⚠️ GOLDEN HOUR PROTOCOL</span>
+        <h4>Cyber Fraud Emergency?</h4>
+        <p>Freeze fraudulent bank transfers inside the golden hour across India.</p>
+        <button type="button" class="sidebar-emergency-cta" onclick="switchView('scams'); toggleMobileSidebar(false);">
+          📞 Call 1930 Toll-Free &amp; Guide →
+        </button>
+      </div>
 
-<main class="wrap">
+      <div class="sidebar-theme-switch" role="group" aria-label="Color Theme">
+        <button type="button" class="theme-seg-btn active" id="seg-light-btn" onclick="applyTheme('light')">
+          ☀️ Light
+        </button>
+        <button type="button" class="theme-seg-btn" id="seg-dark-btn" onclick="applyTheme('dark')">
+          🌙 Dark Mode
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Right Main Command Workspace -->
+  <div class="app-main">
+    <header class="top-portal-bar">
+      <div class="top-command-row">
+        <button type="button" class="mobile-menu-btn" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation Menu">
+          ☰ <span style="font-weight:800;">Cipherati</span>
+        </button>
+
+        <div class="global-omnibox-wrap">
+          <span class="global-omnibox-icon">🔍</span>
+          <input type="search" id="global-omnibox" class="global-omnibox-input" placeholder="Search 187 AI tools, cyber advisories, LLM production bugs, or scam red flags..." oninput="handleOmniboxInput(this.value)" />
+          <span class="omnibox-kbd"><kbd>⌘</kbd><kbd>K</kbd></span>
+        </div>
+
+        <div class="top-actions-right">
+          <button type="button" class="top-pill-btn" id="header-theme-btn" onclick="toggleTheme()" title="Switch Light / Dark Theme">
+            <span id="theme-toggle-icon">🌙</span>
+            <span id="theme-toggle-label">Dark Mode</span>
+          </button>
+          <a href="./badges/featured-on-cipherati.svg" target="_blank" rel="noopener" class="top-pill-btn hide-mobile">
+            🎖️ Embed Verified Badge
+          </a>
+          <a href="https://github.com/vickeyviswanathan/ai-tools-radar/issues/new" target="_blank" rel="noopener" class="top-pill-btn primary-dark hide-mobile">
+            + Submit AI Tool
+          </a>
+          <div class="visitor-pill" title="Live visitors counter">
+            <span class="pulse-dot"></span>
+            <img src="https://visitor-badge.laobi.icu/badge?page_id=elite-ai-radar.main" alt="visitors counter" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Preserved Horizontal Tab Headers -->
+      <div class="view-toggle" role="tablist" aria-label="Primary site navigation">
+        <button class="view-tab active" id="tab-tools" role="tab" aria-selected="true" aria-controls="radar" onclick="switchView('tools')">
+          🧭 Curated Tools Directory <span class="tab-count" id="tab-tools-count">187</span>
+        </button>
+        <button class="view-tab" id="tab-realities" role="tab" aria-selected="false" aria-controls="realities" onclick="switchView('realities')">
+          ⚡ AI Realities <span class="tab-count">18</span>
+        </button>
+        <button class="view-tab" id="tab-threats" role="tab" aria-selected="false" aria-controls="threats" onclick="switchView('news')">
+          🛡️ Cybersecurity News on Cipherati <span class="tab-count" id="tab-threats-count">17</span>
+        </button>
+        <button class="view-tab" id="tab-scams" role="tab" aria-selected="false" aria-controls="scams" onclick="switchView('scams')">
+          🚨 Scam Alerts &amp; 1930 Guide <span class="tab-count" id="tab-scams-count">15</span>
+        </button>
+        <button class="view-tab" id="tab-compare" role="tab" aria-selected="false" aria-controls="compare-section" onclick="switchView('compare')">
+          ⚖️ Compare &amp; Stacks <span class="tab-count" id="tab-compare-count">0/3</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="workspace-body">
   <!-- Section 1: Curated Tools Directory -->
   <section class="section-wrap" id="radar">
-    <!-- Emergency Fast-Access Banner for Citizens in Panic -->
-    <div class="emergency-quick-banner" onclick="switchView('scams')" role="alert" title="Click to view National Cyber Helpline 1930 & Scam Alerts">
-      <span class="eq-icon" style="display:inline-flex;align-items:center;color:#ef4444;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
-      <span class="eq-text"><strong>Need Emergency Cyber Fraud Help?</strong> Call <strong>1930</strong> (Toll-Free) or view the <strong>Scam Alerts &amp; Golden Hour Reporting Guide →</strong></span>
+    <!-- Layout 1 Hero Bento Row: Royal Blue Command Banner + Live Cybersecurity News on Cipherati -->
+    <div class="portal-hero-grid">
+      <div class="hero-blue-banner">
+        <div>
+          <div class="hero-kicker-pill">✨ INDUSTRY BENCHMARK DIRECTORY • UPDATED DAILY</div>
+          <h1>Discover, Audit &amp; Ship Production AI Safely.</h1>
+          <p>Curated AI engineering tools, live CERT-In &amp; global cyber threat advisories, battle-tested LLM post-mortems, and citizen fraud defense—in one unified workspace.</p>
+        </div>
+        <div class="hero-metrics-grid">
+          <div class="hero-metric-box" onclick="document.getElementById('radar-directory-anchor').scrollIntoView({behavior:'smooth'})">
+            <div class="hero-metric-num" id="stat-tools">187</div>
+            <div class="hero-metric-label">Verified AI Tools</div>
+          </div>
+          <div class="hero-metric-box" onclick="switchView('news')">
+            <div class="hero-metric-num" id="stat-news">15</div>
+            <div class="hero-metric-label">Live Cyber Advisories</div>
+          </div>
+          <div class="hero-metric-box" onclick="switchView('realities')">
+            <div class="hero-metric-num" id="stat-realities">18</div>
+            <div class="hero-metric-label">LLM Architecture Fixes</div>
+          </div>
+          <div class="hero-metric-box" onclick="switchView('scams')">
+            <div class="hero-metric-num" id="stat-scams">15</div>
+            <div class="hero-metric-label">1930 Scam Playbooks</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-news-panel">
+        <div>
+          <div class="hero-news-header">
+            <div class="hero-news-title">
+              <span class="live-red-dot"></span>
+              <span>Cybersecurity News on Cipherati</span>
+            </div>
+            <button type="button" class="hero-news-link" onclick="switchView('news')">View All →</button>
+          </div>
+          <div class="hero-news-list" id="hero-live-news-list">
+            <div class="hero-news-item" onclick="switchView('news')">
+              <span class="hero-news-item-title">CERT-In High Severity Alert: Chrome &amp; Edge V8 Heap Overflow</span>
+              <span class="hero-news-tag">CERT-In</span>
+            </div>
+            <div class="hero-news-item" onclick="switchView('news')">
+              <span class="hero-news-item-title">CISA Adds Enterprise VPN &amp; Firewall Zero-Days to KEV Catalog</span>
+              <span class="hero-news-tag">CISA KEV</span>
+            </div>
+            <div class="hero-news-item" onclick="switchView('scams')">
+              <span class="hero-news-item-title">Fake TRAI / FedEx 'Digital Arrest' Skype Warrant Wave</span>
+              <span class="hero-news-tag">1930 Alert</span>
+            </div>
+            <div class="hero-news-item" onclick="switchView('news')">
+              <span class="hero-news-item-title">OWASP Agentic LLM Tool-Calling &amp; MCP Supply Chain Advisory</span>
+              <span class="hero-news-tag">SecOps</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-news-footer">
+          <span>✅ Statutory Sources Verified • Zero Unverified Rumors • Synced <strong id="stat-synced">live</strong></span>
+        </div>
+      </div>
     </div>
 
-    <div class="radar-header">
+    <!-- AI Realities Interactive Diagnostic Ribbon -->
+    <div class="realities-ribbon">
+      <div class="realities-ribbon-left">
+        <div class="realities-ribbon-icon">⚡</div>
+        <div>
+          <h3>AI Realities: Why AI Projects Fail in Production (18 Architectural Fixes)</h3>
+          <p>Click your exact production symptom to jump straight to the engineering blueprint:</p>
+        </div>
+      </div>
+      <div class="realities-ribbon-chips">
+        <button type="button" class="ribbon-symptom-btn featured" onclick="jumpToRealitySymptom('cost')">💸 Runaway API Costs</button>
+        <button type="button" class="ribbon-symptom-btn" onclick="jumpToRealitySymptom('hallucination')">💥 Broken JSON Schemas</button>
+        <button type="button" class="ribbon-symptom-btn" onclick="jumpToRealitySymptom('agents')">🔄 Infinite Agent Loops</button>
+        <button type="button" class="ribbon-symptom-btn" onclick="jumpToRealitySymptom('security')">🕵️ Prompt Injections</button>
+        <button type="button" class="ribbon-symptom-btn" onclick="jumpToRealitySymptom('latency')">🐢 30s TTFT Latency</button>
+      </div>
+    </div>
+
+    <!-- High-Contrast Emergency Banner -->
+    <div class="emergency-quick-banner" onclick="switchView('scams')" role="alert" title="Click to view National Cyber Helpline 1930 & Scam Alerts">
+      <div class="eq-left">
+        <span class="eq-icon">🚨</span>
+        <span class="eq-text"><strong>Need Emergency Cyber Fraud Help?</strong> Call <strong>1930</strong> (Toll-Free) within the Golden Hour or open the <strong>Citizen Scam Defense Playbook</strong>.</span>
+      </div>
+      <span class="eq-cta">1930 Guide &amp; Scam Alerts →</span>
+    </div>
+
+    <div class="radar-header" id="radar-directory-anchor">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Curated Tools Directory</h2>
+          <h2 class="section-title">🔥 Trending AI Engineering &amp; Security Tools</h2>
           <span class="section-note" id="tool-count-badge">Loading verified tools...</span>
+        </div>
+        <div class="layout-toggle" role="group" aria-label="View mode">
+          <button type="button" id="layout-cards" data-layout="cards" class="layout-btn active" title="Bento Card View" onclick="setLayout('cards')">
+            ▦ Cards
+          </button>
+          <button type="button" id="layout-list" data-layout="list" class="layout-btn" title="Compact List View" onclick="setLayout('list')">
+            ☰ List
+          </button>
+          <button type="button" id="layout-table" data-layout="table" class="layout-btn" title="Dense Spreadsheet Table View" onclick="setLayout('table')">
+            ⊞ Table
+          </button>
         </div>
       </div>
 
       <div class="search-bar">
         <div class="search-input-wrap">
-          <input type="search" id="q" placeholder="Filter 180+ tools by name, use case, or keyword..." />
+          <input type="search" id="q" placeholder="Filter tools by name, use case, or keyword (press '/' to focus)..." />
           <button type="button" class="search-clear-btn" id="q-clear" aria-label="Clear search" title="Clear search">✕</button>
-        </div>
-        <div class="layout-toggle" role="group" aria-label="Layout">
-          <button type="button" id="layout-cards" class="layout-btn active" title="Card view" aria-label="Card view" onclick="setLayout('cards')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-          </button>
-          <button type="button" id="layout-list" class="layout-btn" title="List view" aria-label="List view" onclick="setLayout('list')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg>
-          </button>
         </div>
       </div>
 
@@ -4718,7 +4457,7 @@
   <section class="section-wrap" id="realities" style="display: none;">
     <div class="section-header">
       <div>
-        <h2 class="section-title">AI Realities: What Breaks in Production</h2>
+        <h2 class="section-title">⚡ 18 AI Realities</h2>
         <span class="section-note">What breaks when you put AI into production, and what works instead</span>
       </div>
       <span class="reality-count-pill" id="reality-count-badge">Showing all 18 AI Realities</span>
@@ -5132,10 +4871,10 @@
   <section class="section-wrap" id="threats" style="display: none;">
     <div class="section-header">
       <div>
-        <h2 class="section-title">Cybersecurity News on Cipherati</h2>
+        <h2 class="section-title">🛡️ Cybersecurity News on Cipherati</h2>
         <span class="section-note">Verified cybersecurity reporting and analysis across banking, enterprise defense, and global security developments.</span>
       </div>
-      <span class="reality-count-pill" id="threat-count-badge">Showing all 15 verified news stories</span>
+      <span class="reality-count-pill" id="threat-count-badge">Showing all 17 verified news stories</span>
     </div>
 
     <!-- Cybersecurity News Sub-Tabs & Live Filter -->
@@ -5155,6 +4894,48 @@
     </div>
 
     <div class="threat-cards-grid" id="threats-container">
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-11984702254">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-11984702254')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNMjVtYlA5aE96SlY5QV9TNGdvZUFiUHhyMFJfSllESS1tclJieE02ZHItMkp2M1VNRlJicElHZlJLMVJYdHpmSXpEWGlWM0drVTEya1kycDhSUU5pSG5VVjVLdzE2YU9NY0N3OURpM241OVZVZ1hfWnlCVlhhSGd5RlhhUVRjNTBOVHVhQjU2U19yV2JmMjMzUzNUNnpXcDY2NGc3NUFwdnl2Y2lzQ3J6WkdGX3JjeXRMWkYzZw?oc=5" target="_blank" rel="noopener noreferrer">
+          Nanded Man Held For Allegedly Providing Bank Account In Rs 30 Lakh Cyber Fraud <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Indian Banking Infrastructure &amp; NBFCs</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Nanded Man Held For Allegedly Providing Bank Account In Rs 30 Lakh Cyber Fraud.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">News Mobile</span>
+          <span class="threat-ref">News Mobile Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNMjVtYlA5aE96SlY5QV9TNGdvZUFiUHhyMFJfSllESS1tclJieE02ZHItMkp2M1VNRlJicElHZlJLMVJYdHpmSXpEWGlWM0drVTEya1kycDhSUU5pSG5VVjVLdzE2YU9NY0N3OURpM241OVZVZ1hfWnlCVlhhSGd5RlhhUVRjNTBOVHVhQjU2U19yV2JmMjMzUzNUNnpXcDY2NGc3NUFwdnl2Y2lzQ3J6WkdGX3JjeXRMWkYzZw?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on News Mobile ↗
+        </a>
+      </div>
+    </article>
+
     <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-19863584729">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5349,7 +5130,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Bank probes potential data leak; AU Small Finance Bank probes potential data leak from SaaS platform after hacker group claims breach. Verified across multiple open wires including: The Times of India, ThePrint, The Economic Times, TradingView.
+          AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Bank probes potential data leak; AU Small Finance Bank probes potential data leak from SaaS platform after hacker group claims breach. Verified across multiple open wires including: The Times of India, ThePrint, MediaNama, The Economic Times.
         </div>
       </div>
 
@@ -5361,48 +5142,6 @@
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPQ2MyWGhzNzBiUk5rZm94eHFndE9NNzZvMjhoVXprRjFna1Q5anl2QVRTdzFwN3kwSWlHRnhKNmdxSExhQW9udGUwLU5zNzZCTGgwVURySExoSnp6Zl93eGpEejd5UzkzVVViRE9YVTdVVkx1MHhSSDNFdjBVbmpsYWxyLUI3aDJoaUhrMGNaWWNwMjFuYUJ4bXZ2eG4xX2J4NkZpdG5pZXdIV2VPaXUzODZkdVF6WWxtSXdiRGI5TFc1VzV4bGNzaW9UN09OLXd5MC1j0gHYAUFVX3lxTE42NFdsNXR2NUJ6YTVDU0VtdFFMTzR2YnQ4b1pIWXd3RDdSTWRJSktJZkhLUFluWlBVZzQ1S2pHTXdvdnRXOUJWRnR3VEhOaHh5UTk0ajRpSFJaMmJPOURxVEhSMmFkSWUwSEJDV3lfTlFiekJ5N2pEZXdONDQzTHZWajg5aUYtZXFCUEpZTzNtV2RIYjEteU4zQTFzT3lyNE9YUFVzOGJSTVM1bWlaekZyakRTeHBkcDFPQlU5cHpIdHlybkZ5Sm1BOHlkT2pzVEN4TDlTVklyZg?oc=5" target="_blank" rel="noopener noreferrer">
           Read on Moneycontrol.com ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-6469460485">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-6469460485')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxPb0E5UTNMSEg1aEhqRWxpOXh5MTVrVko4Z0k4LTh5d1IxYjBaZU13VlJUNGxic0FpUTZiY3ZrNUI1NFJaMHlWbjJUcnl4bGVGRF9mc2RqUHF6OEczRWxBUUJDSU5wM015bGpNRUtPSDZQV0VHR1cyMHp0cFJVb0doT251LTdnZzhYRlQ4YzNZZ0dZSW0wbWlGbHpyYkMwVVhBQ3lOcUI0eDluOUFQWGg5YlVHbmpzUWR6TjRmX3ZjUXVTNC16aXhtVjY1WDlKMmlISXBsZlVqUWVpazJveGk0M9IB5wFBVV95cUxQWVNVWnlsaFNyLVBjdjJ3UlJ0dUxaZmgtek11RkpMelBhWjZ1c2xudEc1ckJ4Q25LcXJ5aHcyOG5oLS1yTm1lZDdvSFRlYjVtN3RUVGFKUk5HQkN6b2kzVTVHdnZpSzR5aU1WclE3SnIyRXRKNWJVRTRleUhlbDBiQmJGYlUteUFkeXU0RFFFTVpXNTBqYXFiNkxmLU5xT25RZkktVy0xRGpGU2ZLMDdDMDdEdFdRZHBpcjFWa25KeTVtZTFWeWRvT1R3QXRRZmd1cjYxSTVTVS0tWGZvWVp1ZTdfLUdFSXc?oc=5" target="_blank" rel="noopener noreferrer">
-          CBI files FIR against Chandra Proteco and directors for alleged bank fraud <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Indian Banking Infrastructure &amp; NBFCs</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost, The 420.in.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">The Hindu</span>
-          <span class="threat-ref">The Hindu Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxPb0E5UTNMSEg1aEhqRWxpOXh5MTVrVko4Z0k4LTh5d1IxYjBaZU13VlJUNGxic0FpUTZiY3ZrNUI1NFJaMHlWbjJUcnl4bGVGRF9mc2RqUHF6OEczRWxBUUJDSU5wM015bGpNRUtPSDZQV0VHR1cyMHp0cFJVb0doT251LTdnZzhYRlQ4YzNZZ0dZSW0wbWlGbHpyYkMwVVhBQ3lOcUI0eDluOUFQWGg5YlVHbmpzUWR6TjRmX3ZjUXVTNC16aXhtVjY1WDlKMmlISXBsZlVqUWVpazJveGk0M9IB5wFBVV95cUxQWVNVWnlsaFNyLVBjdjJ3UlJ0dUxaZmgtek11RkpMelBhWjZ1c2xudEc1ckJ4Q25LcXJ5aHcyOG5oLS1yTm1lZDdvSFRlYjVtN3RUVGFKUk5HQkN6b2kzVTVHdnZpSzR5aU1WclE3SnIyRXRKNWJVRTRleUhlbDBiQmJGYlUteUFkeXU0RFFFTVpXNTBqYXFiNkxmLU5xT25RZkktVy0xRGpGU2ZLMDdDMDdEdFdRZHBpcjFWa25KeTVtZTFWeWRvT1R3QXRRZmd1cjYxSTVTVS0tWGZvWVp1ZTdfLUdFSXc?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on The Hindu ↗
         </a>
       </div>
     </article>
@@ -5445,6 +5184,90 @@
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1SU200dG5RcjhxVG5FTlhQbG5EYnJiWlF0OWthVkhSYk81TkNRTDJubmRBb1ZENVl0OGZlSmFoOVYwX2tiNTJoM0Vod1ZYT0VSNVRNdVpTLXJWenh6NHdGWDlBdUktWl9YNXF4NGVkOXZYWjVUajF5Tw?oc=5" target="_blank" rel="noopener noreferrer">
           Read on CNN ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-3645205163">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-critical">CRITICAL</span>
+          <span class="threat-badge threat-prov threat-prov-onchain">⛓️ Crypto Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-3645205163')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOalM0SnU2SG1KeDM2WVpCdUlhcXRoUDFXOXhKaW9rZFZSSTM5YVlYSjBkVEhFOFpaWnBJX2lBeWpJSTBhakFiNV83c3hJUHlYS0lqVGlXbmpYZlBSajZJT1hIMl9DU29PSl9sRnZuZHJaZ3dwQ1VwTUdJMG5ZMExhMkFn?oc=5" target="_blank" rel="noopener noreferrer">
+          $6 billion stolen in crypto hack, expert says financial institutions are &quot;tested on a daily basis&quot; <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Binance, Global Exchanges &amp; Digital Assets</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          $6 billion stolen in crypto hack, expert says financial institutions are &quot;tested on a daily basis&quot;.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">CBS News</span>
+          <span class="threat-ref">CBS News Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOalM0SnU2SG1KeDM2WVpCdUlhcXRoUDFXOXhKaW9rZFZSSTM5YVlYSjBkVEhFOFpaWnBJX2lBeWpJSTBhakFiNV83c3hJUHlYS0lqVGlXbmpYZlBSajZJT1hIMl9DU29PSl9sRnZuZHJaZ3dwQ1VwTUdJMG5ZMExhMkFn?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on CBS News ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-10534249220">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-onchain">⛓️ Crypto Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-10534249220')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQUk0tVDZsMEx4M1NtS1BVd2FFWGlnMDJob2l5Nk41MWhSc05uOEhWRWNDUDNfbUdHTzFzT3p2VUl0a3o0RENWTXhTZTExc2o2eDQ3S2RiTm1VYS0yRDkzendqZ1kxeWVaMXRvUGd6Z1pWZDNHVEZQcEk5UjdaOWpnSmFjVXEtb2wzNDUxQ3VMeFV2SVVpYlBFdlZleFdtUzJDVnBWYkthV2Q1R211amc?oc=5" target="_blank" rel="noopener noreferrer">
+          How crypto hacking funds isolated North Korea’s nuclear programme <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Binance, Global Exchanges &amp; Digital Assets</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          How crypto hacking funds isolated North Korea’s nuclear programme.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Guardian</span>
+          <span class="threat-ref">The Guardian Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQUk0tVDZsMEx4M1NtS1BVd2FFWGlnMDJob2l5Nk41MWhSc05uOEhWRWNDUDNfbUdHTzFzT3p2VUl0a3o0RENWTXhTZTExc2o2eDQ3S2RiTm1VYS0yRDkzendqZ1kxeWVaMXRvUGd6Z1pWZDNHVEZQcEk5UjdaOWpnSmFjVXEtb2wzNDUxQ3VMeFV2SVVpYlBFdlZleFdtUzJDVnBWYkthV2Q1R211amc?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Guardian ↗
         </a>
       </div>
     </article>
@@ -5533,174 +5356,6 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-710623010">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-710623010')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5" target="_blank" rel="noopener noreferrer">
-          North Korean hackers linked to crypto thefts among world&#39;s best, experts say, Digital News <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          North Korean hackers linked to crypto thefts among world&#39;s best, experts say, Digital News.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">AsiaOne.com</span>
-          <span class="threat-ref">AsiaOne.com Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on AsiaOne.com ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5707601159">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5707601159')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
-          New cybersecurity blind spot: When AI looks like a trusted employee <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          New cybersecurity blind spot: When AI looks like a trusted employee.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">The Financial Express</span>
-          <span class="threat-ref">The Financial Express Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on The Financial Express ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-9023916946">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🔒 Assets Frozen</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-9023916946')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
-          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">New York Post</span>
-          <span class="threat-ref">New York Post Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on New York Post ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-1246487518">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-1246487518')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
-          Data Leak Exposes Information on over 40,000 US Homeland Security Employees <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Data Leak Exposes Information on over 40,000 US Homeland Security Employees.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Deccan Chronicle</span>
-          <span class="threat-ref">Deccan Chronicle Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Deccan Chronicle ↗
-        </a>
-      </div>
-    </article>
-
     <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-12643287449">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5784,6 +5439,174 @@
         </a>
       </div>
     </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-18083774526">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-18083774526')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
+          Mistral AI publicly releases Large 4, targets cybersecurity users <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Mistral AI publicly releases Large 4, targets cybersecurity users.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Reuters</span>
+          <span class="threat-ref">Reuters Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Reuters ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5107877601">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5107877601')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQVE5MN2Rib1hrX3Z1VDhFWlZiSTUyc0oydVhxNW5OZ1RBOElfamxQWUVBcTFyd3NVbmxBNjd3QW9sYll4U1lfUDE5bGJMVXZXZW1CVS1NV3FHaTFSQ3VCanUtYXZRcm1ZWnJCazBzUWVCakZLaUVoTV9MV1BCblBzeWlIX3A2OWNiNXdYRG5JSlYwakpZdDdRUjdYajQtcXBERVdJSHYyRVIyT0lLOEIxVGg2WnFmREM2LWp5ajA3aVIxTUVx?oc=5" target="_blank" rel="noopener noreferrer">
+          Chinese AI model carries out complex cyberattacks in controlled tests, researchers say <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Chinese AI model carries out complex cyberattacks in controlled tests, researchers say.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Reuters</span>
+          <span class="threat-ref">Reuters Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQVE5MN2Rib1hrX3Z1VDhFWlZiSTUyc0oydVhxNW5OZ1RBOElfamxQWUVBcTFyd3NVbmxBNjd3QW9sYll4U1lfUDE5bGJMVXZXZW1CVS1NV3FHaTFSQ3VCanUtYXZRcm1ZWnJCazBzUWVCakZLaUVoTV9MV1BCblBzeWlIX3A2OWNiNXdYRG5JSlYwakpZdDdRUjdYajQtcXBERVdJSHYyRVIyT0lLOEIxVGg2WnFmREM2LWp5ajA3aVIxTUVx?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Reuters ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-792151822">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-792151822')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5" target="_blank" rel="noopener noreferrer">
+          Google launches Gemini 4 Carbon AI model with cybersecurity focus <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Google launches Gemini 4 Carbon AI model with cybersecurity focus.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Ada Derana</span>
+          <span class="threat-ref">Ada Derana Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Ada Derana ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5792857321">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5792857321')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Three South Korean financial firms including Bithumb report data breaches, Yonhap says <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Three South Korean financial firms including Bithumb report data breaches, Yonhap says.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Reuters</span>
+          <span class="threat-ref">Reuters Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Reuters ↗
+        </a>
+      </div>
+    </article>
     </div>
   
     <div class="threat-empty-state" id="threat-empty-state" style="display: none;">
@@ -5798,7 +5621,7 @@
   <section class="section-wrap" id="scams" style="display: none;">
     <div class="section-header">
       <div>
-        <h2 class="section-title">Scam Defense &amp; Alerts</h2>
+        <h2 class="section-title">🚨 Scam Alerts</h2>
         <span class="section-note">How to spot online scams, protect your accounts, and report cyber fraud.</span>
       </div>
       <span class="reality-count-pill" id="scam-count-badge">Showing all 15 verified scam alerts</span>
@@ -5808,7 +5631,7 @@
     <div class="scam-emergency-box">
       <div class="scam-emergency-header">
         <div class="scam-emergency-title">
-          <span class="scam-emergency-icon" style="display:inline-flex;align-items:center;color:#ef4444;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <span class="scam-emergency-icon">🚨</span>
           <strong>Emergency Reporting &amp; Action</strong>
         </div>
         <button type="button" class="share-btn" onclick="shareEmergencyGuide()" title="Share Emergency Guide" aria-label="Share Emergency Guide">
@@ -5818,15 +5641,15 @@
       <div class="scam-emergency-grid">
         <div class="scam-emergency-col">
           <a href="tel:1930" class="scam-emergency-item emergency-hotline" title="Call National Cyber Helpline">
-            <span class="item-icon" style="display:inline-flex;align-items:center;color:#f87171;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span class="item-icon">📞</span>
             <span class="item-text"><strong>1930</strong> (Toll-Free Helpline)</span>
           </a>
           <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" class="scam-emergency-item" title="File complaint on National Cyber Crime Portal">
-            <span class="item-icon" style="display:inline-flex;align-items:center;color:#60a5fa;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span class="item-icon">🌐</span>
             <span class="item-text"><strong>cybercrime.gov.in</strong> (File e-FIR) ↗</span>
           </a>
           <a href="https://sancharsaathi.gov.in" target="_blank" rel="noopener noreferrer" class="scam-emergency-item" title="Report fraud calls and SMS on Chakshu">
-            <span class="item-icon" style="display:inline-flex;align-items:center;color:#10b981;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+            <span class="item-icon">🛡️</span>
             <span class="item-text"><strong>sancharsaathi.gov.in</strong> (Chakshu) ↗</span>
           </a>
         </div>
@@ -6385,7 +6208,72 @@
     </div>
   </section>
 
-</main>
+
+      <!-- Section 5: Compare & Reference Stacks -->
+      <section class="section-wrap" id="compare-section" style="display: none;">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">⚖️ Side-by-Side Tool Comparison &amp; Production Stacks</h2>
+            <span class="section-note">Select up to 3 tools from the directory using "+ Compare", or explore our battle-tested reference architectures below.</span>
+          </div>
+          <button type="button" class="compare-btn" onclick="clearCompare()" style="padding:7px 14px;font-size:12.5px;">Clear Comparison Tray</button>
+        </div>
+
+        <div class="compare-table-wrap" id="compare-tray-container">
+          <p style="color:var(--text-secondary);font-size:14px;margin:0;">No tools selected for comparison yet. Click <strong>+ Compare</strong> on any tool card in the directory, or click one of the pre-built comparisons below:</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+            <button type="button" class="cat-pill" onclick="loadPresetCompare(['Ollama','vLLM','LM Studio'])">⚡ Compare Local LLM Engines (Ollama vs vLLM vs LM Studio)</button>
+            <button type="button" class="cat-pill" onclick="loadPresetCompare(['Claude Code','OpenAI Codex','ECC'])">💻 Compare Coding Agents</button>
+            <button type="button" class="cat-pill" onclick="loadPresetCompare(['Dify','n8n','langflow'])">🤖 Compare Agent Orchestrators</button>
+          </div>
+        </div>
+
+        <h3 class="section-title" style="font-size:18px;margin-bottom:14px;">🏛️ Reference Production AI Stacks (2026 Benchmark)</h3>
+        <div class="stacks-grid">
+          <div class="stack-card">
+            <span class="badge cat" style="width:fit-content;">STACK 01 · ZERO-DATA-LEAKAGE LOCAL AI</span>
+            <h3 style="margin:8px 0 4px;font-size:16px;">Air-Gapped Enterprise Local LLM Stack</h3>
+            <p style="font-size:13px;color:var(--text-secondary);margin:0 0 12px;">Run coding assistants and internal document chat 100% on-premise with zero external API calls.</p>
+            <div class="tools-row">
+              <span class="tools-label">Core Components:</span>
+              <a class="tool-chip" href="https://github.com/ollama/ollama" target="_blank" rel="noopener">Ollama ↗</a>
+              <a class="tool-chip" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vLLM ↗</a>
+              <a class="tool-chip" href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener">Open WebUI ↗</a>
+            </div>
+          </div>
+
+          <div class="stack-card">
+            <span class="badge flag" style="width:fit-content;">STACK 02 · HIGH-PRECISION DOCUMENT RAG</span>
+            <h3 style="margin:8px 0 4px;font-size:16px;">Financial &amp; Legal Table-Aware RAG Stack</h3>
+            <p style="font-size:13px;color:var(--text-secondary);margin:0 0 12px;">Eliminates PDF table shredding by pairing vision-layout OCR with hybrid BM25 + dense vector retrieval.</p>
+            <div class="tools-row">
+              <span class="tools-label">Core Components:</span>
+              <a class="tool-chip" href="https://opendatalab.github.io/MinerU/" target="_blank" rel="noopener">MinerU ↗</a>
+              <a class="tool-chip" href="https://www.paddleocr.com/" target="_blank" rel="noopener">PaddleOCR ↗</a>
+              <a class="tool-chip" href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener">RAGFlow ↗</a>
+            </div>
+          </div>
+
+          <div class="stack-card">
+            <span class="badge flag selfhost" style="width:fit-content;">STACK 03 · AGENTIC FINOPS &amp; GUARDRAILS</span>
+            <h3 style="margin:8px 0 4px;font-size:16px;">Cost-Capped Autonomous Coding &amp; SecOps</h3>
+            <p style="font-size:13px;color:var(--text-secondary);margin:0 0 12px;">Compresses terminal/JSON token bloat by 60–90% while enforcing multi-provider fallback routing.</p>
+            <div class="tools-row">
+              <span class="tools-label">Core Components:</span>
+              <a class="tool-chip" href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">RTK ↗</a>
+              <a class="tool-chip" href="https://docs.headroomlabs.ai/docs" target="_blank" rel="noopener">headroom ↗</a>
+              <a class="tool-chip" href="https://omniroute.online/" target="_blank" rel="noopener">OmniRoute ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide-Over Right Inspector Drawer -->
+      <div class="inspector-backdrop" id="inspector-backdrop" onclick="closeInspector()"></div>
+      <aside class="inspector-drawer" id="inspector-drawer" aria-label="Tool Details Inspector">
+        <div id="inspector-content"></div>
+      </aside>
+    </main>
 
 <div id="toast">Copied takeaway to clipboard!</div>
 
@@ -6401,6 +6289,32 @@
     <a href="https://github.com/vickeyviswanathan/ai-tools-radar/issues/new" target="_blank" rel="noopener">Suggest a Tool</a>
   </div>
 </footer>
+  </div><!-- /.app-main -->
+</div><!-- /.app-shell -->
+
+<!-- Mobile Bottom Navigation Bar (99% Mobile Traffic Ergonomics) -->
+<nav class="mobile-bottom-nav" aria-label="Mobile Quick Navigation">
+  <button type="button" class="mob-nav-item active" id="mob-tab-tools" onclick="switchView('tools')">
+    <span class="mob-icon">🧭</span>
+    <span>Tools</span>
+  </button>
+  <button type="button" class="mob-nav-item" id="mob-tab-realities" onclick="switchView('realities')">
+    <span class="mob-icon">⚡</span>
+    <span>Realities</span>
+  </button>
+  <button type="button" class="mob-nav-item" id="mob-tab-threats" onclick="switchView('news')">
+    <span class="mob-icon">🛡️</span>
+    <span>Cyber News</span>
+  </button>
+  <button type="button" class="mob-nav-item" id="mob-tab-scams" onclick="switchView('scams')">
+    <span class="mob-icon">🚨</span>
+    <span>1930 Help</span>
+  </button>
+  <button type="button" class="mob-nav-item" id="mob-tab-compare" onclick="switchView('compare')">
+    <span class="mob-icon">⚖️</span>
+    <span>Compare</span>
+  </button>
+</nav>
 
 <script>
 const REALITIES_DATA = [
@@ -6996,6 +6910,97 @@ function filterRealities() {
   }
 }
 
+// --- Theme Engine: Crisp Light Mode Default + Obsidian Dark Mode Toggle ---
+function getInitialTheme() {
+  try {
+    const saved = localStorage.getItem("cipherati-theme");
+    if (saved === "dark" || saved === "light") return saved;
+  } catch (e) {}
+  return "light";
+}
+
+function applyTheme(theme) {
+  if (theme === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+  const iconEl = document.getElementById("theme-toggle-icon");
+  const labelEl = document.getElementById("theme-toggle-label");
+  if (iconEl && labelEl) {
+    if (theme === "dark") {
+      iconEl.textContent = "☀️";
+      labelEl.textContent = "Light Mode";
+    } else {
+      iconEl.textContent = "🌙";
+      labelEl.textContent = "Dark Mode";
+    }
+  }
+  const segLight = document.getElementById("seg-light-btn");
+  const segDark = document.getElementById("seg-dark-btn");
+  if (segLight && segDark) {
+    segLight.classList.toggle("active", theme !== "dark");
+    segDark.classList.toggle("active", theme === "dark");
+  }
+  try { localStorage.setItem("cipherati-theme", theme); } catch (e) {}
+}
+
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+  applyTheme(isDark ? "light" : "dark");
+}
+
+function toggleMobileSidebar(open) {
+  const sb = document.getElementById("app-sidebar");
+  const bd = document.getElementById("sidebar-backdrop");
+  if (sb) sb.classList.toggle("open", !!open);
+  if (bd) bd.classList.toggle("open", !!open);
+}
+
+function handleOmniboxInput(val) {
+  const qInput = document.getElementById("q");
+  if (qInput && currentView === "tools") {
+    qInput.value = val;
+    searchQ = val.trim().toLowerCase();
+    const qClear = document.getElementById("q-clear");
+    if (qClear) qClear.classList.toggle("visible", val.length > 0);
+    render();
+  } else if (currentView === "realities") {
+    const rInput = document.getElementById("reality-q");
+    if (rInput) { rInput.value = val; filterRealities(); }
+  } else if (currentView === "news" || currentView === "threats") {
+    const tInput = document.getElementById("threat-q");
+    if (tInput) { tInput.value = val; filterThreats(); }
+  } else if (currentView === "scams") {
+    const sInput = document.getElementById("scam-q");
+    if (sInput) { sInput.value = val; filterScams(); }
+  }
+}
+
+function jumpToRealitySymptom(symptomKey) {
+  switchView("realities");
+  setTimeout(() => {
+    const chip = document.querySelector(`.symptom-chip[data-symptom="${symptomKey}"]`);
+    if (chip) chip.click();
+  }, 60);
+}
+
+function filterByStackCategory(catName) {
+  switchView("tools");
+  activeCat = catName;
+  document.querySelectorAll("#category-bar .cat-pill").forEach(b => {
+    b.classList.toggle("active", (b.dataset.cat || "") === catName);
+  });
+  render();
+  const anchor = document.getElementById("radar-directory-anchor");
+  if (anchor) anchor.scrollIntoView({ behavior: "smooth" });
+}
+
+applyTheme(getInitialTheme());
+
+let compareList = [];
+let currentView = "tools";
+let currentLayout = "cards";
 let allTools = [];
 let allCategories = [];
 let renderedTools = [];
@@ -7127,6 +7132,155 @@ function renderSignals(signals = []) {
   }).join("");
 }
 
+function toggleCompareTool(ev, toolName) {
+  if (ev) {
+    ev.preventDefault();
+    ev.stopPropagation();
+  }
+  const idx = compareList.indexOf(toolName);
+  if (idx >= 0) {
+    compareList.splice(idx, 1);
+    showToast(`Removed ${toolName} from comparison`);
+  } else {
+    if (compareList.length >= 3) {
+      showToast("Comparison tray full (max 3 tools). Clear or remove one first.");
+      return;
+    }
+    compareList.push(toolName);
+    showToast(`Added ${toolName} to Compare (${compareList.length}/3)`);
+  }
+  updateCompareUI();
+  render();
+}
+
+function clearCompare() {
+  compareList = [];
+  updateCompareUI();
+  render();
+}
+
+function loadPresetCompare(names) {
+  compareList = names.slice(0, 3);
+  updateCompareUI();
+  render();
+}
+
+function updateCompareUI() {
+  const countText = `${compareList.length}/3`;
+  const countEl = document.getElementById("tab-compare-count");
+  const sideCountEl = document.getElementById("side-compare-count");
+  if (countEl) countEl.textContent = countText;
+  if (sideCountEl) sideCountEl.textContent = countText;
+  const container = document.getElementById("compare-tray-container");
+  if (!container) return;
+  if (compareList.length === 0) {
+    container.innerHTML = `
+      <p style="color:var(--text-secondary);font-size:14px;margin:0;">No tools selected for comparison yet. Click <strong>+ Compare</strong> on any tool card in the directory, or click one of the pre-built comparisons below:</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+        <button type="button" class="cat-pill" onclick="loadPresetCompare(['Ollama','vLLM','LM Studio'])">⚡ Compare Local LLM Engines (Ollama vs vLLM vs LM Studio)</button>
+        <button type="button" class="cat-pill" onclick="loadPresetCompare(['Claude Code','OpenAI Codex','ECC'])">💻 Compare Coding Agents</button>
+        <button type="button" class="cat-pill" onclick="loadPresetCompare(['Dify','n8n','langflow'])">🤖 Compare Agent Orchestrators</button>
+      </div>
+    `;
+    return;
+  }
+  const selectedTools = compareList.map(name => allTools.find(t => t.name.toLowerCase() === name.toLowerCase()) || { name, category: "AI Tool", tagline: "Verified tool on Cipherati", url: "https://cipherati.com" });
+  container.innerHTML = `
+    <table class="tools-table">
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          ${selectedTools.map(t => `<th>${esc(t.name)}</th>`).join("")}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Category</strong></td>
+          ${selectedTools.map(t => `<td><span class="badge cat">${esc(t.category)}</span></td>`).join("")}
+        </tr>
+        <tr>
+          <td><strong>Primary Use Case</strong></td>
+          ${selectedTools.map(t => `<td>${esc(t.tagline)}</td>`).join("")}
+        </tr>
+        <tr>
+          <td><strong>Why It Matters</strong></td>
+          ${selectedTools.map(t => `<td>${esc(t.why_it_matters || "Battle-tested in production workflows.")}</td>`).join("")}
+        </tr>
+        <tr>
+          <td><strong>Deployment &amp; License</strong></td>
+          ${selectedTools.map(t => `<td>${decisionBadges(t) || '<span class="badge">Cloud / API</span>'}</td>`).join("")}
+        </tr>
+        <tr>
+          <td><strong>Direct Link</strong></td>
+          ${selectedTools.map(t => `<td><a href="${esc(t.url)}" target="_blank" rel="noopener" style="color:var(--accent);font-weight:800;text-decoration:none;">Open Official Site ↗</a></td>`).join("")}
+        </tr>
+      </tbody>
+    </table>
+  `;
+}
+
+function openInspector(ev, idx) {
+  if (ev) {
+    ev.preventDefault();
+    ev.stopPropagation();
+  }
+  const tool = renderedTools[idx];
+  if (!tool) return;
+  const drawer = document.getElementById("inspector-drawer");
+  const backdrop = document.getElementById("inspector-backdrop");
+  const content = document.getElementById("inspector-content");
+  if (!drawer || !content) return;
+
+  const related = allTools.filter(t => t.category === tool.category && t.name !== tool.name).slice(0, 3);
+  content.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:18px;">
+      <span class="tool-cat-kicker">${esc(tool.category)}</span>
+      <button type="button" class="compare-btn" onclick="closeInspector()" style="padding:6px 12px;font-size:12px;">✕ Close (Esc)</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+      <div class="tool-icon" style="width:52px;height:52px;font-size:26px;">${toolIconHtml(tool)}</div>
+      <div>
+        <h2 style="margin:0;font-size:22px;font-weight:800;color:var(--text);">${esc(tool.name)}</h2>
+        <a href="${esc(tool.url)}" target="_blank" rel="noopener" style="font-size:12.5px;color:var(--accent);font-weight:700;text-decoration:none;">${esc(tool.url)} ↗</a>
+      </div>
+    </div>
+    <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.6;margin-bottom:16px;">${esc(tool.tagline)}</p>
+    ${tool.why_it_matters ? `<div class="why-box" style="font-size:13px;padding:12px 14px;"><strong>Why It Matters in Production:</strong> ${esc(tool.why_it_matters)}</div>` : ""}
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0;">
+      ${decisionBadges(tool)}
+      ${renderSignals(tool.signals)}
+    </div>
+    <div style="display:flex;gap:10px;margin:20px 0;padding-bottom:20px;border-bottom:1px solid var(--line);">
+      <a href="${esc(tool.url)}" target="_blank" rel="noopener" style="flex:1;background:var(--accent);color:#fff;text-align:center;padding:11px;border-radius:10px;font-weight:800;font-size:13.5px;text-decoration:none;">Launch Official Tool ↗</a>
+      <button type="button" class="compare-btn" style="padding:11px 16px;font-size:13px;" onclick="toggleCompareTool(event, '${esc(tool.name)}')">⚖️ + Compare</button>
+      <button type="button" class="share-btn" style="width:42px;height:42px;" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
+    </div>
+    <div>
+      <h4 style="font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin:0 0 10px;">Similar Verified Tools in ${esc(tool.category)}</h4>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        ${related.map(r => `
+          <a href="${esc(r.url)}" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--surface-subtle);border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--text);">
+            <div>
+              <strong style="font-size:13.5px;display:block;">${esc(r.name)}</strong>
+              <span style="font-size:12px;color:var(--text-secondary);">${esc(r.tagline.slice(0, 68))}...</span>
+            </div>
+            <span style="color:var(--accent);font-weight:800;font-size:12px;">Open ↗</span>
+          </a>
+        `).join("")}
+      </div>
+    </div>
+  `;
+  drawer.classList.add("open");
+  if (backdrop) backdrop.classList.add("open");
+}
+
+function closeInspector() {
+  const drawer = document.getElementById("inspector-drawer");
+  const backdrop = document.getElementById("inspector-backdrop");
+  if (drawer) drawer.classList.remove("open");
+  if (backdrop) backdrop.classList.remove("open");
+}
+
 function render() {
   const grid = $("#grid");
   const empty = $("#empty-state");
@@ -7148,11 +7302,57 @@ function render() {
   }
   empty.style.display = "none";
 
-  let html = "";
   renderedTools = filtered;
   grid.classList.toggle("list", layout === "list");
+  grid.classList.toggle("table-view", layout === "table");
 
+  if (layout === "table") {
+    grid.innerHTML = `
+      <table class="tools-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Tool</th>
+            <th>Category</th>
+            <th>Primary Production Use Case</th>
+            <th>Signals &amp; License</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${filtered.map((tool, idx) => {
+            const isCompared = compareList.includes(tool.name);
+            return `
+              <tr>
+                <td style="font-weight:700;color:var(--text-muted);">${idx + 1}</td>
+                <td>
+                  <a class="tbl-name" href="${esc(tool.url)}" target="_blank" rel="noopener">
+                    <span>${esc(tool.name)}</span>
+                    <span class="tool-name-link">↗</span>
+                  </a>
+                </td>
+                <td><span class="badge cat">${esc(tool.category)}</span></td>
+                <td style="max-width:420px;">${esc(tool.tagline)}</td>
+                <td><div style="display:flex;gap:5px;flex-wrap:wrap;">${decisionBadges(tool)}${renderSignals(tool.signals)}</div></td>
+                <td>
+                  <div style="display:flex;gap:6px;align-items:center;">
+                    <button type="button" class="compare-btn ${isCompared ? 'selected' : ''}" onclick="toggleCompareTool(event, '${esc(tool.name)}')">${isCompared ? '✓ Compared' : '⚖️ + Compare'}</button>
+                    <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect Tool →</button>
+                    <button type="button" class="share-btn" style="width:28px;height:28px;" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
+                  </div>
+                </td>
+              </tr>
+            `;
+          }).join("")}
+        </tbody>
+      </table>
+    `;
+    return;
+  }
+
+  let html = "";
   filtered.forEach((tool, idx) => {
+    const isCompared = compareList.includes(tool.name);
     if (layout === "list") {
       html += `
         <a class="tool-row" href="${esc(tool.url)}" target="_blank" rel="noopener">
@@ -7166,6 +7366,8 @@ function render() {
             <span class="badge cat">${esc(tool.category)}</span>
             ${decisionBadges(tool)}
             ${renderSignals(tool.signals)}
+            <button type="button" class="compare-btn ${isCompared ? 'selected' : ''}" onclick="toggleCompareTool(event, '${esc(tool.name)}')">${isCompared ? '✓' : '⚖️ + Compare'}</button>
+            <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect →</button>
           </div>
           <button class="share-btn" type="button" title="Share this tool" aria-label="Share ${esc(tool.name)}" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
         </a>
@@ -7175,23 +7377,30 @@ function render() {
 
     html += `
       <a class="tool-card" href="${esc(tool.url)}" target="_blank" rel="noopener">
+        <div class="tool-card-top-row">
+          <span class="tool-cat-kicker">${esc(tool.category)}</span>
+          <button class="share-btn" type="button" title="Share this tool" aria-label="Share ${esc(tool.name)}" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
+        </div>
         <div class="tool-top">
           <div class="tool-icon">${toolIconHtml(tool)}</div>
           <div style="flex: 1; min-width: 0;">
             <div class="tool-name">${esc(tool.name)} <span class="tool-name-link">↗</span></div>
             <p class="tool-tag">${esc(tool.tagline)}</p>
           </div>
-          <button class="share-btn" type="button" title="Share this tool" aria-label="Share ${esc(tool.name)}" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
         </div>
         ${tool.why_it_matters && !BOILERPLATE_WHY.test(tool.why_it_matters) ? `<div class="why-box"><strong>Why it matters:</strong> ${esc(tool.why_it_matters)}</div>` : ""}
         <div class="tool-meta">
-          <span class="badge cat">${esc(tool.category)}</span>
-          ${decisionBadges(tool)}
-          ${renderSignals(tool.signals)}
+          <div class="tool-meta-badges">
+            ${decisionBadges(tool)}
+            ${renderSignals(tool.signals)}
+          </div>
+          <div class="tool-card-actions">
+            <button type="button" class="compare-btn ${isCompared ? 'selected' : ''}" onclick="toggleCompareTool(event, '${esc(tool.name)}')">${isCompared ? '✓ In Compare' : '⚖️ + Compare'}</button>
+            <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect Tool →</button>
+          </div>
         </div>
       </a>
     `;
-
   });
 
   grid.innerHTML = html;
@@ -7203,45 +7412,54 @@ function switchView(viewName) {
   const realitiesSection = document.getElementById("realities");
   const threatsSection = document.getElementById("threats");
   const scamsSection = document.getElementById("scams");
-  const tabTools = document.getElementById("tab-tools");
-  const tabRealities = document.getElementById("tab-realities");
-  const tabThreats = document.getElementById("tab-threats");
-  const tabScams = document.getElementById("tab-scams");
+  const compareSection = document.getElementById("compare-section");
 
   const isTools = viewName === "tools";
   const isRealities = viewName === "realities";
   const isThreats = viewName === "threats" || viewName === "news";
   const isScams = viewName === "scams";
+  const isCompare = viewName === "compare";
 
   if (radarSection) radarSection.style.display = isTools ? "block" : "none";
   if (realitiesSection) realitiesSection.style.display = isRealities ? "block" : "none";
   if (threatsSection) threatsSection.style.display = isThreats ? "block" : "none";
   if (scamsSection) scamsSection.style.display = isScams ? "block" : "none";
+  if (compareSection) compareSection.style.display = isCompare ? "block" : "none";
 
-  if (tabTools) {
-    tabTools.classList.toggle("active", isTools);
-    tabTools.setAttribute("aria-selected", isTools ? "true" : "false");
-  }
-  if (tabRealities) {
-    tabRealities.classList.toggle("active", isRealities);
-    tabRealities.setAttribute("aria-selected", isRealities ? "true" : "false");
-  }
-  if (tabThreats) {
-    tabThreats.classList.toggle("active", isThreats);
-    tabThreats.setAttribute("aria-selected", isThreats ? "true" : "false");
-  }
-  if (tabScams) {
-    tabScams.classList.toggle("active", isScams);
-    tabScams.setAttribute("aria-selected", isScams ? "true" : "false");
-  }
+  // Sync Top Tab Headers
+  const tabMap = [
+    ["tab-tools", isTools],
+    ["tab-realities", isRealities],
+    ["tab-threats", isThreats],
+    ["tab-scams", isScams],
+    ["tab-compare", isCompare],
+    ["side-tab-tools", isTools],
+    ["side-tab-realities", isRealities],
+    ["side-tab-threats", isThreats],
+    ["side-tab-scams", isScams],
+    ["side-tab-compare", isCompare],
+    ["mob-tab-tools", isTools],
+    ["mob-tab-realities", isRealities],
+    ["mob-tab-threats", isThreats],
+    ["mob-tab-scams", isScams],
+    ["mob-tab-compare", isCompare]
+  ];
+  tabMap.forEach(([id, active]) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.toggle("active", active);
+      if (el.hasAttribute("aria-selected")) el.setAttribute("aria-selected", active ? "true" : "false");
+    }
+  });
 
-  const hash = isScams ? "#scams" : (isThreats ? "#news" : (isRealities ? "#realities" : "#tools"));
+  const hash = isCompare ? "#compare" : (isScams ? "#scams" : (isThreats ? "#news" : (isRealities ? "#realities" : "#tools")));
   if (typeof history !== "undefined" && history.replaceState) history.replaceState(null, "", hash);
   if (typeof window !== "undefined" && typeof window.scrollTo === "function") { try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch(e) { window.scrollTo(0, 0); } }
 
   if (isThreats && typeof filterThreats === "function") filterThreats();
   if (isRealities && typeof filterRealities === "function") filterRealities();
   if (isScams && typeof filterScams === "function") filterScams();
+  if (isCompare && typeof updateCompareUI === "function") updateCompareUI();
   if (isTools && typeof render === "function") render();
 }
 
@@ -7307,18 +7525,23 @@ function bootstrapFromDom() {
 }
 
 function setLayout(mode) {
+  layout = mode;
   currentLayout = mode;
+  try { localStorage.setItem("radar-layout", mode); } catch (e) {}
   document.querySelectorAll(".layout-btn").forEach(b => {
-    b.classList.toggle("active", b.dataset.layout === mode);
+    b.classList.toggle("active", (b.dataset.layout || "") === mode);
   });
   render();
 }
 
 function syncLayoutButtons() {
   document.querySelectorAll(".layout-btn").forEach(b => {
-    b.classList.toggle("active", b.dataset.layout === currentLayout);
+    b.classList.toggle("active", (b.dataset.layout || "") === layout);
   });
 }
+
+function setPersona() {}
+let persona = "builders";
 
 function timeAgo(iso) {
   const d = new Date(iso);
@@ -7449,6 +7672,8 @@ document.addEventListener("keydown", (e) => {
     if (activeSearchInput) activeSearchInput.focus();
     return;
   }
+  if (e.key === "Escape") { closeInspector(); toggleMobileSidebar(false); }
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); const ob = document.getElementById("global-omnibox"); if (ob) ob.focus(); return; }
   if (e.key === "Escape" && activeSearchInput) {
     activeSearchInput.value = "";
     if (isThreats) {
