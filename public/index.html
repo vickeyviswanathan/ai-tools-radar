@@ -1475,7 +1475,7 @@
     border-top: 1px solid var(--line-strong);
     z-index: 800;
     padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 4px;
   }
   .mob-nav-item {
@@ -1615,10 +1615,6 @@
         <button type="button" class="side-nav-btn" onclick="filterByStackCategory('Models & Infra'); toggleMobileSidebar(false);">
           <span>🧠 Local LLMs &amp; RAG Engines</span>
         </button>
-        <button type="button" class="side-nav-btn" id="side-tab-compare" onclick="switchView('compare'); toggleMobileSidebar(false);">
-          <span>⚖️ Compare Tray</span>
-          <span class="side-nav-pill" id="side-compare-count">0/3</span>
-        </button>
       </nav>
     </div>
 
@@ -1662,12 +1658,6 @@
             <span id="theme-toggle-icon">🌙</span>
             <span id="theme-toggle-label">Dark Mode</span>
           </button>
-          <a href="./badges/featured-on-cipherati.svg" target="_blank" rel="noopener" class="top-pill-btn hide-mobile">
-            🎖️ Embed Verified Badge
-          </a>
-          <a href="https://github.com/vickeyviswanathan/ai-tools-radar/issues/new" target="_blank" rel="noopener" class="top-pill-btn primary-dark hide-mobile">
-            + Submit AI Tool
-          </a>
           <div class="visitor-pill" title="Live visitors counter">
             <span class="pulse-dot"></span>
             <img src="https://visitor-badge.laobi.icu/badge?page_id=elite-ai-radar.main" alt="visitors counter" />
@@ -1684,13 +1674,10 @@
           ⚡ AI Realities <span class="tab-count">18</span>
         </button>
         <button class="view-tab" id="tab-threats" role="tab" aria-selected="false" aria-controls="threats" onclick="switchView('news')">
-          🛡️ Cybersecurity News on Cipherati <span class="tab-count" id="tab-threats-count">17</span>
+          🛡️ Cybersecurity News on Cipherati <span class="tab-count" id="tab-threats-count">15</span>
         </button>
         <button class="view-tab" id="tab-scams" role="tab" aria-selected="false" aria-controls="scams" onclick="switchView('scams')">
           🚨 Scam Alerts &amp; 1930 Guide <span class="tab-count" id="tab-scams-count">15</span>
-        </button>
-        <button class="view-tab" id="tab-compare" role="tab" aria-selected="false" aria-controls="compare-section" onclick="switchView('compare')">
-          ⚖️ Compare &amp; Stacks <span class="tab-count" id="tab-compare-count">0/3</span>
         </button>
       </div>
     </header>
@@ -4874,7 +4861,7 @@
         <h2 class="section-title">🛡️ Cybersecurity News on Cipherati</h2>
         <span class="section-note">Verified cybersecurity reporting and analysis across banking, enterprise defense, and global security developments.</span>
       </div>
-      <span class="reality-count-pill" id="threat-count-badge">Showing all 17 verified news stories</span>
+      <span class="reality-count-pill" id="threat-count-badge">Showing all 15 verified news stories</span>
     </div>
 
     <!-- Cybersecurity News Sub-Tabs & Live Filter -->
@@ -5188,90 +5175,6 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-3645205163">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-critical">CRITICAL</span>
-          <span class="threat-badge threat-prov threat-prov-onchain">⛓️ Crypto Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-3645205163')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOalM0SnU2SG1KeDM2WVpCdUlhcXRoUDFXOXhKaW9rZFZSSTM5YVlYSjBkVEhFOFpaWnBJX2lBeWpJSTBhakFiNV83c3hJUHlYS0lqVGlXbmpYZlBSajZJT1hIMl9DU29PSl9sRnZuZHJaZ3dwQ1VwTUdJMG5ZMExhMkFn?oc=5" target="_blank" rel="noopener noreferrer">
-          $6 billion stolen in crypto hack, expert says financial institutions are &quot;tested on a daily basis&quot; <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Binance, Global Exchanges &amp; Digital Assets</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          $6 billion stolen in crypto hack, expert says financial institutions are &quot;tested on a daily basis&quot;.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">CBS News</span>
-          <span class="threat-ref">CBS News Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOalM0SnU2SG1KeDM2WVpCdUlhcXRoUDFXOXhKaW9rZFZSSTM5YVlYSjBkVEhFOFpaWnBJX2lBeWpJSTBhakFiNV83c3hJUHlYS0lqVGlXbmpYZlBSajZJT1hIMl9DU29PSl9sRnZuZHJaZ3dwQ1VwTUdJMG5ZMExhMkFn?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on CBS News ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-10534249220">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-onchain">⛓️ Crypto Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-10534249220')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQUk0tVDZsMEx4M1NtS1BVd2FFWGlnMDJob2l5Nk41MWhSc05uOEhWRWNDUDNfbUdHTzFzT3p2VUl0a3o0RENWTXhTZTExc2o2eDQ3S2RiTm1VYS0yRDkzendqZ1kxeWVaMXRvUGd6Z1pWZDNHVEZQcEk5UjdaOWpnSmFjVXEtb2wzNDUxQ3VMeFV2SVVpYlBFdlZleFdtUzJDVnBWYkthV2Q1R211amc?oc=5" target="_blank" rel="noopener noreferrer">
-          How crypto hacking funds isolated North Korea’s nuclear programme <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Binance, Global Exchanges &amp; Digital Assets</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          How crypto hacking funds isolated North Korea’s nuclear programme.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">The Guardian</span>
-          <span class="threat-ref">The Guardian Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQUk0tVDZsMEx4M1NtS1BVd2FFWGlnMDJob2l5Nk41MWhSc05uOEhWRWNDUDNfbUdHTzFzT3p2VUl0a3o0RENWTXhTZTExc2o2eDQ3S2RiTm1VYS0yRDkzendqZ1kxeWVaMXRvUGd6Z1pWZDNHVEZQcEk5UjdaOWpnSmFjVXEtb2wzNDUxQ3VMeFV2SVVpYlBFdlZleFdtUzJDVnBWYkthV2Q1R211amc?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on The Guardian ↗
-        </a>
-      </div>
-    </article>
-
     <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-9818481674">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5352,6 +5255,132 @@
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQdGFDU255RTFLTGhHMmlndVlJb1gyUVdsYmJxcUpaalJoRVp0OEpROVcyQ0xQRlRiN1haY0UyTUlLb1JlUF92NF8tWVlfVmxmVWJmN2p4Q2ZfNHhCSy1ta2EwMi1KZUJ0eE1zVExPck44OVFJRnFuSmV2VjUtdGUzQVVGR1VPVDFTbUF4UzlwTHFIN0xYbXh5dUpqcjZuNlNMdGNV?oc=5" target="_blank" rel="noopener noreferrer">
           Read on Reuters ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-710623010">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-710623010')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5" target="_blank" rel="noopener noreferrer">
+          North Korean hackers linked to crypto thefts among world&#39;s best, experts say, Digital News <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          North Korean hackers linked to crypto thefts among world&#39;s best, experts say, Digital News.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">AsiaOne.com</span>
+          <span class="threat-ref">AsiaOne.com Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on AsiaOne.com ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5707601159">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5707601159')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
+          New cybersecurity blind spot: When AI looks like a trusted employee <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          New cybersecurity blind spot: When AI looks like a trusted employee.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Financial Express</span>
+          <span class="threat-ref">The Financial Express Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Financial Express ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-9023916946">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🔒 Assets Frozen</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-9023916946')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
+          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">New York Post</span>
+          <span class="threat-ref">New York Post Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on New York Post ↗
         </a>
       </div>
     </article>
@@ -5477,132 +5506,6 @@
           <span class="threat-ref">Reuters Live Wire</span>
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5107877601">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5107877601')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQVE5MN2Rib1hrX3Z1VDhFWlZiSTUyc0oydVhxNW5OZ1RBOElfamxQWUVBcTFyd3NVbmxBNjd3QW9sYll4U1lfUDE5bGJMVXZXZW1CVS1NV3FHaTFSQ3VCanUtYXZRcm1ZWnJCazBzUWVCakZLaUVoTV9MV1BCblBzeWlIX3A2OWNiNXdYRG5JSlYwakpZdDdRUjdYajQtcXBERVdJSHYyRVIyT0lLOEIxVGg2WnFmREM2LWp5ajA3aVIxTUVx?oc=5" target="_blank" rel="noopener noreferrer">
-          Chinese AI model carries out complex cyberattacks in controlled tests, researchers say <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Chinese AI model carries out complex cyberattacks in controlled tests, researchers say.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-          <span class="threat-ref">Reuters Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQVE5MN2Rib1hrX3Z1VDhFWlZiSTUyc0oydVhxNW5OZ1RBOElfamxQWUVBcTFyd3NVbmxBNjd3QW9sYll4U1lfUDE5bGJMVXZXZW1CVS1NV3FHaTFSQ3VCanUtYXZRcm1ZWnJCazBzUWVCakZLaUVoTV9MV1BCblBzeWlIX3A2OWNiNXdYRG5JSlYwakpZdDdRUjdYajQtcXBERVdJSHYyRVIyT0lLOEIxVGg2WnFmREM2LWp5ajA3aVIxTUVx?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-792151822">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-792151822')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5" target="_blank" rel="noopener noreferrer">
-          Google launches Gemini 4 Carbon AI model with cybersecurity focus <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Google launches Gemini 4 Carbon AI model with cybersecurity focus.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Ada Derana</span>
-          <span class="threat-ref">Ada Derana Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Ada Derana ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5792857321">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5792857321')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Three South Korean financial firms including Bithumb report data breaches, Yonhap says <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Three South Korean financial firms including Bithumb report data breaches, Yonhap says.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-          <span class="threat-ref">Reuters Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
           Read on Reuters ↗
         </a>
       </div>
@@ -6209,65 +6112,6 @@
   </section>
 
 
-      <!-- Section 5: Compare & Reference Stacks -->
-      <section class="section-wrap" id="compare-section" style="display: none;">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">⚖️ Side-by-Side Tool Comparison &amp; Production Stacks</h2>
-            <span class="section-note">Select up to 3 tools from the directory using "+ Compare", or explore our battle-tested reference architectures below.</span>
-          </div>
-          <button type="button" class="compare-btn" onclick="clearCompare()" style="padding:7px 14px;font-size:12.5px;">Clear Comparison Tray</button>
-        </div>
-
-        <div class="compare-table-wrap" id="compare-tray-container">
-          <p style="color:var(--text-secondary);font-size:14px;margin:0;">No tools selected for comparison yet. Click <strong>+ Compare</strong> on any tool card in the directory, or click one of the pre-built comparisons below:</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
-            <button type="button" class="cat-pill" onclick="loadPresetCompare(['Ollama','vLLM','LM Studio'])">⚡ Compare Local LLM Engines (Ollama vs vLLM vs LM Studio)</button>
-            <button type="button" class="cat-pill" onclick="loadPresetCompare(['Claude Code','OpenAI Codex','ECC'])">💻 Compare Coding Agents</button>
-            <button type="button" class="cat-pill" onclick="loadPresetCompare(['Dify','n8n','langflow'])">🤖 Compare Agent Orchestrators</button>
-          </div>
-        </div>
-
-        <h3 class="section-title" style="font-size:18px;margin-bottom:14px;">🏛️ Reference Production AI Stacks (2026 Benchmark)</h3>
-        <div class="stacks-grid">
-          <div class="stack-card">
-            <span class="badge cat" style="width:fit-content;">STACK 01 · ZERO-DATA-LEAKAGE LOCAL AI</span>
-            <h3 style="margin:8px 0 4px;font-size:16px;">Air-Gapped Enterprise Local LLM Stack</h3>
-            <p style="font-size:13px;color:var(--text-secondary);margin:0 0 12px;">Run coding assistants and internal document chat 100% on-premise with zero external API calls.</p>
-            <div class="tools-row">
-              <span class="tools-label">Core Components:</span>
-              <a class="tool-chip" href="https://github.com/ollama/ollama" target="_blank" rel="noopener">Ollama ↗</a>
-              <a class="tool-chip" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vLLM ↗</a>
-              <a class="tool-chip" href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener">Open WebUI ↗</a>
-            </div>
-          </div>
-
-          <div class="stack-card">
-            <span class="badge flag" style="width:fit-content;">STACK 02 · HIGH-PRECISION DOCUMENT RAG</span>
-            <h3 style="margin:8px 0 4px;font-size:16px;">Financial &amp; Legal Table-Aware RAG Stack</h3>
-            <p style="font-size:13px;color:var(--text-secondary);margin:0 0 12px;">Eliminates PDF table shredding by pairing vision-layout OCR with hybrid BM25 + dense vector retrieval.</p>
-            <div class="tools-row">
-              <span class="tools-label">Core Components:</span>
-              <a class="tool-chip" href="https://opendatalab.github.io/MinerU/" target="_blank" rel="noopener">MinerU ↗</a>
-              <a class="tool-chip" href="https://www.paddleocr.com/" target="_blank" rel="noopener">PaddleOCR ↗</a>
-              <a class="tool-chip" href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener">RAGFlow ↗</a>
-            </div>
-          </div>
-
-          <div class="stack-card">
-            <span class="badge flag selfhost" style="width:fit-content;">STACK 03 · AGENTIC FINOPS &amp; GUARDRAILS</span>
-            <h3 style="margin:8px 0 4px;font-size:16px;">Cost-Capped Autonomous Coding &amp; SecOps</h3>
-            <p style="font-size:13px;color:var(--text-secondary);margin:0 0 12px;">Compresses terminal/JSON token bloat by 60–90% while enforcing multi-provider fallback routing.</p>
-            <div class="tools-row">
-              <span class="tools-label">Core Components:</span>
-              <a class="tool-chip" href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">RTK ↗</a>
-              <a class="tool-chip" href="https://docs.headroomlabs.ai/docs" target="_blank" rel="noopener">headroom ↗</a>
-              <a class="tool-chip" href="https://omniroute.online/" target="_blank" rel="noopener">OmniRoute ↗</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Slide-Over Right Inspector Drawer -->
       <div class="inspector-backdrop" id="inspector-backdrop" onclick="closeInspector()"></div>
       <aside class="inspector-drawer" id="inspector-drawer" aria-label="Tool Details Inspector">
@@ -6286,7 +6130,7 @@
     Synced automatically from live open-source and global statutory feeds every 6 hours. All code and data are open source.
     <br /><br />
     <a href="https://github.com/vickeyviswanathan/ai-tools-radar" target="_blank" rel="noopener">GitHub Repository</a> • 
-    <a href="https://github.com/vickeyviswanathan/ai-tools-radar/issues/new" target="_blank" rel="noopener">Suggest a Tool</a>
+    <a href="https://github.com/vickeyviswanathan/ai-tools-radar/issues/new" target="_blank" rel="noopener">Suggest a Tool</a> • <a href="./badges/featured-on-cipherati.svg" target="_blank" rel="noopener">Embed Verified Badge</a>
   </div>
 </footer>
   </div><!-- /.app-main -->
@@ -6296,11 +6140,11 @@
 <nav class="mobile-bottom-nav" aria-label="Mobile Quick Navigation">
   <button type="button" class="mob-nav-item active" id="mob-tab-tools" onclick="switchView('tools')">
     <span class="mob-icon">🧭</span>
-    <span>Tools</span>
+    <span>AI Tools</span>
   </button>
   <button type="button" class="mob-nav-item" id="mob-tab-realities" onclick="switchView('realities')">
     <span class="mob-icon">⚡</span>
-    <span>Realities</span>
+    <span>AI Realities</span>
   </button>
   <button type="button" class="mob-nav-item" id="mob-tab-threats" onclick="switchView('news')">
     <span class="mob-icon">🛡️</span>
@@ -6308,11 +6152,7 @@
   </button>
   <button type="button" class="mob-nav-item" id="mob-tab-scams" onclick="switchView('scams')">
     <span class="mob-icon">🚨</span>
-    <span>1930 Help</span>
-  </button>
-  <button type="button" class="mob-nav-item" id="mob-tab-compare" onclick="switchView('compare')">
-    <span class="mob-icon">⚖️</span>
-    <span>Compare</span>
+    <span>Scam Alerts</span>
   </button>
 </nav>
 
@@ -7132,93 +6972,6 @@ function renderSignals(signals = []) {
   }).join("");
 }
 
-function toggleCompareTool(ev, toolName) {
-  if (ev) {
-    ev.preventDefault();
-    ev.stopPropagation();
-  }
-  const idx = compareList.indexOf(toolName);
-  if (idx >= 0) {
-    compareList.splice(idx, 1);
-    showToast(`Removed ${toolName} from comparison`);
-  } else {
-    if (compareList.length >= 3) {
-      showToast("Comparison tray full (max 3 tools). Clear or remove one first.");
-      return;
-    }
-    compareList.push(toolName);
-    showToast(`Added ${toolName} to Compare (${compareList.length}/3)`);
-  }
-  updateCompareUI();
-  render();
-}
-
-function clearCompare() {
-  compareList = [];
-  updateCompareUI();
-  render();
-}
-
-function loadPresetCompare(names) {
-  compareList = names.slice(0, 3);
-  updateCompareUI();
-  render();
-}
-
-function updateCompareUI() {
-  const countText = `${compareList.length}/3`;
-  const countEl = document.getElementById("tab-compare-count");
-  const sideCountEl = document.getElementById("side-compare-count");
-  if (countEl) countEl.textContent = countText;
-  if (sideCountEl) sideCountEl.textContent = countText;
-  const container = document.getElementById("compare-tray-container");
-  if (!container) return;
-  if (compareList.length === 0) {
-    container.innerHTML = `
-      <p style="color:var(--text-secondary);font-size:14px;margin:0;">No tools selected for comparison yet. Click <strong>+ Compare</strong> on any tool card in the directory, or click one of the pre-built comparisons below:</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
-        <button type="button" class="cat-pill" onclick="loadPresetCompare(['Ollama','vLLM','LM Studio'])">⚡ Compare Local LLM Engines (Ollama vs vLLM vs LM Studio)</button>
-        <button type="button" class="cat-pill" onclick="loadPresetCompare(['Claude Code','OpenAI Codex','ECC'])">💻 Compare Coding Agents</button>
-        <button type="button" class="cat-pill" onclick="loadPresetCompare(['Dify','n8n','langflow'])">🤖 Compare Agent Orchestrators</button>
-      </div>
-    `;
-    return;
-  }
-  const selectedTools = compareList.map(name => allTools.find(t => t.name.toLowerCase() === name.toLowerCase()) || { name, category: "AI Tool", tagline: "Verified tool on Cipherati", url: "https://cipherati.com" });
-  container.innerHTML = `
-    <table class="tools-table">
-      <thead>
-        <tr>
-          <th>Attribute</th>
-          ${selectedTools.map(t => `<th>${esc(t.name)}</th>`).join("")}
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Category</strong></td>
-          ${selectedTools.map(t => `<td><span class="badge cat">${esc(t.category)}</span></td>`).join("")}
-        </tr>
-        <tr>
-          <td><strong>Primary Use Case</strong></td>
-          ${selectedTools.map(t => `<td>${esc(t.tagline)}</td>`).join("")}
-        </tr>
-        <tr>
-          <td><strong>Why It Matters</strong></td>
-          ${selectedTools.map(t => `<td>${esc(t.why_it_matters || "Battle-tested in production workflows.")}</td>`).join("")}
-        </tr>
-        <tr>
-          <td><strong>Deployment &amp; License</strong></td>
-          ${selectedTools.map(t => `<td>${decisionBadges(t) || '<span class="badge">Cloud / API</span>'}</td>`).join("")}
-        </tr>
-        <tr>
-          <td><strong>Direct Link</strong></td>
-          ${selectedTools.map(t => `<td><a href="${esc(t.url)}" target="_blank" rel="noopener" style="color:var(--accent);font-weight:800;text-decoration:none;">Open Official Site ↗</a></td>`).join("")}
-        </tr>
-      </tbody>
-    </table>
-  `;
-}
-
 function openInspector(ev, idx) {
   if (ev) {
     ev.preventDefault();
@@ -7252,7 +7005,6 @@ function openInspector(ev, idx) {
     </div>
     <div style="display:flex;gap:10px;margin:20px 0;padding-bottom:20px;border-bottom:1px solid var(--line);">
       <a href="${esc(tool.url)}" target="_blank" rel="noopener" style="flex:1;background:var(--accent);color:#fff;text-align:center;padding:11px;border-radius:10px;font-weight:800;font-size:13.5px;text-decoration:none;">Launch Official Tool ↗</a>
-      <button type="button" class="compare-btn" style="padding:11px 16px;font-size:13px;" onclick="toggleCompareTool(event, '${esc(tool.name)}')">⚖️ + Compare</button>
       <button type="button" class="share-btn" style="width:42px;height:42px;" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
     </div>
     <div>
@@ -7321,7 +7073,6 @@ function render() {
         </thead>
         <tbody>
           ${filtered.map((tool, idx) => {
-            const isCompared = compareList.includes(tool.name);
             return `
               <tr>
                 <td style="font-weight:700;color:var(--text-muted);">${idx + 1}</td>
@@ -7336,7 +7087,6 @@ function render() {
                 <td><div style="display:flex;gap:5px;flex-wrap:wrap;">${decisionBadges(tool)}${renderSignals(tool.signals)}</div></td>
                 <td>
                   <div style="display:flex;gap:6px;align-items:center;">
-                    <button type="button" class="compare-btn ${isCompared ? 'selected' : ''}" onclick="toggleCompareTool(event, '${esc(tool.name)}')">${isCompared ? '✓ Compared' : '⚖️ + Compare'}</button>
                     <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect Tool →</button>
                     <button type="button" class="share-btn" style="width:28px;height:28px;" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
                   </div>
@@ -7352,7 +7102,6 @@ function render() {
 
   let html = "";
   filtered.forEach((tool, idx) => {
-    const isCompared = compareList.includes(tool.name);
     if (layout === "list") {
       html += `
         <a class="tool-row" href="${esc(tool.url)}" target="_blank" rel="noopener">
@@ -7366,7 +7115,6 @@ function render() {
             <span class="badge cat">${esc(tool.category)}</span>
             ${decisionBadges(tool)}
             ${renderSignals(tool.signals)}
-            <button type="button" class="compare-btn ${isCompared ? 'selected' : ''}" onclick="toggleCompareTool(event, '${esc(tool.name)}')">${isCompared ? '✓' : '⚖️ + Compare'}</button>
             <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect →</button>
           </div>
           <button class="share-btn" type="button" title="Share this tool" aria-label="Share ${esc(tool.name)}" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
@@ -7394,10 +7142,7 @@ function render() {
             ${decisionBadges(tool)}
             ${renderSignals(tool.signals)}
           </div>
-          <div class="tool-card-actions">
-            <button type="button" class="compare-btn ${isCompared ? 'selected' : ''}" onclick="toggleCompareTool(event, '${esc(tool.name)}')">${isCompared ? '✓ In Compare' : '⚖️ + Compare'}</button>
-            <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect Tool →</button>
-          </div>
+          <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect Tool →</button>
         </div>
       </a>
     `;
@@ -7412,37 +7157,31 @@ function switchView(viewName) {
   const realitiesSection = document.getElementById("realities");
   const threatsSection = document.getElementById("threats");
   const scamsSection = document.getElementById("scams");
-  const compareSection = document.getElementById("compare-section");
 
   const isTools = viewName === "tools";
   const isRealities = viewName === "realities";
   const isThreats = viewName === "threats" || viewName === "news";
   const isScams = viewName === "scams";
-  const isCompare = viewName === "compare";
 
   if (radarSection) radarSection.style.display = isTools ? "block" : "none";
   if (realitiesSection) realitiesSection.style.display = isRealities ? "block" : "none";
   if (threatsSection) threatsSection.style.display = isThreats ? "block" : "none";
   if (scamsSection) scamsSection.style.display = isScams ? "block" : "none";
-  if (compareSection) compareSection.style.display = isCompare ? "block" : "none";
 
-  // Sync Top Tab Headers
+  // Sync Top Tab Headers, Left Sidebar & Mobile Bottom Nav
   const tabMap = [
     ["tab-tools", isTools],
     ["tab-realities", isRealities],
     ["tab-threats", isThreats],
     ["tab-scams", isScams],
-    ["tab-compare", isCompare],
     ["side-tab-tools", isTools],
     ["side-tab-realities", isRealities],
     ["side-tab-threats", isThreats],
     ["side-tab-scams", isScams],
-    ["side-tab-compare", isCompare],
     ["mob-tab-tools", isTools],
     ["mob-tab-realities", isRealities],
     ["mob-tab-threats", isThreats],
-    ["mob-tab-scams", isScams],
-    ["mob-tab-compare", isCompare]
+    ["mob-tab-scams", isScams]
   ];
   tabMap.forEach(([id, active]) => {
     const el = document.getElementById(id);
@@ -7452,14 +7191,13 @@ function switchView(viewName) {
     }
   });
 
-  const hash = isCompare ? "#compare" : (isScams ? "#scams" : (isThreats ? "#news" : (isRealities ? "#realities" : "#tools")));
+  const hash = isScams ? "#scams" : (isThreats ? "#news" : (isRealities ? "#realities" : "#tools"));
   if (typeof history !== "undefined" && history.replaceState) history.replaceState(null, "", hash);
   if (typeof window !== "undefined" && typeof window.scrollTo === "function") { try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch(e) { window.scrollTo(0, 0); } }
 
   if (isThreats && typeof filterThreats === "function") filterThreats();
   if (isRealities && typeof filterRealities === "function") filterRealities();
   if (isScams && typeof filterScams === "function") filterScams();
-  if (isCompare && typeof updateCompareUI === "function") updateCompareUI();
   if (isTools && typeof render === "function") render();
 }
 
