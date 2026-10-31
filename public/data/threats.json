@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-31T12:21:16.889Z",
+  "updatedAt": "2026-10-31T12:27:02.777Z",
   "categories": [
     {
       "id": "all",
       "label": "🔥 All Cybersecurity News",
-      "count": 17
+      "count": 15
     },
     {
       "id": "india-bfsi",
@@ -14,7 +14,7 @@
     {
       "id": "crypto-heists",
       "label": "🌐 Crypto & Exchange Heists",
-      "count": 5
+      "count": 3
     },
     {
       "id": "global-ransomware",
@@ -35,7 +35,7 @@
       "badgeType": "regulatory",
       "ref": "News Mobile Live Wire",
       "date": "2026-10-31",
-      "timeAgo": "6 hours ago",
+      "timeAgo": "7 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
       "incident": "Nanded Man Held For Allegedly Providing Bank Account In Rs 30 Lakh Cyber Fraud.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
@@ -89,7 +89,7 @@
       "badgeType": "regulatory",
       "ref": "UzDaily.uz Live Wire",
       "date": "2026-10-31",
-      "timeAgo": "2 hours ago",
+      "timeAgo": "3 hours ago",
       "entities": "Indian Banking Infrastructure & NBFCs",
       "incident": "Uzbekistan Central Bank Proposes New Anti-Fraud Measures.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
@@ -148,42 +148,6 @@
       "incident": "Hackers just stole $6 billion in crypto. It’s not the first time, and it won’t be the last.",
       "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
       "consequence": "Read open-access reporting on CNN."
-    },
-    {
-      "id": "live-crypto-heists-3645205163",
-      "category": "crypto-heists",
-      "severity": "critical",
-      "impactBadge": "🚨 Breaking Wire",
-      "title": "$6 billion stolen in crypto hack, expert says financial institutions are \"tested on a daily basis\"",
-      "sourceName": "CBS News",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOalM0SnU2SG1KeDM2WVpCdUlhcXRoUDFXOXhKaW9rZFZSSTM5YVlYSjBkVEhFOFpaWnBJX2lBeWpJSTBhakFiNV83c3hJUHlYS0lqVGlXbmpYZlBSajZJT1hIMl9DU29PSl9sRnZuZHJaZ3dwQ1VwTUdJMG5ZMExhMkFn?oc=5",
-      "provenanceBadge": "⛓️ Crypto Wire",
-      "badgeType": "onchain",
-      "ref": "CBS News Live Wire",
-      "date": "2026-10-30",
-      "timeAgo": "12 hours ago",
-      "entities": "Binance, Global Exchanges & Digital Assets",
-      "incident": "$6 billion stolen in crypto hack, expert says financial institutions are \"tested on a daily basis\".",
-      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on CBS News."
-    },
-    {
-      "id": "live-crypto-heists-10534249220",
-      "category": "crypto-heists",
-      "severity": "high",
-      "impactBadge": "🚨 Breaking Wire",
-      "title": "How crypto hacking funds isolated North Korea’s nuclear programme",
-      "sourceName": "The Guardian",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUk0tVDZsMEx4M1NtS1BVd2FFWGlnMDJob2l5Nk41MWhSc05uOEhWRWNDUDNfbUdHTzFzT3p2VUl0a3o0RENWTXhTZTExc2o2eDQ3S2RiTm1VYS0yRDkzendqZ1kxeWVaMXRvUGd6Z1pWZDNHVEZQcEk5UjdaOWpnSmFjVXEtb2wzNDUxQ3VMeFV2SVVpYlBFdlZleFdtUzJDVnBWYkthV2Q1R211amc?oc=5",
-      "provenanceBadge": "⛓️ Crypto Wire",
-      "badgeType": "onchain",
-      "ref": "The Guardian Live Wire",
-      "date": "2026-10-30",
-      "timeAgo": "18 hours ago",
-      "entities": "Binance, Global Exchanges & Digital Assets",
-      "incident": "How crypto hacking funds isolated North Korea’s nuclear programme.",
-      "rootCause": "Verified reporting confirmed by official news wires and security researchers.",
-      "consequence": "Read open-access reporting on The Guardian."
     },
     {
       "id": "live-crypto-heists-9818481674",

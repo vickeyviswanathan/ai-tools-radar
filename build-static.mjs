@@ -312,7 +312,7 @@ For complete listings and full data exports, visit https://cipherati.com/llms-fu
 
   const llmsFull = `# Cipherati Full Knowledge Digest & LLM System Prompt Context
 Website: https://cipherati.com/
-Author: Vivek Viswanathan
+Publisher: Cipherati Intelligence Desk
 
 ## About Cipherati
 Cipherati is an independent, practitioner-grade radar of battle-tested AI developer tools, coding agents, and production systems — combined with real-time cybersecurity news, statutory threat provenance, and citizen scam defense intelligence. Zero vendor hype.

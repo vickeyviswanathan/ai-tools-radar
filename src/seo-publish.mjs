@@ -91,8 +91,8 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
         "name": "Cipherati",
         "description": "An open, curated directory of battle-tested AI developer tools, coding agents, and local models — with direct links, production realities, verified cybersecurity news, and citizen scam defense.",
         "publisher": {
-          "@type": "Person",
-          "name": "Vivek Viswanathan"
+          "@type": "Organization",
+          "name": "Cipherati"
         }
       },
       {
