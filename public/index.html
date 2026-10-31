@@ -38,20 +38,20 @@
 
 <style>
   :root {
-    --bg: #07090e;
-    --card: #0f141f;
-    --card-hover: #151c2c;
-    --line: #1c2436;
-    --line-active: #3b82f6;
-    --text: #f1f5f9;
-    --text-muted: #8492a6;
+    --bg: #09090b;
+    --card: #121215;
+    --card-hover: #18181b;
+    --line: #222226;
+    --line-active: #3f3f46;
+    --text: #f4f4f5;
+    --text-muted: #a1a1aa;
     --accent: #3b82f6;
-    --accent-glow: rgba(59, 130, 246, 0.15);
+    --accent-glow: rgba(59, 130, 246, 0.08);
     --gold: #f59e0b;
     --green: #10b981;
-    --green-glow: rgba(16, 185, 129, 0.12);
+    --green-glow: rgba(16, 185, 129, 0.08);
     --red: #ef4444;
-    --red-glow: rgba(239, 68, 68, 0.1);
+    --red-glow: rgba(239, 68, 68, 0.08);
   }
   * { box-sizing: border-box; }
   html, body {
@@ -71,9 +71,9 @@
 
   /* Header */
   header {
-    padding: 26px 0 20px;
+    padding: 30px 0 22px;
     border-bottom: 1px solid var(--line);
-    background: radial-gradient(circle at 50% -10%, #152238 0%, var(--bg) 75%);
+    background: var(--bg);
   }
   .top-bar {
     display: flex;
@@ -118,13 +118,11 @@
   .visitor-pill img { height: 18px; vertical-align: middle; border-radius: 4px; }
 
   h1 {
-    font-size: 36px;
+    font-size: 32px;
     margin: 0 0 10px;
     font-weight: 700;
-    letter-spacing: -0.015em;
-    background: linear-gradient(180deg, #ffffff 40%, #cbd5e1 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.025em;
+    color: #f4f4f5;
   }
   .subtitle {
     font-size: 16.5px;
@@ -136,48 +134,54 @@
 
   /* Primary View Toggle */
   .view-toggle {
-    display: flex;
-    gap: 10px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+    background: #121215;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    margin-top: 18px;
     flex-wrap: wrap;
   }
   .view-tab {
-    background: #111726;
-    border: 1px solid var(--line);
-    color: #94a3b8;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #a1a1aa;
+    padding: 8px 16px;
+    border-radius: 7px;
+    font-size: 13.5px;
+    font-weight: 500;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: all 0.15s ease;
+    transition: all 0.12s ease;
   }
   .view-tab:hover {
-    color: #fff;
-    border-color: #384860;
-    background: #172033;
+    color: #f4f4f5;
+    background: #18181b;
   }
   .view-tab.active {
-    background: var(--accent);
-    color: #040914;
-    border-color: var(--accent);
-    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+    background: #27272a;
+    color: #ffffff;
+    border-color: #3f3f46;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  .view-tab svg {
+    color: inherit;
+    flex-shrink: 0;
   }
   .view-tab .tab-count {
     background: rgba(255, 255, 255, 0.08);
-    color: inherit;
+    color: #a1a1aa;
     padding: 2px 7px;
     border-radius: 999px;
-    font-size: 11.5px;
-    font-weight: 700;
+    font-size: 11px;
+    font-weight: 600;
   }
   .view-tab.active .tab-count {
-    background: rgba(0, 0, 0, 0.2);
-    color: #040914;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
   }
 
   /* Sections */
@@ -216,101 +220,18 @@
   .reality-card {
     background: var(--card);
     border: 1px solid var(--line);
-    border-radius: 18px;
+    border-radius: 12px;
     padding: 24px;
     display: flex;
     flex-direction: column;
     position: relative;
-    transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+    transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
   }
-  
-  /* Reality Diagnostic Search & Symptom Chips */
-  .reality-count-pill {
-    font-size: 12px;
-    font-weight: 600;
-    color: #94a3b8;
-    background: #0f1624;
-    border: 1px solid var(--line);
-    padding: 5px 12px;
-    border-radius: 999px;
-  }
-  .reality-diagnostic-box {
-    margin-bottom: 24px;
-  }
-  .reality-search-bar {
-    margin-bottom: 14px;
-  }
-  .reality-search-bar input[type=search] {
-    width: 100%;
-    background: var(--card);
-    border: 1px solid var(--line);
-    color: var(--text);
-    border-radius: 12px;
-    padding: 14px 20px;
-    font-size: 15px;
-    outline: none;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .reality-search-bar input[type=search]:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-  }
-  .symptom-chips {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .symptom-chip {
-    background: #0f1624;
-    border: 1px solid var(--line);
-    color: var(--text-muted);
-    padding: 7px 14px;
-    border-radius: 999px;
-    font-size: 12.5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    user-select: none;
-    white-space: nowrap;
-  }
-  .symptom-chip:hover {
-    border-color: #384860;
-    color: #fff;
-    background: #172033;
-  }
-  .symptom-chip.active {
-    background: var(--accent);
-    color: #040914;
-    border-color: var(--accent);
-    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
-  }
-  .reality-header-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-  }
-  .reality-category-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--accent);
-    background: rgba(56, 189, 248, 0.08);
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    padding: 3px 10px;
-    border-radius: 999px;
-  }
-
   .reality-card:hover {
-    transform: translateY(-2px);
-    border-color: #2b3952;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
+    border-color: #3f3f46;
+    background: var(--card-hover);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   }
   .reality-top {
     display: flex;
@@ -478,8 +399,9 @@
     transition: border-color 0.15s, box-shadow 0.15s;
   }
   input[type=search]:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    border-color: #52525b;
+    background: #18181b;
+    box-shadow: 0 0 0 1px #52525b;
   }
   .category-pills {
     display: flex;
@@ -499,13 +421,15 @@
     user-select: none;
   }
   .cat-pill:hover {
-    border-color: #33415c;
-    color: #fff;
+    border-color: #3f3f46;
+    color: #f4f4f5;
+    background: #18181b;
   }
   .cat-pill.active {
-    background: var(--accent);
-    color: #040914;
-    border-color: var(--accent);
+    background: #27272a;
+    color: #ffffff;
+    border-color: #52525b;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   }
 
   /* Tools Grid */
@@ -523,16 +447,16 @@
     min-height: 232px;
     background: var(--card);
     border: 1px solid var(--line);
-    border-radius: 18px;
+    border-radius: 12px;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+    transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
   }
   .tool-card:hover {
-    transform: translateY(-2px);
-    border-color: #2b3952;
+    transform: translateY(-1px);
+    border-color: #3f3f46;
     background: var(--card-hover);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   }
   .tool-top {
     display: flex;
@@ -664,39 +588,61 @@
   }
   .header-text { flex: 1; min-width: 0; }
 
-  /* Animated radar sweep (pure CSS) */
-  .radar-anim {
-    position: relative;
-    width: 120px; height: 120px;
+  /* Observatory Status Badge (Linear / Raycast Style) */
+  .radar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
     flex: none;
-    border-radius: 50%;
-    border: 1px solid rgba(59, 130, 246, 0.4);
-    background:
-      radial-gradient(circle, transparent 58%, rgba(59, 130, 246, 0.06) 59%),
-      repeating-radial-gradient(circle, transparent 0 28px, rgba(59, 130, 246, 0.18) 28px 29px);
-    overflow: hidden;
   }
-  .radar-anim::before {
-    content: "";
+  .radar-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #121215;
+    border: 1px solid var(--line);
+    padding: 6px 12px;
+    border-radius: 8px;
+  }
+  .radar-icon-frame {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    background: #18181b;
+    border: 1px solid #27272a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a1a1aa;
+  }
+  .radar-live-indicator {
     position: absolute;
-    inset: 0;
+    top: -2px;
+    right: -2px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background: conic-gradient(from 0deg, rgba(56, 189, 248, 0.5), transparent 18%);
-    animation: radar-sweep 4s linear infinite;
+    background: #10b981;
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.4);
   }
-  .radar-anim::after {
-    content: "";
-    position: absolute;
-    top: 50%; left: 50%;
-    width: 6px; height: 6px;
-    margin: -3px 0 0 -3px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 8px var(--accent);
+  .radar-status-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.25;
   }
-  @keyframes radar-sweep { to { transform: rotate(360deg); } }
-  @media (prefers-reduced-motion: reduce) {
-    .radar-anim::before { animation: none; }
+  .radar-status-label {
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #71717a;
+    letter-spacing: 0.08em;
+  }
+  .radar-status-val {
+    font-size: 12px;
+    font-weight: 500;
+    color: #e4e4e7;
   }
 
   /* Stats strip under the subtitle */
@@ -915,11 +861,23 @@
       flex: 1;
       min-width: 0;
     }
-    .radar-anim {
-      width: 52px;
-      height: 52px;
-      margin-top: 2px;
+    .radar-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
       flex-shrink: 0;
+    }
+    .radar-badge {
+      padding: 4px 8px;
+      gap: 6px;
+    }
+    .radar-icon-frame {
+      width: 22px;
+      height: 22px;
+    }
+    .radar-status-text {
+      display: none;
     }
     h1 {
       font-size: 26px;
@@ -1319,10 +1277,7 @@
     h1 {
       font-size: 22px;
     }
-    .radar-anim {
-      width: 42px;
-      height: 42px;
-    }
+    
     .view-tab {
       font-size: 11.5px;
       padding: 9px 4px;
@@ -1778,10 +1733,11 @@
 
   /* Emergency Reporting & Action Box */
   .scam-emergency-box {
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
-    border: 1px solid rgba(239, 68, 68, 0.35);
-    border-radius: 12px;
-    padding: 16px 20px;
+    background: #121215;
+    border: 1px solid var(--line);
+    border-left: 3px solid #ef4444;
+    border-radius: 10px;
+    padding: 18px 20px;
     margin-bottom: 24px;
   }
   .scam-emergency-header {
@@ -2013,7 +1969,21 @@
         </div>
       </div>
             <div class="radar-col">
-        <div class="radar-anim" aria-hidden="true"></div>
+        <div class="radar-badge" title="Cipherati Observatory Status">
+          <div class="radar-icon-frame">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a10 10 0 0 1 10 10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2"/>
+            </svg>
+            <span class="radar-live-indicator"></span>
+          </div>
+          <div class="radar-status-text">
+            <span class="radar-status-label">OBSERVATORY</span>
+            <span class="radar-status-val">Operational</span>
+          </div>
+        </div>
         <div class="visitor-pill" title="Live visitors counter">
           <span class="pulse-dot"></span>
           <img src="https://visitor-badge.laobi.icu/badge?page_id=elite-ai-radar.main" alt="visitors counter" />
@@ -2024,16 +1994,24 @@
     <!-- Primary View Switcher -->
     <div class="view-toggle" role="tablist" aria-label="Primary site navigation">
       <button class="view-tab active" id="tab-tools" role="tab" aria-selected="true" aria-controls="grid-container" onclick="switchView('tools')">
-        🧭 Curated Tools Directory <span class="tab-count" id="tab-tools-count">187</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <span>Tools Directory</span>
+        <span class="tab-count" id="tab-tools-count">187</span>
       </button>
       <button class="view-tab" id="tab-realities" role="tab" aria-selected="false" aria-controls="realities" onclick="switchView('realities')">
-        ⚡ AI Realities <span class="tab-count">18</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <span>AI Realities</span>
+        <span class="tab-count">18</span>
       </button>
       <button class="view-tab" id="tab-threats" role="tab" aria-selected="false" aria-controls="threats" onclick="switchView('news')">
-        🛡️ Cybersecurity News <span class="tab-count" id="tab-threats-count">16</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Cybersecurity News</span>
+        <span class="tab-count" id="tab-threats-count">15</span>
       </button>
       <button class="view-tab" id="tab-scams" role="tab" aria-selected="false" aria-controls="scams" onclick="switchView('scams')">
-        🚨 Scam Alerts <span class="tab-count" id="tab-scams-count">15</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>Scam Alerts</span>
+        <span class="tab-count" id="tab-scams-count">15</span>
       </button>
     </div>
   </div>
@@ -2044,14 +2022,14 @@
   <section class="section-wrap" id="radar">
     <!-- Emergency Fast-Access Banner for Citizens in Panic -->
     <div class="emergency-quick-banner" onclick="switchView('scams')" role="alert" title="Click to view National Cyber Helpline 1930 & Scam Alerts">
-      <span class="eq-icon">🚨</span>
+      <span class="eq-icon" style="display:inline-flex;align-items:center;color:#ef4444;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
       <span class="eq-text"><strong>Need Emergency Cyber Fraud Help?</strong> Call <strong>1930</strong> (Toll-Free) or view the <strong>Scam Alerts &amp; Golden Hour Reporting Guide →</strong></span>
     </div>
 
     <div class="radar-header">
       <div class="section-header">
         <div>
-          <h2 class="section-title">🧭 The Curated Tools Directory</h2>
+          <h2 class="section-title">Curated Tools Directory</h2>
           <span class="section-note" id="tool-count-badge">Loading verified tools...</span>
         </div>
       </div>
@@ -4715,7 +4693,7 @@
   <section class="section-wrap" id="realities" style="display: none;">
     <div class="section-header">
       <div>
-        <h2 class="section-title">⚡ 18 AI Realities</h2>
+        <h2 class="section-title">AI Realities: What Breaks in Production</h2>
         <span class="section-note">What breaks when you put AI into production, and what works instead</span>
       </div>
       <span class="reality-count-pill" id="reality-count-badge">Showing all 18 AI Realities</span>
@@ -5129,10 +5107,10 @@
   <section class="section-wrap" id="threats" style="display: none;">
     <div class="section-header">
       <div>
-        <h2 class="section-title">🛡️ Cybersecurity News</h2>
+        <h2 class="section-title">Cybersecurity News on Cipherati</h2>
         <span class="section-note">Verified cybersecurity reporting and analysis across banking, enterprise defense, and global security developments.</span>
       </div>
-      <span class="reality-count-pill" id="threat-count-badge">Showing all 16 verified news stories</span>
+      <span class="reality-count-pill" id="threat-count-badge">Showing all 15 verified news stories</span>
     </div>
 
     <!-- Cybersecurity News Sub-Tabs & Live Filter -->
@@ -5152,6 +5130,174 @@
     </div>
 
     <div class="threat-cards-grid" id="threats-container">
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-19863584729">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-19863584729')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE42LUZmUDY0dHZWLWJiaFR0MnFtdGZwZmg3ZTRpMkMwaWxSUUVyWWJOa3NNWklNa0kyQjllU0Y0UE9vb1J6Y2ZUQl94dm9YUXlSUVFza1pPNUlSS1Vjd2xxMGFmQ2lMYThWZFAzbmNEWkJMaWRneWtj?oc=5" target="_blank" rel="noopener noreferrer">
+          Delhi Police Arrest Five for Allegedly Supplying Bank Accounts to Fraud Network <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Indian Banking Infrastructure &amp; NBFCs</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Delhi Police Arrest Five for Allegedly Supplying Bank Accounts to Fraud Network.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The 420.in</span>
+          <span class="threat-ref">The 420.in Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMid0FVX3lxTE42LUZmUDY0dHZWLWJiaFR0MnFtdGZwZmg3ZTRpMkMwaWxSUUVyWWJOa3NNWklNa0kyQjllU0Y0UE9vb1J6Y2ZUQl94dm9YUXlSUVFza1pPNUlSS1Vjd2xxMGFmQ2lMYThWZFAzbmNEWkJMaWRneWtj?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The 420.in ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-20446194799">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Financial Fraud Probe</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-20446194799')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQSWNsRldYamJUNkJ6MkVZYnJfWi1kTnAxWnNTM3RwLVA1aF8wWGM5WC13a29OcHZJeFRWQllBektYYXlqLW5vNTZqZ3Q3OUVkTF9jTU50cDF3eF9CaVVMaGZXUGxrNUNyQnZGMEh5T29GR0xwZ3NJZTFiOVRyQU45QXhDajJWdlp3QUFnb3NvQ3p0WkswZTRQRWhoc010M2FjeHVaRGtUbFFEQkt1dGl5bWhvcnFLamNPbmfSAb4BQVVfeXFMTjJ1bXlLczdaZlNOd0E0VTFjVm4zMG1OaDlaS2dhNWNuOHlnallhR3V4ZjQ4NUdDVnBiVy0wdlI0SUViRS1YMUtwci0zQmNhbW1oUDZCTnJUbTFDTjdhN0dkOWVIQkU4YkxyU2ZDckZraG9ENFQ2M0Z3SElJb01NWUsxdDdoZF90SVc0dDJmOEc3MG5hUUFpOEdTZWNpNk1Yd2dNZWNESmNYU21FUExIczF5TmdnR1dhSnA1NUFzQQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Took Rs 50K, facilitated fraud of Rs 50 crore: CBI court denies bail to Haryana labour board clerk in IDFC First Bank scam <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Indian Banking Infrastructure &amp; NBFCs</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Took Rs 50K, facilitated fraud of Rs 50 crore: CBI court denies bail to Haryana labour board clerk in IDFC First Bank scam.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Tribune</span>
+          <span class="threat-ref">The Tribune Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQSWNsRldYamJUNkJ6MkVZYnJfWi1kTnAxWnNTM3RwLVA1aF8wWGM5WC13a29OcHZJeFRWQllBektYYXlqLW5vNTZqZ3Q3OUVkTF9jTU50cDF3eF9CaVVMaGZXUGxrNUNyQnZGMEh5T29GR0xwZ3NJZTFiOVRyQU45QXhDajJWdlp3QUFnb3NvQ3p0WkswZTRQRWhoc010M2FjeHVaRGtUbFFEQkt1dGl5bWhvcnFLamNPbmfSAb4BQVVfeXFMTjJ1bXlLczdaZlNOd0E0VTFjVm4zMG1OaDlaS2dhNWNuOHlnallhR3V4ZjQ4NUdDVnBiVy0wdlI0SUViRS1YMUtwci0zQmNhbW1oUDZCTnJUbTFDTjdhN0dkOWVIQkU4YkxyU2ZDckZraG9ENFQ2M0Z3SElJb01NWUsxdDdoZF90SVc0dDJmOEc3MG5hUUFpOEdTZWNpNk1Yd2dNZWNESmNYU21FUExIczF5TmdnR1dhSnA1NUFzQQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Tribune ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-5451658018">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-5451658018')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNnlPbVJFcEJvMkZlNG5wam5QX0k1cUtCb2FCSklSVkJHR0wtaVJBc3BmRmw1Sjdocm9zandQZWdBNEZoNE1TRGRkcnNfT0Y5VmxhcmJOWU1McnBkSTA4b3Z5OUhvMGFMV1J2SGMyaEZOZTJfLXBtSk45cHQxVWNCbXQ2M2JVU0VXVU9Z?oc=5" target="_blank" rel="noopener noreferrer">
+          Uzbekistan Central Bank Proposes New Anti-Fraud Measures <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Indian Banking Infrastructure &amp; NBFCs</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Uzbekistan Central Bank Proposes New Anti-Fraud Measures.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">UzDaily.uz</span>
+          <span class="threat-ref">UzDaily.uz Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNnlPbVJFcEJvMkZlNG5wam5QX0k1cUtCb2FCSklSVkJHR0wtaVJBc3BmRmw1Sjdocm9zandQZWdBNEZoNE1TRGRkcnNfT0Y5VmxhcmJOWU1McnBkSTA4b3Z5OUhvMGFMV1J2SGMyaEZOZTJfLXBtSk45cHQxVWNCbXQ2M2JVU0VXVU9Z?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on UzDaily.uz ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-10770711279">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-10770711279')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPZ0x5OVpKX1FCQWNvMmgySUhNaFFNZHptQkppR1pQQ1FHYWRELXBpX2xyUndFX0hza3J0dWJ4TGU3azhydkRIUFR2emRCbTQ3eC1kS3BLbDhkVTFKWTZZS0NGTXdnSHRHNnN5a015bzJlU1BqaEVVM3RjU0dpeXNFQ0RmSWc?oc=5" target="_blank" rel="noopener noreferrer">
+          DWP bank checks benefit eligibility in £1.2 bn fraud crackdown <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Indian Banking Infrastructure &amp; NBFCs</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          DWP bank checks benefit eligibility in £1.2 bn fraud crackdown.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Beinsure</span>
+          <span class="threat-ref">Beinsure Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPZ0x5OVpKX1FCQWNvMmgySUhNaFFNZHptQkppR1pQQ1FHYWRELXBpX2xyUndFX0hza3J0dWJ4TGU3azhydkRIUFR2emRCbTQ3eC1kS3BLbDhkVTFKWTZZS0NGTXdnSHRHNnN5a015bzJlU1BqaEVVM3RjU0dpeXNFQ0RmSWc?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Beinsure ↗
+        </a>
+      </div>
+    </article>
+
     <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-3521709493">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5178,7 +5324,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Small Finance Bank investigates suspected Salesforce data breach; AU Small Finance Bank breach reported, hackers threaten to leak Aadhaar and customer records. Verified across multiple open wires including: BusinessLine, India Today, ThePrint, Business Standard.
+          AU Small Finance Bank probes ‘potential data leak’ after hacker group claims breach. Key developments: AU Bank probes potential data leak; AU Small Finance Bank probes potential data leak from SaaS platform after hacker group claims breach. Verified across multiple open wires including: The Times of India, ThePrint, The Economic Times, TradingView.
         </div>
       </div>
 
@@ -5220,7 +5366,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, https://www.fintechbiznews.com/, MillenniumPost.
+          CBI files FIR against Chandra Proteco and directors for alleged bank fraud. Key developments: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Books Chandra Proteco Directors in Rs 210 Cr Bank Fraud. Verified across multiple open wires including: BW Police World, Rediff MoneyWiz, MillenniumPost, The 420.in.
         </div>
       </div>
 
@@ -5236,189 +5382,21 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-10931990812">
+    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-7535230428">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
           <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-10931990812')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxORHFZbHJ5aUpGdWZJdkxBR3ZrVGVLbGR2aDk0VTd3VVhrdy1ueUpNYV9UUm9tckd5b3ludVBRN3pMb0NheHdCdnhxMm9NMUNKeHFNdUJCNi0yT3dtT3cweXJyMWVIYmE4cFhaVU1HQllWWlR3NUE5NlVIX2l3eDFFMmhXQnRIbE44dC1uNzBIN1BRdnRLM3JYaGZYU1BCWFFtQjlTSjVPMnJWWVVNY0cweEJKSdIBuwFBVV95cUxOSkpnZkdtV1p0bHRaOGZuYmRxSlFES1Rna1NqdnhkWlVobGtQXzdOTS0wcUE2RkZ4ZkhNcF80dElZN0NVUHBmajJfRnRwQWVVOXhhLTJtTzY2eXR5bDdFa3ViV2g1dXhWQUhoYWE5bnZhX3kzU1dNMU5xbGlTSUk0X3BxYWZDUno2VFJmSW1qVG55UHNKN1ZNN0hUZDd5ZEUxX3U2bFgwbUZ2NjhScXNNdGYxemVkNS1SUXpz?oc=5" target="_blank" rel="noopener noreferrer">
-          How To Avoid UPI Fraud? PhonePe Shares 3 Checks Every User Must Follow <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Indian Banking Infrastructure &amp; NBFCs</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          How To Avoid UPI Fraud? PhonePe Shares 3 Checks Every User Must Follow.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">NDTV</span>
-          <span class="threat-ref">NDTV Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiswFBVV95cUxORHFZbHJ5aUpGdWZJdkxBR3ZrVGVLbGR2aDk0VTd3VVhrdy1ueUpNYV9UUm9tckd5b3ludVBRN3pMb0NheHdCdnhxMm9NMUNKeHFNdUJCNi0yT3dtT3cweXJyMWVIYmE4cFhaVU1HQllWWlR3NUE5NlVIX2l3eDFFMmhXQnRIbE44dC1uNzBIN1BRdnRLM3JYaGZYU1BCWFFtQjlTSjVPMnJWWVVNY0cweEJKSdIBuwFBVV95cUxOSkpnZkdtV1p0bHRaOGZuYmRxSlFES1Rna1NqdnhkWlVobGtQXzdOTS0wcUE2RkZ4ZkhNcF80dElZN0NVUHBmajJfRnRwQWVVOXhhLTJtTzY2eXR5bDdFa3ViV2g1dXhWQUhoYWE5bnZhX3kzU1dNMU5xbGlTSUk0X3BxYWZDUno2VFJmSW1qVG55UHNKN1ZNN0hUZDd5ZEUxX3U2bFgwbUZ2NjhScXNNdGYxemVkNS1SUXpz?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on NDTV ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-278622367">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-278622367')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxQa2hiMjdoaGdOYlMzR1Zfb2xwVGk0OE9GUnN4TGxORE9sMkQ0WkFmUERGOUhsdXdZSjBiR2ctZU9pNEFoelUweHg4Qlo5S0xfZ3ZoSnd4cUt3VEdlVHRoNnFwMWdmb3RHVVhoak5MN2JRckg0c0xWcEtNME9yQm9KVjZvQnl5ak9wT3R0cWZIWXlXdEpUOVM3TVpybzVaNHZQR0YxNHdPZVRhRGxhZkF3RkdVaGU3alFzeDZkdXpicmktYU0zMVYxUEhWWmE2LUNBbldJb0NPbkpRSHM?oc=5" target="_blank" rel="noopener noreferrer">
-          SC Seeks Strict Bank Liability, Mandatory Compensation for Victims of Digital Arrest, Cyber Fraud <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Indian Banking Infrastructure &amp; NBFCs</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          SC Seeks Strict Bank Liability, Mandatory Compensation for Victims of Digital Arrest, Cyber Fraud.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">KNN India</span>
-          <span class="threat-ref">KNN India Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxQa2hiMjdoaGdOYlMzR1Zfb2xwVGk0OE9GUnN4TGxORE9sMkQ0WkFmUERGOUhsdXdZSjBiR2ctZU9pNEFoelUweHg4Qlo5S0xfZ3ZoSnd4cUt3VEdlVHRoNnFwMWdmb3RHVVhoak5MN2JRckg0c0xWcEtNME9yQm9KVjZvQnl5ak9wT3R0cWZIWXlXdEpUOVM3TVpybzVaNHZQR0YxNHdPZVRhRGxhZkF3RkdVaGU3alFzeDZkdXpicmktYU0zMVYxUEhWWmE2LUNBbldJb0NPbkpRSHM?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on KNN India ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-3538865005">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Financial Fraud Probe</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-3538865005')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE5xWmFMQUdreFdPYXgxZnFBaS1sVzd0UlNsYlZNTmNNbWtRUlVldnpMZzBoUWhZMElmTDQ1MzVhcmxJYUdpN0dsS0xTdDA3Rm9MRzRFUFdyck1ZclQzUFU4SHdTcHlWMThYRHZzN2RNamxZSlhPLTZpZnZHNA?oc=5" target="_blank" rel="noopener noreferrer">
-          Delhi Police Bust ₹5.17 Crore Bank Fraud Network, Two Arrested <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Indian Banking Infrastructure &amp; NBFCs</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Delhi Police Bust ₹5.17 Crore Bank Fraud Network, Two Arrested.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">The 420.in</span>
-          <span class="threat-ref">The 420.in Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMie0FVX3lxTE5xWmFMQUdreFdPYXgxZnFBaS1sVzd0UlNsYlZNTmNNbWtRUlVldnpMZzBoUWhZMElmTDQ1MzVhcmxJYUdpN0dsS0xTdDA3Rm9MRzRFUFdyck1ZclQzUFU4SHdTcHlWMThYRHZzN2RNamxZSlhPLTZpZnZHNA?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on The 420.in ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-10134829711">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 BFSI Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-10134829711')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNbi15OTFBTy01TGM0ZlhsbXcwem1QYVVMUkdPNThMLUF0SzNVY3RRVmZ0WWd5cXRDaUg4MHdEMnVnc09TXzNjU0lRV0xzb2RObXNpNTloNkdUSDZIcDFhUm5KX0JURURoTkNHd1pudS1SaEQ3LUd6TTU1MmlTSE1HcTdzU1Nral9HOG5HMWxoRVl6MG1q?oc=5" target="_blank" rel="noopener noreferrer">
-          Fraud Due to Bank Negligence? Supreme Court Says the Bank Pays <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Indian Banking Infrastructure &amp; NBFCs</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Fraud Due to Bank Negligence? Supreme Court Says the Bank Pays.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Lawful Talks</span>
-          <span class="threat-ref">Lawful Talks Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNbi15OTFBTy01TGM0ZlhsbXcwem1QYVVMUkdPNThMLUF0SzNVY3RRVmZ0WWd5cXRDaUg4MHdEMnVnc09TXzNjU0lRV0xzb2RObXNpNTloNkdUSDZIcDFhUm5KX0JURURoTkNHd1pudS1SaEQ3LUd6TTU1MmlTSE1HcTdzU1Nral9HOG5HMWxoRVl6MG1q?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Lawful Talks ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-1959085837">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🔒 Assets Frozen</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-sev threat-sev-critical">CRITICAL</span>
           <span class="threat-badge threat-prov threat-prov-onchain">⛓️ Crypto Wire</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-1959085837')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-7535230428')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOenpUcWJESExLSm14QmdHTHF1T0dXR09jTVpCRDgxbVFKUVN5T0J3VjM0VHFhR1VNNzBmaUE1bHdaSllxaDZObHhJN001X0ZSaWh3T3ZzbTFob29Ub0ZCR2RuWlZTYlM3dUZVSnBWWHNsRjJCN1lBcDBWcHc0ZF90THhpMU91aXBkenBQc25icXRvNjFBN0U3TnNkX1hNaFZta0Uyc3hjLXNrT1JuajhwUzFoRElwNGtXM1EyaUczR2xDYVd1VklHTA?oc=5" target="_blank" rel="noopener noreferrer">
-          ‘Biggest hack in history’: Crypto giant freezes assets after $8.9b heist <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1SU200dG5RcjhxVG5FTlhQbG5EYnJiWlF0OWthVkhSYk81TkNRTDJubmRBb1ZENVl0OGZlSmFoOVYwX2tiNTJoM0Vod1ZYT0VSNVRNdVpTLXJWenh6NHdGWDlBdUktWl9YNXF4NGVkOXZYWjVUajF5Tw?oc=5" target="_blank" rel="noopener noreferrer">
+          Hackers just stole $6 billion in crypto. It’s not the first time, and it won’t be the last <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5430,37 +5408,37 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          ‘Biggest hack in history’: Crypto giant freezes assets after $8.9b heist.
+          Hackers just stole $6 billion in crypto. It’s not the first time, and it won’t be the last.
         </div>
       </div>
 
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">SMH.com.au</span>
-          <span class="threat-ref">SMH.com.au Live Wire</span>
+          <span class="threat-source-name">CNN</span>
+          <span class="threat-ref">CNN Live Wire</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOenpUcWJESExLSm14QmdHTHF1T0dXR09jTVpCRDgxbVFKUVN5T0J3VjM0VHFhR1VNNzBmaUE1bHdaSllxaDZObHhJN001X0ZSaWh3T3ZzbTFob29Ub0ZCR2RuWlZTYlM3dUZVSnBWWHNsRjJCN1lBcDBWcHc0ZF90THhpMU91aXBkenBQc25icXRvNjFBN0U3TnNkX1hNaFZta0Uyc3hjLXNrT1JuajhwUzFoRElwNGtXM1EyaUczR2xDYVd1VklHTA?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on SMH.com.au ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1SU200dG5RcjhxVG5FTlhQbG5EYnJiWlF0OWthVkhSYk81TkNRTDJubmRBb1ZENVl0OGZlSmFoOVYwX2tiNTJoM0Vod1ZYT0VSNVRNdVpTLXJWenh6NHdGWDlBdUktWl9YNXF4NGVkOXZYWjVUajF5Tw?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on CNN ↗
         </a>
       </div>
     </article>
 
-    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-15917467890">
+    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-9818481674">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
           <span class="threat-badge threat-badge-impact">💰 $6.3B Record Hack</span>
           <span class="threat-badge threat-sev threat-sev-critical">CRITICAL</span>
           <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-15917467890')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-9818481674')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
         <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5" target="_blank" rel="noopener noreferrer">
-          Hackers steal $6.3 billion from Binance in record heist blamed on North Korea <span class="threat-ext-icon">↗</span>
+          Binance seeks to shore up confidence after record $6.3 billion heist <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5472,7 +5450,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          Hackers steal $6.3 billion from Binance in record heist blamed on North Korea. Key developments: Binance Suffers “Largest Bank Heist In Human History,” And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History. Verified across multiple open wires including: Yahoo Finance, TRM Labs, CNBC, NBC News.
+          Binance seeks to shore up confidence after record $6.3 billion heist. Key developments: Binance Suffers &quot;Largest Bank Heist In Human History,&quot; And Musk Issues Warning About State Of Cybersecurity After $6.3 Billion Hack; Crypto industry suffers &#39;largest bank heist in human history&#39; as billions stolen in Binance hack. Verified across multiple open wires including: 24/7 Wall St., Radio Royal, TRM Labs, CNBC.
         </div>
       </div>
 
@@ -5530,90 +5508,6 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-3576309623">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-onchain">⛓️ Crypto Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-3576309623')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOalREVGdETGFHV0VfWnhRdWVhVTVGbGJkcjk5NHo2R3pTM3FyTXBDQVpVUmFOS1I4V1phNGNFREZrd1Y3T2J2dGZEaElIbzhPNU05M0ZoVzlDTV9TSlNNcUZnNXE5MVlSNUFjWEFGblRrOGhmOGxuNFNBNUFNVng0MjdwVjdETDZSd0xyRzZSdU9LaVI0NlhrRlZqVQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Bitcoin ‘Goes to Zero’ After a Hack, Chamath Palihapitiya Predicts <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Binance, Global Exchanges &amp; Digital Assets</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Bitcoin ‘Goes to Zero’ After a Hack, Chamath Palihapitiya Predicts.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Yahoo Finance</span>
-          <span class="threat-ref">Yahoo Finance Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOalREVGdETGFHV0VfWnhRdWVhVTVGbGJkcjk5NHo2R3pTM3FyTXBDQVpVUmFOS1I4V1phNGNFREZrd1Y3T2J2dGZEaElIbzhPNU05M0ZoVzlDTV9TSlNNcUZnNXE5MVlSNUFjWEFGblRrOGhmOGxuNFNBNUFNVng0MjdwVjdETDZSd0xyRzZSdU9LaVI0NlhrRlZqVQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Yahoo Finance ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-1246487518">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-1246487518')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
-          Data Leak Exposes Information on over 40,000 US Homeland Security Employees <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Data Leak Exposes Information on over 40,000 US Homeland Security Employees.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Deccan Chronicle</span>
-          <span class="threat-ref">Deccan Chronicle Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Deccan Chronicle ↗
-        </a>
-      </div>
-    </article>
-
     <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-12643287449">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5656,21 +5550,21 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5660613474">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5679334474">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-badge-impact">🔒 Assets Frozen</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5660613474')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5679334474')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5" target="_blank" rel="noopener noreferrer">
-          Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNZWtDa2JmUnFRRENlQ0RoX2hseFpyajltZE5vbjUwdnlDeTQ5M01zanFrNTBJcE1NV0RwZGFCd29LQXZQN2RYd3pBZnhNbU91eEdZalRSbVpXbTdnS2VXMXNaWE9ZdV9tSHVub29PUy1kX3BFYTNZUWM2NFpTLTZTWGdLX2hTXzYxR2JPanVaeVowcVZmMTZubVZxZE9QSjFPYmVuQjJFVVZqTUJKRUlMclM0NGM4YTNzMmR0ZUdR?oc=5" target="_blank" rel="noopener noreferrer">
+          EXCLUSIVE: Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5682,18 +5576,60 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Wire Report Summary</strong>
-          Mistral AI Publicly Releases Large 4, Targets Cybersecurity Users.
+          EXCLUSIVE: Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say.
         </div>
       </div>
 
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Deccan Chronicle</span>
-          <span class="threat-ref">Deccan Chronicle Live Wire</span>
+          <span class="threat-source-name">Reuters</span>
+          <span class="threat-ref">Reuters Live Wire</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPNXBwb21ZZUpKeWMzdHVZRUdOR1pLTm4yd1dLRHZENUdsQVdmX3lualNTbWczeVVjQzRHV0VUa3dvTlVJRFNDU3lBZ1lSWkd5cFpmUGZ2Ri1veFFDYmwzaGphQTRyX3dTbWlFTEF6UV9pRlE4VGJkanEwYkdITnZBOXNqVTVGMloxeXQyYTlZZ05hc2JvNl9abDFRX3Zyb1JvQ2hqVVNPS0pJNGNubUd1cllaNG5NZ9IBuwFBVV95cUxNSkppNUxxd0ZObjNuSEs4YVR3UXZ4S2NFZE9RQ0N4TC1hVS1jVGJOV29sUmo2dlNvYzZRbG1YelZFZjdxaURxMjFjcXVkWWdvc3U3eHNXbE03RFJkNTRSU2E5Q1pqN3g0aEoxQTMtZEh4RDJKaFZYUGZObUZfdzBKSlJKV1pKNkREOHlPMnh3RGRGUW1sRDdpZ2dJZUpFUVZ6dUtlX2ZZamc5Yzk4VXhWTU5fODBWRkxKTE1n?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Deccan Chronicle ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNZWtDa2JmUnFRRENlQ0RoX2hseFpyajltZE5vbjUwdnlDeTQ5M01zanFrNTBJcE1NV0RwZGFCd29LQXZQN2RYd3pBZnhNbU91eEdZalRSbVpXbTdnS2VXMXNaWE9ZdV9tSHVub29PUy1kX3BFYTNZUWM2NFpTLTZTWGdLX2hTXzYxR2JPanVaeVowcVZmMTZubVZxZE9QSjFPYmVuQjJFVVZqTUJKRUlMclM0NGM4YTNzMmR0ZUdR?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Reuters ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-18083774526">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-18083774526')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
+          Mistral AI publicly releases Large 4, targets cybersecurity users <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Mistral AI publicly releases Large 4, targets cybersecurity users.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Reuters</span>
+          <span class="threat-ref">Reuters Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Reuters ↗
         </a>
       </div>
     </article>
@@ -5740,6 +5676,48 @@
       </div>
     </article>
 
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-792151822">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-792151822')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5" target="_blank" rel="noopener noreferrer">
+          Google launches Gemini 4 Carbon AI model with cybersecurity focus <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Google launches Gemini 4 Carbon AI model with cybersecurity focus.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Ada Derana</span>
+          <span class="threat-ref">Ada Derana Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Ada Derana ↗
+        </a>
+      </div>
+    </article>
+
     <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5792857321">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5781,48 +5759,6 @@
         </a>
       </div>
     </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-25291081211">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-25291081211')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDV3WWJ5Ulh3Q05tT203WGNGVE1UNmFvZ2ZoclFXemtrWXFhNlRhUmtabmlPZXRaYU1sQ251VWhSSWJMODNJQkRrMk9MNFdfb1RVT2VJQTR4akpfM0JQNk9wMkpMV2tFY2tHc2ZpTGMwcHlLNFU3UDBrZk5MbGFrb2ZqX25XRVZCQmI5Z29LbDI5cjF2S0JodjVNcVVmV3RyUFR1SW5RZUwwY2JlSWJrRUMyNEgta3dl?oc=5" target="_blank" rel="noopener noreferrer">
-          EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-          <span class="threat-ref">Reuters Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDV3WWJ5Ulh3Q05tT203WGNGVE1UNmFvZ2ZoclFXemtrWXFhNlRhUmtabmlPZXRaYU1sQ251VWhSSWJMODNJQkRrMk9MNFdfb1RVT2VJQTR4akpfM0JQNk9wMkpMV2tFY2tHc2ZpTGMwcHlLNFU3UDBrZk5MbGFrb2ZqX25XRVZCQmI5Z29LbDI5cjF2S0JodjVNcVVmV3RyUFR1SW5RZUwwY2JlSWJrRUMyNEgta3dl?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
-        </a>
-      </div>
-    </article>
     </div>
   
     <div class="threat-empty-state" id="threat-empty-state" style="display: none;">
@@ -5837,7 +5773,7 @@
   <section class="section-wrap" id="scams" style="display: none;">
     <div class="section-header">
       <div>
-        <h2 class="section-title">🚨 Scam Alerts</h2>
+        <h2 class="section-title">Scam Defense &amp; Alerts</h2>
         <span class="section-note">How to spot online scams, protect your accounts, and report cyber fraud.</span>
       </div>
       <span class="reality-count-pill" id="scam-count-badge">Showing all 15 verified scam alerts</span>
@@ -5847,7 +5783,7 @@
     <div class="scam-emergency-box">
       <div class="scam-emergency-header">
         <div class="scam-emergency-title">
-          <span class="scam-emergency-icon">🚨</span>
+          <span class="scam-emergency-icon" style="display:inline-flex;align-items:center;color:#ef4444;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
           <strong>Emergency Reporting &amp; Action</strong>
         </div>
         <button type="button" class="share-btn" onclick="shareEmergencyGuide()" title="Share Emergency Guide" aria-label="Share Emergency Guide">
@@ -5857,15 +5793,15 @@
       <div class="scam-emergency-grid">
         <div class="scam-emergency-col">
           <a href="tel:1930" class="scam-emergency-item emergency-hotline" title="Call National Cyber Helpline">
-            <span class="item-icon">📞</span>
+            <span class="item-icon" style="display:inline-flex;align-items:center;color:#f87171;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
             <span class="item-text"><strong>1930</strong> (Toll-Free Helpline)</span>
           </a>
           <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" class="scam-emergency-item" title="File complaint on National Cyber Crime Portal">
-            <span class="item-icon">🌐</span>
+            <span class="item-icon" style="display:inline-flex;align-items:center;color:#60a5fa;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
             <span class="item-text"><strong>cybercrime.gov.in</strong> (File e-FIR) ↗</span>
           </a>
           <a href="https://sancharsaathi.gov.in" target="_blank" rel="noopener noreferrer" class="scam-emergency-item" title="Report fraud calls and SMS on Chakshu">
-            <span class="item-icon">🛡️</span>
+            <span class="item-icon" style="display:inline-flex;align-items:center;color:#10b981;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
             <span class="item-text"><strong>sancharsaathi.gov.in</strong> (Chakshu) ↗</span>
           </a>
         </div>
