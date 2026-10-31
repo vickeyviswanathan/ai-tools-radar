@@ -1523,12 +1523,6 @@
     color: #ffffff; display: inline-flex; align-items: center; justify-content: center;
     font-weight: 800; font-size: 14px;
   }
-  .mobile-quick-home-btn {
-    display: none;
-    width: 36px; height: 36px; border-radius: 9px; border: 1px solid var(--line);
-    background: var(--surface-subtle); color: var(--text); font-size: 16px;
-    align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0;
-  }
 
   .threat-card.card-highlight, .reality-card.card-highlight, .scam-card.card-highlight {
     outline: 3px solid var(--accent) !important;
@@ -1579,7 +1573,6 @@
     .sidebar-close-btn { display: inline-flex; align-items: center; justify-content: center; }
     .mobile-menu-btn { display: inline-flex; }
     .mobile-brand-group { display: flex; }
-    .mobile-quick-home-btn { display: inline-flex; }
     .mobile-bottom-nav { display: grid; }
     .view-toggle { display: flex; }
     header.top-portal-bar { padding: 10px 12px; width: 100%; max-width: 100%; }
@@ -1704,7 +1697,6 @@
         </div>
 
         <div class="top-actions-right">
-          <button type="button" class="mobile-quick-home-btn" onclick="goHome(event)" title="Go to Homepage" aria-label="Go to Homepage">🏠</button>
           <button type="button" class="top-pill-btn" id="header-theme-btn" onclick="toggleTheme()" title="Switch Light / Dark Theme">
             <span id="theme-toggle-icon">🌙</span>
             <span id="theme-toggle-label">Dark Mode</span>
