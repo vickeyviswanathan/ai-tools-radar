@@ -38,20 +38,21 @@
 
 <style>
   :root {
-    --bg: #09090b;
-    --card: #121215;
-    --card-hover: #18181b;
-    --line: #222226;
-    --line-active: #3f3f46;
-    --text: #f4f4f5;
-    --text-muted: #a1a1aa;
-    --accent: #3b82f6;
-    --accent-glow: rgba(59, 130, 246, 0.08);
+    --bg: #fbfbfd;
+    --card: #ffffff;
+    --card-hover: #ffffff;
+    --line: #e5e5ea;
+    --line-active: #0071e3;
+    --text: #1d1d1f;
+    --text-muted: #86868b;
+    --text-body: #424245;
+    --accent: #0071e3;
+    --accent-glow: rgba(0, 113, 227, 0.08);
     --gold: #f59e0b;
-    --green: #10b981;
-    --green-glow: rgba(16, 185, 129, 0.08);
-    --red: #ef4444;
-    --red-glow: rgba(239, 68, 68, 0.08);
+    --green: #34c759;
+    --green-glow: rgba(52, 199, 89, 0.08);
+    --red: #ff3b30;
+    --red-glow: rgba(255, 59, 48, 0.08);
   }
   * { box-sizing: border-box; }
   html, body {
@@ -60,7 +61,7 @@
   }
   body {
     margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", "Inter", sans-serif;
     background: var(--bg);
     color: var(--text);
     -webkit-font-smoothing: antialiased;
@@ -71,9 +72,9 @@
 
   /* Header */
   header {
-    padding: 30px 0 22px;
+    padding: 32px 0 24px;
     border-bottom: 1px solid var(--line);
-    background: var(--bg);
+    background: #ffffff;
   }
   .top-bar {
     display: flex;
@@ -100,14 +101,15 @@
   .visitor-pill {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background: #0f1624;
-    border: 1px solid var(--line);
-    padding: 5px 16px;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #e5e5ea;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    padding: 4px 12px;
     border-radius: 999px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
-    color: #94a3b8;
+    color: #86868b;
   }
   .pulse-dot {
     width: 8px; height: 8px;
@@ -122,7 +124,7 @@
     margin: 0 0 10px;
     font-weight: 700;
     letter-spacing: -0.025em;
-    color: #f4f4f5;
+    color: #1d1d1f;
   }
   .subtitle {
     font-size: 16.5px;
@@ -135,53 +137,54 @@
   /* Primary View Toggle */
   .view-toggle {
     display: inline-flex;
-    gap: 4px;
-    padding: 4px;
-    background: #121215;
-    border: 1px solid var(--line);
-    border-radius: 10px;
+    gap: 3px;
+    padding: 3px;
+    background: #f5f5f7;
+    border: 1px solid #e5e5ea;
+    border-radius: 999px;
     margin-top: 18px;
     flex-wrap: wrap;
   }
   .view-tab {
     background: transparent;
     border: 1px solid transparent;
-    color: #a1a1aa;
-    padding: 8px 16px;
-    border-radius: 7px;
+    color: #6e6e73;
+    padding: 7px 16px;
+    border-radius: 999px;
     font-size: 13.5px;
     font-weight: 500;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: all 0.12s ease;
+    transition: all 0.15s ease;
   }
   .view-tab:hover {
-    color: #f4f4f5;
-    background: #18181b;
+    color: #1d1d1f;
+    background: rgba(0, 0, 0, 0.03);
   }
   .view-tab.active {
-    background: #27272a;
-    color: #ffffff;
-    border-color: #3f3f46;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    background: #ffffff;
+    color: #1d1d1f;
+    font-weight: 600;
+    border-color: rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
   .view-tab svg {
     color: inherit;
     flex-shrink: 0;
   }
   .view-tab .tab-count {
-    background: rgba(255, 255, 255, 0.08);
-    color: #a1a1aa;
+    background: rgba(0, 0, 0, 0.05);
+    color: #86868b;
     padding: 2px 7px;
     border-radius: 999px;
     font-size: 11px;
     font-weight: 600;
   }
   .view-tab.active .tab-count {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
+    background: #f5f5f7;
+    color: #1d1d1f;
   }
 
   /* Sections */
@@ -218,20 +221,20 @@
     margin-bottom: 30px;
   }
   .reality-card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #e5e5ea;
+    border-radius: 14px;
     padding: 24px;
     display: flex;
     flex-direction: column;
     position: relative;
-    transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   }
   .reality-card:hover {
-    transform: translateY(-1px);
-    border-color: #3f3f46;
-    background: var(--card-hover);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    border-color: #d2d2d7;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
   .reality-top {
     display: flex;
@@ -243,7 +246,7 @@
   .reality-title {
     font-size: 16.5px;
     font-weight: 600;
-    color: #fff;
+    color: #1d1d1f;
     line-height: 1.35;
     margin: 0;
   }
@@ -265,16 +268,16 @@
     background: #172033;
   }
   .myth-box {
-    background: var(--red-glow);
-    border-left: 3px solid var(--red);
+    background: #fef2f2;
+    border-left: 3px solid #ff3b30;
     border-radius: 0 8px 8px 0;
     padding: 8px 12px;
     font-size: 12px;
-    color: #fca5a5;
+    color: #991b1b;
     line-height: 1.45;
     margin-bottom: 12px;
   }
-  .myth-box strong { color: #f87171; }
+  .myth-box strong { color: #b91c1c; }
   .reality-body {
     font-size: 13.5px;
     color: #94a3b8;
@@ -283,17 +286,17 @@
   }
   .reality-body strong { color: #f1f5f9; }
   .truth-box {
-    background: var(--green-glow);
-    border-left: 3px solid var(--green);
+    background: #f0fdf4;
+    border-left: 3px solid #34c759;
     border-radius: 0 8px 8px 0;
     padding: 10px 14px;
     font-size: 13px;
-    color: #c0ded4;
+    color: #166534;
     line-height: 1.45;
     margin-top: auto;
     margin-bottom: 14px;
   }
-  .truth-box strong { color: var(--green); }
+  .truth-box strong { color: #15803d; }
   .tools-row {
     display: flex;
     align-items: center;
@@ -347,24 +350,28 @@
   .layout-toggle {
     display: inline-flex;
     flex: none;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    background: var(--card);
+    border: 1px solid #e5e5ea;
+    border-radius: 10px;
+    background: #f5f5f7;
     overflow: hidden;
+    padding: 2px;
+    gap: 2px;
   }
   .layout-btn {
-    width: 46px;
+    width: 38px;
+    height: 38px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: transparent;
     border: 0;
-    color: #94a3b8;
+    color: #6e6e73;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.15s;
   }
-  .layout-btn:hover { color: #fff; background: #172033; }
-  .layout-btn.active { background: var(--accent); color: #040914; }
+  .layout-btn:hover { color: #1d1d1f; background: rgba(0, 0, 0, 0.04); }
+  .layout-btn.active { background: #ffffff; color: #1d1d1f; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); }
 
   /* List layout: same data, one compact row per tool */
   .grid.list { grid-template-columns: 1fr; gap: 8px; }
@@ -380,28 +387,27 @@
     color: inherit;
     transition: border-color 0.15s, background 0.15s;
   }
-  .tool-row:hover { border-color: #2b3952; background: var(--card-hover); }
-  .tool-row .row-rank { width: 28px; flex: none; text-align: right; font-size: 12px; color: #64748b; font-variant-numeric: tabular-nums; }
-  .tool-row .row-icon { width: 34px; height: 34px; flex: none; border-radius: 9px; background: #172033; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-size: 18px; position: relative; }
+  .tool-row:hover { border-color: #d2d2d7; background: #f5f5f7; }
+  .tool-row .row-rank { width: 28px; flex: none; text-align: right; font-size: 12px; color: #86868b; font-variant-numeric: tabular-nums; }
+  .tool-row .row-icon { width: 34px; height: 34px; flex: none; border-radius: 9px; background: #f5f5f7; border: 1px solid #e5e5ea; display: flex; align-items: center; justify-content: center; font-size: 18px; position: relative; }
   .tool-row .row-main { flex: 1; min-width: 0; }
-  .tool-row .row-name { font-weight: 600; font-size: 15px; color: #fff; display: flex; gap: 6px; align-items: center; }
-  .tool-row .row-tag { margin: 2px 0 0; font-size: 13px; color: #94a3b8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tool-row .row-name { font-weight: 600; font-size: 15px; color: #1d1d1f; display: flex; gap: 6px; align-items: center; }
+  .tool-row .row-tag { margin: 2px 0 0; font-size: 13px; color: #6e6e73; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .tool-row .row-meta { display: flex; gap: 8px; align-items: center; flex: none; font-size: 12px; }
   input[type=search] {
     width: 100%;
-    background: var(--card);
-    border: 1px solid var(--line);
-    color: var(--text);
+    background: #ffffff;
+    border: 1px solid #d2d2d7;
+    color: #1d1d1f;
     border-radius: 12px;
-    padding: 14px 20px;
-    font-size: 15px;
+    padding: 12px 18px;
+    font-size: 14.5px;
     outline: none;
     transition: border-color 0.15s, box-shadow 0.15s;
   }
   input[type=search]:focus {
-    border-color: #52525b;
-    background: #18181b;
-    box-shadow: 0 0 0 1px #52525b;
+    border-color: #0071e3;
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
   }
   .category-pills {
     display: flex;
@@ -409,27 +415,28 @@
     flex-wrap: wrap;
   }
   .cat-pill {
-    background: var(--card);
-    border: 1px solid var(--line);
-    color: var(--text-muted);
-    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #e5e5ea;
+    color: #6e6e73;
+    padding: 6px 14px;
     border-radius: 999px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.15s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: all 0.15s ease;
     user-select: none;
   }
   .cat-pill:hover {
-    border-color: #3f3f46;
-    color: #f4f4f5;
-    background: #18181b;
+    border-color: #d2d2d7;
+    color: #1d1d1f;
+    background: #f5f5f7;
   }
   .cat-pill.active {
-    background: #27272a;
+    background: #1d1d1f;
     color: #ffffff;
-    border-color: #52525b;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    border-color: #1d1d1f;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
 
   /* Tools Grid */
@@ -445,18 +452,18 @@
     flex-direction: column;
     padding: 22px;
     min-height: 232px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #e5e5ea;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     text-decoration: none;
     color: inherit;
-    transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   }
   .tool-card:hover {
-    transform: translateY(-1px);
-    border-color: #3f3f46;
-    background: var(--card-hover);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    border-color: #d2d2d7;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
   .tool-top {
     display: flex;
@@ -466,31 +473,31 @@
   }
   .share-btn {
     flex: none;
-    width: 32px; height: 32px;
+    width: 30px; height: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
-    border: 1px solid var(--line);
-    color: #94a3b8;
+    background: #f5f5f7;
+    border: 1px solid #e5e5ea;
+    color: #6e6e73;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: all 0.15s ease;
   }
   .share-btn:hover {
-    color: #fff;
-    border-color: var(--accent);
-    background: rgba(59, 130, 246, 0.15);
+    color: #1d1d1f;
+    border-color: #d2d2d7;
+    background: #e5e5ea;
   }
   .tool-icon {
-    width: 46px; height: 46px;
-    border-radius: 12px;
-    background: #172033;
-    border: 1px solid var(--line);
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: #f5f5f7;
+    border: 1px solid #e5e5ea;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 22px;
     flex: none;
     position: relative;
   }
@@ -498,17 +505,17 @@
     font-weight: 600;
     font-size: 16.5px;
     margin-bottom: 3px;
-    color: #fff;
+    color: #1d1d1f;
     line-height: 1.3;
     display: flex;
     align-items: center;
     gap: 6px;
   }
   .tool-name-link {
-    color: #60a5fa;
+    color: #0071e3;
   }
   .tool-tag {
-    color: #94a3b8;
+    color: #6e6e73;
     font-size: 13px;
     margin: 0;
     line-height: 1.45;
@@ -519,16 +526,16 @@
     min-height: 57px; /* 3 lines keeps every card the same visual rhythm */
   }
   .why-box {
-    background: rgba(59, 130, 246, 0.08);
-    border-left: 3px solid var(--accent);
+    background: #eff6ff;
+    border-left: 3px solid #0071e3;
     border-radius: 0 8px 8px 0;
     padding: 9px 13px;
     margin: 14px 0 16px;
-    font-size: 12px;
-    color: #bfdbfe;
+    font-size: 12.5px;
+    color: #1e40af;
     line-height: 1.45;
   }
-  .why-box strong { color: #60a5fa; }
+  .why-box strong { color: #0071e3; }
   .tool-meta {
     display: flex;
     align-items: center;
@@ -544,8 +551,8 @@
     padding: 4px 10px;
     border-radius: 999px;
   }
-  .badge.source-gh { color: #e2e8f0; border-color: #334155; font-weight: 600; }
-  .badge.cat { color: #60a5fa; background: rgba(59, 130, 246, 0.08); border-color: rgba(59, 130, 246, 0.2); }
+  .badge.source-gh { color: #1d1d1f; border-color: #d2d2d7; background: #ffffff; font-weight: 600; }
+  .badge.cat { color: #0071e3; background: #eff6ff; border-color: #bfdbfe; }
 
   /* Toast Notification */
   #toast {
@@ -569,14 +576,15 @@
   #toast.show { opacity: 1; transform: translateY(0); }
 
   footer {
-    border-top: 1px solid var(--line);
-    padding: 40px 0;
+    border-top: 1px solid #e5e5ea;
+    background: #f5f5f7;
+    padding: 40px 0 60px;
     text-align: center;
-    color: var(--text-muted);
+    color: #86868b;
     font-size: 13px;
     line-height: 1.6;
   }
-  footer a { color: #60a5fa; text-decoration: none; }
+  footer a { color: #0071e3; text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
   /* Header layout with radar visual */
@@ -588,7 +596,7 @@
   }
   .header-text { flex: 1; min-width: 0; }
 
-  /* Observatory Status Badge (Linear / Raycast Style) */
+  /* Observatory Status Badge (Apple Minimalist) */
   .radar-col {
     display: flex;
     flex-direction: column;
@@ -600,22 +608,23 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: #121215;
-    border: 1px solid var(--line);
+    background: #ffffff;
+    border: 1px solid #e5e5ea;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     padding: 6px 12px;
-    border-radius: 8px;
+    border-radius: 10px;
   }
   .radar-icon-frame {
     position: relative;
     width: 26px;
     height: 26px;
     border-radius: 6px;
-    background: #18181b;
-    border: 1px solid #27272a;
+    background: #f5f5f7;
+    border: 1px solid #e5e5ea;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #a1a1aa;
+    color: #1d1d1f;
   }
   .radar-live-indicator {
     position: absolute;
@@ -624,8 +633,8 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #10b981;
-    box-shadow: 0 0 6px rgba(16, 185, 129, 0.4);
+    background: #34c759;
+    box-shadow: 0 0 6px rgba(52, 199, 89, 0.5);
   }
   .radar-status-text {
     display: flex;
@@ -636,13 +645,13 @@
   .radar-status-label {
     font-size: 9.5px;
     font-weight: 700;
-    color: #71717a;
+    color: #86868b;
     letter-spacing: 0.08em;
   }
   .radar-status-val {
     font-size: 12px;
-    font-weight: 500;
-    color: #e4e4e7;
+    font-weight: 600;
+    color: #1d1d1f;
   }
 
   /* Stats strip under the subtitle */
@@ -660,23 +669,27 @@
   /* Persona toggle */
   .persona-toggle {
     display: inline-flex;
-    border: 1px solid var(--line);
+    border: 1px solid #e5e5ea;
     border-radius: 999px;
-    background: #0f1624;
+    background: #f5f5f7;
     overflow: hidden;
     flex: none;
+    padding: 2px;
+    gap: 2px;
   }
   .persona-btn {
     background: transparent;
     border: 0;
-    color: #94a3b8;
-    padding: 7px 14px;
+    color: #6e6e73;
+    padding: 6px 14px;
     font-size: 12.5px;
-    font-weight: 600;
+    font-weight: 500;
+    border-radius: 999px;
     cursor: pointer;
     transition: all 0.15s;
   }
-  .persona-btn.active { background: var(--accent); color: #040914; }
+  .persona-btn:hover { color: #1d1d1f; }
+  .persona-btn.active { background: #ffffff; color: #1d1d1f; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); }
 
   /* Executive Brief strip */
   .brief-strip {
@@ -736,16 +749,16 @@
 
   /* Business impact box on reality cards */
   .impact-box {
-    background: rgba(245, 158, 11, 0.09);
-    border-left: 3px solid var(--gold);
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
     border-radius: 0 8px 8px 0;
     padding: 9px 13px;
     font-size: 12.5px;
-    color: #fde68a;
+    color: #92400e;
     line-height: 1.45;
     margin-bottom: 14px;
   }
-  .impact-box strong { color: var(--gold); }
+  .impact-box strong { color: #b45309; }
 
   /* Share button group on reality cards */
   .share-group { display: flex; gap: 6px; flex: none; }
@@ -1360,19 +1373,21 @@
   }
 }
 .threat-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e5e5ea;
+  border-radius: 14px;
+  padding: 18px 20px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   min-width: 0;
   max-width: 100%;
 }
 .threat-card:hover {
-  border-color: rgba(59, 130, 246, 0.4);
   transform: translateY(-2px);
+  border-color: #d2d2d7;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 .threat-top-bar {
   display: flex;
@@ -1450,12 +1465,12 @@
   margin: 0 0 10px 0;
 }
 .threat-title a {
-  color: #f8fafc;
+  color: #1d1d1f;
   text-decoration: none;
   transition: color 0.15s ease;
 }
 .threat-title a:hover {
-  color: #60a5fa;
+  color: #0071e3;
 }
 .threat-ext-icon {
   font-size: 12px;
@@ -1470,11 +1485,11 @@
   flex-wrap: wrap;
 }
 .threat-entity-label {
-  color: #64748b;
+  color: #86868b;
   font-weight: 500;
 }
 .threat-entity-value {
-  color: #94a3b8;
+  color: #1d1d1f;
 }
 .threat-impact-text {
   font-size: 13px;
@@ -1504,20 +1519,21 @@
   flex: 1;
 }
 .threat-point {
-  background: rgba(15, 23, 42, 0.6);
-  border-radius: 6px;
+  background: #f9fafb;
+  border: 1px solid #e5e5ea;
+  border-radius: 8px;
   padding: 8px 12px;
-  border-left: 3px solid #3b82f6;
-  color: #cbd5e1;
+  border-left: 3px solid #0071e3;
+  color: #374151;
 }
 .threat-point.point-root {
   border-left-color: #f59e0b;
 }
 .threat-point.point-outcome {
-  border-left-color: #10b981;
+  border-left-color: #34c759;
 }
 .threat-point strong {
-  color: #f8fafc;
+  color: #1d1d1f;
   display: block;
   font-size: 10.5px;
   text-transform: uppercase;
@@ -1531,19 +1547,19 @@
   flex-wrap: wrap;
   gap: 8px;
   padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid #e5e5ea;
   margin-top: auto;
 }
 .threat-source-pill {
   font-size: 11px;
-  color: #64748b;
+  color: #86868b;
   display: flex;
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
 }
 .threat-source-name {
-  color: #94a3b8;
+  color: #1d1d1f;
   font-weight: 500;
 }
 .threat-ref {
@@ -1590,19 +1606,21 @@
   }
 }
 .scam-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e5e5ea;
+  border-radius: 14px;
   padding: 18px 20px;
   display: flex;
   flex-direction: column;
-  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   min-width: 0;
   max-width: 100%;
 }
 .scam-card:hover {
-  border-color: rgba(239, 68, 68, 0.4);
   transform: translateY(-2px);
+  border-color: #d2d2d7;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 .scam-top-bar {
   display: flex;
@@ -1657,7 +1675,7 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 1.35;
-  color: #f8fafc;
+  color: #1d1d1f;
   margin: 0 0 10px 0;
 }
 .scam-body {
@@ -1670,12 +1688,12 @@
 .scam-desc {
   font-size: 13.5px;
   line-height: 1.55;
-  color: #cbd5e1;
+  color: #424245;
   margin: 0;
 }
 .scam-protect-box {
-  background: rgba(16, 185, 129, 0.08);
-  border-left: 3px solid #10b981;
+  background: #f0fdf4;
+  border-left: 3px solid #34c759;
   border-radius: 0 8px 8px 0;
   padding: 10px 14px;
 }
@@ -1684,13 +1702,13 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #34d399;
+  color: #15803d;
   margin-bottom: 4px;
 }
 .scam-protect-box p {
   font-size: 13px;
   line-height: 1.5;
-  color: #e2e8f0;
+  color: #166534;
   margin: 0;
 }
 .scam-footer-row {
@@ -1700,18 +1718,18 @@
   flex-wrap: wrap;
   gap: 8px;
   padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid #e5e5ea;
   margin-top: auto;
 }
 .scam-source-pill {
   font-size: 11px;
-  color: #64748b;
+  color: #86868b;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 .scam-source-name {
-  color: #94a3b8;
+  color: #1d1d1f;
   font-weight: 500;
 }
 .scam-verify-btn {
@@ -1733,11 +1751,12 @@
 
   /* Emergency Reporting & Action Box */
   .scam-emergency-box {
-    background: #121215;
-    border: 1px solid var(--line);
-    border-left: 3px solid #ef4444;
-    border-radius: 10px;
-    padding: 18px 20px;
+    background: #ffffff;
+    border: 1px solid #fecaca;
+    border-left: 4px solid #ff3b30;
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow: 0 4px 16px rgba(255, 59, 48, 0.06);
     margin-bottom: 24px;
   }
   .scam-emergency-header {
@@ -1754,7 +1773,7 @@
     gap: 8px;
     font-size: 15px;
     font-weight: 700;
-    color: #f1f5f9;
+    color: #1d1d1f;
     letter-spacing: -0.01em;
   }
   .scam-emergency-grid {
@@ -1792,14 +1811,14 @@
     color: #ffffff;
   }
   .scam-emergency-item.emergency-hotline {
-    background: rgba(239, 68, 68, 0.12);
-    border-color: rgba(239, 68, 68, 0.35);
-    color: #fca5a5;
+    background: #ff3b30;
+    border-color: #e02424;
+    color: #ffffff !important;
   }
   .scam-emergency-item.emergency-hotline:hover {
-    background: rgba(239, 68, 68, 0.2);
-    border-color: rgba(239, 68, 68, 0.6);
-    color: #ffffff;
+    background: #e02424;
+    border-color: #c81e1e;
+    color: #ffffff !important;
   }
   .scam-emergency-item .item-text strong {
     color: #ffffff;
@@ -1839,8 +1858,8 @@
 
   /* Highlighting effect on deep-link scroll */
   .card-highlight {
-    outline: 2px solid #3b82f6 !important;
-    box-shadow: 0 0 24px rgba(59, 130, 246, 0.5) !important;
+    outline: 2px solid #0071e3 !important;
+    box-shadow: 0 0 16px rgba(0, 113, 227, 0.25) !important;
     transform: translateY(-2px);
     transition: all 0.3s ease;
   }
@@ -1850,16 +1869,22 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    background: rgba(239, 68, 68, 0.12);
-    border: 1px solid rgba(239, 68, 68, 0.35);
-    border-radius: 10px;
+    background: #fff1f2;
+    border: 1px solid #fecdd3;
+    border-left: 4px solid #ff3b30;
+    border-radius: 12px;
     padding: 12px 18px;
     margin-bottom: 24px;
     cursor: pointer;
     font-size: 13.5px;
     line-height: 1.4;
-    color: #fca5a5;
-    transition: all 0.2s ease;
+    color: #9f1239;
+    box-shadow: 0 2px 6px rgba(255, 59, 48, 0.04);
+    transition: all 0.15s ease;
+  }
+  .emergency-quick-banner:hover {
+    background: #ffe4e6;
+    border-color: #fda4af;
   }
   .emergency-quick-banner:hover {
     background: rgba(239, 68, 68, 0.2);
@@ -1912,16 +1937,16 @@
     right: 12px;
     top: 50%;
     transform: translateY(-50%) scale(0.85);
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     border: none;
-    background: rgba(255, 255, 255, 0.12);
-    color: #94a3b8;
+    background: #e5e5ea;
+    color: #6e6e73;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     line-height: 1;
     cursor: pointer;
@@ -1936,8 +1961,8 @@
     transform: translateY(-50%) scale(1);
   }
   .search-clear-btn:hover {
-    background: rgba(255, 255, 255, 0.22);
-    color: #ffffff;
+    background: #d2d2d7;
+    color: #1d1d1f;
   }
   .search-clear-btn:active {
     transform: translateY(-50%) scale(0.9);
@@ -5508,6 +5533,174 @@
       </div>
     </article>
 
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-710623010">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-710623010')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5" target="_blank" rel="noopener noreferrer">
+          North Korean hackers linked to crypto thefts among world&#39;s best, experts say, Digital News <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          North Korean hackers linked to crypto thefts among world&#39;s best, experts say, Digital News.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">AsiaOne.com</span>
+          <span class="threat-ref">AsiaOne.com Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on AsiaOne.com ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5707601159">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5707601159')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
+          New cybersecurity blind spot: When AI looks like a trusted employee <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          New cybersecurity blind spot: When AI looks like a trusted employee.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Financial Express</span>
+          <span class="threat-ref">The Financial Express Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Financial Express ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-9023916946">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🔒 Assets Frozen</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-9023916946')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
+          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">New York Post</span>
+          <span class="threat-ref">New York Post Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on New York Post ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-1246487518">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-1246487518')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
+          Data Leak Exposes Information on over 40,000 US Homeland Security Employees <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          Data Leak Exposes Information on over 40,000 US Homeland Security Employees.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Deccan Chronicle</span>
+          <span class="threat-ref">Deccan Chronicle Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOa2d0WlRHbFA3SGY5eW0xSzdHVC0zUUU2VXhxWUNtckp0bXlTRGoxbnF2dVQxTHExbDdkUldKVGMzcWpnT0prQVF1TFZLcE5kOVVjWlc4ZC13RC1uUG45MHdRN1hRQ1NYcGZ3WGN4ekFYOS1ETWI4ZXNMVy1OM21oalVTYkJRSnJqVEFBTERzZEtpcjZCenBPVVBxNTA4T0hiSEJhMjNQN1h6NEN6NnZPZUNFVzZtVUJTTHhrU01vYWt3VWlOTFhvT9IBzgFBVV95cUxPS2FKUE1VWk03UzJxdDFyS0xETnlYUS1JaDk2NDRhS1FDZ0tjTXg2amtSM3I1TEp1WTJLQS1La25zRWhIelZUOElTVnBPQUJ3alhGUHVaNmxOM1UzSUhtQXJVOFJ2eXRQcGJSZjZiZDRxeHQ1bEg3X1p6LVVzR25kU1pBbGdMZ25QX3RaeGlmbjBZTVhYTkVqSE44UUhWN3ljZkNJQ0syX1kxS29vMUpQT3ZTQkFjZGFHWmEwQ2htNlJqcmpKQnRUcmVPX0tRdw?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Deccan Chronicle ↗
+        </a>
+      </div>
+    </article>
+
     <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-12643287449">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5587,174 +5780,6 @@
           <span class="threat-ref">Reuters Live Wire</span>
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNZWtDa2JmUnFRRENlQ0RoX2hseFpyajltZE5vbjUwdnlDeTQ5M01zanFrNTBJcE1NV0RwZGFCd29LQXZQN2RYd3pBZnhNbU91eEdZalRSbVpXbTdnS2VXMXNaWE9ZdV9tSHVub29PUy1kX3BFYTNZUWM2NFpTLTZTWGdLX2hTXzYxR2JPanVaeVowcVZmMTZubVZxZE9QSjFPYmVuQjJFVVZqTUJKRUlMclM0NGM4YTNzMmR0ZUdR?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-18083774526">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-18083774526')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
-          Mistral AI publicly releases Large 4, targets cybersecurity users <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Mistral AI publicly releases Large 4, targets cybersecurity users.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-          <span class="threat-ref">Reuters Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5107877601">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5107877601')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQVE5MN2Rib1hrX3Z1VDhFWlZiSTUyc0oydVhxNW5OZ1RBOElfamxQWUVBcTFyd3NVbmxBNjd3QW9sYll4U1lfUDE5bGJMVXZXZW1CVS1NV3FHaTFSQ3VCanUtYXZRcm1ZWnJCazBzUWVCakZLaUVoTV9MV1BCblBzeWlIX3A2OWNiNXdYRG5JSlYwakpZdDdRUjdYajQtcXBERVdJSHYyRVIyT0lLOEIxVGg2WnFmREM2LWp5ajA3aVIxTUVx?oc=5" target="_blank" rel="noopener noreferrer">
-          Chinese AI model carries out complex cyberattacks in controlled tests, researchers say <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Chinese AI model carries out complex cyberattacks in controlled tests, researchers say.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-          <span class="threat-ref">Reuters Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQVE5MN2Rib1hrX3Z1VDhFWlZiSTUyc0oydVhxNW5OZ1RBOElfamxQWUVBcTFyd3NVbmxBNjd3QW9sYll4U1lfUDE5bGJMVXZXZW1CVS1NV3FHaTFSQ3VCanUtYXZRcm1ZWnJCazBzUWVCakZLaUVoTV9MV1BCblBzeWlIX3A2OWNiNXdYRG5JSlYwakpZdDdRUjdYajQtcXBERVdJSHYyRVIyT0lLOEIxVGg2WnFmREM2LWp5ajA3aVIxTUVx?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-792151822">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🏛️ Statutory Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-792151822')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5" target="_blank" rel="noopener noreferrer">
-          Google launches Gemini 4 Carbon AI model with cybersecurity focus <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Google launches Gemini 4 Carbon AI model with cybersecurity focus.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Ada Derana</span>
-          <span class="threat-ref">Ada Derana Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4wT3VqNWQxMjJVa3EwTGtZdzQyZzBBM0xDQ2FHbjhNUnItel9udHRjelpEWmd4eWxSOG03NFVJekU0RTVmTzJz?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Ada Derana ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5792857321">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Wire</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5792857321')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Three South Korean financial firms including Bithumb report data breaches, Yonhap says <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
-        <span class="threat-entity-value">Global Enterprise Infrastructure &amp; Critical Systems</span>
-      </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          Three South Korean financial firms including Bithumb report data breaches, Yonhap says.
-        </div>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-          <span class="threat-ref">Reuters Live Wire</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
           Read on Reuters ↗
         </a>
       </div>
