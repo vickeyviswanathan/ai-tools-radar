@@ -1469,23 +1469,59 @@
     display: none;
     position: fixed;
     bottom: 0; left: 0; right: 0;
+    width: 100%;
+    box-sizing: border-box;
     background: var(--header-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-top: 1px solid var(--line-strong);
     z-index: 800;
-    padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
+    padding: 6px 2px calc(6px + env(safe-area-inset-bottom, 0px));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1px;
   }
   .mob-nav-item {
     background: transparent; border: none; color: var(--text-muted);
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 2px; padding: 5px 2px; border-radius: 8px; font-size: 10px; font-weight: 700;
+    gap: 2px; padding: 4px 1px; border-radius: 8px; font-size: 8.5px; font-weight: 700;
+    cursor: pointer; text-decoration: none; min-width: 0; width: 100%;
+    overflow: hidden;
+  }
+  .mob-nav-item span:not(.mob-icon) {
+    white-space: nowrap; text-overflow: ellipsis; overflow: hidden; max-width: 100%; display: block;
+    letter-spacing: -0.01em;
+  }
+  .mob-nav-item .mob-icon { font-size: 16px; line-height: 1; }
+  .mob-nav-item.active { color: var(--accent-text); background: var(--accent-soft); font-weight: 800; }
+
+  .mobile-brand-group { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .mobile-brand-btn {
+    display: inline-flex; align-items: center; gap: 7px; text-decoration: none;
+    background: transparent; border: none; padding: 2px 4px; border-radius: 8px;
     cursor: pointer;
   }
-  .mob-nav-item .mob-icon { font-size: 15px; }
-  .mob-nav-item.active { color: var(--accent-text); background: var(--accent-soft); font-weight: 800; }
+  .brand-mark-sm {
+    width: 28px; height: 28px; border-radius: 7px; background: var(--accent);
+    color: #ffffff; display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 14px;
+  }
+  .mobile-quick-home-btn {
+    display: none;
+    width: 36px; height: 36px; border-radius: 9px; border: 1px solid var(--line);
+    background: var(--surface-subtle); color: var(--text); font-size: 16px;
+    align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0;
+  }
+
+  .threat-card.card-highlight, .reality-card.card-highlight, .scam-card.card-highlight {
+    outline: 3px solid var(--accent) !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 6px var(--accent-soft), var(--shadow-lg) !important;
+    animation: pulseHighlight 1.8s ease-in-out 2;
+  }
+  @keyframes pulseHighlight {
+    0%, 100% { outline-color: var(--accent); box-shadow: 0 0 0 6px var(--accent-soft), var(--shadow-lg); }
+    50% { outline-color: #2563eb; box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.25), var(--shadow-lg); }
+  }
 
   #toast {
     position: fixed; bottom: 24px; right: 24px; background: var(--text); color: var(--bg);
@@ -1524,6 +1560,7 @@
     .app-sidebar.open { transform: translateX(0); }
     .sidebar-close-btn { display: inline-flex; align-items: center; justify-content: center; }
     .mobile-menu-btn { display: inline-flex; }
+    .mobile-quick-home-btn { display: inline-flex; }
     .mobile-bottom-nav { display: grid; }
     header.top-portal-bar { padding: 10px 12px; width: 100%; max-width: 100%; }
     .top-command-row { gap: 8px; }
@@ -1582,7 +1619,11 @@
 
       <div class="sidebar-group-label">DISCOVER</div>
       <nav class="sidebar-nav">
-        <button type="button" class="side-nav-btn active" id="side-tab-tools" onclick="switchView('tools'); toggleMobileSidebar(false);">
+        <button type="button" class="side-nav-btn active" id="side-tab-home" onclick="goHome(event)">
+          <span>🏠 Home Portal</span>
+          <span class="side-nav-pill">Live</span>
+        </button>
+        <button type="button" class="side-nav-btn" id="side-tab-tools" onclick="goToToolsDirectory(event)">
           <span>🧭 AI Tools</span>
           <span class="side-nav-pill" id="side-tools-count">187</span>
         </button>
@@ -1592,7 +1633,7 @@
         </button>
         <button type="button" class="side-nav-btn" id="side-tab-threats" onclick="switchView('news'); toggleMobileSidebar(false);">
           <span>🛡️ Cyber News</span>
-          <span class="side-nav-pill" id="side-threats-count">15</span>
+          <span class="side-nav-pill" id="side-threats-count">17</span>
         </button>
         <button type="button" class="side-nav-btn" id="side-tab-scams" onclick="switchView('scams'); toggleMobileSidebar(false);">
           <span>🚨 Scam Alerts</span>
@@ -1605,9 +1646,9 @@
       <div class="sidebar-emergency-card">
         <span class="sidebar-emergency-badge">⚠️ GOLDEN HOUR PROTOCOL</span>
         <h4>Cyber Fraud Emergency?</h4>
-        <p>Freeze fraudulent bank transfers inside the golden hour across India.</p>
+        <p>Freeze unauthorized bank transfers within 2 hours across India.</p>
         <button type="button" class="sidebar-emergency-cta" onclick="switchView('scams'); toggleMobileSidebar(false);">
-          📞 Call 1930 Toll-Free &amp; Guide →
+          📞 Call 1930 Helpline →
         </button>
       </div>
 
@@ -1626,17 +1667,24 @@
   <div class="app-main">
     <header class="top-portal-bar">
       <div class="top-command-row">
-        <button type="button" class="mobile-menu-btn" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation Menu">
-          ☰ <span style="font-weight:800;">Cipherati</span>
-        </button>
+        <div class="mobile-brand-group">
+          <button type="button" class="mobile-menu-btn" onclick="toggleMobileSidebar(true)" aria-label="Open Navigation Menu" title="Open Menu">
+            ☰
+          </button>
+          <a href="#home" class="mobile-brand-btn" onclick="goHome(event)" title="Cipherati Home">
+            <div class="brand-mark-sm">C</div>
+            <span style="font-weight:800;font-size:15px;color:var(--text);letter-spacing:-0.02em;">Cipherati</span>
+          </a>
+        </div>
 
         <div class="global-omnibox-wrap">
           <span class="global-omnibox-icon">🔍</span>
-          <input type="search" id="global-omnibox" class="global-omnibox-input" placeholder="Search 187 AI tools, cyber advisories, LLM production bugs, or scam red flags..." oninput="handleOmniboxInput(this.value)" />
+          <input type="search" id="global-omnibox" class="global-omnibox-input" placeholder="Search AI tools, AI realities, cybersecurity news, or scam alerts..." oninput="handleOmniboxInput(this.value)" />
           <span class="omnibox-kbd"><kbd>⌘</kbd><kbd>K</kbd></span>
         </div>
 
         <div class="top-actions-right">
+          <button type="button" class="mobile-quick-home-btn" onclick="goHome(event)" title="Go to Homepage" aria-label="Go to Homepage">🏠</button>
           <button type="button" class="top-pill-btn" id="header-theme-btn" onclick="toggleTheme()" title="Switch Light / Dark Theme">
             <span id="theme-toggle-icon">🌙</span>
             <span id="theme-toggle-label">Dark Mode</span>
@@ -1650,14 +1698,17 @@
 
       <!-- Preserved Horizontal Tab Headers -->
       <div class="view-toggle" role="tablist" aria-label="Primary site navigation">
-        <button class="view-tab active" id="tab-tools" role="tab" aria-selected="true" aria-controls="radar" onclick="switchView('tools')">
+        <button class="view-tab active" id="tab-home" role="tab" aria-selected="true" onclick="goHome(event)">
+          🏠 Home
+        </button>
+        <button class="view-tab" id="tab-tools" role="tab" aria-selected="false" aria-controls="radar" onclick="goToToolsDirectory(event)">
           🧭 AI Tools <span class="tab-count" id="tab-tools-count">187</span>
         </button>
         <button class="view-tab" id="tab-realities" role="tab" aria-selected="false" aria-controls="realities" onclick="switchView('realities')">
           ⚡ AI Realities <span class="tab-count">18</span>
         </button>
         <button class="view-tab" id="tab-threats" role="tab" aria-selected="false" aria-controls="threats" onclick="switchView('news')">
-          🛡️ Cyber News <span class="tab-count" id="tab-threats-count">15</span>
+          🛡️ Cyber News <span class="tab-count" id="tab-threats-count">17</span>
         </button>
         <button class="view-tab" id="tab-scams" role="tab" aria-selected="false" aria-controls="scams" onclick="switchView('scams')">
           🚨 Scam Alerts <span class="tab-count" id="tab-scams-count">15</span>
@@ -1668,30 +1719,30 @@
     <main class="workspace-body">
   <!-- Section 1: Curated Tools Directory -->
   <section class="section-wrap" id="radar">
-    <!-- Layout 1 Hero Bento Row: Royal Blue Command Banner + Live Cybersecurity News on Cipherati -->
+    <!-- Layout 1 Hero Bento Row: Royal Blue Command Banner + Live Cybersecurity News -->
     <div class="portal-hero-grid">
       <div class="hero-blue-banner">
         <div>
           <div class="hero-kicker-pill">✨ INDUSTRY BENCHMARK DIRECTORY • UPDATED DAILY</div>
           <h1>Discover, Audit &amp; Ship Production AI Safely.</h1>
-          <p>Curated AI engineering tools, live CERT-In &amp; global cyber threat advisories, battle-tested LLM post-mortems, and citizen fraud defense—in one unified workspace.</p>
+          <p>Curated AI engineering tools, live cybersecurity news, battle-tested LLM post-mortems, and citizen scam alerts—in one unified workspace.</p>
         </div>
         <div class="hero-metrics-grid">
           <div class="hero-metric-box" onclick="document.getElementById('radar-directory-anchor').scrollIntoView({behavior:'smooth'})">
             <div class="hero-metric-num" id="stat-tools">187</div>
-            <div class="hero-metric-label">Verified AI Tools</div>
-          </div>
-          <div class="hero-metric-box" onclick="switchView('news')">
-            <div class="hero-metric-num" id="stat-news">15</div>
-            <div class="hero-metric-label">Live Cyber Advisories</div>
+            <div class="hero-metric-label">AI Tools</div>
           </div>
           <div class="hero-metric-box" onclick="switchView('realities')">
             <div class="hero-metric-num" id="stat-realities">18</div>
-            <div class="hero-metric-label">LLM Architecture Fixes</div>
+            <div class="hero-metric-label">AI Realities</div>
+          </div>
+          <div class="hero-metric-box" onclick="switchView('news')">
+            <div class="hero-metric-num" id="stat-news">17</div>
+            <div class="hero-metric-label">Cyber News</div>
           </div>
           <div class="hero-metric-box" onclick="switchView('scams')">
             <div class="hero-metric-num" id="stat-scams">15</div>
-            <div class="hero-metric-label">1930 Scam Playbooks</div>
+            <div class="hero-metric-label">Scam Alerts</div>
           </div>
         </div>
       </div>
@@ -1701,31 +1752,31 @@
           <div class="hero-news-header">
             <div class="hero-news-title">
               <span class="live-red-dot"></span>
-              <span>Cybersecurity News on Cipherati</span>
+              <span>Cybersecurity News</span>
             </div>
             <button type="button" class="hero-news-link" onclick="switchView('news')">View All →</button>
           </div>
           <div class="hero-news-list" id="hero-live-news-list">
-            <div class="hero-news-item" onclick="switchView('news')">
-              <span class="hero-news-item-title">CERT-In High Severity Alert: Chrome &amp; Edge V8 Heap Overflow</span>
-              <span class="hero-news-tag">CERT-In</span>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-11984702254')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">Nanded Man Held For Allegedly Providing Bank Account In Rs 30 Lakh Cyber Fraud</span>
+              <span class="hero-news-tag">News Mobile</span>
             </div>
-            <div class="hero-news-item" onclick="switchView('news')">
-              <span class="hero-news-item-title">CISA Adds Enterprise VPN &amp; Firewall Zero-Days to KEV Catalog</span>
-              <span class="hero-news-tag">CISA KEV</span>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-19863584729')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">Delhi Police Arrest Five for Allegedly Supplying Bank Accounts to Fraud Network</span>
+              <span class="hero-news-tag">The 420.in</span>
             </div>
-            <div class="hero-news-item" onclick="switchView('scams')">
-              <span class="hero-news-item-title">Fake TRAI / FedEx 'Digital Arrest' Skype Warrant Wave</span>
-              <span class="hero-news-tag">1930 Alert</span>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-20446194799')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">Took Rs 50K, facilitated fraud of Rs 50 crore: CBI court denies bail to Haryana labour board clerk in IDFC First Bank scam</span>
+              <span class="hero-news-tag">The Tribune</span>
             </div>
-            <div class="hero-news-item" onclick="switchView('news')">
-              <span class="hero-news-item-title">OWASP Agentic LLM Tool-Calling &amp; MCP Supply Chain Advisory</span>
-              <span class="hero-news-tag">SecOps</span>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-5451658018')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">Uzbekistan Central Bank Proposes New Anti-Fraud Measures</span>
+              <span class="hero-news-tag">UzDaily.uz</span>
             </div>
           </div>
         </div>
         <div class="hero-news-footer">
-          <span>✅ Statutory Sources Verified • Zero Unverified Rumors • Synced <strong id="stat-synced">live</strong></span>
+          <span>✅ Verified Global &amp; Indian News Wires • Synced <strong id="stat-synced">live</strong></span>
         </div>
       </div>
     </div>
@@ -1735,14 +1786,14 @@
       <div class="realities-ribbon-left">
         <div class="realities-ribbon-icon">⚡</div>
         <div>
-          <h3>AI Realities: Why AI Projects Fail in Production (18 Architectural Fixes)</h3>
-          <p>Click your exact production symptom to jump straight to the engineering blueprint:</p>
+          <h3>AI Realities: Why AI Projects Fail in Production</h3>
+          <p>Click your exact production symptom to jump straight to the architectural fix:</p>
         </div>
       </div>
       <div class="realities-ribbon-chips">
         <button type="button" class="ribbon-symptom-btn featured" onclick="jumpToRealitySymptom('cost')">💸 Runaway API Costs</button>
-        <button type="button" class="ribbon-symptom-btn" onclick="jumpToRealitySymptom('hallucination')">💥 Broken JSON Schemas</button>
-        <button type="button" class="ribbon-symptom-btn" onclick="jumpToRealitySymptom('agents')">🔄 Infinite Agent Loops</button>
+        <button type="button" class="ribbon-symptom-btn" onclick="jumpToRealitySymptom('json')">💥 Broken JSON Schemas</button>
+        <button type="button" class="ribbon-symptom-btn" onclick="jumpToRealitySymptom('loop')">🔄 Infinite Agent Loops</button>
         <button type="button" class="ribbon-symptom-btn" onclick="jumpToRealitySymptom('security')">🕵️ Prompt Injections</button>
         <button type="button" class="ribbon-symptom-btn" onclick="jumpToRealitySymptom('latency')">🐢 30s TTFT Latency</button>
       </div>
@@ -1752,15 +1803,15 @@
     <div class="emergency-quick-banner" onclick="switchView('scams')" role="alert" title="Click to view National Cyber Helpline 1930 & Scam Alerts">
       <div class="eq-left">
         <span class="eq-icon">🚨</span>
-        <span class="eq-text"><strong>Need Emergency Cyber Fraud Help?</strong> Call <strong>1930</strong> (Toll-Free) within the Golden Hour or open the <strong>Citizen Scam Defense Playbook</strong>.</span>
+        <span class="eq-text"><strong>Need Emergency Cyber Fraud Help?</strong> Call <strong>1930</strong> (Toll-Free) within the Golden Hour or open <strong>Scam Alerts</strong>.</span>
       </div>
-      <span class="eq-cta">1930 Guide &amp; Scam Alerts →</span>
+      <span class="eq-cta">1930 Helpline &amp; Scam Alerts →</span>
     </div>
 
     <div class="radar-header" id="radar-directory-anchor">
       <div class="section-header">
         <div>
-          <h2 class="section-title">🔥 Trending AI Engineering &amp; Security Tools</h2>
+          <h2 class="section-title">🧭 AI Tools</h2>
           <span class="section-note" id="tool-count-badge">Loading verified tools...</span>
         </div>
         <div class="layout-toggle" role="group" aria-label="View mode">
@@ -4841,10 +4892,10 @@
   <section class="section-wrap" id="threats" style="display: none;">
     <div class="section-header">
       <div>
-        <h2 class="section-title">🛡️ Cybersecurity News on Cipherati</h2>
+        <h2 class="section-title">🛡️ Cybersecurity News</h2>
         <span class="section-note">Verified cybersecurity reporting and analysis across banking, enterprise defense, and global security developments.</span>
       </div>
-      <span class="reality-count-pill" id="threat-count-badge">Showing all 15 verified news stories</span>
+      <span class="reality-count-pill" id="threat-count-badge">Showing all 17 verified news stories</span>
     </div>
 
     <!-- Cybersecurity News Sub-Tabs & Live Filter -->
@@ -5154,6 +5205,90 @@
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1SU200dG5RcjhxVG5FTlhQbG5EYnJiWlF0OWthVkhSYk81TkNRTDJubmRBb1ZENVl0OGZlSmFoOVYwX2tiNTJoM0Vod1ZYT0VSNVRNdVpTLXJWenh6NHdGWDlBdUktWl9YNXF4NGVkOXZYWjVUajF5Tw?oc=5" target="_blank" rel="noopener noreferrer">
           Read on CNN ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-3645205163">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-critical">CRITICAL</span>
+          <span class="threat-badge threat-prov threat-prov-onchain">⛓️ Crypto Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-3645205163')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOalM0SnU2SG1KeDM2WVpCdUlhcXRoUDFXOXhKaW9rZFZSSTM5YVlYSjBkVEhFOFpaWnBJX2lBeWpJSTBhakFiNV83c3hJUHlYS0lqVGlXbmpYZlBSajZJT1hIMl9DU29PSl9sRnZuZHJaZ3dwQ1VwTUdJMG5ZMExhMkFn?oc=5" target="_blank" rel="noopener noreferrer">
+          $6 billion stolen in crypto hack, expert says financial institutions are &quot;tested on a daily basis&quot; <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Binance, Global Exchanges &amp; Digital Assets</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          $6 billion stolen in crypto hack, expert says financial institutions are &quot;tested on a daily basis&quot;.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">CBS News</span>
+          <span class="threat-ref">CBS News Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOalM0SnU2SG1KeDM2WVpCdUlhcXRoUDFXOXhKaW9rZFZSSTM5YVlYSjBkVEhFOFpaWnBJX2lBeWpJSTBhakFiNV83c3hJUHlYS0lqVGlXbmpYZlBSajZJT1hIMl9DU29PSl9sRnZuZHJaZ3dwQ1VwTUdJMG5ZMExhMkFn?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on CBS News ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-10534249220">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Breaking Wire</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-onchain">⛓️ Crypto Wire</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-10534249220')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQUk0tVDZsMEx4M1NtS1BVd2FFWGlnMDJob2l5Nk41MWhSc05uOEhWRWNDUDNfbUdHTzFzT3p2VUl0a3o0RENWTXhTZTExc2o2eDQ3S2RiTm1VYS0yRDkzendqZ1kxeWVaMXRvUGd6Z1pWZDNHVEZQcEk5UjdaOWpnSmFjVXEtb2wzNDUxQ3VMeFV2SVVpYlBFdlZleFdtUzJDVnBWYkthV2Q1R211amc?oc=5" target="_blank" rel="noopener noreferrer">
+          How crypto hacking funds isolated North Korea’s nuclear programme <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-value">Binance, Global Exchanges &amp; Digital Assets</span>
+      </div>
+
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Wire Report Summary</strong>
+          How crypto hacking funds isolated North Korea’s nuclear programme.
+        </div>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Guardian</span>
+          <span class="threat-ref">The Guardian Live Wire</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQUk0tVDZsMEx4M1NtS1BVd2FFWGlnMDJob2l5Nk41MWhSc05uOEhWRWNDUDNfbUdHTzFzT3p2VUl0a3o0RENWTXhTZTExc2o2eDQ3S2RiTm1VYS0yRDkzendqZ1kxeWVaMXRvUGd6Z1pWZDNHVEZQcEk5UjdaOWpnSmFjVXEtb2wzNDUxQ3VMeFV2SVVpYlBFdlZleFdtUzJDVnBWYkthV2Q1R211amc?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Guardian ↗
         </a>
       </div>
     </article>
@@ -6121,7 +6256,11 @@
 
 <!-- Mobile Bottom Navigation Bar (99% Mobile Traffic Ergonomics) -->
 <nav class="mobile-bottom-nav" aria-label="Mobile Quick Navigation">
-  <button type="button" class="mob-nav-item active" id="mob-tab-tools" onclick="switchView('tools')">
+  <button type="button" class="mob-nav-item active" id="mob-tab-home" onclick="goHome(event)">
+    <span class="mob-icon">🏠</span>
+    <span>Home</span>
+  </button>
+  <button type="button" class="mob-nav-item" id="mob-tab-tools" onclick="goToToolsDirectory(event)">
     <span class="mob-icon">🧭</span>
     <span>AI Tools</span>
   </button>
@@ -6803,9 +6942,94 @@ function handleOmniboxInput(val) {
 function jumpToRealitySymptom(symptomKey) {
   switchView("realities");
   setTimeout(() => {
-    const chip = document.querySelector(`.symptom-chip[data-symptom="${symptomKey}"]`);
-    if (chip) chip.click();
+    const chips = Array.from(document.querySelectorAll(".symptom-chip"));
+    const target = chips.find(btn => (btn.getAttribute("onclick") || "").includes("'" + symptomKey + "'"));
+    if (target) target.click();
+    else selectSymptom(symptomKey);
   }, 60);
+}
+
+function jumpToThreatStory(threatId) {
+  switchView("news");
+  selectThreatCategory("all");
+  const qInput = document.getElementById("threat-q");
+  if (qInput) qInput.value = "";
+  threatSearchQ = "";
+  if (typeof filterThreats === "function") filterThreats();
+
+  setTimeout(() => {
+    let card = document.getElementById("threat-" + threatId);
+    if (!card) {
+      const allCards = Array.from(document.querySelectorAll(".threat-card"));
+      card = allCards.find(c => c.id && c.id.includes(threatId));
+    }
+    if (card) {
+      card.scrollIntoView({ behavior: "smooth", block: "center" });
+      card.classList.add("card-highlight");
+      setTimeout(() => card.classList.remove("card-highlight"), 3600);
+    }
+  }, 100);
+}
+
+function goHome(e) {
+  if (e) {
+    try { e.preventDefault(); } catch (err) {}
+  }
+  switchView("tools");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  toggleMobileSidebar(false);
+  const homeTabs = ["tab-home", "side-tab-home", "mob-tab-home"];
+  homeTabs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add("active");
+  });
+  const toolsTabs = ["tab-tools", "side-tab-tools", "mob-tab-tools"];
+  toolsTabs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove("active");
+  });
+}
+
+function goToToolsDirectory(e) {
+  if (e) {
+    try { e.preventDefault(); } catch (err) {}
+  }
+  switchView("tools");
+  toggleMobileSidebar(false);
+  const homeTabs = ["tab-home", "side-tab-home", "mob-tab-home"];
+  homeTabs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove("active");
+  });
+  const toolsTabs = ["tab-tools", "side-tab-tools", "mob-tab-tools"];
+  toolsTabs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add("active");
+  });
+  setTimeout(() => {
+    const anchor = document.getElementById("radar-directory-anchor");
+    if (anchor) anchor.scrollIntoView({ behavior: "smooth" });
+  }, 40);
+}
+
+function renderHeroNewsTicker(threats) {
+  const listEl = document.getElementById("hero-live-news-list");
+  if (!listEl || !Array.isArray(threats) || !threats.length) return;
+  const escHtml = (s) => String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  // Strictly pick the exact latest 4 news stories directly from our news section (THREATS_DATA)
+  const picked = threats.slice(0, 4);
+
+  listEl.innerHTML = picked.map(item => {
+    const rawTag = (item.sourceName || item.impactBadge || "Live Wire").replace(/\.com$/i, "").trim();
+    const shortTag = rawTag.length > 16 ? rawTag.slice(0, 15) + "…" : rawTag;
+    return `
+      <div class="hero-news-item" onclick="jumpToThreatStory('${escHtml(item.id)}')" title="Click to view story in Cyber News">
+        <span class="hero-news-item-title">${escHtml(item.title)}</span>
+        <span class="hero-news-tag">${escHtml(shortTag)}</span>
+      </div>
+    `;
+  }).join("");
 }
 
 function filterByStackCategory(catName) {
@@ -7153,15 +7377,18 @@ function switchView(viewName) {
 
   // Sync Top Tab Headers, Left Sidebar & Mobile Bottom Nav
   const tabMap = [
+    ["tab-home", isTools],
     ["tab-tools", isTools],
     ["tab-realities", isRealities],
     ["tab-threats", isThreats],
     ["tab-scams", isScams],
-    ["side-tab-tools", isTools],
+    ["side-tab-home", isTools],
+    ["side-tab-tools", false],
     ["side-tab-realities", isRealities],
     ["side-tab-threats", isThreats],
     ["side-tab-scams", isScams],
-    ["mob-tab-tools", isTools],
+    ["mob-tab-home", isTools],
+    ["mob-tab-tools", false],
     ["mob-tab-realities", isRealities],
     ["mob-tab-threats", isThreats],
     ["mob-tab-scams", isScams]
@@ -7516,7 +7743,10 @@ async function loadThreats() {
       if (countEl) countEl.textContent = THREATS_DATA.length;
       const statNewsEl = document.getElementById("stat-news");
       if (statNewsEl) statNewsEl.textContent = THREATS_DATA.length;
+      const sideThreatsEl = document.getElementById("side-threats-count");
+      if (sideThreatsEl) sideThreatsEl.textContent = THREATS_DATA.length;
       renderThreatCards(THREATS_DATA);
+      if (typeof renderHeroNewsTicker === "function") renderHeroNewsTicker(THREATS_DATA);
       filterThreats();
     }
   } catch (err) {
@@ -7578,6 +7808,7 @@ function renderThreatCards(threats) {
 }
 
 // Call loadThreats on page load
+if (typeof renderHeroNewsTicker === "function") renderHeroNewsTicker(THREATS_DATA);
 loadThreats();
 
 // --- Universal Share Handler (WhatsApp on mobile, formatted clipboard on desktop) ---
@@ -7602,14 +7833,14 @@ function shareEmergencyGuide() {
 function shareScam(id) {
   const item = SCAMS_DATA.find(s => s.id === id);
   if (!item) return;
-  const text = "🚨 " + item.title + "\n\n" + item.scam + "\n\nHow to protect yourself: " + item.protection + "\n\n📌 Verified by: " + item.sourceName + "\n🛡️ More Scam Defense & Cybersecurity News on Cipherati: " + SITE_URL + "#scams";
+  const text = "🚨 " + item.title + "\n\n" + item.scam + "\n\nHow to protect yourself: " + item.protection + "\n\n📌 Verified by: " + item.sourceName + "\n🛡️ More Scam Defense & Cybersecurity News: " + SITE_URL + "#scams";
   handleUnifiedShare(text, "Copied scam warning — ready to paste into WhatsApp!");
 }
 
 function shareThreat(id) {
   const item = THREATS_DATA.find(t => t.id === id);
   if (!item) return;
-  const text = "🛡️ " + item.title + "\n\n" + (item.incident || "") + "\n\n📌 Source: " + item.sourceName + (item.ref ? " (" + item.ref + ")" : "") + "\n🔗 Read: " + item.sourceUrl + "\n\nCybersecurity News on Cipherati: " + SITE_URL + "#news";
+  const text = "🛡️ " + item.title + "\n\n" + (item.incident || "") + "\n\n📌 Source: " + item.sourceName + (item.ref ? " (" + item.ref + ")" : "") + "\n🔗 Read: " + item.sourceUrl + "\n\nCybersecurity News: " + SITE_URL + "#news";
   handleUnifiedShare(text, "Copied cybersecurity news — ready to paste into WhatsApp!");
 }
 
@@ -7688,6 +7919,8 @@ async function loadScams() {
       if (countEl) countEl.textContent = SCAMS_DATA.length;
       const statScamsEl = document.getElementById("stat-scams");
       if (statScamsEl) statScamsEl.textContent = SCAMS_DATA.length;
+      const sideScamsEl = document.getElementById("side-scams-count");
+      if (sideScamsEl) sideScamsEl.textContent = SCAMS_DATA.length;
       filterScams();
     }
   } catch (err) {

@@ -201,7 +201,24 @@ function updateThreatsInHtml(categories, threats) {
   }
 
   html = html.replace(/<span class="tab-count" id="tab-threats-count">\d+<\/span>/, `<span class="tab-count" id="tab-threats-count">${threats.length}</span>`);
+  html = html.replace(/<span class="side-nav-pill" id="side-threats-count">\d+<\/span>/, `<span class="side-nav-pill" id="side-threats-count">${threats.length}</span>`);
+  html = html.replace(/<div class="hero-metric-num" id="stat-news">\d+<\/div>/, `<div class="hero-metric-num" id="stat-news">${threats.length}</div>`);
   html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${threats.length} verified news stories</span>`);
+  html = html.replace(/let THREATS_DATA = \\[[\\s\\S]*?\\];/, `let THREATS_DATA = ${JSON.stringify(threats)};`);
+
+  const heroNewsRegex = /<div class="hero-news-list" id="hero-live-news-list">[\s\S]*?<\/div>\s*<\/div>\s*<div class="hero-news-footer">/;
+  if (heroNewsRegex.test(html) && threats.length) {
+    const picked = threats.slice(0, 4);
+    const heroItemsHtml = picked.map(item => {
+      const rawTag = (item.sourceName || item.impactBadge || "Live Wire").replace(/\.com$/i, "").trim();
+      const shortTag = rawTag.length > 16 ? rawTag.slice(0, 15) + "…" : rawTag;
+      return `            <div class="hero-news-item" onclick="jumpToThreatStory('${esc(item.id)}')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">${esc(item.title)}</span>
+              <span class="hero-news-tag">${esc(shortTag)}</span>
+            </div>`;
+    }).join("\n");
+    html = html.replace(heroNewsRegex, `<div class="hero-news-list" id="hero-live-news-list">\n${heroItemsHtml}\n          </div>\n        </div>\n        <div class="hero-news-footer">`);
+  }
 
   const containerStartTag = '<div class="threat-cards-grid" id="threats-container">';
   const startIdx = html.indexOf(containerStartTag);
