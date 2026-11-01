@@ -53,9 +53,9 @@ function staticSignals(signals = []) {
 function staticCard(t) {
   let domain = "";
   try { domain = new URL(t.url).hostname; } catch {}
-  const icon = esc(t.emoji || "⚡") + (domain
-    ? `<img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=64" alt="" loading="lazy" onerror="this.remove()" style="position:absolute;inset:0;margin:auto;" />`
-    : "");
+  const icon = domain
+    ? `<span class="icon-fallback">${esc(t.emoji || "⚡")}</span><img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=64" alt="" loading="lazy" onload="const fb=this.parentElement.querySelector('.icon-fallback');if(fb)fb.style.display='none';" onerror="this.remove()" style="position:absolute;inset:0;margin:auto;" />`
+    : esc(t.emoji || "⚡");
   const why = t.why_it_matters && !BOILERPLATE_WHY.test(t.why_it_matters)
     ? `<div class="why-box"><strong>Why it matters:</strong> ${esc(t.why_it_matters)}</div>` : "";
   return `<a class="tool-card" href="${esc(t.url)}" target="_blank" rel="noopener">

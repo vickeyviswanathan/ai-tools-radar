@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T14:12:18.804Z",
+  "updatedAt": "2026-11-01T14:29:19.242Z",
   "categories": [
     {
       "id": "all",
@@ -240,11 +240,11 @@
       "consequence": "Read reporting on NDTV."
     },
     {
-      "id": "live-global-ransomware-11255069562",
+      "id": "live-global-ransomware-11423124972",
       "category": "global-ransomware",
       "severity": "high",
       "impactBadge": "⚠️ Data Breach",
-      "title": "Trump’s DHS hit by data breach as hackers expose records of 41,000 employees",
+      "title": "Trump's DHS hit by data breach as hackers expose records of 41,000 employees",
       "sourceName": "The Times of India",
       "sourceUrl": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNTndmc2lnNWtJX0JXazc0YmxWUmhQT2t3aXR2TEwtMGxrYi1fSUdxbW1nZjA3VTJVVE5GVUNYMDVhSUhTdFdidmdzc0hOMTB6b2tOTk1OTVBvZE51QUwyUnY5QVFUZzBYeTY5UTh2aXZpRWZPUEI4YUE3Q3l6LVhCTThWSUM0cVlZVFhVMVpkSDFmZHN2eDBYQUJ3ejByY0RQeEtFVzZ3a2hmakM5ekgzNGJXa0xKRVlON1Q4eVp1cEZJc1gwYWR6S09iejBMOEFoSGdKYXlJX3JYMjFOckHSAeMBQVVfeXFMTTJRQTFBNldiVzlzZF9rNUtxRzk2WjNFNVdtSUk0ZjM3eEMtMWhNYUVrWWhNeEllM244QmppaElwZHBMQlFUTXBzU1cwWW9JN25ybGMyTGFPejhTTXBoU1N4YVNYR2RxdlVqaDVjbEpucnBSSm9RQXJkdUFjNXY1Z1dSUmNnUmFIRTdldDJTSDR6U3J5U0RId0VTUVdpQ1BKal9QU1BrcnVMWlBhRjVQRE1GR293MC1BYVRNZW81aUl0N2loV1FtYlU4QVJxbHRzbm5XRXNQRGdxbVlieWlUdEZpczA?oc=5",
       "provenanceBadge": "🌐 Global Security",
