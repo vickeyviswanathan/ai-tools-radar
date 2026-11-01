@@ -4,6 +4,8 @@
   "description": "Simple UI for new & trending AI tools from theresanaiforthat.com (scraped with Libretto)",
   "scripts": {
     "start": "node server.mjs",
+    "build": "node build-static.mjs",
+    "test": "node test/verify-build.mjs",
     "scrape:day": "set TAAFT_PERIOD=day&& libretto run ./workflows/taaft-radar.ts --headless",
     "scrape:week": "set TAAFT_PERIOD=week&& libretto run ./workflows/taaft-radar.ts --headless",
     "scrape:month": "set TAAFT_PERIOD=month&& libretto run ./workflows/taaft-radar.ts --headless",

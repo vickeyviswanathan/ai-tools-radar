@@ -37,6 +37,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node build-static.mjs
 
+      - name: Run Strict Quality, Safety & Anti-Junk Gate
+        run: npm test
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
