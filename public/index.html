@@ -1538,6 +1538,163 @@
     50% { outline-color: #2563eb; box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.25), var(--shadow-lg); }
   }
 
+  /* Newsletter Subscription Card */
+  .newsletter-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin: 18px 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: var(--shadow-sm);
+    flex-wrap: wrap;
+  }
+  .newsletter-card-left {
+    flex: 1.2;
+    min-width: 260px;
+  }
+  .newsletter-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    padding: 3px 8px;
+    border-radius: 6px;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+  }
+  .newsletter-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0 0 4px;
+    line-height: 1.3;
+  }
+  .newsletter-sub {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.4;
+  }
+  .newsletter-card-right {
+    flex: 1;
+    min-width: 260px;
+    max-width: 440px;
+  }
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .newsletter-input-group {
+    display: flex;
+    gap: 8px;
+  }
+  .newsletter-input {
+    flex: 1;
+    padding: 9px 12px;
+    border-radius: 9px;
+    border: 1px solid var(--line-strong);
+    background: var(--surface-input);
+    color: var(--text);
+    font-size: 13.5px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .newsletter-input:focus {
+    border-color: var(--accent);
+  }
+  .newsletter-btn {
+    padding: 9px 14px;
+    border-radius: 9px;
+    border: none;
+    background: var(--accent);
+    color: var(--accent-fg);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+  .newsletter-btn:hover {
+    background: var(--accent-hover);
+  }
+  .newsletter-actions-sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: var(--text-muted);
+  }
+  .newsletter-preview-link {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+  }
+  .newsletter-feedback {
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 7px 10px;
+    border-radius: 7px;
+    margin-top: 4px;
+  }
+  .newsletter-feedback.success {
+    background: var(--green-soft);
+    border: 1px solid var(--green-border);
+    color: var(--green-text);
+  }
+
+  /* Briefing Modal */
+  .briefing-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .briefing-modal-dialog {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 620px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+  }
+  .briefing-modal-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .briefing-modal-body {
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .briefing-modal-footer {
+    padding: 12px 20px;
+    border-top: 1px solid var(--line);
+    text-align: right;
+  }
+
   #toast {
     position: fixed; bottom: 24px; right: 24px; background: var(--text); color: var(--bg);
     padding: 12px 20px; border-radius: 10px; font-size: 13px; font-weight: 700;
@@ -1773,21 +1930,21 @@
             <button type="button" class="hero-news-link" onclick="switchView('news')">View All →</button>
           </div>
           <div class="hero-news-list" id="hero-live-news-list">
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-8865700446')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">2.10 Crore Cyber Fraud: Ambani, Tendulkar&#39;s Names Used to Lure Pune Senior Citizen, Then &#39;Digital Arrest&#39; Trap</span>
+              <span class="hero-news-tag">The 420.in</span>
+            </div>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-5516988537')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">India&#39;s car sales breach all-time high of 5 lakh units in Oct</span>
+              <span class="hero-news-tag">The Hawk</span>
+            </div>
             <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-17601327396')" title="Click to view story in Cyber News">
               <span class="hero-news-item-title">Delhi Police bust cyber fraud ring targeting southern India with fake benefits</span>
               <span class="hero-news-tag">India Today</span>
             </div>
-            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-6469460485')" title="Click to view story in Cyber News">
-              <span class="hero-news-item-title">CBI files FIR against Chandra Proteco and directors for alleged bank fraud</span>
-              <span class="hero-news-tag">The Hindu</span>
-            </div>
-            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-5496497170')" title="Click to view story in Cyber News">
-              <span class="hero-news-item-title">AU Bank probes potential data leak</span>
-              <span class="hero-news-tag">The Times of In…</span>
-            </div>
-            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-278622367')" title="Click to view story in Cyber News">
-              <span class="hero-news-item-title">SC Seeks Strict Bank Liability, Mandatory Compensation for Victims of Digital Arrest, Cyber Fraud</span>
-              <span class="hero-news-tag">KNN India</span>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-14130581889')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">Delhi: Gang impersonating Paytm executives busted in Shahdara cyber fraud case; five arrested</span>
+              <span class="hero-news-tag">The Hawk</span>
             </div>
           </div>
         </div>
@@ -1822,6 +1979,28 @@
         <span class="eq-text"><strong>Need Emergency Cyber Fraud Help?</strong> Call <strong>1930</strong> (Toll-Free) within the Golden Hour or open <strong>Scam Alerts</strong>.</span>
       </div>
       <span class="eq-cta">1930 Helpline &amp; Scam Alerts →</span>
+    </div>
+
+    <!-- The Cipherati Morning Briefing Newsletter Card -->
+    <div class="newsletter-card" id="newsletter-signup-card">
+      <div class="newsletter-card-left">
+        <div class="newsletter-badge">📬 THE CIPHERATI BRIEFING</div>
+        <h3 class="newsletter-title">The 60-Second Morning Intelligence Scan</h3>
+        <p class="newsletter-sub">Top breaking cybersecurity incidents, active citizen scam defense rules, and verified AI developer tools. Zero hype.</p>
+      </div>
+      <div class="newsletter-card-right">
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletter-email" class="newsletter-input" placeholder="name@company.com" required autocomplete="email" />
+            <button type="submit" class="newsletter-btn" id="newsletter-submit-btn">Subscribe Free →</button>
+          </div>
+          <div class="newsletter-actions-sub">
+            <span class="newsletter-privacy">🔒 1-click unsubscribe anytime</span>
+            <button type="button" class="newsletter-preview-link" onclick="openNewsletterPreview()">Preview Today's Issue ↗</button>
+          </div>
+          <div id="newsletter-feedback" class="newsletter-feedback" style="display:none;"></div>
+        </form>
+      </div>
     </div>
 
     <div class="radar-header" id="radar-directory-anchor">
@@ -4933,6 +5112,74 @@
     </div>
 
     <div class="threat-cards-grid" id="threats-container">
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-8865700446">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Financial Fraud Probe</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-8865700446')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWnBMTDNXMWRtYmMxYmRSdGdUOVd1WktQUS0tWFV2WEJISThuMndQcGlQRkkyRGRtSGJVLXZKcTBDZlBGQVNvaEFaVEQteWV6RU1rVUNZenRmSGpDVTFIQ214RTdSX2RrWHdjRlVGOTNhVmRSLXBVdlp2OVRiZW1JZE5GQjdoUDNxX2wwbjMta1dXRE1wWUxfeG0zbE5TbkFyaUJSNkE3aWFfZ3BHMXB1US1MejJ5UGJzeV8xQ3N2dmc?oc=5" target="_blank" rel="noopener noreferrer">
+          2.10 Crore Cyber Fraud: Ambani, Tendulkar&#39;s Names Used to Lure Pune Senior Citizen, Then &#39;Digital Arrest&#39; Trap <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Banking &amp; Financial Services</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The 420.in</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWnBMTDNXMWRtYmMxYmRSdGdUOVd1WktQUS0tWFV2WEJISThuMndQcGlQRkkyRGRtSGJVLXZKcTBDZlBGQVNvaEFaVEQteWV6RU1rVUNZenRmSGpDVTFIQ214RTdSX2RrWHdjRlVGOTNhVmRSLXBVdlp2OVRiZW1JZE5GQjdoUDNxX2wwbjMta1dXRE1wWUxfeG0zbE5TbkFyaUJSNkE3aWFfZ3BHMXB1US1MejJ5UGJzeV8xQ3N2dmc?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The 420.in ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-5516988537">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-5516988537')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOZzR2b3lCNTBZNy1scUhoLU13d05hODZ0a2h6TkpTQUdiMWRfRWJDODExVU55aTFkbzNrV2JZbk9uVjAzMUlFbmdqY2RVVHlNNVNRV2ZCUVRYVWNSQ1hMbjFCSGV2cWUwa3IwM2JCQVpUMklNUHk3bURoTEw2QmFpUHZxbjd3YVlMRmgwdlRBbjJFQkhIa01WMW1tUlR4T3dZTXRCNkgtckVCZ2NpaVE?oc=5" target="_blank" rel="noopener noreferrer">
+          India&#39;s car sales breach all-time high of 5 lakh units in Oct <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Banking &amp; Financial Services</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Hawk</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOZzR2b3lCNTBZNy1scUhoLU13d05hODZ0a2h6TkpTQUdiMWRfRWJDODExVU55aTFkbzNrV2JZbk9uVjAzMUlFbmdqY2RVVHlNNVNRV2ZCUVRYVWNSQ1hMbjFCSGV2cWUwa3IwM2JCQVpUMklNUHk3bURoTEw2QmFpUHZxbjd3YVlMRmgwdlRBbjJFQkhIa01WMW1tUlR4T3dZTXRCNkgtckVCZ2NpaVE?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Hawk ↗
+        </a>
+      </div>
+    </article>
+
     <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-17601327396">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -4958,7 +5205,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Key Context</strong>
-          Key updates: Delhi Police Uncover Major Cyber Fraud Ring Targeting South India; How Delhi Police Uncovered A Mobile Cyber Fraud Network.
+          Key updates: How Delhi Police Uncovered A Mobile Cyber Fraud Network; Rs 2.21 lakh cyber fraud leads Delhi Police to Rs 10-Crore phishing network; five arrested.
         </div>
       </div>
       <div class="threat-footer-row">
@@ -4968,6 +5215,40 @@
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1F0LVB5ZUhwZXk2RUpmVGNnbVFndGxyU1l1OWJPVFpHZDBDdm1SUFpzZlMxSTA3bE1Cd0RnTmQ1bHBWTmFwSFFCWDZQamZJQWdJLWFfR3A0NXJSQnQ3TWw5S3pvX1VZbnRuV1E5c2xIWDFaTzlOMDdpSFhyNll6TUZoSXhmTDk1VE5wZU5sbjd4UlJnS2tNQjByeHJuYzFfc3RFb3pIRGY0QVgzbWlpeDBPcFhwa3NYeUd5WkxNcHdGd0FVQXNfbHEycmFnVzFi0gHWAUFVX3lxTE11NmNkbkszSnl5NUF6c3c2U3Vka2g3X1JuTnBZQktJT21aMEtNUTVHeXNBcUt4N1QtWFFPUXF2Um54WjhvaXRwbmlzSWtPV2VVWVlrYVpfamRtMjJZZDJJVnBTV1ZFb25TZ2tYMEVpR0dZQk9Qa3hiSmk1WFdYTjI4eWwtT2xBOTFUUnZ6dTY4SU9MVkpsZHhrbm9tWFpCME40N1NlWlBST1dqWURoZnFnT1VaeHFXSmpJdjU1QlBjbWtacUwtTEtxc2ZSZjlKRDVrSmhxR1E?oc=5" target="_blank" rel="noopener noreferrer">
           Read on India Today ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-14130581889">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-14130581889')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNUF4a0xHLXdKSE9uOG12WGcyVzBvdEZELWdsRmpCV3BHa0c2ZVYyMVhWd2FPQ0pUYVJfZWxpWFFxLVVyakNsMURRUmpyMWNPdUhpcElpQ3ltLTNHTkxjdjN2SS1SdmgzMUN3NGhqLUpuTWpDaVF5OUthVnBqUzRCOW9TdHRaSlFDNTBHVEZhNkp0SzVrdHdtWm90c0ZEaGJ0YUlQRWhZUjFhLU1peWVSdndYSWZtWXpOR0JrbzdOeExYSXc?oc=5" target="_blank" rel="noopener noreferrer">
+          Delhi: Gang impersonating Paytm executives busted in Shahdara cyber fraud case; five arrested <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Banking &amp; Financial Services</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Hawk</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNUF4a0xHLXdKSE9uOG12WGcyVzBvdEZELWdsRmpCV3BHa0c2ZVYyMVhWd2FPQ0pUYVJfZWxpWFFxLVVyakNsMURRUmpyMWNPdUhpcElpQ3ltLTNHTkxjdjN2SS1SdmgzMUN3NGhqLUpuTWpDaVF5OUthVnBqUzRCOW9TdHRaSlFDNTBHVEZhNkp0SzVrdHdtWm90c0ZEaGJ0YUlQRWhZUjFhLU1peWVSdndYSWZtWXpOR0JrbzdOeExYSXc?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Hawk ↗
         </a>
       </div>
     </article>
@@ -5036,7 +5317,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Key Context</strong>
-          Key updates: AU Small Finance Bank Probes Possible Customer Data Leak, Says Banking Systems Safe; India&#39;s AU Small Finance Bank probes potential data leak.
+          Key updates: India&#39;s AU Small Finance Bank probes potential data leak; From AU Small Finance Bank Breach To PHP Flaw: Cyberattacks In October That Took The Internet By Storm.
         </div>
       </div>
       <div class="threat-footer-row">
@@ -5046,108 +5327,6 @@
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNU0JSQkZlOHY3dWVLclNCaGQ5VGxIb3prT0NqOXh3UHRfUjdhVUdRUFZ2T3dTZnNJQnEzUFhSOVItdkxiY1d6WTh4T1dadzhGNFZ2QzNhU0c1TnVURDhKbHQ1MmhYdUJaWjE1bEFWdEV2U24zZEdaVUVYWDVjUFZ4NVhoX2VfS0lGbTg2Z0xweFNvdENCam42NXIyQUJraWxRbkt6NENLMHVITVQ4YjhqY20wSG4yY0ZsaWRiNNIBwgFBVV95cUxOdmlQak9MckhIQXlYcElwZG9YQ09NdmtZNGpnWmJYckpvSXJ5RGN2QU82RS00T2YtWUJ6RGpBTFZ6MlVVLXp3bDBEb0xrYjJGTC14UmpJemhxZnN1MkQ0Z0RMR05TWXRSaU9BTml1emZ6cTI1VHU5bmtfQ0NRazlxQ0M0cklnOERvT2hkZVRDMndBX2J3YWxxUl9PSWlKZzQ0WHVGT3B1S2M2RFFLNzVfdGlRa3RTc0R2cUMyRUZDZThadw?oc=5" target="_blank" rel="noopener noreferrer">
           Read on The Times of India ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-278622367">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-278622367')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxQa2hiMjdoaGdOYlMzR1Zfb2xwVGk0OE9GUnN4TGxORE9sMkQ0WkFmUERGOUhsdXdZSjBiR2ctZU9pNEFoelUweHg4Qlo5S0xfZ3ZoSnd4cUt3VEdlVHRoNnFwMWdmb3RHVVhoak5MN2JRckg0c0xWcEtNME9yQm9KVjZvQnl5ak9wT3R0cWZIWXlXdEpUOVM3TVpybzVaNHZQR0YxNHdPZVRhRGxhZkF3RkdVaGU3alFzeDZkdXpicmktYU0zMVYxUEhWWmE2LUNBbldJb0NPbkpRSHM?oc=5" target="_blank" rel="noopener noreferrer">
-          SC Seeks Strict Bank Liability, Mandatory Compensation for Victims of Digital Arrest, Cyber Fraud <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Banking &amp; Financial Services</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">KNN India</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxQa2hiMjdoaGdOYlMzR1Zfb2xwVGk0OE9GUnN4TGxORE9sMkQ0WkFmUERGOUhsdXdZSjBiR2ctZU9pNEFoelUweHg4Qlo5S0xfZ3ZoSnd4cUt3VEdlVHRoNnFwMWdmb3RHVVhoak5MN2JRckg0c0xWcEtNME9yQm9KVjZvQnl5ak9wT3R0cWZIWXlXdEpUOVM3TVpybzVaNHZQR0YxNHdPZVRhRGxhZkF3RkdVaGU3alFzeDZkdXpicmktYU0zMVYxUEhWWmE2LUNBbldJb0NPbkpRSHM?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on KNN India ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-3667265">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-3667265')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNVUE1M19jeHV5eE1KU0lvNUc0YmFuVmVsLTNUeTdMLTNUcU43WDZscVFrMTNOeFZ2bnlNMEF2MHRqSGM2SWNEZF9BUjZvbHN6V21lb0xFQWNJR0tEUHZtdVJqaGZZbzNsaXNaQlZUYmpjUUFPT3JLaVhGOWl1blNYWWo1TEd6SGlrZ1JqRFN5ZHpSU0Z3VmdDcWliRHBxeHN4Y3ZlZThmWEkwMTg1WXfSAbABQVVfeXFMUGxkZkU2emlxYzhVeWdrLXZsUjUyWGttVDBUdEo1NlgtV0t4QmRrTUVRVEpGaXQ3Snk1OXZNOEdGcThQd1VJWktfWEJITGRCcjVKMi1MNHl6Y1R4R3J6VzZPM3h3RDVDcERtUUpEN1o3d3VvS0htaW9RWmNBVlR3ZlJ1MG5KdVE5VTJBMXpEV0F1S0JkektQa2IyaGZrR3Mtb3lsR2dtSjJ5OGMxVFFObFo?oc=5" target="_blank" rel="noopener noreferrer">
-          How &#39;Digital Arrest&#39; Scam Cost Retired Officer Rs 78 Lakh <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Banking &amp; Financial Services</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Rediff</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNVUE1M19jeHV5eE1KU0lvNUc0YmFuVmVsLTNUeTdMLTNUcU43WDZscVFrMTNOeFZ2bnlNMEF2MHRqSGM2SWNEZF9BUjZvbHN6V21lb0xFQWNJR0tEUHZtdVJqaGZZbzNsaXNaQlZUYmpjUUFPT3JLaVhGOWl1blNYWWo1TEd6SGlrZ1JqRFN5ZHpSU0Z3VmdDcWliRHBxeHN4Y3ZlZThmWEkwMTg1WXfSAbABQVVfeXFMUGxkZkU2emlxYzhVeWdrLXZsUjUyWGttVDBUdEo1NlgtV0t4QmRrTUVRVEpGaXQ3Snk1OXZNOEdGcThQd1VJWktfWEJITGRCcjVKMi1MNHl6Y1R4R3J6VzZPM3h3RDVDcERtUUpEN1o3d3VvS0htaW9RWmNBVlR3ZlJ1MG5KdVE5VTJBMXpEV0F1S0JkektQa2IyaGZrR3Mtb3lsR2dtSjJ5OGMxVFFObFo?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Rediff ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-10582028834">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-10582028834')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdVhyQy1WR3BKZEdpbjZZLTYwSzdlSWJPVHZlMUVfbE9qQXQ2WUpybFpYYU1KRnNWdXo0dWl1U29UNFc5R2dySUcxTFNIZ2ZHOFJpdTliR3BMcEljNW1NamRVdzhCZHBFb2hSLV9WVzBEb2FNcHBwbDR2b0RiTlNwZE5nZWxnLWlORm14aDZrUFFYY092bDFsZWlTS0NvekZkZU92VkNDUGpsUHFhSndhODA5R203b01ablhDbjJPZzAxeHlOMzdLZ1RwcGpaSnN5Q1FMRXVCNNIB3AFBVV95cUxOSFE3VDlnU2VxWmlQVnNvd2pqUmFwMUxaMHc5MjY0VUpucHFQWTlOWUl0Y3B3RGEyNlBrbmtqX1h4TDRRNC04S1NoTUx5WDZVNDJ4SjVIbDNKWFo3R0NnRS0wUXpnSXBjZ0JWVHVHVEY1WjZlR2RreXFCcTU2LVlZbHpXeGVaUFlrNGlySWZrYms0bVRhSGxHa2M3ajl3RlJhdmNfbUt1cnFUeUsyRk1OODZ6b0NEMU1VaUtpdjZxalJteWd6VXhxQkY2c056RkpXUWJYWXBQTDJwWkVE?oc=5" target="_blank" rel="noopener noreferrer">
-          Cyberattack on SMARTs portal puts Sebi&#39;s cybersecurity team on high alert <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Banking &amp; Financial Services</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Business Standard</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdVhyQy1WR3BKZEdpbjZZLTYwSzdlSWJPVHZlMUVfbE9qQXQ2WUpybFpYYU1KRnNWdXo0dWl1U29UNFc5R2dySUcxTFNIZ2ZHOFJpdTliR3BMcEljNW1NamRVdzhCZHBFb2hSLV9WVzBEb2FNcHBwbDR2b0RiTlNwZE5nZWxnLWlORm14aDZrUFFYY092bDFsZWlTS0NvekZkZU92VkNDUGpsUHFhSndhODA5R203b01ablhDbjJPZzAxeHlOMzdLZ1RwcGpaSnN5Q1FMRXVCNNIB3AFBVV95cUxOSFE3VDlnU2VxWmlQVnNvd2pqUmFwMUxaMHc5MjY0VUpucHFQWTlOWUl0Y3B3RGEyNlBrbmtqX1h4TDRRNC04S1NoTUx5WDZVNDJ4SjVIbDNKWFo3R0NnRS0wUXpnSXBjZ0JWVHVHVEY1WjZlR2RreXFCcTU2LVlZbHpXeGVaUFlrNGlySWZrYms0bVRhSGxHa2M3ajl3RlJhdmNfbUt1cnFUeUsyRk1OODZ6b0NEMU1VaUtpdjZxalJteWd6VXhxQkY2c056RkpXUWJYWXBQTDJwWkVE?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Business Standard ↗
         </a>
       </div>
     </article>
@@ -5259,21 +5438,21 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-710623010">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-11326203735">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
           <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-710623010')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-11326203735')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5" target="_blank" rel="noopener noreferrer">
-          North Korean hackers linked to crypto thefts among world&#39;s best, experts say, Digital News <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTGdHd2Z0NDJuN3dFc2duMXJ5MDdHYVFQN1JYLVpnUWdqNE1HZEl5RkYzeTk3cHhjMV9nQmhqSjN1M2pObWVlcGlZcC1tWUM3a0taRlZuRG81NFNtbElDWWJ5b1dtNUhiRVNvSndfZXFlLWducmdLWUpvYTk2V1FwSEVHWFJqN2NtY1k4c0paZ0lMdDExdE1OU3NRRHBzekMtTDlNTzV3RVJydw?oc=5" target="_blank" rel="noopener noreferrer">
+          Quad Countries Agree on New Push for Semiconductor Supply Chains and Cybersecurity <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5285,44 +5464,10 @@
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">AsiaOne.com</span>
+          <span class="threat-source-name">www.nationpathindia.com</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on AsiaOne.com ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5707601159">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5707601159')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
-          New cybersecurity blind spot: When AI looks like a trusted employee <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">The Financial Express</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on The Financial Express ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTGdHd2Z0NDJuN3dFc2duMXJ5MDdHYVFQN1JYLVpnUWdqNE1HZEl5RkYzeTk3cHhjMV9nQmhqSjN1M2pObWVlcGlZcC1tWUM3a0taRlZuRG81NFNtbElDWWJ5b1dtNUhiRVNvSndfZXFlLWducmdLWUpvYTk2V1FwSEVHWFJqN2NtY1k4c0paZ0lMdDExdE1OU3NRRHBzekMtTDlNTzV3RVJydw?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on www.nationpathindia.com ↗
         </a>
       </div>
     </article>
@@ -5383,12 +5528,7 @@
         <span class="threat-entity-label">Sector:</span>
         <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
       </div>
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Key Context</strong>
-          Key updates: Data Leak Exposes Information on over 40,000 US Homeland Security Employees.
-        </div>
-      </div>
+
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
@@ -5422,12 +5562,7 @@
         <span class="threat-entity-label">Sector:</span>
         <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
       </div>
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Key Context</strong>
-          Key updates: Google launches Gemini 4 Carbon AI model with cybersecurity focus.
-        </div>
-      </div>
+
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
@@ -5439,21 +5574,21 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-9023916946">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-12643287449">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🔒 Assets Frozen</span>
+          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-9023916946')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-12643287449')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
-          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZWgzWENJclAySlJUMHZhTlFwUXVCbW9qWV8zTDRGdWJfQVAxTnRIQjJWcHNqNjFxQXFMeC1fcDFYZTUtUjFTSUM1S0tVVzZkem01M2MzR1ZBMTd6cXVTcTk3eTUxX2VYRHFsX2tMc2dsTGZrZ1RmMzdUbG5qTWhvazZYc0diaUxUMW5kRTV0cnNVc3lxaGNTeDB0cTFUN0NwZXBWRngtYjVXLWl2eHBHamVUaVJsenVOQlNWbGM2UWlQamNXN2pBQ1ptODA0dDM3Q2VNdzlrUkFfdw?oc=5" target="_blank" rel="noopener noreferrer">
+          France&#39;s Sopra Steria raises 2026 growth target again as defence, cybersecurity lift Q3 sales <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5465,10 +5600,44 @@
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">New York Post</span>
+          <span class="threat-source-name">Reuters</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on New York Post ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZWgzWENJclAySlJUMHZhTlFwUXVCbW9qWV8zTDRGdWJfQVAxTnRIQjJWcHNqNjFxQXFMeC1fcDFYZTUtUjFTSUM1S0tVVzZkem01M2MzR1ZBMTd6cXVTcTk3eTUxX2VYRHFsX2tMc2dsTGZrZ1RmMzdUbG5qTWhvazZYc0diaUxUMW5kRTV0cnNVc3lxaGNTeDB0cTFUN0NwZXBWRngtYjVXLWl2eHBHamVUaVJsenVOQlNWbGM2UWlQamNXN2pBQ1ptODA0dDM3Q2VNdzlrUkFfdw?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Reuters ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-18083774526">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-18083774526')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
+          Mistral AI publicly releases Large 4, targets cybersecurity users <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Reuters</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Reuters ↗
         </a>
       </div>
     </article>
@@ -6080,6 +6249,25 @@
         <div id="inspector-content"></div>
       </aside>
     </main>
+
+<!-- Morning Briefing Preview Modal -->
+<div class="briefing-modal-overlay" id="briefing-modal" style="display:none;" onclick="closeBriefingModal(event)">
+  <div class="briefing-modal-dialog" onclick="event.stopPropagation()">
+    <div class="briefing-modal-header">
+      <div>
+        <span class="newsletter-badge">📬 CIPHERATI MORNING BRIEFING</span>
+        <h3 id="briefing-modal-date" style="margin:4px 0 0;font-size:17px;color:var(--text);font-weight:800;">Today's Intelligence Briefing</h3>
+      </div>
+      <button type="button" class="sidebar-close-btn" onclick="closeBriefingModal()" aria-label="Close">✕</button>
+    </div>
+    <div class="briefing-modal-body" id="briefing-modal-content">
+      <div style="text-align:center;padding:30px;color:var(--text-muted);">Loading today's briefing...</div>
+    </div>
+    <div class="briefing-modal-footer">
+      <button type="button" class="newsletter-btn" onclick="closeBriefingModal()">Done Reading</button>
+    </div>
+  </div>
+</div>
 
 <div id="toast">Copied takeaway to clipboard!</div>
 
@@ -7458,7 +7646,7 @@ document.addEventListener("keydown", (e) => {
 init();
 
 // --- Cybersecurity News Client Logic ---
-let THREATS_DATA = [{"id":"live-india-bfsi-17601327396","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Delhi Police bust cyber fraud ring targeting southern India with fake benefits","sourceName":"India Today","sourceUrl":"https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1F0LVB5ZUhwZXk2RUpmVGNnbVFndGxyU1l1OWJPVFpHZDBDdm1SUFpzZlMxSTA3bE1Cd0RnTmQ1bHBWTmFwSFFCWDZQamZJQWdJLWFfR3A0NXJSQnQ3TWw5S3pvX1VZbnRuV1E5c2xIWDFaTzlOMDdpSFhyNll6TUZoSXhmTDk1VE5wZU5sbjd4UlJnS2tNQjByeHJuYzFfc3RFb3pIRGY0QVgzbWlpeDBPcFhwa3NYeUd5WkxNcHdGd0FVQXNfbHEycmFnVzFi0gHWAUFVX3lxTE11NmNkbkszSnl5NUF6c3c2U3Vka2g3X1JuTnBZQktJT21aMEtNUTVHeXNBcUt4N1QtWFFPUXF2Um54WjhvaXRwbmlzSWtPV2VVWVlrYVpfamRtMjJZZDJJVnBTV1ZFb25TZ2tYMEVpR0dZQk9Qa3hiSmk1WFdYTjI4eWwtT2xBOTFUUnZ6dTY4SU9MVkpsZHhrbm9tWFpCME40N1NlWlBST1dqWURoZnFnT1VaeHFXSmpJdjU1QlBjbWtacUwtTEtxc2ZSZjlKRDVrSmhxR1E?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"India Today","date":"2026-10-31","timeAgo":"21 hours ago","entities":"Banking & Financial Services","incident":"Key updates: Delhi Police Uncover Major Cyber Fraud Ring Targeting South India; How Delhi Police Uncovered A Mobile Cyber Fraud Network.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on India Today."},{"id":"live-india-bfsi-6469460485","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"CBI files FIR against Chandra Proteco and directors for alleged bank fraud","sourceName":"The Hindu","sourceUrl":"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPb0E5UTNMSEg1aEhqRWxpOXh5MTVrVko4Z0k4LTh5d1IxYjBaZU13VlJUNGxic0FpUTZiY3ZrNUI1NFJaMHlWbjJUcnl4bGVGRF9mc2RqUHF6OEczRWxBUUJDSU5wM015bGpNRUtPSDZQV0VHR1cyMHp0cFJVb0doT251LTdnZzhYRlQ4YzNZZ0dZSW0wbWlGbHpyYkMwVVhBQ3lOcUI0eDluOUFQWGg5YlVHbmpzUWR6TjRmX3ZjUXVTNC16aXhtVjY1WDlKMmlISXBsZlVqUWVpazJveGk0M9IB5wFBVV95cUxQWVNVWnlsaFNyLVBjdjJ3UlJ0dUxaZmgtek11RkpMelBhWjZ1c2xudEc1ckJ4Q25LcXJ5aHcyOG5oLS1yTm1lZDdvSFRlYjVtN3RUVGFKUk5HQkN6b2kzVTVHdnZpSzR5aU1WclE3SnIyRXRKNWJVRTRleUhlbDBiQmJGYlUteUFkeXU0RFFFTVpXNTBqYXFiNkxmLU5xT25RZkktVy0xRGpGU2ZLMDdDMDdEdFdRZHBpcjFWa25KeTVtZTFWeWRvT1R3QXRRZmd1cjYxSTVTVS0tWGZvWVp1ZTdfLUdFSXc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Hindu","date":"2026-10-30","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"Key updates: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Investigates Rs 210 Crore Bank Fraud By Chandra Proteco.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Hindu."},{"id":"live-india-bfsi-5496497170","category":"india-bfsi","severity":"high","impactBadge":"🏦 Bank Breach Probe","title":"AU Bank probes potential data leak","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMivAFBVV95cUxNU0JSQkZlOHY3dWVLclNCaGQ5VGxIb3prT0NqOXh3UHRfUjdhVUdRUFZ2T3dTZnNJQnEzUFhSOVItdkxiY1d6WTh4T1dadzhGNFZ2QzNhU0c1TnVURDhKbHQ1MmhYdUJaWjE1bEFWdEV2U24zZEdaVUVYWDVjUFZ4NVhoX2VfS0lGbTg2Z0xweFNvdENCam42NXIyQUJraWxRbkt6NENLMHVITVQ4YjhqY20wSG4yY0ZsaWRiNNIBwgFBVV95cUxOdmlQak9MckhIQXlYcElwZG9YQ09NdmtZNGpnWmJYckpvSXJ5RGN2QU82RS00T2YtWUJ6RGpBTFZ6MlVVLXp3bDBEb0xrYjJGTC14UmpJemhxZnN1MkQ0Z0RMR05TWXRSaU9BTml1emZ6cTI1VHU5bmtfQ0NRazlxQ0M0cklnOERvT2hkZVRDMndBX2J3YWxxUl9PSWlKZzQ0WHVGT3B1S2M2RFFLNzVfdGlRa3RTc0R2cUMyRUZDZThadw?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Times of India","date":"2026-10-30","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"Key updates: AU Small Finance Bank Probes Possible Customer Data Leak, Says Banking Systems Safe; India's AU Small Finance Bank probes potential data leak.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-india-bfsi-278622367","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"SC Seeks Strict Bank Liability, Mandatory Compensation for Victims of Digital Arrest, Cyber Fraud","sourceName":"KNN India","sourceUrl":"https://news.google.com/rss/articles/CBMi2wFBVV95cUxQa2hiMjdoaGdOYlMzR1Zfb2xwVGk0OE9GUnN4TGxORE9sMkQ0WkFmUERGOUhsdXdZSjBiR2ctZU9pNEFoelUweHg4Qlo5S0xfZ3ZoSnd4cUt3VEdlVHRoNnFwMWdmb3RHVVhoak5MN2JRckg0c0xWcEtNME9yQm9KVjZvQnl5ak9wT3R0cWZIWXlXdEpUOVM3TVpybzVaNHZQR0YxNHdPZVRhRGxhZkF3RkdVaGU3alFzeDZkdXpicmktYU0zMVYxUEhWWmE2LUNBbldJb0NPbkpRSHM?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"KNN India","date":"2026-10-30","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on KNN India."},{"id":"live-india-bfsi-3667265","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"How 'Digital Arrest' Scam Cost Retired Officer Rs 78 Lakh","sourceName":"Rediff","sourceUrl":"https://news.google.com/rss/articles/CBMirgFBVV95cUxNVUE1M19jeHV5eE1KU0lvNUc0YmFuVmVsLTNUeTdMLTNUcU43WDZscVFrMTNOeFZ2bnlNMEF2MHRqSGM2SWNEZF9BUjZvbHN6V21lb0xFQWNJR0tEUHZtdVJqaGZZbzNsaXNaQlZUYmpjUUFPT3JLaVhGOWl1blNYWWo1TEd6SGlrZ1JqRFN5ZHpSU0Z3VmdDcWliRHBxeHN4Y3ZlZThmWEkwMTg1WXfSAbABQVVfeXFMUGxkZkU2emlxYzhVeWdrLXZsUjUyWGttVDBUdEo1NlgtV0t4QmRrTUVRVEpGaXQ3Snk1OXZNOEdGcThQd1VJWktfWEJITGRCcjVKMi1MNHl6Y1R4R3J6VzZPM3h3RDVDcERtUUpEN1o3d3VvS0htaW9RWmNBVlR3ZlJ1MG5KdVE5VTJBMXpEV0F1S0JkektQa2IyaGZrR3Mtb3lsR2dtSjJ5OGMxVFFObFo?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Rediff","date":"2026-10-30","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Rediff."},{"id":"live-india-bfsi-10582028834","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Cyberattack on SMARTs portal puts Sebi's cybersecurity team on high alert","sourceName":"Business Standard","sourceUrl":"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdVhyQy1WR3BKZEdpbjZZLTYwSzdlSWJPVHZlMUVfbE9qQXQ2WUpybFpYYU1KRnNWdXo0dWl1U29UNFc5R2dySUcxTFNIZ2ZHOFJpdTliR3BMcEljNW1NamRVdzhCZHBFb2hSLV9WVzBEb2FNcHBwbDR2b0RiTlNwZE5nZWxnLWlORm14aDZrUFFYY092bDFsZWlTS0NvekZkZU92VkNDUGpsUHFhSndhODA5R203b01ablhDbjJPZzAxeHlOMzdLZ1RwcGpaSnN5Q1FMRXVCNNIB3AFBVV95cUxOSFE3VDlnU2VxWmlQVnNvd2pqUmFwMUxaMHc5MjY0VUpucHFQWTlOWUl0Y3B3RGEyNlBrbmtqX1h4TDRRNC04S1NoTUx5WDZVNDJ4SjVIbDNKWFo3R0NnRS0wUXpnSXBjZ0JWVHVHVEY1WjZlR2RreXFCcTU2LVlZbHpXeGVaUFlrNGlySWZrYms0bVRhSGxHa2M3ajl3RlJhdmNfbUt1cnFUeUsyRk1OODZ6b0NEMU1VaUtpdjZxalJteWd6VXhxQkY2c056RkpXUWJYWXBQTDJwWkVE?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Business Standard","date":"2026-10-30","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Business Standard."},{"id":"live-crypto-heists-9818481674","category":"crypto-heists","severity":"critical","impactBadge":"💰 $6.3B Record Hack","title":"Binance seeks to shore up confidence after record $6.3 billion heist","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-30","timeAgo":"1 day ago","entities":"Crypto & Digital Assets","incident":"Key updates: World's largest crypto exchange Binance probes 'security breach', $6.3 billion in assets impacted; Binance hack biggest crypto theft in history, hackers steal $6 billion.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-799466515","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Polymarket resumes trading after third-party security breach, to reimburse users","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMiowFBVV95cUxQdGFDU255RTFLTGhHMmlndVlJb1gyUVdsYmJxcUpaalJoRVp0OEpROVcyQ0xQRlRiN1haY0UyTUlLb1JlUF92NF8tWVlfVmxmVWJmN2p4Q2ZfNHhCSy1ta2EwMi1KZUJ0eE1zVExPck44OVFJRnFuSmV2VjUtdGUzQVVGR1VPVDFTbUF4UzlwTHFIN0xYbXh5dUpqcjZuNlNMdGNV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"2 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-5792857321","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Three South Korean financial firms including Bithumb report data breaches, Yonhap says","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-28","timeAgo":"4 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-710623010","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"North Korean hackers linked to crypto thefts among world's best, experts say, Digital News","sourceName":"AsiaOne.com","sourceUrl":"https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"AsiaOne.com","date":"2026-10-31","timeAgo":"1 day ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on AsiaOne.com."},{"id":"live-global-ransomware-5707601159","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"New cybersecurity blind spot: When AI looks like a trusted employee","sourceName":"The Financial Express","sourceUrl":"https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"The Financial Express","date":"2026-10-30","timeAgo":"2 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Financial Express."},{"id":"live-global-ransomware-13145223703","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Fake Health Camps, Stolen IDs: Cops Bust e-SIM Racket Used In Cyber Fraud","sourceName":"NDTV","sourceUrl":"https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"NDTV","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on NDTV."},{"id":"live-global-ransomware-11423124972","category":"global-ransomware","severity":"high","impactBadge":"⚠️ Data Breach","title":"Trump's DHS hit by data breach as hackers expose records of 41,000 employees","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMi3gFBVV95cUxNTndmc2lnNWtJX0JXazc0YmxWUmhQT2t3aXR2TEwtMGxrYi1fSUdxbW1nZjA3VTJVVE5GVUNYMDVhSUhTdFdidmdzc0hOMTB6b2tOTk1OTVBvZE51QUwyUnY5QVFUZzBYeTY5UTh2aXZpRWZPUEI4YUE3Q3l6LVhCTThWSUM0cVlZVFhVMVpkSDFmZHN2eDBYQUJ3ejByY0RQeEtFVzZ3a2hmakM5ekgzNGJXa0xKRVlON1Q4eVp1cEZJc1gwYWR6S09iejBMOEFoSGdKYXlJX3JYMjFOckHSAeMBQVVfeXFMTTJRQTFBNldiVzlzZF9rNUtxRzk2WjNFNVdtSUk0ZjM3eEMtMWhNYUVrWWhNeEllM244QmppaElwZHBMQlFUTXBzU1cwWW9JN25ybGMyTGFPejhTTXBoU1N4YVNYR2RxdlVqaDVjbEpucnBSSm9RQXJkdUFjNXY1Z1dSUmNnUmFIRTdldDJTSDR6U3J5U0RId0VTUVdpQ1BKal9QU1BrcnVMWlBhRjVQRE1GR293MC1BYVRNZW81aUl0N2loV1FtYlU4QVJxbHRzbm5XRXNQRGdxbVlieWlUdEZpczA?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"The Times of India","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"Key updates: Data Leak Exposes Information on over 40,000 US Homeland Security Employees.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-global-ransomware-23168141554","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Google Announces Gemini 4 Carbon With Focus on Cybersecurity and Coding","sourceName":"Analytics India Magazine","sourceUrl":"https://news.google.com/rss/articles/CBMirgFBVV95cUxNNngtOWwyUmFKYzM2b0pKcTBhQmJYNENNSHFfSmtpN3ZUM1U4VmJXV2lOdFlCd3loTFM5MG1oalJxYzB6VG1rZ3BSTUdtYzZ4VmpOcmZRSnZuU2cyMGEzUXVCcjJuZUJ1MlhqbjdDa0RfZmp2enFVYnZmckZHc0lfc3hlNnppejlsQU1HRnRrYURhSGlUVWx1eFhCZy1KRmFCMWQ2dnFYbXk5Y3hoTHc?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"Analytics India Magazine","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"Key updates: Google launches Gemini 4 Carbon AI model with cybersecurity focus.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Analytics India Magazine."},{"id":"live-global-ransomware-9023916946","category":"global-ransomware","severity":"high","impactBadge":"🔒 Assets Frozen","title":"Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say","sourceName":"New York Post","sourceUrl":"https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"New York Post","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on New York Post."}];
+let THREATS_DATA = [{"id":"live-india-bfsi-8865700446","category":"india-bfsi","severity":"high","impactBadge":"🚨 Financial Fraud Probe","title":"2.10 Crore Cyber Fraud: Ambani, Tendulkar's Names Used to Lure Pune Senior Citizen, Then 'Digital Arrest' Trap","sourceName":"The 420.in","sourceUrl":"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWnBMTDNXMWRtYmMxYmRSdGdUOVd1WktQUS0tWFV2WEJISThuMndQcGlQRkkyRGRtSGJVLXZKcTBDZlBGQVNvaEFaVEQteWV6RU1rVUNZenRmSGpDVTFIQ214RTdSX2RrWHdjRlVGOTNhVmRSLXBVdlp2OVRiZW1JZE5GQjdoUDNxX2wwbjMta1dXRE1wWUxfeG0zbE5TbkFyaUJSNkE3aWFfZ3BHMXB1US1MejJ5UGJzeV8xQ3N2dmc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The 420.in","date":"2026-11-01","timeAgo":"5 hours ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The 420.in."},{"id":"live-india-bfsi-5516988537","category":"india-bfsi","severity":"high","impactBadge":"⚠️ Data Breach","title":"India's car sales breach all-time high of 5 lakh units in Oct","sourceName":"The Hawk","sourceUrl":"https://news.google.com/rss/articles/CBMirgFBVV95cUxOZzR2b3lCNTBZNy1scUhoLU13d05hODZ0a2h6TkpTQUdiMWRfRWJDODExVU55aTFkbzNrV2JZbk9uVjAzMUlFbmdqY2RVVHlNNVNRV2ZCUVRYVWNSQ1hMbjFCSGV2cWUwa3IwM2JCQVpUMklNUHk3bURoTEw2QmFpUHZxbjd3YVlMRmgwdlRBbjJFQkhIa01WMW1tUlR4T3dZTXRCNkgtckVCZ2NpaVE?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Hawk","date":"2026-11-01","timeAgo":"3 hours ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Hawk."},{"id":"live-india-bfsi-17601327396","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Delhi Police bust cyber fraud ring targeting southern India with fake benefits","sourceName":"India Today","sourceUrl":"https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1F0LVB5ZUhwZXk2RUpmVGNnbVFndGxyU1l1OWJPVFpHZDBDdm1SUFpzZlMxSTA3bE1Cd0RnTmQ1bHBWTmFwSFFCWDZQamZJQWdJLWFfR3A0NXJSQnQ3TWw5S3pvX1VZbnRuV1E5c2xIWDFaTzlOMDdpSFhyNll6TUZoSXhmTDk1VE5wZU5sbjd4UlJnS2tNQjByeHJuYzFfc3RFb3pIRGY0QVgzbWlpeDBPcFhwa3NYeUd5WkxNcHdGd0FVQXNfbHEycmFnVzFi0gHWAUFVX3lxTE11NmNkbkszSnl5NUF6c3c2U3Vka2g3X1JuTnBZQktJT21aMEtNUTVHeXNBcUt4N1QtWFFPUXF2Um54WjhvaXRwbmlzSWtPV2VVWVlrYVpfamRtMjJZZDJJVnBTV1ZFb25TZ2tYMEVpR0dZQk9Qa3hiSmk1WFdYTjI4eWwtT2xBOTFUUnZ6dTY4SU9MVkpsZHhrbm9tWFpCME40N1NlWlBST1dqWURoZnFnT1VaeHFXSmpJdjU1QlBjbWtacUwtTEtxc2ZSZjlKRDVrSmhxR1E?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"India Today","date":"2026-10-31","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"Key updates: How Delhi Police Uncovered A Mobile Cyber Fraud Network; Rs 2.21 lakh cyber fraud leads Delhi Police to Rs 10-Crore phishing network; five arrested.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on India Today."},{"id":"live-india-bfsi-14130581889","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Delhi: Gang impersonating Paytm executives busted in Shahdara cyber fraud case; five arrested","sourceName":"The Hawk","sourceUrl":"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNUF4a0xHLXdKSE9uOG12WGcyVzBvdEZELWdsRmpCV3BHa0c2ZVYyMVhWd2FPQ0pUYVJfZWxpWFFxLVVyakNsMURRUmpyMWNPdUhpcElpQ3ltLTNHTkxjdjN2SS1SdmgzMUN3NGhqLUpuTWpDaVF5OUthVnBqUzRCOW9TdHRaSlFDNTBHVEZhNkp0SzVrdHdtWm90c0ZEaGJ0YUlQRWhZUjFhLU1peWVSdndYSWZtWXpOR0JrbzdOeExYSXc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Hawk","date":"2026-10-31","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Hawk."},{"id":"live-india-bfsi-6469460485","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"CBI files FIR against Chandra Proteco and directors for alleged bank fraud","sourceName":"The Hindu","sourceUrl":"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPb0E5UTNMSEg1aEhqRWxpOXh5MTVrVko4Z0k4LTh5d1IxYjBaZU13VlJUNGxic0FpUTZiY3ZrNUI1NFJaMHlWbjJUcnl4bGVGRF9mc2RqUHF6OEczRWxBUUJDSU5wM015bGpNRUtPSDZQV0VHR1cyMHp0cFJVb0doT251LTdnZzhYRlQ4YzNZZ0dZSW0wbWlGbHpyYkMwVVhBQ3lOcUI0eDluOUFQWGg5YlVHbmpzUWR6TjRmX3ZjUXVTNC16aXhtVjY1WDlKMmlISXBsZlVqUWVpazJveGk0M9IB5wFBVV95cUxQWVNVWnlsaFNyLVBjdjJ3UlJ0dUxaZmgtek11RkpMelBhWjZ1c2xudEc1ckJ4Q25LcXJ5aHcyOG5oLS1yTm1lZDdvSFRlYjVtN3RUVGFKUk5HQkN6b2kzVTVHdnZpSzR5aU1WclE3SnIyRXRKNWJVRTRleUhlbDBiQmJGYlUteUFkeXU0RFFFTVpXNTBqYXFiNkxmLU5xT25RZkktVy0xRGpGU2ZLMDdDMDdEdFdRZHBpcjFWa25KeTVtZTFWeWRvT1R3QXRRZmd1cjYxSTVTVS0tWGZvWVp1ZTdfLUdFSXc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Hindu","date":"2026-10-30","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"Key updates: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Investigates Rs 210 Crore Bank Fraud By Chandra Proteco.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Hindu."},{"id":"live-india-bfsi-5496497170","category":"india-bfsi","severity":"high","impactBadge":"🏦 Bank Breach Probe","title":"AU Bank probes potential data leak","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMivAFBVV95cUxNU0JSQkZlOHY3dWVLclNCaGQ5VGxIb3prT0NqOXh3UHRfUjdhVUdRUFZ2T3dTZnNJQnEzUFhSOVItdkxiY1d6WTh4T1dadzhGNFZ2QzNhU0c1TnVURDhKbHQ1MmhYdUJaWjE1bEFWdEV2U24zZEdaVUVYWDVjUFZ4NVhoX2VfS0lGbTg2Z0xweFNvdENCam42NXIyQUJraWxRbkt6NENLMHVITVQ4YjhqY20wSG4yY0ZsaWRiNNIBwgFBVV95cUxOdmlQak9MckhIQXlYcElwZG9YQ09NdmtZNGpnWmJYckpvSXJ5RGN2QU82RS00T2YtWUJ6RGpBTFZ6MlVVLXp3bDBEb0xrYjJGTC14UmpJemhxZnN1MkQ0Z0RMR05TWXRSaU9BTml1emZ6cTI1VHU5bmtfQ0NRazlxQ0M0cklnOERvT2hkZVRDMndBX2J3YWxxUl9PSWlKZzQ0WHVGT3B1S2M2RFFLNzVfdGlRa3RTc0R2cUMyRUZDZThadw?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Times of India","date":"2026-10-30","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"Key updates: India's AU Small Finance Bank probes potential data leak; From AU Small Finance Bank Breach To PHP Flaw: Cyberattacks In October That Took The Internet By Storm.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-crypto-heists-9818481674","category":"crypto-heists","severity":"critical","impactBadge":"💰 $6.3B Record Hack","title":"Binance seeks to shore up confidence after record $6.3 billion heist","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-30","timeAgo":"1 day ago","entities":"Crypto & Digital Assets","incident":"Key updates: World's largest crypto exchange Binance probes 'security breach', $6.3 billion in assets impacted; Binance hack biggest crypto theft in history, hackers steal $6 billion.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-799466515","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Polymarket resumes trading after third-party security breach, to reimburse users","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMiowFBVV95cUxQdGFDU255RTFLTGhHMmlndVlJb1gyUVdsYmJxcUpaalJoRVp0OEpROVcyQ0xQRlRiN1haY0UyTUlLb1JlUF92NF8tWVlfVmxmVWJmN2p4Q2ZfNHhCSy1ta2EwMi1KZUJ0eE1zVExPck44OVFJRnFuSmV2VjUtdGUzQVVGR1VPVDFTbUF4UzlwTHFIN0xYbXh5dUpqcjZuNlNMdGNV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"2 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-5792857321","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Three South Korean financial firms including Bithumb report data breaches, Yonhap says","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-28","timeAgo":"4 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-11326203735","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Quad Countries Agree on New Push for Semiconductor Supply Chains and Cybersecurity","sourceName":"www.nationpathindia.com","sourceUrl":"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTGdHd2Z0NDJuN3dFc2duMXJ5MDdHYVFQN1JYLVpnUWdqNE1HZEl5RkYzeTk3cHhjMV9nQmhqSjN1M2pObWVlcGlZcC1tWUM3a0taRlZuRG81NFNtbElDWWJ5b1dtNUhiRVNvSndfZXFlLWducmdLWUpvYTk2V1FwSEVHWFJqN2NtY1k4c0paZ0lMdDExdE1OU3NRRHBzekMtTDlNTzV3RVJydw?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"www.nationpathindia.com","date":"2026-11-01","timeAgo":"2 hours ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on www.nationpathindia.com."},{"id":"live-global-ransomware-13145223703","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Fake Health Camps, Stolen IDs: Cops Bust e-SIM Racket Used In Cyber Fraud","sourceName":"NDTV","sourceUrl":"https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"NDTV","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on NDTV."},{"id":"live-global-ransomware-11423124972","category":"global-ransomware","severity":"high","impactBadge":"⚠️ Data Breach","title":"Trump's DHS hit by data breach as hackers expose records of 41,000 employees","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMi3gFBVV95cUxNTndmc2lnNWtJX0JXazc0YmxWUmhQT2t3aXR2TEwtMGxrYi1fSUdxbW1nZjA3VTJVVE5GVUNYMDVhSUhTdFdidmdzc0hOMTB6b2tOTk1OTVBvZE51QUwyUnY5QVFUZzBYeTY5UTh2aXZpRWZPUEI4YUE3Q3l6LVhCTThWSUM0cVlZVFhVMVpkSDFmZHN2eDBYQUJ3ejByY0RQeEtFVzZ3a2hmakM5ekgzNGJXa0xKRVlON1Q4eVp1cEZJc1gwYWR6S09iejBMOEFoSGdKYXlJX3JYMjFOckHSAeMBQVVfeXFMTTJRQTFBNldiVzlzZF9rNUtxRzk2WjNFNVdtSUk0ZjM3eEMtMWhNYUVrWWhNeEllM244QmppaElwZHBMQlFUTXBzU1cwWW9JN25ybGMyTGFPejhTTXBoU1N4YVNYR2RxdlVqaDVjbEpucnBSSm9RQXJkdUFjNXY1Z1dSUmNnUmFIRTdldDJTSDR6U3J5U0RId0VTUVdpQ1BKal9QU1BrcnVMWlBhRjVQRE1GR293MC1BYVRNZW81aUl0N2loV1FtYlU4QVJxbHRzbm5XRXNQRGdxbVlieWlUdEZpczA?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"The Times of India","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-global-ransomware-23168141554","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Google Announces Gemini 4 Carbon With Focus on Cybersecurity and Coding","sourceName":"Analytics India Magazine","sourceUrl":"https://news.google.com/rss/articles/CBMirgFBVV95cUxNNngtOWwyUmFKYzM2b0pKcTBhQmJYNENNSHFfSmtpN3ZUM1U4VmJXV2lOdFlCd3loTFM5MG1oalJxYzB6VG1rZ3BSTUdtYzZ4VmpOcmZRSnZuU2cyMGEzUXVCcjJuZUJ1MlhqbjdDa0RfZmp2enFVYnZmckZHc0lfc3hlNnppejlsQU1HRnRrYURhSGlUVWx1eFhCZy1KRmFCMWQ2dnFYbXk5Y3hoTHc?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"Analytics India Magazine","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Analytics India Magazine."},{"id":"live-global-ransomware-12643287449","category":"global-ransomware","severity":"high","impactBadge":"🚨 Reuters Exclusive","title":"France's Sopra Steria raises 2026 growth target again as defence, cybersecurity lift Q3 sales","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZWgzWENJclAySlJUMHZhTlFwUXVCbW9qWV8zTDRGdWJfQVAxTnRIQjJWcHNqNjFxQXFMeC1fcDFYZTUtUjFTSUM1S0tVVzZkem01M2MzR1ZBMTd6cXVTcTk3eTUxX2VYRHFsX2tMc2dsTGZrZ1RmMzdUbG5qTWhvazZYc0diaUxUMW5kRTV0cnNVc3lxaGNTeDB0cTFUN0NwZXBWRngtYjVXLWl2eHBHamVUaVJsenVOQlNWbGM2UWlQamNXN2pBQ1ptODA0dDM3Q2VNdzlrUkFfdw?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-18083774526","category":"global-ransomware","severity":"high","impactBadge":"🚨 Reuters Exclusive","title":"Mistral AI publicly releases Large 4, targets cybersecurity users","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."}];
 let activeThreatCategory = "all";
 let threatSearchQ = "";
 
@@ -7793,6 +7981,107 @@ try {
   wireSearchClear("threat-q", "threat-q-clear");
   wireSearchClear("scam-q", "scam-q-clear");
 } catch(e) {}
+
+// --- Cipherati Morning Intelligence Briefing & Newsletter Logic ---
+let BRIEFING_DATA = {"date":"2026-11-01","dateFormatted":"Nov 2, 2026","leadThreat":{"id":"live-crypto-heists-9818481674","category":"crypto-heists","severity":"critical","impactBadge":"💰 $6.3B Record Hack","title":"Binance seeks to shore up confidence after record $6.3 billion heist","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-30","timeAgo":"1 day ago","entities":"Crypto & Digital Assets","incident":"Key updates: World's largest crypto exchange Binance probes 'security breach', $6.3 billion in assets impacted; Binance hack biggest crypto theft in history, hackers steal $6 billion.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},"quickHits":[{"id":"live-india-bfsi-8865700446","category":"india-bfsi","severity":"high","impactBadge":"🚨 Financial Fraud Probe","title":"2.10 Crore Cyber Fraud: Ambani, Tendulkar's Names Used to Lure Pune Senior Citizen, Then 'Digital Arrest' Trap","sourceName":"The 420.in","sourceUrl":"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWnBMTDNXMWRtYmMxYmRSdGdUOVd1WktQUS0tWFV2WEJISThuMndQcGlQRkkyRGRtSGJVLXZKcTBDZlBGQVNvaEFaVEQteWV6RU1rVUNZenRmSGpDVTFIQ214RTdSX2RrWHdjRlVGOTNhVmRSLXBVdlp2OVRiZW1JZE5GQjdoUDNxX2wwbjMta1dXRE1wWUxfeG0zbE5TbkFyaUJSNkE3aWFfZ3BHMXB1US1MejJ5UGJzeV8xQ3N2dmc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The 420.in","date":"2026-11-01","timeAgo":"5 hours ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The 420.in."},{"id":"live-india-bfsi-17601327396","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Delhi Police bust cyber fraud ring targeting southern India with fake benefits","sourceName":"India Today","sourceUrl":"https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1F0LVB5ZUhwZXk2RUpmVGNnbVFndGxyU1l1OWJPVFpHZDBDdm1SUFpzZlMxSTA3bE1Cd0RnTmQ1bHBWTmFwSFFCWDZQamZJQWdJLWFfR3A0NXJSQnQ3TWw5S3pvX1VZbnRuV1E5c2xIWDFaTzlOMDdpSFhyNll6TUZoSXhmTDk1VE5wZU5sbjd4UlJnS2tNQjByeHJuYzFfc3RFb3pIRGY0QVgzbWlpeDBPcFhwa3NYeUd5WkxNcHdGd0FVQXNfbHEycmFnVzFi0gHWAUFVX3lxTE11NmNkbkszSnl5NUF6c3c2U3Vka2g3X1JuTnBZQktJT21aMEtNUTVHeXNBcUt4N1QtWFFPUXF2Um54WjhvaXRwbmlzSWtPV2VVWVlrYVpfamRtMjJZZDJJVnBTV1ZFb25TZ2tYMEVpR0dZQk9Qa3hiSmk1WFdYTjI4eWwtT2xBOTFUUnZ6dTY4SU9MVkpsZHhrbm9tWFpCME40N1NlWlBST1dqWURoZnFnT1VaeHFXSmpJdjU1QlBjbWtacUwtTEtxc2ZSZjlKRDVrSmhxR1E?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"India Today","date":"2026-10-31","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"Key updates: How Delhi Police Uncovered A Mobile Cyber Fraud Network; Rs 2.21 lakh cyber fraud leads Delhi Police to Rs 10-Crore phishing network; five arrested.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on India Today."},{"id":"live-india-bfsi-14130581889","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Delhi: Gang impersonating Paytm executives busted in Shahdara cyber fraud case; five arrested","sourceName":"The Hawk","sourceUrl":"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNUF4a0xHLXdKSE9uOG12WGcyVzBvdEZELWdsRmpCV3BHa0c2ZVYyMVhWd2FPQ0pUYVJfZWxpWFFxLVVyakNsMURRUmpyMWNPdUhpcElpQ3ltLTNHTkxjdjN2SS1SdmgzMUN3NGhqLUpuTWpDaVF5OUthVnBqUzRCOW9TdHRaSlFDNTBHVEZhNkp0SzVrdHdtWm90c0ZEaGJ0YUlQRWhZUjFhLU1peWVSdndYSWZtWXpOR0JrbzdOeExYSXc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Hawk","date":"2026-10-31","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Hawk."}],"topScam":{"id":"digital-arrest-video-call","category":"messaging","platform":"WhatsApp / Video Call","tag":"Digital Arrest","severity":"critical","title":"The \"Digital Arrest\" Police Video Call","scam":"A caller in uniform claims your Aadhaar or passport was found in an illegal parcel or money laundering probe. They place you on a fraudulent WhatsApp video call or custom video link with a backdrop resembling a police station, CBI, or ED cyber cell, declaring you are under 'Digital Arrest' and coercing you to transfer savings into a fake 'RBI verification escrow'.","protection":"Indian law and law enforcement agencies have NO legal concept of 'Digital Arrest'. Police, CBI, ED, and customs NEVER conduct interrogations, trials, or arrests over video calls. Hang up immediately, block the number, and report to the National Cybercrime Portal or dial 1930.","sourceName":"I4C & PM Mann Ki Baat Cyber Alert","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"National Cyber Helpline: 1930 ↗","actionUrl":"https://cybercrime.gov.in/"},"featuredTool":{"id":189,"name":"Qdrant","tagline":"Vector similarity search engine and vector database written in Rust with extended payload filtering.","url":"https://github.com/qdrant/qdrant","emoji":"🔎","category":"Research & Data","why_it_matters":"Ultra-fast production vector database powering enterprise semantic search and recommendation systems.","launched_at":1793019222,"score":896.4379387048182,"signals":["github:22000.0"],"rank":35333},"realityPick":{"id":1,"title":"The Context Window Lie","category":"Retrieval & Context","symptoms":["lost in middle","needle in haystack failure","long context hallucination","massive prompt cost","slow ttft"],"myth":"1-million-token context window! Dump your entire company wiki or codebase into one prompt!","reality":"Loss-in-the-middle degradation causes LLMs to ignore needle-in-the-haystack facts once context exceeds 32K tokens. High Time-To-First-Token (TTFT) and linear token costs make unindexed raw-file prompting unusable in production.","fix":"Never dump raw unindexed documents into an LLM prompt. Use prompt compression to discard low-entropy tokens and targeted cross-encoder rerankers on small, precise retrieved chunks.","impact":"Legal queries hallucinate terms found in middle sections; enterprise support bots cost 20x more while delivering worse answers.","tools":[{"name":"LLMLingua","url":"https://github.com/microsoft/LLMLingua"},{"name":"FlashRank","url":"https://github.com/PrithivirajDamodaran/FlashRank"},{"name":"Qdrant","url":"https://github.com/qdrant/qdrant"}]}};
+
+async function loadBriefingData() {
+  if (BRIEFING_DATA) return BRIEFING_DATA;
+  try {
+    const res = await fetch("data/briefing.json");
+    if (res.ok) BRIEFING_DATA = await res.json();
+  } catch (e) {}
+  return BRIEFING_DATA;
+}
+
+function handleNewsletterSubmit(e) {
+  if (e) e.preventDefault();
+  const input = document.getElementById("newsletter-email");
+  const fb = document.getElementById("newsletter-feedback");
+  const email = (input && input.value ? input.value : "").trim();
+  if (!email || !email.includes("@")) return;
+
+  try {
+    const subs = JSON.parse(localStorage.getItem("cipherati_subscribers") || "[]");
+    if (!subs.includes(email)) {
+      subs.push(email);
+      localStorage.setItem("cipherati_subscribers", JSON.stringify(subs));
+    }
+  } catch (err) {}
+
+  if (fb) {
+    fb.className = "newsletter-feedback success";
+    fb.style.display = "block";
+    fb.innerHTML = `✓ You're subscribed to the 60-second morning intelligence briefing! <button type="button" onclick="openNewsletterPreview()" style="background:none;border:none;color:inherit;font-weight:700;text-decoration:underline;cursor:pointer;padding:0;">Read today's issue now →</button>`;
+  }
+  if (input) input.value = "";
+}
+
+async function openNewsletterPreview() {
+  const modal = document.getElementById("briefing-modal");
+  const contentEl = document.getElementById("briefing-modal-content");
+  const dateEl = document.getElementById("briefing-modal-date");
+  if (!modal || !contentEl) return;
+
+  modal.style.display = "flex";
+  contentEl.innerHTML = '<div style="text-align:center;padding:30px;color:var(--text-muted);">Loading today\'s briefing...</div>';
+
+  const data = await loadBriefingData();
+  if (!data) {
+    contentEl.innerHTML = '<div style="text-align:center;padding:20px;color:var(--text-muted);">Could not load today\'s briefing. Please try again.</div>';
+    return;
+  }
+
+  if (dateEl) dateEl.textContent = `Today's Briefing · ${data.dateFormatted || data.date}`;
+
+  const esc = (s) => String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  contentEl.innerHTML = `
+    <div style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">⏱️ 60-Second Scan · Published daily at 8:00 AM IST</div>
+    
+    <div style="font-size:13px;font-weight:800;text-transform:uppercase;color:var(--accent);letter-spacing:0.04em;margin-bottom:8px;">🛡️ Cybersecurity News</div>
+    <div style="background:var(--surface-subtle);border-left:4px solid var(--accent);border-radius:8px;padding:12px 14px;margin-bottom:12px;">
+      <a href="${esc(data.leadThreat.sourceUrl)}" target="_blank" rel="noopener" style="font-weight:700;font-size:14.5px;color:var(--text);text-decoration:none;display:block;margin-bottom:4px;">${esc(data.leadThreat.title)} ↗</a>
+      <div style="font-size:11.5px;color:var(--text-muted);margin-bottom:6px;">Source: <strong>${esc(data.leadThreat.sourceName)}</strong></div>
+      <p style="font-size:13px;color:var(--text-secondary);margin:0;">${esc(data.leadThreat.incident || "Verified primary reporting.")}</p>
+    </div>
+
+    ${data.quickHits && data.quickHits.length ? `
+    <div style="margin-bottom:16px;padding-left:4px;">
+      <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:6px;">⚡ Quick Hits:</div>
+      ${data.quickHits.map(h => `
+        <div style="font-size:13px;margin-bottom:6px;">
+          🔹 <a href="${esc(h.sourceUrl)}" target="_blank" rel="noopener" style="color:var(--text);font-weight:600;text-decoration:none;">${esc(h.title)} ↗</a>
+          <span style="font-size:11.5px;color:var(--text-muted);">(${esc(h.sourceName)})</span>
+        </div>
+      `).join("")}
+    </div>` : ""}
+
+    <div style="font-size:13px;font-weight:800;text-transform:uppercase;color:var(--red);letter-spacing:0.04em;margin:18px 0 8px;">🚨 Active Scam Watch</div>
+    <div style="background:var(--red-soft);border:1px solid var(--red-border);border-left:4px solid var(--red);border-radius:8px;padding:12px 14px;margin-bottom:16px;">
+      <div style="font-weight:700;font-size:14px;color:var(--red-text);margin-bottom:4px;">${esc(data.topScam.title)} (${esc(data.topScam.platform)})</div>
+      <p style="font-size:13px;color:var(--text-secondary);margin:0 0 8px;"><strong>The Trap:</strong> ${esc(data.topScam.scam)}</p>
+      <div style="background:var(--card);border:1px solid var(--red-border);border-radius:6px;padding:8px 10px;font-size:12.5px;font-weight:700;color:var(--red-text);">
+        🛡️ Defense Rule: ${esc(data.topScam.protection)}
+      </div>
+    </div>
+
+    <div style="font-size:13px;font-weight:800;text-transform:uppercase;color:var(--green);letter-spacing:0.04em;margin:18px 0 8px;">🛠️ AI Tool &amp; Reality of the Day</div>
+    <div style="background:var(--green-soft);border:1px solid var(--green-border);border-left:4px solid var(--green);border-radius:8px;padding:12px 14px;">
+      <div style="margin-bottom:4px;"><a href="${esc(data.featuredTool.url)}" target="_blank" rel="noopener" style="font-weight:700;font-size:14.5px;color:var(--green-text);text-decoration:none;">${esc(data.featuredTool.name)} ↗</a></div>
+      <p style="font-size:13px;color:var(--text-secondary);margin:0 0 8px;">${esc(data.featuredTool.tagline)}</p>
+      <div style="background:var(--card);border:1px solid var(--green-border);border-radius:6px;padding:8px 10px;font-size:12.5px;color:var(--green-text);">
+        <strong>⚡ Reality Check (#${data.realityPick.id}: ${esc(data.realityPick.title)}):</strong> ${esc(data.realityPick.fix)}
+      </div>
+    </div>
+  `;
+}
+
+function closeBriefingModal(e) {
+  if (e && e.target && e.target.id !== "briefing-modal" && !e.target.classList.contains("sidebar-close-btn") && !e.target.classList.contains("newsletter-btn")) return;
+  const modal = document.getElementById("briefing-modal");
+  if (modal) modal.style.display = "none";
+}
 
 </script>
 </body>

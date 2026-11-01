@@ -22,6 +22,9 @@ const requiredFiles = [
   "public/data/tools.json",
   "public/data/threats.json",
   "public/data/scams.json",
+  "public/data/briefing.json",
+  "public/newsletter/today.html",
+  "public/newsletter/today.md",
   "public/llms.txt",
   "public/sitemap.xml",
   "public/robots.txt"
@@ -160,6 +163,13 @@ assert(lazyCopiedSummaries === 0, `Zero news stories have lazy summaries identic
 // 8. Verify App Starts on Homepage (not AI Tools)
 assert(indexHtml.includes('let currentView = "home";'), `Default view is initialized to 'home'`);
 assert(indexHtml.includes('else if (hash === "#home" || !hash || hash === "#") {\n    switchView("home");'), `Default fallback route opens 'home'`);
+
+// 9. Verify Daily Intelligence Briefing Generator
+const briefingData = JSON.parse(readFileSync("public/data/briefing.json", "utf8"));
+assert(briefingData.leadThreat && briefingData.leadThreat.title, "Briefing has verified Lead Cyber Story");
+assert(briefingData.topScam && briefingData.topScam.title, "Briefing has active Scam Watch");
+assert(briefingData.featuredTool && briefingData.featuredTool.name, "Briefing has featured AI Tool");
+assert(briefingData.realityPick && briefingData.realityPick.title, "Briefing has Reality Check of the day");
 
 // Summary
 console.log("=========================================");

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T14:29:19.242Z",
+  "updatedAt": "2026-11-01T19:27:33.593Z",
   "categories": [
     "Coding",
     "Agents & Automation",
@@ -14,49 +14,49 @@
   ],
   "tools": [
     {
-      "id": 283,
-      "name": "ECC",
-      "tagline": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "url": "https://ecc.tools/",
-      "emoji": null,
+      "id": 255,
+      "name": "OpenAI Codex",
+      "tagline": "Foundational AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.",
+      "url": "https://openai.com/index/openai-codex/",
+      "emoji": "🧠",
       "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 293.1K GitHub stars from real production users.",
-      "launched_at": 1768697511,
-      "score": 73.08303850438945,
+      "why_it_matters": "The foundational language model architecture that pioneered automated code translation, refactoring, and agentic workflows.",
+      "launched_at": 1793105622,
+      "score": 6276.878181060477,
       "signals": [
-        "github:293061.0"
+        "app:110000.0"
       ],
-      "rank": 293061
+      "rank": 110000
     },
     {
-      "id": 582,
-      "name": "litellm",
-      "tagline": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthrop…",
-      "url": "https://docs.litellm.ai/docs/",
+      "id": 321,
+      "name": "Understand Anything",
+      "tagline": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…",
+      "url": "https://understand-anything.com/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 62.4K GitHub stars from real production users.",
-      "launched_at": 1690416592,
-      "score": 2.8014253084912126,
+      "why_it_matters": "Battle-tested in the open — 89K GitHub stars from real production users.",
+      "launched_at": 1773541851,
+      "score": 28.847922528148548,
       "signals": [
-        "github:62373.0"
+        "github:88992.0"
       ],
-      "rank": 62373
+      "rank": 88992
     },
     {
-      "id": 334,
-      "name": "claude code best practice",
-      "tagline": "from vibe coding to agentic engineering - practice makes claude perfect",
-      "url": "https://linkedin.com/in/shanraisshan",
+      "id": 331,
+      "name": "headroom",
+      "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "url": "https://docs.headroomlabs.ai/docs",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 68.3K GitHub stars from real production users.",
-      "launched_at": 1761920128,
-      "score": 12.734092351547353,
+      "why_it_matters": "Battle-tested in the open — 78.3K GitHub stars from real production users.",
+      "launched_at": 1767815931,
+      "score": 18.728737158380532,
       "signals": [
-        "github:68326.0"
+        "github:78333.0"
       ],
-      "rank": 68326
+      "rank": 78333
     },
     {
       "id": 297,
@@ -89,6 +89,21 @@
       "rank": 139140
     },
     {
+      "id": 334,
+      "name": "claude code best practice",
+      "tagline": "from vibe coding to agentic engineering - practice makes claude perfect",
+      "url": "https://linkedin.com/in/shanraisshan",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Battle-tested in the open — 68.3K GitHub stars from real production users.",
+      "launched_at": 1761920128,
+      "score": 12.734092351547353,
+      "signals": [
+        "github:68326.0"
+      ],
+      "rank": 68326
+    },
+    {
       "id": 310,
       "name": "openinterpreter",
       "tagline": "A coding agent for open models like Kimi K3 and GLM 5.3",
@@ -104,184 +119,34 @@
       "rank": 68731
     },
     {
-      "id": 255,
-      "name": "OpenAI Codex",
-      "tagline": "Foundational AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.",
-      "url": "https://openai.com/index/openai-codex/",
-      "emoji": "🧠",
-      "category": "Coding",
-      "why_it_matters": "The foundational language model architecture that pioneered automated code translation, refactoring, and agentic workflows.",
-      "launched_at": 1793105622,
-      "score": 6276.878181060477,
-      "signals": [
-        "app:110000.0"
-      ],
-      "rank": 110000
-    },
-    {
-      "id": 298,
-      "name": "DeepSeek Reasonix",
-      "tagline": "A reliable coding agent for complex software engineering tasks.",
-      "url": "https://reasonix.io/",
+      "id": 283,
+      "name": "ECC",
+      "tagline": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "url": "https://ecc.tools/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 36K GitHub stars from real production users.",
-      "launched_at": 1776760022,
-      "score": 14.43398414421573,
+      "why_it_matters": "Battle-tested in the open — 293.1K GitHub stars from real production users.",
+      "launched_at": 1768697511,
+      "score": 73.08303850438945,
       "signals": [
-        "github:36003.0"
+        "github:293061.0"
       ],
-      "rank": 36003
+      "rank": 293061
     },
     {
-      "id": 331,
-      "name": "headroom",
-      "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
-      "url": "https://docs.headroomlabs.ai/docs",
+      "id": 582,
+      "name": "litellm",
+      "tagline": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthrop…",
+      "url": "https://docs.litellm.ai/docs/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 78.3K GitHub stars from real production users.",
-      "launched_at": 1767815931,
-      "score": 18.728737158380532,
+      "why_it_matters": "Battle-tested in the open — 62.4K GitHub stars from real production users.",
+      "launched_at": 1690416592,
+      "score": 2.8014253084912126,
       "signals": [
-        "github:78333.0"
+        "github:62373.0"
       ],
-      "rank": 78333
-    },
-    {
-      "id": 696,
-      "name": "OpenSpec",
-      "tagline": "Spec-driven development (SDD) for AI coding assistants.",
-      "url": "https://openspec.dev/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 73.4K GitHub stars from real production users.",
-      "launched_at": 1754390265,
-      "score": 10.57788724792763,
-      "signals": [
-        "github:73430.0"
-      ],
-      "rank": 73430
-    },
-    {
-      "id": 286,
-      "name": "cc switch",
-      "tagline": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.",
-      "url": "https://ccswitch.io/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 150.3K GitHub stars from real production users.",
-      "launched_at": 1754316976,
-      "score": 21.606598389921665,
-      "signals": [
-        "github:150328.0"
-      ],
-      "rank": 150328
-    },
-    {
-      "id": 258,
-      "name": "Amazon Q Developer / Kiro IDE",
-      "tagline": "AWS's generative AI coding companion and cloud-native development environment for code transformation and security scanning.",
-      "url": "https://aws.amazon.com/q/developer/",
-      "emoji": "☁️",
-      "category": "Coding",
-      "why_it_matters": "Specialized in enterprise Java/Node upgrades, automated vulnerability patching, and deep AWS cloud infrastructure wiring.",
-      "launched_at": 1793192022,
-      "score": 4381.5976054191815,
-      "signals": [
-        "app:48000.0"
-      ],
-      "rank": 48000
-    },
-    {
-      "id": 321,
-      "name": "Understand Anything",
-      "tagline": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…",
-      "url": "https://understand-anything.com/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 89K GitHub stars from real production users.",
-      "launched_at": 1773541851,
-      "score": 28.847922528148548,
-      "signals": [
-        "github:88992.0"
-      ],
-      "rank": 88992
-    },
-    {
-      "id": 573,
-      "name": "Umi OCR",
-      "tagline": "OCR software, free and offline. OCR / PDF / /",
-      "url": "https://github.com/hiroi-sora/Umi-OCR",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 48.3K GitHub stars from real production users.",
-      "launched_at": 1648440106,
-      "score": 1.438991698023208,
-      "signals": [
-        "github:48294.0"
-      ],
-      "rank": 48294
-    },
-    {
-      "id": 256,
-      "name": "Kimi Code",
-      "tagline": "Moonshot AI's high-context reasoning and coding model optimized for full-repository understanding and multi-file logic.",
-      "url": "https://kimi.ai",
-      "emoji": "🌙",
-      "category": "Coding",
-      "why_it_matters": "Exceptional million-token context reasoning capable of tracking large enterprise codebases and multi-package dependencies.",
-      "launched_at": 1793192022,
-      "score": 4746.730739204113,
-      "signals": [
-        "app:52000.0"
-      ],
-      "rank": 52000
-    },
-    {
-      "id": 370,
-      "name": "next ai draw io",
-      "tagline": "Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.",
-      "url": "https://next-ai-drawio.jiang.jp/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 36.5K GitHub stars from real production users.",
-      "launched_at": 1742742228,
-      "score": 3.842492766319692,
-      "signals": [
-        "github:36504.0"
-      ],
-      "rank": 36504
-    },
-    {
-      "id": 169,
-      "name": "OpenHands",
-      "tagline": "Autonomous software development agent capable of writing code, running bash commands, and browsing the web.",
-      "url": "https://github.com/All-Hands-AI/OpenHands",
-      "emoji": "🙌",
-      "category": "Coding",
-      "why_it_matters": "Community-driven autonomous developer agent capable of resolving end-to-end GitHub issues in isolated sandboxes.",
-      "launched_at": 1793192022,
-      "score": 4107.747755080482,
-      "signals": [
-        "github:45000.0"
-      ],
-      "rank": 45000
-    },
-    {
-      "id": 167,
-      "name": "Aider",
-      "tagline": "AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.",
-      "url": "https://github.com/paul-gauthier/aider",
-      "emoji": "💻",
-      "category": "Coding",
-      "why_it_matters": "The gold standard for terminal-based AI pair programming with robust repository-wide AST parsing.",
-      "launched_at": 1793192022,
-      "score": 3149.2732788950366,
-      "signals": [
-        "github:34500.0"
-      ],
-      "rank": 34500
+      "rank": 62373
     },
     {
       "id": 312,
@@ -299,34 +164,49 @@
       "rank": 41152
     },
     {
-      "id": 223,
-      "name": "ai website cloner template",
-      "tagline": "Clone any website with one command using AI coding agents",
-      "url": "https://dsc.gg/jcodesmore",
+      "id": 298,
+      "name": "DeepSeek Reasonix",
+      "tagline": "A reliable coding agent for complex software engineering tasks.",
+      "url": "https://reasonix.io/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 38K GitHub stars from real production users.",
-      "launched_at": 1773400479,
-      "score": 12.22038737309772,
+      "why_it_matters": "Battle-tested in the open — 36K GitHub stars from real production users.",
+      "launched_at": 1776760022,
+      "score": 14.43398414421573,
       "signals": [
-        "github:38021.0"
+        "github:36003.0"
       ],
-      "rank": 38021
+      "rank": 36003
     },
     {
-      "id": 254,
-      "name": "Claude Code",
-      "tagline": "Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.",
-      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code",
-      "emoji": "⚡",
+      "id": 286,
+      "name": "cc switch",
+      "tagline": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.",
+      "url": "https://ccswitch.io/",
+      "emoji": null,
       "category": "Coding",
-      "why_it_matters": "High-velocity CLI coding agent that operates directly in your local repo with fine-grained permission controls.",
-      "launched_at": 1793278422,
-      "score": 14978.556301903252,
+      "why_it_matters": "Battle-tested in the open — 150.3K GitHub stars from real production users.",
+      "launched_at": 1754316976,
+      "score": 21.606598389921665,
       "signals": [
-        "app:75000.0"
+        "github:150328.0"
       ],
-      "rank": 75000
+      "rank": 150328
+    },
+    {
+      "id": 324,
+      "name": "oh my openagent",
+      "tagline": "OmO: Just type \"mass ulw\" keyword with your prompt. Now you are the master of graph engineering.",
+      "url": "https://omo.dev/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Battle-tested in the open — 70.5K GitHub stars from real production users.",
+      "launched_at": 1764726005,
+      "score": 14.697554176595215,
+      "signals": [
+        "github:70496.0"
+      ],
+      "rank": 70496
     },
     {
       "id": 322,
@@ -359,6 +239,66 @@
       "rank": 85051
     },
     {
+      "id": 258,
+      "name": "Amazon Q Developer / Kiro IDE",
+      "tagline": "AWS's generative AI coding companion and cloud-native development environment for code transformation and security scanning.",
+      "url": "https://aws.amazon.com/q/developer/",
+      "emoji": "☁️",
+      "category": "Coding",
+      "why_it_matters": "Specialized in enterprise Java/Node upgrades, automated vulnerability patching, and deep AWS cloud infrastructure wiring.",
+      "launched_at": 1793192022,
+      "score": 4381.5976054191815,
+      "signals": [
+        "app:48000.0"
+      ],
+      "rank": 48000
+    },
+    {
+      "id": 573,
+      "name": "Umi OCR",
+      "tagline": "OCR software, free and offline. OCR / PDF / /",
+      "url": "https://github.com/hiroi-sora/Umi-OCR",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Battle-tested in the open — 48.3K GitHub stars from real production users.",
+      "launched_at": 1648440106,
+      "score": 1.438991698023208,
+      "signals": [
+        "github:48294.0"
+      ],
+      "rank": 48294
+    },
+    {
+      "id": 256,
+      "name": "Kimi Code",
+      "tagline": "Moonshot AI's high-context reasoning and coding model optimized for full-repository understanding and multi-file logic.",
+      "url": "https://kimi.ai",
+      "emoji": "🌙",
+      "category": "Coding",
+      "why_it_matters": "Exceptional million-token context reasoning capable of tracking large enterprise codebases and multi-package dependencies.",
+      "launched_at": 1793192022,
+      "score": 4746.730739204113,
+      "signals": [
+        "app:52000.0"
+      ],
+      "rank": 52000
+    },
+    {
+      "id": 167,
+      "name": "Aider",
+      "tagline": "AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.",
+      "url": "https://github.com/paul-gauthier/aider",
+      "emoji": "💻",
+      "category": "Coding",
+      "why_it_matters": "The gold standard for terminal-based AI pair programming with robust repository-wide AST parsing.",
+      "launched_at": 1793192022,
+      "score": 3149.2732788950366,
+      "signals": [
+        "github:34500.0"
+      ],
+      "rank": 34500
+    },
+    {
       "id": 257,
       "name": "VS Code with In-Built AI Agents",
       "tagline": "Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.",
@@ -374,19 +314,79 @@
       "rank": 92000
     },
     {
-      "id": 324,
-      "name": "oh my openagent",
-      "tagline": "OmO: Just type \"mass ulw\" keyword with your prompt. Now you are the master of graph engineering.",
-      "url": "https://omo.dev/",
+      "id": 696,
+      "name": "OpenSpec",
+      "tagline": "Spec-driven development (SDD) for AI coding assistants.",
+      "url": "https://openspec.dev/",
       "emoji": null,
       "category": "Coding",
-      "why_it_matters": "Battle-tested in the open — 70.5K GitHub stars from real production users.",
-      "launched_at": 1764726005,
-      "score": 14.697554176595215,
+      "why_it_matters": "Battle-tested in the open — 73.4K GitHub stars from real production users.",
+      "launched_at": 1754390265,
+      "score": 10.57788724792763,
       "signals": [
-        "github:70496.0"
+        "github:73430.0"
       ],
-      "rank": 70496
+      "rank": 73430
+    },
+    {
+      "id": 223,
+      "name": "ai website cloner template",
+      "tagline": "Clone any website with one command using AI coding agents",
+      "url": "https://dsc.gg/jcodesmore",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Battle-tested in the open — 38K GitHub stars from real production users.",
+      "launched_at": 1773400479,
+      "score": 12.22038737309772,
+      "signals": [
+        "github:38021.0"
+      ],
+      "rank": 38021
+    },
+    {
+      "id": 370,
+      "name": "next ai draw io",
+      "tagline": "Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.",
+      "url": "https://next-ai-drawio.jiang.jp/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": "Battle-tested in the open — 36.5K GitHub stars from real production users.",
+      "launched_at": 1742742228,
+      "score": 3.842492766319692,
+      "signals": [
+        "github:36504.0"
+      ],
+      "rank": 36504
+    },
+    {
+      "id": 254,
+      "name": "Claude Code",
+      "tagline": "Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code",
+      "emoji": "⚡",
+      "category": "Coding",
+      "why_it_matters": "High-velocity CLI coding agent that operates directly in your local repo with fine-grained permission controls.",
+      "launched_at": 1793278422,
+      "score": 14978.556301903252,
+      "signals": [
+        "app:75000.0"
+      ],
+      "rank": 75000
+    },
+    {
+      "id": 169,
+      "name": "OpenHands",
+      "tagline": "Autonomous software development agent capable of writing code, running bash commands, and browsing the web.",
+      "url": "https://github.com/All-Hands-AI/OpenHands",
+      "emoji": "🙌",
+      "category": "Coding",
+      "why_it_matters": "Community-driven autonomous developer agent capable of resolving end-to-end GitHub issues in isolated sandboxes.",
+      "launched_at": 1793192022,
+      "score": 4107.747755080482,
+      "signals": [
+        "github:45000.0"
+      ],
+      "rank": 45000
     },
     {
       "id": 284,
@@ -402,6 +402,21 @@
         "github:258712.0"
       ],
       "rank": 258712
+    },
+    {
+      "id": 346,
+      "name": "n8n",
+      "tagline": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "url": "https://n8n.io/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 209.1K GitHub stars from real production users.",
+      "launched_at": 1561195461,
+      "score": 3.5395397259168875,
+      "signals": [
+        "github:209106.0"
+      ],
+      "rank": 209106
     },
     {
       "id": 290,
@@ -434,64 +449,34 @@
       "rank": 187826
     },
     {
-      "id": 118,
-      "name": "deepseek harness",
-      "tagline": "DeepSeek Harness: Everything is a Plugin.",
-      "url": "https://deepseek.com/harness",
+      "id": 292,
+      "name": "paperclip",
+      "tagline": "The open-source app everyone uses to manage agents at work",
+      "url": "https://paperclip.ing/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 266.5K GitHub stars from real production users.",
-      "launched_at": 1786622192,
-      "score": 314.8078295605168,
+      "why_it_matters": "Battle-tested in the open — 108.8K GitHub stars from real production users.",
+      "launched_at": 1772463711,
+      "score": 33.11078631397428,
       "signals": [
-        "github:266475.0"
+        "github:108842.0"
       ],
-      "rank": 266475
+      "rank": 108842
     },
     {
-      "id": 294,
-      "name": "claude mem",
-      "tagline": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla…",
-      "url": "https://claude-mem.ai/",
+      "id": 675,
+      "name": "lobehub",
+      "tagline": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "url": "https://lobehub.com/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 105.4K GitHub stars from real production users.",
-      "launched_at": 1756673403,
-      "score": 16.32715213034585,
+      "why_it_matters": "Battle-tested in the open — 83.6K GitHub stars from real production users.",
+      "launched_at": 1684653552,
+      "score": 3.517423489252578,
       "signals": [
-        "github:105422.0"
+        "github:83604.0"
       ],
-      "rank": 105422
-    },
-    {
-      "id": 335,
-      "name": "context7",
-      "tagline": "Context7 Platform -- Up-to-date docs for AI agents",
-      "url": "https://context7.com/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 64K GitHub stars from real production users.",
-      "launched_at": 1743032439,
-      "score": 6.778115895877535,
-      "signals": [
-        "github:63950.0"
-      ],
-      "rank": 63950
-    },
-    {
-      "id": 346,
-      "name": "n8n",
-      "tagline": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-      "url": "https://n8n.io/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 209.1K GitHub stars from real production users.",
-      "launched_at": 1561195461,
-      "score": 3.5395397259168875,
-      "signals": [
-        "github:209106.0"
-      ],
-      "rank": 209106
+      "rank": 83604
     },
     {
       "id": 365,
@@ -509,64 +494,34 @@
       "rank": 108627
     },
     {
-      "id": 386,
-      "name": "deer flow",
-      "tagline": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of t…",
-      "url": "https://deerflow.tech/",
+      "id": 118,
+      "name": "deepseek harness",
+      "tagline": "DeepSeek Harness: Everything is a Plugin.",
+      "url": "https://deepseek.com/harness",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 84.7K GitHub stars from real production users.",
-      "launched_at": 1746586219,
-      "score": 9.803660981990951,
+      "why_it_matters": "Battle-tested in the open — 266.5K GitHub stars from real production users.",
+      "launched_at": 1786622192,
+      "score": 314.8078295605168,
       "signals": [
-        "github:84716.0"
+        "github:266475.0"
       ],
-      "rank": 84716
+      "rank": 266475
     },
     {
-      "id": 292,
-      "name": "paperclip",
-      "tagline": "The open-source app everyone uses to manage agents at work",
-      "url": "https://paperclip.ing/",
+      "id": 335,
+      "name": "context7",
+      "tagline": "Context7 Platform -- Up-to-date docs for AI agents",
+      "url": "https://context7.com/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 108.8K GitHub stars from real production users.",
-      "launched_at": 1772463711,
-      "score": 33.11078631397428,
+      "why_it_matters": "Battle-tested in the open — 64K GitHub stars from real production users.",
+      "launched_at": 1743032439,
+      "score": 6.778115895877535,
       "signals": [
-        "github:108842.0"
+        "github:63950.0"
       ],
-      "rank": 108842
-    },
-    {
-      "id": 398,
-      "name": "hindsight",
-      "tagline": "Hindsight: Agent Memory That Learns",
-      "url": "https://hindsight.vectorize.io/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 56.4K GitHub stars from real production users.",
-      "launched_at": 1761824988,
-      "score": 10.474127119783068,
-      "signals": [
-        "github:56404.0"
-      ],
-      "rank": 56404
-    },
-    {
-      "id": 397,
-      "name": "Flowise",
-      "tagline": "Build AI Agents, Visually",
-      "url": "https://flowiseai.com/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 55.5K GitHub stars from real production users.",
-      "launched_at": 1680265389,
-      "score": 2.228221613881726,
-      "signals": [
-        "github:55537.0"
-      ],
-      "rank": 55537
+      "rank": 63950
     },
     {
       "id": 414,
@@ -584,34 +539,139 @@
       "rank": 156158
     },
     {
-      "id": 176,
-      "name": "Dify",
-      "tagline": "Open-source LLM app development platform combining BaaS, RAG pipeline orchestration, and visual agent builder.",
-      "url": "https://github.com/langgenius/dify",
-      "emoji": "🛠️",
-      "category": "Agents & Automation",
-      "why_it_matters": "Production-grade visual AI workflow builder with built-in model routing, knowledge retrieval, and prompt observability.",
-      "launched_at": 1793105622,
-      "score": 3937.314495392481,
-      "signals": [
-        "github:69000.0"
-      ],
-      "rank": 159991
-    },
-    {
-      "id": 675,
-      "name": "lobehub",
-      "tagline": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "url": "https://lobehub.com/",
+      "id": 294,
+      "name": "claude mem",
+      "tagline": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla…",
+      "url": "https://claude-mem.ai/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 83.6K GitHub stars from real production users.",
-      "launched_at": 1684653552,
-      "score": 3.517423489252578,
+      "why_it_matters": "Battle-tested in the open — 105.4K GitHub stars from real production users.",
+      "launched_at": 1756673403,
+      "score": 16.32715213034585,
       "signals": [
-        "github:83604.0"
+        "github:105422.0"
       ],
-      "rank": 83604
+      "rank": 105422
+    },
+    {
+      "id": 398,
+      "name": "hindsight",
+      "tagline": "Hindsight: Agent Memory That Learns",
+      "url": "https://hindsight.vectorize.io/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 56.4K GitHub stars from real production users.",
+      "launched_at": 1761824988,
+      "score": 10.474127119783068,
+      "signals": [
+        "github:56404.0"
+      ],
+      "rank": 56404
+    },
+    {
+      "id": 366,
+      "name": "TrendRadar",
+      "tagline": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 Say goodbye to information overload, your AI public opinion monitoring assistant and hotspot screen…",
+      "url": "https://trendradar.sandev.cc/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 63.3K GitHub stars from real production users.",
+      "launched_at": 1745840536,
+      "score": 7.188994672510663,
+      "signals": [
+        "github:63312.0"
+      ],
+      "rank": 63312
+    },
+    {
+      "id": 386,
+      "name": "deer flow",
+      "tagline": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of t…",
+      "url": "https://deerflow.tech/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 84.7K GitHub stars from real production users.",
+      "launched_at": 1746586219,
+      "score": 9.803660981990951,
+      "signals": [
+        "github:84716.0"
+      ],
+      "rank": 84716
+    },
+    {
+      "id": 350,
+      "name": "worldmonitor",
+      "tagline": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "url": "https://worldmonitor.app/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 89.8K GitHub stars from real production users.",
+      "launched_at": 1767893166,
+      "score": 21.543961162397547,
+      "signals": [
+        "github:89781.0"
+      ],
+      "rank": 89781
+    },
+    {
+      "id": 325,
+      "name": "skills",
+      "tagline": "Public repository for Agent Skills",
+      "url": "https://github.com/anthropics/skills",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 185K GitHub stars from real production users.",
+      "launched_at": 1758556411,
+      "score": 30.51806034021312,
+      "signals": [
+        "github:184981.0"
+      ],
+      "rank": 184981
+    },
+    {
+      "id": 323,
+      "name": "ruflo",
+      "tagline": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, fede…",
+      "url": "https://cognitum.one/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 80.2K GitHub stars from real production users.",
+      "launched_at": 1748899460,
+      "score": 9.867507022791473,
+      "signals": [
+        "github:80234.0"
+      ],
+      "rank": 80234
+    },
+    {
+      "id": 165,
+      "name": "humanizer",
+      "tagline": "Agent skill that removes signs of AI-generated writing from text",
+      "url": "https://skills.sh/Yannis100/vita-port-skill",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 62.6K GitHub stars from real production users.",
+      "launched_at": 1768714215,
+      "score": 15.617280421034803,
+      "signals": [
+        "github:62574.0"
+      ],
+      "rank": 62574
+    },
+    {
+      "id": 397,
+      "name": "Flowise",
+      "tagline": "Build AI Agents, Visually",
+      "url": "https://flowiseai.com/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": "Battle-tested in the open — 55.5K GitHub stars from real production users.",
+      "launched_at": 1680265389,
+      "score": 2.228221613881726,
+      "signals": [
+        "github:55537.0"
+      ],
+      "rank": 55537
     },
     {
       "id": 173,
@@ -659,49 +719,34 @@
       "rank": 56651
     },
     {
-      "id": 350,
-      "name": "worldmonitor",
-      "tagline": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
-      "url": "https://worldmonitor.app/",
+      "id": 291,
+      "name": "orca",
+      "tagline": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+      "url": "https://orca.dev/",
       "emoji": null,
       "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 89.8K GitHub stars from real production users.",
-      "launched_at": 1767893166,
-      "score": 21.543961162397547,
+      "why_it_matters": "Battle-tested in the open — 110.7K GitHub stars from real production users.",
+      "launched_at": 1773718137,
+      "score": 36.27274967393712,
       "signals": [
-        "github:89781.0"
+        "github:110704.0"
       ],
-      "rank": 89781
+      "rank": 110704
     },
     {
-      "id": 366,
-      "name": "TrendRadar",
-      "tagline": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 Say goodbye to information overload, your AI public opinion monitoring assistant and hotspot screen…",
-      "url": "https://trendradar.sandev.cc/",
-      "emoji": null,
+      "id": 176,
+      "name": "Dify",
+      "tagline": "Open-source LLM app development platform combining BaaS, RAG pipeline orchestration, and visual agent builder.",
+      "url": "https://github.com/langgenius/dify",
+      "emoji": "🛠️",
       "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 63.3K GitHub stars from real production users.",
-      "launched_at": 1745840536,
-      "score": 7.188994672510663,
+      "why_it_matters": "Production-grade visual AI workflow builder with built-in model routing, knowledge retrieval, and prompt observability.",
+      "launched_at": 1793105622,
+      "score": 3937.314495392481,
       "signals": [
-        "github:63312.0"
+        "github:69000.0"
       ],
-      "rank": 63312
-    },
-    {
-      "id": 165,
-      "name": "humanizer",
-      "tagline": "Agent skill that removes signs of AI-generated writing from text",
-      "url": "https://skills.sh/Yannis100/vita-port-skill",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 62.6K GitHub stars from real production users.",
-      "launched_at": 1768714215,
-      "score": 15.617280421034803,
-      "signals": [
-        "github:62574.0"
-      ],
-      "rank": 62574
+      "rank": 159991
     },
     {
       "id": 387,
@@ -719,51 +764,6 @@
       "rank": 71087
     },
     {
-      "id": 291,
-      "name": "orca",
-      "tagline": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
-      "url": "https://orca.dev/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 110.7K GitHub stars from real production users.",
-      "launched_at": 1773718137,
-      "score": 36.27274967393712,
-      "signals": [
-        "github:110704.0"
-      ],
-      "rank": 110704
-    },
-    {
-      "id": 325,
-      "name": "skills",
-      "tagline": "Public repository for Agent Skills",
-      "url": "https://github.com/anthropics/skills",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 185K GitHub stars from real production users.",
-      "launched_at": 1758556411,
-      "score": 30.51806034021312,
-      "signals": [
-        "github:184981.0"
-      ],
-      "rank": 184981
-    },
-    {
-      "id": 323,
-      "name": "ruflo",
-      "tagline": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, fede…",
-      "url": "https://cognitum.one/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": "Battle-tested in the open — 80.2K GitHub stars from real production users.",
-      "launched_at": 1748899460,
-      "score": 9.867507022791473,
-      "signals": [
-        "github:80234.0"
-      ],
-      "rank": 80234
-    },
-    {
       "id": 652,
       "name": "IOPaint",
       "tagline": "Image inpainting tool powered by SOTA AI Model. Remove any unwanted object, defect, people from your pictures or erase and replace(powered by stable diffusion) any thing on your pictures.",
@@ -777,21 +777,6 @@
         "github:23295.0"
       ],
       "rank": 23295
-    },
-    {
-      "id": 506,
-      "name": "unsloth",
-      "tagline": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
-      "url": "https://unsloth.ai/docs",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 78.8K GitHub stars from real production users.",
-      "launched_at": 1701276609,
-      "score": 4.045520522322539,
-      "signals": [
-        "github:78795.0"
-      ],
-      "rank": 78795
     },
     {
       "id": 653,
@@ -809,34 +794,19 @@
       "rank": 13593
     },
     {
-      "id": 649,
-      "name": "LocalAI",
-      "tagline": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
-      "url": "https://localai.io/",
+      "id": 651,
+      "name": "InvokeAI",
+      "tagline": "Invoke is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The so…",
+      "url": "https://invoke-ai.github.io/InvokeAI/",
       "emoji": null,
       "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 50.1K GitHub stars from real production users.",
-      "launched_at": 1679180282,
-      "score": 1.9860322873804503,
+      "why_it_matters": "Battle-tested in the open — 28.9K GitHub stars from real production users.",
+      "launched_at": 1660698267,
+      "score": 0.9581491844157598,
       "signals": [
-        "github:50071.0"
+        "github:28921.0"
       ],
-      "rank": 50071
-    },
-    {
-      "id": 326,
-      "name": "open design",
-      "tagline": "The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create motion, prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents. Sh…",
-      "url": "https://open-design.ai/",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 105K GitHub stars from real production users.",
-      "launched_at": 1777350320,
-      "score": 43.955142427783464,
-      "signals": [
-        "github:104980.0"
-      ],
-      "rank": 104980
+      "rank": 28921
     },
     {
       "id": 608,
@@ -854,21 +824,6 @@
       "rank": 16147
     },
     {
-      "id": 642,
-      "name": "jaaz",
-      "tagline": "The world's first open-source multimodal creative assistant This is a substitute for Canva and Manus that prioritizes privacy and is usable locally.",
-      "url": "https://jaaz.app/",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 6.7K GitHub stars from real production users.",
-      "launched_at": 1748789588,
-      "score": 0.8247454345605518,
-      "signals": [
-        "github:6726.0"
-      ],
-      "rank": 6726
-    },
-    {
       "id": 69,
       "name": "TRELLIS.2",
       "tagline": "High-fidelity 3D Generation from images",
@@ -882,6 +837,36 @@
         "huggingface:2309.0"
       ],
       "rank": 2309
+    },
+    {
+      "id": 655,
+      "name": "krita ai diffusion",
+      "tagline": "Streamlined interface for generating images with AI in Krita. Inpaint and outpaint with optional text prompt, no tweaking required.",
+      "url": "https://www.interstice.cloud/",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Battle-tested in the open — 10.8K GitHub stars from real production users.",
+      "launched_at": 1693608733,
+      "score": 0.5040826117296853,
+      "signals": [
+        "github:10807.0"
+      ],
+      "rank": 10807
+    },
+    {
+      "id": 649,
+      "name": "LocalAI",
+      "tagline": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+      "url": "https://localai.io/",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Battle-tested in the open — 50.1K GitHub stars from real production users.",
+      "launched_at": 1679180282,
+      "score": 1.9860322873804503,
+      "signals": [
+        "github:50071.0"
+      ],
+      "rank": 50071
     },
     {
       "id": 621,
@@ -899,109 +884,19 @@
       "rank": 10171
     },
     {
-      "id": 185,
-      "name": "Fooocus",
-      "tagline": "Image generating software combining the prompt simplicity of Midjourney with the local control of Stable Diffusion.",
-      "url": "https://github.com/lllyasviel/Fooocus",
-      "emoji": "🖼️",
-      "category": "Image & Design",
-      "why_it_matters": "Zero-prompt-engineering image creation providing Midjourney-level quality on consumer desktop GPUs.",
-      "launched_at": 1793019222,
-      "score": 1792.8758774096364,
-      "signals": [
-        "github:44000.0"
-      ],
-      "rank": 44000
-    },
-    {
-      "id": 648,
-      "name": "stable diffusion webui",
-      "tagline": "Stable Diffusion web UI",
-      "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+      "id": 326,
+      "name": "open design",
+      "tagline": "The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create motion, prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents. Sh…",
+      "url": "https://open-design.ai/",
       "emoji": null,
       "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 165.2K GitHub stars from real production users.",
-      "launched_at": 1661177126,
-      "score": 5.496189353555009,
+      "why_it_matters": "Battle-tested in the open — 105K GitHub stars from real production users.",
+      "launched_at": 1777350320,
+      "score": 43.955142427783464,
       "signals": [
-        "github:165180.0"
+        "github:104980.0"
       ],
-      "rank": 165180
-    },
-    {
-      "id": 651,
-      "name": "InvokeAI",
-      "tagline": "Invoke is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The so…",
-      "url": "https://invoke-ai.github.io/InvokeAI/",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 28.9K GitHub stars from real production users.",
-      "launched_at": 1660698267,
-      "score": 0.9581491844157598,
-      "signals": [
-        "github:28921.0"
-      ],
-      "rank": 28921
-    },
-    {
-      "id": 656,
-      "name": "StableStudio",
-      "tagline": "Community interface for generative AI",
-      "url": "https://github.com/Stability-AI/StableStudio",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 9K GitHub stars from real production users.",
-      "launched_at": 1682114955,
-      "score": 0.36965834542014503,
-      "signals": [
-        "github:9033.0"
-      ],
-      "rank": 9033
-    },
-    {
-      "id": 641,
-      "name": "Auto Photoshop StableDiffusion Plugin",
-      "tagline": "A user-friendly plug-in that makes it easy to generate stable diffusion images inside Photoshop using either Automatic or ComfyUI as a backend.",
-      "url": "https://github.com/AbdullahAlfaraj/Auto-Photoshop-StableDiffusion-Plugin",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 7.3K GitHub stars from real production users.",
-      "launched_at": 1671566994,
-      "score": 0.26815364995621804,
-      "signals": [
-        "github:7305.0"
-      ],
-      "rank": 7305
-    },
-    {
-      "id": 481,
-      "name": "onediff",
-      "tagline": "OneDiff: An out-of-the-box acceleration library for diffusion models.",
-      "url": "https://github.com/siliconflow/onediff/wiki",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 2K GitHub stars from real production users.",
-      "launched_at": 1663745653,
-      "score": 0.06683882441008052,
-      "signals": [
-        "github:1962.0"
-      ],
-      "rank": 1962
-    },
-    {
-      "id": 645,
-      "name": "SwarmUI",
-      "tagline": "SwarmUI (formerly StableSwarmUI), A Modular Stable Diffusion Web-User-Interface, with an emphasis on making powertools easily accessible, high performance, and extensibility.",
-      "url": "https://github.com/mcmonkeyprojects/SwarmUI",
-      "emoji": null,
-      "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 4.7K GitHub stars from real production users.",
-      "launched_at": 1718951093,
-      "score": 0.31307820444889817,
-      "signals": [
-        "github:4722.0"
-      ],
-      "rank": 4722
+      "rank": 104980
     },
     {
       "id": 639,
@@ -1019,6 +914,81 @@
       "rank": 8970
     },
     {
+      "id": 656,
+      "name": "StableStudio",
+      "tagline": "Community interface for generative AI",
+      "url": "https://github.com/Stability-AI/StableStudio",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Battle-tested in the open — 9K GitHub stars from real production users.",
+      "launched_at": 1682114955,
+      "score": 0.36965834542014503,
+      "signals": [
+        "github:9033.0"
+      ],
+      "rank": 9033
+    },
+    {
+      "id": 645,
+      "name": "SwarmUI",
+      "tagline": "SwarmUI (formerly StableSwarmUI), A Modular Stable Diffusion Web-User-Interface, with an emphasis on making powertools easily accessible, high performance, and extensibility.",
+      "url": "https://github.com/mcmonkeyprojects/SwarmUI",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Battle-tested in the open — 4.7K GitHub stars from real production users.",
+      "launched_at": 1718951093,
+      "score": 0.31307820444889817,
+      "signals": [
+        "github:4722.0"
+      ],
+      "rank": 4722
+    },
+    {
+      "id": 506,
+      "name": "unsloth",
+      "tagline": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
+      "url": "https://unsloth.ai/docs",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Battle-tested in the open — 78.8K GitHub stars from real production users.",
+      "launched_at": 1701276609,
+      "score": 4.045520522322539,
+      "signals": [
+        "github:78795.0"
+      ],
+      "rank": 78795
+    },
+    {
+      "id": 763,
+      "name": "OGAM",
+      "tagline": "The Swiss Army Knife of Offline AI. Chat, see, speak, and generate images on your phone or Mac — GGUF LLMs, vision, Whisper speech-to-text, Stable Diffusion, tool calling, and local-network servers.…",
+      "url": "https://github.com/off-grid-ai/OGAM",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Battle-tested in the open — 3.3K GitHub stars from real production users.",
+      "launched_at": 1769684458,
+      "score": 0.8655727183119535,
+      "signals": [
+        "github:3305.0"
+      ],
+      "rank": 3305
+    },
+    {
+      "id": 185,
+      "name": "Fooocus",
+      "tagline": "Image generating software combining the prompt simplicity of Midjourney with the local control of Stable Diffusion.",
+      "url": "https://github.com/lllyasviel/Fooocus",
+      "emoji": "🖼️",
+      "category": "Image & Design",
+      "why_it_matters": "Zero-prompt-engineering image creation providing Midjourney-level quality on consumer desktop GPUs.",
+      "launched_at": 1793019222,
+      "score": 1792.8758774096364,
+      "signals": [
+        "github:44000.0"
+      ],
+      "rank": 44000
+    },
+    {
       "id": 650,
       "name": "diffusers",
       "tagline": "🤗 Diffusers: State-of-the-art diffusion models for image, video, and audio generation in PyTorch.",
@@ -1034,19 +1004,19 @@
       "rank": 34840
     },
     {
-      "id": 655,
-      "name": "krita ai diffusion",
-      "tagline": "Streamlined interface for generating images with AI in Krita. Inpaint and outpaint with optional text prompt, no tweaking required.",
-      "url": "https://www.interstice.cloud/",
-      "emoji": null,
+      "id": 184,
+      "name": "ComfyUI",
+      "tagline": "Modular node-based graphical interface and backend pipeline for Stable Diffusion, SDXL, and Flux models.",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "emoji": "🎨",
       "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 10.8K GitHub stars from real production users.",
-      "launched_at": 1693608733,
-      "score": 0.5040826117296853,
+      "why_it_matters": "Industry-standard node-graph architecture powering advanced generative image pipelines and production VFX studios.",
+      "launched_at": 1793192022,
+      "score": 5659.563573666443,
       "signals": [
-        "github:10807.0"
+        "github:62000.0"
       ],
-      "rank": 10807
+      "rank": 144114
     },
     {
       "id": 567,
@@ -1079,19 +1049,19 @@
       "rank": 10846
     },
     {
-      "id": 647,
-      "name": "ComfyUI 3D Pack",
-      "tagline": "An extensive node suite that enables ComfyUI to process 3D inputs (Mesh & UV Texture, etc) using cutting edge algorithms (3DGS, NeRF, etc.)",
-      "url": "https://github.com/MrForExample/ComfyUI-3D-Pack",
+      "id": 642,
+      "name": "jaaz",
+      "tagline": "The world's first open-source multimodal creative assistant This is a substitute for Canva and Manus that prioritizes privacy and is usable locally.",
+      "url": "https://jaaz.app/",
       "emoji": null,
       "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 3.9K GitHub stars from real production users.",
-      "launched_at": 1704491354,
-      "score": 0.20879635969947669,
+      "why_it_matters": "Battle-tested in the open — 6.7K GitHub stars from real production users.",
+      "launched_at": 1748789588,
+      "score": 0.8247454345605518,
       "signals": [
-        "github:3897.0"
+        "github:6726.0"
       ],
-      "rank": 3897
+      "rank": 6726
     },
     {
       "id": 646,
@@ -1109,34 +1079,64 @@
       "rank": 4228
     },
     {
-      "id": 184,
-      "name": "ComfyUI",
-      "tagline": "Modular node-based graphical interface and backend pipeline for Stable Diffusion, SDXL, and Flux models.",
-      "url": "https://github.com/comfyanonymous/ComfyUI",
-      "emoji": "🎨",
-      "category": "Image & Design",
-      "why_it_matters": "Industry-standard node-graph architecture powering advanced generative image pipelines and production VFX studios.",
-      "launched_at": 1793192022,
-      "score": 5659.563573666443,
-      "signals": [
-        "github:62000.0"
-      ],
-      "rank": 144114
-    },
-    {
-      "id": 763,
-      "name": "OGAM",
-      "tagline": "The Swiss Army Knife of Offline AI. Chat, see, speak, and generate images on your phone or Mac — GGUF LLMs, vision, Whisper speech-to-text, Stable Diffusion, tool calling, and local-network servers.…",
-      "url": "https://github.com/off-grid-ai/OGAM",
+      "id": 648,
+      "name": "stable diffusion webui",
+      "tagline": "Stable Diffusion web UI",
+      "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
       "emoji": null,
       "category": "Image & Design",
-      "why_it_matters": "Battle-tested in the open — 3.3K GitHub stars from real production users.",
-      "launched_at": 1769684458,
-      "score": 0.8655727183119535,
+      "why_it_matters": "Battle-tested in the open — 165.2K GitHub stars from real production users.",
+      "launched_at": 1661177126,
+      "score": 5.496189353555009,
       "signals": [
-        "github:3305.0"
+        "github:165180.0"
       ],
-      "rank": 3305
+      "rank": 165180
+    },
+    {
+      "id": 641,
+      "name": "Auto Photoshop StableDiffusion Plugin",
+      "tagline": "A user-friendly plug-in that makes it easy to generate stable diffusion images inside Photoshop using either Automatic or ComfyUI as a backend.",
+      "url": "https://github.com/AbdullahAlfaraj/Auto-Photoshop-StableDiffusion-Plugin",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Battle-tested in the open — 7.3K GitHub stars from real production users.",
+      "launched_at": 1671566994,
+      "score": 0.26815364995621804,
+      "signals": [
+        "github:7305.0"
+      ],
+      "rank": 7305
+    },
+    {
+      "id": 481,
+      "name": "onediff",
+      "tagline": "OneDiff: An out-of-the-box acceleration library for diffusion models.",
+      "url": "https://github.com/siliconflow/onediff/wiki",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Battle-tested in the open — 2K GitHub stars from real production users.",
+      "launched_at": 1663745653,
+      "score": 0.06683882441008052,
+      "signals": [
+        "github:1962.0"
+      ],
+      "rank": 1962
+    },
+    {
+      "id": 647,
+      "name": "ComfyUI 3D Pack",
+      "tagline": "An extensive node suite that enables ComfyUI to process 3D inputs (Mesh & UV Texture, etc) using cutting edge algorithms (3DGS, NeRF, etc.)",
+      "url": "https://github.com/MrForExample/ComfyUI-3D-Pack",
+      "emoji": null,
+      "category": "Image & Design",
+      "why_it_matters": "Battle-tested in the open — 3.9K GitHub stars from real production users.",
+      "launched_at": 1704491354,
+      "score": 0.20879635969947669,
+      "signals": [
+        "github:3897.0"
+      ],
+      "rank": 3897
     },
     {
       "id": 662,
@@ -1154,21 +1154,6 @@
       "rank": 38112
     },
     {
-      "id": 332,
-      "name": "OpenMontage",
-      "tagline": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video produ…",
-      "url": "https://www.openmontage.video/",
-      "emoji": null,
-      "category": "Video",
-      "why_it_matters": "Battle-tested in the open — 73.2K GitHub stars from real production users.",
-      "launched_at": 1774797802,
-      "score": 25.661276060918873,
-      "signals": [
-        "github:73184.0"
-      ],
-      "rank": 73184
-    },
-    {
       "id": 669,
       "name": "Handy",
       "tagline": "A free, open source, and extensible speech-to-text application that works completely offline.",
@@ -1184,19 +1169,64 @@
       "rank": 35136
     },
     {
-      "id": 665,
-      "name": "pyvideotrans",
-      "tagline": "Translate the video from one language to another and embed dubbing & subtitles.",
-      "url": "https://pyvideotrans.com/",
+      "id": 672,
+      "name": "sherpa onnx",
+      "tagline": "Speech-to-text, text-to-speech, speaker diarization, speech enhancement, source separation, and VAD using next-gen Kaldi with onnxruntime without Internet connection. Support embedded systems, Androi…",
+      "url": "https://k2-fsa.github.io/sherpa/onnx/index.html",
       "emoji": null,
       "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 19.6K GitHub stars from real production users.",
-      "launched_at": 1696263199,
-      "score": 0.9438118840010505,
+      "why_it_matters": "Battle-tested in the open — 15.6K GitHub stars from real production users.",
+      "launched_at": 1662011253,
+      "score": 0.5238358946148552,
       "signals": [
-        "github:19590.0"
+        "github:15624.0"
       ],
-      "rank": 19590
+      "rank": 15624
+    },
+    {
+      "id": 332,
+      "name": "OpenMontage",
+      "tagline": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video produ…",
+      "url": "https://www.openmontage.video/",
+      "emoji": null,
+      "category": "Video",
+      "why_it_matters": "Battle-tested in the open — 73.2K GitHub stars from real production users.",
+      "launched_at": 1774797802,
+      "score": 25.661276060918873,
+      "signals": [
+        "github:73184.0"
+      ],
+      "rank": 73184
+    },
+    {
+      "id": 437,
+      "name": "llamafile",
+      "tagline": "Distribute and run LLMs with a single file.",
+      "url": "https://docs.mozilla.ai/llamafile",
+      "emoji": null,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 26.5K GitHub stars from real production users.",
+      "launched_at": 1694380352,
+      "score": 1.2487689791151368,
+      "signals": [
+        "github:26524.0"
+      ],
+      "rank": 26524
+    },
+    {
+      "id": 463,
+      "name": "FluidVoice",
+      "tagline": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. Windows, iOS testflight! Android, Linux waitlist open! A local Wispr Flow alternative. Follow https://…",
+      "url": "https://altic.dev/fluid",
+      "emoji": null,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 12.6K GitHub stars from real production users.",
+      "launched_at": 1758476102,
+      "score": 2.0744821471156514,
+      "signals": [
+        "github:12609.0"
+      ],
+      "rank": 12609
     },
     {
       "id": 660,
@@ -1230,64 +1260,19 @@
       "rank": 9635
     },
     {
-      "id": 437,
-      "name": "llamafile",
-      "tagline": "Distribute and run LLMs with a single file.",
-      "url": "https://docs.mozilla.ai/llamafile",
-      "emoji": null,
+      "id": 776,
+      "name": "Qwen3-TTS Demo",
+      "tagline": "Interactive AI space by Qwen",
+      "url": "https://huggingface.co/spaces/Qwen/Qwen3-TTS",
+      "emoji": "🎙️",
       "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 26.5K GitHub stars from real production users.",
-      "launched_at": 1694380352,
-      "score": 1.2487689791151368,
+      "why_it_matters": "Trending with the builder community — 2.4K Hugging Face likes.",
+      "launched_at": 1768986616,
+      "score": 0.5984329692429533,
       "signals": [
-        "github:26524.0"
+        "huggingface:2366.0"
       ],
-      "rank": 26524
-    },
-    {
-      "id": 672,
-      "name": "sherpa onnx",
-      "tagline": "Speech-to-text, text-to-speech, speaker diarization, speech enhancement, source separation, and VAD using next-gen Kaldi with onnxruntime without Internet connection. Support embedded systems, Androi…",
-      "url": "https://k2-fsa.github.io/sherpa/onnx/index.html",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 15.6K GitHub stars from real production users.",
-      "launched_at": 1662011253,
-      "score": 0.5238358946148552,
-      "signals": [
-        "github:15624.0"
-      ],
-      "rank": 15624
-    },
-    {
-      "id": 463,
-      "name": "FluidVoice",
-      "tagline": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. Windows, iOS testflight! Android, Linux waitlist open! A local Wispr Flow alternative. Follow https://…",
-      "url": "https://altic.dev/fluid",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 12.6K GitHub stars from real production users.",
-      "launched_at": 1758476102,
-      "score": 2.0744821471156514,
-      "signals": [
-        "github:12609.0"
-      ],
-      "rank": 12609
-    },
-    {
-      "id": 658,
-      "name": "GPT SoVITS",
-      "tagline": "1 min voice data can also be used to train a good TTS model! (few shot voice cloning)",
-      "url": "https://github.com/RVC-Boss/GPT-SoVITS",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 64.3K GitHub stars from real production users.",
-      "launched_at": 1705255521,
-      "score": 3.478614224470528,
-      "signals": [
-        "github:64256.0"
-      ],
-      "rank": 64256
+      "rank": 2366
     },
     {
       "id": 612,
@@ -1320,6 +1305,21 @@
       "rank": 15509
     },
     {
+      "id": 658,
+      "name": "GPT SoVITS",
+      "tagline": "1 min voice data can also be used to train a good TTS model! (few shot voice cloning)",
+      "url": "https://github.com/RVC-Boss/GPT-SoVITS",
+      "emoji": null,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 64.3K GitHub stars from real production users.",
+      "launched_at": 1705255521,
+      "score": 3.478614224470528,
+      "signals": [
+        "github:64256.0"
+      ],
+      "rank": 64256
+    },
+    {
       "id": 671,
       "name": "whisperX",
       "tagline": "WhisperX: Automatic Speech Recognition with Word-level Timestamps (& Diarization)",
@@ -1333,171 +1333,6 @@
         "github:24944.0"
       ],
       "rank": 24944
-    },
-    {
-      "id": 670,
-      "name": "DeepSpeech",
-      "tagline": "DeepSpeech is an open source embedded (offline, on-device) speech-to-text engine which can run in real time on devices ranging from a Raspberry Pi 4 to high power GPU servers.",
-      "url": "https://github.com/mozilla/DeepSpeech",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 26.8K GitHub stars from real production users.",
-      "launched_at": 1464879893,
-      "score": 0.2988672142639931,
-      "signals": [
-        "github:26776.0"
-      ],
-      "rank": 26776
-    },
-    {
-      "id": 187,
-      "name": "Kokoro",
-      "tagline": "Open-weight 82M parameter text-to-speech voice model with exceptional human cadence, pitch, and speed.",
-      "url": "https://github.com/hexgrad/kokoro",
-      "emoji": "🗣️",
-      "category": "Audio & Voice",
-      "why_it_matters": "Breakthrough ultra-compact voice synthesis model that out-competes models 10x its size in natural speech quality.",
-      "launched_at": 1793192022,
-      "score": 958.474476185446,
-      "signals": [
-        "github:10500.0"
-      ],
-      "rank": 10500
-    },
-    {
-      "id": 666,
-      "name": "dia",
-      "tagline": "A TTS model capable of generating ultra-realistic dialogue in one pass.",
-      "url": "https://github.com/nari-labs/dia",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 19.4K GitHub stars from real production users.",
-      "launched_at": 1745046957,
-      "score": 2.1605089797557695,
-      "signals": [
-        "github:19409.0"
-      ],
-      "rank": 19409
-    },
-    {
-      "id": 659,
-      "name": "TTS",
-      "tagline": "🐸💬 - a deep learning toolkit for Text-to-Speech, battle-tested in research and production",
-      "url": "https://github.com/coqui-ai/TTS",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 46.2K GitHub stars from real production users.",
-      "launched_at": 1589989528,
-      "score": 0.9161459316096917,
-      "signals": [
-        "github:46172.0"
-      ],
-      "rank": 46172
-    },
-    {
-      "id": 776,
-      "name": "Qwen3-TTS Demo",
-      "tagline": "Interactive AI space by Qwen",
-      "url": "https://huggingface.co/spaces/Qwen/Qwen3-TTS",
-      "emoji": "🎙️",
-      "category": "Audio & Voice",
-      "why_it_matters": "Trending with the builder community — 2.4K Hugging Face likes.",
-      "launched_at": 1768986616,
-      "score": 0.5984329692429533,
-      "signals": [
-        "huggingface:2366.0"
-      ],
-      "rank": 2366
-    },
-    {
-      "id": 657,
-      "name": "VoiceStudio",
-      "tagline": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "url": "https://voicestudio.sh/",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 95K GitHub stars from real production users.",
-      "launched_at": 1775770826,
-      "score": 35.547964473720015,
-      "signals": [
-        "github:95041.0"
-      ],
-      "rank": 95041
-    },
-    {
-      "id": 638,
-      "name": "Pixelle Video",
-      "tagline": "🚀 AI AI Fully Automated Short Video Engine",
-      "url": "https://github.com/AIDC-AI/Pixelle-Video",
-      "emoji": null,
-      "category": "Video",
-      "why_it_matters": "Battle-tested in the open — 29.6K GitHub stars from real production users.",
-      "launched_at": 1762497267,
-      "score": 5.635648741666346,
-      "signals": [
-        "github:29574.0"
-      ],
-      "rank": 29574
-    },
-    {
-      "id": 508,
-      "name": "CosyVoice",
-      "tagline": "Multi-lingual large voice generation model, providing inference, training and deployment full-stack ability.",
-      "url": "https://github.com/FunAudioLLM/CosyVoice",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 24.2K GitHub stars from real production users.",
-      "launched_at": 1719975562,
-      "score": 1.6309495090707473,
-      "signals": [
-        "github:24193.0"
-      ],
-      "rank": 24193
-    },
-    {
-      "id": 449,
-      "name": "FunASR",
-      "tagline": "Open-source speech recognition toolkit for training, inference, streaming ASR, VAD, punctuation, speaker diarization pipelines, and OpenAI-compatible/MCP serving.",
-      "url": "https://github.com/modelscope/FunASR",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 20.9K GitHub stars from real production users.",
-      "launched_at": 1669256891,
-      "score": 0.7495961934750297,
-      "signals": [
-        "github:20886.0"
-      ],
-      "rank": 20886
-    },
-    {
-      "id": 496,
-      "name": "faster whisper",
-      "tagline": "Faster Whisper transcription with CTranslate2",
-      "url": "https://github.com/SYSTRAN/faster-whisper",
-      "emoji": null,
-      "category": "Audio & Voice",
-      "why_it_matters": "Battle-tested in the open — 26.3K GitHub stars from real production users.",
-      "launched_at": 1676107047,
-      "score": 1.011296745512436,
-      "signals": [
-        "github:26322.0"
-      ],
-      "rank": 26322
-    },
-    {
-      "id": 186,
-      "name": "Whisper.cpp",
-      "tagline": "High-performance inference of OpenAI's Whisper speech-to-text model in plain C/C++ without external dependencies.",
-      "url": "https://github.com/ggerganov/whisper.cpp",
-      "emoji": "🎙️",
-      "category": "Audio & Voice",
-      "why_it_matters": "Ultra-fast local speech transcription running in real time even on low-power devices and embedded chips.",
-      "launched_at": 1793105622,
-      "score": 2054.251041074338,
-      "signals": [
-        "github:36000.0"
-      ],
-      "rank": 54795
     },
     {
       "id": 664,
@@ -1515,64 +1350,169 @@
       "rank": 24822
     },
     {
-      "id": 667,
-      "name": "leon",
-      "tagline": "🧠 Leon is your open-source personal assistant.",
-      "url": "https://getleon.ai/",
+      "id": 666,
+      "name": "dia",
+      "tagline": "A TTS model capable of generating ultra-realistic dialogue in one pass.",
+      "url": "https://github.com/nari-labs/dia",
       "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Battle-tested in the open — 17.6K GitHub stars from real production users.",
-      "launched_at": 1549801512,
-      "score": 0.2816228741775915,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 19.4K GitHub stars from real production users.",
+      "launched_at": 1745046957,
+      "score": 2.1605089797557695,
       "signals": [
-        "github:17622.0"
+        "github:19409.0"
       ],
-      "rank": 17622
+      "rank": 19409
     },
     {
-      "id": 464,
-      "name": "llama gpt",
-      "tagline": "A self-hosted, offline, ChatGPT-like chatbot. Powered by Llama 2. 100% private, with no data leaving your device. New: Code Llama support!",
-      "url": "https://apps.umbrel.com/app/llama-gpt",
+      "id": 670,
+      "name": "DeepSpeech",
+      "tagline": "DeepSpeech is an open source embedded (offline, on-device) speech-to-text engine which can run in real time on devices ranging from a Raspberry Pi 4 to high power GPU servers.",
+      "url": "https://github.com/mozilla/DeepSpeech",
       "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Battle-tested in the open — 10.9K GitHub stars from real production users.",
-      "launched_at": 1690056774,
-      "score": 0.48863623219103636,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 26.8K GitHub stars from real production users.",
+      "launched_at": 1464879893,
+      "score": 0.2988672142639931,
       "signals": [
-        "github:10925.0"
+        "github:26776.0"
       ],
-      "rank": 10925
+      "rank": 26776
     },
     {
-      "id": 425,
-      "name": "NextChat",
-      "tagline": "✨ Zero-config AI chat assistant. No API key needed — sign up and instantly chat with GPT-5, Claude 4, Gemini 2.5, DeepSeek & 100+ top models. Pay-as-you-go saves you more. Available on Web, iOS, macO…",
-      "url": "https://nextchat.club/",
+      "id": 496,
+      "name": "faster whisper",
+      "tagline": "Faster Whisper transcription with CTranslate2",
+      "url": "https://github.com/SYSTRAN/faster-whisper",
       "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Battle-tested in the open — 88.9K GitHub stars from real production users.",
-      "launched_at": 1678472874,
-      "score": 3.500949486636749,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 26.3K GitHub stars from real production users.",
+      "launched_at": 1676107047,
+      "score": 1.011296745512436,
       "signals": [
-        "github:88921.0"
+        "github:26322.0"
       ],
-      "rank": 88921
+      "rank": 26322
     },
     {
-      "id": 429,
-      "name": "meetily",
-      "tagline": "Privacy first AI meeting note taker. Download Free and open source granola, otter ai, fireflies alternative. Parakeet / Whisper live transcription, on-device speaker diarization, built on Rust. 100%…",
-      "url": "https://meetily.ai/",
+      "id": 665,
+      "name": "pyvideotrans",
+      "tagline": "Translate the video from one language to another and embed dubbing & subtitles.",
+      "url": "https://pyvideotrans.com/",
       "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Battle-tested in the open — 32.3K GitHub stars from real production users.",
-      "launched_at": 1735217534,
-      "score": 2.8805677876937335,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 19.6K GitHub stars from real production users.",
+      "launched_at": 1696263199,
+      "score": 0.9438118840010505,
       "signals": [
-        "github:32316.0"
+        "github:19590.0"
       ],
-      "rank": 32316
+      "rank": 19590
+    },
+    {
+      "id": 657,
+      "name": "VoiceStudio",
+      "tagline": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "url": "https://voicestudio.sh/",
+      "emoji": null,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 95K GitHub stars from real production users.",
+      "launched_at": 1775770826,
+      "score": 35.547964473720015,
+      "signals": [
+        "github:95041.0"
+      ],
+      "rank": 95041
+    },
+    {
+      "id": 508,
+      "name": "CosyVoice",
+      "tagline": "Multi-lingual large voice generation model, providing inference, training and deployment full-stack ability.",
+      "url": "https://github.com/FunAudioLLM/CosyVoice",
+      "emoji": null,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 24.2K GitHub stars from real production users.",
+      "launched_at": 1719975562,
+      "score": 1.6309495090707473,
+      "signals": [
+        "github:24193.0"
+      ],
+      "rank": 24193
+    },
+    {
+      "id": 659,
+      "name": "TTS",
+      "tagline": "🐸💬 - a deep learning toolkit for Text-to-Speech, battle-tested in research and production",
+      "url": "https://github.com/coqui-ai/TTS",
+      "emoji": null,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 46.2K GitHub stars from real production users.",
+      "launched_at": 1589989528,
+      "score": 0.9161459316096917,
+      "signals": [
+        "github:46172.0"
+      ],
+      "rank": 46172
+    },
+    {
+      "id": 449,
+      "name": "FunASR",
+      "tagline": "Open-source speech recognition toolkit for training, inference, streaming ASR, VAD, punctuation, speaker diarization pipelines, and OpenAI-compatible/MCP serving.",
+      "url": "https://github.com/modelscope/FunASR",
+      "emoji": null,
+      "category": "Audio & Voice",
+      "why_it_matters": "Battle-tested in the open — 20.9K GitHub stars from real production users.",
+      "launched_at": 1669256891,
+      "score": 0.7495961934750297,
+      "signals": [
+        "github:20886.0"
+      ],
+      "rank": 20886
+    },
+    {
+      "id": 638,
+      "name": "Pixelle Video",
+      "tagline": "🚀 AI AI Fully Automated Short Video Engine",
+      "url": "https://github.com/AIDC-AI/Pixelle-Video",
+      "emoji": null,
+      "category": "Video",
+      "why_it_matters": "Battle-tested in the open — 29.6K GitHub stars from real production users.",
+      "launched_at": 1762497267,
+      "score": 5.635648741666346,
+      "signals": [
+        "github:29574.0"
+      ],
+      "rank": 29574
+    },
+    {
+      "id": 187,
+      "name": "Kokoro",
+      "tagline": "Open-weight 82M parameter text-to-speech voice model with exceptional human cadence, pitch, and speed.",
+      "url": "https://github.com/hexgrad/kokoro",
+      "emoji": "🗣️",
+      "category": "Audio & Voice",
+      "why_it_matters": "Breakthrough ultra-compact voice synthesis model that out-competes models 10x its size in natural speech quality.",
+      "launched_at": 1793192022,
+      "score": 958.474476185446,
+      "signals": [
+        "github:10500.0"
+      ],
+      "rank": 10500
+    },
+    {
+      "id": 186,
+      "name": "Whisper.cpp",
+      "tagline": "High-performance inference of OpenAI's Whisper speech-to-text model in plain C/C++ without external dependencies.",
+      "url": "https://github.com/ggerganov/whisper.cpp",
+      "emoji": "🎙️",
+      "category": "Audio & Voice",
+      "why_it_matters": "Ultra-fast local speech transcription running in real time even on low-power devices and embedded chips.",
+      "launched_at": 1793105622,
+      "score": 2054.251041074338,
+      "signals": [
+        "github:36000.0"
+      ],
+      "rank": 54795
     },
     {
       "id": 491,
@@ -1590,6 +1530,21 @@
       "rank": 1654
     },
     {
+      "id": 667,
+      "name": "leon",
+      "tagline": "🧠 Leon is your open-source personal assistant.",
+      "url": "https://getleon.ai/",
+      "emoji": null,
+      "category": "Chat & Assistants",
+      "why_it_matters": "Battle-tested in the open — 17.6K GitHub stars from real production users.",
+      "launched_at": 1549801512,
+      "score": 0.2816228741775915,
+      "signals": [
+        "github:17622.0"
+      ],
+      "rank": 17622
+    },
+    {
       "id": 432,
       "name": "kirara ai",
       "tagline": "🤖 DIY-enabled multimodal AI chatbots | 🚀 Quick access to WeChat, QQ, Telegram, and other chat platforms | 🦈Support for DeepSeek, Grok, Claude, Ollama, Gemini, OpenAI | Workflow systems, web search…",
@@ -1603,36 +1558,6 @@
         "github:19251.0"
       ],
       "rank": 19251
-    },
-    {
-      "id": 574,
-      "name": "paperless ngx",
-      "tagline": "A community-supported supercharged document management system: scan, index and archive all your documents",
-      "url": "https://docs.paperless-ngx.com/",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Battle-tested in the open — 47.4K GitHub stars from real production users.",
-      "launched_at": 1644703012,
-      "score": 1.3686160244946493,
-      "signals": [
-        "github:47357.0"
-      ],
-      "rank": 47357
-    },
-    {
-      "id": 467,
-      "name": "LLamaSharp",
-      "tagline": "A C#/.NET library to run LLM (🦙LLaMA/LLaVA) on your local device efficiently.",
-      "url": "https://scisharp.github.io/LLamaSharp",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Battle-tested in the open — 3.8K GitHub stars from real production users.",
-      "launched_at": 1683655401,
-      "score": 0.15896373856139498,
-      "signals": [
-        "github:3820.0"
-      ],
-      "rank": 3820
     },
     {
       "id": 661,
@@ -1650,19 +1575,19 @@
       "rank": 39962
     },
     {
-      "id": 181,
-      "name": "Open WebUI",
-      "tagline": "User-friendly, self-hosted AI interface inspired by ChatGPT with full Ollama, RAG, and pipeline support.",
-      "url": "https://github.com/open-webui/open-webui",
-      "emoji": "💬",
+      "id": 464,
+      "name": "llama gpt",
+      "tagline": "A self-hosted, offline, ChatGPT-like chatbot. Powered by Llama 2. 100% private, with no data leaving your device. New: Code Llama support!",
+      "url": "https://apps.umbrel.com/app/llama-gpt",
+      "emoji": null,
       "category": "Chat & Assistants",
-      "why_it_matters": "The gold standard private web UI for teams and power users seeking ChatGPT features without data leakage.",
-      "launched_at": 1793192022,
-      "score": 6024.696707451375,
+      "why_it_matters": "Battle-tested in the open — 10.9K GitHub stars from real production users.",
+      "launched_at": 1690056774,
+      "score": 0.48863623219103636,
       "signals": [
-        "github:66000.0"
+        "github:10925.0"
       ],
-      "rank": 157245
+      "rank": 10925
     },
     {
       "id": 560,
@@ -1680,94 +1605,19 @@
       "rank": 82807
     },
     {
-      "id": 183,
-      "name": "AnythingLLM",
-      "tagline": "The all-in-one desktop AI application for RAG, enterprise documents, workspaces, and multi-user access.",
-      "url": "https://github.com/Mintplex-Labs/anything-llm",
-      "emoji": "📚",
-      "category": "Chat & Assistants",
-      "why_it_matters": "Turn any document, PDF, or GitHub repository into an interactive AI knowledge base with zero configuration.",
-      "launched_at": 1793105622,
-      "score": 1826.0009253994115,
-      "signals": [
-        "github:32000.0"
-      ],
-      "rank": 67747
-    },
-    {
-      "id": 106,
-      "name": "codex with chatgpt",
-      "tagline": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
-      "url": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+      "id": 425,
+      "name": "NextChat",
+      "tagline": "✨ Zero-config AI chat assistant. No API key needed — sign up and instantly chat with GPT-5, Claude 4, Gemini 2.5, DeepSeek & 100+ top models. Pay-as-you-go saves you more. Available on Web, iOS, macO…",
+      "url": "https://nextchat.club/",
       "emoji": null,
       "category": "Chat & Assistants",
-      "why_it_matters": "Battle-tested in the open — 7.6K GitHub stars from real production users.",
-      "launched_at": 1787921844,
-      "score": 11.579326841039888,
+      "why_it_matters": "Battle-tested in the open — 88.9K GitHub stars from real production users.",
+      "launched_at": 1678472874,
+      "score": 3.500949486636749,
       "signals": [
-        "github:7583.0"
+        "github:88921.0"
       ],
-      "rank": 7583
-    },
-    {
-      "id": 549,
-      "name": "docling",
-      "tagline": "Get your documents ready for gen AI",
-      "url": "https://docling-project.github.io/docling",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Battle-tested in the open — 69.9K GitHub stars from real production users.",
-      "launched_at": 1720511426,
-      "score": 4.751212412695367,
-      "signals": [
-        "github:69861.0"
-      ],
-      "rank": 69861
-    },
-    {
-      "id": 545,
-      "name": "memobase",
-      "tagline": "User Profile-Based Long-Term Memory for AI Chatbot Applications.",
-      "url": "https://github.com/memodb-io/memobase",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Battle-tested in the open — 2.9K GitHub stars from real production users.",
-      "launched_at": 1725333653,
-      "score": 0.21721947493233484,
-      "signals": [
-        "github:2942.0"
-      ],
-      "rank": 2942
-    },
-    {
-      "id": 619,
-      "name": "LLaVA",
-      "tagline": "[NeurIPS'23 Oral] Visual Instruction Tuning (LLaVA) built towards GPT-4V level capabilities and beyond.",
-      "url": "https://github.com/haotian-liu/LLaVA",
-      "emoji": null,
-      "category": "Chat & Assistants",
-      "why_it_matters": "Battle-tested in the open — 25.1K GitHub stars from real production users.",
-      "launched_at": 1681747991,
-      "score": 1.0222629264090424,
-      "signals": [
-        "github:25079.0"
-      ],
-      "rank": 25079
-    },
-    {
-      "id": 191,
-      "name": "Mem0",
-      "tagline": "The intelligent memory layer for AI assistants and autonomous agents, adapting dynamically across conversations.",
-      "url": "https://github.com/mem0ai/mem0",
-      "emoji": "🧠",
-      "category": "Productivity",
-      "why_it_matters": "Solves context amnesia by providing persistent, adaptive personal memory graph storage for AI agents.",
-      "launched_at": 1793192022,
-      "score": 2282.0820861558236,
-      "signals": [
-        "github:25000.0"
-      ],
-      "rank": 68095
+      "rank": 88921
     },
     {
       "id": 527,
@@ -1785,19 +1635,79 @@
       "rank": 91988
     },
     {
-      "id": 426,
-      "name": "chatbox",
-      "tagline": "Powerful AI Client",
-      "url": "https://chatboxai.app/",
+      "id": 574,
+      "name": "paperless ngx",
+      "tagline": "A community-supported supercharged document management system: scan, index and archive all your documents",
+      "url": "https://docs.paperless-ngx.com/",
+      "emoji": null,
+      "category": "Productivity",
+      "why_it_matters": "Battle-tested in the open — 47.4K GitHub stars from real production users.",
+      "launched_at": 1644703012,
+      "score": 1.3686160244946493,
+      "signals": [
+        "github:47357.0"
+      ],
+      "rank": 47357
+    },
+    {
+      "id": 181,
+      "name": "Open WebUI",
+      "tagline": "User-friendly, self-hosted AI interface inspired by ChatGPT with full Ollama, RAG, and pipeline support.",
+      "url": "https://github.com/open-webui/open-webui",
+      "emoji": "💬",
+      "category": "Chat & Assistants",
+      "why_it_matters": "The gold standard private web UI for teams and power users seeking ChatGPT features without data leakage.",
+      "launched_at": 1793192022,
+      "score": 6024.696707451375,
+      "signals": [
+        "github:66000.0"
+      ],
+      "rank": 157245
+    },
+    {
+      "id": 467,
+      "name": "LLamaSharp",
+      "tagline": "A C#/.NET library to run LLM (🦙LLaMA/LLaVA) on your local device efficiently.",
+      "url": "https://scisharp.github.io/LLamaSharp",
       "emoji": null,
       "category": "Chat & Assistants",
-      "why_it_matters": "Battle-tested in the open — 42.2K GitHub stars from real production users.",
-      "launched_at": 1678105335,
-      "score": 1.6549633912409198,
+      "why_it_matters": "Battle-tested in the open — 3.8K GitHub stars from real production users.",
+      "launched_at": 1683655401,
+      "score": 0.15896373856139498,
       "signals": [
-        "github:42196.0"
+        "github:3820.0"
       ],
-      "rank": 42196
+      "rank": 3820
+    },
+    {
+      "id": 429,
+      "name": "meetily",
+      "tagline": "Privacy first AI meeting note taker. Download Free and open source granola, otter ai, fireflies alternative. Parakeet / Whisper live transcription, on-device speaker diarization, built on Rust. 100%…",
+      "url": "https://meetily.ai/",
+      "emoji": null,
+      "category": "Productivity",
+      "why_it_matters": "Battle-tested in the open — 32.3K GitHub stars from real production users.",
+      "launched_at": 1735217534,
+      "score": 2.8805677876937335,
+      "signals": [
+        "github:32316.0"
+      ],
+      "rank": 32316
+    },
+    {
+      "id": 106,
+      "name": "codex with chatgpt",
+      "tagline": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
+      "url": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+      "emoji": null,
+      "category": "Chat & Assistants",
+      "why_it_matters": "Battle-tested in the open — 7.6K GitHub stars from real production users.",
+      "launched_at": 1787921844,
+      "score": 11.579326841039888,
+      "signals": [
+        "github:7583.0"
+      ],
+      "rank": 7583
     },
     {
       "id": 427,
@@ -1815,19 +1725,94 @@
       "rank": 38716
     },
     {
-      "id": 472,
-      "name": "maid",
-      "tagline": "Maid is a free and open source application for interfacing with llama.cpp models locally, and with Anthropic, DeepSeek, Ollama, Mistral and OpenAI models remotely.",
-      "url": "https://github.com/Mobile-Artificial-Intelligence/maid",
+      "id": 549,
+      "name": "docling",
+      "tagline": "Get your documents ready for gen AI",
+      "url": "https://docling-project.github.io/docling",
+      "emoji": null,
+      "category": "Productivity",
+      "why_it_matters": "Battle-tested in the open — 69.9K GitHub stars from real production users.",
+      "launched_at": 1720511426,
+      "score": 4.751212412695367,
+      "signals": [
+        "github:69861.0"
+      ],
+      "rank": 69861
+    },
+    {
+      "id": 191,
+      "name": "Mem0",
+      "tagline": "The intelligent memory layer for AI assistants and autonomous agents, adapting dynamically across conversations.",
+      "url": "https://github.com/mem0ai/mem0",
+      "emoji": "🧠",
+      "category": "Productivity",
+      "why_it_matters": "Solves context amnesia by providing persistent, adaptive personal memory graph storage for AI agents.",
+      "launched_at": 1793192022,
+      "score": 2282.0820861558236,
+      "signals": [
+        "github:25000.0"
+      ],
+      "rank": 68095
+    },
+    {
+      "id": 426,
+      "name": "chatbox",
+      "tagline": "Powerful AI Client",
+      "url": "https://chatboxai.app/",
       "emoji": null,
       "category": "Chat & Assistants",
-      "why_it_matters": "Battle-tested in the open — 2.7K GitHub stars from real production users.",
-      "launched_at": 1697510611,
-      "score": 0.1342681298514862,
+      "why_it_matters": "Battle-tested in the open — 42.2K GitHub stars from real production users.",
+      "launched_at": 1678105335,
+      "score": 1.6549633912409198,
       "signals": [
-        "github:2744.0"
+        "github:42196.0"
       ],
-      "rank": 2744
+      "rank": 42196
+    },
+    {
+      "id": 183,
+      "name": "AnythingLLM",
+      "tagline": "The all-in-one desktop AI application for RAG, enterprise documents, workspaces, and multi-user access.",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "emoji": "📚",
+      "category": "Chat & Assistants",
+      "why_it_matters": "Turn any document, PDF, or GitHub repository into an interactive AI knowledge base with zero configuration.",
+      "launched_at": 1793105622,
+      "score": 1826.0009253994115,
+      "signals": [
+        "github:32000.0"
+      ],
+      "rank": 67747
+    },
+    {
+      "id": 182,
+      "name": "Jan",
+      "tagline": "100% offline, privacy-first open-source desktop ChatGPT alternative running local models on Mac, Windows, and Linux.",
+      "url": "https://github.com/janhq/jan",
+      "emoji": "🤖",
+      "category": "Chat & Assistants",
+      "why_it_matters": "Completely air-gapped desktop assistant giving users sovereign local intelligence on consumer laptops.",
+      "launched_at": 1793105622,
+      "score": 1483.6257518870218,
+      "signals": [
+        "github:26000.0"
+      ],
+      "rank": 26000
+    },
+    {
+      "id": 545,
+      "name": "memobase",
+      "tagline": "User Profile-Based Long-Term Memory for AI Chatbot Applications.",
+      "url": "https://github.com/memodb-io/memobase",
+      "emoji": null,
+      "category": "Chat & Assistants",
+      "why_it_matters": "Battle-tested in the open — 2.9K GitHub stars from real production users.",
+      "launched_at": 1725333653,
+      "score": 0.21721947493233484,
+      "signals": [
+        "github:2942.0"
+      ],
+      "rank": 2942
     },
     {
       "id": 577,
@@ -1845,19 +1830,34 @@
       "rank": 35199
     },
     {
-      "id": 182,
-      "name": "Jan",
-      "tagline": "100% offline, privacy-first open-source desktop ChatGPT alternative running local models on Mac, Windows, and Linux.",
-      "url": "https://github.com/janhq/jan",
-      "emoji": "🤖",
+      "id": 619,
+      "name": "LLaVA",
+      "tagline": "[NeurIPS'23 Oral] Visual Instruction Tuning (LLaVA) built towards GPT-4V level capabilities and beyond.",
+      "url": "https://github.com/haotian-liu/LLaVA",
+      "emoji": null,
       "category": "Chat & Assistants",
-      "why_it_matters": "Completely air-gapped desktop assistant giving users sovereign local intelligence on consumer laptops.",
-      "launched_at": 1793105622,
-      "score": 1483.6257518870218,
+      "why_it_matters": "Battle-tested in the open — 25.1K GitHub stars from real production users.",
+      "launched_at": 1681747991,
+      "score": 1.0222629264090424,
       "signals": [
-        "github:26000.0"
+        "github:25079.0"
       ],
-      "rank": 26000
+      "rank": 25079
+    },
+    {
+      "id": 472,
+      "name": "maid",
+      "tagline": "Maid is a free and open source application for interfacing with llama.cpp models locally, and with Anthropic, DeepSeek, Ollama, Mistral and OpenAI models remotely.",
+      "url": "https://github.com/Mobile-Artificial-Intelligence/maid",
+      "emoji": null,
+      "category": "Chat & Assistants",
+      "why_it_matters": "Battle-tested in the open — 2.7K GitHub stars from real production users.",
+      "launched_at": 1697510611,
+      "score": 0.1342681298514862,
+      "signals": [
+        "github:2744.0"
+      ],
+      "rank": 2744
     },
     {
       "id": 492,
@@ -1890,111 +1890,6 @@
       "rank": 1881
     },
     {
-      "id": 570,
-      "name": "pdfx",
-      "tagline": "A free-floating 2D Canvas for processing multiple PDF files simultaneously",
-      "url": "https://pdfx.zip/",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Battle-tested in the open — 1.1K GitHub stars from real production users.",
-      "launched_at": 1782304476,
-      "score": 0.708137162797287,
-      "signals": [
-        "github:1085.0"
-      ],
-      "rank": 1085
-    },
-    {
-      "id": 358,
-      "name": "xerj",
-      "tagline": "AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory…",
-      "url": "https://xerj.org/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 17.6K GitHub stars from real production users.",
-      "launched_at": 1782793965,
-      "score": 12.152387847351227,
-      "signals": [
-        "github:17636.0"
-      ],
-      "rank": 17636
-    },
-    {
-      "id": 535,
-      "name": "memvid",
-      "tagline": "Memory layer for AI Agents. Replace complex RAG pipelines with a serverless, single-file memory layer. Give your agents instant retrieval and long-term memory.",
-      "url": "https://www.memvid.com/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 17.3K GitHub stars from real production users.",
-      "launched_at": 1748361668,
-      "score": 2.099702026373547,
-      "signals": [
-        "github:17321.0"
-      ],
-      "rank": 17321
-    },
-    {
-      "id": 351,
-      "name": "crawl4ai",
-      "tagline": "Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key. Join our Discord https://discord.gg/VuxzM8…",
-      "url": "https://crawl4ai.com/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 86.6K GitHub stars from real production users.",
-      "launched_at": 1715248130,
-      "score": 5.41568052904916,
-      "signals": [
-        "github:86583.0"
-      ],
-      "rank": 86583
-    },
-    {
-      "id": 565,
-      "name": "pdf craft",
-      "tagline": "PDF craft can convert PDF files into various other formats. This project will focus on processing PDF files of scanned books.",
-      "url": "https://pdfcraft.ai/",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Battle-tested in the open — 6.5K GitHub stars from real production users.",
-      "launched_at": 1739340659,
-      "score": 0.6296336604957965,
-      "signals": [
-        "github:6467.0"
-      ],
-      "rank": 6467
-    },
-    {
-      "id": 349,
-      "name": "Scrapling",
-      "tagline": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tric…",
-      "url": "https://scrapling.readthedocs.io/en/latest/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 90.4K GitHub stars from real production users.",
-      "launched_at": 1728851393,
-      "score": 7.113464251510154,
-      "signals": [
-        "github:90398.0"
-      ],
-      "rank": 90398
-    },
-    {
-      "id": 557,
-      "name": "docstrange",
-      "tagline": "Extract and convert data from any document, images, pdfs, word doc, ppt or URL into multiple formats (Markdown, JSON, CSV, HTML) with intelligent structured data extraction and advanced OCR.",
-      "url": "https://docstrange.nanonets.com/",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Battle-tested in the open — 1.6K GitHub stars from real production users.",
-      "launched_at": 1753952759,
-      "score": 0.22443525079998866,
-      "signals": [
-        "github:1579.0"
-      ],
-      "rank": 1579
-    },
-    {
       "id": 562,
       "name": "pdf inspector",
       "tagline": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
@@ -2008,21 +1903,6 @@
         "github:19784.0"
       ],
       "rank": 19784
-    },
-    {
-      "id": 564,
-      "name": "Dolphin",
-      "tagline": "The official repo for “Dolphin: Document Image Parsing via Heterogeneous Anchor Prompting”, ACL, 2025.",
-      "url": "https://github.com/bytedance/Dolphin",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Battle-tested in the open — 9.1K GitHub stars from real production users.",
-      "launched_at": 1747128019,
-      "score": 1.0639198703608959,
-      "signals": [
-        "github:9066.0"
-      ],
-      "rank": 9066
     },
     {
       "id": 561,
@@ -2040,94 +1920,94 @@
       "rank": 30120
     },
     {
-      "id": 101,
-      "name": "REA (Reverse Engineer Anything)",
-      "tagline": "Decompile, analyze binaries, extract managed artifacts, and inspect runtime evidence for AI coding agents.",
-      "url": "https://github.com/morluto/rea",
-      "emoji": "🔬",
+      "id": 530,
+      "name": "meilisearch",
+      "tagline": "A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.",
+      "url": "https://www.meilisearch.com/",
+      "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Massive industry-standard agentic reverse-engineering harness with over 380k+ stars across global AI developer teams.",
-      "launched_at": 1793278422,
-      "score": 76290.7800976939,
+      "why_it_matters": "Battle-tested in the open — 59.7K GitHub stars from real production users.",
+      "launched_at": 1524483928,
+      "score": 0.8475821505407901,
       "signals": [
-        "github:382000.0"
+        "github:59718.0"
       ],
-      "rank": 410411
+      "rank": 59718
     },
     {
-      "id": 188,
-      "name": "RAGFlow",
-      "tagline": "Open-source RAG engine based on deep document understanding and multi-structured document parsing.",
-      "url": "https://github.com/infiniflow/ragflow",
-      "emoji": "📑",
+      "id": 535,
+      "name": "memvid",
+      "tagline": "Memory layer for AI Agents. Replace complex RAG pipelines with a serverless, single-file memory layer. Give your agents instant retrieval and long-term memory.",
+      "url": "https://www.memvid.com/",
+      "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Eliminates RAG hallucinations through OCR-level document layout analysis of complex tables and diagrams.",
-      "launched_at": 1793192022,
-      "score": 2555.9319364945227,
+      "why_it_matters": "Battle-tested in the open — 17.3K GitHub stars from real production users.",
+      "launched_at": 1748361668,
+      "score": 2.099702026373547,
       "signals": [
-        "github:28000.0"
+        "github:17321.0"
       ],
-      "rank": 93184
+      "rank": 17321
     },
     {
-      "id": 189,
-      "name": "Qdrant",
-      "tagline": "Vector similarity search engine and vector database written in Rust with extended payload filtering.",
-      "url": "https://github.com/qdrant/qdrant",
-      "emoji": "🔎",
+      "id": 349,
+      "name": "Scrapling",
+      "tagline": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tric…",
+      "url": "https://scrapling.readthedocs.io/en/latest/",
+      "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Ultra-fast production vector database powering enterprise semantic search and recommendation systems.",
-      "launched_at": 1793019222,
-      "score": 896.4379387048182,
+      "why_it_matters": "Battle-tested in the open — 90.4K GitHub stars from real production users.",
+      "launched_at": 1728851393,
+      "score": 7.113464251510154,
       "signals": [
-        "github:22000.0"
+        "github:90398.0"
       ],
-      "rank": 35333
+      "rank": 90398
     },
     {
-      "id": 550,
-      "name": "unstructured",
-      "tagline": "Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models. Visit our website to…",
-      "url": "https://www.unstructured.io/",
+      "id": 565,
+      "name": "pdf craft",
+      "tagline": "PDF craft can convert PDF files into various other formats. This project will focus on processing PDF files of scanned books.",
+      "url": "https://pdfcraft.ai/",
       "emoji": null,
       "category": "Productivity",
-      "why_it_matters": "Battle-tested in the open — 15.6K GitHub stars from real production users.",
-      "launched_at": 1664229221,
-      "score": 0.5353346912582423,
+      "why_it_matters": "Battle-tested in the open — 6.5K GitHub stars from real production users.",
+      "launched_at": 1739340659,
+      "score": 0.6296336604957965,
       "signals": [
-        "github:15644.0"
+        "github:6467.0"
       ],
-      "rank": 15644
+      "rank": 6467
     },
     {
-      "id": 553,
-      "name": "llama cloud services",
-      "tagline": "Knowledge Agents and Management in the Cloud",
-      "url": "https://cloud.llamaindex.ai/",
+      "id": 358,
+      "name": "xerj",
+      "tagline": "AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory…",
+      "url": "https://xerj.org/",
       "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": "Battle-tested in the open — 4.3K GitHub stars from real production users.",
-      "launched_at": 1706725987,
-      "score": 0.23582452419134328,
+      "category": "Research & Data",
+      "why_it_matters": "Battle-tested in the open — 17.6K GitHub stars from real production users.",
+      "launched_at": 1782793965,
+      "score": 12.152387847351227,
       "signals": [
-        "github:4269.0"
+        "github:17636.0"
       ],
-      "rank": 4269
+      "rank": 17636
     },
     {
-      "id": 569,
-      "name": "pdf oxide",
-      "tagline": "The fastest PDF library for Python and Rust. Text extraction, image extraction, markdown conversion, PDF creation & editing. 0.8ms mean, 5× faster than industry leaders, 100% pass rate on 3,830 PDFs.…",
-      "url": "https://oxide.fyi/",
+      "id": 557,
+      "name": "docstrange",
+      "tagline": "Extract and convert data from any document, images, pdfs, word doc, ppt or URL into multiple formats (Markdown, JSON, CSV, HTML) with intelligent structured data extraction and advanced OCR.",
+      "url": "https://docstrange.nanonets.com/",
       "emoji": null,
       "category": "Productivity",
-      "why_it_matters": "Battle-tested in the open — 1.2K GitHub stars from real production users.",
-      "launched_at": 1762383386,
-      "score": 0.2181790155004765,
+      "why_it_matters": "Battle-tested in the open — 1.6K GitHub stars from real production users.",
+      "launched_at": 1753952759,
+      "score": 0.22443525079998866,
       "signals": [
-        "github:1150.0"
+        "github:1579.0"
       ],
-      "rank": 1150
+      "rank": 1579
     },
     {
       "id": 373,
@@ -2145,49 +2025,34 @@
       "rank": 196933
     },
     {
-      "id": 420,
-      "name": "academic research skills",
-      "tagline": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
-      "url": "https://buymeacoffee.com/crucify020v",
+      "id": 570,
+      "name": "pdfx",
+      "tagline": "A free-floating 2D Canvas for processing multiple PDF files simultaneously",
+      "url": "https://pdfx.zip/",
       "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 54.6K GitHub stars from real production users.",
-      "launched_at": 1772087461,
-      "score": 16.26677521871599,
-      "signals": [
-        "github:54629.0"
-      ],
-      "rank": 54629
-    },
-    {
-      "id": 190,
-      "name": "Fabric",
-      "tagline": "Open-source framework for augmenting humans using AI prompts, modular patterns, and terminal pipelines.",
-      "url": "https://github.com/danielmiessler/fabric",
-      "emoji": "🧵",
       "category": "Productivity",
-      "why_it_matters": "Community-driven prompt architecture turning routine cognitive tasks into reusable terminal commands.",
-      "launched_at": 1793105622,
-      "score": 1569.2195452651192,
+      "why_it_matters": "Battle-tested in the open — 1.1K GitHub stars from real production users.",
+      "launched_at": 1782304476,
+      "score": 0.708137162797287,
       "signals": [
-        "github:27500.0"
+        "github:1085.0"
       ],
-      "rank": 27500
+      "rank": 1085
     },
     {
-      "id": 529,
-      "name": "serviette",
-      "tagline": "A no-code RAG server that keeps answers in sync with your documents. Works with 8 vector databases. Built on Pathway.",
-      "url": "https://github.com/pathwaycom/serviette/blob/main/docs/README.md",
+      "id": 564,
+      "name": "Dolphin",
+      "tagline": "The official repo for “Dolphin: Document Image Parsing via Heterogeneous Anchor Prompting”, ACL, 2025.",
+      "url": "https://github.com/bytedance/Dolphin",
       "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 58.8K GitHub stars from real production users.",
-      "launched_at": 1689756217,
-      "score": 2.6186230173183693,
+      "category": "Productivity",
+      "why_it_matters": "Battle-tested in the open — 9.1K GitHub stars from real production users.",
+      "launched_at": 1747128019,
+      "score": 1.0639198703608959,
       "signals": [
-        "github:58752.0"
+        "github:9066.0"
       ],
-      "rank": 58752
+      "rank": 9066
     },
     {
       "id": 171,
@@ -2203,21 +2068,6 @@
         "github:96053.0"
       ],
       "rank": 96053
-    },
-    {
-      "id": 530,
-      "name": "meilisearch",
-      "tagline": "A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.",
-      "url": "https://www.meilisearch.com/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 59.7K GitHub stars from real production users.",
-      "launched_at": 1524483928,
-      "score": 0.8475821505407901,
-      "signals": [
-        "github:59718.0"
-      ],
-      "rank": 59718
     },
     {
       "id": 563,
@@ -2250,6 +2100,141 @@
       "rank": 1666
     },
     {
+      "id": 189,
+      "name": "Qdrant",
+      "tagline": "Vector similarity search engine and vector database written in Rust with extended payload filtering.",
+      "url": "https://github.com/qdrant/qdrant",
+      "emoji": "🔎",
+      "category": "Research & Data",
+      "why_it_matters": "Ultra-fast production vector database powering enterprise semantic search and recommendation systems.",
+      "launched_at": 1793019222,
+      "score": 896.4379387048182,
+      "signals": [
+        "github:22000.0"
+      ],
+      "rank": 35333
+    },
+    {
+      "id": 569,
+      "name": "pdf oxide",
+      "tagline": "The fastest PDF library for Python and Rust. Text extraction, image extraction, markdown conversion, PDF creation & editing. 0.8ms mean, 5× faster than industry leaders, 100% pass rate on 3,830 PDFs.…",
+      "url": "https://oxide.fyi/",
+      "emoji": null,
+      "category": "Productivity",
+      "why_it_matters": "Battle-tested in the open — 1.2K GitHub stars from real production users.",
+      "launched_at": 1762383386,
+      "score": 0.2181790155004765,
+      "signals": [
+        "github:1150.0"
+      ],
+      "rank": 1150
+    },
+    {
+      "id": 553,
+      "name": "llama cloud services",
+      "tagline": "Knowledge Agents and Management in the Cloud",
+      "url": "https://cloud.llamaindex.ai/",
+      "emoji": null,
+      "category": "Productivity",
+      "why_it_matters": "Battle-tested in the open — 4.3K GitHub stars from real production users.",
+      "launched_at": 1706725987,
+      "score": 0.23582452419134328,
+      "signals": [
+        "github:4269.0"
+      ],
+      "rank": 4269
+    },
+    {
+      "id": 550,
+      "name": "unstructured",
+      "tagline": "Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models. Visit our website to…",
+      "url": "https://www.unstructured.io/",
+      "emoji": null,
+      "category": "Productivity",
+      "why_it_matters": "Battle-tested in the open — 15.6K GitHub stars from real production users.",
+      "launched_at": 1664229221,
+      "score": 0.5353346912582423,
+      "signals": [
+        "github:15644.0"
+      ],
+      "rank": 15644
+    },
+    {
+      "id": 420,
+      "name": "academic research skills",
+      "tagline": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+      "url": "https://buymeacoffee.com/crucify020v",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Battle-tested in the open — 54.6K GitHub stars from real production users.",
+      "launched_at": 1772087461,
+      "score": 16.26677521871599,
+      "signals": [
+        "github:54629.0"
+      ],
+      "rank": 54629
+    },
+    {
+      "id": 351,
+      "name": "crawl4ai",
+      "tagline": "Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key. Join our Discord https://discord.gg/VuxzM8…",
+      "url": "https://crawl4ai.com/",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Battle-tested in the open — 86.6K GitHub stars from real production users.",
+      "launched_at": 1715248130,
+      "score": 5.41568052904916,
+      "signals": [
+        "github:86583.0"
+      ],
+      "rank": 86583
+    },
+    {
+      "id": 101,
+      "name": "REA (Reverse Engineer Anything)",
+      "tagline": "Decompile, analyze binaries, extract managed artifacts, and inspect runtime evidence for AI coding agents.",
+      "url": "https://github.com/morluto/rea",
+      "emoji": "🔬",
+      "category": "Research & Data",
+      "why_it_matters": "Massive industry-standard agentic reverse-engineering harness with over 380k+ stars across global AI developer teams.",
+      "launched_at": 1793278422,
+      "score": 76290.7800976939,
+      "signals": [
+        "github:382000.0"
+      ],
+      "rank": 410411
+    },
+    {
+      "id": 190,
+      "name": "Fabric",
+      "tagline": "Open-source framework for augmenting humans using AI prompts, modular patterns, and terminal pipelines.",
+      "url": "https://github.com/danielmiessler/fabric",
+      "emoji": "🧵",
+      "category": "Productivity",
+      "why_it_matters": "Community-driven prompt architecture turning routine cognitive tasks into reusable terminal commands.",
+      "launched_at": 1793105622,
+      "score": 1569.2195452651192,
+      "signals": [
+        "github:27500.0"
+      ],
+      "rank": 27500
+    },
+    {
+      "id": 529,
+      "name": "serviette",
+      "tagline": "A no-code RAG server that keeps answers in sync with your documents. Works with 8 vector databases. Built on Pathway.",
+      "url": "https://github.com/pathwaycom/serviette/blob/main/docs/README.md",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Battle-tested in the open — 58.8K GitHub stars from real production users.",
+      "launched_at": 1689756217,
+      "score": 2.6186230173183693,
+      "signals": [
+        "github:58752.0"
+      ],
+      "rank": 58752
+    },
+    {
       "id": 536,
       "name": "weaviate",
       "tagline": "Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a…",
@@ -2263,6 +2248,21 @@
         "github:16930.0"
       ],
       "rank": 16930
+    },
+    {
+      "id": 188,
+      "name": "RAGFlow",
+      "tagline": "Open-source RAG engine based on deep document understanding and multi-structured document parsing.",
+      "url": "https://github.com/infiniflow/ragflow",
+      "emoji": "📑",
+      "category": "Research & Data",
+      "why_it_matters": "Eliminates RAG hallucinations through OCR-level document layout analysis of complex tables and diagrams.",
+      "launched_at": 1793192022,
+      "score": 2555.9319364945227,
+      "signals": [
+        "github:28000.0"
+      ],
+      "rank": 93184
     },
     {
       "id": 543,
@@ -2280,19 +2280,19 @@
       "rank": 4635
     },
     {
-      "id": 510,
-      "name": "easy dataset",
-      "tagline": "A powerful tool for creating datasets for LLM fine-tuning 、RAG and Eval",
-      "url": "https://docs.easy-dataset.com/",
+      "id": 466,
+      "name": "DigUp",
+      "tagline": "Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMind's EmbeddingGemma 2.",
+      "url": "https://digup.arahim.dev/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 15.1K GitHub stars from real production users.",
-      "launched_at": 1741104854,
-      "score": 1.525641940282576,
+      "why_it_matters": "Battle-tested in the open — 6K GitHub stars from real production users.",
+      "launched_at": 1791491871,
+      "score": 33.013842605349424,
       "signals": [
-        "github:15058.0"
+        "github:6029.0"
       ],
-      "rank": 15058
+      "rank": 6029
     },
     {
       "id": 515,
@@ -2310,19 +2310,34 @@
       "rank": 5245
     },
     {
-      "id": 537,
-      "name": "zvec",
-      "tagline": "A lightweight, lightning-fast, in-process vector database",
-      "url": "https://zvec.org/",
+      "id": 544,
+      "name": "LongMemory",
+      "tagline": "Local persistent memory store for LLM applications including claude desktop, github copilot, codex, antigravity, etc.",
+      "url": "https://cavira.app/projects/longmemory",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 16.2K GitHub stars from real production users.",
-      "launched_at": 1764920738,
-      "score": 3.397693889179293,
+      "why_it_matters": "Battle-tested in the open — 4.6K GitHub stars from real production users.",
+      "launched_at": 1760890369,
+      "score": 0.8169138973556039,
       "signals": [
-        "github:16164.0"
+        "github:4556.0"
       ],
-      "rank": 16164
+      "rank": 4556
+    },
+    {
+      "id": 423,
+      "name": "langfuse",
+      "tagline": "🪢 Open source agent evals & observability: Trace, evaluate, and improve LLM applications with one open platform.",
+      "url": "https://langfuse.com/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Battle-tested in the open — 36.8K GitHub stars from real production users.",
+      "launched_at": 1684432029,
+      "score": 1.5425156784346075,
+      "signals": [
+        "github:36753.0"
+      ],
+      "rank": 36753
     },
     {
       "id": 631,
@@ -2338,6 +2353,66 @@
         "github:38300.0"
       ],
       "rank": 38300
+    },
+    {
+      "id": 510,
+      "name": "easy dataset",
+      "tagline": "A powerful tool for creating datasets for LLM fine-tuning 、RAG and Eval",
+      "url": "https://docs.easy-dataset.com/",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Battle-tested in the open — 15.1K GitHub stars from real production users.",
+      "launched_at": 1741104854,
+      "score": 1.525641940282576,
+      "signals": [
+        "github:15058.0"
+      ],
+      "rank": 15058
+    },
+    {
+      "id": 611,
+      "name": "contextgem",
+      "tagline": "Extract structured data and insights from documents using LLMs and decision models",
+      "url": "https://contextgem.shcherbak.ai/",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Battle-tested in the open — 2K GitHub stars from real production users.",
+      "launched_at": 1728678969,
+      "score": 0.15993690889892995,
+      "signals": [
+        "github:2039.0"
+      ],
+      "rank": 2039
+    },
+    {
+      "id": 177,
+      "name": "Ollama",
+      "tagline": "Get up and running with Llama 3, DeepSeek-R1, Mistral, and local LLMs with one command on macOS, Linux, and Windows.",
+      "url": "https://github.com/ollama/ollama",
+      "emoji": "🦙",
+      "category": "Models & Infra",
+      "why_it_matters": "The undisputed runtime for local LLMs, packaging model weights, GPU acceleration, and REST APIs into zero-fuss binaries.",
+      "launched_at": 1793278422,
+      "score": 24964.26050317209,
+      "signals": [
+        "github:125000.0"
+      ],
+      "rank": 185335
+    },
+    {
+      "id": 451,
+      "name": "AI Research SKILLs",
+      "tagline": "Comprehensive open-source library of AI research and engineering skills for any AI model. Package the skills and your claude code/codex/gemini agent will be an AI research agent with full horsepower.…",
+      "url": "https://orchestra-research.com/",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Battle-tested in the open — 14.1K GitHub stars from real production users.",
+      "launched_at": 1762150386,
+      "score": 2.654134878370661,
+      "signals": [
+        "github:14116.0"
+      ],
+      "rank": 14116
     },
     {
       "id": 172,
@@ -2370,49 +2445,19 @@
       "rank": 11789
     },
     {
-      "id": 423,
-      "name": "langfuse",
-      "tagline": "🪢 Open source agent evals & observability: Trace, evaluate, and improve LLM applications with one open platform.",
-      "url": "https://langfuse.com/",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": "Battle-tested in the open — 36.8K GitHub stars from real production users.",
-      "launched_at": 1684432029,
-      "score": 1.5425156784346075,
-      "signals": [
-        "github:36753.0"
-      ],
-      "rank": 36753
-    },
-    {
-      "id": 611,
-      "name": "contextgem",
-      "tagline": "Extract structured data and insights from documents using LLMs and decision models",
-      "url": "https://contextgem.shcherbak.ai/",
+      "id": 537,
+      "name": "zvec",
+      "tagline": "A lightweight, lightning-fast, in-process vector database",
+      "url": "https://zvec.org/",
       "emoji": null,
       "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 2K GitHub stars from real production users.",
-      "launched_at": 1728678969,
-      "score": 0.15993690889892995,
+      "why_it_matters": "Battle-tested in the open — 16.2K GitHub stars from real production users.",
+      "launched_at": 1764920738,
+      "score": 3.397693889179293,
       "signals": [
-        "github:2039.0"
+        "github:16164.0"
       ],
-      "rank": 2039
-    },
-    {
-      "id": 466,
-      "name": "DigUp",
-      "tagline": "Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMind's EmbeddingGemma 2.",
-      "url": "https://digup.arahim.dev/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 6K GitHub stars from real production users.",
-      "launched_at": 1791491871,
-      "score": 33.013842605349424,
-      "signals": [
-        "github:6029.0"
-      ],
-      "rank": 6029
+      "rank": 16164
     },
     {
       "id": 418,
@@ -2430,36 +2475,6 @@
       "rank": 41301
     },
     {
-      "id": 451,
-      "name": "AI Research SKILLs",
-      "tagline": "Comprehensive open-source library of AI research and engineering skills for any AI model. Package the skills and your claude code/codex/gemini agent will be an AI research agent with full horsepower.…",
-      "url": "https://orchestra-research.com/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 14.1K GitHub stars from real production users.",
-      "launched_at": 1762150386,
-      "score": 2.654134878370661,
-      "signals": [
-        "github:14116.0"
-      ],
-      "rank": 14116
-    },
-    {
-      "id": 177,
-      "name": "Ollama",
-      "tagline": "Get up and running with Llama 3, DeepSeek-R1, Mistral, and local LLMs with one command on macOS, Linux, and Windows.",
-      "url": "https://github.com/ollama/ollama",
-      "emoji": "🦙",
-      "category": "Models & Infra",
-      "why_it_matters": "The undisputed runtime for local LLMs, packaging model weights, GPU acceleration, and REST APIs into zero-fuss binaries.",
-      "launched_at": 1793278422,
-      "score": 24964.26050317209,
-      "signals": [
-        "github:125000.0"
-      ],
-      "rank": 185335
-    },
-    {
       "id": 585,
       "name": "mlflow",
       "tagline": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlli…",
@@ -2473,21 +2488,6 @@
         "github:28599.0"
       ],
       "rank": 28599
-    },
-    {
-      "id": 544,
-      "name": "LongMemory",
-      "tagline": "Local persistent memory store for LLM applications including claude desktop, github copilot, codex, antigravity, etc.",
-      "url": "https://cavira.app/projects/longmemory",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 4.6K GitHub stars from real production users.",
-      "launched_at": 1760890369,
-      "score": 0.8169138973556039,
-      "signals": [
-        "github:4556.0"
-      ],
-      "rank": 4556
     },
     {
       "id": 495,
@@ -2505,34 +2505,19 @@
       "rank": 75797
     },
     {
-      "id": 701,
-      "name": "semantica",
-      "tagline": "Graph-Native Infrastructure for Context and Accountable AI Systems",
-      "url": "https://getsemantica.ai/",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": "Battle-tested in the open — 14.3K GitHub stars from real production users.",
-      "launched_at": 1750848060,
-      "score": 1.8611372114363893,
-      "signals": [
-        "github:14341.0"
-      ],
-      "rank": 14341
-    },
-    {
-      "id": 179,
-      "name": "llama.cpp",
-      "tagline": "Pure C/C++ LLM inference engine supporting 4-bit, 5-bit, and 8-bit quantization on CPU and Apple Silicon.",
-      "url": "https://github.com/ggerganov/llama.cpp",
-      "emoji": "🧱",
+      "id": 180,
+      "name": "LM Studio",
+      "tagline": "Discover, download, and run local LLMs offline with an intuitive desktop GUI and local OpenAI-compatible server.",
+      "url": "https://lmstudio.ai",
+      "emoji": "🖥️",
       "category": "Models & Infra",
-      "why_it_matters": "The architectural foundation of consumer LLM inference that created the ubiquitous GGUF quantization ecosystem.",
-      "launched_at": 1793105622,
-      "score": 4251.158404445505,
+      "why_it_matters": "The most polished desktop application for developers to test, benchmark, and serve local open-weight models with zero setup.",
+      "launched_at": 1793192022,
+      "score": 8671.91192739213,
       "signals": [
-        "github:74500.0"
+        "app:95000.0"
       ],
-      "rank": 74500
+      "rank": 95000
     },
     {
       "id": 412,
@@ -2550,19 +2535,34 @@
       "rank": 168348
     },
     {
-      "id": 180,
-      "name": "LM Studio",
-      "tagline": "Discover, download, and run local LLMs offline with an intuitive desktop GUI and local OpenAI-compatible server.",
-      "url": "https://lmstudio.ai",
-      "emoji": "🖥️",
-      "category": "Models & Infra",
-      "why_it_matters": "The most polished desktop application for developers to test, benchmark, and serve local open-weight models with zero setup.",
-      "launched_at": 1793192022,
-      "score": 8671.91192739213,
+      "id": 701,
+      "name": "semantica",
+      "tagline": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+      "url": "https://getsemantica.ai/",
+      "emoji": null,
+      "category": "Research & Data",
+      "why_it_matters": "Battle-tested in the open — 14.3K GitHub stars from real production users.",
+      "launched_at": 1750848060,
+      "score": 1.8611372114363893,
       "signals": [
-        "app:95000.0"
+        "github:14341.0"
       ],
-      "rank": 95000
+      "rank": 14341
+    },
+    {
+      "id": 676,
+      "name": "new api",
+      "tagline": "Open-source AI gateway. Self-hosted LLM gateway with OpenAI-, Claude- and Gemini-compatible APIs, model routing, access control, usage tracking and cost accounting.",
+      "url": "https://www.newapi.ai/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Battle-tested in the open — 51K GitHub stars from real production users.",
+      "launched_at": 1699644816,
+      "score": 2.5659622060017755,
+      "signals": [
+        "github:51042.0"
+      ],
+      "rank": 51042
     },
     {
       "id": 507,
@@ -2610,19 +2610,19 @@
       "rank": 38483
     },
     {
-      "id": 676,
-      "name": "new api",
-      "tagline": "Open-source AI gateway. Self-hosted LLM gateway with OpenAI-, Claude- and Gemini-compatible APIs, model routing, access control, usage tracking and cost accounting.",
-      "url": "https://www.newapi.ai/",
-      "emoji": null,
+      "id": 179,
+      "name": "llama.cpp",
+      "tagline": "Pure C/C++ LLM inference engine supporting 4-bit, 5-bit, and 8-bit quantization on CPU and Apple Silicon.",
+      "url": "https://github.com/ggerganov/llama.cpp",
+      "emoji": "🧱",
       "category": "Models & Infra",
-      "why_it_matters": "Battle-tested in the open — 51K GitHub stars from real production users.",
-      "launched_at": 1699644816,
-      "score": 2.5659622060017755,
+      "why_it_matters": "The architectural foundation of consumer LLM inference that created the ubiquitous GGUF quantization ecosystem.",
+      "launched_at": 1793105622,
+      "score": 4251.158404445505,
       "signals": [
-        "github:51042.0"
+        "github:74500.0"
       ],
-      "rank": 51042
+      "rank": 74500
     },
     {
       "id": 531,
@@ -2655,36 +2655,6 @@
       "rank": 12574
     },
     {
-      "id": 632,
-      "name": "runanywhere sdks",
-      "tagline": "Production ready toolkit to run AI locally",
-      "url": "https://www.runanywhere.ai/",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": "Battle-tested in the open — 10.3K GitHub stars from real production users.",
-      "launched_at": 1753147414,
-      "score": 1.4337700829541136,
-      "signals": [
-        "github:10335.0"
-      ],
-      "rank": 10335
-    },
-    {
-      "id": 453,
-      "name": "LMCache",
-      "tagline": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
-      "url": "https://lmcache.ai/",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": "Battle-tested in the open — 12.2K GitHub stars from real production users.",
-      "launched_at": 1716930364,
-      "score": 0.7857336290661328,
-      "signals": [
-        "github:12238.0"
-      ],
-      "rank": 12238
-    },
-    {
       "id": 511,
       "name": "axolotl",
       "tagline": "Go ahead and axolotl questions",
@@ -2698,36 +2668,6 @@
         "github:12649.0"
       ],
       "rank": 12649
-    },
-    {
-      "id": 586,
-      "name": "llm action",
-      "tagline": "The purpose of this project is to share the technical principles related to large models and practical experience (large model engineering, large model application landing)",
-      "url": "https://www.zhihu.com/column/c_1456193767213043713",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": "Battle-tested in the open — 25.2K GitHub stars from real production users.",
-      "launched_at": 1684819756,
-      "score": 1.0636066043406172,
-      "signals": [
-        "github:25234.0"
-      ],
-      "rank": 25234
-    },
-    {
-      "id": 654,
-      "name": "openvino",
-      "tagline": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
-      "url": "https://docs.openvino.ai/",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": "Battle-tested in the open — 11.1K GitHub stars from real production users.",
-      "launched_at": 1539600880,
-      "score": 0.1686882907242569,
-      "signals": [
-        "github:11088.0"
-      ],
-      "rank": 11088
     },
     {
       "id": 538,
@@ -2745,6 +2685,51 @@
       "rank": 13330
     },
     {
+      "id": 439,
+      "name": "Soup",
+      "tagline": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
+      "url": "https://trysoup.dev/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Battle-tested in the open — 9.8K GitHub stars from real production users.",
+      "launched_at": 1771585501,
+      "score": 2.8413998474503384,
+      "signals": [
+        "github:9813.0"
+      ],
+      "rank": 9813
+    },
+    {
+      "id": 453,
+      "name": "LMCache",
+      "tagline": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
+      "url": "https://lmcache.ai/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Battle-tested in the open — 12.2K GitHub stars from real production users.",
+      "launched_at": 1716930364,
+      "score": 0.7857336290661328,
+      "signals": [
+        "github:12238.0"
+      ],
+      "rank": 12238
+    },
+    {
+      "id": 654,
+      "name": "openvino",
+      "tagline": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "url": "https://docs.openvino.ai/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Battle-tested in the open — 11.1K GitHub stars from real production users.",
+      "launched_at": 1539600880,
+      "score": 0.1686882907242569,
+      "signals": [
+        "github:11088.0"
+      ],
+      "rank": 11088
+    },
+    {
       "id": 517,
       "name": "ms swift",
       "tagline": "Use PEFT or Full-parameter to CPT/SFT/DPO/GRPO 600+ LLMs (Qwen3.8, DeepSeek-V4, GLM-5.1, InternLM3, Llama4, ...) and 300+ MLLMs (Qwen3-VL, Qwen3-Omni, InternVL3.5, Ovis2.5, GLM5.3, Gemma4, Llava, Phi…",
@@ -2760,19 +2745,34 @@
       "rank": 15998
     },
     {
-      "id": 497,
-      "name": "Chinese LLaMA Alpaca",
-      "tagline": "Chinese LLaMA&Alpaca Large Language Model + Local CPU/GPU Training Deployment (Chinese LLaMA & Alpaca LLMs)",
-      "url": "https://github.com/ymcui/Chinese-LLaMA-Alpaca/wiki",
+      "id": 586,
+      "name": "llm action",
+      "tagline": "The purpose of this project is to share the technical principles related to large models and practical experience (large model engineering, large model application landing)",
+      "url": "https://www.zhihu.com/column/c_1456193767213043713",
       "emoji": null,
       "category": "Models & Infra",
-      "why_it_matters": "Battle-tested in the open — 18.9K GitHub stars from real production users.",
-      "launched_at": 1678878579,
-      "score": 0.7481952084183223,
+      "why_it_matters": "Battle-tested in the open — 25.2K GitHub stars from real production users.",
+      "launched_at": 1684819756,
+      "score": 1.0636066043406172,
       "signals": [
-        "github:18923.0"
+        "github:25234.0"
       ],
-      "rank": 18923
+      "rank": 25234
+    },
+    {
+      "id": 632,
+      "name": "runanywhere sdks",
+      "tagline": "Production ready toolkit to run AI locally",
+      "url": "https://www.runanywhere.ai/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": "Battle-tested in the open — 10.3K GitHub stars from real production users.",
+      "launched_at": 1753147414,
+      "score": 1.4337700829541136,
+      "signals": [
+        "github:10335.0"
+      ],
+      "rank": 10335
     },
     {
       "id": 509,
@@ -2805,19 +2805,19 @@
       "rank": 12074
     },
     {
-      "id": 439,
-      "name": "Soup",
-      "tagline": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
-      "url": "https://trysoup.dev/",
+      "id": 497,
+      "name": "Chinese LLaMA Alpaca",
+      "tagline": "Chinese LLaMA&Alpaca Large Language Model + Local CPU/GPU Training Deployment (Chinese LLaMA & Alpaca LLMs)",
+      "url": "https://github.com/ymcui/Chinese-LLaMA-Alpaca/wiki",
       "emoji": null,
       "category": "Models & Infra",
-      "why_it_matters": "Battle-tested in the open — 9.8K GitHub stars from real production users.",
-      "launched_at": 1771585501,
-      "score": 2.8413998474503384,
+      "why_it_matters": "Battle-tested in the open — 18.9K GitHub stars from real production users.",
+      "launched_at": 1678878579,
+      "score": 0.7481952084183223,
       "signals": [
-        "github:9813.0"
+        "github:18923.0"
       ],
-      "rank": 9813
+      "rank": 18923
     }
   ]
 }

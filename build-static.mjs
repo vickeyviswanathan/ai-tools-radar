@@ -9,6 +9,7 @@ import { publishSeoArtifacts, normalizeWhyItMatters } from "./src/seo-publish.mj
 import { getLiveCyberNews } from "./src/news-sync.mjs";
 import { validateAndSanitizeScams, generateScamsHtml } from "./src/scam-guard.mjs";
 import { REALITIES_DATA } from "./src/realities-data.mjs";
+import { generateDailyBriefing } from "./src/newsletter-generator.mjs";
 
 async function build() {
   if (process.env.FULL_INGEST === "true" || process.env.GITHUB_EVENT_NAME === "schedule") {
@@ -196,6 +197,8 @@ async function build() {
   updateThreatsInHtml(threatCategories, liveThreats);
   updateScamsInHtml(sanitizedScams);
   updateRealitiesInHtml(REALITIES_DATA);
+  const briefing = generateDailyBriefing();
+  updateBriefingInHtml(briefing);
 
   publishSeoArtifacts(output.tools, output.updatedAt);
   generateLlmsTxt(output.tools, sanitizedScams);
@@ -391,6 +394,13 @@ function updateRealitiesInHtml(realities) {
     html = html.replace(scriptRegex, `const REALITIES_DATA = ${JSON.stringify(realities, null, 2)};\n\nlet realitySearchQ`);
   }
 
+  writeFileSync(indexPath, html, "utf8");
+}
+
+function updateBriefingInHtml(briefing) {
+  const indexPath = "./public/index.html";
+  let html = readFileSync(indexPath, "utf8");
+  html = html.replace(/let BRIEFING_DATA = (?:\{[\s\S]*?\}|null);/, `let BRIEFING_DATA = ${JSON.stringify(briefing)};`);
   writeFileSync(indexPath, html, "utf8");
 }
 
