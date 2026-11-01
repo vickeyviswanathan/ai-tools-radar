@@ -230,13 +230,19 @@ export async function getLiveCyberRss() {
   console.log("[LiveRSS] Fetching live feeds from Reuters, ANI, Moneycontrol, and primary cyber desks...");
 
   const [indiaItems, cryptoItems, reutersItems] = await Promise.all([
-    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+breach+OR+"data+leak"+OR+fraud)+AND+(bank+OR+RBI+OR+NBFC+OR+SBI+OR+UPI)+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
+    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+breach+OR+"data+leak"+OR+"cyber+fraud")+AND+(India+OR+RBI+OR+NBFC+OR+SBI+OR+"UPI+fraud"+OR+"cybercrime")+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(Binance+OR+crypto+OR+bitcoin)+AND+(hack+OR+freeze+OR+heist+OR+stolen)+when:7d&hl=en-US&gl=US&ceid=US:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+ransomware+OR+breach)+source:Reuters+when:7d&hl=en-US&gl=US&ceid=US:en')
   ]);
 
   const rawCandidatePool = [
-    ...indiaItems.map(i => ({ ...i, defaultCategory: "india-bfsi" })),
+    ...indiaItems.map(i => {
+      const srcL = (i.source || "").toLowerCase();
+      const titleL = (i.title || "").toLowerCase();
+      // If source is upi.com or clearly foreign / medical fraud, route to global
+      const isForeign = srcL === "upi" || srcL.includes("united press") || srcL.includes("chosun") || titleL.includes("korean") || titleL.includes("calif") || titleL.includes("medicare");
+      return { ...i, defaultCategory: isForeign ? "global-ransomware" : "india-bfsi" };
+    }),
     ...cryptoItems.map(i => ({ ...i, defaultCategory: "crypto-heists" })),
     ...reutersItems.map(i => ({ ...i, defaultCategory: "global-ransomware" }))
   ];
@@ -290,7 +296,7 @@ export async function getLiveCyberRss() {
       severity = "critical";
     }
 
-    let impactBadge = "🚨 Breaking Wire";
+    let impactBadge = "🚨 Urgent Alert";
     if (lower.includes("binance") || lower.includes("6.3") || lower.includes("6bn")) {
       impactBadge = "💰 $6.3B Record Hack";
     } else if (lower.includes("freeze") || lower.includes("frozen") || lower.includes("3.2")) {
@@ -307,21 +313,15 @@ export async function getLiveCyberRss() {
       impactBadge = "🚨 Reuters Exclusive";
     }
 
-    // Synthesize multi-angle coverage
-    const otherSources = Array.from(cluster.relatedSources).filter(s => s !== item.source);
-    const crossWireNote = otherSources.length > 0 
-      ? ` Verified across multiple open wires including: ${otherSources.slice(0, 4).join(", ")}.`
-      : "";
-
-    // Build bundled sub-angles if available
-    let synthesizedSummary = item.title + ".";
+    // Only build sub-angles if there are actually distinct developments
+    let synthesizedSummary = "";
     if (cluster.articles.length > 1) {
       const distinctTitles = cluster.articles
         .map(a => a.title)
         .filter(t => t !== item.title && t.length > 25)
         .slice(0, 2);
       if (distinctTitles.length > 0) {
-        synthesizedSummary += " Key developments: " + distinctTitles.join("; ") + ".";
+        synthesizedSummary = "Key updates: " + distinctTitles.join("; ") + ".";
       }
     }
 
@@ -335,22 +335,22 @@ export async function getLiveCyberRss() {
       title: item.title,
       sourceName: item.source,
       sourceUrl: item.link,
-      provenanceBadge: item.source.toLowerCase().includes("reuters") ? "🚨 Reuters Wire" :
-                       item.source.toLowerCase().includes("ani") ? "🇮🇳 ANI Wire" :
-                       category === "india-bfsi" ? "🏦 BFSI Wire" :
-                       category === "crypto-heists" ? "⛓️ Crypto Wire" : "🏛️ Statutory Wire",
+      provenanceBadge: item.source.toLowerCase().includes("reuters") ? "🚨 Reuters Report" :
+                       item.source.toLowerCase().includes("ani") ? "🇮🇳 ANI Report" :
+                       category === "india-bfsi" ? "🏦 Banking & Finance" :
+                       category === "crypto-heists" ? "⛓️ Crypto & Web3" : "🌐 Global Security",
       badgeType: item.source.toLowerCase().includes("reuters") ? "statutory" :
                  category === "india-bfsi" ? "regulatory" :
                  category === "crypto-heists" ? "onchain" : "statutory",
-      ref: `${item.source} Live Wire`,
+      ref: item.source,
       date: formatDate(item.pubDate),
       timeAgo: timeAgo(item.pubDate),
-      entities: category === "india-bfsi" ? "Indian Banking Infrastructure & NBFCs" :
-                category === "crypto-heists" ? "Binance, Global Exchanges & Digital Assets" :
-                "Global Enterprise Infrastructure & Critical Systems",
-      incident: synthesizedSummary + crossWireNote,
-      rootCause: "Verified reporting confirmed by official news wires and security researchers.",
-      consequence: `Read open-access reporting on ${item.source}.${crossWireNote}`
+      entities: category === "india-bfsi" ? "Banking & Financial Services" :
+                category === "crypto-heists" ? "Crypto & Digital Assets" :
+                "Enterprise & Public Infrastructure",
+      incident: synthesizedSummary,
+      rootCause: "Verified reporting confirmed by primary news desks and security researchers.",
+      consequence: `Read reporting on ${item.source}.`
     });
   }
 
@@ -368,7 +368,7 @@ export async function getLiveCyberRss() {
     { id: "all", label: "🔥 All Cybersecurity News", count: finalThreats.length },
     { id: "india-bfsi", label: "🇮🇳 India, Banks & NBFCs", count: indiaSelected.length },
     { id: "crypto-heists", label: "🌐 Crypto & Exchange Heists", count: cryptoSelected.length },
-    { id: "global-ransomware", label: "🚨 Reuters & Global Wire", count: globalSelected.length }
+    { id: "global-ransomware", label: "🌐 Global Cyber Defense", count: globalSelected.length }
   ];
 
   console.log(`[LiveRSS] Final curated feed: ${finalThreats.length} unique incidents (India: ${indiaSelected.length}, Crypto: ${cryptoSelected.length}, Global: ${globalSelected.length}). All paywalls stripped.`);

@@ -156,6 +156,15 @@ function updateThreatsInHtml(categories, threats) {
       const severityClass = item.severity === "critical" ? "threat-sev-critical" : item.severity === "high" ? "threat-sev-high" : "threat-sev-medium";
       const impactBadgeHtml = item.impactBadge ? `<span class="threat-badge threat-badge-impact">${esc(item.impactBadge)}</span>` : "";
 
+      const incidentHtml = (item.incident && item.incident.trim() && item.incident.trim() !== item.title.trim() + "." && !item.incident.startsWith(item.title))
+        ? `      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Key Context</strong>
+          ${esc(item.incident)}
+        </div>
+      </div>`
+        : "";
+
       return `    <article class="threat-card" data-category="${esc(item.category)}" id="threat-${esc(item.id)}">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -175,22 +184,14 @@ function updateThreatsInHtml(categories, threats) {
       </h3>
 
       <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector / Domain:</span>
+        <span class="threat-entity-label">Sector:</span>
         <span class="threat-entity-value">${esc(item.entities)}</span>
       </div>
-
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Wire Report Summary</strong>
-          ${esc(item.incident)}
-        </div>
-      </div>
-
+${incidentHtml}
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
           <span class="threat-source-name">${esc(item.sourceName)}</span>
-          <span class="threat-ref">${esc(item.ref)}</span>
         </div>
         <a class="threat-verify-btn" href="${esc(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">
           Read on ${esc(item.sourceName)} ↗
@@ -204,13 +205,24 @@ function updateThreatsInHtml(categories, threats) {
   html = html.replace(/<span class="side-nav-pill" id="side-threats-count">\d+<\/span>/, `<span class="side-nav-pill" id="side-threats-count">${threats.length}</span>`);
   html = html.replace(/<div class="hero-metric-num" id="stat-news">\d+<\/div>/, `<div class="hero-metric-num" id="stat-news">${threats.length}</div>`);
   html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${threats.length} verified news stories</span>`);
-  html = html.replace(/let THREATS_DATA = \\[[\\s\\S]*?\\];/, `let THREATS_DATA = ${JSON.stringify(threats)};`);
+  html = html.replace(/let THREATS_DATA = \[[\s\S]*?\];/, `let THREATS_DATA = ${JSON.stringify(threats)};`);
+
+  if (categories && categories.length) {
+    const subtabsHtml = categories.map((cat, idx) => {
+      const activeClass = idx === 0 ? " active" : "";
+      return `        <button type="button" class="threat-tab-btn${activeClass}" data-cat="${esc(cat.id)}" onclick="selectThreatCategory('${esc(cat.id)}', this)">${esc(cat.label)} (${cat.count})</button>`;
+    }).join("\n");
+    html = html.replace(/<div class="threat-subtabs" id="threat-subtabs">[\s\S]*?<\/div>/, `<div class="threat-subtabs" id="threat-subtabs">\n${subtabsHtml}\n      </div>`);
+  }
+
+  html = html.replace(/Verified Global &amp; Indian News Wires/g, "Verified Global &amp; Indian News Sources");
+  html = html.replace(/Verified Global & Indian News Wires/g, "Verified Global & Indian News Sources");
 
   const heroNewsRegex = /<div class="hero-news-list" id="hero-live-news-list">[\s\S]*?<\/div>\s*<\/div>\s*<div class="hero-news-footer">/;
   if (heroNewsRegex.test(html) && threats.length) {
     const picked = threats.slice(0, 4);
     const heroItemsHtml = picked.map(item => {
-      const rawTag = (item.sourceName || item.impactBadge || "Live Wire").replace(/\.com$/i, "").trim();
+      const rawTag = (item.sourceName || item.impactBadge || "News").replace(/\.com$/i, "").trim();
       const shortTag = rawTag.length > 16 ? rawTag.slice(0, 15) + "…" : rawTag;
       return `            <div class="hero-news-item" onclick="jumpToThreatStory('${esc(item.id)}')" title="Click to view story in Cyber News">
               <span class="hero-news-item-title">${esc(item.title)}</span>
