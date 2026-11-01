@@ -205,6 +205,34 @@ export const FEATURED_LEADERS = [
   // --- Agents & Automation ---
   {
     source: "github",
+    sourceId: "lightpanda-io/browser",
+    sourceUrl: "https://github.com/lightpanda-io/browser",
+    name: "Lightpanda",
+    tagline: "The headless browser designed for AI agents and web automation, written in Zig with ultra-low memory overhead.",
+    url: "https://github.com/lightpanda-io/browser",
+    emoji: "🐼",
+    category: "Agents & Automation",
+    tags: ["browser", "agent-framework", "web-scraping", "zig", "headless"],
+    metric: 39600,
+    whyItMatters: "High-efficiency open-source headless browser built specifically for autonomous AI agents, eliminating Chromium GUI rendering overhead.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "thedotmack/claude-mem",
+    sourceUrl: "https://github.com/thedotmack/claude-mem",
+    name: "claude mem",
+    tagline: "Persistent Context Across Sessions for Every Agent – Captures agent actions, compresses with AI, and restores memory into future sessions.",
+    url: "https://github.com/thedotmack/claude-mem",
+    emoji: "🧠",
+    category: "Agents & Automation",
+    tags: ["claude", "memory", "context", "coding-agent", "persistence"],
+    metric: 105400,
+    whyItMatters: "Battle-tested in the open — 105.4K GitHub stars from real production users.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
     sourceId: "saffron-health/libretto",
     sourceUrl: "https://github.com/saffron-health/libretto",
     name: "Libretto",
@@ -437,6 +465,20 @@ export const FEATURED_LEADERS = [
   },
 
   // --- Research & Data ---
+  {
+    source: "github",
+    sourceId: "public-apis/public-apis",
+    sourceUrl: "https://github.com/public-apis/public-apis",
+    name: "public-apis",
+    tagline: "A collective list of 1,400+ free APIs for software development, agent tool integrations, and data enrichment.",
+    url: "https://github.com/public-apis/public-apis",
+    emoji: "🌐",
+    category: "Research & Data",
+    tags: ["api", "developer-tools", "tools", "datasets", "free-apis"],
+    metric: 310000,
+    whyItMatters: "The world's largest open index of public APIs, serving as a primary registry for autonomous agent tool discovery and execution.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 5
+  },
   {
     source: "github",
     sourceId: "infiniflow/ragflow",

@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-11-01T19:27:33.593Z",
+  "updatedAt": "2026-11-01T19:40:09.350Z",
   "categories": [
     {
       "id": "all",
       "label": "🔥 All Cybersecurity News",
-      "count": 15
+      "count": 16
     },
     {
       "id": "india-bfsi",
@@ -14,7 +14,7 @@
     {
       "id": "crypto-heists",
       "label": "🌐 Crypto & Exchange Heists",
-      "count": 3
+      "count": 4
     },
     {
       "id": "global-ransomware",
@@ -130,6 +130,24 @@
       "incident": "Key updates: India's AU Small Finance Bank probes potential data leak; From AU Small Finance Bank Breach To PHP Flaw: Cyberattacks In October That Took The Internet By Storm.",
       "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
       "consequence": "Read reporting on The Times of India."
+    },
+    {
+      "id": "live-crypto-heists-13534311740",
+      "category": "crypto-heists",
+      "severity": "high",
+      "impactBadge": "🚨 Urgent Alert",
+      "title": "How a stolen iPhone in London led to drained crypto wallets and $14,000 in losses",
+      "sourceName": "CoinDesk",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWWtXcU50RXNlOTJjUGthVDRDRUNiZXExLThOcXlvZC1DSExOZV96bDdxRW1BWkhOZE1kTldsSEU3dFRoNVlncVJXQWxSVjEzN1pBTHJxVzNMTDZQa1BFc21CZjdDTlllemdGZmVRN3ZpdWRXd1Q0QlloVDJaYjdvUExNMlFHeEhfSlZQZ0x6NnVqU1YtZGtTS1hiQjhKMmFOZ2oweU1uejM1MFRibmhHM1BSQUY?oc=5",
+      "provenanceBadge": "⛓️ Crypto & Web3",
+      "badgeType": "onchain",
+      "ref": "CoinDesk",
+      "date": "2026-10-31",
+      "timeAgo": "1 day ago",
+      "entities": "Crypto & Digital Assets",
+      "incident": "",
+      "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
+      "consequence": "Read reporting on CoinDesk."
     },
     {
       "id": "live-crypto-heists-9818481674",

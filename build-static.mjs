@@ -101,13 +101,19 @@ async function build() {
   const deduped = [...byName.values()];
 
   for (const cat of categories) {
-    const ranked = deduped
-      .filter(t => t.category === cat)
-      .sort((a, b) => b.rank - a.rank)
-      .slice(0, 25)
-      .map(({ repo, signal_summary, ...rest }) => rest);
+    const inCat = deduped.filter(t => t.category === cat);
+    const sorted = inCat.sort((a, b) => b.rank - a.rank);
+    const topRanked = sorted.slice(0, 35);
+    // Guarantee hand-curated and featured leaders are never dropped by category cutoff
+    for (const item of inCat) {
+      if (item.signals && item.signals.some(s => s.startsWith("app:"))) {
+        if (!topRanked.some(t => t.id === item.id)) {
+          topRanked.push(item);
+        }
+      }
+    }
 
-    tools.push(...ranked);
+    tools.push(...topRanked.map(({ repo, signal_summary, ...rest }) => rest));
   }
 
   // Canonical URL overrides for moved/closed upstream repositories
@@ -118,7 +124,8 @@ async function build() {
     "LLaVA": "https://github.com/haotian-liu/LLaVA",
     "Pixelle Video": "https://github.com/AIDC-AI/Pixelle-Video",
     "ComfyUI LTXVideo": "https://github.com/Lightricks/ComfyUI-LTXVideo",
-    "paperless ngx": "https://docs.paperless-ngx.com/"
+    "paperless ngx": "https://docs.paperless-ngx.com/",
+    "claude mem": "https://github.com/thedotmack/claude-mem"
   };
 
   console.log(`[Health Check] Auditing ${tools.length} tool links for dead/404 URLs...`);
