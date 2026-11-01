@@ -157,6 +157,10 @@ assert(nonCyberStories === 0, `Zero non-cyber medical/general crimes in news fee
 assert(invalidBfsiStories === 0, `All stories in India BFSI category have verified Indian financial/regulatory context`);
 assert(lazyCopiedSummaries === 0, `Zero news stories have lazy summaries identical to headline`);
 
+// 8. Verify App Starts on Homepage (not AI Tools)
+assert(indexHtml.includes('let currentView = "home";'), `Default view is initialized to 'home'`);
+assert(indexHtml.includes('else if (hash === "#home" || !hash || hash === "#") {\n    switchView("home");'), `Default fallback route opens 'home'`);
+
 // Summary
 console.log("=========================================");
 if (failureCount > 0) {

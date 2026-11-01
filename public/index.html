@@ -1623,7 +1623,7 @@
   <aside class="app-sidebar" id="app-sidebar" aria-label="Sidebar Navigation">
     <div>
       <div class="sidebar-brand">
-        <a href="#tools" class="sidebar-brand-left" onclick="switchView('tools')">
+        <a href="#home" class="sidebar-brand-left" onclick="goHome(event)">
           <div class="brand-mark">C</div>
           <div>
             <div class="brand-title">Cipherati</div>
@@ -6848,7 +6848,7 @@ function filterByStackCategory(catName) {
 applyTheme(getInitialTheme());
 
 let compareList = [];
-let currentView = "tools";
+let currentView = "home";
 let currentLayout = "cards";
 let allTools = [];
 let allCategories = [];
@@ -7205,8 +7205,14 @@ function switchView(viewName) {
     }
   });
 
-  const hash = isScams ? "#scams" : (isThreats ? "#news" : (isRealities ? "#realities" : (isTools ? "#tools" : "#home")));
-  if (typeof history !== "undefined" && history.replaceState) history.replaceState(null, "", hash);
+  if (typeof history !== "undefined" && history.replaceState) {
+    if (isHome && (!window.location.hash || window.location.hash === "#")) {
+      // Keep root URL clean
+    } else {
+      const hash = isScams ? "#scams" : (isThreats ? "#news" : (isRealities ? "#realities" : (isTools ? "#tools" : "#home")));
+      history.replaceState(null, "", hash);
+    }
+  }
 
   if (isHome) {
     if (typeof window !== "undefined" && typeof window.scrollTo === "function") { try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch(e) { window.scrollTo(0, 0); } }
@@ -7359,7 +7365,7 @@ async function init() {
   }
 }
 
-// Deep links: #realities/<n> highlights one reality; #tools/<category> pre-filters.
+// Deep links: #realities/<n> highlights one reality; #tools/<category> pre-filters; #home starts at homepage.
 function routeHash(hash, categories) {
   const realMatch = hash.match(/^#realities\/(\d+)$/);
   const catMatch = hash.match(/^#tools\/(.+)$/);
@@ -7373,6 +7379,14 @@ function routeHash(hash, categories) {
     if (m) {
       const btn = document.querySelector(`.threat-tab-btn[onclick*="${m[1]}"]`);
       if (btn) selectThreatCategory(m[1], btn);
+      setTimeout(() => {
+        const card = document.getElementById("threat-" + m[1]) || document.getElementById(m[1]);
+        if (card) {
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          card.classList.add("card-highlight");
+          setTimeout(() => card.classList.remove("card-highlight"), 2800);
+        }
+      }, 100);
     }
   } else if (hash.startsWith("#scams")) {
     switchView("scams");
@@ -7387,25 +7401,16 @@ function routeHash(hash, categories) {
         }
       }, 100);
     }
-  } else if (hash.startsWith("#threats") || hash.startsWith("#news")) {
-    switchView("news");
-    const tm = hash.match(/^#(?:threats|news)\/(.+)$/);
-    if (tm) {
-      setTimeout(() => {
-        const card = document.getElementById("threat-" + tm[1]) || document.getElementById(tm[1]);
-        if (card) {
-          card.scrollIntoView({ behavior: "smooth", block: "center" });
-          card.classList.add("card-highlight");
-          setTimeout(() => card.classList.remove("card-highlight"), 2800);
-        }
-      }, 100);
-    }
+  } else if (hash === "#tools") {
+    switchView("tools");
   } else if (catMatch) {
     const cat = decodeURIComponent(catMatch[1]);
     switchView("tools");
     if (categories.includes(cat)) selectCategory(cat);
+  } else if (hash === "#home" || !hash || hash === "#") {
+    switchView("home");
   } else {
-    switchView(typeof persona !== "undefined" && persona === "leaders" ? "realities" : "tools");
+    switchView("home");
   }
 }
 
