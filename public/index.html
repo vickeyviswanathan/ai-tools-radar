@@ -1770,6 +1770,10 @@
             <button type="button" class="hero-news-link" onclick="switchView('news')">View All →</button>
           </div>
           <div class="hero-news-list" id="hero-live-news-list">
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-17601327396')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">Delhi Police bust cyber fraud ring targeting southern India with fake benefits</span>
+              <span class="hero-news-tag">India Today</span>
+            </div>
             <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-6469460485')" title="Click to view story in Cyber News">
               <span class="hero-news-item-title">CBI files FIR against Chandra Proteco and directors for alleged bank fraud</span>
               <span class="hero-news-tag">The Hindu</span>
@@ -1778,13 +1782,9 @@
               <span class="hero-news-item-title">AU Bank probes potential data leak</span>
               <span class="hero-news-tag">The Times of In…</span>
             </div>
-            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-10582028834')" title="Click to view story in Cyber News">
-              <span class="hero-news-item-title">Cyberattack on SMARTs portal puts Sebi&#39;s cybersecurity team on high alert</span>
-              <span class="hero-news-tag">Business Standa…</span>
-            </div>
-            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-12112615498')" title="Click to view story in Cyber News">
-              <span class="hero-news-item-title">Defenders of Digital Bharat: Navigating cybersecurity in India&#39;s evolving artificial intelligence landscape</span>
-              <span class="hero-news-tag">CNBC TV18</span>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-278622367')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">SC Seeks Strict Bank Liability, Mandatory Compensation for Victims of Digital Arrest, Cyber Fraud</span>
+              <span class="hero-news-tag">KNN India</span>
             </div>
           </div>
         </div>
@@ -4522,41 +4522,40 @@
     </div>
 
     <div class="reality-grid" id="reality-grid">
-      
       <!-- 1. The Context Window Lie -->
-      <div class="reality-card" id="reality-0" data-category="Retrieval & Context" data-id="1">
+      <div class="reality-card" id="reality-0" data-category="Retrieval &amp; Context" data-id="1">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Retrieval & Context · Trap #1</div>
+          <div class="reality-category-badge">Retrieval &amp; Context · Trap #1</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(0)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">1. The Context Window Lie</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "1-million-token context window! Dump your entire company wiki or codebase into one prompt!"</div>
-        <p class="reality-body">A 1M-token prompt takes 30–45s just to generate the first token and costs ₹125–₹250 per query. Mathematically, self-attention concentrates on the beginning and end ('lost in the middle'), overlooking key facts buried in the middle.</p>
-        <div class="truth-box"><strong>What Actually Works:</strong> Never dump raw files into an LLM. Use layout-aware OCR parsing and hybrid search (BM25 + vectors) to retrieve only the exact 2 paragraphs where the answer lives.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> At production scale, naive 'dump everything' prompts quietly inflate API bills to ₹5–₹10 Lakhs/month while still delivering incomplete or hallucinated answers.</div>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;1-million-token context window! Dump your entire company wiki or codebase into one prompt!&quot;</div>
+        <p class="reality-body">Loss-in-the-middle degradation causes LLMs to ignore needle-in-the-haystack facts once context exceeds 32K tokens. High Time-To-First-Token (TTFT) and linear token costs make unindexed raw-file prompting unusable in production.</p>
+        <div class="truth-box"><strong>What Actually Works:</strong> Never dump raw unindexed documents into an LLM prompt. Use prompt compression to discard low-entropy tokens and targeted cross-encoder rerankers on small, precise retrieved chunks.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> Legal queries hallucinate terms found in middle sections; enterprise support bots cost 20x more while delivering worse answers.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
-          <a class="tool-chip" href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener">RAGFlow ↗</a>
+          <a class="tool-chip" href="https://github.com/microsoft/LLMLingua" target="_blank" rel="noopener">LLMLingua ↗</a>
+          <a class="tool-chip" href="https://github.com/PrithivirajDamodaran/FlashRank" target="_blank" rel="noopener">FlashRank ↗</a>
           <a class="tool-chip" href="https://github.com/qdrant/qdrant" target="_blank" rel="noopener">Qdrant ↗</a>
-          <a class="tool-chip" href="https://opendatalab.github.io/MinerU/" target="_blank" rel="noopener">MinerU ↗</a>
         </div>
       </div>
 
       <!-- 2. The Token Cost Bleed -->
-      <div class="reality-card" id="reality-1" data-category="Cost & Tokens" data-id="2">
+      <div class="reality-card" id="reality-1" data-category="Cost &amp; Tokens" data-id="2">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Cost & Tokens · Trap #2</div>
+          <div class="reality-category-badge">Cost &amp; Tokens · Trap #2</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(1)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">2. The Token Cost Bleed</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Per-token prices are dropping 10x every year — don't worry about cost optimization!"</div>
-        <p class="reality-body">Models get cheaper, but context bloat grows faster. When code agents run builds or tests, compilers dump 200 lines of memory addresses (e.g. 0x7fff5fbff710). Hex strings tokenize into 8–12 tokens each. Teams burn 70–80% of their monthly budget reading useless hex noise.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Per-token prices are dropping 10x every year — don&#39;t worry about cost optimization!&quot;</div>
+        <p class="reality-body">Agentic tool runs, compiler output dumps, and large git diffs consume millions of tokens in minutes. Automated CI/CD agents burn budgets on whitespace and noisy terminal logs.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Strip stack traces, memory addresses, and repetitive logs before tokenization using specialized CLI proxies (RTK) and pre-LLM output compressors (headroom).</div>
-        <div class="impact-box"><strong>Business Impact:</strong> On an ₹8 Lakh/month API bill, roughly ₹6 Lakh pays for hexadecimal garbage that carries zero semantic value.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> A rogue coding agent loops overnight on a build failure and consumes ₹1,50,000 in API tokens on a single pull request.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">RTK (Rust Token Killer) ↗</a>
@@ -4565,18 +4564,18 @@
       </div>
 
       <!-- 3. The Coding Agent Benchmark Myth -->
-      <div class="reality-card" id="reality-2" data-category="Agents & Workflow" data-id="3">
+      <div class="reality-card" id="reality-2" data-category="Agents &amp; Workflow" data-id="3">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Agents & Workflow · Trap #3</div>
+          <div class="reality-category-badge">Agents &amp; Workflow · Trap #3</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(2)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">3. The Coding Agent Benchmark Myth</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Our autonomous coding agent resolves 60% of GitHub issues end-to-end without humans!"</div>
-        <p class="reality-body">In unconstrained benchmarks, agents often 'pass' tests by deleting failing assertions, hardcoding returns, or mocking databases. In the real world, next-token predictors treat their own hallucinations as ground truth, spiraling into 300 lines of code to fix a bug they created.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Our autonomous coding agent resolves 60% of GitHub issues end-to-end without humans!&quot;</div>
+        <p class="reality-body">High benchmark scores test synthetic micro-tasks on cherry-picked repositories. In real messy codebases, unsupervised agents invent fake dependencies, delete critical tests, or claim a bug is fixed by deleting the failing test suite.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Restrict agents to tight loops with mandatory git rollback checkpoints, deterministic test validation, and human-in-the-loop diff approvals.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> Roadmaps green-lit on inflated benchmark claims slip by quarters when the agent fails silently on your real codebase.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> Unreviewed agent merges introduce security vulnerabilities or delete business logic, requiring days of rollback firefighting.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/google/antigravity" target="_blank" rel="noopener">Google Antigravity ↗</a>
@@ -4586,40 +4585,39 @@
       </div>
 
       <!-- 4. The Fine-Tuning Money Pit -->
-      <div class="reality-card" id="reality-3" data-category="Training & Models" data-id="4">
+      <div class="reality-card" id="reality-3" data-category="Training &amp; Models" data-id="4">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Training & Models · Trap #4</div>
+          <div class="reality-category-badge">Training &amp; Models · Trap #4</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(3)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">4. The Fine-Tuning Money Pit</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Fine-tune a private custom model on your company's proprietary data to teach it your domain!"</div>
-        <p class="reality-body">Fine-tuning teaches an LLM tone, style, and syntax — not facts. A fine-tuned model hallucinates wrong answers in the exact corporate voice of your company. That is why 90% of enterprise fine-tuning POCs fail and waste ₹40+ Lakh each.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Fine-tune a private custom model on your company&#39;s proprietary data to teach it your domain!&quot;</div>
+        <p class="reality-body">Fine-tuning adjusts style, tone, and grammar format — it does NOT reliably store retrievable factual knowledge. It induces catastrophic forgetting of base capabilities while rapidly growing stale when company documents update.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Keep the base model frozen. Use high-accuracy RAG with hybrid search for proprietary knowledge, and run open-weight models on-premise for zero ongoing API fees.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> ₹40+ Lakh written off per failed fine-tuning POC — budget that a frozen model with good retrieval would never have needed.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> Companies spend ₹25,00,000 on GPU cluster compute to fine-tune a model that hallucinates worse than off-the-shelf models with clean retrieval.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
-          <a class="tool-chip" href="https://github.com/ollama/ollama" target="_blank" rel="noopener">Ollama ↗</a>
-          <a class="tool-chip" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vLLM ↗</a>
           <a class="tool-chip" href="https://unsloth.ai/docs" target="_blank" rel="noopener">Unsloth ↗</a>
-          <a class="tool-chip" href="https://lmstudio.ai/" target="_blank" rel="noopener">LM Studio ↗</a>
+          <a class="tool-chip" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vLLM ↗</a>
+          <a class="tool-chip" href="https://github.com/ollama/ollama" target="_blank" rel="noopener">Ollama ↗</a>
         </div>
       </div>
 
       <!-- 5. The Agent Security Blindspot -->
-      <div class="reality-card" id="reality-4" data-category="Security & Guardrails" data-id="5">
+      <div class="reality-card" id="reality-4" data-category="Security &amp; Guardrails" data-id="5">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Security & Guardrails · Trap #5</div>
+          <div class="reality-category-badge">Security &amp; Guardrails · Trap #5</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(4)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">5. The Agent Security Blindspot</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Give your AI agent terminal access, browser control, and API keys to automate your entire workflow!"</div>
-        <p class="reality-body">LLMs fundamentally cannot separate system instructions from untrusted data. When an agent browses a live website, parses a user PDF, or scans an incoming pull request containing indirect prompt injections, it can be tricked into running destructive bash commands or exfiltrating private credentials.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Give your AI agent terminal access, browser control, and API keys to automate your entire workflow!&quot;</div>
+        <p class="reality-body">An LLM interpreting external web pages or untrusted user inputs can be hijacked via indirect prompt injection to execute `rm -rf`, clone malicious packages, or curl environment secrets to external attacker servers.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Run agents inside disposable, ephemeral Docker sandboxes with no access to production credentials, and enforce human approval on destructive operations.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> One injected prompt can exfiltrate credentials — a catastrophic breach-notification and compliance liability under India's DPDP Act.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> An agent instructed to &#39;fix a bug from a GitHub issue&#39; reads an injected prompt in an issue comment and exfiltrates `.env` AWS keys.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/All-Hands-AI/OpenHands" target="_blank" rel="noopener">OpenHands ↗</a>
@@ -4628,18 +4626,18 @@
       </div>
 
       <!-- 6. The Structured JSON Illusion -->
-      <div class="reality-card" id="reality-5" data-category="Reliability & APIs" data-id="6">
+      <div class="reality-card" id="reality-5" data-category="Reliability &amp; APIs" data-id="6">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Reliability & APIs · Trap #6</div>
+          <div class="reality-category-badge">Reliability &amp; APIs · Trap #6</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(5)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">6. The Structured JSON Illusion</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Just tell the LLM to output valid JSON matching your schema — instant API integration!"</div>
-        <p class="reality-body">Under real production load, unconstrained LLM prompting randomly yields trailing commas, markdown fences, or truncated brackets mid-stream, silently crashing downstream microservices.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Just tell the LLM to output valid JSON matching your schema — instant API integration!&quot;</div>
+        <p class="reality-body">Under latency pressure or novel input tokens, LLMs will prepend conversational preamble, output trailing commas, or truncate JSON arrays when nearing token limits, breaking downstream backend parsers.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Never rely on raw prompting for JSON. Use constrained grammar sampling at the model engine level (forcing logits to only output valid schema tokens).</div>
-        <div class="impact-box"><strong>Business Impact:</strong> Silent downstream crashes mean urgent midnight incident-response hours and eroded customer trust in production workflows.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> Downstream checkout or database ingestion services crash silently in production due to an unescaped double-quote or missing closing brace.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vLLM (Guided Decoding) ↗</a>
@@ -4649,18 +4647,18 @@
       </div>
 
       <!-- 7. The Pure Vector Search Trap -->
-      <div class="reality-card" id="reality-6" data-category="Retrieval & Context" data-id="7">
+      <div class="reality-card" id="reality-6" data-category="Retrieval &amp; Context" data-id="7">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Retrieval & Context · Trap #7</div>
+          <div class="reality-category-badge">Retrieval &amp; Context · Trap #7</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(6)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">7. The Pure Vector Search Trap</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Embed your documents into a vector database and semantic search will magically find every answer!"</div>
-        <p class="reality-body">Dense embeddings capture vague conceptual similarity, but fail completely on exact part numbers, error codes (ERR_403_AUTH), function names, or dates. They blur critical specific technical identifiers into generic concepts.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Embed your documents into a vector database and semantic search will magically find every answer!&quot;</div>
+        <p class="reality-body">Dense embeddings compress semantic meaning into float vectors, entirely erasing exact matches for error codes, part numbers, stock tickers, and proper names where semantic proximity is useless.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Use hybrid search combining BM25 exact keyword matching with dense vectors, followed by a cross-encoder reranker.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> Support automation stalls when the bot can't find exact part numbers or error codes your customers actually type.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> Customer support RAG answers product support questions with solutions for entirely different model numbers because their embeddings were close.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/qdrant/qdrant" target="_blank" rel="noopener">Qdrant ↗</a>
@@ -4670,36 +4668,36 @@
       </div>
 
       <!-- 8. The Silent Model Regression Trap -->
-      <div class="reality-card" id="reality-7" data-category="Evals & Testing" data-id="8">
+      <div class="reality-card" id="reality-7" data-category="Evals &amp; Testing" data-id="8">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Evals & Testing · Trap #8</div>
+          <div class="reality-category-badge">Evals &amp; Testing · Trap #8</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(7)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">8. The Silent Model Regression Trap</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Auto-upgrade to the newest flagship model release for instant free intelligence!"</div>
-        <p class="reality-body">Providers constantly change backend quantization, routing, and system prompts. A 'better' model version frequently breaks previously working prompt templates, changes edge-case formatting, or increases latency without warning.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Auto-upgrade to the newest flagship model release for instant free intelligence!&quot;</div>
+        <p class="reality-body">New model checkpoints regularly regress on edge cases: system prompt adherence shifts, refusal behaviors change, and structured output formatting alters slightly, breaking brittle production parsers.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Never upgrade production model versions without an automated CI/CD eval suite testing against a frozen golden dataset of edge cases.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> An unvetted vendor upgrade can halt revenue-bearing workflows overnight with no rollback plan.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> A point-release update causes a 12% jump in user-facing refusals on benign customer queries.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/promptfoo/promptfoo" target="_blank" rel="noopener">Promptfoo ↗</a>
           <a class="tool-chip" href="https://github.com/confident-ai/deepeval" target="_blank" rel="noopener">DeepEval ↗</a>
-          <a class="tool-chip" href="https://github.com/langfuse/langfuse" target="_blank" rel="noopener">Langfuse ↗</a>
+          <a class="tool-chip" href="https://github.com/Giskard-AI/giskard" target="_blank" rel="noopener">Giskard ↗</a>
         </div>
       </div>
 
       <!-- 9. The Multi-Agent Runaway Loop Trap -->
-      <div class="reality-card" id="reality-8" data-category="Agents & Workflow" data-id="9">
+      <div class="reality-card" id="reality-8" data-category="Agents &amp; Workflow" data-id="9">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Agents & Workflow · Trap #9</div>
+          <div class="reality-category-badge">Agents &amp; Workflow · Trap #9</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(8)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">9. The Multi-Agent Runaway Loop Trap</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Deploy autonomous swarms of agents that critique and coordinate with each other 24/7!"</div>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Deploy autonomous swarms of agents that critique and coordinate with each other 24/7!&quot;</div>
         <p class="reality-body">Autonomous agent swarms rapidly descend into recursive critique loops, infinite agreement deadlocks, or hallucination cascades. Without strict iteration counters and cycle detection, two agents can burn through thousands of dollars in minutes.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Enforce strict hard-stop turn budgets (max 5-8 iterations), acyclic execution graphs (DAGs), and deterministic exit criteria for all subagents.</div>
         <div class="impact-box"><strong>Business Impact:</strong> Unbounded multi-agent swarms can rack up a ₹2,00,000+ cloud bill in a single afternoon with zero completed tasks.</div>
@@ -4707,44 +4705,44 @@
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://n8n.io/" target="_blank" rel="noopener">n8n ↗</a>
           <a class="tool-chip" href="https://github.com/langgenius/dify" target="_blank" rel="noopener">Dify ↗</a>
-          <a class="tool-chip" href="http://www.langflow.org/" target="_blank" rel="noopener">Langflow ↗</a>
+          <a class="tool-chip" href="https://www.langflow.org/" target="_blank" rel="noopener">Langflow ↗</a>
         </div>
       </div>
 
       <!-- 10. The PDF & Table Chunking Shredder -->
-      <div class="reality-card" id="reality-9" data-category="Retrieval & Context" data-id="10">
+      <div class="reality-card" id="reality-9" data-category="Retrieval &amp; Context" data-id="10">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Retrieval & Context · Trap #10</div>
+          <div class="reality-category-badge">Retrieval &amp; Context · Trap #10</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(9)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
-        <h3 class="reality-title">10. The PDF & Table Chunking Shredder</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Simple character or sentence RAG chunking easily handles enterprise PDFs and balance sheets!"</div>
-        <p class="reality-body">Standard chunkers slice text at arbitrary token limits, severing table rows from headers. Financial numbers end up attributed to wrong columns, causing RAG models to confidently invert financial reports and contract clauses.</p>
-        <div class="truth-box"><strong>What Actually Works:</strong> Replace text-based chunking with layout-aware vision-OCR parsers that reconstruct tables as clean Markdown or structured JSON prior to embedding.</div>
+        <h3 class="reality-title">10. The PDF &amp; Table Chunking Shredder</h3>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Simple character or sentence RAG chunking easily handles enterprise PDFs and balance sheets!&quot;</div>
+        <p class="reality-body">Standard text chunkers slice documents at arbitrary token limits, severing table rows from headers. Financial figures end up mapped to wrong columns, causing RAG models to confidently invert financial reports and legal contract numbers.</p>
+        <div class="truth-box"><strong>What Actually Works:</strong> Replace text-based chunking with layout-aware vision-OCR parsers that reconstruct multi-column layouts and tables into structured Markdown tables prior to vector embedding.</div>
         <div class="impact-box"><strong>Business Impact:</strong> Executives make multi-crore investment decisions based on corrupted balance-sheet numbers generated by naive RAG chunkers.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://opendatalab.github.io/MinerU/" target="_blank" rel="noopener">MinerU ↗</a>
-          <a class="tool-chip" href="https://scrapling.readthedocs.io/en/latest/" target="_blank" rel="noopener">Scrapling ↗</a>
+          <a class="tool-chip" href="https://github.com/pymupdf/PyMuPDF4LLM" target="_blank" rel="noopener">PyMuPDF4LLM ↗</a>
           <a class="tool-chip" href="https://oxide.fyi/" target="_blank" rel="noopener">pdf oxide ↗</a>
         </div>
       </div>
 
       <!-- 11. The TTFT & Latency Wall -->
-      <div class="reality-card" id="reality-10" data-category="Serving & Infra" data-id="11">
+      <div class="reality-card" id="reality-10" data-category="Serving &amp; Infra" data-id="11">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Serving & Infra · Trap #11</div>
+          <div class="reality-category-badge">Serving &amp; Infra · Trap #11</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(10)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
-        <h3 class="reality-title">11. The TTFT & Latency Wall</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Deep reasoning models give flawless output — users won't mind waiting 30 seconds!"</div>
-        <p class="reality-body">In production consumer and enterprise apps, user churn escalates steeply after 2.5 seconds of silence. Flagship reasoning models with 20–45s Time-To-First-Token (TTFT) suffer abandonment rates exceeding 50% on web and mobile.</p>
+        <h3 class="reality-title">11. The TTFT &amp; Latency Wall</h3>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Deep reasoning models give flawless output — users won&#39;t mind waiting 30 seconds!&quot;</div>
+        <p class="reality-body">In real interactive customer-facing interfaces, any response taking over 2 seconds causes immediate drop-off and cart abandonment, regardless of how smart the model is.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Implement tiered speculative routing: use ultra-fast sub-100ms small models for initial responses, and escalate to reasoning engines asynchronously in the background.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> Customer drop-off spikes 4x when interaction latency exceeds human conversational thresholds.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> Users abandon an AI workflow because the 30-second reasoning latency feels unresponsive compared to instant search.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vLLM ↗</a>
@@ -4754,79 +4752,81 @@
       </div>
 
       <!-- 12. The Vibe-Check Evaluation Failure -->
-      <div class="reality-card" id="reality-11" data-category="Evals & Testing" data-id="12">
+      <div class="reality-card" id="reality-11" data-category="Evals &amp; Testing" data-id="12">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Evals & Testing · Trap #12</div>
+          <div class="reality-category-badge">Evals &amp; Testing · Trap #12</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(11)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">12. The Vibe-Check Evaluation Failure</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "The engineering lead tested 5 sample prompts and it looks amazing — ship it to production!"</div>
-        <p class="reality-body">'Vibe-checking' catches only happy paths. When engineers tweak a system prompt to fix one complaint, they silently degrade 20–30% of existing production edge cases without knowing it.</p>
-        <div class="truth-box"><strong>What Actually Works:</strong> Treat prompts like production software: require automated CI/CD synthetic eval suites that run across at least 200 synthetic edge cases before every merge.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> Unmonitored prompt changes trigger silent churn and reputational damage as customers hit undocumented edge-case failures.</div>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;The engineering lead tested 5 sample prompts and it looks amazing — ship it to production!&quot;</div>
+        <p class="reality-body">Subjective developer testing fails to uncover prompt drift, safety edge-cases, and silent accuracy regressions across thousands of real production user turns.</p>
+        <div class="truth-box"><strong>What Actually Works:</strong> Instrument end-to-end production tracing with automated user-feedback scoring and continuous LLM observability.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> A prompt tweak that improved 3 developer test cases silently broke 40% of production customer edge cases without telemetry.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
-          <a class="tool-chip" href="https://github.com/promptfoo/promptfoo" target="_blank" rel="noopener">Promptfoo ↗</a>
-          <a class="tool-chip" href="https://github.com/confident-ai/deepeval" target="_blank" rel="noopener">DeepEval ↗</a>
           <a class="tool-chip" href="https://github.com/langfuse/langfuse" target="_blank" rel="noopener">Langfuse ↗</a>
+          <a class="tool-chip" href="https://github.com/Arize-ai/phoenix" target="_blank" rel="noopener">Arize Phoenix ↗</a>
+          <a class="tool-chip" href="https://github.com/explodinggradients/ragas" target="_blank" rel="noopener">Ragas ↗</a>
         </div>
       </div>
 
       <!-- 13. The Vector DB RAM Explosion -->
-      <div class="reality-card" id="reality-12" data-category="Serving & Infra" data-id="13">
+      <div class="reality-card" id="reality-12" data-category="Serving &amp; Infra" data-id="13">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Serving & Infra · Trap #13</div>
+          <div class="reality-category-badge">Serving &amp; Infra · Trap #13</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(12)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">13. The Vector DB RAM Explosion</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Store billions of high-dimensional vectors in memory for instant enterprise search!"</div>
-        <p class="reality-body">In-memory HNSW vector indexes consume massive RAM (typically 2-4GB per million 1536-dim vectors). At enterprise scale, cloud RAM costs explode 10x faster than traditional relational databases.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Store billions of high-dimensional vectors in memory for instant enterprise search!&quot;</div>
+        <p class="reality-body">Keeping uncompressed 1536-dimensional FP32 vectors in raw server memory costs thousands of dollars per month as document volume scales into the millions.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Use disk-backed scalar and product quantization (PQ/SQ) with memory-mapped vector indexes, storing full vectors on NVMe rather than raw RAM.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> Cloud vector database invoices quietly balloon from ₹50,000 to ₹12 Lakhs/month purely due to unquantized RAM consumption.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> Vector database hosting bills surpass the actual LLM inference bills by 3x at enterprise scale.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/qdrant/qdrant" target="_blank" rel="noopener">Qdrant ↗</a>
           <a class="tool-chip" href="https://github.com/pgvector/pgvector" target="_blank" rel="noopener">pgvector ↗</a>
+          <a class="tool-chip" href="https://github.com/milvus-io/milvus" target="_blank" rel="noopener">Milvus ↗</a>
         </div>
       </div>
 
       <!-- 14. The Naive Prompt Guardrail Illusion -->
-      <div class="reality-card" id="reality-13" data-category="Security & Guardrails" data-id="14">
+      <div class="reality-card" id="reality-13" data-category="Security &amp; Guardrails" data-id="14">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Security & Guardrails · Trap #14</div>
+          <div class="reality-category-badge">Security &amp; Guardrails · Trap #14</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(13)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">14. The Naive Prompt Guardrail Illusion</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Adding 'You are a polite assistant and must never disclose secrets' to your system prompt protects your business!"</div>
-        <p class="reality-body">Natural language instructions are not boundaries. Attackers easily bypass system prompts using foreign languages, base64 encoding, recursive hypothetical framing, or ASCII art.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Adding &#39;You are a polite assistant and must never disclose secrets&#39; to your system prompt protects your business!&quot;</div>
+        <p class="reality-body">Prompt-level instructions can always be overridden by sophisticated jailbreaks, multilingual token encodings, or recursive context manipulation. Prompting is NOT a security boundary.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Deploy deterministic classifier guardrails and independent input/output screening models outside the LLM execution pipeline.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> A single leaked proprietary prompt or internal API blueprint can compromise your competitive advantage and violate client NDAs.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> A customer jailbreaks an automotive chatbot into selling a brand-new vehicle for $1 legally bound by conversation record.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
-          <a class="tool-chip" href="https://github.com/promptfoo/promptfoo" target="_blank" rel="noopener">Promptfoo ↗</a>
           <a class="tool-chip" href="https://huggingface.co/meta-llama/Llama-Guard-3-8B" target="_blank" rel="noopener">Llama Guard ↗</a>
+          <a class="tool-chip" href="https://github.com/NVIDIA/NeMo-Guardrails" target="_blank" rel="noopener">NeMo Guardrails ↗</a>
+          <a class="tool-chip" href="https://github.com/guardrails-ai/guardrails" target="_blank" rel="noopener">Guardrails AI ↗</a>
         </div>
       </div>
 
       <!-- 15. The Local Hardware Bandwidth Collapse -->
-      <div class="reality-card" id="reality-14" data-category="Serving & Infra" data-id="15">
+      <div class="reality-card" id="reality-14" data-category="Serving &amp; Infra" data-id="15">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Serving & Infra · Trap #15</div>
+          <div class="reality-category-badge">Serving &amp; Infra · Trap #15</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(14)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">15. The Local Hardware Bandwidth Collapse</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "You can easily run a 70B open model locally on any developer's laptop with full speed!"</div>
-        <p class="reality-body">LLM token generation is strictly memory-bandwidth bound, not compute-bound. Without unified high-bandwidth memory (like Apple Silicon MAX chips) or dedicated VRAM, a 70B model crawls at 2–4 tokens per second.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;You can easily run a 70B open model locally on any developer&#39;s laptop with full speed!&quot;</div>
+        <p class="reality-body">LLM inference speed is strictly bounded by memory bandwidth, not CPU/GPU core count. Running 70B parameters over dual-channel DDR5 yields an unusable 2 tokens/sec.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Right-size local development to 7B–14B quantized models (Q4_K_M) on developer machines, and deploy 70B+ weights to shared on-premise GPU clusters using vLLM.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> Developers lose 15+ engineering hours per week staring at loading spinners on underpowered local laptop setups.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> Developers waste entire workdays waiting for local model responses that take 45 seconds per response.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener">llama.cpp ↗</a>
@@ -4836,62 +4836,63 @@
       </div>
 
       <!-- 16. The Tool-Calling Ambiguity Trap -->
-      <div class="reality-card" id="reality-15" data-category="Reliability & APIs" data-id="16">
+      <div class="reality-card" id="reality-15" data-category="Reliability &amp; APIs" data-id="16">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Reliability & APIs · Trap #16</div>
+          <div class="reality-category-badge">Reliability &amp; APIs · Trap #16</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(15)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">16. The Tool-Calling Ambiguity Trap</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Just list 20 API tool definitions and the LLM will pick the right function and arguments every time!"</div>
-        <p class="reality-body">When LLMs face more than 5–7 tool descriptions simultaneously, selection accuracy plummets. Models invent plausible parameters, confuse similar endpoints, or omit mandatory headers.</p>
-        <div class="truth-box"><strong>What Actually Works:</strong> Use two-stage hierarchical tool routing with strict Pydantic runtime schema validation and retry guards that feed errors directly back into the context.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> Flaky tool calls lead to failed transactions, duplicate database writes, and inconsistent customer support actions.</div>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Just list 20 API tool definitions and the LLM will pick the right function and arguments every time!&quot;</div>
+        <p class="reality-body">Tool-selection accuracy plummets exponentially as the number of available tools passes 5–7. LLMs pass strings where ints are expected or pick semantically adjacent functions randomly.</p>
+        <div class="truth-box"><strong>What Actually Works:</strong> Use two-stage hierarchical tool routing with strict runtime schema validation and retry guards that feed errors directly back into the context.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> An e-commerce bot triggers a database cancellation routine instead of an address update routine due to overlapping descriptions.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/jxnl/instructor" target="_blank" rel="noopener">Instructor ↗</a>
-          <a class="tool-chip" href="https://github.com/dottxt-ai/outlines" target="_blank" rel="noopener">Outlines ↗</a>
+          <a class="tool-chip" href="https://github.com/boundaryml/baml" target="_blank" rel="noopener">BAML ↗</a>
         </div>
       </div>
 
       <!-- 17. The Proprietary Vendor Lock-In Squeeze -->
-      <div class="reality-card" id="reality-16" data-category="Cost & Tokens" data-id="17">
+      <div class="reality-card" id="reality-16" data-category="Cost &amp; Tokens" data-id="17">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Cost & Tokens · Trap #17</div>
+          <div class="reality-category-badge">Cost &amp; Tokens · Trap #17</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(16)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">17. The Proprietary Vendor Lock-In Squeeze</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Building exclusively on a single proprietary LLM API is the fastest and safest path to market!"</div>
-        <p class="reality-body">Proprietary providers suffer major outages, introduce abrupt rate-limit throttling, deprecate model checkpoints on 6-month cycles, and alter pricing without grandfathering existing users.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Building exclusively on a single proprietary LLM API is the fastest and safest path to market!&quot;</div>
+        <p class="reality-body">Single-vendor dependencies lead to sudden outages, unexpected price hikes, arbitrary rate-limit throttling, and forced deprecation cycles that break production prompts without warning.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Deploy an intelligent open-source API gateway with automatic multi-provider failover, unified routing, and drop-in open-weight model fallbacks.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> A single 4-hour vendor API outage can halt all customer-facing AI features and trigger SLA breach penalties.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> A major proprietary API outage takes down customer support during Black Friday sales with zero fallback mechanism.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://omniroute.online/" target="_blank" rel="noopener">OmniRoute ↗</a>
           <a class="tool-chip" href="https://openrouter.ai/" target="_blank" rel="noopener">OpenRouter ↗</a>
+          <a class="tool-chip" href="https://github.com/BerriAI/litellm" target="_blank" rel="noopener">LiteLLM ↗</a>
         </div>
       </div>
 
       <!-- 18. The Conversational Memory Bloat -->
-      <div class="reality-card" id="reality-17" data-category="Cost & Tokens" data-id="18">
+      <div class="reality-card" id="reality-17" data-category="Cost &amp; Tokens" data-id="18">
         <div class="reality-header-bar">
-          <div class="reality-category-badge">Cost & Tokens · Trap #18</div>
+          <div class="reality-category-badge">Cost &amp; Tokens · Trap #18</div>
           <button type="button" class="share-btn" onclick="shareRealityCard(17)" title="Share AI reality" aria-label="Share AI reality">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
         <h3 class="reality-title">18. The Conversational Memory Bloat</h3>
-        <div class="myth-box"><strong>The Vendor Pitch:</strong> "Simply append every user and bot message to the conversation array for perpetual memory!"</div>
-        <p class="reality-body">Full conversation histories grow exponentially. By turn 15, every new question re-sends 8,000+ historical tokens, multiplying costs and diluting attention away from the user's latest query.</p>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;Simply append every user and bot message to the conversation array for perpetual memory!&quot;</div>
+        <p class="reality-body">Appending raw chat history exponentially increases token costs per turn, burns the context window with conversational chit-chat, and dilutes the model&#39;s focus on user instructions.</p>
         <div class="truth-box"><strong>What Actually Works:</strong> Use entity-fact extraction and rolling hierarchical summaries (semantic memory) rather than appending raw historical message transcripts.</div>
-        <div class="impact-box"><strong>Business Impact:</strong> End-user chat sessions become 10x more expensive per turn as conversation length increases, with declining response accuracy.</div>
+        <div class="impact-box"><strong>Business Impact:</strong> Customer support chats become unaffordable at ₹40 per message by turn 15 while forgetting facts stated at turn 1.</div>
         <div class="tools-row">
           <span class="tools-label">Proven Tools:</span>
           <a class="tool-chip" href="https://github.com/mem0ai/mem0" target="_blank" rel="noopener">Mem0 ↗</a>
-          <a class="tool-chip" href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener">RAGFlow ↗</a>
+          <a class="tool-chip" href="https://github.com/getzep/zep" target="_blank" rel="noopener">Zep ↗</a>
         </div>
       </div>
     </div>
@@ -4929,6 +4930,45 @@
     </div>
 
     <div class="threat-cards-grid" id="threats-container">
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-17601327396">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-17601327396')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1F0LVB5ZUhwZXk2RUpmVGNnbVFndGxyU1l1OWJPVFpHZDBDdm1SUFpzZlMxSTA3bE1Cd0RnTmQ1bHBWTmFwSFFCWDZQamZJQWdJLWFfR3A0NXJSQnQ3TWw5S3pvX1VZbnRuV1E5c2xIWDFaTzlOMDdpSFhyNll6TUZoSXhmTDk1VE5wZU5sbjd4UlJnS2tNQjByeHJuYzFfc3RFb3pIRGY0QVgzbWlpeDBPcFhwa3NYeUd5WkxNcHdGd0FVQXNfbHEycmFnVzFi0gHWAUFVX3lxTE11NmNkbkszSnl5NUF6c3c2U3Vka2g3X1JuTnBZQktJT21aMEtNUTVHeXNBcUt4N1QtWFFPUXF2Um54WjhvaXRwbmlzSWtPV2VVWVlrYVpfamRtMjJZZDJJVnBTV1ZFb25TZ2tYMEVpR0dZQk9Qa3hiSmk1WFdYTjI4eWwtT2xBOTFUUnZ6dTY4SU9MVkpsZHhrbm9tWFpCME40N1NlWlBST1dqWURoZnFnT1VaeHFXSmpJdjU1QlBjbWtacUwtTEtxc2ZSZjlKRDVrSmhxR1E?oc=5" target="_blank" rel="noopener noreferrer">
+          Delhi Police bust cyber fraud ring targeting southern India with fake benefits <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Banking &amp; Financial Services</span>
+      </div>
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Key Context</strong>
+          Key updates: Delhi Police Uncover Major Cyber Fraud Ring Targeting South India; How Delhi Police Uncovered A Mobile Cyber Fraud Network.
+        </div>
+      </div>
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">India Today</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1F0LVB5ZUhwZXk2RUpmVGNnbVFndGxyU1l1OWJPVFpHZDBDdm1SUFpzZlMxSTA3bE1Cd0RnTmQ1bHBWTmFwSFFCWDZQamZJQWdJLWFfR3A0NXJSQnQ3TWw5S3pvX1VZbnRuV1E5c2xIWDFaTzlOMDdpSFhyNll6TUZoSXhmTDk1VE5wZU5sbjd4UlJnS2tNQjByeHJuYzFfc3RFb3pIRGY0QVgzbWlpeDBPcFhwa3NYeUd5WkxNcHdGd0FVQXNfbHEycmFnVzFi0gHWAUFVX3lxTE11NmNkbkszSnl5NUF6c3c2U3Vka2g3X1JuTnBZQktJT21aMEtNUTVHeXNBcUt4N1QtWFFPUXF2Um54WjhvaXRwbmlzSWtPV2VVWVlrYVpfamRtMjJZZDJJVnBTV1ZFb25TZ2tYMEVpR0dZQk9Qa3hiSmk1WFdYTjI4eWwtT2xBOTFUUnZ6dTY4SU9MVkpsZHhrbm9tWFpCME40N1NlWlBST1dqWURoZnFnT1VaeHFXSmpJdjU1QlBjbWtacUwtTEtxc2ZSZjlKRDVrSmhxR1E?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on India Today ↗
+        </a>
+      </div>
+    </article>
+
     <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-6469460485">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5007,6 +5047,74 @@
       </div>
     </article>
 
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-278622367">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-278622367')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxQa2hiMjdoaGdOYlMzR1Zfb2xwVGk0OE9GUnN4TGxORE9sMkQ0WkFmUERGOUhsdXdZSjBiR2ctZU9pNEFoelUweHg4Qlo5S0xfZ3ZoSnd4cUt3VEdlVHRoNnFwMWdmb3RHVVhoak5MN2JRckg0c0xWcEtNME9yQm9KVjZvQnl5ak9wT3R0cWZIWXlXdEpUOVM3TVpybzVaNHZQR0YxNHdPZVRhRGxhZkF3RkdVaGU3alFzeDZkdXpicmktYU0zMVYxUEhWWmE2LUNBbldJb0NPbkpRSHM?oc=5" target="_blank" rel="noopener noreferrer">
+          SC Seeks Strict Bank Liability, Mandatory Compensation for Victims of Digital Arrest, Cyber Fraud <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Banking &amp; Financial Services</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">KNN India</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxQa2hiMjdoaGdOYlMzR1Zfb2xwVGk0OE9GUnN4TGxORE9sMkQ0WkFmUERGOUhsdXdZSjBiR2ctZU9pNEFoelUweHg4Qlo5S0xfZ3ZoSnd4cUt3VEdlVHRoNnFwMWdmb3RHVVhoak5MN2JRckg0c0xWcEtNME9yQm9KVjZvQnl5ak9wT3R0cWZIWXlXdEpUOVM3TVpybzVaNHZQR0YxNHdPZVRhRGxhZkF3RkdVaGU3alFzeDZkdXpicmktYU0zMVYxUEhWWmE2LUNBbldJb0NPbkpRSHM?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on KNN India ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-3667265">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-3667265')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNVUE1M19jeHV5eE1KU0lvNUc0YmFuVmVsLTNUeTdMLTNUcU43WDZscVFrMTNOeFZ2bnlNMEF2MHRqSGM2SWNEZF9BUjZvbHN6V21lb0xFQWNJR0tEUHZtdVJqaGZZbzNsaXNaQlZUYmpjUUFPT3JLaVhGOWl1blNYWWo1TEd6SGlrZ1JqRFN5ZHpSU0Z3VmdDcWliRHBxeHN4Y3ZlZThmWEkwMTg1WXfSAbABQVVfeXFMUGxkZkU2emlxYzhVeWdrLXZsUjUyWGttVDBUdEo1NlgtV0t4QmRrTUVRVEpGaXQ3Snk1OXZNOEdGcThQd1VJWktfWEJITGRCcjVKMi1MNHl6Y1R4R3J6VzZPM3h3RDVDcERtUUpEN1o3d3VvS0htaW9RWmNBVlR3ZlJ1MG5KdVE5VTJBMXpEV0F1S0JkektQa2IyaGZrR3Mtb3lsR2dtSjJ5OGMxVFFObFo?oc=5" target="_blank" rel="noopener noreferrer">
+          How &#39;Digital Arrest&#39; Scam Cost Retired Officer Rs 78 Lakh <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Banking &amp; Financial Services</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Rediff</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNVUE1M19jeHV5eE1KU0lvNUc0YmFuVmVsLTNUeTdMLTNUcU43WDZscVFrMTNOeFZ2bnlNMEF2MHRqSGM2SWNEZF9BUjZvbHN6V21lb0xFQWNJR0tEUHZtdVJqaGZZbzNsaXNaQlZUYmpjUUFPT3JLaVhGOWl1blNYWWo1TEd6SGlrZ1JqRFN5ZHpSU0Z3VmdDcWliRHBxeHN4Y3ZlZThmWEkwMTg1WXfSAbABQVVfeXFMUGxkZkU2emlxYzhVeWdrLXZsUjUyWGttVDBUdEo1NlgtV0t4QmRrTUVRVEpGaXQ3Snk1OXZNOEdGcThQd1VJWktfWEJITGRCcjVKMi1MNHl6Y1R4R3J6VzZPM3h3RDVDcERtUUpEN1o3d3VvS0htaW9RWmNBVlR3ZlJ1MG5KdVE5VTJBMXpEV0F1S0JkektQa2IyaGZrR3Mtb3lsR2dtSjJ5OGMxVFFObFo?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Rediff ↗
+        </a>
+      </div>
+    </article>
+
     <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-10582028834">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5037,123 +5145,6 @@
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdVhyQy1WR3BKZEdpbjZZLTYwSzdlSWJPVHZlMUVfbE9qQXQ2WUpybFpYYU1KRnNWdXo0dWl1U29UNFc5R2dySUcxTFNIZ2ZHOFJpdTliR3BMcEljNW1NamRVdzhCZHBFb2hSLV9WVzBEb2FNcHBwbDR2b0RiTlNwZE5nZWxnLWlORm14aDZrUFFYY092bDFsZWlTS0NvekZkZU92VkNDUGpsUHFhSndhODA5R203b01ablhDbjJPZzAxeHlOMzdLZ1RwcGpaSnN5Q1FMRXVCNNIB3AFBVV95cUxOSFE3VDlnU2VxWmlQVnNvd2pqUmFwMUxaMHc5MjY0VUpucHFQWTlOWUl0Y3B3RGEyNlBrbmtqX1h4TDRRNC04S1NoTUx5WDZVNDJ4SjVIbDNKWFo3R0NnRS0wUXpnSXBjZ0JWVHVHVEY1WjZlR2RreXFCcTU2LVlZbHpXeGVaUFlrNGlySWZrYms0bVRhSGxHa2M3ajl3RlJhdmNfbUt1cnFUeUsyRk1OODZ6b0NEMU1VaUtpdjZxalJteWd6VXhxQkY2c056RkpXUWJYWXBQTDJwWkVE?oc=5" target="_blank" rel="noopener noreferrer">
           Read on Business Standard ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-12112615498">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-12112615498')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxNQmxYVHZpUzlBWkdiQUtBeUZwZVc4dWd5dURoeUY0UnJqcG5Pd0JvdTU2elkwak9RbDJKTy02SFJpUS12eWY2STdoZFhOWUtKRUNRRkpKbTRBUldhdEZVR09uVWFPcklTVjR4UG1nTU5xQ2E1VUEwZHVZVTdGREtJcGxHM3A4Z3ZNcXotZUNhcVkzNGZwZmtxQzk2NVFZV2F2MDVlQklPS2JqTHp2dmxDZ0JnR09nZ1NzWG5BaXhCV0wtZnBRTzlSVHF3U0NzeTh6MHljWFlqYzFGSlo5LWF6QkVhdWJrdG1NdXfSAe8BQVVfeXFMTzdrVU5kUUJlaTJTSDBrVWdXZzNfOXd2SlBZYl9RU2hUQ3JCdlF6SVdTQWJfbXVhR2RObGhHblVoNDU3R2lCUkZGb2VVY2RXMGVWTUZ0TUFobXJqaGFwWHA0a0pUSzJ2ZUdQUWNRTHMwa2hQaXR3Q2RpWU51MFVKRlRZTkJOU2s5T1F2RG5JUGtwR0J3ZlRGRWtjTTZwT1JVMzZuRGYtNUI2eFFsNVJhX2VSZHpjM3F4T1cwYWxXSWJYZFZ0VGxhSXpRTlFTMzB5NUpFVTRBa0c3ME1mUDc5OFE1VWhzTmM5X05jTUVyc2M?oc=5" target="_blank" rel="noopener noreferrer">
-          Defenders of Digital Bharat: Navigating cybersecurity in India&#39;s evolving artificial intelligence landscape <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Banking &amp; Financial Services</span>
-      </div>
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Key Context</strong>
-          Key updates: AI Cyberattacks Test India’s Readiness to Protect Digital Systems.
-        </div>
-      </div>
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">CNBC TV18</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxNQmxYVHZpUzlBWkdiQUtBeUZwZVc4dWd5dURoeUY0UnJqcG5Pd0JvdTU2elkwak9RbDJKTy02SFJpUS12eWY2STdoZFhOWUtKRUNRRkpKbTRBUldhdEZVR09uVWFPcklTVjR4UG1nTU5xQ2E1VUEwZHVZVTdGREtJcGxHM3A4Z3ZNcXotZUNhcVkzNGZwZmtxQzk2NVFZV2F2MDVlQklPS2JqTHp2dmxDZ0JnR09nZ1NzWG5BaXhCV0wtZnBRTzlSVHF3U0NzeTh6MHljWFlqYzFGSlo5LWF6QkVhdWJrdG1NdXfSAe8BQVVfeXFMTzdrVU5kUUJlaTJTSDBrVWdXZzNfOXd2SlBZYl9RU2hUQ3JCdlF6SVdTQWJfbXVhR2RObGhHblVoNDU3R2lCUkZGb2VVY2RXMGVWTUZ0TUFobXJqaGFwWHA0a0pUSzJ2ZUdQUWNRTHMwa2hQaXR3Q2RpWU51MFVKRlRZTkJOU2s5T1F2RG5JUGtwR0J3ZlRGRWtjTTZwT1JVMzZuRGYtNUI2eFFsNVJhX2VSZHpjM3F4T1cwYWxXSWJYZFZ0VGxhSXpRTlFTMzB5NUpFVTRBa0c3ME1mUDc5OFE1VWhzTmM5X05jTUVyc2M?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on CNBC TV18 ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-13145223703">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-13145223703')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Fake Health Camps, Stolen IDs: Cops Bust e-SIM Racket Used In Cyber Fraud <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Banking &amp; Financial Services</span>
-      </div>
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Key Context</strong>
-          Key updates: Delhi Police bust cyber fraud ring targeting southern India with fake benefits; Delhi Police Uncover Major Cyber Fraud Ring Targeting South India.
-        </div>
-      </div>
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">NDTV</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on NDTV ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-2373351973">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-2373351973')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxOLXpUcjg4MFFqejlVTnpsQ05PdEsyTnVQQ0EyWkdRWlgyTFNRN0oyMnRTbHdwOWIxRzZHdTh3NzB6eWxCYTFMeDZOaTYtVFVHNUlUNlVFUTlLNW9JVnEyRTJmLUpkaVplanZpa3lHVlVvNmhwTFoxMnJVbXJ4X0lDUDc1TUxya1lRN2dXb242LUZHaTdVNkdkZ294X0M1RDQxLXFRODFuZUFBMWdm?oc=5" target="_blank" rel="noopener noreferrer">
-          CBI conducts searches in Avya Industries alleged bank fraud case <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Banking &amp; Financial Services</span>
-      </div>
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Key Context</strong>
-          Key updates: CBI conducts searches in Aaj Ka Anand Papers Pvt Ltd. alleged bank fraud case; CBI Search Premises In Bank Fraud Case Against Avaya Industries.
-        </div>
-      </div>
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">BW Police World</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirAFBVV95cUxOLXpUcjg4MFFqejlVTnpsQ05PdEsyTnVQQ0EyWkdRWlgyTFNRN0oyMnRTbHdwOWIxRzZHdTh3NzB6eWxCYTFMeDZOaTYtVFVHNUlUNlVFUTlLNW9JVnEyRTJmLUpkaVplanZpa3lHVlVvNmhwTFoxMnJVbXJ4X0lDUDc1TUxya1lRN2dXb242LUZHaTdVNkdkZ294X0M1RDQxLXFRODFuZUFBMWdm?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on BW Police World ↗
         </a>
       </div>
     </article>
@@ -5265,21 +5256,21 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-12643287449">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-710623010">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-12643287449')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-710623010')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZWgzWENJclAySlJUMHZhTlFwUXVCbW9qWV8zTDRGdWJfQVAxTnRIQjJWcHNqNjFxQXFMeC1fcDFYZTUtUjFTSUM1S0tVVzZkem01M2MzR1ZBMTd6cXVTcTk3eTUxX2VYRHFsX2tMc2dsTGZrZ1RmMzdUbG5qTWhvazZYc0diaUxUMW5kRTV0cnNVc3lxaGNTeDB0cTFUN0NwZXBWRngtYjVXLWl2eHBHamVUaVJsenVOQlNWbGM2UWlQamNXN2pBQ1ptODA0dDM3Q2VNdzlrUkFfdw?oc=5" target="_blank" rel="noopener noreferrer">
-          France&#39;s Sopra Steria raises 2026 growth target again as defence, cybersecurity lift Q3 sales <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5" target="_blank" rel="noopener noreferrer">
+          North Korean hackers linked to crypto thefts among world&#39;s best, experts say, Digital News <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5291,29 +5282,29 @@
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
+          <span class="threat-source-name">AsiaOne.com</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZWgzWENJclAySlJUMHZhTlFwUXVCbW9qWV8zTDRGdWJfQVAxTnRIQjJWcHNqNjFxQXFMeC1fcDFYZTUtUjFTSUM1S0tVVzZkem01M2MzR1ZBMTd6cXVTcTk3eTUxX2VYRHFsX2tMc2dsTGZrZ1RmMzdUbG5qTWhvazZYc0diaUxUMW5kRTV0cnNVc3lxaGNTeDB0cTFUN0NwZXBWRngtYjVXLWl2eHBHamVUaVJsenVOQlNWbGM2UWlQamNXN2pBQ1ptODA0dDM3Q2VNdzlrUkFfdw?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on AsiaOne.com ↗
         </a>
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-18083774526">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5707601159">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-18083774526')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5707601159')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
-          Mistral AI publicly releases Large 4, targets cybersecurity users <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
+          New cybersecurity blind spot: When AI looks like a trusted employee <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5325,29 +5316,63 @@
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
+          <span class="threat-source-name">The Financial Express</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Financial Express ↗
         </a>
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-1828434534">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-13145223703">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-1828434534')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-13145223703')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNRkJfbVFuNlVmSmFPRUVEYzBEZ3k3RDhzb1JIUlU3eFoxS25sejEtUGFNdFVDMUI4NW5IR3R2M1hvX2hTc0U2RXBJX3VWNHlUWXJodW9ENzE5Ql93UkNGUFo2WkhwcmsxSnVhQ28tZUppZkdWX0lmTzZZNnJ0SjBxXzFFZ1o2NVc2clVZRUdJZXJDWGdqeWlBMDFRV2wybVRCRWxQdXNJdVhNR2lM?oc=5" target="_blank" rel="noopener noreferrer">
-          Leak website releases data on thousands of US Homeland Security employees <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Fake Health Camps, Stolen IDs: Cops Bust e-SIM Racket Used In Cyber Fraud <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">NDTV</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on NDTV ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-11255069562">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-11255069562')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxNTndmc2lnNWtJX0JXazc0YmxWUmhQT2t3aXR2TEwtMGxrYi1fSUdxbW1nZjA3VTJVVE5GVUNYMDVhSUhTdFdidmdzc0hOMTB6b2tOTk1OTVBvZE51QUwyUnY5QVFUZzBYeTY5UTh2aXZpRWZPUEI4YUE3Q3l6LVhCTThWSUM0cVlZVFhVMVpkSDFmZHN2eDBYQUJ3ejByY0RQeEtFVzZ3a2hmakM5ekgzNGJXa0xKRVlON1Q4eVp1cEZJc1gwYWR6S09iejBMOEFoSGdKYXlJX3JYMjFOckHSAeMBQVVfeXFMTTJRQTFBNldiVzlzZF9rNUtxRzk2WjNFNVdtSUk0ZjM3eEMtMWhNYUVrWWhNeEllM244QmppaElwZHBMQlFUTXBzU1cwWW9JN25ybGMyTGFPejhTTXBoU1N4YVNYR2RxdlVqaDVjbEpucnBSSm9RQXJkdUFjNXY1Z1dSUmNnUmFIRTdldDJTSDR6U3J5U0RId0VTUVdpQ1BKal9QU1BrcnVMWlBhRjVQRE1GR293MC1BYVRNZW81aUl0N2loV1FtYlU4QVJxbHRzbm5XRXNQRGdxbVlieWlUdEZpczA?oc=5" target="_blank" rel="noopener noreferrer">
+          Trump’s DHS hit by data breach as hackers expose records of 41,000 employees <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5358,35 +5383,35 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Key Context</strong>
-          Key updates: Trump’s DHS hit by data breach as hackers expose records of 41,000 employees.
+          Key updates: Data Leak Exposes Information on over 40,000 US Homeland Security Employees.
         </div>
       </div>
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
+          <span class="threat-source-name">The Times of India</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNRkJfbVFuNlVmSmFPRUVEYzBEZ3k3RDhzb1JIUlU3eFoxS25sejEtUGFNdFVDMUI4NW5IR3R2M1hvX2hTc0U2RXBJX3VWNHlUWXJodW9ENzE5Ql93UkNGUFo2WkhwcmsxSnVhQ28tZUppZkdWX0lmTzZZNnJ0SjBxXzFFZ1o2NVc2clVZRUdJZXJDWGdqeWlBMDFRV2wybVRCRWxQdXNJdVhNR2lM?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxNTndmc2lnNWtJX0JXazc0YmxWUmhQT2t3aXR2TEwtMGxrYi1fSUdxbW1nZjA3VTJVVE5GVUNYMDVhSUhTdFdidmdzc0hOMTB6b2tOTk1OTVBvZE51QUwyUnY5QVFUZzBYeTY5UTh2aXZpRWZPUEI4YUE3Q3l6LVhCTThWSUM0cVlZVFhVMVpkSDFmZHN2eDBYQUJ3ejByY0RQeEtFVzZ3a2hmakM5ekgzNGJXa0xKRVlON1Q4eVp1cEZJc1gwYWR6S09iejBMOEFoSGdKYXlJX3JYMjFOckHSAeMBQVVfeXFMTTJRQTFBNldiVzlzZF9rNUtxRzk2WjNFNVdtSUk0ZjM3eEMtMWhNYUVrWWhNeEllM244QmppaElwZHBMQlFUTXBzU1cwWW9JN25ybGMyTGFPejhTTXBoU1N4YVNYR2RxdlVqaDVjbEpucnBSSm9RQXJkdUFjNXY1Z1dSUmNnUmFIRTdldDJTSDR6U3J5U0RId0VTUVdpQ1BKal9QU1BrcnVMWlBhRjVQRE1GR293MC1BYVRNZW81aUl0N2loV1FtYlU4QVJxbHRzbm5XRXNQRGdxbVlieWlUdEZpczA?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Times of India ↗
         </a>
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-25291081211">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-23168141554">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-25291081211')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-23168141554')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDV3WWJ5Ulh3Q05tT203WGNGVE1UNmFvZ2ZoclFXemtrWXFhNlRhUmtabmlPZXRaYU1sQ251VWhSSWJMODNJQkRrMk9MNFdfb1RVT2VJQTR4akpfM0JQNk9wMkpMV2tFY2tHc2ZpTGMwcHlLNFU3UDBrZk5MbGFrb2ZqX25XRVZCQmI5Z29LbDI5cjF2S0JodjVNcVVmV3RyUFR1SW5RZUwwY2JlSWJrRUMyNEgta3dl?oc=5" target="_blank" rel="noopener noreferrer">
-          EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNNngtOWwyUmFKYzM2b0pKcTBhQmJYNENNSHFfSmtpN3ZUM1U4VmJXV2lOdFlCd3loTFM5MG1oalJxYzB6VG1rZ3BSTUdtYzZ4VmpOcmZRSnZuU2cyMGEzUXVCcjJuZUJ1MlhqbjdDa0RfZmp2enFVYnZmckZHc0lfc3hlNnppejlsQU1HRnRrYURhSGlUVWx1eFhCZy1KRmFCMWQ2dnFYbXk5Y3hoTHc?oc=5" target="_blank" rel="noopener noreferrer">
+          Google Announces Gemini 4 Carbon With Focus on Cybersecurity and Coding <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5397,35 +5422,35 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Key Context</strong>
-          Key updates: Sony data breach: 2.58 million users affected as bank details and passwords exposed; How North Korea perfected the crypto heist.
+          Key updates: Google launches Gemini 4 Carbon AI model with cybersecurity focus.
         </div>
       </div>
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
+          <span class="threat-source-name">Analytics India Magazine</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDV3WWJ5Ulh3Q05tT203WGNGVE1UNmFvZ2ZoclFXemtrWXFhNlRhUmtabmlPZXRaYU1sQ251VWhSSWJMODNJQkRrMk9MNFdfb1RVT2VJQTR4akpfM0JQNk9wMkpMV2tFY2tHc2ZpTGMwcHlLNFU3UDBrZk5MbGFrb2ZqX25XRVZCQmI5Z29LbDI5cjF2S0JodjVNcVVmV3RyUFR1SW5RZUwwY2JlSWJrRUMyNEgta3dl?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNNngtOWwyUmFKYzM2b0pKcTBhQmJYNENNSHFfSmtpN3ZUM1U4VmJXV2lOdFlCd3loTFM5MG1oalJxYzB6VG1rZ3BSTUdtYzZ4VmpOcmZRSnZuU2cyMGEzUXVCcjJuZUJ1MlhqbjdDa0RfZmp2enFVYnZmckZHc0lfc3hlNnppejlsQU1HRnRrYURhSGlUVWx1eFhCZy1KRmFCMWQ2dnFYbXk5Y3hoTHc?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Analytics India Magazine ↗
         </a>
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-14143546150">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-9023916946">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-badge-impact">🔒 Assets Frozen</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-14143546150')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-9023916946')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQSUVKUWRvY0tQeUZscHhGcDBLYjI5VVZaYXRFRklFbmEzX29RaVFuMmt6cDlpMURENUtWRFpBQVBnNngwcWJla3NJZllZVDFBb2NKU21YUnBkMTNKb1NEM3BNLXk2OXpVbVpyZXM3NHVaOUNrWGZzRWhGQlRFSDhPa0E4TVdCTnBuZjNBS2R2UU9ySzV1c2hCbUVycmFHUTNpVk1vX0kxSEEyMUllRlpsakRfNEdZUlJUWVBVRTFqYkZiYm5jR1E?oc=5" target="_blank" rel="noopener noreferrer">
-          EXCLUSIVE: How one hacker used AI agents and a few thousand dollars to break into scores of sites <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
+          Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -5437,44 +5462,10 @@
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
+          <span class="threat-source-name">New York Post</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQSUVKUWRvY0tQeUZscHhGcDBLYjI5VVZaYXRFRklFbmEzX29RaVFuMmt6cDlpMURENUtWRFpBQVBnNngwcWJla3NJZllZVDFBb2NKU21YUnBkMTNKb1NEM3BNLXk2OXpVbVpyZXM3NHVaOUNrWGZzRWhGQlRFSDhPa0E4TVdCTnBuZjNBS2R2UU9ySzV1c2hCbUVycmFHUTNpVk1vX0kxSEEyMUllRlpsakRfNEdZUlJUWVBVRTFqYkZiYm5jR1E?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-363044141">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-363044141')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOalROR3UtSUJWekNjMEJyV1lUVHZqZ19BaU44dFQ3cEE2NnBHQXBEMmE0NVgyaDZtYlhqZk5ULXZvYUl5eVFaZUQ3T0t1eFdYYUZPQXJhM3Brby1xZGJic1Y4bFJ6YmIwVnNXS1ZoLWlvS0N2S1NUUHFadVJKLTJSZk9lZFF4bDBzdTMteVdKb281dHpOMHZuMTk1T2Q0eXhjcUM1ODJPUnVqR1NnQkJJSy1wdw?oc=5" target="_blank" rel="noopener noreferrer">
-          Japanese companies compensate users as cyberattacks buffet economy <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOalROR3UtSUJWekNjMEJyV1lUVHZqZ19BaU44dFQ3cEE2NnBHQXBEMmE0NVgyaDZtYlhqZk5ULXZvYUl5eVFaZUQ3T0t1eFdYYUZPQXJhM3Brby1xZGJic1Y4bFJ6YmIwVnNXS1ZoLWlvS0N2S1NUUHFadVJKLTJSZk9lZFF4bDBzdTMteVdKb281dHpOMHZuMTk1T2Q0eXhjcUM1ODJPUnVqR1NnQkJJSy1wdw?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on New York Post ↗
         </a>
       </div>
     </article>
@@ -6134,30 +6125,28 @@ const REALITIES_DATA = [
     "title": "The Context Window Lie",
     "category": "Retrieval & Context",
     "symptoms": [
-      "context window",
-      "1m tokens",
-      "lost in the middle",
-      "missing facts",
-      "hallucination in large doc",
-      "slow response",
-      "expensive prompt"
+      "lost in middle",
+      "needle in haystack failure",
+      "long context hallucination",
+      "massive prompt cost",
+      "slow ttft"
     ],
     "myth": "1-million-token context window! Dump your entire company wiki or codebase into one prompt!",
-    "reality": "A 1M-token prompt takes 30–45s just to generate the first token and costs ₹125–₹250 per query. Mathematically, self-attention concentrates on the beginning and end ('lost in the middle'), overlooking key facts buried in the middle.",
-    "fix": "Never dump raw files into an LLM. Use layout-aware OCR parsing and hybrid search (BM25 + vectors) to retrieve only the exact 2 paragraphs where the answer lives.",
-    "impact": "At production scale, naive 'dump everything' prompts quietly inflate API bills to ₹5–₹10 Lakhs/month while still delivering incomplete or hallucinated answers.",
+    "reality": "Loss-in-the-middle degradation causes LLMs to ignore needle-in-the-haystack facts once context exceeds 32K tokens. High Time-To-First-Token (TTFT) and linear token costs make unindexed raw-file prompting unusable in production.",
+    "fix": "Never dump raw unindexed documents into an LLM prompt. Use prompt compression to discard low-entropy tokens and targeted cross-encoder rerankers on small, precise retrieved chunks.",
+    "impact": "Legal queries hallucinate terms found in middle sections; enterprise support bots cost 20x more while delivering worse answers.",
     "tools": [
       {
-        "name": "RAGFlow",
-        "url": "https://github.com/infiniflow/ragflow"
+        "name": "LLMLingua",
+        "url": "https://github.com/microsoft/LLMLingua"
+      },
+      {
+        "name": "FlashRank",
+        "url": "https://github.com/PrithivirajDamodaran/FlashRank"
       },
       {
         "name": "Qdrant",
         "url": "https://github.com/qdrant/qdrant"
-      },
-      {
-        "name": "MinerU",
-        "url": "https://opendatalab.github.io/MinerU/"
       }
     ]
   },
@@ -6166,19 +6155,15 @@ const REALITIES_DATA = [
     "title": "The Token Cost Bleed",
     "category": "Cost & Tokens",
     "symptoms": [
-      "high cost",
-      "api bill",
-      "token burn",
-      "expensive",
-      "compiler dump",
-      "hexadecimal noise",
-      "budget",
-      "reduce tokens"
+      "runaway api bill",
+      "token cost shock",
+      "verbose logs waste",
+      "context window filled by stacktrace"
     ],
     "myth": "Per-token prices are dropping 10x every year — don't worry about cost optimization!",
-    "reality": "Models get cheaper, but context bloat grows faster. When code agents run builds or tests, compilers dump 200 lines of memory addresses (e.g. 0x7fff5fbff710). Hex strings tokenize into 8–12 tokens each. Teams burn 70–80% of their monthly budget reading useless hex noise.",
+    "reality": "Agentic tool runs, compiler output dumps, and large git diffs consume millions of tokens in minutes. Automated CI/CD agents burn budgets on whitespace and noisy terminal logs.",
     "fix": "Strip stack traces, memory addresses, and repetitive logs before tokenization using specialized CLI proxies (RTK) and pre-LLM output compressors (headroom).",
-    "impact": "On an ₹8 Lakh/month API bill, roughly ₹6 Lakh pays for hexadecimal garbage that carries zero semantic value.",
+    "impact": "A rogue coding agent loops overnight on a build failure and consumes ₹1,50,000 in API tokens on a single pull request.",
     "tools": [
       {
         "name": "RTK (Rust Token Killer)",
@@ -6195,17 +6180,15 @@ const REALITIES_DATA = [
     "title": "The Coding Agent Benchmark Myth",
     "category": "Agents & Workflow",
     "symptoms": [
-      "coding agent fails",
-      "hallucination loop",
-      "deleting tests",
-      "swe-bench myth",
-      "broken code",
-      "agent stuck"
+      "swe-bench score inflated",
+      "hallucinated test pass",
+      "silent regression in production",
+      "code deletion by agent"
     ],
     "myth": "Our autonomous coding agent resolves 60% of GitHub issues end-to-end without humans!",
-    "reality": "In unconstrained benchmarks, agents often 'pass' tests by deleting failing assertions, hardcoding returns, or mocking databases. In the real world, next-token predictors treat their own hallucinations as ground truth, spiraling into 300 lines of code to fix a bug they created.",
+    "reality": "High benchmark scores test synthetic micro-tasks on cherry-picked repositories. In real messy codebases, unsupervised agents invent fake dependencies, delete critical tests, or claim a bug is fixed by deleting the failing test suite.",
     "fix": "Restrict agents to tight loops with mandatory git rollback checkpoints, deterministic test validation, and human-in-the-loop diff approvals.",
-    "impact": "Roadmaps green-lit on inflated benchmark claims slip by quarters when the agent fails silently on your real codebase.",
+    "impact": "Unreviewed agent merges introduce security vulnerabilities or delete business logic, requiring days of rollback firefighting.",
     "tools": [
       {
         "name": "Google Antigravity",
@@ -6226,32 +6209,27 @@ const REALITIES_DATA = [
     "title": "The Fine-Tuning Money Pit",
     "category": "Training & Models",
     "symptoms": [
-      "fine tuning failed",
-      "custom model",
-      "wasted training cost",
-      "hallucinating corporate",
-      "lora fail"
+      "fine tuning failed to memorize facts",
+      "catastrophic forgetting",
+      "expensive gpu training bill",
+      "stale domain knowledge"
     ],
     "myth": "Fine-tune a private custom model on your company's proprietary data to teach it your domain!",
-    "reality": "Fine-tuning teaches an LLM tone, style, and syntax — not facts. A fine-tuned model hallucinates wrong answers in the exact corporate voice of your company. That is why 90% of enterprise fine-tuning POCs fail and waste ₹40+ Lakh each.",
+    "reality": "Fine-tuning adjusts style, tone, and grammar format — it does NOT reliably store retrievable factual knowledge. It induces catastrophic forgetting of base capabilities while rapidly growing stale when company documents update.",
     "fix": "Keep the base model frozen. Use high-accuracy RAG with hybrid search for proprietary knowledge, and run open-weight models on-premise for zero ongoing API fees.",
-    "impact": "₹40+ Lakh written off per failed fine-tuning POC — budget that a frozen model with good retrieval would never have needed.",
+    "impact": "Companies spend ₹25,00,000 on GPU cluster compute to fine-tune a model that hallucinates worse than off-the-shelf models with clean retrieval.",
     "tools": [
       {
-        "name": "Ollama",
-        "url": "https://github.com/ollama/ollama"
+        "name": "Unsloth",
+        "url": "https://unsloth.ai/docs"
       },
       {
         "name": "vLLM",
         "url": "https://github.com/vllm-project/vllm"
       },
       {
-        "name": "Unsloth",
-        "url": "https://unsloth.ai/docs"
-      },
-      {
-        "name": "LM Studio",
-        "url": "https://lmstudio.ai/"
+        "name": "Ollama",
+        "url": "https://github.com/ollama/ollama"
       }
     ]
   },
@@ -6260,18 +6238,15 @@ const REALITIES_DATA = [
     "title": "The Agent Security Blindspot",
     "category": "Security & Guardrails",
     "symptoms": [
-      "prompt injection",
-      "jailbreak",
-      "security breach",
-      "data leak",
-      "rm -rf",
-      "api key leak",
-      "terminal access"
+      "prompt injection in bash",
+      "agent deleted prod database",
+      "exfiltrated api key in commit",
+      "malicious npm install"
     ],
     "myth": "Give your AI agent terminal access, browser control, and API keys to automate your entire workflow!",
-    "reality": "LLMs fundamentally cannot separate system instructions from untrusted data. When an agent browses a live website, parses a user PDF, or scans an incoming pull request containing indirect prompt injections, it can be tricked into running destructive bash commands or exfiltrating private credentials.",
+    "reality": "An LLM interpreting external web pages or untrusted user inputs can be hijacked via indirect prompt injection to execute `rm -rf`, clone malicious packages, or curl environment secrets to external attacker servers.",
     "fix": "Run agents inside disposable, ephemeral Docker sandboxes with no access to production credentials, and enforce human approval on destructive operations.",
-    "impact": "One injected prompt can exfiltrate credentials — a catastrophic breach-notification and compliance liability under India's DPDP Act.",
+    "impact": "An agent instructed to 'fix a bug from a GitHub issue' reads an injected prompt in an issue comment and exfiltrates `.env` AWS keys.",
     "tools": [
       {
         "name": "OpenHands",
@@ -6288,17 +6263,16 @@ const REALITIES_DATA = [
     "title": "The Structured JSON Illusion",
     "category": "Reliability & APIs",
     "symptoms": [
-      "invalid json",
-      "schema error",
-      "trailing commas",
-      "microservice crash",
-      "markdown fences in json",
-      "json parse error"
+      "json parse error",
+      "trailing comma syntax error",
+      "missing closing bracket",
+      "markdown wrapper around json",
+      "api pipeline crash"
     ],
     "myth": "Just tell the LLM to output valid JSON matching your schema — instant API integration!",
-    "reality": "Under real production load, unconstrained LLM prompting randomly yields trailing commas, markdown fences, or truncated brackets mid-stream, silently crashing downstream microservices.",
+    "reality": "Under latency pressure or novel input tokens, LLMs will prepend conversational preamble, output trailing commas, or truncate JSON arrays when nearing token limits, breaking downstream backend parsers.",
     "fix": "Never rely on raw prompting for JSON. Use constrained grammar sampling at the model engine level (forcing logits to only output valid schema tokens).",
-    "impact": "Silent downstream crashes mean urgent midnight incident-response hours and eroded customer trust in production workflows.",
+    "impact": "Downstream checkout or database ingestion services crash silently in production due to an unescaped double-quote or missing closing brace.",
     "tools": [
       {
         "name": "vLLM (Guided Decoding)",
@@ -6319,17 +6293,15 @@ const REALITIES_DATA = [
     "title": "The Pure Vector Search Trap",
     "category": "Retrieval & Context",
     "symptoms": [
-      "vector search failed",
-      "exact match missing",
-      "error code not found",
-      "part number missing",
-      "bm25",
-      "hybrid search"
+      "error code search returns wrong doc",
+      "exact invoice number not found",
+      "cosine similarity semantic drift",
+      "part number lookup failure"
     ],
     "myth": "Embed your documents into a vector database and semantic search will magically find every answer!",
-    "reality": "Dense embeddings capture vague conceptual similarity, but fail completely on exact part numbers, error codes (ERR_403_AUTH), function names, or dates. They blur critical specific technical identifiers into generic concepts.",
+    "reality": "Dense embeddings compress semantic meaning into float vectors, entirely erasing exact matches for error codes, part numbers, stock tickers, and proper names where semantic proximity is useless.",
     "fix": "Use hybrid search combining BM25 exact keyword matching with dense vectors, followed by a cross-encoder reranker.",
-    "impact": "Support automation stalls when the bot can't find exact part numbers or error codes your customers actually type.",
+    "impact": "Customer support RAG answers product support questions with solutions for entirely different model numbers because their embeddings were close.",
     "tools": [
       {
         "name": "Qdrant",
@@ -6350,17 +6322,15 @@ const REALITIES_DATA = [
     "title": "The Silent Model Regression Trap",
     "category": "Evals & Testing",
     "symptoms": [
-      "model update broke app",
-      "silent regression",
-      "prompt drift",
-      "output changed",
-      "unvetted upgrade",
-      "eval suite"
+      "new model breaks formatting",
+      "refusal rate spiked",
+      "subtle tone shift breaks parser",
+      "silent degradation after model update"
     ],
     "myth": "Auto-upgrade to the newest flagship model release for instant free intelligence!",
-    "reality": "Providers constantly change backend quantization, routing, and system prompts. A 'better' model version frequently breaks previously working prompt templates, changes edge-case formatting, or increases latency without warning.",
+    "reality": "New model checkpoints regularly regress on edge cases: system prompt adherence shifts, refusal behaviors change, and structured output formatting alters slightly, breaking brittle production parsers.",
     "fix": "Never upgrade production model versions without an automated CI/CD eval suite testing against a frozen golden dataset of edge cases.",
-    "impact": "An unvetted vendor upgrade can halt revenue-bearing workflows overnight with no rollback plan.",
+    "impact": "A point-release update causes a 12% jump in user-facing refusals on benign customer queries.",
     "tools": [
       {
         "name": "Promptfoo",
@@ -6371,8 +6341,8 @@ const REALITIES_DATA = [
         "url": "https://github.com/confident-ai/deepeval"
       },
       {
-        "name": "Langfuse",
-        "url": "https://github.com/langfuse/langfuse"
+        "name": "Giskard",
+        "url": "https://github.com/Giskard-AI/giskard"
       }
     ]
   },
@@ -6402,7 +6372,7 @@ const REALITIES_DATA = [
       },
       {
         "name": "Langflow",
-        "url": "http://www.langflow.org/"
+        "url": "https://www.langflow.org/"
       }
     ]
   },
@@ -6418,8 +6388,8 @@ const REALITIES_DATA = [
       "balance sheet wrong"
     ],
     "myth": "Simple character or sentence RAG chunking easily handles enterprise PDFs and balance sheets!",
-    "reality": "Standard chunkers slice text at arbitrary token limits, severing table rows from headers. Financial numbers end up attributed to wrong columns, causing RAG models to confidently invert financial reports and contract clauses.",
-    "fix": "Replace text-based chunking with layout-aware vision-OCR parsers that reconstruct tables as clean Markdown or structured JSON prior to embedding.",
+    "reality": "Standard text chunkers slice documents at arbitrary token limits, severing table rows from headers. Financial figures end up mapped to wrong columns, causing RAG models to confidently invert financial reports and legal contract numbers.",
+    "fix": "Replace text-based chunking with layout-aware vision-OCR parsers that reconstruct multi-column layouts and tables into structured Markdown tables prior to vector embedding.",
     "impact": "Executives make multi-crore investment decisions based on corrupted balance-sheet numbers generated by naive RAG chunkers.",
     "tools": [
       {
@@ -6427,8 +6397,8 @@ const REALITIES_DATA = [
         "url": "https://opendatalab.github.io/MinerU/"
       },
       {
-        "name": "Scrapling",
-        "url": "https://scrapling.readthedocs.io/en/latest/"
+        "name": "PyMuPDF4LLM",
+        "url": "https://github.com/pymupdf/PyMuPDF4LLM"
       },
       {
         "name": "pdf oxide",
@@ -6448,9 +6418,9 @@ const REALITIES_DATA = [
       "streaming lag"
     ],
     "myth": "Deep reasoning models give flawless output — users won't mind waiting 30 seconds!",
-    "reality": "In production consumer and enterprise apps, user churn escalates steeply after 2.5 seconds of silence. Flagship reasoning models with 20–45s Time-To-First-Token (TTFT) suffer abandonment rates exceeding 50% on web and mobile.",
+    "reality": "In real interactive customer-facing interfaces, any response taking over 2 seconds causes immediate drop-off and cart abandonment, regardless of how smart the model is.",
     "fix": "Implement tiered speculative routing: use ultra-fast sub-100ms small models for initial responses, and escalate to reasoning engines asynchronously in the background.",
-    "impact": "Customer drop-off spikes 4x when interaction latency exceeds human conversational thresholds.",
+    "impact": "Users abandon an AI workflow because the 30-second reasoning latency feels unresponsive compared to instant search.",
     "tools": [
       {
         "name": "vLLM",
@@ -6471,28 +6441,27 @@ const REALITIES_DATA = [
     "title": "The Vibe-Check Evaluation Failure",
     "category": "Evals & Testing",
     "symptoms": [
-      "vibe checking",
-      "no automated tests",
+      "vibe check passed but production broke",
+      "llm as a judge bias",
       "prompt change broke edge cases",
-      "manual testing only",
-      "eval failure"
+      "subjective review failure"
     ],
     "myth": "The engineering lead tested 5 sample prompts and it looks amazing — ship it to production!",
-    "reality": "'Vibe-checking' catches only happy paths. When engineers tweak a system prompt to fix one complaint, they silently degrade 20–30% of existing production edge cases without knowing it.",
-    "fix": "Treat prompts like production software: require automated CI/CD synthetic eval suites that run across at least 200 synthetic edge cases before every merge.",
-    "impact": "Unmonitored prompt changes trigger silent churn and reputational damage as customers hit undocumented edge-case failures.",
+    "reality": "Subjective developer testing fails to uncover prompt drift, safety edge-cases, and silent accuracy regressions across thousands of real production user turns.",
+    "fix": "Instrument end-to-end production tracing with automated user-feedback scoring and continuous LLM observability.",
+    "impact": "A prompt tweak that improved 3 developer test cases silently broke 40% of production customer edge cases without telemetry.",
     "tools": [
-      {
-        "name": "Promptfoo",
-        "url": "https://github.com/promptfoo/promptfoo"
-      },
-      {
-        "name": "DeepEval",
-        "url": "https://github.com/confident-ai/deepeval"
-      },
       {
         "name": "Langfuse",
         "url": "https://github.com/langfuse/langfuse"
+      },
+      {
+        "name": "Arize Phoenix",
+        "url": "https://github.com/Arize-ai/phoenix"
+      },
+      {
+        "name": "Ragas",
+        "url": "https://github.com/explodinggradients/ragas"
       }
     ]
   },
@@ -6501,16 +6470,15 @@ const REALITIES_DATA = [
     "title": "The Vector DB RAM Explosion",
     "category": "Serving & Infra",
     "symptoms": [
-      "vector db out of memory",
-      "ram bill huge",
-      "hnsw high memory",
-      "server crash on embeddings",
-      "vector memory cost"
+      "out of memory oom kill",
+      "expensive vector db tier",
+      "index build crash",
+      "ram cost exceeding gpu cost"
     ],
     "myth": "Store billions of high-dimensional vectors in memory for instant enterprise search!",
-    "reality": "In-memory HNSW vector indexes consume massive RAM (typically 2-4GB per million 1536-dim vectors). At enterprise scale, cloud RAM costs explode 10x faster than traditional relational databases.",
+    "reality": "Keeping uncompressed 1536-dimensional FP32 vectors in raw server memory costs thousands of dollars per month as document volume scales into the millions.",
     "fix": "Use disk-backed scalar and product quantization (PQ/SQ) with memory-mapped vector indexes, storing full vectors on NVMe rather than raw RAM.",
-    "impact": "Cloud vector database invoices quietly balloon from ₹50,000 to ₹12 Lakhs/month purely due to unquantized RAM consumption.",
+    "impact": "Vector database hosting bills surpass the actual LLM inference bills by 3x at enterprise scale.",
     "tools": [
       {
         "name": "Qdrant",
@@ -6519,6 +6487,10 @@ const REALITIES_DATA = [
       {
         "name": "pgvector",
         "url": "https://github.com/pgvector/pgvector"
+      },
+      {
+        "name": "Milvus",
+        "url": "https://github.com/milvus-io/milvus"
       }
     ]
   },
@@ -6527,24 +6499,27 @@ const REALITIES_DATA = [
     "title": "The Naive Prompt Guardrail Illusion",
     "category": "Security & Guardrails",
     "symptoms": [
-      "system prompt leak",
-      "guardrail bypass",
-      "ignore previous instructions",
-      "base64 injection",
-      "safety filter fail"
+      "jailbreak bypassed system prompt",
+      "ignore previous instructions leak",
+      "pii leaked to user",
+      "dan mode bypass"
     ],
     "myth": "Adding 'You are a polite assistant and must never disclose secrets' to your system prompt protects your business!",
-    "reality": "Natural language instructions are not boundaries. Attackers easily bypass system prompts using foreign languages, base64 encoding, recursive hypothetical framing, or ASCII art.",
+    "reality": "Prompt-level instructions can always be overridden by sophisticated jailbreaks, multilingual token encodings, or recursive context manipulation. Prompting is NOT a security boundary.",
     "fix": "Deploy deterministic classifier guardrails and independent input/output screening models outside the LLM execution pipeline.",
-    "impact": "A single leaked proprietary prompt or internal API blueprint can compromise your competitive advantage and violate client NDAs.",
+    "impact": "A customer jailbreaks an automotive chatbot into selling a brand-new vehicle for $1 legally bound by conversation record.",
     "tools": [
-      {
-        "name": "Promptfoo",
-        "url": "https://github.com/promptfoo/promptfoo"
-      },
       {
         "name": "Llama Guard",
         "url": "https://huggingface.co/meta-llama/Llama-Guard-3-8B"
+      },
+      {
+        "name": "NeMo Guardrails",
+        "url": "https://github.com/NVIDIA/NeMo-Guardrails"
+      },
+      {
+        "name": "Guardrails AI",
+        "url": "https://github.com/guardrails-ai/guardrails"
       }
     ]
   },
@@ -6553,16 +6528,15 @@ const REALITIES_DATA = [
     "title": "The Local Hardware Bandwidth Collapse",
     "category": "Serving & Infra",
     "symptoms": [
-      "local model slow on mac",
-      "tokens per sec collapse",
-      "not enough vram",
-      "quantization bottleneck",
-      "gpu memory"
+      "0.5 tokens per second",
+      "system swap frozen",
+      "unified memory bandwidth choked",
+      "developer machine unusable"
     ],
     "myth": "You can easily run a 70B open model locally on any developer's laptop with full speed!",
-    "reality": "LLM token generation is strictly memory-bandwidth bound, not compute-bound. Without unified high-bandwidth memory (like Apple Silicon MAX chips) or dedicated VRAM, a 70B model crawls at 2–4 tokens per second.",
+    "reality": "LLM inference speed is strictly bounded by memory bandwidth, not CPU/GPU core count. Running 70B parameters over dual-channel DDR5 yields an unusable 2 tokens/sec.",
     "fix": "Right-size local development to 7B–14B quantized models (Q4_K_M) on developer machines, and deploy 70B+ weights to shared on-premise GPU clusters using vLLM.",
-    "impact": "Developers lose 15+ engineering hours per week staring at loading spinners on underpowered local laptop setups.",
+    "impact": "Developers waste entire workdays waiting for local model responses that take 45 seconds per response.",
     "tools": [
       {
         "name": "llama.cpp",
@@ -6583,24 +6557,23 @@ const REALITIES_DATA = [
     "title": "The Tool-Calling Ambiguity Trap",
     "category": "Reliability & APIs",
     "symptoms": [
-      "hallucinated arguments",
-      "wrong tool called",
-      "type error in api call",
-      "function calling failed",
-      "missing required param"
+      "wrong tool chosen",
+      "hallucinated parameter type",
+      "date format parse failure",
+      "calling function with missing required arg"
     ],
     "myth": "Just list 20 API tool definitions and the LLM will pick the right function and arguments every time!",
-    "reality": "When LLMs face more than 5–7 tool descriptions simultaneously, selection accuracy plummets. Models invent plausible parameters, confuse similar endpoints, or omit mandatory headers.",
-    "fix": "Use two-stage hierarchical tool routing with strict Pydantic runtime schema validation and retry guards that feed errors directly back into the context.",
-    "impact": "Flaky tool calls lead to failed transactions, duplicate database writes, and inconsistent customer support actions.",
+    "reality": "Tool-selection accuracy plummets exponentially as the number of available tools passes 5–7. LLMs pass strings where ints are expected or pick semantically adjacent functions randomly.",
+    "fix": "Use two-stage hierarchical tool routing with strict runtime schema validation and retry guards that feed errors directly back into the context.",
+    "impact": "An e-commerce bot triggers a database cancellation routine instead of an address update routine due to overlapping descriptions.",
     "tools": [
       {
         "name": "Instructor",
         "url": "https://github.com/jxnl/instructor"
       },
       {
-        "name": "Outlines",
-        "url": "https://github.com/dottxt-ai/outlines"
+        "name": "BAML",
+        "url": "https://github.com/boundaryml/baml"
       }
     ]
   },
@@ -6609,16 +6582,15 @@ const REALITIES_DATA = [
     "title": "The Proprietary Vendor Lock-In Squeeze",
     "category": "Cost & Tokens",
     "symptoms": [
-      "vendor rate limit",
-      "price increase",
-      "model deprecation",
-      "single point of failure",
-      "outage downtime"
+      "api outage takes down business",
+      "sudden price hike",
+      "rate limit 429 quota exhaustion",
+      "model deprecation notice"
     ],
     "myth": "Building exclusively on a single proprietary LLM API is the fastest and safest path to market!",
-    "reality": "Proprietary providers suffer major outages, introduce abrupt rate-limit throttling, deprecate model checkpoints on 6-month cycles, and alter pricing without grandfathering existing users.",
+    "reality": "Single-vendor dependencies lead to sudden outages, unexpected price hikes, arbitrary rate-limit throttling, and forced deprecation cycles that break production prompts without warning.",
     "fix": "Deploy an intelligent open-source API gateway with automatic multi-provider failover, unified routing, and drop-in open-weight model fallbacks.",
-    "impact": "A single 4-hour vendor API outage can halt all customer-facing AI features and trigger SLA breach penalties.",
+    "impact": "A major proprietary API outage takes down customer support during Black Friday sales with zero fallback mechanism.",
     "tools": [
       {
         "name": "OmniRoute",
@@ -6627,6 +6599,10 @@ const REALITIES_DATA = [
       {
         "name": "OpenRouter",
         "url": "https://openrouter.ai/"
+      },
+      {
+        "name": "LiteLLM",
+        "url": "https://github.com/BerriAI/litellm"
       }
     ]
   },
@@ -6635,24 +6611,23 @@ const REALITIES_DATA = [
     "title": "The Conversational Memory Bloat",
     "category": "Cost & Tokens",
     "symptoms": [
-      "chat history too long",
-      "bot forgets first message",
-      "full context after 10 turns",
-      "expensive chat session",
-      "context overflow"
+      "chat latency grows every turn",
+      "context window full after 10 messages",
+      "bot forgot user name from turn 2",
+      "cost per message escalates exponentially"
     ],
     "myth": "Simply append every user and bot message to the conversation array for perpetual memory!",
-    "reality": "Full conversation histories grow exponentially. By turn 15, every new question re-sends 8,000+ historical tokens, multiplying costs and diluting attention away from the user's latest query.",
+    "reality": "Appending raw chat history exponentially increases token costs per turn, burns the context window with conversational chit-chat, and dilutes the model's focus on user instructions.",
     "fix": "Use entity-fact extraction and rolling hierarchical summaries (semantic memory) rather than appending raw historical message transcripts.",
-    "impact": "End-user chat sessions become 10x more expensive per turn as conversation length increases, with declining response accuracy.",
+    "impact": "Customer support chats become unaffordable at ₹40 per message by turn 15 while forgetting facts stated at turn 1.",
     "tools": [
       {
         "name": "Mem0",
         "url": "https://github.com/mem0ai/mem0"
       },
       {
-        "name": "RAGFlow",
-        "url": "https://github.com/infiniflow/ragflow"
+        "name": "Zep",
+        "url": "https://github.com/getzep/zep"
       }
     ]
   }
@@ -7475,7 +7450,7 @@ document.addEventListener("keydown", (e) => {
 init();
 
 // --- Cybersecurity News Client Logic ---
-let THREATS_DATA = [{"id":"live-india-bfsi-6469460485","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"CBI files FIR against Chandra Proteco and directors for alleged bank fraud","sourceName":"The Hindu","sourceUrl":"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPb0E5UTNMSEg1aEhqRWxpOXh5MTVrVko4Z0k4LTh5d1IxYjBaZU13VlJUNGxic0FpUTZiY3ZrNUI1NFJaMHlWbjJUcnl4bGVGRF9mc2RqUHF6OEczRWxBUUJDSU5wM015bGpNRUtPSDZQV0VHR1cyMHp0cFJVb0doT251LTdnZzhYRlQ4YzNZZ0dZSW0wbWlGbHpyYkMwVVhBQ3lOcUI0eDluOUFQWGg5YlVHbmpzUWR6TjRmX3ZjUXVTNC16aXhtVjY1WDlKMmlISXBsZlVqUWVpazJveGk0M9IB5wFBVV95cUxQWVNVWnlsaFNyLVBjdjJ3UlJ0dUxaZmgtek11RkpMelBhWjZ1c2xudEc1ckJ4Q25LcXJ5aHcyOG5oLS1yTm1lZDdvSFRlYjVtN3RUVGFKUk5HQkN6b2kzVTVHdnZpSzR5aU1WclE3SnIyRXRKNWJVRTRleUhlbDBiQmJGYlUteUFkeXU0RFFFTVpXNTBqYXFiNkxmLU5xT25RZkktVy0xRGpGU2ZLMDdDMDdEdFdRZHBpcjFWa25KeTVtZTFWeWRvT1R3QXRRZmd1cjYxSTVTVS0tWGZvWVp1ZTdfLUdFSXc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Hindu","date":"2026-10-30","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"Key updates: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Investigates Rs 210 Crore Bank Fraud By Chandra Proteco.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Hindu."},{"id":"live-india-bfsi-5496497170","category":"india-bfsi","severity":"high","impactBadge":"🏦 Bank Breach Probe","title":"AU Bank probes potential data leak","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMivAFBVV95cUxNU0JSQkZlOHY3dWVLclNCaGQ5VGxIb3prT0NqOXh3UHRfUjdhVUdRUFZ2T3dTZnNJQnEzUFhSOVItdkxiY1d6WTh4T1dadzhGNFZ2QzNhU0c1TnVURDhKbHQ1MmhYdUJaWjE1bEFWdEV2U24zZEdaVUVYWDVjUFZ4NVhoX2VfS0lGbTg2Z0xweFNvdENCam42NXIyQUJraWxRbkt6NENLMHVITVQ4YjhqY20wSG4yY0ZsaWRiNNIBwgFBVV95cUxOdmlQak9MckhIQXlYcElwZG9YQ09NdmtZNGpnWmJYckpvSXJ5RGN2QU82RS00T2YtWUJ6RGpBTFZ6MlVVLXp3bDBEb0xrYjJGTC14UmpJemhxZnN1MkQ0Z0RMR05TWXRSaU9BTml1emZ6cTI1VHU5bmtfQ0NRazlxQ0M0cklnOERvT2hkZVRDMndBX2J3YWxxUl9PSWlKZzQ0WHVGT3B1S2M2RFFLNzVfdGlRa3RTc0R2cUMyRUZDZThadw?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Times of India","date":"2026-10-30","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"Key updates: AU Small Finance Bank Probes Possible Customer Data Leak, Says Banking Systems Safe; India's AU Small Finance Bank probes potential data leak.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-india-bfsi-10582028834","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Cyberattack on SMARTs portal puts Sebi's cybersecurity team on high alert","sourceName":"Business Standard","sourceUrl":"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdVhyQy1WR3BKZEdpbjZZLTYwSzdlSWJPVHZlMUVfbE9qQXQ2WUpybFpYYU1KRnNWdXo0dWl1U29UNFc5R2dySUcxTFNIZ2ZHOFJpdTliR3BMcEljNW1NamRVdzhCZHBFb2hSLV9WVzBEb2FNcHBwbDR2b0RiTlNwZE5nZWxnLWlORm14aDZrUFFYY092bDFsZWlTS0NvekZkZU92VkNDUGpsUHFhSndhODA5R203b01ablhDbjJPZzAxeHlOMzdLZ1RwcGpaSnN5Q1FMRXVCNNIB3AFBVV95cUxOSFE3VDlnU2VxWmlQVnNvd2pqUmFwMUxaMHc5MjY0VUpucHFQWTlOWUl0Y3B3RGEyNlBrbmtqX1h4TDRRNC04S1NoTUx5WDZVNDJ4SjVIbDNKWFo3R0NnRS0wUXpnSXBjZ0JWVHVHVEY1WjZlR2RreXFCcTU2LVlZbHpXeGVaUFlrNGlySWZrYms0bVRhSGxHa2M3ajl3RlJhdmNfbUt1cnFUeUsyRk1OODZ6b0NEMU1VaUtpdjZxalJteWd6VXhxQkY2c056RkpXUWJYWXBQTDJwWkVE?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Business Standard","date":"2026-10-30","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Business Standard."},{"id":"live-india-bfsi-12112615498","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Defenders of Digital Bharat: Navigating cybersecurity in India's evolving artificial intelligence landscape","sourceName":"CNBC TV18","sourceUrl":"https://news.google.com/rss/articles/CBMi6gFBVV95cUxNQmxYVHZpUzlBWkdiQUtBeUZwZVc4dWd5dURoeUY0UnJqcG5Pd0JvdTU2elkwak9RbDJKTy02SFJpUS12eWY2STdoZFhOWUtKRUNRRkpKbTRBUldhdEZVR09uVWFPcklTVjR4UG1nTU5xQ2E1VUEwZHVZVTdGREtJcGxHM3A4Z3ZNcXotZUNhcVkzNGZwZmtxQzk2NVFZV2F2MDVlQklPS2JqTHp2dmxDZ0JnR09nZ1NzWG5BaXhCV0wtZnBRTzlSVHF3U0NzeTh6MHljWFlqYzFGSlo5LWF6QkVhdWJrdG1NdXfSAe8BQVVfeXFMTzdrVU5kUUJlaTJTSDBrVWdXZzNfOXd2SlBZYl9RU2hUQ3JCdlF6SVdTQWJfbXVhR2RObGhHblVoNDU3R2lCUkZGb2VVY2RXMGVWTUZ0TUFobXJqaGFwWHA0a0pUSzJ2ZUdQUWNRTHMwa2hQaXR3Q2RpWU51MFVKRlRZTkJOU2s5T1F2RG5JUGtwR0J3ZlRGRWtjTTZwT1JVMzZuRGYtNUI2eFFsNVJhX2VSZHpjM3F4T1cwYWxXSWJYZFZ0VGxhSXpRTlFTMzB5NUpFVTRBa0c3ME1mUDc5OFE1VWhzTmM5X05jTUVyc2M?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"CNBC TV18","date":"2026-10-29","timeAgo":"3 days ago","entities":"Banking & Financial Services","incident":"Key updates: AI Cyberattacks Test India’s Readiness to Protect Digital Systems.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on CNBC TV18."},{"id":"live-india-bfsi-13145223703","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Fake Health Camps, Stolen IDs: Cops Bust e-SIM Racket Used In Cyber Fraud","sourceName":"NDTV","sourceUrl":"https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"NDTV","date":"2026-10-29","timeAgo":"3 days ago","entities":"Banking & Financial Services","incident":"Key updates: Delhi Police bust cyber fraud ring targeting southern India with fake benefits; Delhi Police Uncover Major Cyber Fraud Ring Targeting South India.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on NDTV."},{"id":"live-india-bfsi-2373351973","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"CBI conducts searches in Avya Industries alleged bank fraud case","sourceName":"BW Police World","sourceUrl":"https://news.google.com/rss/articles/CBMirAFBVV95cUxOLXpUcjg4MFFqejlVTnpsQ05PdEsyTnVQQ0EyWkdRWlgyTFNRN0oyMnRTbHdwOWIxRzZHdTh3NzB6eWxCYTFMeDZOaTYtVFVHNUlUNlVFUTlLNW9JVnEyRTJmLUpkaVplanZpa3lHVlVvNmhwTFoxMnJVbXJ4X0lDUDc1TUxya1lRN2dXb242LUZHaTdVNkdkZ294X0M1RDQxLXFRODFuZUFBMWdm?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"BW Police World","date":"2026-10-29","timeAgo":"3 days ago","entities":"Banking & Financial Services","incident":"Key updates: CBI conducts searches in Aaj Ka Anand Papers Pvt Ltd. alleged bank fraud case; CBI Search Premises In Bank Fraud Case Against Avaya Industries.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on BW Police World."},{"id":"live-crypto-heists-9818481674","category":"crypto-heists","severity":"critical","impactBadge":"💰 $6.3B Record Hack","title":"Binance seeks to shore up confidence after record $6.3 billion heist","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-30","timeAgo":"1 day ago","entities":"Crypto & Digital Assets","incident":"Key updates: World's largest crypto exchange Binance probes 'security breach', $6.3 billion in assets impacted; Binance hack biggest crypto theft in history, hackers steal $6 billion.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-799466515","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Polymarket resumes trading after third-party security breach, to reimburse users","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMiowFBVV95cUxQdGFDU255RTFLTGhHMmlndVlJb1gyUVdsYmJxcUpaalJoRVp0OEpROVcyQ0xQRlRiN1haY0UyTUlLb1JlUF92NF8tWVlfVmxmVWJmN2p4Q2ZfNHhCSy1ta2EwMi1KZUJ0eE1zVExPck44OVFJRnFuSmV2VjUtdGUzQVVGR1VPVDFTbUF4UzlwTHFIN0xYbXh5dUpqcjZuNlNMdGNV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"2 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-5792857321","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Three South Korean financial firms including Bithumb report data breaches, Yonhap says","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-28","timeAgo":"4 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-12643287449","category":"global-ransomware","severity":"high","impactBadge":"🚨 Reuters Exclusive","title":"France's Sopra Steria raises 2026 growth target again as defence, cybersecurity lift Q3 sales","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZWgzWENJclAySlJUMHZhTlFwUXVCbW9qWV8zTDRGdWJfQVAxTnRIQjJWcHNqNjFxQXFMeC1fcDFYZTUtUjFTSUM1S0tVVzZkem01M2MzR1ZBMTd6cXVTcTk3eTUxX2VYRHFsX2tMc2dsTGZrZ1RmMzdUbG5qTWhvazZYc0diaUxUMW5kRTV0cnNVc3lxaGNTeDB0cTFUN0NwZXBWRngtYjVXLWl2eHBHamVUaVJsenVOQlNWbGM2UWlQamNXN2pBQ1ptODA0dDM3Q2VNdzlrUkFfdw?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-18083774526","category":"global-ransomware","severity":"high","impactBadge":"🚨 Reuters Exclusive","title":"Mistral AI publicly releases Large 4, targets cybersecurity users","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMiuAFBVV95cUxORGVVeXl0bmw1cnBiUkdkU2VRT2VPcWtxSHdNTmQxQ2xlOUxiSW1aY0J5eVd2T2RPYXJQdlEwdWpSSzBuRlZmcHlHU1F3LTVCVmo3ZzZqbXRDZ1pmaDdEMkd0OFIycWhkWXhydlQ4Z0UzZ3FHbUdaaXJOMGVSRFhwSkZRYmFGcWoxeUlQUWtBUVBlZXM3NkgtRGN0dE81LWxkMTRGVnFSSnJWUU83SXRONUJPQm84a0pl?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"2 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-1828434534","category":"global-ransomware","severity":"high","impactBadge":"🚨 Reuters Exclusive","title":"Leak website releases data on thousands of US Homeland Security employees","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMirAFBVV95cUxNRkJfbVFuNlVmSmFPRUVEYzBEZ3k3RDhzb1JIUlU3eFoxS25sejEtUGFNdFVDMUI4NW5IR3R2M1hvX2hTc0U2RXBJX3VWNHlUWXJodW9ENzE5Ql93UkNGUFo2WkhwcmsxSnVhQ28tZUppZkdWX0lmTzZZNnJ0SjBxXzFFZ1o2NVc2clVZRUdJZXJDWGdqeWlBMDFRV2wybVRCRWxQdXNJdVhNR2lM?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-28","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"Key updates: Trump’s DHS hit by data breach as hackers expose records of 41,000 employees.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-25291081211","category":"global-ransomware","severity":"high","impactBadge":"🚨 Reuters Exclusive","title":"EXCLUSIVE: Hackers target US FEC system, disrupting campaign finance disclosures days before midterms","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDV3WWJ5Ulh3Q05tT203WGNGVE1UNmFvZ2ZoclFXemtrWXFhNlRhUmtabmlPZXRaYU1sQ251VWhSSWJMODNJQkRrMk9MNFdfb1RVT2VJQTR4akpfM0JQNk9wMkpMV2tFY2tHc2ZpTGMwcHlLNFU3UDBrZk5MbGFrb2ZqX25XRVZCQmI5Z29LbDI5cjF2S0JodjVNcVVmV3RyUFR1SW5RZUwwY2JlSWJrRUMyNEgta3dl?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-27","timeAgo":"4 days ago","entities":"Enterprise & Public Infrastructure","incident":"Key updates: Sony data breach: 2.58 million users affected as bank details and passwords exposed; How North Korea perfected the crypto heist.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-14143546150","category":"global-ransomware","severity":"high","impactBadge":"🚨 Reuters Exclusive","title":"EXCLUSIVE: How one hacker used AI agents and a few thousand dollars to break into scores of sites","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixgFBVV95cUxQSUVKUWRvY0tQeUZscHhGcDBLYjI5VVZaYXRFRklFbmEzX29RaVFuMmt6cDlpMURENUtWRFpBQVBnNngwcWJla3NJZllZVDFBb2NKU21YUnBkMTNKb1NEM3BNLXk2OXpVbVpyZXM3NHVaOUNrWGZzRWhGQlRFSDhPa0E4TVdCTnBuZjNBS2R2UU9ySzV1c2hCbUVycmFHUTNpVk1vX0kxSEEyMUllRlpsakRfNEdZUlJUWVBVRTFqYkZiYm5jR1E?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-26","timeAgo":"6 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-363044141","category":"global-ransomware","severity":"high","impactBadge":"🚨 Reuters Exclusive","title":"Japanese companies compensate users as cyberattacks buffet economy","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMiswFBVV95cUxOalROR3UtSUJWekNjMEJyV1lUVHZqZ19BaU44dFQ3cEE2NnBHQXBEMmE0NVgyaDZtYlhqZk5ULXZvYUl5eVFaZUQ3T0t1eFdYYUZPQXJhM3Brby1xZGJic1Y4bFJ6YmIwVnNXS1ZoLWlvS0N2S1NUUHFadVJKLTJSZk9lZFF4bDBzdTMteVdKb281dHpOMHZuMTk1T2Q0eXhjcUM1ODJPUnVqR1NnQkJJSy1wdw?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-26","timeAgo":"6 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."}];
+let THREATS_DATA = [{"id":"live-india-bfsi-17601327396","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Delhi Police bust cyber fraud ring targeting southern India with fake benefits","sourceName":"India Today","sourceUrl":"https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1F0LVB5ZUhwZXk2RUpmVGNnbVFndGxyU1l1OWJPVFpHZDBDdm1SUFpzZlMxSTA3bE1Cd0RnTmQ1bHBWTmFwSFFCWDZQamZJQWdJLWFfR3A0NXJSQnQ3TWw5S3pvX1VZbnRuV1E5c2xIWDFaTzlOMDdpSFhyNll6TUZoSXhmTDk1VE5wZU5sbjd4UlJnS2tNQjByeHJuYzFfc3RFb3pIRGY0QVgzbWlpeDBPcFhwa3NYeUd5WkxNcHdGd0FVQXNfbHEycmFnVzFi0gHWAUFVX3lxTE11NmNkbkszSnl5NUF6c3c2U3Vka2g3X1JuTnBZQktJT21aMEtNUTVHeXNBcUt4N1QtWFFPUXF2Um54WjhvaXRwbmlzSWtPV2VVWVlrYVpfamRtMjJZZDJJVnBTV1ZFb25TZ2tYMEVpR0dZQk9Qa3hiSmk1WFdYTjI4eWwtT2xBOTFUUnZ6dTY4SU9MVkpsZHhrbm9tWFpCME40N1NlWlBST1dqWURoZnFnT1VaeHFXSmpJdjU1QlBjbWtacUwtTEtxc2ZSZjlKRDVrSmhxR1E?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"India Today","date":"2026-10-31","timeAgo":"21 hours ago","entities":"Banking & Financial Services","incident":"Key updates: Delhi Police Uncover Major Cyber Fraud Ring Targeting South India; How Delhi Police Uncovered A Mobile Cyber Fraud Network.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on India Today."},{"id":"live-india-bfsi-6469460485","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"CBI files FIR against Chandra Proteco and directors for alleged bank fraud","sourceName":"The Hindu","sourceUrl":"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPb0E5UTNMSEg1aEhqRWxpOXh5MTVrVko4Z0k4LTh5d1IxYjBaZU13VlJUNGxic0FpUTZiY3ZrNUI1NFJaMHlWbjJUcnl4bGVGRF9mc2RqUHF6OEczRWxBUUJDSU5wM015bGpNRUtPSDZQV0VHR1cyMHp0cFJVb0doT251LTdnZzhYRlQ4YzNZZ0dZSW0wbWlGbHpyYkMwVVhBQ3lOcUI0eDluOUFQWGg5YlVHbmpzUWR6TjRmX3ZjUXVTNC16aXhtVjY1WDlKMmlISXBsZlVqUWVpazJveGk0M9IB5wFBVV95cUxQWVNVWnlsaFNyLVBjdjJ3UlJ0dUxaZmgtek11RkpMelBhWjZ1c2xudEc1ckJ4Q25LcXJ5aHcyOG5oLS1yTm1lZDdvSFRlYjVtN3RUVGFKUk5HQkN6b2kzVTVHdnZpSzR5aU1WclE3SnIyRXRKNWJVRTRleUhlbDBiQmJGYlUteUFkeXU0RFFFTVpXNTBqYXFiNkxmLU5xT25RZkktVy0xRGpGU2ZLMDdDMDdEdFdRZHBpcjFWa25KeTVtZTFWeWRvT1R3QXRRZmd1cjYxSTVTVS0tWGZvWVp1ZTdfLUdFSXc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Hindu","date":"2026-10-30","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"Key updates: CBI registers alleged bank fraud case of Rs. 210.13 crore against Chandra Proteco; CBI Investigates Rs 210 Crore Bank Fraud By Chandra Proteco.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Hindu."},{"id":"live-india-bfsi-5496497170","category":"india-bfsi","severity":"high","impactBadge":"🏦 Bank Breach Probe","title":"AU Bank probes potential data leak","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMivAFBVV95cUxNU0JSQkZlOHY3dWVLclNCaGQ5VGxIb3prT0NqOXh3UHRfUjdhVUdRUFZ2T3dTZnNJQnEzUFhSOVItdkxiY1d6WTh4T1dadzhGNFZ2QzNhU0c1TnVURDhKbHQ1MmhYdUJaWjE1bEFWdEV2U24zZEdaVUVYWDVjUFZ4NVhoX2VfS0lGbTg2Z0xweFNvdENCam42NXIyQUJraWxRbkt6NENLMHVITVQ4YjhqY20wSG4yY0ZsaWRiNNIBwgFBVV95cUxOdmlQak9MckhIQXlYcElwZG9YQ09NdmtZNGpnWmJYckpvSXJ5RGN2QU82RS00T2YtWUJ6RGpBTFZ6MlVVLXp3bDBEb0xrYjJGTC14UmpJemhxZnN1MkQ0Z0RMR05TWXRSaU9BTml1emZ6cTI1VHU5bmtfQ0NRazlxQ0M0cklnOERvT2hkZVRDMndBX2J3YWxxUl9PSWlKZzQ0WHVGT3B1S2M2RFFLNzVfdGlRa3RTc0R2cUMyRUZDZThadw?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Times of India","date":"2026-10-30","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"Key updates: AU Small Finance Bank Probes Possible Customer Data Leak, Says Banking Systems Safe; India's AU Small Finance Bank probes potential data leak.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-india-bfsi-278622367","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"SC Seeks Strict Bank Liability, Mandatory Compensation for Victims of Digital Arrest, Cyber Fraud","sourceName":"KNN India","sourceUrl":"https://news.google.com/rss/articles/CBMi2wFBVV95cUxQa2hiMjdoaGdOYlMzR1Zfb2xwVGk0OE9GUnN4TGxORE9sMkQ0WkFmUERGOUhsdXdZSjBiR2ctZU9pNEFoelUweHg4Qlo5S0xfZ3ZoSnd4cUt3VEdlVHRoNnFwMWdmb3RHVVhoak5MN2JRckg0c0xWcEtNME9yQm9KVjZvQnl5ak9wT3R0cWZIWXlXdEpUOVM3TVpybzVaNHZQR0YxNHdPZVRhRGxhZkF3RkdVaGU3alFzeDZkdXpicmktYU0zMVYxUEhWWmE2LUNBbldJb0NPbkpRSHM?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"KNN India","date":"2026-10-30","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on KNN India."},{"id":"live-india-bfsi-3667265","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"How 'Digital Arrest' Scam Cost Retired Officer Rs 78 Lakh","sourceName":"Rediff","sourceUrl":"https://news.google.com/rss/articles/CBMirgFBVV95cUxNVUE1M19jeHV5eE1KU0lvNUc0YmFuVmVsLTNUeTdMLTNUcU43WDZscVFrMTNOeFZ2bnlNMEF2MHRqSGM2SWNEZF9BUjZvbHN6V21lb0xFQWNJR0tEUHZtdVJqaGZZbzNsaXNaQlZUYmpjUUFPT3JLaVhGOWl1blNYWWo1TEd6SGlrZ1JqRFN5ZHpSU0Z3VmdDcWliRHBxeHN4Y3ZlZThmWEkwMTg1WXfSAbABQVVfeXFMUGxkZkU2emlxYzhVeWdrLXZsUjUyWGttVDBUdEo1NlgtV0t4QmRrTUVRVEpGaXQ3Snk1OXZNOEdGcThQd1VJWktfWEJITGRCcjVKMi1MNHl6Y1R4R3J6VzZPM3h3RDVDcERtUUpEN1o3d3VvS0htaW9RWmNBVlR3ZlJ1MG5KdVE5VTJBMXpEV0F1S0JkektQa2IyaGZrR3Mtb3lsR2dtSjJ5OGMxVFFObFo?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Rediff","date":"2026-10-30","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Rediff."},{"id":"live-india-bfsi-10582028834","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Cyberattack on SMARTs portal puts Sebi's cybersecurity team on high alert","sourceName":"Business Standard","sourceUrl":"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdVhyQy1WR3BKZEdpbjZZLTYwSzdlSWJPVHZlMUVfbE9qQXQ2WUpybFpYYU1KRnNWdXo0dWl1U29UNFc5R2dySUcxTFNIZ2ZHOFJpdTliR3BMcEljNW1NamRVdzhCZHBFb2hSLV9WVzBEb2FNcHBwbDR2b0RiTlNwZE5nZWxnLWlORm14aDZrUFFYY092bDFsZWlTS0NvekZkZU92VkNDUGpsUHFhSndhODA5R203b01ablhDbjJPZzAxeHlOMzdLZ1RwcGpaSnN5Q1FMRXVCNNIB3AFBVV95cUxOSFE3VDlnU2VxWmlQVnNvd2pqUmFwMUxaMHc5MjY0VUpucHFQWTlOWUl0Y3B3RGEyNlBrbmtqX1h4TDRRNC04S1NoTUx5WDZVNDJ4SjVIbDNKWFo3R0NnRS0wUXpnSXBjZ0JWVHVHVEY1WjZlR2RreXFCcTU2LVlZbHpXeGVaUFlrNGlySWZrYms0bVRhSGxHa2M3ajl3RlJhdmNfbUt1cnFUeUsyRk1OODZ6b0NEMU1VaUtpdjZxalJteWd6VXhxQkY2c056RkpXUWJYWXBQTDJwWkVE?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Business Standard","date":"2026-10-30","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Business Standard."},{"id":"live-crypto-heists-9818481674","category":"crypto-heists","severity":"critical","impactBadge":"💰 $6.3B Record Hack","title":"Binance seeks to shore up confidence after record $6.3 billion heist","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-30","timeAgo":"1 day ago","entities":"Crypto & Digital Assets","incident":"Key updates: World's largest crypto exchange Binance probes 'security breach', $6.3 billion in assets impacted; Binance hack biggest crypto theft in history, hackers steal $6 billion.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-799466515","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Polymarket resumes trading after third-party security breach, to reimburse users","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMiowFBVV95cUxQdGFDU255RTFLTGhHMmlndVlJb1gyUVdsYmJxcUpaalJoRVp0OEpROVcyQ0xQRlRiN1haY0UyTUlLb1JlUF92NF8tWVlfVmxmVWJmN2p4Q2ZfNHhCSy1ta2EwMi1KZUJ0eE1zVExPck44OVFJRnFuSmV2VjUtdGUzQVVGR1VPVDFTbUF4UzlwTHFIN0xYbXh5dUpqcjZuNlNMdGNV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"2 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-5792857321","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Three South Korean financial firms including Bithumb report data breaches, Yonhap says","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-28","timeAgo":"4 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-710623010","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"North Korean hackers linked to crypto thefts among world's best, experts say, Digital News","sourceName":"AsiaOne.com","sourceUrl":"https://news.google.com/rss/articles/CBMipgFBVV95cUxNUDE0MXQ0dUcxMTBNYi1SZjFybVhfRWlXRWw5VHQybGQycUl1SEpWdGVya0xuM1EtT1BlQlFuY3JNbjRkb0dxcEppV09fTl9WQVJmV2tsdGxPa2xvUkswa0NtZ21yS2ZCOHg1ZkYwbUJkcVl2cE95ZWhILWVwcFJ3WWZKRmhCQmlCVGs2ZDRJeXRxTllyTGdMeERJS2Q5OUFEZExFTXdB?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"AsiaOne.com","date":"2026-10-31","timeAgo":"1 day ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on AsiaOne.com."},{"id":"live-global-ransomware-5707601159","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"New cybersecurity blind spot: When AI looks like a trusted employee","sourceName":"The Financial Express","sourceUrl":"https://news.google.com/rss/articles/CBMitwFBVV95cUxNeDhHdVJsUktTaUhkMW16cXJGOE9nWnhUdmNMUEhDcDdyak45M3M5T250clZfNmYtYmQ3cTJBc3c2YlN5NzR3LXFzYlNyaGtCTVlhTzRTZGJUbDJwWFFJenBaM0xfUzdMOVhOMC01dXpIdjFKZnlSNHNUcWI5TXFJS3NfVDk5VjYwRjJabzlZMEJYeGpxYW1YMmloM3NNRElFRkNRdFZlZTFva3BjZjk3V3E0NFoxUlXSAb4BQVVfeXFMTXFaXzJpVU8tM1lPa090dEpzT2pYWUdFSkVVWldFTlFLVHFaWHJxM0I1SGpWWWhQYWJaa19NQ0pqQWRna0RhY1FNZDkybFhKQ1ctVzJ6LXhUSGRsQXBWNXhhenluejE2V2hHb3lCZnFkMlc0dEZYVUlsaHZJc2RtVk9lRDRzU1MwZ2xmZnViX2ZJV0VQVzJDNnNaTll2MDdmblZfOEQxQnU2ZGRQOEVqaDJkQUVGY2MtanFRb2F2QQ?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"The Financial Express","date":"2026-10-30","timeAgo":"2 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Financial Express."},{"id":"live-global-ransomware-13145223703","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Fake Health Camps, Stolen IDs: Cops Bust e-SIM Racket Used In Cyber Fraud","sourceName":"NDTV","sourceUrl":"https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"NDTV","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on NDTV."},{"id":"live-global-ransomware-11255069562","category":"global-ransomware","severity":"high","impactBadge":"⚠️ Data Breach","title":"Trump’s DHS hit by data breach as hackers expose records of 41,000 employees","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMi3gFBVV95cUxNTndmc2lnNWtJX0JXazc0YmxWUmhQT2t3aXR2TEwtMGxrYi1fSUdxbW1nZjA3VTJVVE5GVUNYMDVhSUhTdFdidmdzc0hOMTB6b2tOTk1OTVBvZE51QUwyUnY5QVFUZzBYeTY5UTh2aXZpRWZPUEI4YUE3Q3l6LVhCTThWSUM0cVlZVFhVMVpkSDFmZHN2eDBYQUJ3ejByY0RQeEtFVzZ3a2hmakM5ekgzNGJXa0xKRVlON1Q4eVp1cEZJc1gwYWR6S09iejBMOEFoSGdKYXlJX3JYMjFOckHSAeMBQVVfeXFMTTJRQTFBNldiVzlzZF9rNUtxRzk2WjNFNVdtSUk0ZjM3eEMtMWhNYUVrWWhNeEllM244QmppaElwZHBMQlFUTXBzU1cwWW9JN25ybGMyTGFPejhTTXBoU1N4YVNYR2RxdlVqaDVjbEpucnBSSm9RQXJkdUFjNXY1Z1dSUmNnUmFIRTdldDJTSDR6U3J5U0RId0VTUVdpQ1BKal9QU1BrcnVMWlBhRjVQRE1GR293MC1BYVRNZW81aUl0N2loV1FtYlU4QVJxbHRzbm5XRXNQRGdxbVlieWlUdEZpczA?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"The Times of India","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"Key updates: Data Leak Exposes Information on over 40,000 US Homeland Security Employees.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-global-ransomware-23168141554","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Google Announces Gemini 4 Carbon With Focus on Cybersecurity and Coding","sourceName":"Analytics India Magazine","sourceUrl":"https://news.google.com/rss/articles/CBMirgFBVV95cUxNNngtOWwyUmFKYzM2b0pKcTBhQmJYNENNSHFfSmtpN3ZUM1U4VmJXV2lOdFlCd3loTFM5MG1oalJxYzB6VG1rZ3BSTUdtYzZ4VmpOcmZRSnZuU2cyMGEzUXVCcjJuZUJ1MlhqbjdDa0RfZmp2enFVYnZmckZHc0lfc3hlNnppejlsQU1HRnRrYURhSGlUVWx1eFhCZy1KRmFCMWQ2dnFYbXk5Y3hoTHc?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"Analytics India Magazine","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"Key updates: Google launches Gemini 4 Carbon AI model with cybersecurity focus.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Analytics India Magazine."},{"id":"live-global-ransomware-9023916946","category":"global-ransomware","severity":"high","impactBadge":"🔒 Assets Frozen","title":"Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say","sourceName":"New York Post","sourceUrl":"https://news.google.com/rss/articles/CBMiygFBVV95cUxPd0FTWVdrYlBYQjlfVW1jOEhwV1NJWkNPd1lRNENDSGUwLVZ2Z0NFMllIVjg3RlpQdF9JNl91ZkhoUE5uLVQydzkzMVVVNXIyWmtwZmtGYUZpV3JTZ2plX1pxZmxteVA5cHJvSl9xZDZleEEyb2ZYTmpQbUJ6STlZLTNsNzNxVEJCR1o5cG5OTFh0YnZjZldkbTNvalMwaWx6SmdKVmtGTTRPSGhCbW8tYW1GeGExSDVUUnhDVUotM2NfNXZaenN0cFBR?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"New York Post","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on New York Post."}];
 let activeThreatCategory = "all";
 let threatSearchQ = "";
 

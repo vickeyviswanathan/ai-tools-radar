@@ -119,6 +119,44 @@ for (const scam of scamsData.scams) {
 }
 assert(untrustedScamUrls === 0, `All scam defense action links point to official statutory/regulatory domains`);
 
+// 6. Verify AI Realities Relevance, Non-duplication & Accurate Tool Stacks
+const indexHtml = readFileSync("public/index.html", "utf8");
+const realityCardsCount = (indexHtml.match(/class="reality-card"/g) || []).length;
+assert(realityCardsCount === 18, `Exactly 18 AI Realities cards pre-rendered (found ${realityCardsCount})`);
+
+// Ensure Scrapling is NOT in the Realities section
+const realitiesSectionMatch = indexHtml.match(/<div class="reality-grid" id="reality-grid">([\s\S]*?)<\/div>\s*<div id="reality-empty-state"/);
+const realitiesHtml = realitiesSectionMatch ? realitiesSectionMatch[1] : "";
+assert(!realitiesHtml.toLowerCase().includes("scrapling"), `Zero occurrences of Scrapling in AI Realities grid`);
+
+// Verify Reality 10 contains PyMuPDF4LLM, MinerU, and pdf oxide
+const reality10Match = indexHtml.match(/id="reality-9"[\s\S]*?<\/div>\s*<\/div>/);
+const reality10Text = reality10Match ? reality10Match[0] : "";
+assert(reality10Text.includes("MinerU") && reality10Text.includes("PyMuPDF4LLM") && reality10Text.includes("pdf oxide"), `Reality #10 (PDF & Table Chunking) has exact PDF/OCR tools (MinerU, PyMuPDF4LLM, pdf oxide)`);
+
+// 7. Verify News Hygiene (Zero Medicare/Botox, Genuine BFSI Categorization, No Lazy Copied Summaries)
+let nonCyberStories = 0;
+let invalidBfsiStories = 0;
+let lazyCopiedSummaries = 0;
+
+for (const threat of threatsData.threats) {
+  const tLow = threat.title.toLowerCase();
+  if (tLow.includes("botox") || tLow.includes("medicare") || tLow.includes("cosmetic surgery")) nonCyberStories++;
+
+  if (threat.category === "india-bfsi") {
+    const isIndian = /\b(india|indian|rbi|sebi|cbi|cert-in|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|aadhaar|pan|crore|lakh|delhi police|mumbai police|cyber cell|digital arrest|nbfc|sc seeks|supreme court)\b/i.test(tLow);
+    if (!isIndian) invalidBfsiStories++;
+  }
+
+  if (threat.incident && threat.incident.trim() === threat.title.trim()) {
+    lazyCopiedSummaries++;
+  }
+}
+
+assert(nonCyberStories === 0, `Zero non-cyber medical/general crimes in news feed`);
+assert(invalidBfsiStories === 0, `All stories in India BFSI category have verified Indian financial/regulatory context`);
+assert(lazyCopiedSummaries === 0, `Zero news stories have lazy summaries identical to headline`);
+
 // Summary
 console.log("=========================================");
 if (failureCount > 0) {

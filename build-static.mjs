@@ -8,6 +8,7 @@ import { refreshLiveMetrics } from "./src/live-metrics.mjs";
 import { publishSeoArtifacts, normalizeWhyItMatters } from "./src/seo-publish.mjs";
 import { getLiveCyberNews } from "./src/news-sync.mjs";
 import { validateAndSanitizeScams, generateScamsHtml } from "./src/scam-guard.mjs";
+import { REALITIES_DATA } from "./src/realities-data.mjs";
 
 async function build() {
   if (process.env.FULL_INGEST === "true" || process.env.GITHUB_EVENT_NAME === "schedule") {
@@ -194,6 +195,7 @@ async function build() {
   syncToolCountsInHtml(output.tools);
   updateThreatsInHtml(threatCategories, liveThreats);
   updateScamsInHtml(sanitizedScams);
+  updateRealitiesInHtml(REALITIES_DATA);
 
   publishSeoArtifacts(output.tools, output.updatedAt);
   generateLlmsTxt(output.tools, sanitizedScams);
@@ -329,6 +331,64 @@ function updateScamsInHtml(scams) {
       const newCardsHtml = "\n" + generateScamsHtml(scams) + "\n    ";
       html = beforeContainer + newCardsHtml + afterContainer;
     }
+  }
+
+  writeFileSync(indexPath, html, "utf8");
+}
+
+export function generateRealitiesCardsHtml(realities) {
+  const esc = (s) => String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  return realities.map((r, idx) => {
+    const toolsHtml = (r.tools || []).map(t =>
+      `          <a class="tool-chip" href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)} ↗</a>`
+    ).join("\n");
+
+    return `      <!-- ${r.id}. ${r.title} -->
+      <div class="reality-card" id="reality-${idx}" data-category="${esc(r.category)}" data-id="${r.id}">
+        <div class="reality-header-bar">
+          <div class="reality-category-badge">${esc(r.category)} · Trap #${r.id}</div>
+          <button type="button" class="share-btn" onclick="shareRealityCard(${idx})" title="Share AI reality" aria-label="Share AI reality">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+        <h3 class="reality-title">${r.id}. ${esc(r.title)}</h3>
+        <div class="myth-box"><strong>The Vendor Pitch:</strong> &quot;${esc(r.myth)}&quot;</div>
+        <p class="reality-body">${esc(r.reality)}</p>
+        <div class="truth-box"><strong>What Actually Works:</strong> ${esc(r.fix)}</div>
+        <div class="impact-box"><strong>Business Impact:</strong> ${esc(r.impact)}</div>
+        <div class="tools-row">
+          <span class="tools-label">Proven Tools:</span>
+${toolsHtml}
+        </div>
+      </div>`;
+  }).join("\n\n");
+}
+
+function updateRealitiesInHtml(realities) {
+  const indexPath = "./public/index.html";
+  let html = readFileSync(indexPath, "utf8");
+
+  // 1. Update static card grid
+  const containerStartTag = '<div class="reality-grid" id="reality-grid">';
+  const startIdx = html.indexOf(containerStartTag);
+  if (startIdx !== -1) {
+    const emptyStateIdx = html.indexOf('<div id="reality-empty-state"', startIdx);
+    const endSectionIdx = html.indexOf('</section>', startIdx);
+    const searchLimit = emptyStateIdx !== -1 ? emptyStateIdx : endSectionIdx;
+    const containerClosingDiv = html.lastIndexOf('</div>', searchLimit);
+    if (containerClosingDiv > startIdx) {
+      const beforeContainer = html.slice(0, startIdx + containerStartTag.length);
+      const afterContainer = html.slice(containerClosingDiv);
+      const newCardsHtml = "\n" + generateRealitiesCardsHtml(realities) + "\n    ";
+      html = beforeContainer + newCardsHtml + afterContainer;
+    }
+  }
+
+  // 2. Update inline JavaScript data array
+  const scriptRegex = /const REALITIES_DATA = \[[\s\S]*?\];\s*\n\s*let realitySearchQ/;
+  if (scriptRegex.test(html)) {
+    html = html.replace(scriptRegex, `const REALITIES_DATA = ${JSON.stringify(realities, null, 2)};\n\nlet realitySearchQ`);
   }
 
   writeFileSync(indexPath, html, "utf8");

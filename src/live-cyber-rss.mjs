@@ -40,7 +40,10 @@ const JUNK_NOISE_KEYWORDS = [
   "podcast", "video", "photos", "song", "rahman", "cricket", "honey singh",
   "voter fraud", "election rally", "movie", "box office", "horoscope",
   "celebrity", "wedding", "gold price", "california college", "efcc",
-  "colorado", "ravena", "fines of up to", "patrick stewart"
+  "colorado", "ravena", "fines of up to", "patrick stewart",
+  "botox", "medicare", "doctor", "dentist", "medical fraud", "healthcare fraud",
+  "hospital billing", "clinic", "narcotics", "fentanyl", "murder", "homicide",
+  "shooting", "accident", "dui", "traffic ticket"
 ];
 
 function isPaywalled(url, source) {
@@ -105,7 +108,17 @@ async function fetchRssFeed(url) {
       const pubDate = (m.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || "";
       const rawSource = (m.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1] || "";
 
-      const cleanTitle = rawTitle.replace(/\s*[-|]\s*[^-|]+$/, "").trim();
+      const cleanTitle = rawTitle
+        .replace(/&amp;/g, "&")
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/[‘’`]/g, "'")
+        .replace(/[“”]/g, '"')
+        .replace(/[–—]/g, "-")
+        .replace(/\s*[-|]\s*[^-|]+$/, "")
+        .trim();
       const source = rawSource || (rawTitle.includes("-") ? rawTitle.split("-").pop().trim() : "Verified News Wire");
 
       if (cleanTitle && link && isCyberRelevant(cleanTitle)) {
@@ -312,7 +325,7 @@ export async function getLiveCyberRss() {
   console.log("[LiveRSS] Fetching live feeds from Reuters, ANI, Moneycontrol, and primary cyber desks...");
 
   const [indiaItems, cryptoItems, reutersItems] = await Promise.all([
-    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud")+AND+(India+OR+RBI+OR+NBFC+OR+SBI+OR+"UPI+fraud"+OR+"cyber+cell"+OR+CBI)+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
+    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud")+AND+(India+OR+RBI+OR+NBFC+OR+SBI+OR+"UPI+payment"+OR+"cyber+cell"+OR+CBI+OR+"digital+arrest")+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(Binance+OR+crypto+OR+bitcoin)+AND+(hack+OR+freeze+OR+heist+OR+stolen)+when:7d&hl=en-US&gl=US&ceid=US:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+ransomware+OR+breach)+source:Reuters+when:7d&hl=en-US&gl=US&ceid=US:en')
   ]);
@@ -321,9 +334,10 @@ export async function getLiveCyberRss() {
     ...indiaItems.map(i => {
       const srcL = (i.source || "").toLowerCase();
       const titleL = (i.title || "").toLowerCase();
-      // If source is upi.com, African / international portal, or foreign govt breach, route to global
-      const isForeign = srcL === "upi" || srcL.includes("united press") || srcL.includes("chosun") || srcL.includes("ghana") || srcL.includes("lawfuel") || titleL.includes("korean") || titleL.includes("calif") || titleL.includes("medicare") || titleL.includes("ghana") || titleL.includes("mtn") || titleL.includes("dhs") || titleL.includes("homeland security") || titleL.includes("pentagon") || titleL.includes("trump");
-      return { ...i, defaultCategory: isForeign ? "global-ransomware" : "india-bfsi" };
+      const isIndianContext = /\b(india|indian|rbi|sebi|cbi|cert-in|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|aadhaar|pan|crore|lakh|delhi police|mumbai police|cyber cell|digital arrest|nbfc|sc seeks|supreme court)\b/i.test(titleL);
+      const isForeign = !isIndianContext || srcL === "upi" || srcL.includes("united press") || srcL.includes("chosun") || srcL.includes("ghana") || srcL.includes("lawfuel") || titleL.includes("korean") || titleL.includes("calif") || titleL.includes("medicare") || titleL.includes("ghana") || titleL.includes("mtn") || titleL.includes("dhs") || titleL.includes("homeland security") || titleL.includes("pentagon") || titleL.includes("trump");
+      const normalizedSource = (srcL === "upi" || srcL.includes("united press")) ? "United Press International" : i.source;
+      return { ...i, source: normalizedSource, defaultCategory: isForeign ? "global-ransomware" : "india-bfsi" };
     }),
     ...cryptoItems.map(i => ({ ...i, defaultCategory: "crypto-heists" })),
     ...reutersItems.map(i => ({ ...i, defaultCategory: "global-ransomware" }))
