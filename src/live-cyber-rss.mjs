@@ -124,93 +124,174 @@ async function fetchRssFeed(url) {
   }
 }
 
+// Non-news filter: drops op-eds, PR listicles, corporate alliances, MoUs, and advice columns
+const JUNK_TITLE_REGEX = /\b(influential cisos|top cisos|ciso of the year|awards? 202\d|how to recover|can ai make|why india needs|opinion:|explainer:|sponsored|quiz:|how to avoid|here is how|things to know|key takeaways|expanding its ambitions|join forces to advance|cybersecurity 100|signs mou|signs pact|training program|expert thinks)\b|^how to\b/i;
+
 // Global Event Signature and Canonical Category Router
 function getEventSignatureAndCategory(title, originalCategory) {
   const lower = title.toLowerCase();
 
-  // 1. Binance Global $6.3B Heist & Asset Freezes (Force strictly to crypto-heists, 1 single cluster)
+  // 1. Binance Global $6.3B Heist & Asset Freezes / Hacker statements (All converge into 1 single card)
   if (lower.includes("binance") || 
+      lower.includes("hot potato") ||
       lower.includes("biggest-ever hack") ||
-      lower.includes("biggest crypto hack") ||
-      lower.includes("largest crypto hack") ||
-      ((lower.includes("6.3") || lower.includes("6bn") || lower.includes("6.4") || lower.includes("largest crypto") || lower.includes("biggest crypto") || lower.includes("largest cryptocurrency")) && 
-       (lower.includes("hack") || lower.includes("heist") || lower.includes("theft") || lower.includes("stolen")))) {
+      lower.includes("biggest crypto") ||
+      lower.includes("largest crypto") ||
+      lower.includes("largest cryptocurrency") ||
+      lower.includes("biggest cryptocurrency") ||
+      (lower.includes("billions") && (lower.includes("crypto") || lower.includes("cryptocurrency") || lower.includes("heist") || lower.includes("hack"))) ||
+      ((lower.includes("6.3") || lower.includes("6bn") || lower.includes("6.4") || lower.includes("6 billion")) && 
+       (lower.includes("hack") || lower.includes("heist") || lower.includes("theft") || lower.includes("stolen") || lower.includes("crypto")))) {
     return {
       category: "crypto-heists",
-      clusterKey: "crypto:binance-6.3b-heist"
+      clusterKey: "crypto:binance-6.3b-heist",
+      isSpecific: true
     };
   }
 
-  // 2. AU Small Finance Bank (Force to india-bfsi, 1 single cluster)
-  if (lower.includes("au small finance") || lower.includes("au bank")) {
+  // 1b. Supreme Court / RBI Bank Cyber Fraud Compensation & Mandatory Payouts
+  if ((lower.includes("supreme court") || lower.includes("sc cracks") || lower.includes("sc pushes") || lower.includes("sc directives")) && 
+      (lower.includes("bank") || lower.includes("cyber fraud") || lower.includes("compensation") || lower.includes("payout"))) {
     return {
       category: "india-bfsi",
-      clusterKey: "india:au-small-finance-bank"
+      clusterKey: "india:supreme-court-bank-compensation",
+      isSpecific: true
     };
   }
 
-  // 3. State Bank of India
-  if (lower.includes("state bank of india") || lower.includes("sbi")) {
-    return {
-      category: "india-bfsi",
-      clusterKey: "india:sbi-bank-security"
-    };
-  }
-
-  // 4. Punjab National Bank
-  if (lower.includes("punjab national bank") || lower.includes("pnb")) {
-    return {
-      category: "india-bfsi",
-      clusterKey: "india:pnb-fraud-case"
-    };
-  }
-
-  // 5. Reserve Bank of India (RBI Directives & Checks)
-  if (lower.includes("reserve bank of india") || lower.includes("rbi")) {
-    return {
-      category: "india-bfsi",
-      clusterKey: "india:rbi-regulatory-action"
-    };
-  }
-
-  // 6. Chandra Proteco CBI FIR
-  if (lower.includes("chandra proteco")) {
-    return {
-      category: "india-bfsi",
-      clusterKey: "india:chandra-proteco-cbi"
-    };
-  }
-
-  // 7. Federal Election Commission Hack
-  if (lower.includes("fec")) {
-    return {
-      category: "global-ransomware",
-      clusterKey: "global:fec-systems-hack"
-    };
-  }
-
-  // 8. PwC Employee Records Incident
-  if (lower.includes("pwc")) {
-    return {
-      category: "global-ransomware",
-      clusterKey: "global:pwc-records-incident"
-    };
-  }
-
-  // 9. Polymarket Security Incident
+  // 2. Polymarket Security Incident
   if (lower.includes("polymarket")) {
     return {
       category: "crypto-heists",
-      clusterKey: "crypto:polymarket-breach"
+      clusterKey: "crypto:polymarket-breach",
+      isSpecific: true
     };
   }
 
-  // 10. General Financial Fraud Amount Matcher in India (e.g. "280 crore", "5.17 crore")
+  // 3. Bithumb / Korean Exchange Breaches
+  if (lower.includes("bithumb") || (lower.includes("korean") && lower.includes("breach"))) {
+    return {
+      category: "crypto-heists",
+      clusterKey: "crypto:bithumb-hack",
+      isSpecific: true
+    };
+  }
+
+  // 4. London crypto street robberies
+  if (lower.includes("london") && lower.includes("crypto")) {
+    return {
+      category: "crypto-heists",
+      clusterKey: "crypto:london-crypto-theft",
+      isSpecific: true
+    };
+  }
+
+  // 5. AU Small Finance Bank (Force to india-bfsi, 1 single cluster)
+  if (lower.includes("au small finance") || lower.includes("au bank")) {
+    return {
+      category: "india-bfsi",
+      clusterKey: "india:au-small-finance-bank",
+      isSpecific: true
+    };
+  }
+
+  // 6. State Bank of India
+  if (lower.includes("state bank of india") || lower.includes("sbi")) {
+    return {
+      category: "india-bfsi",
+      clusterKey: "india:sbi-bank-security",
+      isSpecific: true
+    };
+  }
+
+  // 7. Punjab National Bank
+  if (lower.includes("punjab national bank") || lower.includes("pnb")) {
+    return {
+      category: "india-bfsi",
+      clusterKey: "india:pnb-fraud-case",
+      isSpecific: true
+    };
+  }
+
+  // 8. IDFC First Bank / Haryana labour board scam
+  if (lower.includes("idfc") || lower.includes("haryana labour board")) {
+    return {
+      category: "india-bfsi",
+      clusterKey: "india:idfc-bank-scam",
+      isSpecific: true
+    };
+  }
+
+  // 9. Delhi Police Cyber Syndicate / Fake benefits bust
+  if ((lower.includes("delhi police") || lower.includes("nanded")) && (lower.includes("fraud") || lower.includes("bust") || lower.includes("arrest"))) {
+    return {
+      category: "india-bfsi",
+      clusterKey: "india:delhi-police-cyber-bust",
+      isSpecific: true
+    };
+  }
+
+  // 10. Reserve Bank of India (RBI Directives & Checks)
+  if (lower.includes("reserve bank of india") || lower.includes("rbi")) {
+    return {
+      category: "india-bfsi",
+      clusterKey: "india:rbi-regulatory-action",
+      isSpecific: true
+    };
+  }
+
+  // 11. Chandra Proteco CBI FIR
+  if (lower.includes("chandra proteco")) {
+    return {
+      category: "india-bfsi",
+      clusterKey: "india:chandra-proteco-cbi",
+      isSpecific: true
+    };
+  }
+
+  // 12. Federal Election Commission Hack
+  if (lower.includes("fec") || lower.includes("federal election commission")) {
+    return {
+      category: "global-ransomware",
+      clusterKey: "global:fec-systems-hack",
+      isSpecific: true
+    };
+  }
+
+  // 13. PwC Employee Records Incident
+  if (lower.includes("pwc")) {
+    return {
+      category: "global-ransomware",
+      clusterKey: "global:pwc-records-incident",
+      isSpecific: true
+    };
+  }
+
+  // 14. Sopra Steria Defence / Cyber
+  if (lower.includes("sopra steria")) {
+    return {
+      category: "global-ransomware",
+      clusterKey: "global:sopra-steria-cyber",
+      isSpecific: true
+    };
+  }
+
+  // 15. Mistral AI Model Cyber
+  if (lower.includes("mistral")) {
+    return {
+      category: "global-ransomware",
+      clusterKey: "global:mistral-cyber",
+      isSpecific: true
+    };
+  }
+
+  // 16. General Financial Fraud Amount Matcher in India (e.g. "280 crore", "5.17 crore")
   const croreMatch = lower.match(/(\d+[\.\d]*)\s*crore/);
   if (croreMatch) {
     return {
       category: "india-bfsi",
-      clusterKey: `india:in-fraud-${croreMatch[1]}-crore`
+      clusterKey: `india:in-fraud-${croreMatch[1]}-crore`,
+      isSpecific: true
     };
   }
 
@@ -218,11 +299,12 @@ function getEventSignatureAndCategory(title, originalCategory) {
   const tokens = lower
     .replace(/[^a-z0-9\s]/g, "")
     .split(/\s+/)
-    .filter(w => w.length > 4 && !["after", "about", "could", "claims", "group", "probes", "report", "first", "giant", "cases", "arrested", "accused", "police"].includes(w));
+    .filter(w => w.length > 4 && !["after", "about", "could", "claims", "group", "probes", "report", "first", "giant", "cases", "arrested", "accused", "police", "says", "cyber", "cybersecurity", "fraud", "banks", "banking", "financial", "stolen", "money", "crore", "lakhs"].includes(w));
 
   return {
     category: originalCategory,
-    clusterKey: `${originalCategory}:${tokens.slice(0, 3).sort().join("-")}`
+    clusterKey: `${originalCategory}:${tokens.slice(0, 3).sort().join("-")}`,
+    isSpecific: false
   };
 }
 
@@ -230,7 +312,7 @@ export async function getLiveCyberRss() {
   console.log("[LiveRSS] Fetching live feeds from Reuters, ANI, Moneycontrol, and primary cyber desks...");
 
   const [indiaItems, cryptoItems, reutersItems] = await Promise.all([
-    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+breach+OR+"data+leak"+OR+"cyber+fraud")+AND+(India+OR+RBI+OR+NBFC+OR+SBI+OR+"UPI+fraud"+OR+"cybercrime")+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
+    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud")+AND+(India+OR+RBI+OR+NBFC+OR+SBI+OR+"UPI+fraud"+OR+"cyber+cell"+OR+CBI)+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(Binance+OR+crypto+OR+bitcoin)+AND+(hack+OR+freeze+OR+heist+OR+stolen)+when:7d&hl=en-US&gl=US&ceid=US:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+ransomware+OR+breach)+source:Reuters+when:7d&hl=en-US&gl=US&ceid=US:en')
   ]);
@@ -239,8 +321,8 @@ export async function getLiveCyberRss() {
     ...indiaItems.map(i => {
       const srcL = (i.source || "").toLowerCase();
       const titleL = (i.title || "").toLowerCase();
-      // If source is upi.com or clearly foreign / medical fraud, route to global
-      const isForeign = srcL === "upi" || srcL.includes("united press") || srcL.includes("chosun") || titleL.includes("korean") || titleL.includes("calif") || titleL.includes("medicare");
+      // If source is upi.com, African / international portal, or foreign govt breach, route to global
+      const isForeign = srcL === "upi" || srcL.includes("united press") || srcL.includes("chosun") || srcL.includes("ghana") || srcL.includes("lawfuel") || titleL.includes("korean") || titleL.includes("calif") || titleL.includes("medicare") || titleL.includes("ghana") || titleL.includes("mtn") || titleL.includes("dhs") || titleL.includes("homeland security") || titleL.includes("pentagon") || titleL.includes("trump");
       return { ...i, defaultCategory: isForeign ? "global-ransomware" : "india-bfsi" };
     }),
     ...cryptoItems.map(i => ({ ...i, defaultCategory: "crypto-heists" })),
@@ -251,22 +333,57 @@ export async function getLiveCyberRss() {
   const clusterMap = new Map();
 
   for (const item of rawCandidatePool) {
-    // 1. Skip hard paywalls completely
+    // 1. Skip non-news (advice columns, PR listicles, how-tos)
+    if (JUNK_TITLE_REGEX.test(item.title)) {
+      continue;
+    }
+
+    // 2. Skip hard paywalls completely
     if (isPaywalled(item.link, item.source)) {
       continue;
     }
 
-    const { category, clusterKey } = getEventSignatureAndCategory(item.title, item.defaultCategory);
+    const { category, clusterKey, isSpecific } = getEventSignatureAndCategory(item.title, item.defaultCategory);
     item.category = category;
 
-    if (!clusterMap.has(clusterKey)) {
-      clusterMap.set(clusterKey, {
+    // Check if clusterKey matches existing. If it's a fallback key, check for semantic token similarity
+    let targetKey = clusterKey;
+    if (!isSpecific && !clusterMap.has(targetKey)) {
+      const STOPWORDS = new Set(["with", "from", "after", "over", "into", "their", "under", "probe", "about", "could", "claims", "group", "probes", "report", "first", "says", "cyber", "cybersecurity", "news", "bank", "banks", "banking", "fraud", "cases", "police", "stolen", "crore", "lakhs", "money", "alert", "alerts", "loss", "losses", "network", "arrested", "arrest"]);
+      const itemTokens = new Set(
+        item.title.toLowerCase()
+          .replace(/[^a-z0-9\s]/g, "")
+          .split(/\s+/)
+          .filter(w => w.length > 3 && !STOPWORDS.has(w))
+      );
+
+      for (const [existingKey, existingCluster] of clusterMap.entries()) {
+        if (existingCluster.primary.category !== category) continue;
+        const existTokens = existingCluster.primary.title.toLowerCase()
+          .replace(/[^a-z0-9\s]/g, "")
+          .split(/\s+/)
+          .filter(w => w.length > 3 && !STOPWORDS.has(w));
+        
+        let shared = 0;
+        for (const t of existTokens) {
+          if (itemTokens.has(t)) shared++;
+        }
+        // If 2 or more distinct significant entity tokens overlap in the same category, merge into that cluster!
+        if (shared >= 2) {
+          targetKey = existingKey;
+          break;
+        }
+      }
+    }
+
+    if (!clusterMap.has(targetKey)) {
+      clusterMap.set(targetKey, {
         primary: item,
         articles: [item],
         relatedSources: new Set([item.source])
       });
     } else {
-      const cluster = clusterMap.get(clusterKey);
+      const cluster = clusterMap.get(targetKey);
       cluster.articles.push(item);
       cluster.relatedSources.add(item.source);
 
@@ -362,13 +479,41 @@ export async function getLiveCyberRss() {
   const cryptoSelected = allArticles.filter(a => a.category === "crypto-heists").slice(0, 6);
   const globalSelected = allArticles.filter(a => a.category === "global-ransomware").slice(0, 6);
 
-  const finalThreats = [...indiaSelected, ...cryptoSelected, ...globalSelected];
+  // Live verification: drop any news articles with broken links (404/DNS error)
+  const rawPool = [...indiaSelected, ...cryptoSelected, ...globalSelected];
+  const verifiedThreats = [];
+  for (const item of rawPool) {
+    try {
+      const res = await fetch(item.sourceUrl, {
+        method: "HEAD",
+        headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" },
+        redirect: "follow",
+        signal: AbortSignal.timeout(3500)
+      });
+      if (res.status < 400 || res.status === 403 || res.status === 401 || res.status === 429) {
+        verifiedThreats.push(item);
+      } else {
+        console.log(`[LiveRSS] Filtered non-working news link (${res.status}): ${item.title}`);
+      }
+    } catch (e) {
+      if (e.message && e.message.includes("ENOTFOUND")) {
+        console.log(`[LiveRSS] Filtered unreachable domain: ${item.sourceUrl}`);
+      } else {
+        verifiedThreats.push(item);
+      }
+    }
+  }
+
+  const indiaFinal = verifiedThreats.filter(a => a.category === "india-bfsi");
+  const cryptoFinal = verifiedThreats.filter(a => a.category === "crypto-heists");
+  const globalFinal = verifiedThreats.filter(a => a.category === "global-ransomware");
+  const finalThreats = [...indiaFinal, ...cryptoFinal, ...globalFinal];
 
   const categories = [
     { id: "all", label: "🔥 All Cybersecurity News", count: finalThreats.length },
-    { id: "india-bfsi", label: "🇮🇳 India, Banks & NBFCs", count: indiaSelected.length },
-    { id: "crypto-heists", label: "🌐 Crypto & Exchange Heists", count: cryptoSelected.length },
-    { id: "global-ransomware", label: "🌐 Global Cyber Defense", count: globalSelected.length }
+    { id: "india-bfsi", label: "🇮🇳 India, Banks & NBFCs", count: indiaFinal.length },
+    { id: "crypto-heists", label: "🌐 Crypto & Exchange Heists", count: cryptoFinal.length },
+    { id: "global-ransomware", label: "🌐 Global Cyber Defense", count: globalFinal.length }
   ];
 
   console.log(`[LiveRSS] Final curated feed: ${finalThreats.length} unique incidents (India: ${indiaSelected.length}, Crypto: ${cryptoSelected.length}, Global: ${globalSelected.length}). All paywalls stripped.`);

@@ -125,7 +125,7 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
             "@type": "HowToStep",
             "position": 2,
             "name": "Preserve Digital Evidence",
-            "text": "Capture uncropped screenshots of transaction reference numbers (UTR), WhatsApp or Skype chat logs, caller IDs, and fake APK file attachments."
+            "text": "Capture uncropped screenshots of transaction reference numbers (UTR), WhatsApp or messaging chat logs, caller IDs, and fake APK file attachments."
           },
           {
             "@type": "HowToStep",
@@ -150,7 +150,7 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
             "name": "What is the Digital Arrest scam and how can I protect myself?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Indian law and law enforcement agencies have NO legal concept of 'Digital Arrest'. Police, CBI, ED, and customs NEVER conduct interrogations or place citizens under arrest via Skype or WhatsApp video call. If someone calls in uniform demanding money into an RBI escrow account, hang up immediately and dial 1930."
+              "text": "Indian law and law enforcement agencies have NO legal concept of 'Digital Arrest'. Police, CBI, ED, and customs NEVER conduct interrogations or place citizens under arrest via video call. If someone calls in uniform demanding money into an RBI escrow account, hang up immediately and dial 1930."
             }
           },
           {

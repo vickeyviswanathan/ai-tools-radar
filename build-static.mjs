@@ -108,10 +108,68 @@ async function build() {
     tools.push(...ranked);
   }
 
+  // Canonical URL overrides for moved/closed upstream repositories
+  const URL_OVERRIDES = {
+    "TTS": "https://github.com/coqui-ai/TTS",
+    "CosyVoice": "https://github.com/FunAudioLLM/CosyVoice",
+    "memobase": "https://github.com/memodb-io/memobase",
+    "LLaVA": "https://github.com/haotian-liu/LLaVA",
+    "Pixelle Video": "https://github.com/AIDC-AI/Pixelle-Video",
+    "ComfyUI LTXVideo": "https://github.com/Lightricks/ComfyUI-LTXVideo",
+    "paperless ngx": "https://docs.paperless-ngx.com/"
+  };
+
+  console.log(`[Health Check] Auditing ${tools.length} tool links for dead/404 URLs...`);
+  const verifiedTools = [];
+  const linkCheckBatches = [];
+  const batchSize = 25;
+  for (let i = 0; i < tools.length; i += batchSize) {
+    linkCheckBatches.push(tools.slice(i, i + batchSize));
+  }
+
+  for (const batch of linkCheckBatches) {
+    await Promise.all(batch.map(async (tool) => {
+      // 1. Apply URL override if known moved/closed repository
+      if (URL_OVERRIDES[tool.name]) {
+        tool.url = URL_OVERRIDES[tool.name];
+      }
+      // 2. Force secure https
+      if (tool.url && tool.url.startsWith("http://")) {
+        tool.url = tool.url.replace(/^http:\/\//, "https://");
+      }
+
+      // 3. Fast HEAD / reachability check
+      let reachable = true;
+      try {
+        const res = await fetch(tool.url, {
+          method: "HEAD",
+          headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" },
+          redirect: "follow",
+          signal: AbortSignal.timeout(4000)
+        });
+        if (res.status >= 400 && res.status !== 401 && res.status !== 403 && res.status !== 405 && res.status !== 429) {
+          reachable = false;
+        }
+      } catch (err) {
+        if (err.message && (err.message.includes("ENOTFOUND") || err.message.includes("ECONNREFUSED"))) {
+          reachable = false;
+        }
+      }
+
+      if (reachable) {
+        verifiedTools.push(tool);
+      } else {
+        console.warn(`[Health Check] Dropped non-working tool link: ${tool.name} (${tool.url})`);
+      }
+    }));
+  }
+
+  console.log(`[Health Check] Verified tools: ${verifiedTools.length} active (dropped ${tools.length - verifiedTools.length} dead links).`);
+
   const output = {
     updatedAt: new Date().toISOString(),
     categories,
-    tools: normalizeWhyItMatters(tools)
+    tools: normalizeWhyItMatters(verifiedTools)
   };
 
   mkdirSync("./public/data", { recursive: true });
@@ -133,14 +191,14 @@ async function build() {
   };
   writeFileSync("./public/data/scams.json", JSON.stringify(scamsOutput, null, 2), "utf-8");
 
-  syncToolCountsInHtml(tools);
+  syncToolCountsInHtml(output.tools);
   updateThreatsInHtml(threatCategories, liveThreats);
   updateScamsInHtml(sanitizedScams);
 
-  publishSeoArtifacts(tools, output.updatedAt);
-  generateLlmsTxt(tools, sanitizedScams);
+  publishSeoArtifacts(output.tools, output.updatedAt);
+  generateLlmsTxt(output.tools, sanitizedScams);
   console.log(`[Gate] Dropped ${rejectedAtBuild.length} stored entries at build time:\n  ` + rejectedAtBuild.join("\n  "));
-  console.log(`Generated public/data/tools.json with ${tools.length} curated tools across ${categories.length} categories.`);
+  console.log(`Generated public/data/tools.json with ${output.tools.length} curated tools across ${categories.length} categories.`);
   console.log(`Generated public/data/threats.json with ${liveThreats.length} verified threat intelligence records.`);
   console.log(`Generated public/data/scams.json with ${sanitizedScams.length} verified scam defense playbooks.`);
 }
@@ -256,6 +314,7 @@ function updateScamsInHtml(scams) {
 
   html = html.replace(/<span class="tab-count" id="tab-scams-count">\d*<\/span>/, `<span class="tab-count" id="tab-scams-count">${scams.length}</span>`);
   html = html.replace(/<span class="reality-count-pill" id="scam-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="scam-count-badge">Showing all ${scams.length} verified scam alerts</span>`);
+  html = html.replace(/let SCAMS_DATA = \[[\s\S]*?\];/, `let SCAMS_DATA = ${JSON.stringify(scams)};`);
 
   const containerStartTag = '<div class="scam-grid" id="scams-container">';
   const startIdx = html.indexOf(containerStartTag);
@@ -310,7 +369,7 @@ If funds are unauthorizedly debited or someone is targeted by online fraud:
 4. **Notify Bank Branch**: Submit complaint acknowledgement receipt to home bank branch within 24 hours to secure RBI zero-liability protection.
 
 ## Key 2026 Citizen Scam Defense Rules
-- **Digital Arrest**: Indian law has NO concept of 'Digital Arrest'. Police, CBI, ED, and customs never conduct interrogations or place citizens under arrest via Skype or WhatsApp video call.
+- **Digital Arrest**: Indian law has NO concept of 'Digital Arrest'. Police, CBI, ED, and customs never conduct interrogations, court sessions, or arrests via video call.
 - **WhatsApp Wedding Cards / Traffic Fines (APKs)**: Genuine wedding cards are images or PDFs; genuine traffic fines are viewed on echallan.parivahan.gov.in. Never install any file ending in .apk sent via chat or SMS.
 - **Accidental UPI Transfer**: Never send money back directly via UPI. The incoming funds are stolen; sending money flags your account as a criminal mule. Direct the caller to their bank.
 - **Fake IPO WhatsApp Groups**: SEBI-registered brokerages never conduct institutional IPO bidding or accept investments via WhatsApp groups or personal accounts.

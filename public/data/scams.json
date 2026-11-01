@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-11-01T13:26:28.618Z",
+  "updatedAt": "2026-11-01T13:52:11.882Z",
   "scams": [
     {
-      "id": "digital-arrest-skype-call",
+      "id": "digital-arrest-video-call",
       "category": "messaging",
-      "platform": "WhatsApp / Skype Video",
+      "platform": "WhatsApp / Video Call",
       "tag": "Digital Arrest",
       "severity": "critical",
       "title": "The \"Digital Arrest\" Police Video Call",
-      "scam": "A caller in uniform claims your Aadhaar or passport was found in a narcotics courier sent to Cambodia. They put you on a fake Skype or WhatsApp video call with a set resembling a police station or CBI HQ, claiming you are under 'Digital Arrest' and must transfer your entire savings into an RBI 'holding escrow' for forensic verification.",
-      "protection": "Indian law and police have NO concept of 'Digital Arrest'. Police, CBI, ED, and customs NEVER conduct interrogations or place citizens under arrest via Skype or WhatsApp video call. Hang up immediately and dial 1930.",
+      "scam": "A caller in uniform claims your Aadhaar or passport was found in an illegal parcel or money laundering probe. They place you on a fraudulent WhatsApp video call or custom video link with a backdrop resembling a police station, CBI, or ED cyber cell, declaring you are under 'Digital Arrest' and coercing you to transfer savings into a fake 'RBI verification escrow'.",
+      "protection": "Indian law and law enforcement agencies have NO legal concept of 'Digital Arrest'. Police, CBI, ED, and customs NEVER conduct interrogations, trials, or arrests over video calls. Hang up immediately, block the number, and report to the National Cybercrime Portal or dial 1930.",
       "sourceName": "I4C & PM Mann Ki Baat Cyber Alert",
       "sourceUrl": "https://cybercrime.gov.in/",
       "verifiedDate": "2026-10-30",
