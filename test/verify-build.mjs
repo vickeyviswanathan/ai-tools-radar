@@ -125,7 +125,7 @@ assert(untrustedScamUrls === 0, `All scam defense action links point to official
 // 6. Verify AI Realities Relevance, Non-duplication & Accurate Tool Stacks
 const indexHtml = readFileSync("public/index.html", "utf8");
 const realityCardsCount = (indexHtml.match(/class="reality-card"/g) || []).length;
-assert(realityCardsCount === 18, `Exactly 18 AI Realities cards pre-rendered (found ${realityCardsCount})`);
+assert(realityCardsCount === 22, `Exactly 22 AI Realities cards pre-rendered (found ${realityCardsCount})`);
 
 // Ensure Scrapling is NOT in the Realities section
 const realitiesSectionMatch = indexHtml.match(/<div class="reality-grid" id="reality-grid">([\s\S]*?)<\/div>\s*<div id="reality-empty-state"/);

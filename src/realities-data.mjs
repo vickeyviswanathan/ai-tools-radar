@@ -360,5 +360,91 @@ export const REALITIES_DATA = [
       { name: "Mem0", url: "https://github.com/mem0ai/mem0" },
       { name: "Zep", url: "https://github.com/getzep/zep" }
     ]
+  },
+  {
+    id: 19,
+    title: "The \"Replace Junior Engineers\" Fallacy",
+    category: "Agents & Workflow",
+    symptoms: [
+      "pr review backlog",
+      "senior engineer burnout",
+      "architectural drift",
+      "hallucinated edge cases",
+      "junior hiring freeze",
+      "executive",
+      "c-suite"
+    ],
+    myth: "AI coding agents write code 5x faster, so we can freeze junior hiring and cut our engineering headcount by 30-40% this fiscal year.",
+    reality: "AI dramatically increases code generation velocity, but it causes a 3x surge in pull request volume, architectural drift, and subtle hallucinated edge-case bugs. Senior engineers spend 60% of their day reviewing AI-generated diffs instead of designing systems. Cutting juniors destroys the future talent pipeline and creates an institutional knowledge void within 18 months.",
+    fix: "Treat AI as leverage to elevate junior engineers to mid-level velocity, not a headcount reduction tool. Enforce strict diff-budget caps, automated test-coverage gates, and mandatory human architectural review boundaries.",
+    impact: "Unchecked AI diff volume overwhelms senior engineers, causes catastrophic production regressions, and eliminates institutional knowledge transfer.",
+    tools: [
+      { name: "Claude Code", url: "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" },
+      { name: "OpenSpec", url: "https://openspec.dev/" }
+    ]
+  },
+  {
+    id: 20,
+    title: "The \"Build vs Buy\" Enterprise AI Platform Money Pit",
+    category: "Serving & Infra",
+    symptoms: [
+      "14-month platform delay",
+      "deprecated in-house orchestrator",
+      "million dollar payroll burn",
+      "mcp incompatibility",
+      "executive",
+      "c-suite"
+    ],
+    myth: "We need to build our own in-house custom LLM orchestration platform from scratch to maintain proprietary competitive advantage.",
+    reality: "Internal platform builds take 9–14 months and consume $1.5M+ in engineering payroll, only to be rendered obsolete every quarter as open standards (Model Context Protocol, Ollama, Langflow, Dify) and cloud provider primitives leapfrog internal codebases.",
+    fix: "Standardize on open protocols (MCP) and swappable gateway layers. Treat LLMs and orchestrators as commodity utilities; build your proprietary moat strictly around domain-specific enterprise data, private business logic, and custom evaluation benchmarks.",
+    impact: "Millions wasted in custom platform development while competitors deploy standard MCP architectures in days.",
+    tools: [
+      { name: "MCP Servers (Anthropic)", url: "https://github.com/modelcontextprotocol/servers" },
+      { name: "Dify", url: "https://github.com/langgenius/dify" },
+      { name: "Ollama", url: "https://github.com/ollama/ollama" }
+    ]
+  },
+  {
+    id: 21,
+    title: "The Shadow AI & Trade Secret Exfiltration Blindspot",
+    category: "Security & Guardrails",
+    symptoms: [
+      "shadow ai copy-paste",
+      "unauthorized consumer llm accounts",
+      "customer pii leak",
+      "source code training exfiltration",
+      "executive",
+      "c-suite"
+    ],
+    myth: "Our corporate HR policy bans public AI tools, so our trade secrets, source code, and customer data are secure.",
+    reality: "Outright bans do not work—they create massive Shadow AI. Employees routinely paste customer PII, unreleased financial projections, and proprietary code into personal consumer web chats that train external public models.",
+    fix: "Replace bans with an authorized enterprise AI proxy gateway featuring automated Data Loss Prevention (DLP), PII masking/redaction, comprehensive audit logs, and zero-data-retention enterprise agreements.",
+    impact: "Unregulated employee AI usage leads to intellectual property leaks, customer PII exposure, and severe statutory fines under global data protection acts.",
+    tools: [
+      { name: "Headroom", url: "https://docs.headroomlabs.ai/docs" },
+      { name: "TruffleHog", url: "https://github.com/trufflesecurity/trufflehog" }
+    ]
+  },
+  {
+    id: 22,
+    title: "The \"Multi-Agent ROI Hallucination\"",
+    category: "Cost & Tokens",
+    symptoms: [
+      "uncontrolled token burn",
+      "15 dollar ticket cost",
+      "infinite agent reasoning loops",
+      "negative operational roi",
+      "executive",
+      "c-suite"
+    ],
+    myth: "Deploying autonomous multi-agent swarms will run complex customer operations 24/7 at near-zero marginal cost.",
+    reality: "Unconstrained recursive reasoning loops burn tokens non-linearly. A single complex ticket can consume $8–$25 in chained API calls with a 15–20% failure/loop rate—costing more than human operational staff with zero predictability.",
+    fix: "Implement hard token spend budgets, semantic response caching, loop-depth limits, and deterministic rule engines for standard workflows. Never invoke autonomous LLM reasoning where deterministic code can solve the problem.",
+    impact: "Operating expenses spiral out of control while autonomous agents deliver hallucinated and inconsistent resolutions.",
+    tools: [
+      { name: "LiteLLM", url: "https://github.com/BerriAI/litellm" },
+      { name: "Qdrant", url: "https://github.com/qdrant/qdrant" }
+    ]
   }
 ];

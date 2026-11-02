@@ -12,6 +12,8 @@ const BLOCKED = [
   // Gimmick prompt packs and "free API" relays
   "ponytail", "caveman", "gptapifree", "dshourfreemodel", "moneyprinterturbo",
   "stablediffusionwebuicolab", "faststablediffusion", "removeaiwatermarks",
+  // Spam redirects, checkpoints, and transient demos
+  "aiwebsiteclonertemplate", "qwenimageedit2511lorasfast", "qwen3ttsdemo", "easydataset",
 ];
 
 const normalize = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");

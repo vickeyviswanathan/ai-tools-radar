@@ -43,7 +43,11 @@ const JUNK_NOISE_KEYWORDS = [
   "colorado", "ravena", "fines of up to", "patrick stewart",
   "botox", "medicare", "doctor", "dentist", "medical fraud", "healthcare fraud",
   "hospital billing", "clinic", "narcotics", "fentanyl", "murder", "homicide",
-  "shooting", "accident", "dui", "traffic ticket"
+  "shooting", "accident", "dui", "traffic ticket",
+  // Automotive / general market & earnings false positives
+  "car sales", "vehicle sales", "auto sales", "sales breach", "growth target",
+  "quarterly sales", "q3 sales", "q4 sales", "quarterly results", "financial results",
+  "semiconductor supply chain", "supply chains and", "publicly releases", "announces gemini"
 ];
 
 function isPaywalled(url, source) {

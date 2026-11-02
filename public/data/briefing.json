@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "dateFormatted": "Nov 2, 2026",
   "leadThreat": {
     "id": "live-crypto-heists-9818481674",
@@ -12,14 +12,32 @@
     "provenanceBadge": "🚨 Reuters Report",
     "badgeType": "statutory",
     "ref": "Reuters",
-    "date": "2026-10-30",
-    "timeAgo": "1 day ago",
+    "date": "2026-10-29",
+    "timeAgo": "3 days ago",
     "entities": "Crypto & Digital Assets",
-    "incident": "Key updates: World's largest crypto exchange Binance probes 'security breach', $6.3 billion in assets impacted; Binance hack biggest crypto theft in history, hackers steal $6 billion.",
+    "incident": "Key updates: FBI says North Korea stole $6 billion crypto from Binance in biggest hack ever; Binance freezes $2.54 billion in assets after potential security breach.",
     "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
     "consequence": "Read reporting on Reuters."
   },
   "quickHits": [
+    {
+      "id": "live-india-bfsi-21022757875",
+      "category": "india-bfsi",
+      "severity": "high",
+      "impactBadge": "🚨 Financial Fraud Probe",
+      "title": "Mumbai ED attaches properties worth Rs 53 crore in bank fraud",
+      "sourceName": "The Hawk",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOem1BZTVQQjR4dzRxXzR6Q1A5UTJvVFdLNWhPZEEwZGllOHhIdlg4ZjVNS1F2d2dleTVqNVgyZUhhcXJWc0FTUkY1OGN6RlVlRVY5TDJjYlpiUG5YVWp6cGpiWVlUd3FPSDJVMUxIQjZVQ3VoVERSc2d0V1ZhZzA5MVBiX05hODRucS1uQm00V2Fpb3czT3hjdjd3bw?oc=5",
+      "provenanceBadge": "🏦 Banking & Finance",
+      "badgeType": "regulatory",
+      "ref": "The Hawk",
+      "date": "2026-11-02",
+      "timeAgo": "just now",
+      "entities": "Banking & Financial Services",
+      "incident": "",
+      "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
+      "consequence": "Read reporting on The Hawk."
+    },
     {
       "id": "live-india-bfsi-8865700446",
       "category": "india-bfsi",
@@ -32,7 +50,7 @@
       "badgeType": "regulatory",
       "ref": "The 420.in",
       "date": "2026-11-01",
-      "timeAgo": "5 hours ago",
+      "timeAgo": "20 hours ago",
       "entities": "Banking & Financial Services",
       "incident": "",
       "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
@@ -52,27 +70,9 @@
       "date": "2026-10-31",
       "timeAgo": "1 day ago",
       "entities": "Banking & Financial Services",
-      "incident": "Key updates: How Delhi Police Uncovered A Mobile Cyber Fraud Network; Rs 2.21 lakh cyber fraud leads Delhi Police to Rs 10-Crore phishing network; five arrested.",
+      "incident": "Key updates: Delhi Police Uncover Major Cyber Fraud Ring Targeting South India; Rs 2.21 lakh cyber fraud leads Delhi Police to Rs 10-Crore phishing network; five arrested.",
       "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
       "consequence": "Read reporting on India Today."
-    },
-    {
-      "id": "live-india-bfsi-14130581889",
-      "category": "india-bfsi",
-      "severity": "high",
-      "impactBadge": "🚨 Urgent Alert",
-      "title": "Delhi: Gang impersonating Paytm executives busted in Shahdara cyber fraud case; five arrested",
-      "sourceName": "The Hawk",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNUF4a0xHLXdKSE9uOG12WGcyVzBvdEZELWdsRmpCV3BHa0c2ZVYyMVhWd2FPQ0pUYVJfZWxpWFFxLVVyakNsMURRUmpyMWNPdUhpcElpQ3ltLTNHTkxjdjN2SS1SdmgzMUN3NGhqLUpuTWpDaVF5OUthVnBqUzRCOW9TdHRaSlFDNTBHVEZhNkp0SzVrdHdtWm90c0ZEaGJ0YUlQRWhZUjFhLU1peWVSdndYSWZtWXpOR0JrbzdOeExYSXc?oc=5",
-      "provenanceBadge": "🏦 Banking & Finance",
-      "badgeType": "regulatory",
-      "ref": "The Hawk",
-      "date": "2026-10-31",
-      "timeAgo": "1 day ago",
-      "entities": "Banking & Financial Services",
-      "incident": "",
-      "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
-      "consequence": "Read reporting on The Hawk."
     }
   ],
   "topScam": {
@@ -91,47 +91,44 @@
     "actionUrl": "https://cybercrime.gov.in/"
   },
   "featuredTool": {
-    "id": 189,
-    "name": "Qdrant",
-    "tagline": "Vector similarity search engine and vector database written in Rust with extended payload filtering.",
-    "url": "https://github.com/qdrant/qdrant",
-    "emoji": "🔎",
-    "category": "Research & Data",
-    "why_it_matters": "Ultra-fast production vector database powering enterprise semantic search and recommendation systems.",
-    "launched_at": 1793019222,
-    "score": 896.4379387048182,
+    "id": 331,
+    "name": "headroom",
+    "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+    "url": "https://docs.headroomlabs.ai/docs",
+    "emoji": null,
+    "category": "Coding",
+    "why_it_matters": "Battle-tested in the open — 78.3K GitHub stars from real production users.",
+    "launched_at": 1767815931,
+    "score": 18.728737158380532,
     "signals": [
-      "github:22000.0"
+      "github:78333.0"
     ],
-    "rank": 35333
+    "rank": 78333
   },
   "realityPick": {
-    "id": 1,
-    "title": "The Context Window Lie",
-    "category": "Retrieval & Context",
+    "id": 21,
+    "title": "The Shadow AI & Trade Secret Exfiltration Blindspot",
+    "category": "Security & Guardrails",
     "symptoms": [
-      "lost in middle",
-      "needle in haystack failure",
-      "long context hallucination",
-      "massive prompt cost",
-      "slow ttft"
+      "shadow ai copy-paste",
+      "unauthorized consumer llm accounts",
+      "customer pii leak",
+      "source code training exfiltration",
+      "executive",
+      "c-suite"
     ],
-    "myth": "1-million-token context window! Dump your entire company wiki or codebase into one prompt!",
-    "reality": "Loss-in-the-middle degradation causes LLMs to ignore needle-in-the-haystack facts once context exceeds 32K tokens. High Time-To-First-Token (TTFT) and linear token costs make unindexed raw-file prompting unusable in production.",
-    "fix": "Never dump raw unindexed documents into an LLM prompt. Use prompt compression to discard low-entropy tokens and targeted cross-encoder rerankers on small, precise retrieved chunks.",
-    "impact": "Legal queries hallucinate terms found in middle sections; enterprise support bots cost 20x more while delivering worse answers.",
+    "myth": "Our corporate HR policy bans public AI tools, so our trade secrets, source code, and customer data are secure.",
+    "reality": "Outright bans do not work—they create massive Shadow AI. Employees routinely paste customer PII, unreleased financial projections, and proprietary code into personal consumer web chats that train external public models.",
+    "fix": "Replace bans with an authorized enterprise AI proxy gateway featuring automated Data Loss Prevention (DLP), PII masking/redaction, comprehensive audit logs, and zero-data-retention enterprise agreements.",
+    "impact": "Unregulated employee AI usage leads to intellectual property leaks, customer PII exposure, and severe statutory fines under global data protection acts.",
     "tools": [
       {
-        "name": "LLMLingua",
-        "url": "https://github.com/microsoft/LLMLingua"
+        "name": "Headroom",
+        "url": "https://docs.headroomlabs.ai/docs"
       },
       {
-        "name": "FlashRank",
-        "url": "https://github.com/PrithivirajDamodaran/FlashRank"
-      },
-      {
-        "name": "Qdrant",
-        "url": "https://github.com/qdrant/qdrant"
+        "name": "TruffleHog",
+        "url": "https://github.com/trufflesecurity/trufflehog"
       }
     ]
   }
