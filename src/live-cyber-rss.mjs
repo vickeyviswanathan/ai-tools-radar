@@ -29,11 +29,13 @@ const PAYWALLED_SOURCE_NAMES = [
 ];
 
 const CYBER_SECURITY_KEYWORDS = [
-  "hack", "breach", "leak", "heist", "stolen", "freeze", "frozen",
-  "fraud", "scam", "cyber", "ransomware", "trojan", "malware", "phishing",
-  "zero-day", "vulnerability", "cve", "investigation", "chargesheet",
-  "raid", "fir", "rbi", "cert-in", "cisa", "sebi", "cbi", "exploit",
-  "drained", "compromise", "unauthorized", "data protection", "extortion"
+  "hack", "hacked", "hacker", "hacking", "data breach", "security breach", "network breach",
+  "data leak", "credential leak", "database leak", "heist", "cyber",
+  "ransomware", "trojan", "malware", "phishing", "smishing", "vishing",
+  "zero-day", "vulnerability", "cve-", "cve", "exploit", "drained", "compromise",
+  "digital arrest", "deepfake", "e-sim", "sim swap", "infostealer",
+  "dark web", "cert-in", "cisa", "credential", "crypto heist",
+  "cyber fraud", "online fraud", "upi fraud", "apk", "botnet", "ddos"
 ];
 
 const JUNK_NOISE_KEYWORDS = [
@@ -47,7 +49,13 @@ const JUNK_NOISE_KEYWORDS = [
   // Automotive / general market & earnings false positives
   "car sales", "vehicle sales", "auto sales", "sales breach", "growth target",
   "quarterly sales", "q3 sales", "q4 sales", "quarterly results", "financial results",
-  "semiconductor supply chain", "supply chains and", "publicly releases", "announces gemini"
+  "semiconductor supply chain", "supply chains and", "publicly releases", "announces gemini",
+  // Environmental / climate noise matching 'breach'
+  "warming", "glacier", "ice sheet", "climate", "temperature", "greenhouse", "emission",
+  // Traditional non-cyber financial / white-collar crime & forex noise
+  "ed attaches", "attaches properties", "attached properties", "property attached",
+  "pmla", "money laundering", "loan fraud", "bank loan", "chandra proteco",
+  "dollar pulls back", "ahead of us midterms", "forex", "stock market", "shares dip", "shares surge"
 ];
 
 function isPaywalled(url, source) {

@@ -144,7 +144,12 @@ let lazyCopiedSummaries = 0;
 
 for (const threat of threatsData.threats) {
   const tLow = threat.title.toLowerCase();
-  if (tLow.includes("botox") || tLow.includes("medicare") || tLow.includes("cosmetic surgery")) nonCyberStories++;
+  if (tLow.includes("botox") || tLow.includes("medicare") || tLow.includes("cosmetic surgery") ||
+      tLow.includes("ed attaches") || tLow.includes("attaches properties") || tLow.includes("car sales") ||
+      tLow.includes("dollar pulls back") || tLow.includes("loan fraud") || tLow.includes("chandra proteco") ||
+      tLow.includes("warming") || tLow.includes("glacier") || tLow.includes("ice sheet")) {
+    nonCyberStories++;
+  }
 
   if (threat.category === "india-bfsi") {
     const isIndian = /\b(india|indian|rbi|sebi|cbi|cert-in|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|aadhaar|pan|crore|lakh|delhi police|mumbai police|cyber cell|digital arrest|nbfc|sc seeks|supreme court)\b/i.test(tLow);

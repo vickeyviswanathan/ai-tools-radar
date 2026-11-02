@@ -14,10 +14,12 @@ export function generateDailyBriefing() {
   const todayStr = new Date().toISOString().split("T")[0];
   const dateFormatted = new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 
-  // Filter out any false positive RSS matches that are not security incidents
+  // Filter out any false positive RSS matches that are not true cyber security incidents
   const isSecurityItem = (item) => {
     const t = (item.title || "").toLowerCase();
-    if (t.includes("car sales") || t.includes("box office") || t.includes("cricket")) return false;
+    if (t.includes("car sales") || t.includes("box office") || t.includes("cricket") ||
+        t.includes("ed attaches") || t.includes("attaches properties") || t.includes("dollar pulls back") ||
+        t.includes("loan fraud") || t.includes("chandra proteco")) return false;
     return true;
   };
 
