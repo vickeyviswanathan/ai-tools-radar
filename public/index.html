@@ -1806,7 +1806,7 @@
         </button>
         <button type="button" class="side-nav-btn" id="side-tab-threats" onclick="switchView('news'); toggleMobileSidebar(false);">
           <span>🛡️ Cyber News</span>
-          <span class="side-nav-pill" id="side-threats-count">15</span>
+          <span class="side-nav-pill" id="side-threats-count">14</span>
         </button>
         <button type="button" class="side-nav-btn" id="side-tab-scams" onclick="switchView('scams'); toggleMobileSidebar(false);">
           <span>🚨 Scam Alerts</span>
@@ -1880,10 +1880,10 @@
           ⚡ AI Realities <span class="tab-count">18</span>
         </button>
         <button type="button" class="view-tab" id="tab-threats" role="tab" aria-selected="false" aria-controls="threats" onclick="switchView('news')">
-          🛡️ Cyber News <span class="tab-count" id="tab-threats-count">15</span>
+          🛡️ Cyber News <span class="tab-count" id="tab-threats-count">14</span>
         </button>
         <button type="button" class="view-tab" id="tab-scams" role="tab" aria-selected="false" aria-controls="scams" onclick="switchView('scams')">
-          🚨 Scam Alerts <span class="tab-count" id="tab-scams-count">15</span>
+          🚨 Scam Alerts <span class="tab-count" id="tab-scams-count">19</span>
         </button>
       </div>
     </header>
@@ -1910,7 +1910,7 @@
             <div class="hero-metric-label">AI Realities</div>
           </div>
           <div class="hero-metric-box" onclick="switchView('news')">
-            <div class="hero-metric-num" id="stat-news">15</div>
+            <div class="hero-metric-num" id="stat-news">14</div>
             <div class="hero-metric-label">Cyber News</div>
           </div>
           <div class="hero-metric-box" onclick="switchView('scams')">
@@ -1930,21 +1930,21 @@
             <button type="button" class="hero-news-link" onclick="switchView('news')">View All →</button>
           </div>
           <div class="hero-news-list" id="hero-live-news-list">
-            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-10386227470')" title="Click to view story in Cyber News">
-              <span class="hero-news-item-title">India&#39;s apex bank ramps up cybersecurity scrutiny on lenders - report</span>
-              <span class="hero-news-tag">Yahoo Finance</span>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-342730745')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">Cybersecurity Gaps Put India&#39;s Refrigeration and Cold-Storage Networks at Risk</span>
+              <span class="hero-news-tag">CXO Digitalpulse</span>
             </div>
-            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-3692631155')" title="Click to view story in Cyber News">
-              <span class="hero-news-item-title">Spandana Sphoorty reports ₹7.8 crore cyber fraud involving 82 accounts</span>
-              <span class="hero-news-tag">Business Standa…</span>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-10158650343')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">State Bank of India quarterly profit rises; to boost cybersecurity after breach</span>
+              <span class="hero-news-tag">Reuters</span>
             </div>
-            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-8865700446')" title="Click to view story in Cyber News">
-              <span class="hero-news-item-title">2.10 Crore Cyber Fraud: Ambani, Tendulkar&#39;s Names Used to Lure Pune Senior Citizen, Then &#39;Digital Arrest&#39; Trap</span>
-              <span class="hero-news-tag">The 420.in</span>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-7019765067')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">India&#39;s CERT-In secures access to test Anthropic&#39;s Mythos AI model for cybersecurity</span>
+              <span class="hero-news-tag">Deccan Herald</span>
             </div>
-            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-17601327396')" title="Click to view story in Cyber News">
-              <span class="hero-news-item-title">Delhi Police bust cyber fraud ring targeting southern India with fake benefits</span>
-              <span class="hero-news-tag">India Today</span>
+            <div class="hero-news-item" onclick="jumpToThreatStory('live-india-bfsi-21354618276')" title="Click to view story in Cyber News">
+              <span class="hero-news-item-title">Rs 500 crore cyber fraud trail: Mumbai Police examine mule accounts linked to betting network</span>
+              <span class="hero-news-tag">The Times of In…</span>
             </div>
           </div>
         </div>
@@ -5650,7 +5650,7 @@
         <h2 class="section-title">🛡️ Cybersecurity News</h2>
         <span class="section-note">Verified cybersecurity reporting and analysis across banking, enterprise defense, and global security developments.</span>
       </div>
-      <span class="reality-count-pill" id="threat-count-badge">Showing all 15 verified news stories</span>
+      <span class="reality-count-pill" id="threat-count-badge">Showing all 14 verified news stories</span>
     </div>
 
     <!-- Cybersecurity News Sub-Tabs & Live Filter -->
@@ -5662,14 +5662,160 @@
         </div>
       </div>
       <div class="threat-subtabs" id="threat-subtabs">
-        <button type="button" class="threat-tab-btn active" data-cat="all" onclick="selectThreatCategory('all', this)">🔥 All Cybersecurity News (15)</button>
+        <button type="button" class="threat-tab-btn active" data-cat="all" onclick="selectThreatCategory('all', this)">🔥 All Cybersecurity News (14)</button>
         <button type="button" class="threat-tab-btn" data-cat="india-bfsi" onclick="selectThreatCategory('india-bfsi', this)">🇮🇳 India, Banks &amp; NBFCs (6)</button>
-        <button type="button" class="threat-tab-btn" data-cat="crypto-heists" onclick="selectThreatCategory('crypto-heists', this)">🌐 Crypto &amp; Exchange Heists (3)</button>
+        <button type="button" class="threat-tab-btn" data-cat="crypto-heists" onclick="selectThreatCategory('crypto-heists', this)">🌐 Crypto &amp; Exchange Heists (2)</button>
         <button type="button" class="threat-tab-btn" data-cat="global-ransomware" onclick="selectThreatCategory('global-ransomware', this)">🌐 Global Cyber Defense (6)</button>
       </div>
     </div>
 
     <div class="threat-cards-grid" id="threats-container">
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-342730745">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-342730745')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxNdkFKWXoxRlItaGFOQTh3OXRXbThwU2RoTE5hQ1o5YklVMWY3T0tiUEd5MGJhQnFCUk5wVFRqNjhKQ2ZhRDU5UmxvMkN2d191bUpYR2ZRVHhJUXNjZkdwamluZ3NROUQ4enNKLW80Z2ZFN1ZpVU1MYUl4Y0IySEhXaUhRaU11amhjdXdyc2dKYzd6ejczQy04Yk1oWkU4eUwwNUpWVXRtUlA2V05vckJ3?oc=5" target="_blank" rel="noopener noreferrer">
+          Cybersecurity Gaps Put India&#39;s Refrigeration and Cold-Storage Networks at Risk <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Banking &amp; Financial Services</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">CXO Digitalpulse</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirwFBVV95cUxNdkFKWXoxRlItaGFOQTh3OXRXbThwU2RoTE5hQ1o5YklVMWY3T0tiUEd5MGJhQnFCUk5wVFRqNjhKQ2ZhRDU5UmxvMkN2d191bUpYR2ZRVHhJUXNjZkdwamluZ3NROUQ4enNKLW80Z2ZFN1ZpVU1MYUl4Y0IySEhXaUhRaU11amhjdXdyc2dKYzd6ejczQy04Yk1oWkU4eUwwNUpWVXRtUlA2V05vckJ3?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on CXO Digitalpulse ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-10158650343">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-10158650343')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPQnFRWGMtM3JxME1pR2FXOWo4NU1Ua1VncXNLa0dqN0RORm5MbTJ2Nk9YcU04cV9mRVVOLVNFTmxrTUVhRVZ3TnhqUC13RXdMUXgzNFQ2TGsxSklSYUp1c3dWMDhpVFJoYnh4NEhvVnh1YWdKTS15Z29NLU5LaEFXVFNZYzhZc01CSGh6enE0UGV1TE9tbkhN?oc=5" target="_blank" rel="noopener noreferrer">
+          State Bank of India quarterly profit rises; to boost cybersecurity after breach <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Banking &amp; Financial Services</span>
+      </div>
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Key Context</strong>
+          Key updates: Karix Mobile denies any association with SBI data breach; SBI vows to strengthen cybersecurity after data breach.
+        </div>
+      </div>
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Reuters</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPQnFRWGMtM3JxME1pR2FXOWo4NU1Ua1VncXNLa0dqN0RORm5MbTJ2Nk9YcU04cV9mRVVOLVNFTmxrTUVhRVZ3TnhqUC13RXdMUXgzNFQ2TGsxSklSYUp1c3dWMDhpVFJoYnh4NEhvVnh1YWdKTS15Z29NLU5LaEFXVFNZYzhZc01CSGh6enE0UGV1TE9tbkhN?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Reuters ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-7019765067">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-7019765067')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSVlLNlpvOTZFY0J6UHdLTlcwT0kyOTVHaThjUXhvejc5RnpKTEt6XzNGYzNyV1NWcUV0cnpHYWlUSmhzLU1oRFg0bHZhUDVMMkI0THk0QzdkbGVHVGMxOGN1eEVrV2tfMnhubUkyOWoxQnFJWHBZMzBEVU9FaDROWWdmckk2dlZvdnBFcnR2cDdzQk5CeTd6Z0lPSjg5RGZ5cDN1MlFWa3hFUHdGbTkwVi1aMGwxTFFPc0RNTmlENzByNWM?oc=5" target="_blank" rel="noopener noreferrer">
+          India&#39;s CERT-In secures access to test Anthropic&#39;s Mythos AI model for cybersecurity <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Banking &amp; Financial Services</span>
+      </div>
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Key Context</strong>
+          Key updates: India&#39;s space sector gets cybersecurity boost as CERT-In, SIA-India release joint guidelines; CERT-In is now using Claude Mythos to test cybersecurity flaws, report says.
+        </div>
+      </div>
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Deccan Herald</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSVlLNlpvOTZFY0J6UHdLTlcwT0kyOTVHaThjUXhvejc5RnpKTEt6XzNGYzNyV1NWcUV0cnpHYWlUSmhzLU1oRFg0bHZhUDVMMkI0THk0QzdkbGVHVGMxOGN1eEVrV2tfMnhubUkyOWoxQnFJWHBZMzBEVU9FaDROWWdmckk2dlZvdnBFcnR2cDdzQk5CeTd6Z0lPSjg5RGZ5cDN1MlFWa3hFUHdGbTkwVi1aMGwxTFFPc0RNTmlENzByNWM?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Deccan Herald ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-21354618276">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Financial Fraud Probe</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-21354618276')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxQSUxkcFdLMm1KR1cyTVdLejVfTlUySlFBT3NSZktkeE9Zand0Z0toZEpQd09CTXF5Ukh0WE1UaThBY1lCcGtseE5YZ2ZKT1pqMXIyTXVScEVDVGJXRnVkSmdWa1VCOWU3RGFBakY3SDExYms1MzlGUUFLdTI4dWxxUzItdTZMWlQxS2dHZ3lOSktRVnFOajBoTkJsUzVBaGJ5c0dYaUZoMzluLVZEaEJnVGZNWUtTVXZYbFdhTTFDdGxweEJjOHRSenBOTHdlaXh2WmRINzl3WVZmNnB6aktYRDdhVWtnTXN0ZWt0Mk9XRmJaZUM4dUdsQ0dn0gH_AUFVX3lxTE1VZlE1THZsUUtKR1BDX3kxbUZSd1JtWjV5UzZZbTRuRlVuWkZMcV9fTXE5bm1hZE5kUEp0Qm02bWFka01uYnpkNUVtVGdKd2U2Y0U3TzNUb3I5NVVoNDI0OUlJZ0pEUVZVbVhTVzVBOVpzcEl3ZWEySUtDWmdRN0NDUjI2NnVfYjB5aHk5ZVU2eVlTVmtYQ29BUHAwUGJGRC02ZmlXMWdhcXFMY3NVS2Z0Mi1IVnVUWDgwOGtTS29paFJWcEdrc2hYWXJZc3BPSm0yZGkxLXVTbjAycGE5WjVXWlkxQldwX2pKRk9uSmk2ZjZCbm9CRXZuS3VqbXlMVQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Rs 500 crore cyber fraud trail: Mumbai Police examine mule accounts linked to betting network <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Banking &amp; Financial Services</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Times of India</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxQSUxkcFdLMm1KR1cyTVdLejVfTlUySlFBT3NSZktkeE9Zand0Z0toZEpQd09CTXF5Ukh0WE1UaThBY1lCcGtseE5YZ2ZKT1pqMXIyTXVScEVDVGJXRnVkSmdWa1VCOWU3RGFBakY3SDExYms1MzlGUUFLdTI4dWxxUzItdTZMWlQxS2dHZ3lOSktRVnFOajBoTkJsUzVBaGJ5c0dYaUZoMzluLVZEaEJnVGZNWUtTVXZYbFdhTTFDdGxweEJjOHRSenBOTHdlaXh2WmRINzl3WVZmNnB6aktYRDdhVWtnTXN0ZWt0Mk9XRmJaZUM4dUdsQ0dn0gH_AUFVX3lxTE1VZlE1THZsUUtKR1BDX3kxbUZSd1JtWjV5UzZZbTRuRlVuWkZMcV9fTXE5bm1hZE5kUEp0Qm02bWFka01uYnpkNUVtVGdKd2U2Y0U3TzNUb3I5NVVoNDI0OUlJZ0pEUVZVbVhTVzVBOVpzcEl3ZWEySUtDWmdRN0NDUjI2NnVfYjB5aHk5ZVU2eVlTVmtYQ29BUHAwUGJGRC02ZmlXMWdhcXFMY3NVS2Z0Mi1IVnVUWDgwOGtTS29paFJWcEdrc2hYWXJZc3BPSm0yZGkxLXVTbjAycGE5WjVXWlkxQldwX2pKRk9uSmk2ZjZCbm9CRXZuS3VqbXlMVQ?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Times of India ↗
+        </a>
+      </div>
+    </article>
+
     <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-10386227470">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5700,40 +5846,6 @@
         </div>
         <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQU2tDMDBuQ2ZvWWlXbUR6UE1yYk9zSXlfSzh1amFJZDlZeEZOUnU1d2NCemtzRXliMy1QNnI5TU5aWGNHejdjcld4V0dnZ0I1cTI1ZFJiZ0MwRHFFUG9qN0dSRXIyb1puOVVwOVRxVzliR1BKQ0NydWZMc1RNRnhyZFFfOGlHVVBH?oc=5" target="_blank" rel="noopener noreferrer">
           Read on Yahoo Finance ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-3692631155">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Financial Fraud Probe</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-3692631155')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxOR1dFMHk1QjZmTWxlcy1nZUM1a2g4RHA5VVptcWk2d0NQZE5wOE1rYnRhNHVJcjh2cktCRjR2ZlhWQmp3SDdkQXk5UTBPVWlmQm5MTDc4Z3gyTXNjVzZlVnVBcldOOEtMc29sdXdqMDZTV3NxcDFLWEo2X1dLcTc0aGRjODBwSHltNG05X19OX1VvWEJFVkNaZU80aE1USWRYT1E1SXlXa1FRa1p3d1EySl9Ud3dEYUVzbWxPbzVSUUM2a1p2M2tV0gHMAUFVX3lxTE5zdFJvekdhTEhicHBFR2NOVjAtNjU0OVhBNy1Gam0tR29oWFE3R2Q5Vm56YzdqN0p2Tk80aXdQQXRtR3ZBODJOSFhpZDh4MUd3aHJUNXNBejZhZ0d3WGRwRG5CbThqQXdDcUhYSWw0VElicURsQmxHVS1rY3VoUzc5bnFMNVIxVFM5NGpCUDRGY25zZ1JYMXRLRENlbDVWbWY1QXBhQUdDRTBPSjd5a0U0NXkxYkhOSDJMamVhQk1VX01VQ1Nqd3hWTGNJaw?oc=5" target="_blank" rel="noopener noreferrer">
-          Spandana Sphoorty reports ₹7.8 crore cyber fraud involving 82 accounts <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Banking &amp; Financial Services</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Business Standard</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMixwFBVV95cUxOR1dFMHk1QjZmTWxlcy1nZUM1a2g4RHA5VVptcWk2d0NQZE5wOE1rYnRhNHVJcjh2cktCRjR2ZlhWQmp3SDdkQXk5UTBPVWlmQm5MTDc4Z3gyTXNjVzZlVnVBcldOOEtMc29sdXdqMDZTV3NxcDFLWEo2X1dLcTc0aGRjODBwSHltNG05X19OX1VvWEJFVkNaZU80aE1USWRYT1E1SXlXa1FRa1p3d1EySl9Ud3dEYUVzbWxPbzVSUUM2a1p2M2tV0gHMAUFVX3lxTE5zdFJvekdhTEhicHBFR2NOVjAtNjU0OVhBNy1Gam0tR29oWFE3R2Q5Vm56YzdqN0p2Tk80aXdQQXRtR3ZBODJOSFhpZDh4MUd3aHJUNXNBejZhZ0d3WGRwRG5CbThqQXdDcUhYSWw0VElicURsQmxHVS1rY3VoUzc5bnFMNVIxVFM5NGpCUDRGY25zZ1JYMXRLRENlbDVWbWY1QXBhQUdDRTBPSjd5a0U0NXkxYkhOSDJMamVhQk1VX01VQ1Nqd3hWTGNJaw?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Business Standard ↗
         </a>
       </div>
     </article>
@@ -5772,118 +5884,6 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-17601327396">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-17601327396')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1F0LVB5ZUhwZXk2RUpmVGNnbVFndGxyU1l1OWJPVFpHZDBDdm1SUFpzZlMxSTA3bE1Cd0RnTmQ1bHBWTmFwSFFCWDZQamZJQWdJLWFfR3A0NXJSQnQ3TWw5S3pvX1VZbnRuV1E5c2xIWDFaTzlOMDdpSFhyNll6TUZoSXhmTDk1VE5wZU5sbjd4UlJnS2tNQjByeHJuYzFfc3RFb3pIRGY0QVgzbWlpeDBPcFhwa3NYeUd5WkxNcHdGd0FVQXNfbHEycmFnVzFi0gHWAUFVX3lxTE11NmNkbkszSnl5NUF6c3c2U3Vka2g3X1JuTnBZQktJT21aMEtNUTVHeXNBcUt4N1QtWFFPUXF2Um54WjhvaXRwbmlzSWtPV2VVWVlrYVpfamRtMjJZZDJJVnBTV1ZFb25TZ2tYMEVpR0dZQk9Qa3hiSmk1WFdYTjI4eWwtT2xBOTFUUnZ6dTY4SU9MVkpsZHhrbm9tWFpCME40N1NlWlBST1dqWURoZnFnT1VaeHFXSmpJdjU1QlBjbWtacUwtTEtxc2ZSZjlKRDVrSmhxR1E?oc=5" target="_blank" rel="noopener noreferrer">
-          Delhi Police bust cyber fraud ring targeting southern India with fake benefits <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Banking &amp; Financial Services</span>
-      </div>
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Key Context</strong>
-          Key updates: Delhi Police Uncover Major Cyber Fraud Ring Targeting South India; Delhi Police Uncovers Rs 10 Crore Cyber Fraud Ring.
-        </div>
-      </div>
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">India Today</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1F0LVB5ZUhwZXk2RUpmVGNnbVFndGxyU1l1OWJPVFpHZDBDdm1SUFpzZlMxSTA3bE1Cd0RnTmQ1bHBWTmFwSFFCWDZQamZJQWdJLWFfR3A0NXJSQnQ3TWw5S3pvX1VZbnRuV1E5c2xIWDFaTzlOMDdpSFhyNll6TUZoSXhmTDk1VE5wZU5sbjd4UlJnS2tNQjByeHJuYzFfc3RFb3pIRGY0QVgzbWlpeDBPcFhwa3NYeUd5WkxNcHdGd0FVQXNfbHEycmFnVzFi0gHWAUFVX3lxTE11NmNkbkszSnl5NUF6c3c2U3Vka2g3X1JuTnBZQktJT21aMEtNUTVHeXNBcUt4N1QtWFFPUXF2Um54WjhvaXRwbmlzSWtPV2VVWVlrYVpfamRtMjJZZDJJVnBTV1ZFb25TZ2tYMEVpR0dZQk9Qa3hiSmk1WFdYTjI4eWwtT2xBOTFUUnZ6dTY4SU9MVkpsZHhrbm9tWFpCME40N1NlWlBST1dqWURoZnFnT1VaeHFXSmpJdjU1QlBjbWtacUwtTEtxc2ZSZjlKRDVrSmhxR1E?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on India Today ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-2962483530">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-2962483530')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOVzhDMVZHUFowWTBEX0FZeFpDNHBPQVM5WU53LVFQRnF1SzVmQ1BRNGotSWtsN0M1WVV4eW5valE1VlVfcURad1RnODRPNU9UNXAyR2xkWHZYNFVOZ1BHMUIwQlNCVTVFTG9pN3ZzMFptdHZWVDB2cHVkb3IweF9YTFFzc282cGp1dzNPQ0ZHdGRvZmtyZXVUQS0tMHZZVEJvbnNzNnhIM0xsajRqWU5pX2x0V1B0Z9IBuwFBVV95cUxQUUNmQXRwTGxkMlFoUTZ6RHpEQjcwMkhFQmRKZWZ4cUdXczI0N2p5ZkVGSlE2ZHFzM1h3ak5CNkgwcUZjSUoyZGhrZGV6Nkhqbjc2emZoVTE2UldMd1BTdVJmYXAzRWpDZnlnVWtLXzlEZkRjX1lWcUdPbEY5VUFHWlRwc1R2VXB2NnVHSllRTVBHMkJ1Qm5PS2RFVlpHWFNrNkFoWGdwUHVnVzliMWozS2FodDZZV3MzclRB?oc=5" target="_blank" rel="noopener noreferrer">
-          &#39;Smash your phone against wall to end digital arrest&#39;: CJI asks why people still fall for scams despite awa... <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Banking &amp; Financial Services</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Bhaskar English</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOVzhDMVZHUFowWTBEX0FZeFpDNHBPQVM5WU53LVFQRnF1SzVmQ1BRNGotSWtsN0M1WVV4eW5valE1VlVfcURad1RnODRPNU9UNXAyR2xkWHZYNFVOZ1BHMUIwQlNCVTVFTG9pN3ZzMFptdHZWVDB2cHVkb3IweF9YTFFzc282cGp1dzNPQ0ZHdGRvZmtyZXVUQS0tMHZZVEJvbnNzNnhIM0xsajRqWU5pX2x0V1B0Z9IBuwFBVV95cUxQUUNmQXRwTGxkMlFoUTZ6RHpEQjcwMkhFQmRKZWZ4cUdXczI0N2p5ZkVGSlE2ZHFzM1h3ak5CNkgwcUZjSUoyZGhrZGV6Nkhqbjc2emZoVTE2UldMd1BTdVJmYXAzRWpDZnlnVWtLXzlEZkRjX1lWcUdPbEY5VUFHWlRwc1R2VXB2NnVHSllRTVBHMkJ1Qm5PS2RFVlpHWFNrNkFoWGdwUHVnVzliMWozS2FodDZZV3MzclRB?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Bhaskar English ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="india-bfsi" id="threat-live-india-bfsi-5496497170">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🏦 Bank Breach Probe</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-regulatory">🏦 Banking &amp; Finance</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-india-bfsi-5496497170')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNU0JSQkZlOHY3dWVLclNCaGQ5VGxIb3prT0NqOXh3UHRfUjdhVUdRUFZ2T3dTZnNJQnEzUFhSOVItdkxiY1d6WTh4T1dadzhGNFZ2QzNhU0c1TnVURDhKbHQ1MmhYdUJaWjE1bEFWdEV2U24zZEdaVUVYWDVjUFZ4NVhoX2VfS0lGbTg2Z0xweFNvdENCam42NXIyQUJraWxRbkt6NENLMHVITVQ4YjhqY20wSG4yY0ZsaWRiNNIBwgFBVV95cUxOdmlQak9MckhIQXlYcElwZG9YQ09NdmtZNGpnWmJYckpvSXJ5RGN2QU82RS00T2YtWUJ6RGpBTFZ6MlVVLXp3bDBEb0xrYjJGTC14UmpJemhxZnN1MkQ0Z0RMR05TWXRSaU9BTml1emZ6cTI1VHU5bmtfQ0NRazlxQ0M0cklnOERvT2hkZVRDMndBX2J3YWxxUl9PSWlKZzQ0WHVGT3B1S2M2RFFLNzVfdGlRa3RTc0R2cUMyRUZDZThadw?oc=5" target="_blank" rel="noopener noreferrer">
-          AU Bank probes potential data leak <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Banking &amp; Financial Services</span>
-      </div>
-      <div class="threat-breakdown">
-        <div class="threat-point point-incident">
-          <strong>Key Context</strong>
-          Key updates: AU Small Finance Bank Probes Possible Customer Data Leak, Says Banking Systems Safe; AU Small Finance Bank breach reported, hackers threaten to leak Aadhaar and customer records.
-        </div>
-      </div>
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">The Times of India</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNU0JSQkZlOHY3dWVLclNCaGQ5VGxIb3prT0NqOXh3UHRfUjdhVUdRUFZ2T3dTZnNJQnEzUFhSOVItdkxiY1d6WTh4T1dadzhGNFZ2QzNhU0c1TnVURDhKbHQ1MmhYdUJaWjE1bEFWdEV2U24zZEdaVUVYWDVjUFZ4NVhoX2VfS0lGbTg2Z0xweFNvdENCam42NXIyQUJraWxRbkt6NENLMHVITVQ4YjhqY20wSG4yY0ZsaWRiNNIBwgFBVV95cUxOdmlQak9MckhIQXlYcElwZG9YQ09NdmtZNGpnWmJYckpvSXJ5RGN2QU82RS00T2YtWUJ6RGpBTFZ6MlVVLXp3bDBEb0xrYjJGTC14UmpJemhxZnN1MkQ0Z0RMR05TWXRSaU9BTml1emZ6cTI1VHU5bmtfQ0NRazlxQ0M0cklnOERvT2hkZVRDMndBX2J3YWxxUl9PSWlKZzQ0WHVGT3B1S2M2RFFLNzVfdGlRa3RTc0R2cUMyRUZDZThadw?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on The Times of India ↗
-        </a>
-      </div>
-    </article>
-
     <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-9818481674">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
@@ -5909,7 +5909,7 @@
       <div class="threat-breakdown">
         <div class="threat-point point-incident">
           <strong>Key Context</strong>
-          Key updates: FBI says North Korea stole $6 billion crypto from Binance in biggest hack ever; Binance freezes $2.54 billion in assets after potential security breach.
+          Key updates: Binance sees $3.6 billion withdrawals after biggest-ever crypto hack; Binance resumes Bitcoin withdrawals after $6.3bn hack, says 95% of assets replaced.
         </div>
       </div>
       <div class="threat-footer-row">
@@ -5957,27 +5957,168 @@
       </div>
     </article>
 
-    <article class="threat-card" data-category="crypto-heists" id="threat-live-crypto-heists-5792857321">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-11874336878">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">⚠️ Data Breach</span>
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-crypto-heists-5792857321')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-11874336878')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Three South Korean financial firms including Bithumb report data breaches, Yonhap says <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUG1mQ05WVnh0SWUxTExvS2w5d19TRWpvUUpHZmJQM0JHd09tN1RfME9FQlNPYkV5a3NCN1NtU0tvcjY1ZEtqM2UxaWpoeU5mZ3BIdG9PTmltTmZBZC13b0pPXzd6X3BfY0ZiS2JMQlFEN0VuSWZuSjFsa0J0MWVOQk05WHR2NGxaeF82T1BDNmJUd3ZHLU1yREw4TERWSVBwT3MxMTZVN09Nbzd3cl9qbE1mR09hSWxUMmdv?oc=5" target="_blank" rel="noopener noreferrer">
+          Most wanted cyber fraud accused held at Kolkata Airport while trying to flee to Dubai <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
       <div class="threat-entities-row">
         <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Crypto &amp; Digital Assets</span>
+        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Hawk</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUG1mQ05WVnh0SWUxTExvS2w5d19TRWpvUUpHZmJQM0JHd09tN1RfME9FQlNPYkV5a3NCN1NtU0tvcjY1ZEtqM2UxaWpoeU5mZ3BIdG9PTmltTmZBZC13b0pPXzd6X3BfY0ZiS2JMQlFEN0VuSWZuSjFsa0J0MWVOQk05WHR2NGxaeF82T1BDNmJUd3ZHLU1yREw4TERWSVBwT3MxMTZVN09Nbzd3cl9qbE1mR09hSWxUMmdv?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Hawk ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-11167347222">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-11167347222')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxOVkQ0YkpOVC13OThlbVFndzBBbUF0S2xvYmdSbzQ0VWY4Q21nRUlFQkh6YTdqNnVEbmNoVEJoQmdIS3ZjM0RMRHVZZzN1SWdUekROY2RqaUdScDlkSHd5dXZGeWFnV19RV0hZb1pZVFROQW1meDBqZXdMZUc5UzJYQjd1VEgwd2dCWTNMVlVIYW94NHRhZXdwWmh1RDhJVkNTLS1RREJHMjZUbWpGNDMyX2UwWmRPdUhHQ0V3dXY0akxpTDVzMVE?oc=5" target="_blank" rel="noopener noreferrer">
+          European supermarkets rush to patch vulnerabilities after region-wide fridge hack <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
+      </div>
+      <div class="threat-breakdown">
+        <div class="threat-point point-incident">
+          <strong>Key Context</strong>
+          Key updates: European supermarkets rush to patch vulnerabilities after region-wide fridge hack, World News.
+        </div>
+      </div>
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">Reuters</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxOVkQ0YkpOVC13OThlbVFndzBBbUF0S2xvYmdSbzQ0VWY4Q21nRUlFQkh6YTdqNnVEbmNoVEJoQmdIS3ZjM0RMRHVZZzN1SWdUekROY2RqaUdScDlkSHd5dXZGeWFnV19RV0hZb1pZVFROQW1meDBqZXdMZUc5UzJYQjd1VEgwd2dCWTNMVlVIYW94NHRhZXdwWmh1RDhJVkNTLS1RREJHMjZUbWpGNDMyX2UwWmRPdUhHQ0V3dXY0akxpTDVzMVE?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Reuters ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-3422134931">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-3422134931')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxQX2VMZ3VpZUxkSjc4YkFXUnJBM3hIMXFJcnlTSFBmVmpRdjdZUllYdDNKUlZveTVzMnppcmQxU0xobUdRTGxyUExBa2hLZnRhZHRRLUxqSHpDeWFWZkFPcUtWUVJleHczWi03eGhKMTdxYTUxWkdheldLSXdfVURMLWo5RzJhMjlZZ19xc1kwbzhHXzM3bWtENHpVelpYUHdOM3dwcDBuenVId2c4Z1ZSUG1ldGYtanVzamI0aDBVeHhKbEQxakFuRGhTQWt5aVBlZ3M4U3dZcGdWbk91dXg1YTNjaFJ5SmE0NTdTRDFmTWjSAfYBQVVfeXFMTXNOSjl4dzNqR2ZEelJqc0VodUhGNk9sNDZ1YXZNcHk4a0ZaVC16TEtodGl3N1NVQk5LR0xaVlNJcVNjV0Z6YmNZNTdaOGJjNDhzeVZBbXA1bkJMMlVxZkU5dTRuS2V6eHRoX20yaDVoTU44dGZCZERfMnV4dnZ5VnBWY3RnektleDhoZHBocmlxQm9Wc1RlYnQzbWxNMjIzckt0WVQyYkE2SnQzU2FQSFl1bUtSZmhrQTdnZ2hfM3hNZ3JuaWREOWtXSk5CYjJvY2puY3lWWHJIemZKeDd0LTlvM2ZRdEhXU295UVZnWXpLM0U5ME9B?oc=5" target="_blank" rel="noopener noreferrer">
+          Balasaheb Thackeray&#39;s grandson actor Aaishvary Thackeray loses Rs 19,000 to cyber fraud <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Times of India</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxQX2VMZ3VpZUxkSjc4YkFXUnJBM3hIMXFJcnlTSFBmVmpRdjdZUllYdDNKUlZveTVzMnppcmQxU0xobUdRTGxyUExBa2hLZnRhZHRRLUxqSHpDeWFWZkFPcUtWUVJleHczWi03eGhKMTdxYTUxWkdheldLSXdfVURMLWo5RzJhMjlZZ19xc1kwbzhHXzM3bWtENHpVelpYUHdOM3dwcDBuenVId2c4Z1ZSUG1ldGYtanVzamI0aDBVeHhKbEQxakFuRGhTQWt5aVBlZ3M4U3dZcGdWbk91dXg1YTNjaFJ5SmE0NTdTRDFmTWjSAfYBQVVfeXFMTXNOSjl4dzNqR2ZEelJqc0VodUhGNk9sNDZ1YXZNcHk4a0ZaVC16TEtodGl3N1NVQk5LR0xaVlNJcVNjV0Z6YmNZNTdaOGJjNDhzeVZBbXA1bkJMMlVxZkU5dTRuS2V6eHRoX20yaDVoTU44dGZCZERfMnV4dnZ5VnBWY3RnektleDhoZHBocmlxQm9Wc1RlYnQzbWxNMjIzckt0WVQyYkE2SnQzU2FQSFl1bUtSZmhrQTdnZ2hfM3hNZ3JuaWREOWtXSk5CYjJvY2puY3lWWHJIemZKeDd0LTlvM2ZRdEhXU295UVZnWXpLM0U5ME9B?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Times of India ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-3657941944">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-3657941944')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNQmxIQkVIOVJSdDdScHJRWDRLVTAybU1LeDdDeE8wc1NwekNJRVBBMF8wRDY3TWE3cHp3Y0ZWTjVueW95NnV1M3MyV2FMbzNaLW9lVUViaGVJTVV0MWczdU1Bc2MyLThkT2psNlZtbS1KR2tyby1nbzg5TklfTjI3M25wbEdpc3NMaG1PeXM1X093enVkaFlFeHdWcXB3SmFpR0p4eUlKcXJGTGpWMVF2WdIBtgFBVV95cUxPVHkxSkJ4WTdJV2RrOGZQdkx0TnFQbVBkR25wT0NQT1M0dUg0OVRtODV5MWllYzF2RHFwenFEOHRvbHREM3hVQk5VWkZ1Ukt1MlF6X0xTaFNSQnFaOUdwTXZIQmJsbDFPQ0lpVEJBR3BOY1Y3OEZSa0ZLZWR5MEZWMG13TzE4bGYyc3dCcWhIT2Y0eU9oTmR5SDA4QnNBa3VVemJiMWNaUUoyOFNiNGNXUzQ0ejNsdw?oc=5" target="_blank" rel="noopener noreferrer">
+          CSA students briefed on cybersecurity <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
+      </div>
+
+      <div class="threat-footer-row">
+        <div class="threat-source-pill">
+          <span class="threat-source-icon">📌</span>
+          <span class="threat-source-name">The Times of India</span>
+        </div>
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNQmxIQkVIOVJSdDdScHJRWDRLVTAybU1LeDdDeE8wc1NwekNJRVBBMF8wRDY3TWE3cHp3Y0ZWTjVueW95NnV1M3MyV2FMbzNaLW9lVUViaGVJTVV0MWczdU1Bc2MyLThkT2psNlZtbS1KR2tyby1nbzg5TklfTjI3M25wbEdpc3NMaG1PeXM1X093enVkaFlFeHdWcXB3SmFpR0p4eUlKcXJGTGpWMVF2WdIBtgFBVV95cUxPVHkxSkJ4WTdJV2RrOGZQdkx0TnFQbVBkR25wT0NQT1M0dUg0OVRtODV5MWllYzF2RHFwenFEOHRvbHREM3hVQk5VWkZ1Ukt1MlF6X0xTaFNSQnFaOUdwTXZIQmJsbDFPQ0lpVEJBR3BOY1Y3OEZSa0ZLZWR5MEZWMG13TzE4bGYyc3dCcWhIT2Y0eU9oTmR5SDA4QnNBa3VVemJiMWNaUUoyOFNiNGNXUzQ0ejNsdw?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on The Times of India ↗
+        </a>
+      </div>
+    </article>
+
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5705806279">
+      <div class="threat-top-bar">
+        <div class="threat-badge-group">
+          <span class="threat-badge threat-badge-impact">🚨 Reuters Exclusive</span>
+          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
+          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
+        </div>
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5705806279')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        </button>
+      </div>
+
+      <h3 class="threat-title">
+        <a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxObF9LUXZ2TVpjZm13eW9HNXZ0MkZFVDM5eHl5RXc0aDkzODdvc0VKYVE4YV9MSDZITjVTR01CM3l6ajdCVEFZMXlmdmx3MzBRWHN5QVkyTFU2bkR2Sm5VQm5OWUVfLVJoeHFZaXdrc0F1QTRnT0tHYXRvcVd4S0V2QUxmV3ptOEszT2EyWmFpVjYyUnRwODF1eGhXbGpGcUV2UXRwZFFLOGhPLTY1MWUxal9TY3M0Qm9MOVpSeTFHazNxMUNGSnVfdzVvOE0tUGM?oc=5" target="_blank" rel="noopener noreferrer">
+          New cyberattack on supermarket fridges sweeps across Europe <span class="threat-ext-icon">↗</span>
+        </a>
+      </h3>
+
+      <div class="threat-entities-row">
+        <span class="threat-entity-label">Sector:</span>
+        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
       </div>
 
       <div class="threat-footer-row">
@@ -5985,27 +6126,27 @@
           <span class="threat-source-icon">📌</span>
           <span class="threat-source-name">Reuters</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5" target="_blank" rel="noopener noreferrer">
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMizwFBVV95cUxObF9LUXZ2TVpjZm13eW9HNXZ0MkZFVDM5eHl5RXc0aDkzODdvc0VKYVE4YV9MSDZITjVTR01CM3l6ajdCVEFZMXlmdmx3MzBRWHN5QVkyTFU2bkR2Sm5VQm5OWUVfLVJoeHFZaXdrc0F1QTRnT0tHYXRvcVd4S0V2QUxmV3ptOEszT2EyWmFpVjYyUnRwODF1eGhXbGpGcUV2UXRwZFFLOGhPLTY1MWUxal9TY3M0Qm9MOVpSeTFHazNxMUNGSnVfdzVvOE0tUGM?oc=5" target="_blank" rel="noopener noreferrer">
           Read on Reuters ↗
         </a>
       </div>
     </article>
 
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-13145223703">
+    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-4682439438">
       <div class="threat-top-bar">
         <div class="threat-badge-group">
           <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
           <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
           <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-13145223703')">
+        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-4682439438')">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
         </button>
       </div>
 
       <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Fake Health Camps, Stolen IDs: Cops Bust e-SIM Racket Used In Cyber Fraud <span class="threat-ext-icon">↗</span>
+        <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE81S2VuSVhqVExKRkVHY2RjU2hDZ2JCdGlaNk5OTE9HeUxEbnAwWFpoUDhqNktpTVFMNE16SkR3azlIT2xFZW0xMTREaFIxOUVuWWNXRml3d2tyMG9aeTZ5ZVd1c3RZdHAzNlluVnMzSTZsbWhsQnc?oc=5" target="_blank" rel="noopener noreferrer">
+          How North Korea perfected the crypto heist <span class="threat-ext-icon">↗</span>
         </a>
       </h3>
 
@@ -6017,180 +6158,10 @@
       <div class="threat-footer-row">
         <div class="threat-source-pill">
           <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">NDTV</span>
+          <span class="threat-source-name">Axios</span>
         </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on NDTV ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-5679334474">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🔒 Assets Frozen</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🚨 Reuters Report</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-5679334474')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNZWtDa2JmUnFRRENlQ0RoX2hseFpyajltZE5vbjUwdnlDeTQ5M01zanFrNTBJcE1NV0RwZGFCd29LQXZQN2RYd3pBZnhNbU91eEdZalRSbVpXbTdnS2VXMXNaWE9ZdV9tSHVub29PUy1kX3BFYTNZUWM2NFpTLTZTWGdLX2hTXzYxR2JPanVaeVowcVZmMTZubVZxZE9QSjFPYmVuQjJFVVZqTUJKRUlMclM0NGM4YTNzMmR0ZUdR?oc=5" target="_blank" rel="noopener noreferrer">
-          EXCLUSIVE: Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Reuters</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNZWtDa2JmUnFRRENlQ0RoX2hseFpyajltZE5vbjUwdnlDeTQ5M01zanFrNTBJcE1NV0RwZGFCd29LQXZQN2RYd3pBZnhNbU91eEdZalRSbVpXbTdnS2VXMXNaWE9ZdV9tSHVub29PUy1kX3BFYTNZUWM2NFpTLTZTWGdLX2hTXzYxR2JPanVaeVowcVZmMTZubVZxZE9QSjFPYmVuQjJFVVZqTUJKRUlMclM0NGM4YTNzMmR0ZUdR?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Reuters ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-6431288560">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-6431288560')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNRHRJX3N1a1lJT05mbnNKQnpwb2hRclNwZVhwS3VrcHMwY05uRHBjOTBfLWpRUXFsQUZxNUtmVkI4N2xUTllQQ3hjNnQ5am1USnoyanU0a2FBbmJrR0VScThkamQ3emxkSjZkLVY0T09ROVp5YWhrLWhzT0Y2dHk5Q0FEVXVxem1sbWoxM2FYQ2tmV1pxVDV4bjBySU5EYm1KMlJCbkt4YlRteVpvRVlfQlB3WW4?oc=5" target="_blank" rel="noopener noreferrer">
-          Security To Cybersecurity: 11 Nodal Officers To Oversee 2027 Manipur Polls <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">NDTV</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNRHRJX3N1a1lJT05mbnNKQnpwb2hRclNwZVhwS3VrcHMwY05uRHBjOTBfLWpRUXFsQUZxNUtmVkI4N2xUTllQQ3hjNnQ5am1USnoyanU0a2FBbmJrR0VScThkamQ3emxkSjZkLVY0T09ROVp5YWhrLWhzT0Y2dHk5Q0FEVXVxem1sbWoxM2FYQ2tmV1pxVDV4bjBySU5EYm1KMlJCbkt4YlRteVpvRVlfQlB3WW4?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on NDTV ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-679409782">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-679409782')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxNcUt0d2EwUXU4QUdrRFF6VzFQV3ZCNlg1RmNaV0lFN0pRVEx2LXRlUjY5SmY2X2FTbXZSeGVDT281UWpER3Zfa1E5bW1acWszbEMyNTFkUnJyY1dVelJWVFI1SFliZGFfOXRVWWVNa0phaHlQaXRwbFJUeEl0eVpGb3B6TE4zRFpoQnBqczRFd2NfQlVMbko2dmR6MWxFN3NlNUtzaU5HQ2xwMGswQkFr0gGyAUFVX3lxTFBJeHVqaXVoakxQSU1NSGxLTlItWkp2bGFGRUNIblhvWHpwV3E5QzE2aDg4MC1WSktKRElsVk1BZ0U4b1N4R1N4N1FyWUN4cGJ6U0lZYzkzeXNDQkwyNHlYQUJYWEtFcHZMWXJBYWgzQ2VmWlp4cTZNU2k4ajBMYnp0ZmZCMlI1TlA1QndwcUNlaHFZcUhsb3Q1T044V0V6M05aNXVMTDQ4T214MzBuc0gyUXc?oc=5" target="_blank" rel="noopener noreferrer">
-          Parliamentary Panel To Tackle Social Media, AI, Cybersecurity <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Rediff</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirwFBVV95cUxNcUt0d2EwUXU4QUdrRFF6VzFQV3ZCNlg1RmNaV0lFN0pRVEx2LXRlUjY5SmY2X2FTbXZSeGVDT281UWpER3Zfa1E5bW1acWszbEMyNTFkUnJyY1dVelJWVFI1SFliZGFfOXRVWWVNa0phaHlQaXRwbFJUeEl0eVpGb3B6TE4zRFpoQnBqczRFd2NfQlVMbko2dmR6MWxFN3NlNUtzaU5HQ2xwMGswQkFr0gGyAUFVX3lxTFBJeHVqaXVoakxQSU1NSGxLTlItWkp2bGFGRUNIblhvWHpwV3E5QzE2aDg4MC1WSktKRElsVk1BZ0U4b1N4R1N4N1FyWUN4cGJ6U0lZYzkzeXNDQkwyNHlYQUJYWEtFcHZMWXJBYWgzQ2VmWlp4cTZNU2k4ajBMYnp0ZmZCMlI1TlA1QndwcUNlaHFZcUhsb3Q1T044V0V6M05aNXVMTDQ4T214MzBuc0gyUXc?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Rediff ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-2591538851">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-2591538851')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxNSVVtR1c4VW9ZLW9IVUpuREJTSzJiaDcyT2FYS29HZ2ZaSkVfQVR5dldKOXBHWG5SM1BMdzhVWXFhXzJndnVwUHFqUUFkQ0pJZTJfcEc1eGo3QVc0RXhYNFFxcVEyQmlNaFd2a2RzTTZMZ0o1eHlXT2tDVGs5WU85NHk2c1JTZ1ZDUVVablNKX2hKXzdoNi1ocFZPaTJFRzRhb3ZkWG8wU3puY0ZYMVU2X2ZzZ2Z3RWtNRTMtcG1lOHJLMW14V2JGWElrNEZMaGtjd3lOdUlUeXTSAd4BQVVfeXFMT04yMGc4SXJ4clNqN0h3NUNLbzJWRHhDZWZYckdHY0dFV3Vfcnc0cy1mZHJ2dGJmVVJZaTdoXzZQcXM1UEhKS2x5UGM4VUQtWS0wa0x4N0IzYjFXdnRoOGhCdWJVM0ZhOWxBTnAwRW9WV2NSc0R1cUMtMzBMLUc2NmhlLXQtWlFtYzRJY3RtLTlaVWd1NHNqeUFDTE5vQkozQU1CUmFiM0FmMXh2MEp5OTBpOGlya2JRYWNraEhmUUdZU19FeEdkWkZFLTYxeUxOREFIUHd4UzluMzhjaktn?oc=5" target="_blank" rel="noopener noreferrer">
-          Best of Opinion: New rules of cybersecurity must focus on speed, readiness <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">Business Standard</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxNSVVtR1c4VW9ZLW9IVUpuREJTSzJiaDcyT2FYS29HZ2ZaSkVfQVR5dldKOXBHWG5SM1BMdzhVWXFhXzJndnVwUHFqUUFkQ0pJZTJfcEc1eGo3QVc0RXhYNFFxcVEyQmlNaFd2a2RzTTZMZ0o1eHlXT2tDVGs5WU85NHk2c1JTZ1ZDUVVablNKX2hKXzdoNi1ocFZPaTJFRzRhb3ZkWG8wU3puY0ZYMVU2X2ZzZ2Z3RWtNRTMtcG1lOHJLMW14V2JGWElrNEZMaGtjd3lOdUlUeXTSAd4BQVVfeXFMT04yMGc4SXJ4clNqN0h3NUNLbzJWRHhDZWZYckdHY0dFV3Vfcnc0cy1mZHJ2dGJmVVJZaTdoXzZQcXM1UEhKS2x5UGM4VUQtWS0wa0x4N0IzYjFXdnRoOGhCdWJVM0ZhOWxBTnAwRW9WV2NSc0R1cUMtMzBMLUc2NmhlLXQtWlFtYzRJY3RtLTlaVWd1NHNqeUFDTE5vQkozQU1CUmFiM0FmMXh2MEp5OTBpOGlya2JRYWNraEhmUUdZU19FeEdkWkZFLTYxeUxOREFIUHd4UzluMzhjaktn?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on Business Standard ↗
-        </a>
-      </div>
-    </article>
-
-    <article class="threat-card" data-category="global-ransomware" id="threat-live-global-ransomware-14856551409">
-      <div class="threat-top-bar">
-        <div class="threat-badge-group">
-          <span class="threat-badge threat-badge-impact">🚨 Urgent Alert</span>
-          <span class="threat-badge threat-sev threat-sev-high">HIGH</span>
-          <span class="threat-badge threat-prov threat-prov-statutory">🌐 Global Security</span>
-        </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('live-global-ransomware-14856551409')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
-      </div>
-
-      <h3 class="threat-title">
-        <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPU1VsZVdWc3FMXy1MYk5zWF9jdU5yR3c5bl9DUnBsbWNpcXI5UzNQYzJpSWVRZjlSRW0xUVpmci1sczdwZmxaaU5MTzdtVU5oVHdfb19CLXRHMTVMdU1LaU9OTmZQcV9xempGM2hEUEFOVFhpRDV5U1lzTzZQekRIaTZoOXluUnUydU84Y0ZMdENhTUdmT1VNZ2Y4bEZ4S1I2RmYxOHZCZGFYbjI1?oc=5" target="_blank" rel="noopener noreferrer">
-          Kerala Police warn against cyber fraud using fake mobile pop-ups <span class="threat-ext-icon">↗</span>
-        </a>
-      </h3>
-
-      <div class="threat-entities-row">
-        <span class="threat-entity-label">Sector:</span>
-        <span class="threat-entity-value">Enterprise &amp; Public Infrastructure</span>
-      </div>
-
-      <div class="threat-footer-row">
-        <div class="threat-source-pill">
-          <span class="threat-source-icon">📌</span>
-          <span class="threat-source-name">United News of India</span>
-        </div>
-        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPU1VsZVdWc3FMXy1MYk5zWF9jdU5yR3c5bl9DUnBsbWNpcXI5UzNQYzJpSWVRZjlSRW0xUVpmci1sczdwZmxaaU5MTzdtVU5oVHdfb19CLXRHMTVMdU1LaU9OTmZQcV9xempGM2hEUEFOVFhpRDV5U1lzTzZQekRIaTZoOXluUnUydU84Y0ZMdENhTUdmT1VNZ2Y4bEZ4S1I2RmYxOHZCZGFYbjI1?oc=5" target="_blank" rel="noopener noreferrer">
-          Read on United News of India ↗
+        <a class="threat-verify-btn" href="https://news.google.com/rss/articles/CBMidkFVX3lxTE81S2VuSVhqVExKRkVHY2RjU2hDZ2JCdGlaNk5OTE9HeUxEbnAwWFpoUDhqNktpTVFMNE16SkR3azlIT2xFZW0xMTREaFIxOUVuWWNXRml3d2tyMG9aeTZ5ZVd1c3RZdHAzNlluVnMzSTZsbWhsQnc?oc=5" target="_blank" rel="noopener noreferrer">
+          Read on Axios ↗
         </a>
       </div>
     </article>
@@ -6211,7 +6182,7 @@
         <h2 class="section-title">🚨 Scam Alerts</h2>
         <span class="section-note">How to spot online scams, protect your accounts, and report cyber fraud.</span>
       </div>
-      <span class="reality-count-pill" id="scam-count-badge">Showing all 15 verified scam alerts</span>
+      <span class="reality-count-pill" id="scam-count-badge">Showing all 19 verified scam alerts</span>
     </div>
 
         <!-- Emergency Reporting & Action Deck -->
@@ -6619,36 +6590,240 @@
         </div>
       </article>
 
-      <article class="scam-card" data-category="apk-malware" id="scam-bank-rewards-points-expiry-apk">
+      <article class="scam-card" data-category="messaging" id="scam-dot-trai-disconnection-robocall">
         <div class="scam-top-bar">
           <div class="scam-badge-group">
-            <span class="scam-badge scam-badge-platform">SMS / Android APK</span>
-            <span class="scam-badge scam-badge-tag">Bank Reward Points</span>
+            <span class="scam-badge scam-badge-platform">Phone Call / Robocall IVR</span>
+            <span class="scam-badge scam-badge-tag">DoT Disconnect Notice</span>
             <span class="scam-badge scam-badge-sev-critical">CRITICAL</span>
           </div>
-          <button type="button" class="share-btn" onclick="shareScam('bank-rewards-points-expiry-apk')" title="Share warning on WhatsApp" aria-label="Share warning">
+          <button type="button" class="share-btn" onclick="shareScam('dot-trai-disconnection-robocall')" title="Share warning on WhatsApp" aria-label="Share warning">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           </button>
         </div>
 
-        <h3 class="scam-title">The Bank &quot;Reward Points Expiry&quot; APK Trap</h3>
+        <h3 class="scam-title">The DoT / TRAI &quot;Mobile Number Disconnection in 2 Hours&quot; Robocall</h3>
 
         <div class="scam-body">
-          <p class="scam-desc">An SMS claims your bank reward points worth ₹8,500 are expiring today, urging you to install rewards.apk or tap a link to redeem them into your savings account. The APK installs bank malware that captures your net banking credentials and OTPs.</p>
+          <p class="scam-desc">An automated IVR robocall says: &quot;This is the Department of Telecommunications (DoT). Your mobile number will be disconnected in 2 hours due to illegal cybercrime complaints. Press 9 to speak with an officer.&quot; Pressing 9 routes you to fake police who threaten immediate arrest under PMLA unless you pay money to verify your Aadhaar.</p>
 
           <div class="scam-protect-box">
             <strong>How to protect yourself:</strong>
-            <p>Banks never convert reward points into cash via external .apk applications or SMS links. Check reward points only by logging into your official bank net banking app.</p>
+            <p>DoT and TRAI NEVER disconnect phone numbers via automated calls or ask you to press 9. If you receive such a call, hang up immediately. Check your registered mobile connections on the official Sanchar Saathi (sancharsaathi.gov.in) portal or dial 1930.</p>
           </div>
         </div>
 
         <div class="scam-footer-row">
           <div class="scam-source-pill">
             <span class="scam-source-icon">🏛️</span>
-            <span class="scam-source-name">State Bank of India &amp; RBI Advisory</span>
+            <span class="scam-source-name">DoT &amp; Sanchar Saathi Advisory</span>
+          </div>
+          <a class="scam-verify-btn" href="https://sancharsaathi.gov.in/" target="_blank" rel="noopener noreferrer">
+            Sanchar Saathi Official Portal ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="scam-card" data-category="transport" id="scam-fedex-narcotics-customs-parcel">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-platform">Phone Call / Video Call</span>
+            <span class="scam-badge scam-badge-tag">Customs Drug Parcel</span>
+            <span class="scam-badge scam-badge-sev-critical">CRITICAL</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('fedex-narcotics-customs-parcel')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The FedEx / DHL &quot;Drugs Found in International Courier&quot; Threat</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">An automated call claiming to be FedEx or DHL claims: &quot;A courier parcel sent using your Aadhaar to Taiwan or Cambodia containing MDMA drugs, fake passports, and illegal debit cards was intercepted by customs.&quot; The call is transferred to fake &quot;Narcotics Control Bureau (NCB)&quot; or &quot;Mumbai Crime Branch&quot; officers over video call who demand financial statements and emergency escrow transfers.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Courier companies like FedEx and DHL never transfer customer calls to police or narcotics agencies. Police never interrogate suspects or demand security deposits over video calls. Hang up, block, and dial 1930.</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">I4C &amp; Narcotics Control Bureau (NCB) Advisory</span>
+          </div>
+          <a class="scam-verify-btn" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">
+            National Cyber Helpline: 1930 ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="scam-card" data-category="banking" id="scam-deepfake-political-welfare-ads">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-platform">Instagram / Facebook / YouTube</span>
+            <span class="scam-badge scam-badge-tag">Deepfake Welfare Ads</span>
+            <span class="scam-badge scam-badge-sev-high">HIGH</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('deepfake-political-welfare-ads')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The Deepfake Government Welfare &amp; PM Yojana Ads</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">Sponsored video ads on Facebook, Instagram, or YouTube feature hyper-realistic AI deepfakes of government leaders and ministers announcing instant &quot;₹5,000 festive relief funds&quot; or &quot;free smartphone subsidies&quot;. Clicking the link directs you to an unauthorized portal that triggers a UPI Collect Request (which debits your account) or installs banking malware.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Government welfare schemes are never disbursed via social media ads or UPI collect requests. Entering your UPI PIN always DEDUCTS money from your bank account. Verify official government schemes only on .gov.in portals.</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">I4C National Cybercrime Threat Analytics Unit (NCTAU)</span>
+          </div>
+          <a class="scam-verify-btn" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">
+            I4C Cybercrime Advisory ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="scam-card" data-category="banking" id="scam-customer-care-screen-share-hijack">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-platform">Google Search / WhatsApp Video</span>
+            <span class="scam-badge scam-badge-tag">Screen Share Refund</span>
+            <span class="scam-badge scam-badge-sev-critical">CRITICAL</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('customer-care-screen-share-hijack')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The Fake Google Customer Care &amp; Screen Share Hijack</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">When searching for Swiggy, Zomato, IRCTC, or bank customer support on Google, users dial a fake number placed by scammers. The fake agent says: &quot;To process your ₹200 refund, share your screen on WhatsApp video call or install AnyDesk/QuickSupport.&quot; Once screen sharing starts, the scammer initiates a bank transfer and reads the incoming OTP directly off the live screen.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Never search for customer service phone numbers on Google Search; always use the in-app help section. Never share your mobile screen or accept screen-sharing requests during a customer support call.</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">Reserve Bank of India (RBI Sachet Advisory)</span>
           </div>
           <a class="scam-verify-btn" href="https://sachet.rbi.org.in/" target="_blank" rel="noopener noreferrer">
             RBI Sachet Portal ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="scam-card" data-category="apk-malware" id="scam-corporate-malware-zip-mca">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-platform">Email / WhatsApp</span>
+            <span class="scam-badge scam-badge-tag">Corporate Infostealer</span>
+            <span class="scam-badge scam-badge-sev-critical">CRITICAL</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('corporate-malware-zip-mca')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The Corporate Tax &amp; MCA Notice Archive Trap (Infostealer ZIP)</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">Accountants, CAs, company directors, and finance personnel receive an urgent email or WhatsApp: &quot;Statutory notice regarding pending tax filing discrepancies / MCA audit. Attached: Statement_of_Account.zip or MCA_Notice.zip.&quot; Extracting the file runs a disguised Windows executable that quietly exfiltrates corporate net banking tokens, DSC credentials, and browser passwords.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Tax authorities and the Ministry of Corporate Affairs (MCA) never send audit notices as compressed .zip or .rar files via WhatsApp or personal email. Check all corporate filings directly on the official mca.gov.in portal.</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">I4C Corporate Threat Advisory &amp; CERT-In</span>
+          </div>
+          <a class="scam-verify-btn" href="https://www.cert-in.org.in/" target="_blank" rel="noopener noreferrer">
+            CERT-In Advisory Desk ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="scam-card" data-category="banking" id="scam-pensioner-jeevan-pramaan-kyc">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-platform">Phone Call / WhatsApp</span>
+            <span class="scam-badge scam-badge-tag">Pensioner KYC Fraud</span>
+            <span class="scam-badge scam-badge-sev-high">HIGH</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('pensioner-jeevan-pramaan-kyc')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The Pensioner &quot;Digital Life Certificate / Jeevan Pramaan&quot; KYC Scam</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">Fraudsters call senior citizens posing as bank or pension disbursement officers: &quot;Your annual digital life certificate (Jeevan Pramaan) is expiring today. Your pension will stop next month unless verified right now.&quot; The caller asks for Aadhaar OTPs or asks them to install a remote-access app to &quot;scan their face&quot;, instantly draining the pensioner&#39;s life savings.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Pension authorities never call to ask for Aadhaar OTPs or banking passwords to submit Jeevan Pramaan. Senior citizens should submit life certificates only via the official Jeevan Pramaan Face App or in person at bank branches or post offices.</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">Ministry of Personnel, Public Grievances and Pensions &amp; I4C</span>
+          </div>
+          <a class="scam-verify-btn" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">
+            National Cyber Helpline: 1930 ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="scam-card" data-category="banking" id="scam-airport-lounge-card-expiry-phishing">
+        <div class="scam-top-bar">
+          <div class="scam-badge-group">
+            <span class="scam-badge scam-badge-platform">SMS / Web Clone</span>
+            <span class="scam-badge scam-badge-tag">Lounge Pass Phishing</span>
+            <span class="scam-badge scam-badge-sev-high">HIGH</span>
+          </div>
+          <button type="button" class="share-btn" onclick="shareScam('airport-lounge-card-expiry-phishing')" title="Share warning on WhatsApp" aria-label="Share warning">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
+
+        <h3 class="scam-title">The Airport Lounge &amp; Credit Card Points Phishing Link</h3>
+
+        <div class="scam-body">
+          <p class="scam-desc">You receive an SMS: &quot;Your complimentary airport lounge access and reward points expire tonight. Re-verify your card benefits immediately: [shortened link]&quot;. The link opens a cloned DreamFolks/bank webpage asking for card number, CVV, expiry, and OTP, allowing fraudsters to make high-value international transactions.</p>
+
+          <div class="scam-protect-box">
+            <strong>How to protect yourself:</strong>
+            <p>Banks and airport lounge operators never send SMS links threatening sudden cancellation of lounge privileges. Never enter card CVV or OTPs on links received via SMS. Check card benefits directly in your bank&#39;s official app.</p>
+          </div>
+        </div>
+
+        <div class="scam-footer-row">
+          <div class="scam-source-pill">
+            <span class="scam-source-icon">🏛️</span>
+            <span class="scam-source-name">CERT-In Financial Phishing Advisory</span>
+          </div>
+          <a class="scam-verify-btn" href="https://www.cert-in.org.in/" target="_blank" rel="noopener noreferrer">
+            CERT-In Advisory Desk ↗
           </a>
         </div>
       </article>
@@ -6717,74 +6892,6 @@
           </div>
           <a class="scam-verify-btn" href="https://www.sebi.gov.in/" target="_blank" rel="noopener noreferrer">
             SEBI Investor Portal ↗
-          </a>
-        </div>
-      </article>
-
-      <article class="scam-card" data-category="banking" id="scam-credit-card-limit-increase-call">
-        <div class="scam-top-bar">
-          <div class="scam-badge-group">
-            <span class="scam-badge scam-badge-platform">Phone Call / SMS</span>
-            <span class="scam-badge scam-badge-tag">Credit Card Fraud</span>
-            <span class="scam-badge scam-badge-sev-high">HIGH</span>
-          </div>
-          <button type="button" class="share-btn" onclick="shareScam('credit-card-limit-increase-call')" title="Share warning on WhatsApp" aria-label="Share warning">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-          </button>
-        </div>
-
-        <h3 class="scam-title">The Credit Card Limit Increase Phone Trap</h3>
-
-        <div class="scam-body">
-          <p class="scam-desc">A caller poses as your bank&#39;s credit card department offering to double your credit limit for free. They recite your name and first 4 card digits to gain trust, then ask you to confirm an OTP sent to your phone. In reality, that OTP authorizes an online purchase made by the scammer.</p>
-
-          <div class="scam-protect-box">
-            <strong>How to protect yourself:</strong>
-            <p>Bank employees never need an OTP to increase card limits. OTP stands for One-Time Password — entering or sharing it always authorizes a debit from your account.</p>
-          </div>
-        </div>
-
-        <div class="scam-footer-row">
-          <div class="scam-source-pill">
-            <span class="scam-source-icon">🏛️</span>
-            <span class="scam-source-name">Reserve Bank of India (RBI Be(A)Ware)</span>
-          </div>
-          <a class="scam-verify-btn" href="https://sachet.rbi.org.in/" target="_blank" rel="noopener noreferrer">
-            RBI Sachet Portal ↗
-          </a>
-        </div>
-      </article>
-
-      <article class="scam-card" data-category="messaging" id="scam-work-from-home-laptop-deposit">
-        <div class="scam-top-bar">
-          <div class="scam-badge-group">
-            <span class="scam-badge scam-badge-platform">LinkedIn / Telegram</span>
-            <span class="scam-badge scam-badge-tag">Remote Job Scam</span>
-            <span class="scam-badge scam-badge-sev-medium">MEDIUM</span>
-          </div>
-          <button type="button" class="share-btn" onclick="shareScam('work-from-home-laptop-deposit')" title="Share warning on WhatsApp" aria-label="Share warning">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-          </button>
-        </div>
-
-        <h3 class="scam-title">The Remote Job &quot;Laptop Security Deposit&quot; Trap</h3>
-
-        <div class="scam-body">
-          <p class="scam-desc">You receive an offer for a remote data entry or transcription job paying ₹45,000 monthly. After an online chat interview, they send a fake offer letter demanding a refundable ₹3,500 &quot;courier insurance fee&quot; or &quot;laptop security deposit&quot; before dispatching your work computer. Once paid, the recruiter blocks you.</p>
-
-          <div class="scam-protect-box">
-            <strong>How to protect yourself:</strong>
-            <p>Legitimate employers never charge candidates money for job offers, training fees, or equipment security deposits. Any company asking for money upfront before hiring is fraudulent.</p>
-          </div>
-        </div>
-
-        <div class="scam-footer-row">
-          <div class="scam-source-pill">
-            <span class="scam-source-icon">🏛️</span>
-            <span class="scam-source-name">Ministry of Labour &amp; CyberDost</span>
-          </div>
-          <a class="scam-verify-btn" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">
-            CyberDost Portal ↗
           </a>
         </div>
       </article>
@@ -8312,7 +8419,7 @@ document.addEventListener("keydown", (e) => {
 init();
 
 // --- Cybersecurity News Client Logic ---
-let THREATS_DATA = [{"id":"live-india-bfsi-10386227470","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"India's apex bank ramps up cybersecurity scrutiny on lenders - report","sourceName":"Yahoo Finance","sourceUrl":"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQU2tDMDBuQ2ZvWWlXbUR6UE1yYk9zSXlfSzh1amFJZDlZeEZOUnU1d2NCemtzRXliMy1QNnI5TU5aWGNHejdjcld4V0dnZ0I1cTI1ZFJiZ0MwRHFFUG9qN0dSRXIyb1puOVVwOVRxVzliR1BKQ0NydWZMc1RNRnhyZFFfOGlHVVBH?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Yahoo Finance","date":"2026-11-02","timeAgo":"1 hour ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Yahoo Finance."},{"id":"live-india-bfsi-3692631155","category":"india-bfsi","severity":"high","impactBadge":"🚨 Financial Fraud Probe","title":"Spandana Sphoorty reports ₹7.8 crore cyber fraud involving 82 accounts","sourceName":"Business Standard","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxOR1dFMHk1QjZmTWxlcy1nZUM1a2g4RHA5VVptcWk2d0NQZE5wOE1rYnRhNHVJcjh2cktCRjR2ZlhWQmp3SDdkQXk5UTBPVWlmQm5MTDc4Z3gyTXNjVzZlVnVBcldOOEtMc29sdXdqMDZTV3NxcDFLWEo2X1dLcTc0aGRjODBwSHltNG05X19OX1VvWEJFVkNaZU80aE1USWRYT1E1SXlXa1FRa1p3d1EySl9Ud3dEYUVzbWxPbzVSUUM2a1p2M2tV0gHMAUFVX3lxTE5zdFJvekdhTEhicHBFR2NOVjAtNjU0OVhBNy1Gam0tR29oWFE3R2Q5Vm56YzdqN0p2Tk80aXdQQXRtR3ZBODJOSFhpZDh4MUd3aHJUNXNBejZhZ0d3WGRwRG5CbThqQXdDcUhYSWw0VElicURsQmxHVS1rY3VoUzc5bnFMNVIxVFM5NGpCUDRGY25zZ1JYMXRLRENlbDVWbWY1QXBhQUdDRTBPSjd5a0U0NXkxYkhOSDJMamVhQk1VX01VQ1Nqd3hWTGNJaw?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Business Standard","date":"2026-11-02","timeAgo":"5 hours ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Business Standard."},{"id":"live-india-bfsi-8865700446","category":"india-bfsi","severity":"high","impactBadge":"🚨 Financial Fraud Probe","title":"2.10 Crore Cyber Fraud: Ambani, Tendulkar's Names Used to Lure Pune Senior Citizen, Then 'Digital Arrest' Trap","sourceName":"The 420.in","sourceUrl":"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWnBMTDNXMWRtYmMxYmRSdGdUOVd1WktQUS0tWFV2WEJISThuMndQcGlQRkkyRGRtSGJVLXZKcTBDZlBGQVNvaEFaVEQteWV6RU1rVUNZenRmSGpDVTFIQ214RTdSX2RrWHdjRlVGOTNhVmRSLXBVdlp2OVRiZW1JZE5GQjdoUDNxX2wwbjMta1dXRE1wWUxfeG0zbE5TbkFyaUJSNkE3aWFfZ3BHMXB1US1MejJ5UGJzeV8xQ3N2dmc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The 420.in","date":"2026-11-01","timeAgo":"23 hours ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The 420.in."},{"id":"live-india-bfsi-17601327396","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Delhi Police bust cyber fraud ring targeting southern India with fake benefits","sourceName":"India Today","sourceUrl":"https://news.google.com/rss/articles/CBMi0AFBVV95cUxOS1F0LVB5ZUhwZXk2RUpmVGNnbVFndGxyU1l1OWJPVFpHZDBDdm1SUFpzZlMxSTA3bE1Cd0RnTmQ1bHBWTmFwSFFCWDZQamZJQWdJLWFfR3A0NXJSQnQ3TWw5S3pvX1VZbnRuV1E5c2xIWDFaTzlOMDdpSFhyNll6TUZoSXhmTDk1VE5wZU5sbjd4UlJnS2tNQjByeHJuYzFfc3RFb3pIRGY0QVgzbWlpeDBPcFhwa3NYeUd5WkxNcHdGd0FVQXNfbHEycmFnVzFi0gHWAUFVX3lxTE11NmNkbkszSnl5NUF6c3c2U3Vka2g3X1JuTnBZQktJT21aMEtNUTVHeXNBcUt4N1QtWFFPUXF2Um54WjhvaXRwbmlzSWtPV2VVWVlrYVpfamRtMjJZZDJJVnBTV1ZFb25TZ2tYMEVpR0dZQk9Qa3hiSmk1WFdYTjI4eWwtT2xBOTFUUnZ6dTY4SU9MVkpsZHhrbm9tWFpCME40N1NlWlBST1dqWURoZnFnT1VaeHFXSmpJdjU1QlBjbWtacUwtTEtxc2ZSZjlKRDVrSmhxR1E?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"India Today","date":"2026-10-31","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"Key updates: Delhi Police Uncover Major Cyber Fraud Ring Targeting South India; Delhi Police Uncovers Rs 10 Crore Cyber Fraud Ring.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on India Today."},{"id":"live-india-bfsi-2962483530","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"'Smash your phone against wall to end digital arrest': CJI asks why people still fall for scams despite awa...","sourceName":"Bhaskar English","sourceUrl":"https://news.google.com/rss/articles/CBMitgFBVV95cUxOVzhDMVZHUFowWTBEX0FZeFpDNHBPQVM5WU53LVFQRnF1SzVmQ1BRNGotSWtsN0M1WVV4eW5valE1VlVfcURad1RnODRPNU9UNXAyR2xkWHZYNFVOZ1BHMUIwQlNCVTVFTG9pN3ZzMFptdHZWVDB2cHVkb3IweF9YTFFzc282cGp1dzNPQ0ZHdGRvZmtyZXVUQS0tMHZZVEJvbnNzNnhIM0xsajRqWU5pX2x0V1B0Z9IBuwFBVV95cUxQUUNmQXRwTGxkMlFoUTZ6RHpEQjcwMkhFQmRKZWZ4cUdXczI0N2p5ZkVGSlE2ZHFzM1h3ak5CNkgwcUZjSUoyZGhrZGV6Nkhqbjc2emZoVTE2UldMd1BTdVJmYXAzRWpDZnlnVWtLXzlEZkRjX1lWcUdPbEY5VUFHWlRwc1R2VXB2NnVHSllRTVBHMkJ1Qm5PS2RFVlpHWFNrNkFoWGdwUHVnVzliMWozS2FodDZZV3MzclRB?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Bhaskar English","date":"2026-10-31","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Bhaskar English."},{"id":"live-india-bfsi-5496497170","category":"india-bfsi","severity":"high","impactBadge":"🏦 Bank Breach Probe","title":"AU Bank probes potential data leak","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMivAFBVV95cUxNU0JSQkZlOHY3dWVLclNCaGQ5VGxIb3prT0NqOXh3UHRfUjdhVUdRUFZ2T3dTZnNJQnEzUFhSOVItdkxiY1d6WTh4T1dadzhGNFZ2QzNhU0c1TnVURDhKbHQ1MmhYdUJaWjE1bEFWdEV2U24zZEdaVUVYWDVjUFZ4NVhoX2VfS0lGbTg2Z0xweFNvdENCam42NXIyQUJraWxRbkt6NENLMHVITVQ4YjhqY20wSG4yY0ZsaWRiNNIBwgFBVV95cUxOdmlQak9MckhIQXlYcElwZG9YQ09NdmtZNGpnWmJYckpvSXJ5RGN2QU82RS00T2YtWUJ6RGpBTFZ6MlVVLXp3bDBEb0xrYjJGTC14UmpJemhxZnN1MkQ0Z0RMR05TWXRSaU9BTml1emZ6cTI1VHU5bmtfQ0NRazlxQ0M0cklnOERvT2hkZVRDMndBX2J3YWxxUl9PSWlKZzQ0WHVGT3B1S2M2RFFLNzVfdGlRa3RTc0R2cUMyRUZDZThadw?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Times of India","date":"2026-10-30","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"Key updates: AU Small Finance Bank Probes Possible Customer Data Leak, Says Banking Systems Safe; AU Small Finance Bank breach reported, hackers threaten to leak Aadhaar and customer records.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-crypto-heists-9818481674","category":"crypto-heists","severity":"critical","impactBadge":"💰 $6.3B Record Hack","title":"Binance seeks to shore up confidence after record $6.3 billion heist","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"3 days ago","entities":"Crypto & Digital Assets","incident":"Key updates: FBI says North Korea stole $6 billion crypto from Binance in biggest hack ever; Binance freezes $2.54 billion in assets after potential security breach.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-799466515","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Polymarket resumes trading after third-party security breach, to reimburse users","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMiowFBVV95cUxQdGFDU255RTFLTGhHMmlndVlJb1gyUVdsYmJxcUpaalJoRVp0OEpROVcyQ0xQRlRiN1haY0UyTUlLb1JlUF92NF8tWVlfVmxmVWJmN2p4Q2ZfNHhCSy1ta2EwMi1KZUJ0eE1zVExPck44OVFJRnFuSmV2VjUtdGUzQVVGR1VPVDFTbUF4UzlwTHFIN0xYbXh5dUpqcjZuNlNMdGNV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"3 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-5792857321","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Three South Korean financial firms including Bithumb report data breaches, Yonhap says","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMizgFBVV95cUxPaG1KU3lMLUUxUmFqT1NrWk5iSFNUdzhHQW8wQnhpa3ZNRkVyR1VOVUlXNXFfdG1Za1BsYml1cUxoY1ViOGU4bGhGTkM4X3pHaVhhWktpTHZ2NDlEeDZLRjBFVlIxa3VMSkIwb1BTTFlXZE5UQWF1dkM4V28temZxWTd6RDRhUGxJekdfR0I3YlQwLVJTQl9KRmZ2dU9lRTRnR0JNS2tLWnpjM2kzNzBKeHBDeVNCeC16Y204SkdkUkJPTWVuTHNHSEFHOGJWQQ?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-28","timeAgo":"5 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-13145223703","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Fake Health Camps, Stolen IDs: Cops Bust e-SIM Racket Used In Cyber Fraud","sourceName":"NDTV","sourceUrl":"https://news.google.com/rss/articles/CBMisgFBVV95cUxPZVhpVldSRHF5N1hJcFVELUJ2THBXZXhSNlpnUkZTWFpsb0dsU1dzaVZ4bXZITkliMTJNSWl3V21CQjdYZjh6SUV2cThaZjBTNldXR1pnTW1JNW03bk01R1FNT1BZNV9ROXRxeUwyUEQxel9ZX2szX3ZHVmtNYXE3ZkNJek55cTg4c0JDVnJ1T3JaWDBXQmxjbFRWMTNaLWRvMExNUTBFZ2RVQ1hqZXNWelZ30gG6AUFVX3lxTFBCYUNYSElHTFktWmdKOGllT1FhVzBHTm9IaW5aYkQ4MkRPX0VPUmhMNWdEQU1rU0h5cU9RcXhnelQ1YmV2UGpGVTJlTmN1TkEyMEdsTmo5UG1IMEFuczNrOThsSi01T3pjdW5UYmtXelRTLV8tblhuSGlfWkxGbWdhYzZ4UThLM05GZVdyMzcyRzdWZHAwSGhZS1A2Ry1keXJsVUVEOHlfbVNZMVFJbUR6bzdRZkRUWGFzUQ?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"NDTV","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on NDTV."},{"id":"live-global-ransomware-5679334474","category":"global-ransomware","severity":"high","impactBadge":"🔒 Assets Frozen","title":"EXCLUSIVE: Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMivgFBVV95cUxNZWtDa2JmUnFRRENlQ0RoX2hseFpyajltZE5vbjUwdnlDeTQ5M01zanFrNTBJcE1NV0RwZGFCd29LQXZQN2RYd3pBZnhNbU91eEdZalRSbVpXbTdnS2VXMXNaWE9ZdV9tSHVub29PUy1kX3BFYTNZUWM2NFpTLTZTWGdLX2hTXzYxR2JPanVaeVowcVZmMTZubVZxZE9QSjFPYmVuQjJFVVZqTUJKRUlMclM0NGM4YTNzMmR0ZUdR?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-6431288560","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Security To Cybersecurity: 11 Nodal Officers To Oversee 2027 Manipur Polls","sourceName":"NDTV","sourceUrl":"https://news.google.com/rss/articles/CBMitAFBVV95cUxNRHRJX3N1a1lJT05mbnNKQnpwb2hRclNwZVhwS3VrcHMwY05uRHBjOTBfLWpRUXFsQUZxNUtmVkI4N2xUTllQQ3hjNnQ5am1USnoyanU0a2FBbmJrR0VScThkamQ3emxkSjZkLVY0T09ROVp5YWhrLWhzT0Y2dHk5Q0FEVXVxem1sbWoxM2FYQ2tmV1pxVDV4bjBySU5EYm1KMlJCbkt4YlRteVpvRVlfQlB3WW4?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"NDTV","date":"2026-10-28","timeAgo":"4 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on NDTV."},{"id":"live-global-ransomware-679409782","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Parliamentary Panel To Tackle Social Media, AI, Cybersecurity","sourceName":"Rediff","sourceUrl":"https://news.google.com/rss/articles/CBMirwFBVV95cUxNcUt0d2EwUXU4QUdrRFF6VzFQV3ZCNlg1RmNaV0lFN0pRVEx2LXRlUjY5SmY2X2FTbXZSeGVDT281UWpER3Zfa1E5bW1acWszbEMyNTFkUnJyY1dVelJWVFI1SFliZGFfOXRVWWVNa0phaHlQaXRwbFJUeEl0eVpGb3B6TE4zRFpoQnBqczRFd2NfQlVMbko2dmR6MWxFN3NlNUtzaU5HQ2xwMGswQkFr0gGyAUFVX3lxTFBJeHVqaXVoakxQSU1NSGxLTlItWkp2bGFGRUNIblhvWHpwV3E5QzE2aDg4MC1WSktKRElsVk1BZ0U4b1N4R1N4N1FyWUN4cGJ6U0lZYzkzeXNDQkwyNHlYQUJYWEtFcHZMWXJBYWgzQ2VmWlp4cTZNU2k4ajBMYnp0ZmZCMlI1TlA1QndwcUNlaHFZcUhsb3Q1T044V0V6M05aNXVMTDQ4T214MzBuc0gyUXc?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"Rediff","date":"2026-10-28","timeAgo":"4 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Rediff."},{"id":"live-global-ransomware-2591538851","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Best of Opinion: New rules of cybersecurity must focus on speed, readiness","sourceName":"Business Standard","sourceUrl":"https://news.google.com/rss/articles/CBMi2AFBVV95cUxNSVVtR1c4VW9ZLW9IVUpuREJTSzJiaDcyT2FYS29HZ2ZaSkVfQVR5dldKOXBHWG5SM1BMdzhVWXFhXzJndnVwUHFqUUFkQ0pJZTJfcEc1eGo3QVc0RXhYNFFxcVEyQmlNaFd2a2RzTTZMZ0o1eHlXT2tDVGs5WU85NHk2c1JTZ1ZDUVVablNKX2hKXzdoNi1ocFZPaTJFRzRhb3ZkWG8wU3puY0ZYMVU2X2ZzZ2Z3RWtNRTMtcG1lOHJLMW14V2JGWElrNEZMaGtjd3lOdUlUeXTSAd4BQVVfeXFMT04yMGc4SXJ4clNqN0h3NUNLbzJWRHhDZWZYckdHY0dFV3Vfcnc0cy1mZHJ2dGJmVVJZaTdoXzZQcXM1UEhKS2x5UGM4VUQtWS0wa0x4N0IzYjFXdnRoOGhCdWJVM0ZhOWxBTnAwRW9WV2NSc0R1cUMtMzBMLUc2NmhlLXQtWlFtYzRJY3RtLTlaVWd1NHNqeUFDTE5vQkozQU1CUmFiM0FmMXh2MEp5OTBpOGlya2JRYWNraEhmUUdZU19FeEdkWkZFLTYxeUxOREFIUHd4UzluMzhjaktn?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"Business Standard","date":"2026-10-28","timeAgo":"5 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Business Standard."},{"id":"live-global-ransomware-14856551409","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Kerala Police warn against cyber fraud using fake mobile pop-ups","sourceName":"United News of India","sourceUrl":"https://news.google.com/rss/articles/CBMirAFBVV95cUxPU1VsZVdWc3FMXy1MYk5zWF9jdU5yR3c5bl9DUnBsbWNpcXI5UzNQYzJpSWVRZjlSRW0xUVpmci1sczdwZmxaaU5MTzdtVU5oVHdfb19CLXRHMTVMdU1LaU9OTmZQcV9xempGM2hEUEFOVFhpRDV5U1lzTzZQekRIaTZoOXluUnUydU84Y0ZMdENhTUdmT1VNZ2Y4bEZ4S1I2RmYxOHZCZGFYbjI1?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"United News of India","date":"2026-10-27","timeAgo":"6 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on United News of India."}];
+let THREATS_DATA = [{"id":"live-india-bfsi-342730745","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Cybersecurity Gaps Put India's Refrigeration and Cold-Storage Networks at Risk","sourceName":"CXO Digitalpulse","sourceUrl":"https://news.google.com/rss/articles/CBMirwFBVV95cUxNdkFKWXoxRlItaGFOQTh3OXRXbThwU2RoTE5hQ1o5YklVMWY3T0tiUEd5MGJhQnFCUk5wVFRqNjhKQ2ZhRDU5UmxvMkN2d191bUpYR2ZRVHhJUXNjZkdwamluZ3NROUQ4enNKLW80Z2ZFN1ZpVU1MYUl4Y0IySEhXaUhRaU11amhjdXdyc2dKYzd6ejczQy04Yk1oWkU4eUwwNUpWVXRtUlA2V05vckJ3?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"CXO Digitalpulse","date":"2026-11-04","timeAgo":"just now","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on CXO Digitalpulse."},{"id":"live-india-bfsi-10158650343","category":"india-bfsi","severity":"high","impactBadge":"⚠️ Data Breach","title":"State Bank of India quarterly profit rises; to boost cybersecurity after breach","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMilwFBVV95cUxPQnFRWGMtM3JxME1pR2FXOWo4NU1Ua1VncXNLa0dqN0RORm5MbTJ2Nk9YcU04cV9mRVVOLVNFTmxrTUVhRVZ3TnhqUC13RXdMUXgzNFQ2TGsxSklSYUp1c3dWMDhpVFJoYnh4NEhvVnh1YWdKTS15Z29NLU5LaEFXVFNZYzhZc01CSGh6enE0UGV1TE9tbkhN?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-11-03","timeAgo":"18 hours ago","entities":"Banking & Financial Services","incident":"Key updates: Karix Mobile denies any association with SBI data breach; SBI vows to strengthen cybersecurity after data breach.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-india-bfsi-7019765067","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"India's CERT-In secures access to test Anthropic's Mythos AI model for cybersecurity","sourceName":"Deccan Herald","sourceUrl":"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSVlLNlpvOTZFY0J6UHdLTlcwT0kyOTVHaThjUXhvejc5RnpKTEt6XzNGYzNyV1NWcUV0cnpHYWlUSmhzLU1oRFg0bHZhUDVMMkI0THk0QzdkbGVHVGMxOGN1eEVrV2tfMnhubUkyOWoxQnFJWHBZMzBEVU9FaDROWWdmckk2dlZvdnBFcnR2cDdzQk5CeTd6Z0lPSjg5RGZ5cDN1MlFWa3hFUHdGbTkwVi1aMGwxTFFPc0RNTmlENzByNWM?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Deccan Herald","date":"2026-11-03","timeAgo":"12 hours ago","entities":"Banking & Financial Services","incident":"Key updates: India's space sector gets cybersecurity boost as CERT-In, SIA-India release joint guidelines; CERT-In is now using Claude Mythos to test cybersecurity flaws, report says.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Deccan Herald."},{"id":"live-india-bfsi-21354618276","category":"india-bfsi","severity":"high","impactBadge":"🚨 Financial Fraud Probe","title":"Rs 500 crore cyber fraud trail: Mumbai Police examine mule accounts linked to betting network","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMi-gFBVV95cUxQSUxkcFdLMm1KR1cyTVdLejVfTlUySlFBT3NSZktkeE9Zand0Z0toZEpQd09CTXF5Ukh0WE1UaThBY1lCcGtseE5YZ2ZKT1pqMXIyTXVScEVDVGJXRnVkSmdWa1VCOWU3RGFBakY3SDExYms1MzlGUUFLdTI4dWxxUzItdTZMWlQxS2dHZ3lOSktRVnFOajBoTkJsUzVBaGJ5c0dYaUZoMzluLVZEaEJnVGZNWUtTVXZYbFdhTTFDdGxweEJjOHRSenBOTHdlaXh2WmRINzl3WVZmNnB6aktYRDdhVWtnTXN0ZWt0Mk9XRmJaZUM4dUdsQ0dn0gH_AUFVX3lxTE1VZlE1THZsUUtKR1BDX3kxbUZSd1JtWjV5UzZZbTRuRlVuWkZMcV9fTXE5bm1hZE5kUEp0Qm02bWFka01uYnpkNUVtVGdKd2U2Y0U3TzNUb3I5NVVoNDI0OUlJZ0pEUVZVbVhTVzVBOVpzcEl3ZWEySUtDWmdRN0NDUjI2NnVfYjB5aHk5ZVU2eVlTVmtYQ29BUHAwUGJGRC02ZmlXMWdhcXFMY3NVS2Z0Mi1IVnVUWDgwOGtTS29paFJWcEdrc2hYWXJZc3BPSm0yZGkxLXVTbjAycGE5WjVXWlkxQldwX2pKRk9uSmk2ZjZCbm9CRXZuS3VqbXlMVQ?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The Times of India","date":"2026-11-03","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-india-bfsi-10386227470","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"India's apex bank ramps up cybersecurity scrutiny on lenders - report","sourceName":"Yahoo Finance","sourceUrl":"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQU2tDMDBuQ2ZvWWlXbUR6UE1yYk9zSXlfSzh1amFJZDlZeEZOUnU1d2NCemtzRXliMy1QNnI5TU5aWGNHejdjcld4V0dnZ0I1cTI1ZFJiZ0MwRHFFUG9qN0dSRXIyb1puOVVwOVRxVzliR1BKQ0NydWZMc1RNRnhyZFFfOGlHVVBH?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Yahoo Finance","date":"2026-11-02","timeAgo":"1 day ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Yahoo Finance."},{"id":"live-india-bfsi-8865700446","category":"india-bfsi","severity":"high","impactBadge":"🚨 Financial Fraud Probe","title":"2.10 Crore Cyber Fraud: Ambani, Tendulkar's Names Used to Lure Pune Senior Citizen, Then 'Digital Arrest' Trap","sourceName":"The 420.in","sourceUrl":"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWnBMTDNXMWRtYmMxYmRSdGdUOVd1WktQUS0tWFV2WEJISThuMndQcGlQRkkyRGRtSGJVLXZKcTBDZlBGQVNvaEFaVEQteWV6RU1rVUNZenRmSGpDVTFIQ214RTdSX2RrWHdjRlVGOTNhVmRSLXBVdlp2OVRiZW1JZE5GQjdoUDNxX2wwbjMta1dXRE1wWUxfeG0zbE5TbkFyaUJSNkE3aWFfZ3BHMXB1US1MejJ5UGJzeV8xQ3N2dmc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The 420.in","date":"2026-11-01","timeAgo":"2 days ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The 420.in."},{"id":"live-crypto-heists-9818481674","category":"crypto-heists","severity":"critical","impactBadge":"💰 $6.3B Record Hack","title":"Binance seeks to shore up confidence after record $6.3 billion heist","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-11-02","timeAgo":"1 day ago","entities":"Crypto & Digital Assets","incident":"Key updates: Binance sees $3.6 billion withdrawals after biggest-ever crypto hack; Binance resumes Bitcoin withdrawals after $6.3bn hack, says 95% of assets replaced.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-crypto-heists-799466515","category":"crypto-heists","severity":"high","impactBadge":"⚠️ Data Breach","title":"Polymarket resumes trading after third-party security breach, to reimburse users","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMiowFBVV95cUxQdGFDU255RTFLTGhHMmlndVlJb1gyUVdsYmJxcUpaalJoRVp0OEpROVcyQ0xQRlRiN1haY0UyTUlLb1JlUF92NF8tWVlfVmxmVWJmN2p4Q2ZfNHhCSy1ta2EwMi1KZUJ0eE1zVExPck44OVFJRnFuSmV2VjUtdGUzQVVGR1VPVDFTbUF4UzlwTHFIN0xYbXh5dUpqcjZuNlNMdGNV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"5 days ago","entities":"Crypto & Digital Assets","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-11874336878","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Most wanted cyber fraud accused held at Kolkata Airport while trying to flee to Dubai","sourceName":"The Hawk","sourceUrl":"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUG1mQ05WVnh0SWUxTExvS2w5d19TRWpvUUpHZmJQM0JHd09tN1RfME9FQlNPYkV5a3NCN1NtU0tvcjY1ZEtqM2UxaWpoeU5mZ3BIdG9PTmltTmZBZC13b0pPXzd6X3BfY0ZiS2JMQlFEN0VuSWZuSjFsa0J0MWVOQk05WHR2NGxaeF82T1BDNmJUd3ZHLU1yREw4TERWSVBwT3MxMTZVN09Nbzd3cl9qbE1mR09hSWxUMmdv?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"The Hawk","date":"2026-11-03","timeAgo":"18 hours ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Hawk."},{"id":"live-global-ransomware-11167347222","category":"global-ransomware","severity":"high","impactBadge":"🚨 Reuters Exclusive","title":"European supermarkets rush to patch vulnerabilities after region-wide fridge hack","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixgFBVV95cUxOVkQ0YkpOVC13OThlbVFndzBBbUF0S2xvYmdSbzQ0VWY4Q21nRUlFQkh6YTdqNnVEbmNoVEJoQmdIS3ZjM0RMRHVZZzN1SWdUekROY2RqaUdScDlkSHd5dXZGeWFnV19RV0hZb1pZVFROQW1meDBqZXdMZUc5UzJYQjd1VEgwd2dCWTNMVlVIYW94NHRhZXdwWmh1RDhJVkNTLS1RREJHMjZUbWpGNDMyX2UwWmRPdUhHQ0V3dXY0akxpTDVzMVE?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-11-03","timeAgo":"14 hours ago","entities":"Enterprise & Public Infrastructure","incident":"Key updates: European supermarkets rush to patch vulnerabilities after region-wide fridge hack, World News.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-3422134931","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Balasaheb Thackeray's grandson actor Aaishvary Thackeray loses Rs 19,000 to cyber fraud","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMi8AFBVV95cUxQX2VMZ3VpZUxkSjc4YkFXUnJBM3hIMXFJcnlTSFBmVmpRdjdZUllYdDNKUlZveTVzMnppcmQxU0xobUdRTGxyUExBa2hLZnRhZHRRLUxqSHpDeWFWZkFPcUtWUVJleHczWi03eGhKMTdxYTUxWkdheldLSXdfVURMLWo5RzJhMjlZZ19xc1kwbzhHXzM3bWtENHpVelpYUHdOM3dwcDBuenVId2c4Z1ZSUG1ldGYtanVzamI0aDBVeHhKbEQxakFuRGhTQWt5aVBlZ3M4U3dZcGdWbk91dXg1YTNjaFJ5SmE0NTdTRDFmTWjSAfYBQVVfeXFMTXNOSjl4dzNqR2ZEelJqc0VodUhGNk9sNDZ1YXZNcHk4a0ZaVC16TEtodGl3N1NVQk5LR0xaVlNJcVNjV0Z6YmNZNTdaOGJjNDhzeVZBbXA1bkJMMlVxZkU5dTRuS2V6eHRoX20yaDVoTU44dGZCZERfMnV4dnZ5VnBWY3RnektleDhoZHBocmlxQm9Wc1RlYnQzbWxNMjIzckt0WVQyYkE2SnQzU2FQSFl1bUtSZmhrQTdnZ2hfM3hNZ3JuaWREOWtXSk5CYjJvY2puY3lWWHJIemZKeDd0LTlvM2ZRdEhXU295UVZnWXpLM0U5ME9B?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"The Times of India","date":"2026-11-02","timeAgo":"1 day ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-global-ransomware-3657941944","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"CSA students briefed on cybersecurity","sourceName":"The Times of India","sourceUrl":"https://news.google.com/rss/articles/CBMisAFBVV95cUxNQmxIQkVIOVJSdDdScHJRWDRLVTAybU1LeDdDeE8wc1NwekNJRVBBMF8wRDY3TWE3cHp3Y0ZWTjVueW95NnV1M3MyV2FMbzNaLW9lVUViaGVJTVV0MWczdU1Bc2MyLThkT2psNlZtbS1KR2tyby1nbzg5TklfTjI3M25wbEdpc3NMaG1PeXM1X093enVkaFlFeHdWcXB3SmFpR0p4eUlKcXJGTGpWMVF2WdIBtgFBVV95cUxPVHkxSkJ4WTdJV2RrOGZQdkx0TnFQbVBkR25wT0NQT1M0dUg0OVRtODV5MWllYzF2RHFwenFEOHRvbHREM3hVQk5VWkZ1Ukt1MlF6X0xTaFNSQnFaOUdwTXZIQmJsbDFPQ0lpVEJBR3BOY1Y3OEZSa0ZLZWR5MEZWMG13TzE4bGYyc3dCcWhIT2Y0eU9oTmR5SDA4QnNBa3VVemJiMWNaUUoyOFNiNGNXUzQ0ejNsdw?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"The Times of India","date":"2026-11-02","timeAgo":"1 day ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The Times of India."},{"id":"live-global-ransomware-5705806279","category":"global-ransomware","severity":"high","impactBadge":"🚨 Reuters Exclusive","title":"New cyberattack on supermarket fridges sweeps across Europe","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMizwFBVV95cUxObF9LUXZ2TVpjZm13eW9HNXZ0MkZFVDM5eHl5RXc0aDkzODdvc0VKYVE4YV9MSDZITjVTR01CM3l6ajdCVEFZMXlmdmx3MzBRWHN5QVkyTFU2bkR2Sm5VQm5OWUVfLVJoeHFZaXdrc0F1QTRnT0tHYXRvcVd4S0V2QUxmV3ptOEszT2EyWmFpVjYyUnRwODF1eGhXbGpGcUV2UXRwZFFLOGhPLTY1MWUxal9TY3M0Qm9MOVpSeTFHazNxMUNGSnVfdzVvOE0tUGM?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-11-02","timeAgo":"1 day ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-global-ransomware-4682439438","category":"global-ransomware","severity":"high","impactBadge":"🚨 Urgent Alert","title":"How North Korea perfected the crypto heist","sourceName":"Axios","sourceUrl":"https://news.google.com/rss/articles/CBMidkFVX3lxTE81S2VuSVhqVExKRkVHY2RjU2hDZ2JCdGlaNk5OTE9HeUxEbnAwWFpoUDhqNktpTVFMNE16SkR3azlIT2xFZW0xMTREaFIxOUVuWWNXRml3d2tyMG9aeTZ5ZVd1c3RZdHAzNlluVnMzSTZsbWhsQnc?oc=5","provenanceBadge":"🌐 Global Security","badgeType":"statutory","ref":"Axios","date":"2026-11-01","timeAgo":"3 days ago","entities":"Enterprise & Public Infrastructure","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Axios."}];
 let activeThreatCategory = "all";
 let threatSearchQ = "";
 
@@ -8527,7 +8634,7 @@ function shareRealityCard(idx) {
 }
 
 // --- Scam Alerts Client Logic ---
-let SCAMS_DATA = [{"id":"digital-arrest-video-call","category":"messaging","platform":"WhatsApp / Video Call","tag":"Digital Arrest","severity":"critical","title":"The \"Digital Arrest\" Police Video Call","scam":"A caller in uniform claims your Aadhaar or passport was found in an illegal parcel or money laundering probe. They place you on a fraudulent WhatsApp video call or custom video link with a backdrop resembling a police station, CBI, or ED cyber cell, declaring you are under 'Digital Arrest' and coercing you to transfer savings into a fake 'RBI verification escrow'.","protection":"Indian law and law enforcement agencies have NO legal concept of 'Digital Arrest'. Police, CBI, ED, and customs NEVER conduct interrogations, trials, or arrests over video calls. Hang up immediately, block the number, and report to the National Cybercrime Portal or dial 1930.","sourceName":"I4C & PM Mann Ki Baat Cyber Alert","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"National Cyber Helpline: 1930 ↗","actionUrl":"https://cybercrime.gov.in/"},{"id":"traffic-echallan-apk","category":"transport","platform":"SMS / Android APK","tag":"Traffic Challan APK","severity":"critical","title":"The Fake Traffic Fine Message (e-Challan APK)","scam":"You get an SMS claiming your vehicle was caught overspeeding on camera with a pending fine of ₹1,000, and a link to download an app (echallan.apk) to pay before court action. If you install it, the app silently reads all your incoming SMS, steals your bank OTPs, and drains your account.","protection":"Traffic police never send app files to pay fines. Never install any file ending in .apk. Always check and pay traffic fines only on the official government website: echallan.parivahan.gov.in.","sourceName":"I4C (Ministry of Home Affairs) Cyber Alert","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"Official Portal: echallan.parivahan.gov.in ↗","actionUrl":"https://echallan.parivahan.gov.in/"},{"id":"whatsapp-wedding-card-apk","category":"apk-malware","platform":"WhatsApp / Android APK","tag":"Wedding Card Virus","severity":"critical","title":"The WhatsApp \"Wedding Card\" Virus (APK Trojan)","scam":"You receive a message from a friend or relative on WhatsApp saying: \"My cousin is getting married next week, wedding card and venue attached.\" The attached file looks like an invite, but ends in .apk. Installing it infects your phone with a virus that hijacks your WhatsApp, sends the same scam to all your family contacts, and steals your net banking logins.","protection":"Real wedding cards are always photos or PDFs, never an .apk software file. If someone sends an APK file, do not tap it. Call that person on a regular call to tell them their WhatsApp is compromised.","sourceName":"CERT-In Cyber Security Advisory","sourceUrl":"https://www.cert-in.org.in/","verifiedDate":"2026-10-30","actionLinkText":"CERT-In Advisory Desk ↗","actionUrl":"https://www.cert-in.org.in/"},{"id":"accidental-upi-transfer-trap","category":"banking","platform":"UPI / Phone Call","tag":"Wrong UPI Transfer","severity":"high","title":"The \"Wrong UPI Transfer\" Crying Call","scam":"You get a genuine bank alert that ₹30,000 was credited to your account. Seconds later, a crying person calls saying: \"Sir, my child is in the hospital, I sent money to your number by mistake. Please send it back to my UPI ID.\" If you send the money back yourself, you lose your own money—because the original transfer was made using stolen funds. Within 48 hours, cyber police freeze your bank account for receiving criminal money.","protection":"Never transfer the money back yourself. Tell the caller: \"I will not touch this money. Please call your bank and file a wrong-transfer dispute. My bank will reverse it officially.\"","sourceName":"Reserve Bank of India (RBI Sachet Advisory)","sourceUrl":"https://sachet.rbi.org.in/","verifiedDate":"2026-10-30","actionLinkText":"RBI Sachet Portal ↗","actionUrl":"https://sachet.rbi.org.in/"},{"id":"olx-qr-code-receive-trap","category":"banking","platform":"OLX / UPI QR Code","tag":"QR Code Money Trap","severity":"high","title":"The Fake QR Code \"To Receive Payment\" Trap","scam":"You list furniture or a vehicle for sale on OLX or Marketplace. A buyer immediately agrees to the price without negotiation and sends you a UPI QR code saying: \"Scan this QR code and enter your UPI PIN to receive the advance payment of ₹15,000.\" The moment you enter your PIN, ₹15,000 is debited from your account.","protection":"Remember the golden rule of UPI: You NEVER need to enter your UPI PIN or scan a QR code to RECEIVE money. Entering a PIN is only required when money leaves your bank account.","sourceName":"NPCI & National Cyber Crime Reporting Portal","sourceUrl":"https://www.npci.org.in/","verifiedDate":"2026-10-30","actionLinkText":"NPCI Official Portal ↗","actionUrl":"https://www.npci.org.in/"},{"id":"esim-5g-upgrade-hijack","category":"messaging","platform":"eSIM / SMS","tag":"eSIM Hijack","severity":"critical","title":"The \"5G Plus Upgrade\" Number Steal","scam":"A caller claiming to be from Airtel or Jio says they are upgrading your SIM to 5G for free. They tell you to send a simple SMS like eSIM <email> to 121. The moment you do this, your physical SIM card stops working permanently, and your phone number transfers to the scammer's phone. All your bank SMS OTPs now go to them.","protection":"Never send an eSIM request to any email given by a caller. Telecom companies never call you to set up an eSIM. To upgrade your SIM, always visit an official Airtel/Jio store in person.","sourceName":"DoT (Department of Telecommunications) / Sanchar Saathi","sourceUrl":"https://sancharsaathi.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"Sanchar Saathi Portal ↗","actionUrl":"https://sancharsaathi.gov.in/"},{"id":"fastag-blacklist-panic","category":"transport","platform":"SMS / Web Clone","tag":"FASTag Toll Alert","severity":"high","title":"The FASTag Highway Blacklist Trap","scam":"You get an urgent SMS saying your FASTag is blacklisted or KYC is expired, demanding a ₹45 pending fee within 2 hours or your vehicle will be stopped at the next toll plaza. The link opens a fake cloned website that captures your bank account and debit card details.","protection":"Highway authorities never send SMS links to collect ₹45 or update KYC. Never click links in SMS. If you want to check your FASTag, open your own banking app or Paytm directly.","sourceName":"NPCI & Cyber Crime Coordination Centre","sourceUrl":"https://www.npci.org.in/","verifiedDate":"2026-10-30","actionLinkText":"NPCI Official Portal ↗","actionUrl":"https://www.npci.org.in/"},{"id":"ai-deepfake-voice-clone","category":"messaging","platform":"Phone Call / Audio AI","tag":"AI Voice Clone","severity":"critical","title":"The \"Look-Alike Voice\" AI Deepfake Distress Call","scam":"An elderly parent receives a call that sounds identically like their son or daughter crying in panic: \"Dad, I was in a car crash / police detained me, please send ₹50,000 to this inspector's UPI immediately to avoid lockup.\" The voice is an AI clone generated from a 5-second public Instagram clip.","protection":"Establish a family secret safe-word. Never transfer money under emotional pressure. Hang up immediately and dial your child's number directly on a normal voice call or video call.","sourceName":"CERT-In AI Threat Advisory","sourceUrl":"https://cert-in.org.in/","verifiedDate":"2026-10-30","actionLinkText":"CERT-In Advisory Desk ↗","actionUrl":"https://cert-in.org.in/"},{"id":"electricity-bill-disconnection-sms","category":"banking","platform":"SMS / Remote App","tag":"Power Bill Alert","severity":"high","title":"The Fake Electricity Bill Disconnection Warning","scam":"You get an urgent SMS: \"Dear consumer, your electricity connection will be disconnected tonight at 9:30 PM due to unpaid balance. Call power officer immediately.\" If you call, they tell you to install QuickSupport or AnyDesk to pay ₹11 for KYC update, which gives them full control to drain your bank account.","protection":"Power boards never threaten same-night power cuts over SMS or ask you to call personal mobile numbers. Never install screen-sharing apps on advice from a stranger. Pay bills only via authorized electricity board portals.","sourceName":"Ministry of Power & I4C Advisory","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"National Cyber Helpline: 1930 ↗","actionUrl":"https://cybercrime.gov.in/"},{"id":"part-time-youtube-review-job","category":"messaging","platform":"WhatsApp / Telegram","tag":"Job Task Fraud","severity":"high","title":"The WhatsApp Part-Time \"Hotel Review / Like\" Job","scam":"You get a WhatsApp message offering ₹2,000–₹5,000 per day to like YouTube videos or review hotels. You complete initial tasks and receive ₹300 genuine payout to build trust. Then you are added to a Telegram VIP group and convinced to deposit ₹50,000 to \"unlock\" higher commissions, which you can never withdraw.","protection":"Legitimate businesses never recruit over WhatsApp to pay for video likes. Any scheme paying small token amounts upfront to lure you into depositing larger \"prepaid\" funds is a scam.","sourceName":"Indian Cyber Crime Coordination Centre (I4C)","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"I4C Cybercrime Portal ↗","actionUrl":"https://cybercrime.gov.in/"},{"id":"bank-rewards-points-expiry-apk","category":"apk-malware","platform":"SMS / Android APK","tag":"Bank Reward Points","severity":"critical","title":"The Bank \"Reward Points Expiry\" APK Trap","scam":"An SMS claims your bank reward points worth ₹8,500 are expiring today, urging you to install rewards.apk or tap a link to redeem them into your savings account. The APK installs bank malware that captures your net banking credentials and OTPs.","protection":"Banks never convert reward points into cash via external .apk applications or SMS links. Check reward points only by logging into your official bank net banking app.","sourceName":"State Bank of India & RBI Advisory","sourceUrl":"https://sachet.rbi.org.in/","verifiedDate":"2026-10-30","actionLinkText":"RBI Sachet Portal ↗","actionUrl":"https://sachet.rbi.org.in/"},{"id":"india-post-parcel-address-smishing","category":"transport","platform":"SMS / Web Clone","tag":"Courier Address Trap","severity":"high","title":"The Fake Courier Delivery / Incomplete Address Trap","scam":"You receive an SMS from \"India Post\" or \"Courier\": \"Your package cannot be delivered due to an incomplete house number. Update your address within 24 hours or parcel will be returned.\" The link opens an India Post cloned webpage asking for a ₹25 redelivery fee, harvesting your debit card number and OTP.","protection":"India Post never sends SMS links asking for fee payments to correct addresses. Track parcels only using the tracking number directly on the official indiapost.gov.in website.","sourceName":"India Post & PIB Fact Check","sourceUrl":"https://www.indiapost.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"Official India Post Tracking ↗","actionUrl":"https://www.indiapost.gov.in/"},{"id":"stock-market-whatsapp-ipo-group","category":"banking","platform":"WhatsApp / Fake App","tag":"Fake IPO Scheme","severity":"critical","title":"The Bogus Stock Market \"VIP Institutional IPO\" Group","scam":"You are added to a WhatsApp group named after a famous global brokerage. \"Mentors\" promise guaranteed 100% allocation in blockbuster IPOs and instruct you to trade through a customized app. The app shows massive fake profits, but when you attempt to withdraw, they demand a 20% \"tax release fee\" and freeze your account.","protection":"SEBI-registered brokerages never conduct institutional IPO bidding or accept investments via WhatsApp groups. Never deposit money into personal accounts for stock market trading.","sourceName":"Securities and Exchange Board of India (SEBI)","sourceUrl":"https://www.sebi.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"SEBI Investor Portal ↗","actionUrl":"https://www.sebi.gov.in/"},{"id":"credit-card-limit-increase-call","category":"banking","platform":"Phone Call / SMS","tag":"Credit Card Fraud","severity":"high","title":"The Credit Card Limit Increase Phone Trap","scam":"A caller poses as your bank's credit card department offering to double your credit limit for free. They recite your name and first 4 card digits to gain trust, then ask you to confirm an OTP sent to your phone. In reality, that OTP authorizes an online purchase made by the scammer.","protection":"Bank employees never need an OTP to increase card limits. OTP stands for One-Time Password — entering or sharing it always authorizes a debit from your account.","sourceName":"Reserve Bank of India (RBI Be(A)Ware)","sourceUrl":"https://sachet.rbi.org.in/","verifiedDate":"2026-10-30","actionLinkText":"RBI Sachet Portal ↗","actionUrl":"https://sachet.rbi.org.in/"},{"id":"work-from-home-laptop-deposit","category":"messaging","platform":"LinkedIn / Telegram","tag":"Remote Job Scam","severity":"medium","title":"The Remote Job \"Laptop Security Deposit\" Trap","scam":"You receive an offer for a remote data entry or transcription job paying ₹45,000 monthly. After an online chat interview, they send a fake offer letter demanding a refundable ₹3,500 \"courier insurance fee\" or \"laptop security deposit\" before dispatching your work computer. Once paid, the recruiter blocks you.","protection":"Legitimate employers never charge candidates money for job offers, training fees, or equipment security deposits. Any company asking for money upfront before hiring is fraudulent.","sourceName":"Ministry of Labour & CyberDost","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"CyberDost Portal ↗","actionUrl":"https://cybercrime.gov.in/"}];
+let SCAMS_DATA = [{"id":"digital-arrest-video-call","category":"messaging","platform":"WhatsApp / Video Call","tag":"Digital Arrest","severity":"critical","title":"The \"Digital Arrest\" Police Video Call","scam":"A caller in uniform claims your Aadhaar or passport was found in an illegal parcel or money laundering probe. They place you on a fraudulent WhatsApp video call or custom video link with a backdrop resembling a police station, CBI, or ED cyber cell, declaring you are under 'Digital Arrest' and coercing you to transfer savings into a fake 'RBI verification escrow'.","protection":"Indian law and law enforcement agencies have NO legal concept of 'Digital Arrest'. Police, CBI, ED, and customs NEVER conduct interrogations, trials, or arrests over video calls. Hang up immediately, block the number, and report to the National Cybercrime Portal or dial 1930.","sourceName":"I4C & PM Mann Ki Baat Cyber Alert","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"National Cyber Helpline: 1930 ↗","actionUrl":"https://cybercrime.gov.in/"},{"id":"traffic-echallan-apk","category":"transport","platform":"SMS / Android APK","tag":"Traffic Challan APK","severity":"critical","title":"The Fake Traffic Fine Message (e-Challan APK)","scam":"You get an SMS claiming your vehicle was caught overspeeding on camera with a pending fine of ₹1,000, and a link to download an app (echallan.apk) to pay before court action. If you install it, the app silently reads all your incoming SMS, steals your bank OTPs, and drains your account.","protection":"Traffic police never send app files to pay fines. Never install any file ending in .apk. Always check and pay traffic fines only on the official government website: echallan.parivahan.gov.in.","sourceName":"I4C (Ministry of Home Affairs) Cyber Alert","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"Official Portal: echallan.parivahan.gov.in ↗","actionUrl":"https://echallan.parivahan.gov.in/"},{"id":"whatsapp-wedding-card-apk","category":"apk-malware","platform":"WhatsApp / Android APK","tag":"Wedding Card Virus","severity":"critical","title":"The WhatsApp \"Wedding Card\" Virus (APK Trojan)","scam":"You receive a message from a friend or relative on WhatsApp saying: \"My cousin is getting married next week, wedding card and venue attached.\" The attached file looks like an invite, but ends in .apk. Installing it infects your phone with a virus that hijacks your WhatsApp, sends the same scam to all your family contacts, and steals your net banking logins.","protection":"Real wedding cards are always photos or PDFs, never an .apk software file. If someone sends an APK file, do not tap it. Call that person on a regular call to tell them their WhatsApp is compromised.","sourceName":"CERT-In Cyber Security Advisory","sourceUrl":"https://www.cert-in.org.in/","verifiedDate":"2026-10-30","actionLinkText":"CERT-In Advisory Desk ↗","actionUrl":"https://www.cert-in.org.in/"},{"id":"accidental-upi-transfer-trap","category":"banking","platform":"UPI / Phone Call","tag":"Wrong UPI Transfer","severity":"high","title":"The \"Wrong UPI Transfer\" Crying Call","scam":"You get a genuine bank alert that ₹30,000 was credited to your account. Seconds later, a crying person calls saying: \"Sir, my child is in the hospital, I sent money to your number by mistake. Please send it back to my UPI ID.\" If you send the money back yourself, you lose your own money—because the original transfer was made using stolen funds. Within 48 hours, cyber police freeze your bank account for receiving criminal money.","protection":"Never transfer the money back yourself. Tell the caller: \"I will not touch this money. Please call your bank and file a wrong-transfer dispute. My bank will reverse it officially.\"","sourceName":"Reserve Bank of India (RBI Sachet Advisory)","sourceUrl":"https://sachet.rbi.org.in/","verifiedDate":"2026-10-30","actionLinkText":"RBI Sachet Portal ↗","actionUrl":"https://sachet.rbi.org.in/"},{"id":"olx-qr-code-receive-trap","category":"banking","platform":"OLX / UPI QR Code","tag":"QR Code Money Trap","severity":"high","title":"The Fake QR Code \"To Receive Payment\" Trap","scam":"You list furniture or a vehicle for sale on OLX or Marketplace. A buyer immediately agrees to the price without negotiation and sends you a UPI QR code saying: \"Scan this QR code and enter your UPI PIN to receive the advance payment of ₹15,000.\" The moment you enter your PIN, ₹15,000 is debited from your account.","protection":"Remember the golden rule of UPI: You NEVER need to enter your UPI PIN or scan a QR code to RECEIVE money. Entering a PIN is only required when money leaves your bank account.","sourceName":"NPCI & National Cyber Crime Reporting Portal","sourceUrl":"https://www.npci.org.in/","verifiedDate":"2026-10-30","actionLinkText":"NPCI Official Portal ↗","actionUrl":"https://www.npci.org.in/"},{"id":"esim-5g-upgrade-hijack","category":"messaging","platform":"eSIM / SMS","tag":"eSIM Hijack","severity":"critical","title":"The \"5G Plus Upgrade\" Number Steal","scam":"A caller claiming to be from Airtel or Jio says they are upgrading your SIM to 5G for free. They tell you to send a simple SMS like eSIM <email> to 121. The moment you do this, your physical SIM card stops working permanently, and your phone number transfers to the scammer's phone. All your bank SMS OTPs now go to them.","protection":"Never send an eSIM request to any email given by a caller. Telecom companies never call you to set up an eSIM. To upgrade your SIM, always visit an official Airtel/Jio store in person.","sourceName":"DoT (Department of Telecommunications) / Sanchar Saathi","sourceUrl":"https://sancharsaathi.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"Sanchar Saathi Portal ↗","actionUrl":"https://sancharsaathi.gov.in/"},{"id":"fastag-blacklist-panic","category":"transport","platform":"SMS / Web Clone","tag":"FASTag Toll Alert","severity":"high","title":"The FASTag Highway Blacklist Trap","scam":"You get an urgent SMS saying your FASTag is blacklisted or KYC is expired, demanding a ₹45 pending fee within 2 hours or your vehicle will be stopped at the next toll plaza. The link opens a fake cloned website that captures your bank account and debit card details.","protection":"Highway authorities never send SMS links to collect ₹45 or update KYC. Never click links in SMS. If you want to check your FASTag, open your own banking app or Paytm directly.","sourceName":"NPCI & Cyber Crime Coordination Centre","sourceUrl":"https://www.npci.org.in/","verifiedDate":"2026-10-30","actionLinkText":"NPCI Official Portal ↗","actionUrl":"https://www.npci.org.in/"},{"id":"ai-deepfake-voice-clone","category":"messaging","platform":"Phone Call / Audio AI","tag":"AI Voice Clone","severity":"critical","title":"The \"Look-Alike Voice\" AI Deepfake Distress Call","scam":"An elderly parent receives a call that sounds identically like their son or daughter crying in panic: \"Dad, I was in a car crash / police detained me, please send ₹50,000 to this inspector's UPI immediately to avoid lockup.\" The voice is an AI clone generated from a 5-second public Instagram clip.","protection":"Establish a family secret safe-word. Never transfer money under emotional pressure. Hang up immediately and dial your child's number directly on a normal voice call or video call.","sourceName":"CERT-In AI Threat Advisory","sourceUrl":"https://cert-in.org.in/","verifiedDate":"2026-10-30","actionLinkText":"CERT-In Advisory Desk ↗","actionUrl":"https://cert-in.org.in/"},{"id":"electricity-bill-disconnection-sms","category":"banking","platform":"SMS / Remote App","tag":"Power Bill Alert","severity":"high","title":"The Fake Electricity Bill Disconnection Warning","scam":"You get an urgent SMS: \"Dear consumer, your electricity connection will be disconnected tonight at 9:30 PM due to unpaid balance. Call power officer immediately.\" If you call, they tell you to install QuickSupport or AnyDesk to pay ₹11 for KYC update, which gives them full control to drain your bank account.","protection":"Power boards never threaten same-night power cuts over SMS or ask you to call personal mobile numbers. Never install screen-sharing apps on advice from a stranger. Pay bills only via authorized electricity board portals.","sourceName":"Ministry of Power & I4C Advisory","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"National Cyber Helpline: 1930 ↗","actionUrl":"https://cybercrime.gov.in/"},{"id":"part-time-youtube-review-job","category":"messaging","platform":"WhatsApp / Telegram","tag":"Job Task Fraud","severity":"high","title":"The WhatsApp Part-Time \"Hotel Review / Like\" Job","scam":"You get a WhatsApp message offering ₹2,000–₹5,000 per day to like YouTube videos or review hotels. You complete initial tasks and receive ₹300 genuine payout to build trust. Then you are added to a Telegram VIP group and convinced to deposit ₹50,000 to \"unlock\" higher commissions, which you can never withdraw.","protection":"Legitimate businesses never recruit over WhatsApp to pay for video likes. Any scheme paying small token amounts upfront to lure you into depositing larger \"prepaid\" funds is a scam.","sourceName":"Indian Cyber Crime Coordination Centre (I4C)","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"I4C Cybercrime Portal ↗","actionUrl":"https://cybercrime.gov.in/"},{"id":"dot-trai-disconnection-robocall","category":"messaging","platform":"Phone Call / Robocall IVR","tag":"DoT Disconnect Notice","severity":"critical","title":"The DoT / TRAI \"Mobile Number Disconnection in 2 Hours\" Robocall","scam":"An automated IVR robocall says: \"This is the Department of Telecommunications (DoT). Your mobile number will be disconnected in 2 hours due to illegal cybercrime complaints. Press 9 to speak with an officer.\" Pressing 9 routes you to fake police who threaten immediate arrest under PMLA unless you pay money to verify your Aadhaar.","protection":"DoT and TRAI NEVER disconnect phone numbers via automated calls or ask you to press 9. If you receive such a call, hang up immediately. Check your registered mobile connections on the official Sanchar Saathi (sancharsaathi.gov.in) portal or dial 1930.","sourceName":"DoT & Sanchar Saathi Advisory","sourceUrl":"https://sancharsaathi.gov.in/","verifiedDate":"2026-11-04","actionLinkText":"Sanchar Saathi Official Portal ↗","actionUrl":"https://sancharsaathi.gov.in/"},{"id":"fedex-narcotics-customs-parcel","category":"transport","platform":"Phone Call / Video Call","tag":"Customs Drug Parcel","severity":"critical","title":"The FedEx / DHL \"Drugs Found in International Courier\" Threat","scam":"An automated call claiming to be FedEx or DHL claims: \"A courier parcel sent using your Aadhaar to Taiwan or Cambodia containing MDMA drugs, fake passports, and illegal debit cards was intercepted by customs.\" The call is transferred to fake \"Narcotics Control Bureau (NCB)\" or \"Mumbai Crime Branch\" officers over video call who demand financial statements and emergency escrow transfers.","protection":"Courier companies like FedEx and DHL never transfer customer calls to police or narcotics agencies. Police never interrogate suspects or demand security deposits over video calls. Hang up, block, and dial 1930.","sourceName":"I4C & Narcotics Control Bureau (NCB) Advisory","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-11-04","actionLinkText":"National Cyber Helpline: 1930 ↗","actionUrl":"https://cybercrime.gov.in/"},{"id":"deepfake-political-welfare-ads","category":"banking","platform":"Instagram / Facebook / YouTube","tag":"Deepfake Welfare Ads","severity":"high","title":"The Deepfake Government Welfare & PM Yojana Ads","scam":"Sponsored video ads on Facebook, Instagram, or YouTube feature hyper-realistic AI deepfakes of government leaders and ministers announcing instant \"₹5,000 festive relief funds\" or \"free smartphone subsidies\". Clicking the link directs you to an unauthorized portal that triggers a UPI Collect Request (which debits your account) or installs banking malware.","protection":"Government welfare schemes are never disbursed via social media ads or UPI collect requests. Entering your UPI PIN always DEDUCTS money from your bank account. Verify official government schemes only on .gov.in portals.","sourceName":"I4C National Cybercrime Threat Analytics Unit (NCTAU)","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-11-04","actionLinkText":"I4C Cybercrime Advisory ↗","actionUrl":"https://cybercrime.gov.in/"},{"id":"customer-care-screen-share-hijack","category":"banking","platform":"Google Search / WhatsApp Video","tag":"Screen Share Refund","severity":"critical","title":"The Fake Google Customer Care & Screen Share Hijack","scam":"When searching for Swiggy, Zomato, IRCTC, or bank customer support on Google, users dial a fake number placed by scammers. The fake agent says: \"To process your ₹200 refund, share your screen on WhatsApp video call or install AnyDesk/QuickSupport.\" Once screen sharing starts, the scammer initiates a bank transfer and reads the incoming OTP directly off the live screen.","protection":"Never search for customer service phone numbers on Google Search; always use the in-app help section. Never share your mobile screen or accept screen-sharing requests during a customer support call.","sourceName":"Reserve Bank of India (RBI Sachet Advisory)","sourceUrl":"https://sachet.rbi.org.in/","verifiedDate":"2026-11-04","actionLinkText":"RBI Sachet Portal ↗","actionUrl":"https://sachet.rbi.org.in/"},{"id":"corporate-malware-zip-mca","category":"apk-malware","platform":"Email / WhatsApp","tag":"Corporate Infostealer","severity":"critical","title":"The Corporate Tax & MCA Notice Archive Trap (Infostealer ZIP)","scam":"Accountants, CAs, company directors, and finance personnel receive an urgent email or WhatsApp: \"Statutory notice regarding pending tax filing discrepancies / MCA audit. Attached: Statement_of_Account.zip or MCA_Notice.zip.\" Extracting the file runs a disguised Windows executable that quietly exfiltrates corporate net banking tokens, DSC credentials, and browser passwords.","protection":"Tax authorities and the Ministry of Corporate Affairs (MCA) never send audit notices as compressed .zip or .rar files via WhatsApp or personal email. Check all corporate filings directly on the official mca.gov.in portal.","sourceName":"I4C Corporate Threat Advisory & CERT-In","sourceUrl":"https://www.cert-in.org.in/","verifiedDate":"2026-11-04","actionLinkText":"CERT-In Advisory Desk ↗","actionUrl":"https://www.cert-in.org.in/"},{"id":"pensioner-jeevan-pramaan-kyc","category":"banking","platform":"Phone Call / WhatsApp","tag":"Pensioner KYC Fraud","severity":"high","title":"The Pensioner \"Digital Life Certificate / Jeevan Pramaan\" KYC Scam","scam":"Fraudsters call senior citizens posing as bank or pension disbursement officers: \"Your annual digital life certificate (Jeevan Pramaan) is expiring today. Your pension will stop next month unless verified right now.\" The caller asks for Aadhaar OTPs or asks them to install a remote-access app to \"scan their face\", instantly draining the pensioner's life savings.","protection":"Pension authorities never call to ask for Aadhaar OTPs or banking passwords to submit Jeevan Pramaan. Senior citizens should submit life certificates only via the official Jeevan Pramaan Face App or in person at bank branches or post offices.","sourceName":"Ministry of Personnel, Public Grievances and Pensions & I4C","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-11-04","actionLinkText":"National Cyber Helpline: 1930 ↗","actionUrl":"https://cybercrime.gov.in/"},{"id":"airport-lounge-card-expiry-phishing","category":"banking","platform":"SMS / Web Clone","tag":"Lounge Pass Phishing","severity":"high","title":"The Airport Lounge & Credit Card Points Phishing Link","scam":"You receive an SMS: \"Your complimentary airport lounge access and reward points expire tonight. Re-verify your card benefits immediately: [shortened link]\". The link opens a cloned DreamFolks/bank webpage asking for card number, CVV, expiry, and OTP, allowing fraudsters to make high-value international transactions.","protection":"Banks and airport lounge operators never send SMS links threatening sudden cancellation of lounge privileges. Never enter card CVV or OTPs on links received via SMS. Check card benefits directly in your bank's official app.","sourceName":"CERT-In Financial Phishing Advisory","sourceUrl":"https://www.cert-in.org.in/","verifiedDate":"2026-11-04","actionLinkText":"CERT-In Advisory Desk ↗","actionUrl":"https://www.cert-in.org.in/"},{"id":"india-post-parcel-address-smishing","category":"transport","platform":"SMS / Web Clone","tag":"Courier Address Trap","severity":"high","title":"The Fake Courier Delivery / Incomplete Address Trap","scam":"You receive an SMS from \"India Post\" or \"Courier\": \"Your package cannot be delivered due to an incomplete house number. Update your address within 24 hours or parcel will be returned.\" The link opens an India Post cloned webpage asking for a ₹25 redelivery fee, harvesting your debit card number and OTP.","protection":"India Post never sends SMS links asking for fee payments to correct addresses. Track parcels only using the tracking number directly on the official indiapost.gov.in website.","sourceName":"India Post & PIB Fact Check","sourceUrl":"https://www.indiapost.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"Official India Post Tracking ↗","actionUrl":"https://www.indiapost.gov.in/"},{"id":"stock-market-whatsapp-ipo-group","category":"banking","platform":"WhatsApp / Fake App","tag":"Fake IPO Scheme","severity":"critical","title":"The Bogus Stock Market \"VIP Institutional IPO\" Group","scam":"You are added to a WhatsApp group named after a famous global brokerage. \"Mentors\" promise guaranteed 100% allocation in blockbuster IPOs and instruct you to trade through a customized app. The app shows massive fake profits, but when you attempt to withdraw, they demand a 20% \"tax release fee\" and freeze your account.","protection":"SEBI-registered brokerages never conduct institutional IPO bidding or accept investments via WhatsApp groups. Never deposit money into personal accounts for stock market trading.","sourceName":"Securities and Exchange Board of India (SEBI)","sourceUrl":"https://www.sebi.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"SEBI Investor Portal ↗","actionUrl":"https://www.sebi.gov.in/"}];
 let activeScamCategory = "all";
 let scamSearchQ = "";
 
@@ -8649,7 +8756,7 @@ try {
 } catch(e) {}
 
 // --- Cipherati Morning Intelligence Briefing & Newsletter Logic ---
-let BRIEFING_DATA = {"date":"2026-11-02","dateFormatted":"Nov 2, 2026","leadThreat":{"id":"live-crypto-heists-9818481674","category":"crypto-heists","severity":"critical","impactBadge":"💰 $6.3B Record Hack","title":"Binance seeks to shore up confidence after record $6.3 billion heist","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-10-29","timeAgo":"3 days ago","entities":"Crypto & Digital Assets","incident":"Key updates: FBI says North Korea stole $6 billion crypto from Binance in biggest hack ever; Binance freezes $2.54 billion in assets after potential security breach.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},"quickHits":[{"id":"live-india-bfsi-10386227470","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"India's apex bank ramps up cybersecurity scrutiny on lenders - report","sourceName":"Yahoo Finance","sourceUrl":"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQU2tDMDBuQ2ZvWWlXbUR6UE1yYk9zSXlfSzh1amFJZDlZeEZOUnU1d2NCemtzRXliMy1QNnI5TU5aWGNHejdjcld4V0dnZ0I1cTI1ZFJiZ0MwRHFFUG9qN0dSRXIyb1puOVVwOVRxVzliR1BKQ0NydWZMc1RNRnhyZFFfOGlHVVBH?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Yahoo Finance","date":"2026-11-02","timeAgo":"1 hour ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Yahoo Finance."},{"id":"live-india-bfsi-3692631155","category":"india-bfsi","severity":"high","impactBadge":"🚨 Financial Fraud Probe","title":"Spandana Sphoorty reports ₹7.8 crore cyber fraud involving 82 accounts","sourceName":"Business Standard","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxOR1dFMHk1QjZmTWxlcy1nZUM1a2g4RHA5VVptcWk2d0NQZE5wOE1rYnRhNHVJcjh2cktCRjR2ZlhWQmp3SDdkQXk5UTBPVWlmQm5MTDc4Z3gyTXNjVzZlVnVBcldOOEtMc29sdXdqMDZTV3NxcDFLWEo2X1dLcTc0aGRjODBwSHltNG05X19OX1VvWEJFVkNaZU80aE1USWRYT1E1SXlXa1FRa1p3d1EySl9Ud3dEYUVzbWxPbzVSUUM2a1p2M2tV0gHMAUFVX3lxTE5zdFJvekdhTEhicHBFR2NOVjAtNjU0OVhBNy1Gam0tR29oWFE3R2Q5Vm56YzdqN0p2Tk80aXdQQXRtR3ZBODJOSFhpZDh4MUd3aHJUNXNBejZhZ0d3WGRwRG5CbThqQXdDcUhYSWw0VElicURsQmxHVS1rY3VoUzc5bnFMNVIxVFM5NGpCUDRGY25zZ1JYMXRLRENlbDVWbWY1QXBhQUdDRTBPSjd5a0U0NXkxYkhOSDJMamVhQk1VX01VQ1Nqd3hWTGNJaw?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Business Standard","date":"2026-11-02","timeAgo":"5 hours ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Business Standard."},{"id":"live-india-bfsi-8865700446","category":"india-bfsi","severity":"high","impactBadge":"🚨 Financial Fraud Probe","title":"2.10 Crore Cyber Fraud: Ambani, Tendulkar's Names Used to Lure Pune Senior Citizen, Then 'Digital Arrest' Trap","sourceName":"The 420.in","sourceUrl":"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWnBMTDNXMWRtYmMxYmRSdGdUOVd1WktQUS0tWFV2WEJISThuMndQcGlQRkkyRGRtSGJVLXZKcTBDZlBGQVNvaEFaVEQteWV6RU1rVUNZenRmSGpDVTFIQ214RTdSX2RrWHdjRlVGOTNhVmRSLXBVdlp2OVRiZW1JZE5GQjdoUDNxX2wwbjMta1dXRE1wWUxfeG0zbE5TbkFyaUJSNkE3aWFfZ3BHMXB1US1MejJ5UGJzeV8xQ3N2dmc?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"The 420.in","date":"2026-11-01","timeAgo":"23 hours ago","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on The 420.in."}],"topScam":{"id":"digital-arrest-video-call","category":"messaging","platform":"WhatsApp / Video Call","tag":"Digital Arrest","severity":"critical","title":"The \"Digital Arrest\" Police Video Call","scam":"A caller in uniform claims your Aadhaar or passport was found in an illegal parcel or money laundering probe. They place you on a fraudulent WhatsApp video call or custom video link with a backdrop resembling a police station, CBI, or ED cyber cell, declaring you are under 'Digital Arrest' and coercing you to transfer savings into a fake 'RBI verification escrow'.","protection":"Indian law and law enforcement agencies have NO legal concept of 'Digital Arrest'. Police, CBI, ED, and customs NEVER conduct interrogations, trials, or arrests over video calls. Hang up immediately, block the number, and report to the National Cybercrime Portal or dial 1930.","sourceName":"I4C & PM Mann Ki Baat Cyber Alert","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"National Cyber Helpline: 1930 ↗","actionUrl":"https://cybercrime.gov.in/"},"featuredTool":{"id":331,"name":"headroom","tagline":"Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.","url":"https://docs.headroomlabs.ai/docs","emoji":null,"category":"Coding","why_it_matters":"Battle-tested in the open — 78.3K GitHub stars from real production users.","launched_at":1767815931,"score":18.728737158380532,"signals":["github:78333.0"],"rank":78333},"realityPick":{"id":21,"title":"The Shadow AI & Trade Secret Exfiltration Blindspot","category":"Security & Guardrails","symptoms":["shadow ai copy-paste","unauthorized consumer llm accounts","customer pii leak","source code training exfiltration","executive","c-suite"],"myth":"Our corporate HR policy bans public AI tools, so our trade secrets, source code, and customer data are secure.","reality":"Outright bans do not work—they create massive Shadow AI. Employees routinely paste customer PII, unreleased financial projections, and proprietary code into personal consumer web chats that train external public models.","fix":"Replace bans with an authorized enterprise AI proxy gateway featuring automated Data Loss Prevention (DLP), PII masking/redaction, comprehensive audit logs, and zero-data-retention enterprise agreements.","impact":"Unregulated employee AI usage leads to intellectual property leaks, customer PII exposure, and severe statutory fines under global data protection acts.","tools":[{"name":"Headroom","url":"https://docs.headroomlabs.ai/docs"},{"name":"TruffleHog","url":"https://github.com/trufflesecurity/trufflehog"}]}};
+let BRIEFING_DATA = {"date":"2026-11-04","dateFormatted":"Nov 4, 2026","leadThreat":{"id":"live-crypto-heists-9818481674","category":"crypto-heists","severity":"critical","impactBadge":"💰 $6.3B Record Hack","title":"Binance seeks to shore up confidence after record $6.3 billion heist","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-11-02","timeAgo":"1 day ago","entities":"Crypto & Digital Assets","incident":"Key updates: Binance sees $3.6 billion withdrawals after biggest-ever crypto hack; Binance resumes Bitcoin withdrawals after $6.3bn hack, says 95% of assets replaced.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},"quickHits":[{"id":"live-india-bfsi-342730745","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"Cybersecurity Gaps Put India's Refrigeration and Cold-Storage Networks at Risk","sourceName":"CXO Digitalpulse","sourceUrl":"https://news.google.com/rss/articles/CBMirwFBVV95cUxNdkFKWXoxRlItaGFOQTh3OXRXbThwU2RoTE5hQ1o5YklVMWY3T0tiUEd5MGJhQnFCUk5wVFRqNjhKQ2ZhRDU5UmxvMkN2d191bUpYR2ZRVHhJUXNjZkdwamluZ3NROUQ4enNKLW80Z2ZFN1ZpVU1MYUl4Y0IySEhXaUhRaU11amhjdXdyc2dKYzd6ejczQy04Yk1oWkU4eUwwNUpWVXRtUlA2V05vckJ3?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"CXO Digitalpulse","date":"2026-11-04","timeAgo":"just now","entities":"Banking & Financial Services","incident":"","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on CXO Digitalpulse."},{"id":"live-india-bfsi-10158650343","category":"india-bfsi","severity":"high","impactBadge":"⚠️ Data Breach","title":"State Bank of India quarterly profit rises; to boost cybersecurity after breach","sourceName":"Reuters","sourceUrl":"https://news.google.com/rss/articles/CBMilwFBVV95cUxPQnFRWGMtM3JxME1pR2FXOWo4NU1Ua1VncXNLa0dqN0RORm5MbTJ2Nk9YcU04cV9mRVVOLVNFTmxrTUVhRVZ3TnhqUC13RXdMUXgzNFQ2TGsxSklSYUp1c3dWMDhpVFJoYnh4NEhvVnh1YWdKTS15Z29NLU5LaEFXVFNZYzhZc01CSGh6enE0UGV1TE9tbkhN?oc=5","provenanceBadge":"🚨 Reuters Report","badgeType":"statutory","ref":"Reuters","date":"2026-11-03","timeAgo":"18 hours ago","entities":"Banking & Financial Services","incident":"Key updates: Karix Mobile denies any association with SBI data breach; SBI vows to strengthen cybersecurity after data breach.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Reuters."},{"id":"live-india-bfsi-7019765067","category":"india-bfsi","severity":"high","impactBadge":"🚨 Urgent Alert","title":"India's CERT-In secures access to test Anthropic's Mythos AI model for cybersecurity","sourceName":"Deccan Herald","sourceUrl":"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSVlLNlpvOTZFY0J6UHdLTlcwT0kyOTVHaThjUXhvejc5RnpKTEt6XzNGYzNyV1NWcUV0cnpHYWlUSmhzLU1oRFg0bHZhUDVMMkI0THk0QzdkbGVHVGMxOGN1eEVrV2tfMnhubUkyOWoxQnFJWHBZMzBEVU9FaDROWWdmckk2dlZvdnBFcnR2cDdzQk5CeTd6Z0lPSjg5RGZ5cDN1MlFWa3hFUHdGbTkwVi1aMGwxTFFPc0RNTmlENzByNWM?oc=5","provenanceBadge":"🏦 Banking & Finance","badgeType":"regulatory","ref":"Deccan Herald","date":"2026-11-03","timeAgo":"12 hours ago","entities":"Banking & Financial Services","incident":"Key updates: India's space sector gets cybersecurity boost as CERT-In, SIA-India release joint guidelines; CERT-In is now using Claude Mythos to test cybersecurity flaws, report says.","rootCause":"Verified reporting confirmed by primary news desks and security researchers.","consequence":"Read reporting on Deccan Herald."}],"topScam":{"id":"digital-arrest-video-call","category":"messaging","platform":"WhatsApp / Video Call","tag":"Digital Arrest","severity":"critical","title":"The \"Digital Arrest\" Police Video Call","scam":"A caller in uniform claims your Aadhaar or passport was found in an illegal parcel or money laundering probe. They place you on a fraudulent WhatsApp video call or custom video link with a backdrop resembling a police station, CBI, or ED cyber cell, declaring you are under 'Digital Arrest' and coercing you to transfer savings into a fake 'RBI verification escrow'.","protection":"Indian law and law enforcement agencies have NO legal concept of 'Digital Arrest'. Police, CBI, ED, and customs NEVER conduct interrogations, trials, or arrests over video calls. Hang up immediately, block the number, and report to the National Cybercrime Portal or dial 1930.","sourceName":"I4C & PM Mann Ki Baat Cyber Alert","sourceUrl":"https://cybercrime.gov.in/","verifiedDate":"2026-10-30","actionLinkText":"National Cyber Helpline: 1930 ↗","actionUrl":"https://cybercrime.gov.in/"},"featuredTool":{"id":189,"name":"Qdrant","tagline":"Vector similarity search engine and vector database written in Rust with extended payload filtering.","url":"https://github.com/qdrant/qdrant","emoji":"🔎","category":"Research & Data","why_it_matters":"Ultra-fast production vector database powering enterprise semantic search and recommendation systems.","launched_at":1793019222,"score":896.4379387048182,"signals":["github:22000.0"],"rank":35333},"realityPick":{"id":1,"title":"The Context Window Lie","category":"Retrieval & Context","symptoms":["lost in middle","needle in haystack failure","long context hallucination","massive prompt cost","slow ttft"],"myth":"1-million-token context window! Dump your entire company wiki or codebase into one prompt!","reality":"Loss-in-the-middle degradation causes LLMs to ignore needle-in-the-haystack facts once context exceeds 32K tokens. High Time-To-First-Token (TTFT) and linear token costs make unindexed raw-file prompting unusable in production.","fix":"Never dump raw unindexed documents into an LLM prompt. Use prompt compression to discard low-entropy tokens and targeted cross-encoder rerankers on small, precise retrieved chunks.","impact":"Legal queries hallucinate terms found in middle sections; enterprise support bots cost 20x more while delivering worse answers.","tools":[{"name":"LLMLingua","url":"https://github.com/microsoft/LLMLingua"},{"name":"FlashRank","url":"https://github.com/PrithivirajDamodaran/FlashRank"},{"name":"Qdrant","url":"https://github.com/qdrant/qdrant"}]}};
 
 async function loadBriefingData() {
   if (BRIEFING_DATA) return BRIEFING_DATA;
