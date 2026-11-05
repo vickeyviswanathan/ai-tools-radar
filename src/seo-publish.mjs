@@ -195,7 +195,7 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
 
   const lastmod = updatedAt.slice(0, 10);
   writeFileSync("./public/sitemap.xml",
-    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${SITE_URL}</loc><lastmod>${lastmod}</lastmod><changefreq>hourly</changefreq></url>\n  <url><loc>${SITE_URL}llms.txt</loc><lastmod>${lastmod}</lastmod><changefreq>daily</changefreq></url>\n</urlset>\n`,
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${SITE_URL}</loc><lastmod>${lastmod}</lastmod><changefreq>hourly</changefreq></url>\n  <url><loc>${SITE_URL}newsletter/today.html</loc><lastmod>${lastmod}</lastmod><changefreq>daily</changefreq></url>\n  <url><loc>${SITE_URL}llms.txt</loc><lastmod>${lastmod}</lastmod><changefreq>daily</changefreq></url>\n</urlset>\n`,
     "utf8");
 
   // Modern robots.txt explicitly welcoming all major search and generative AI engines
