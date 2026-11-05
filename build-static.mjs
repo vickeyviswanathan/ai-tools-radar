@@ -200,7 +200,7 @@ async function build() {
   };
   writeFileSync("./public/data/scams.json", JSON.stringify(scamsOutput, null, 2), "utf-8");
 
-  syncToolCountsInHtml(output.tools);
+  syncCountsInHtml(output.tools, REALITIES_DATA, liveThreats, sanitizedScams);
   updateThreatsInHtml(threatCategories, liveThreats);
   updateScamsInHtml(sanitizedScams);
   updateRealitiesInHtml(REALITIES_DATA);
@@ -413,11 +413,14 @@ function updateBriefingInHtml(briefing) {
 
 build().catch(console.error);
 
-function syncToolCountsInHtml(tools) {
+function syncCountsInHtml(tools, realities, threats, scams) {
   const indexPath = "./public/index.html";
   let html = readFileSync(indexPath, "utf8");
-  html = html.replace(/<strong id="stat-tools">\d+<\/strong>/, `<strong id="stat-tools">${tools.length}</strong>`);
+  html = html.replace(/<div class="hero-metric-num" id="stat-tools">\d+<\/div>/, `<div class="hero-metric-num" id="stat-tools">${tools.length}</div>`);
   html = html.replace(/<span class="tab-count" id="tab-tools-count">\d*<\/span>/, `<span class="tab-count" id="tab-tools-count">${tools.length}</span>`);
+  html = html.replace(/<div class="hero-metric-num" id="stat-realities">\d+<\/div>/, `<div class="hero-metric-num" id="stat-realities">${realities.length}</div>`);
+  html = html.replace(/<div class="hero-metric-num" id="stat-news">\d+<\/div>/, `<div class="hero-metric-num" id="stat-news">${threats.length}</div>`);
+  html = html.replace(/<div class="hero-metric-num" id="stat-scams">\d+<\/div>/, `<div class="hero-metric-num" id="stat-scams">${scams.length}</div>`);
   writeFileSync(indexPath, html, "utf8");
 }
 

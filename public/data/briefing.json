@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-04",
-  "dateFormatted": "Nov 4, 2026",
+  "date": "2026-11-05",
+  "dateFormatted": "Nov 5, 2026",
   "leadThreat": {
     "id": "live-crypto-heists-9818481674",
     "category": "crypto-heists",
@@ -12,67 +12,67 @@
     "provenanceBadge": "🚨 Reuters Report",
     "badgeType": "statutory",
     "ref": "Reuters",
-    "date": "2026-11-02",
-    "timeAgo": "1 day ago",
+    "date": "2026-10-30",
+    "timeAgo": "5 days ago",
     "entities": "Crypto & Digital Assets",
-    "incident": "Key updates: Binance sees $3.6 billion withdrawals after biggest-ever crypto hack; Binance resumes Bitcoin withdrawals after $6.3bn hack, says 95% of assets replaced.",
+    "incident": "Key updates: Binance, SBI cyberattacks highlight financial sector vulnerabilities; North Korea fires missiles hours after rejecting US accusations over Binance hack.",
     "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
     "consequence": "Read reporting on Reuters."
   },
   "quickHits": [
     {
-      "id": "live-india-bfsi-342730745",
+      "id": "live-india-bfsi-15615494167",
       "category": "india-bfsi",
       "severity": "high",
       "impactBadge": "🚨 Urgent Alert",
-      "title": "Cybersecurity Gaps Put India's Refrigeration and Cold-Storage Networks at Risk",
-      "sourceName": "CXO Digitalpulse",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdkFKWXoxRlItaGFOQTh3OXRXbThwU2RoTE5hQ1o5YklVMWY3T0tiUEd5MGJhQnFCUk5wVFRqNjhKQ2ZhRDU5UmxvMkN2d191bUpYR2ZRVHhJUXNjZkdwamluZ3NROUQ4enNKLW80Z2ZFN1ZpVU1MYUl4Y0IySEhXaUhRaU11amhjdXdyc2dKYzd6ejczQy04Yk1oWkU4eUwwNUpWVXRtUlA2V05vckJ3?oc=5",
+      "title": "TD SYNNEX partners with SISA to expand cybersecurity offerings in India",
+      "sourceName": "TradingView",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNY3cwZUM1VGZNRFY5Xzc3S1ZrdWhsTU5FSnQ5UDJqUzkwaG95Zm9ISWdlZlh1b2tqaHFLU1E5cG02bWM1ak1uaFlrR2h5NlpheW96NlJFejBBanVQNTdsZ2wwY19LZEhUTE51aEFpTThEN1JEZk5yQldXd2hRLXVUOFNPczJpY0h2UDAxQi1kVXpxSVpFUF9pSUlmSkVQUXp2bmhuSjZQWnBJd0V5bG9HckJyeWJyenFHNTJCTXNYRXRsUEVvT3JqNEVyZEx2dkE?oc=5",
       "provenanceBadge": "🏦 Banking & Finance",
       "badgeType": "regulatory",
-      "ref": "CXO Digitalpulse",
-      "date": "2026-11-04",
-      "timeAgo": "just now",
+      "ref": "TradingView",
+      "date": "2026-11-05",
+      "timeAgo": "8 hours ago",
       "entities": "Banking & Financial Services",
       "incident": "",
       "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
-      "consequence": "Read reporting on CXO Digitalpulse."
+      "consequence": "Read reporting on TradingView."
     },
     {
-      "id": "live-india-bfsi-10158650343",
-      "category": "india-bfsi",
-      "severity": "high",
-      "impactBadge": "⚠️ Data Breach",
-      "title": "State Bank of India quarterly profit rises; to boost cybersecurity after breach",
-      "sourceName": "Reuters",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPQnFRWGMtM3JxME1pR2FXOWo4NU1Ua1VncXNLa0dqN0RORm5MbTJ2Nk9YcU04cV9mRVVOLVNFTmxrTUVhRVZ3TnhqUC13RXdMUXgzNFQ2TGsxSklSYUp1c3dWMDhpVFJoYnh4NEhvVnh1YWdKTS15Z29NLU5LaEFXVFNZYzhZc01CSGh6enE0UGV1TE9tbkhN?oc=5",
-      "provenanceBadge": "🚨 Reuters Report",
-      "badgeType": "statutory",
-      "ref": "Reuters",
-      "date": "2026-11-03",
-      "timeAgo": "18 hours ago",
-      "entities": "Banking & Financial Services",
-      "incident": "Key updates: Karix Mobile denies any association with SBI data breach; SBI vows to strengthen cybersecurity after data breach.",
-      "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
-      "consequence": "Read reporting on Reuters."
-    },
-    {
-      "id": "live-india-bfsi-7019765067",
+      "id": "live-india-bfsi-1433636282",
       "category": "india-bfsi",
       "severity": "high",
       "impactBadge": "🚨 Urgent Alert",
-      "title": "India's CERT-In secures access to test Anthropic's Mythos AI model for cybersecurity",
-      "sourceName": "Deccan Herald",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSVlLNlpvOTZFY0J6UHdLTlcwT0kyOTVHaThjUXhvejc5RnpKTEt6XzNGYzNyV1NWcUV0cnpHYWlUSmhzLU1oRFg0bHZhUDVMMkI0THk0QzdkbGVHVGMxOGN1eEVrV2tfMnhubUkyOWoxQnFJWHBZMzBEVU9FaDROWWdmckk2dlZvdnBFcnR2cDdzQk5CeTd6Z0lPSjg5RGZ5cDN1MlFWa3hFUHdGbTkwVi1aMGwxTFFPc0RNTmlENzByNWM?oc=5",
+      "title": "India cybersecurity agency flags AI-assisted attacks on crypto exchanges",
+      "sourceName": "Traders Union",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeUNseUNXRDRXT2pkTDBBcFJDRTJkTGRNaW9ERHJOV19TTTk4MF95d2owNml0S1pWbUJ6TW5Kekx5UmF0cUpEX2EyWmw1RHdHVS1ZU1dYM1hVT0FtLWU5WDVfcTZrZEk2UHFBU3hKX0Z6eXU3dlUwbEZ3ai1HOWc2WXRnOTByXzdGQzNTSmF1Q3JmTTdyc2p0ag?oc=5",
       "provenanceBadge": "🏦 Banking & Finance",
       "badgeType": "regulatory",
-      "ref": "Deccan Herald",
-      "date": "2026-11-03",
-      "timeAgo": "12 hours ago",
+      "ref": "Traders Union",
+      "date": "2026-11-05",
+      "timeAgo": "11 hours ago",
       "entities": "Banking & Financial Services",
-      "incident": "Key updates: India's space sector gets cybersecurity boost as CERT-In, SIA-India release joint guidelines; CERT-In is now using Claude Mythos to test cybersecurity flaws, report says.",
+      "incident": "Key updates: India's Cybersecurity Agency Warns of AI Hacker 'Crafty Falcon' Targeting Crypto Exchange Payment APIs.",
       "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
-      "consequence": "Read reporting on Deccan Herald."
+      "consequence": "Read reporting on Traders Union."
+    },
+    {
+      "id": "live-india-bfsi-9922780782",
+      "category": "india-bfsi",
+      "severity": "high",
+      "impactBadge": "🚨 Urgent Alert",
+      "title": "Cyber Hygiene in India: Growing Digital Security Risks and Solutions",
+      "sourceName": "Vajiram &amp; Ravi",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcGRCbTViTUhiRkxsaGR6M25JQU4zOWhPMmVqVk5LRW9kTHFsUjhtbGRxajhpTEJMRkI0eFU4Q01UOHV0dl8zWVAyN1ZZMVhMOEFYNjBxckJIMmVwUnZ4MzcyYS1FeFUwRlRIVDdYNHlPZkdLQS1GUUVRcTRhdzAtbXM4UWFzZWh6Z3NmeHVjQ3RCQUhoVzRENTBQV2pIQVVPeG9VeTZNYTZGLWFmd0h0Mw?oc=5",
+      "provenanceBadge": "🏦 Banking & Finance",
+      "badgeType": "regulatory",
+      "ref": "Vajiram &amp; Ravi",
+      "date": "2026-11-04",
+      "timeAgo": "1 day ago",
+      "entities": "Banking & Financial Services",
+      "incident": "",
+      "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
+      "consequence": "Read reporting on Vajiram &amp; Ravi."
     }
   ],
   "topScam": {
@@ -91,47 +91,42 @@
     "actionUrl": "https://cybercrime.gov.in/"
   },
   "featuredTool": {
-    "id": 189,
-    "name": "Qdrant",
-    "tagline": "Vector similarity search engine and vector database written in Rust with extended payload filtering.",
-    "url": "https://github.com/qdrant/qdrant",
-    "emoji": "🔎",
-    "category": "Research & Data",
-    "why_it_matters": "Ultra-fast production vector database powering enterprise semantic search and recommendation systems.",
-    "launched_at": 1793019222,
-    "score": 896.4379387048182,
+    "id": 331,
+    "name": "headroom",
+    "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+    "url": "https://docs.headroomlabs.ai/docs",
+    "emoji": null,
+    "category": "Coding",
+    "why_it_matters": "Battle-tested in the open — 78.3K GitHub stars from real production users.",
+    "launched_at": 1767815931,
+    "score": 18.728737158380532,
     "signals": [
-      "github:22000.0"
+      "github:78333.0"
     ],
-    "rank": 35333
+    "rank": 78333
   },
   "realityPick": {
-    "id": 1,
-    "title": "The Context Window Lie",
-    "category": "Retrieval & Context",
+    "id": 2,
+    "title": "The Token Cost Bleed",
+    "category": "Cost & Tokens",
     "symptoms": [
-      "lost in middle",
-      "needle in haystack failure",
-      "long context hallucination",
-      "massive prompt cost",
-      "slow ttft"
+      "runaway api bill",
+      "token cost shock",
+      "verbose logs waste",
+      "context window filled by stacktrace"
     ],
-    "myth": "1-million-token context window! Dump your entire company wiki or codebase into one prompt!",
-    "reality": "Loss-in-the-middle degradation causes LLMs to ignore needle-in-the-haystack facts once context exceeds 32K tokens. High Time-To-First-Token (TTFT) and linear token costs make unindexed raw-file prompting unusable in production.",
-    "fix": "Never dump raw unindexed documents into an LLM prompt. Use prompt compression to discard low-entropy tokens and targeted cross-encoder rerankers on small, precise retrieved chunks.",
-    "impact": "Legal queries hallucinate terms found in middle sections; enterprise support bots cost 20x more while delivering worse answers.",
+    "myth": "Per-token prices are dropping 10x every year — don't worry about cost optimization!",
+    "reality": "Agentic tool runs, compiler output dumps, and large git diffs consume millions of tokens in minutes. Automated CI/CD agents burn budgets on whitespace and noisy terminal logs.",
+    "fix": "Strip stack traces, memory addresses, and repetitive logs before tokenization using specialized CLI proxies (RTK) and pre-LLM output compressors (headroom).",
+    "impact": "A rogue coding agent loops overnight on a build failure and consumes ₹1,50,000 in API tokens on a single pull request.",
     "tools": [
       {
-        "name": "LLMLingua",
-        "url": "https://github.com/microsoft/LLMLingua"
+        "name": "RTK (Rust Token Killer)",
+        "url": "https://github.com/rtk-ai/rtk"
       },
       {
-        "name": "FlashRank",
-        "url": "https://github.com/PrithivirajDamodaran/FlashRank"
-      },
-      {
-        "name": "Qdrant",
-        "url": "https://github.com/qdrant/qdrant"
+        "name": "headroom",
+        "url": "https://docs.headroomlabs.ai/docs"
       }
     ]
   }

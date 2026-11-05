@@ -55,7 +55,10 @@ const JUNK_NOISE_KEYWORDS = [
   // Traditional non-cyber financial / white-collar crime & forex noise
   "ed attaches", "attaches properties", "attached properties", "property attached",
   "pmla", "money laundering", "loan fraud", "bank loan", "chandra proteco",
-  "dollar pulls back", "ahead of us midterms", "forex", "stock market", "shares dip", "shares surge"
+  "dollar pulls back", "ahead of us midterms", "forex", "stock market", "shares dip", "shares surge",
+  // College seminars / career guidance / student workshops
+  "career guidance", "students briefed", "briefed on cybersecurity", "organizes cybersecurity",
+  "polytechnic", "college organizes", "campus drive", "workshop on cybersecurity", "webinar on"
 ];
 
 function isPaywalled(url, source) {

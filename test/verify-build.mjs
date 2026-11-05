@@ -147,7 +147,8 @@ for (const threat of threatsData.threats) {
   if (tLow.includes("botox") || tLow.includes("medicare") || tLow.includes("cosmetic surgery") ||
       tLow.includes("ed attaches") || tLow.includes("attaches properties") || tLow.includes("car sales") ||
       tLow.includes("dollar pulls back") || tLow.includes("loan fraud") || tLow.includes("chandra proteco") ||
-      tLow.includes("warming") || tLow.includes("glacier") || tLow.includes("ice sheet")) {
+      tLow.includes("warming") || tLow.includes("glacier") || tLow.includes("ice sheet") ||
+      tLow.includes("career guidance") || tLow.includes("students briefed") || tLow.includes("polytechnic")) {
     nonCyberStories++;
   }
 
