@@ -166,6 +166,19 @@ assert(nonCyberStories === 0, `Zero non-cyber medical/general crimes in news fee
 assert(invalidBfsiStories === 0, `All stories in India BFSI category have verified Indian financial/regulatory context`);
 assert(lazyCopiedSummaries === 0, `Zero news stories have lazy summaries identical to headline`);
 
+// 7b. Verify News is Strictly Sorted Reverse-Chronological (Newest First)
+let outOfOrderNewsCount = 0;
+for (let i = 0; i < threatsData.threats.length - 1; i++) {
+  const current = threatsData.threats[i];
+  const next = threatsData.threats[i + 1];
+  const timeCurrent = current.timestamp || new Date(current.pubDate || current.date || 0).getTime();
+  const timeNext = next.timestamp || new Date(next.pubDate || next.date || 0).getTime();
+  if (timeNext > timeCurrent) {
+    outOfOrderNewsCount++;
+  }
+}
+assert(outOfOrderNewsCount === 0, `Cybersecurity news is strictly ordered newest first (${threatsData.threats.length} items checked)`);
+
 // 8. Verify App Starts on Homepage (not AI Tools)
 assert(indexHtml.includes('let currentView = "home";'), `Default view is initialized to 'home'`);
 assert(indexHtml.includes('else if (hash === "#home" || !hash || hash === "#") {\n    switchView("home");'), `Default fallback route opens 'home'`);

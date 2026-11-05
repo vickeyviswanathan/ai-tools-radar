@@ -490,6 +490,8 @@ export async function getLiveCyberRss() {
                  category === "crypto-heists" ? "onchain" : "statutory",
       ref: item.source,
       date: formatDate(item.pubDate),
+      pubDate: item.pubDate,
+      timestamp: new Date(item.pubDate).getTime() || 0,
       timeAgo: timeAgo(item.pubDate),
       entities: category === "india-bfsi" ? "Banking & Financial Services" :
                 category === "crypto-heists" ? "Crypto & Digital Assets" :
@@ -500,8 +502,12 @@ export async function getLiveCyberRss() {
     });
   }
 
-  // Sort by date newest first
-  allArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+  // Sort by date newest first (using high-resolution timestamp if available)
+  allArticles.sort((a, b) => {
+    const tA = a.timestamp || new Date(a.pubDate || a.date || 0).getTime();
+    const tB = b.timestamp || new Date(b.pubDate || b.date || 0).getTime();
+    return tB - tA;
+  });
 
   // Cap at top 6 distinct master incident cards per category
   const indiaSelected = allArticles.filter(a => a.category === "india-bfsi").slice(0, 6);
@@ -536,7 +542,13 @@ export async function getLiveCyberRss() {
   const indiaFinal = verifiedThreats.filter(a => a.category === "india-bfsi");
   const cryptoFinal = verifiedThreats.filter(a => a.category === "crypto-heists");
   const globalFinal = verifiedThreats.filter(a => a.category === "global-ransomware");
-  const finalThreats = [...indiaFinal, ...cryptoFinal, ...globalFinal];
+
+  // Sort globally newest-first so the latest breaking news is always at the top
+  const finalThreats = [...verifiedThreats].sort((a, b) => {
+    const tA = a.timestamp || new Date(a.pubDate || a.date || 0).getTime();
+    const tB = b.timestamp || new Date(b.pubDate || b.date || 0).getTime();
+    return tB - tA;
+  });
 
   const categories = [
     { id: "all", label: "🔥 All Cybersecurity News", count: finalThreats.length },

@@ -219,6 +219,13 @@ function updateThreatsInHtml(categories, threats) {
   const indexPath = "./public/index.html";
   let html = readFileSync(indexPath, "utf8");
 
+  // Strictly sort reverse-chronological (newest first)
+  const sortedThreats = [...(threats || [])].sort((a, b) => {
+    const tA = a.timestamp || new Date(a.pubDate || a.date || 0).getTime();
+    const tB = b.timestamp || new Date(b.pubDate || b.date || 0).getTime();
+    return tB - tA;
+  });
+
   const esc = (s) => String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   function generateCardsHtml(items) {
@@ -271,11 +278,11 @@ ${incidentHtml}
     }).join("\n\n");
   }
 
-  html = html.replace(/<span class="tab-count" id="tab-threats-count">\d+<\/span>/, `<span class="tab-count" id="tab-threats-count">${threats.length}</span>`);
-  html = html.replace(/<span class="side-nav-pill" id="side-threats-count">\d+<\/span>/, `<span class="side-nav-pill" id="side-threats-count">${threats.length}</span>`);
-  html = html.replace(/<div class="hero-metric-num" id="stat-news">\d+<\/div>/, `<div class="hero-metric-num" id="stat-news">${threats.length}</div>`);
-  html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${threats.length} verified news stories</span>`);
-  html = html.replace(/let THREATS_DATA = \[[\s\S]*?\];/, `let THREATS_DATA = ${JSON.stringify(threats)};`);
+  html = html.replace(/<span class="tab-count" id="tab-threats-count">\d+<\/span>/, `<span class="tab-count" id="tab-threats-count">${sortedThreats.length}</span>`);
+  html = html.replace(/<span class="side-nav-pill" id="side-threats-count">\d+<\/span>/, `<span class="side-nav-pill" id="side-threats-count">${sortedThreats.length}</span>`);
+  html = html.replace(/<div class="hero-metric-num" id="stat-news">\d+<\/div>/, `<div class="hero-metric-num" id="stat-news">${sortedThreats.length}</div>`);
+  html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${sortedThreats.length} verified news stories</span>`);
+  html = html.replace(/let THREATS_DATA = \[[\s\S]*?\];/, `let THREATS_DATA = ${JSON.stringify(sortedThreats)};`);
 
   if (categories && categories.length) {
     const subtabsHtml = categories.map((cat, idx) => {
@@ -289,8 +296,8 @@ ${incidentHtml}
   html = html.replace(/Verified Global & Indian News Wires/g, "Verified Global & Indian News Sources");
 
   const heroNewsRegex = /<div class="hero-news-list" id="hero-live-news-list">[\s\S]*?<\/div>\s*<\/div>\s*<div class="hero-news-footer">/;
-  if (heroNewsRegex.test(html) && threats.length) {
-    const picked = threats.slice(0, 4);
+  if (heroNewsRegex.test(html) && sortedThreats.length) {
+    const picked = sortedThreats.slice(0, 4);
     const heroItemsHtml = picked.map(item => {
       const rawTag = (item.sourceName || item.impactBadge || "News").replace(/\.com$/i, "").trim();
       const shortTag = rawTag.length > 16 ? rawTag.slice(0, 15) + "…" : rawTag;
@@ -312,7 +319,7 @@ ${incidentHtml}
     if (containerClosingDiv > startIdx) {
       const beforeContainer = html.slice(0, startIdx + containerStartTag.length);
       const afterContainer = html.slice(containerClosingDiv);
-      const newCardsHtml = "\n" + generateCardsHtml(threats) + "\n    ";
+      const newCardsHtml = "\n" + generateCardsHtml(sortedThreats) + "\n    ";
       html = beforeContainer + newCardsHtml + afterContainer;
     }
   }

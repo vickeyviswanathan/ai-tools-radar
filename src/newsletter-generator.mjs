@@ -28,7 +28,11 @@ export function generateDailyBriefing() {
   // 1. Cybersecurity News: Pick top incident as Lead, next 2-3 as Quick Hits
   const sortedThreats = [...validThreats].sort((a, b) => {
     const sevOrder = { critical: 3, high: 2, medium: 1 };
-    return (sevOrder[b.severity] || 0) - (sevOrder[a.severity] || 0);
+    const diffSev = (sevOrder[b.severity] || 0) - (sevOrder[a.severity] || 0);
+    if (diffSev !== 0) return diffSev;
+    const tA = a.timestamp || new Date(a.pubDate || a.date || 0).getTime();
+    const tB = b.timestamp || new Date(b.pubDate || b.date || 0).getTime();
+    return tB - tA;
   });
 
   const leadThreat = sortedThreats[0] || {
