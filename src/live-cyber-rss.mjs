@@ -349,7 +349,7 @@ export async function getLiveCyberRss() {
     ...indiaItems.map(i => {
       const srcL = (i.source || "").toLowerCase();
       const titleL = (i.title || "").toLowerCase();
-      const isIndianContext = /\b(india|indian|rbi|sebi|cbi|cert-in|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|aadhaar|pan|crore|lakh|delhi police|mumbai police|cyber cell|digital arrest|nbfc|sc seeks|supreme court)\b/i.test(titleL);
+      const isIndianContext = /\b(india|indian|rbi|sebi|cbi|ed|cert-in|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|aadhaar|pan|delhi police|mumbai police|cyber cell|digital arrest|nbfc|sc seeks|supreme court|enforcement directorate|tamil nadu|bengaluru|bangalore|hyderabad|chennai|pune|kolkata|kerala|noida|gurugram)\b|(?:\d+\s*)?(?:crore|lakh|cr)\b|\brs\.?\s*\d+/i.test(titleL);
       const isForeign = !isIndianContext || srcL === "upi" || srcL.includes("united press") || srcL.includes("chosun") || srcL.includes("ghana") || srcL.includes("lawfuel") || titleL.includes("korean") || titleL.includes("calif") || titleL.includes("medicare") || titleL.includes("ghana") || titleL.includes("mtn") || titleL.includes("dhs") || titleL.includes("homeland security") || titleL.includes("pentagon") || titleL.includes("trump");
       const normalizedSource = (srcL === "upi" || srcL.includes("united press")) ? "United Press International" : i.source;
       return { ...i, source: normalizedSource, defaultCategory: isForeign ? "global-ransomware" : "india-bfsi" };

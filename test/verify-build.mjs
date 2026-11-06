@@ -153,7 +153,7 @@ for (const threat of threatsData.threats) {
   }
 
   if (threat.category === "india-bfsi") {
-    const isIndian = /\b(india|indian|rbi|sebi|cbi|cert-in|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|aadhaar|pan|crore|lakh|delhi police|mumbai police|cyber cell|digital arrest|nbfc|sc seeks|supreme court)\b/i.test(tLow);
+    const isIndian = /\b(india|indian|rbi|sebi|cbi|ed|cert-in|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|aadhaar|pan|delhi police|mumbai police|cyber cell|digital arrest|nbfc|sc seeks|supreme court|enforcement directorate|tamil nadu|bengaluru|bangalore|hyderabad|chennai|pune|kolkata|kerala|noida|gurugram)\b|(?:\d+\s*)?(?:crore|lakh|cr)\b|\brs\.?\s*\d+/i.test(tLow);
     if (!isIndian) invalidBfsiStories++;
   }
 
