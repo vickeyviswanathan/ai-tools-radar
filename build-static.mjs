@@ -18,8 +18,10 @@ import { canonicalKey, categorize, clip } from "./src/classify.mjs";
 function seedFeaturedLeaders() {
   const currentTs = now();
   tx((d) => {
-    // Purge non-AI legacy OSINT tool if previously seeded
+    // Purge non-AI legacy OSINT tool and clear boilerplate star-equating why_it_matters strings
     d.prepare(`DELETE FROM items WHERE url LIKE '%sherlock-project/sherlock%' OR name = 'Sherlock'`).run();
+    d.prepare(`UPDATE items SET why_it_matters = NULL WHERE why_it_matters LIKE '%production users%' OR why_it_matters LIKE '%verified GitHub stars%' OR why_it_matters LIKE '%vetted for production%'`).run();
+    d.prepare(`UPDATE items SET tagline = REPLACE(tagline, 'battle-tested', 'widely used') WHERE tagline LIKE '%battle-tested%'`).run();
     const upsertItem = d.prepare(`
       INSERT INTO items (key, name, tagline, url, emoji, category, tags, why_it_matters, launched_at, first_seen, last_seen, status)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active')
@@ -360,7 +362,7 @@ ${incidentHtml}
   html = html.replace(/<span class="tab-count" id="tab-threats-count">\d+<\/span>/, `<span class="tab-count" id="tab-threats-count">${sortedThreats.length}</span>`);
   html = html.replace(/<span class="side-nav-pill" id="side-threats-count">\d+<\/span>/, `<span class="side-nav-pill" id="side-threats-count">${sortedThreats.length}</span>`);
   html = html.replace(/<div class="hero-metric-num" id="stat-news">\d+<\/div>/, `<div class="hero-metric-num" id="stat-news">${sortedThreats.length}</div>`);
-  html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${sortedThreats.length} verified news stories</span>`);
+  html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${sortedThreats.length} news stories</span>`);
   const safeJson = (obj, space) => JSON.stringify(obj, null, space).replace(/</g, "\\u003c");
   html = html.replace(/let THREATS_DATA = \[[\s\S]*?\];/, `let THREATS_DATA = ${safeJson(sortedThreats)};`);
 
@@ -372,8 +374,8 @@ ${incidentHtml}
     html = html.replace(/<div class="threat-subtabs" id="threat-subtabs">[\s\S]*?<\/div>/, `<div class="threat-subtabs" id="threat-subtabs">\n${subtabsHtml}\n      </div>`);
   }
 
-  html = html.replace(/Verified Global &amp; Indian News Wires/g, "Verified Global &amp; Indian News Sources");
-  html = html.replace(/Verified Global & Indian News Wires/g, "Verified Global & Indian News Sources");
+  html = html.replace(/Verified Global &amp; Indian News (?:Wires|Sources)/g, "Global &amp; Indian Primary News Sources");
+  html = html.replace(/Verified Global & Indian News (?:Wires|Sources)/g, "Global & Indian Primary News Sources");
 
   const heroNewsRegex = /<div class="hero-news-list" id="hero-live-news-list">[\s\S]*?<\/div>\s*<\/div>\s*<div class="hero-news-footer">/;
   if (heroNewsRegex.test(html) && sortedThreats.length) {
@@ -412,7 +414,7 @@ function updateScamsInHtml(scams) {
   let html = readFileSync(indexPath, "utf8");
 
   html = html.replace(/<span class="tab-count" id="tab-scams-count">\d*<\/span>/, `<span class="tab-count" id="tab-scams-count">${scams.length}</span>`);
-  html = html.replace(/<span class="reality-count-pill" id="scam-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="scam-count-badge">Showing all ${scams.length} verified scam alerts</span>`);
+  html = html.replace(/<span class="reality-count-pill" id="scam-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="scam-count-badge">Showing all ${scams.length} scam alerts</span>`);
   html = html.replace(/let SCAMS_DATA = \[[\s\S]*?\];/, `let SCAMS_DATA = ${JSON.stringify(scams).replace(/</g, "\\u003c")};`);
 
   const containerStartTag = '<div class="scam-grid" id="scams-container">';
@@ -520,7 +522,7 @@ function generateLlmsTxt(tools, scams, threats = [], realities = []) {
   const SITE_URL = "https://cipherati.com/";
   
   const llmsCompact = `# Cipherati
-> Independent cybersecurity news desk, citizen scam defense playbooks (1930 helpline, digital arrest, APK malware, UPI fraud), 22 production AI engineering realities, and ${tools.length} battle-tested AI developer tools.
+> Independent cybersecurity news desk, citizen scam defense playbooks (1930 helpline, digital arrest, APK malware, UPI fraud), 22 production AI engineering realities, and ${tools.length} open-source AI developer tools.
 
 - Website: https://cipherati.com/
 - Cybersecurity News Desk: https://cipherati.com/cybersecurity-news.html
@@ -571,7 +573,7 @@ Canonical Pages:
 - https://cipherati.com/ai-tools.html
 
 ## About Cipherati
-Cipherati is an independent, practitioner-grade radar of battle-tested AI developer tools, coding agents, and production systems — combined with real-time cybersecurity news, statutory threat provenance (CERT-In, RBI, I4C, SEBI), and citizen scam defense intelligence. Zero vendor hype.
+Cipherati is an independent engineering directory of open-source AI developer tools, coding agents, and local LLM infrastructure — combined with real-time cybersecurity news, statutory threat provenance (CERT-In, RBI, I4C, SEBI), and citizen scam defense intelligence. Zero vendor hype.
 
 ---
 

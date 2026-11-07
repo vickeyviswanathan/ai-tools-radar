@@ -32,12 +32,13 @@ const PAYWALLED_SOURCE_NAMES = [
 
 const CYBER_SECURITY_KEYWORDS = [
   "hack", "hacked", "hacker", "hacking", "data breach", "security breach", "network breach",
-  "data leak", "credential leak", "database leak", "heist", "cyber",
-  "ransomware", "trojan", "malware", "phishing", "smishing", "vishing",
-  "zero-day", "vulnerability", "cve-", "cve", "exploit", "drained", "compromise",
+  "data leak", "credential leak", "database leak", "heist", "cybersecurity", "cyberattack",
+  "cybercrime", "cyber fraud", "cyber cell", "cyber threat", "cyber espionage", "cyber incident",
+  "ransomware", "trojan", "malware", "phishing", "smishing", "vishing", "spyware", "ddos",
+  "zero-day", "vulnerability", "cve-", "exploit", "drained", "compromised",
   "digital arrest", "deepfake", "e-sim", "sim swap", "infostealer",
-  "dark web", "cert-in", "cisa", "credential", "crypto heist",
-  "cyber fraud", "online fraud", "upi fraud", "apk", "botnet", "ddos"
+  "dark web", "cert-in", "cisa", "crypto heist",
+  "online fraud", "upi fraud", "apk", "botnet"
 ];
 
 const JUNK_NOISE_KEYWORDS = [
@@ -48,9 +49,10 @@ const JUNK_NOISE_KEYWORDS = [
   "botox", "medicare", "doctor", "dentist", "medical fraud", "healthcare fraud",
   "hospital billing", "clinic", "narcotics", "fentanyl", "murder", "homicide",
   "shooting", "accident", "dui", "traffic ticket",
-  // Automotive / general market & earnings false positives
-  "car sales", "vehicle sales", "auto sales", "sales breach", "growth target",
-  "quarterly sales", "q3 sales", "q4 sales", "quarterly results", "financial results",
+  // Automotive / EV / Cybertruck / general market & earnings false positives
+  "cybertruck", "tesla cyber", "cyber cab", "cybercab", "car sales", "vehicle sales", "auto sales",
+  "ev sales", "sales breach", "growth target", "deliveries", "showroom",
+  "quarterly sales", "q1 sales", "q2 sales", "q3 sales", "q4 sales", "quarterly results", "financial results",
   "semiconductor supply chain", "supply chains and", "publicly releases", "announces gemini",
   // Environmental / climate noise matching 'breach'
   "warming", "glacier", "ice sheet", "climate", "temperature", "greenhouse", "emission",
@@ -158,7 +160,73 @@ async function fetchRssFeed(url) {
 // Non-news filter: drops op-eds, PR listicles, corporate alliances, MoUs, and advice columns
 const JUNK_TITLE_REGEX = /\b(influential cisos|top cisos|ciso of the year|awards? 202\d|how to recover|can ai make|why india needs|opinion:|explainer:|sponsored|quiz:|how to avoid|here is how|things to know|key takeaways|expanding its ambitions|join forces to advance|cybersecurity 100|signs mou|signs pact|training program|expert thinks)\b|^how to\b/i;
 
-// Global Event Signature and Canonical Category Router
+function classifyNewsSector(title, category) {
+  const lower = (title || "").toLowerCase();
+  if (/\b(connected car|connected-car|vehicle|automotive|ev\b|fridge|freezer|supermarket|iot\b|industrial|smart meter|grid)\b/i.test(lower)) {
+    return "IoT, Automotive & Supply Chain";
+  }
+  if (/\b(telecom|mobile number|spam call|sim\b|esim|trai|dot\b|5g|isp\b|broadband)\b/i.test(lower)) {
+    return "Telecom & Communications";
+  }
+  if (/\b(ai\b|artificial intelligence|llm|openai|anthropic|gpt|gemini|mistral|tencent|model|deepfake)\b/i.test(lower)) {
+    return "AI & Cloud Security";
+  }
+  if (category === "crypto-heists" || /\b(crypto|bitcoin|binance|blockchain|defi|exchange|token|wallet|web3|polymarket|bithumb|mercado)\b/i.test(lower)) {
+    return "Crypto & Digital Assets";
+  }
+  if (/\b(rbi|sebi|bank|banking|nbfc|fintech|payment|upi|credit card|debit card|financial|crore|lakh|rupee|rs\b|₹)\b/i.test(lower)) {
+    return "Banking & Financial Services";
+  }
+  if (/\b(cert-in|cisa|government|ministry|supreme court|police|ed\b|cbi|eu\b|uk\b|federal|election)\b/i.test(lower)) {
+    return "Government & Regulatory Policy";
+  }
+  return "Enterprise & Critical Infrastructure";
+}
+
+function classifyNewsSeverityAndBadge(title, source, category) {
+  const lower = (title || "").toLowerCase();
+
+  // 1. Policy, Regulatory Directives, Industry Commentary, or Defensive Research -> "medium" (Advisory / Policy)
+  const isPolicyOrAnalysis = /\b(norms|framework|guideline|directive|mandates|rules|policy|urges action|becoming central|what does .* mean|rolls out|unveils|launches|access to|report finds|says uk|chief says|power play|mysteries|spam calls drop)\b/i.test(lower);
+  const isActiveBreachOrHeist = /\b(hacked|stolen|loses|heist|ransomware|zero-day|0-day|drained|arrests|arrested|seize|hit by|cyberattack|patch vulnerabilities)\b/i.test(lower);
+
+  let severity = "medium";
+  if (/\b(billion|6\.3b|6bn|record hack|largest hack|zero-day|0-day|critical vulnerability|nation-state)\b/i.test(lower)) {
+    severity = "critical";
+  } else if (isActiveBreachOrHeist && !isPolicyOrAnalysis) {
+    // Major multi-crore heists, active infrastructure attacks, or exchange hacks are HIGH; smaller local arrests are MEDIUM
+    if (/\b(lakh|three for cyber fraud|two from)\b/i.test(lower) && !/\b(100|200|400|500)\s*crore\b/i.test(lower)) {
+      severity = "medium";
+    } else {
+      severity = "high";
+    }
+  } else {
+    severity = "medium";
+  }
+
+  let impactBadge = "📰 Security Report";
+  if (lower.includes("binance") || lower.includes("6.3") || lower.includes("6bn")) {
+    impactBadge = "💰 $6.3B Exchange Hack";
+  } else if (lower.includes("freeze") || lower.includes("frozen")) {
+    impactBadge = "🔒 Asset Freeze";
+  } else if (lower.includes("rbi") || lower.includes("regulat") || lower.includes("norms") || lower.includes("framework")) {
+    impactBadge = "⚖️ Regulatory Policy";
+  } else if (lower.includes("cert-in") || lower.includes("eu urges") || lower.includes("chief")) {
+    impactBadge = "🏛️ Policy & Governance";
+  } else if (/\b(openai|anthropic|tencent|mistral|gpt)\b/i.test(lower)) {
+    impactBadge = "🤖 AI Security";
+  } else if (/\b(arrest|arrests|seize|ed\b|police)\b/i.test(lower)) {
+    impactBadge = "🚓 Law Enforcement";
+  } else if (/\b(loses|crore|fraud)\b/i.test(lower)) {
+    impactBadge = "🏦 Financial Incident";
+  } else if (/\b(hack|breach|cyberattack|vulnerabilit)\b/i.test(lower)) {
+    impactBadge = "⚠️ Active Incident";
+  } else if ((source || "").toLowerCase().includes("reuters")) {
+    impactBadge = "📰 Reuters Dispatch";
+  }
+
+  return { severity, impactBadge };
+}
 function getEventSignatureAndCategory(title, originalCategory) {
   const lower = title.toLowerCase();
 
@@ -352,10 +420,10 @@ export async function getLiveCyberRss() {
     ...indiaItems.map(i => {
       const srcL = (i.source || "").toLowerCase();
       const titleL = (i.title || "").toLowerCase();
-      const isIndianContext = /\b(india|indian|rbi|sebi|cbi|ed|cert-in|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|aadhaar|pan|delhi police|mumbai police|cyber cell|digital arrest|nbfc|sc seeks|supreme court|enforcement directorate|tamil nadu|bengaluru|bangalore|hyderabad|chennai|pune|kolkata|kerala|noida|gurugram)\b|(?:\d+\s*)?(?:crore|lakh|cr)\b|\brs\.?\s*\d+/i.test(titleL);
-      const isForeign = !isIndianContext || srcL === "upi" || srcL.includes("united press") || srcL.includes("chosun") || srcL.includes("ghana") || srcL.includes("lawfuel") || titleL.includes("korean") || titleL.includes("calif") || titleL.includes("medicare") || titleL.includes("ghana") || titleL.includes("mtn") || titleL.includes("dhs") || titleL.includes("homeland security") || titleL.includes("pentagon") || titleL.includes("trump");
+      const isIndianBfsiContext = /\b(rbi|sebi|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|nbfc|fintech|bank|banking|upi|rupee|crore|lakh|cr)\b|\brs\.?\s*\d+/i.test(titleL);
+      const isForeign = srcL === "upi" || srcL.includes("united press") || srcL.includes("chosun") || srcL.includes("ghana") || srcL.includes("lawfuel") || titleL.includes("korean") || titleL.includes("calif") || titleL.includes("medicare") || titleL.includes("ghana") || titleL.includes("mtn") || titleL.includes("dhs") || titleL.includes("homeland security") || titleL.includes("pentagon") || titleL.includes("trump");
       const normalizedSource = (srcL === "upi" || srcL.includes("united press")) ? "United Press International" : i.source;
-      return { ...i, source: normalizedSource, defaultCategory: isForeign ? "global-ransomware" : "india-bfsi" };
+      return { ...i, source: normalizedSource, defaultCategory: (isIndianBfsiContext && !isForeign) ? "india-bfsi" : "global-ransomware" };
     }),
     ...cryptoItems.map(i => ({ ...i, defaultCategory: "crypto-heists" })),
     ...reutersItems.map(i => ({ ...i, defaultCategory: "global-ransomware" }))
@@ -438,29 +506,8 @@ export async function getLiveCyberRss() {
   for (const [key, cluster] of clusterMap.entries()) {
     const item = cluster.primary;
     const category = item.category;
-    const lower = item.title.toLowerCase();
-
-    let severity = "high";
-    if (lower.includes("billion") || lower.includes("critical") || lower.includes("largest hack") || lower.includes("record heist")) {
-      severity = "critical";
-    }
-
-    let impactBadge = "🚨 Urgent Alert";
-    if (lower.includes("binance") || lower.includes("6.3") || lower.includes("6bn")) {
-      impactBadge = "💰 $6.3B Record Hack";
-    } else if (lower.includes("freeze") || lower.includes("frozen") || lower.includes("3.2")) {
-      impactBadge = "🔒 Assets Frozen";
-    } else if (lower.includes("au small finance") || lower.includes("au bank")) {
-      impactBadge = "🏦 Bank Breach Probe";
-    } else if (lower.includes("rbi") || lower.includes("regulat")) {
-      impactBadge = "⚖️ RBI Directive";
-    } else if (lower.includes("pnb") || lower.includes("crore")) {
-      impactBadge = "🚨 Financial Fraud Probe";
-    } else if (lower.includes("sbi") || lower.includes("data leak") || lower.includes("breach")) {
-      impactBadge = "⚠️ Data Breach";
-    } else if (item.source.toLowerCase().includes("reuters")) {
-      impactBadge = "🚨 Reuters Exclusive";
-    }
+    const { severity, impactBadge } = classifyNewsSeverityAndBadge(item.title, item.source, category);
+    const sector = classifyNewsSector(item.title, category);
 
     // Only build sub-angles if there are actually distinct developments
     let synthesizedSummary = "";
@@ -484,10 +531,12 @@ export async function getLiveCyberRss() {
       title: item.title,
       sourceName: item.source,
       sourceUrl: item.link,
-      provenanceBadge: item.source.toLowerCase().includes("reuters") ? "🚨 Reuters Report" :
-                       item.source.toLowerCase().includes("ani") ? "🇮🇳 ANI Report" :
-                       category === "india-bfsi" ? "🏦 Banking & Finance" :
-                       category === "crypto-heists" ? "⛓️ Crypto & Web3" : "🌐 Global Security",
+      provenanceBadge: item.source.toLowerCase().includes("reuters") ? "📰 Reuters" :
+                       item.source.toLowerCase().includes("ani") ? "🇮🇳 ANI" :
+                       sector === "Banking & Financial Services" ? "🏦 Banking & Finance" :
+                       sector === "Crypto & Digital Assets" ? "⛓️ Crypto & Web3" :
+                       sector === "AI & Cloud Security" ? "🤖 AI & Cloud" :
+                       sector === "IoT, Automotive & Supply Chain" ? "🔌 IoT & Supply Chain" : "🌐 Cyber Desk",
       badgeType: item.source.toLowerCase().includes("reuters") ? "statutory" :
                  category === "india-bfsi" ? "regulatory" :
                  category === "crypto-heists" ? "onchain" : "statutory",
@@ -496,11 +545,9 @@ export async function getLiveCyberRss() {
       pubDate: item.pubDate,
       timestamp: new Date(item.pubDate).getTime() || 0,
       timeAgo: timeAgo(item.pubDate),
-      entities: category === "india-bfsi" ? "Banking & Financial Services" :
-                category === "crypto-heists" ? "Crypto & Digital Assets" :
-                "Enterprise & Public Infrastructure",
+      entities: sector,
       incident: synthesizedSummary,
-      rootCause: "Verified reporting confirmed by primary news desks and security researchers.",
+      rootCause: "Primary source reporting.",
       consequence: `Read reporting on ${item.source}.`
     });
   }

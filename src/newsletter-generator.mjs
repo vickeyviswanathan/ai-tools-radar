@@ -216,7 +216,7 @@ ${plainSecNum++}. AI TOOLS
 
 Featured Tool: ${featuredTool.name}
 • What it does: ${featuredTool.tagline}
-• Browse 223+ verified tools: https://cipherati.com/ai-tools.html`);
+• Browse ${toolsData.length} indexed tools: https://cipherati.com/ai-tools.html`);
   }
 
   if (realityPick) {
@@ -370,7 +370,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </p>
 
       <div style="font-size:12.5px;color:#6b7280;">
-        <a href="https://cipherati.com/ai-tools.html" style="color:#2563eb;text-decoration:none;font-weight:600;">Explore 223+ verified AI developer tools on Cipherati →</a>
+        <a href="https://cipherati.com/ai-tools.html" style="color:#2563eb;text-decoration:none;font-weight:600;">Explore ${toolsData.length} indexed AI developer tools on Cipherati →</a>
       </div>
     </div>`
         : ""

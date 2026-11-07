@@ -1,5 +1,5 @@
 # Cipherati
-> Independent cybersecurity news desk, citizen scam defense playbooks (1930 helpline, digital arrest, APK malware, UPI fraud), 22 production AI engineering realities, and 223 battle-tested AI developer tools.
+> Independent cybersecurity news desk, citizen scam defense playbooks (1930 helpline, digital arrest, APK malware, UPI fraud), 22 production AI engineering realities, and 223 open-source AI developer tools.
 
 - Website: https://cipherati.com/
 - Cybersecurity News Desk: https://cipherati.com/cybersecurity-news.html
@@ -24,10 +24,10 @@
 - **RBI Consolidates Cybersecurity Rules, Prescribes New Safeguards For Non-Bank Payment Firms** (NDTV Profit, 2026-11-07): Key updates: Government, RBI strengthen fintech regulatory framework to boost consumer protection and cybersecurity; RBI tightens cybersecurity norms for non-bank payment operators, mandates six-hour incident reporting.
 - **Cybersecurity Is Becoming Central to Trust in India's Fintech Sector** (TechGraph, 2026-11-06): Verified cybersecurity reporting.
 - **Knowledge Nugget | AI cybersecurity race: What does CERT-In's access to Anthropic's Mythos mean for India?** (The Indian Express, 2026-11-06): Verified cybersecurity reporting.
-- **Tesla to pull the plug on Cybertruck after years of poor sales** (Reuters, 2026-11-06): Verified cybersecurity reporting.
-- **India flags Chinese-linked AI tools in hacking campaign against financial firms** (Reuters, 2026-11-05): Verified cybersecurity reporting.
+- **India flags Chinese-linked AI tools in hacking campaign against financial firms** (Reuters, 2026-11-05): Key updates: India Warns of AI-Powered Cyberattacks Targeting Banks and Financial Companies; OpenAI Unveils New Cybersecurity AI Model Amid Growing Concerns Over AI-Powered Cyberattacks.
 - **Mercado Bitcoin Said Its Hack Was Contained, But Blockchain Data Tells a Different Story** (Yahoo Finance, 2026-11-05): Key updates: Mercado Bitcoin hack continued hours after exchange said attack was contained, report finds; Mercado Bitcoin Hack $8 Million Larger Than First Reported.
 - **OpenAI launches GPT-6 Cyber with 'Critical' cybersecurity rating** (Reuters, 2026-11-05): Key updates: OpenAI launches GPT-6 Cyber with 'Critical' cybersecurity risk rating.
+- **ED arrests two from Tamil Nadu in Rs 400-crore pan India cyber fraud network** (DT Next, 2026-11-05): Verified cybersecurity reporting.
 
 ## Emergency Cyber Crime Reporting (Golden Hour Protocol)
 If funds are unauthorizedly debited or someone is targeted by online fraud:
@@ -43,35 +43,35 @@ If funds are unauthorizedly debited or someone is targeted by online fraud:
 - **Fake IPO WhatsApp Groups**: SEBI-registered brokerages never conduct institutional IPO bidding or accept investments via WhatsApp groups or personal accounts.
 
 ## Top Curated AI Developer Tools
-- [OpenAI Codex](https://openai.com/index/openai-codex/): Foundational AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.
-- [litellm](https://docs.litellm.ai/docs/): The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthrop…
-- [Understand Anything](https://understand-anything.com/): Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…
-- [ECC](https://ecc.tools/): The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
-- [claude code best practice](https://linkedin.com/in/shanraisshan): from vibe coding to agentic engineering - practice makes claude perfect
-- [context mode](https://contextmode.ai/): Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.
+- [OpenAI Codex](https://openai.com/index/openai-codex/): AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.
 - [medusa](https://medusajs.com/): The world's most flexible commerce platform for agents and developers
-- [Amazon Q Developer / Kiro IDE](https://aws.amazon.com/q/developer/): AWS's generative AI coding companion and cloud-native development environment for code transformation and security scanning.
 - [graphify](https://www.graphify.com/): Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing,…
-- [VS Code with In-Built AI Agents](https://code.visualstudio.com/docs/copilot/copilot-chat): Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.
-- [DeepSeek Reasonix](https://reasonix.io/): A reliable coding agent for complex software engineering tasks.
-- [headroom](https://docs.headroomlabs.ai/docs): Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
-- [cc switch](https://ccswitch.io/): A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.
-- [openinterpreter](https://openinterpreter.com/): A coding agent for open models like Kimi K3 and GLM 5.3
+- [litellm](https://docs.litellm.ai/docs/): The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthrop…
+- [context mode](https://contextmode.ai/): Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.
+- [Understand Anything](https://understand-anything.com/): Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…
 - [OmniRoute](https://omniroute.online/): Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Clin…
-- [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk): CLI proxy that condenses command outputs by 60–90% to save LLM tokens and execution costs.
-- [Umi OCR](https://github.com/hiroi-sora/Umi-OCR): OCR software, free and offline. OCR / PDF / /
-- [Aider](https://github.com/paul-gauthier/aider): AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
+- [headroom](https://docs.headroomlabs.ai/docs): Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
+- [Amazon Q Developer / Kiro IDE](https://aws.amazon.com/q/developer/): AWS's generative AI coding assistant and spec-driven development environment for code transformation and security scanning.
+- [DeepSeek Reasonix](https://reasonix.io/): A reliable coding agent for complex software engineering tasks.
+- [openinterpreter](https://openinterpreter.com/): A coding agent for open models like Kimi K3 and GLM 5.3
+- [claude code best practice](https://linkedin.com/in/shanraisshan): from vibe coding to agentic engineering - practice makes claude perfect
+- [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk): CLI proxy that condenses command outputs by 60–90% to reduce LLM token consumption and API costs.
 - [OpenHands](https://github.com/All-Hands-AI/OpenHands): Autonomous software development agent capable of writing code, running bash commands, and browsing the web.
-- [Kimi Code](https://kimi.ai): Moonshot AI's high-context reasoning and coding model optimized for full-repository understanding and multi-file logic.
-- [OpenSpec](https://openspec.dev/): Spec-driven development (SDD) for AI coding assistants.
+- [Aider](https://github.com/paul-gauthier/aider): AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
+- [Kimi Code](https://kimi.ai): Moonshot AI's long-context reasoning and coding model optimized for repository understanding and multi-file logic.
+- [ECC](https://ecc.tools/): The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
 - [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code): Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.
-- [next ai draw io](https://next-ai-drawio.jiang.jp/): Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
 - [Codewhale](https://codewhale.net/): Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome
+- [cc switch](https://ccswitch.io/): A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.
+- [next ai draw io](https://next-ai-drawio.jiang.jp/): Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
+- [Umi OCR](https://github.com/hiroi-sora/Umi-OCR): OCR software, free and offline. OCR / PDF / /
+- [VS Code with In-Built AI Agents](https://code.visualstudio.com/docs/copilot/copilot-chat): Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.
+- [OpenSpec](https://openspec.dev/): Spec-driven development (SDD) for AI coding assistants.
 - [oh my openagent](https://omo.dev/): OmO: Just type "mass ulw" keyword with your prompt. Now you are the master of graph engineering.
-- [claude skills](https://alirezarezvani.medium.com/): 380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents —…
+- [agent skills](https://skills.addy.ie/): Production-grade engineering skills for AI coding agents.
+- [AutoGPT](https://agpt.co/): AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.
+- [deepseek harness](https://deepseek.com/harness): DeepSeek Harness: Everything is a Plugin.
+- [onlook](https://onlook.com/): The Developer Tool for Visual Engineers • An Open-Source AI-First Design tool • Visually build, style, and edit your code with AI • World's best, top-most agent recommended #1 Developer tool for Desi…
 - [hermes agent](https://hermes-agent.nousresearch.com/): The agent that grows with you
-- [supermemory](https://supermemory.ai/docs): Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.
-- [n8n](https://n8n.io/): Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.
-- [kilocode](https://kilo.ai/): Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
 
 For complete listings and full data exports, visit https://cipherati.com/llms-full.txt or https://cipherati.com/data/tools.json.

@@ -8,34 +8,25 @@ const SITE_URL = "https://cipherati.com/";
 export const INDEXNOW_KEY = "c9426a40b7894f12a8e3d56c719204ef";
 
 const esc = (s) => String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const BOILERPLATE_WHY = /verified GitHub stars\.$|upvotes on Hacker News\.$|likes on Hugging Face\.$|vetted for production\.$/;
+const BOILERPLATE_WHY = /verified GitHub stars\.$|upvotes on Hacker News\.$|likes on Hugging Face\.$|vetted for production\.$|real production users\.$|Community signal:|Indexed open-source|Editorially indexed/i;
 
 const fmtCompact = (n) => new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(n);
 
-// One-line adoption proof, phrased as information rather than badge repetition.
-// Used for fresh ingests (quality.mjs) and to backfill older stored rows at build.
+// Honest community traction note — never equates GitHub stars with production adoption.
 export function signalWhySentence(source, metric) {
   const n = fmtCompact(metric || 0);
-  if (source === "github") return `Battle-tested in the open — ${n} GitHub stars from real production users.`;
-  if (source === "hn") return `Earned ${metric} upvotes of practitioner scrutiny on Hacker News.`;
-  if (source === "huggingface") return `Trending with the builder community — ${n} Hugging Face likes.`;
-  return "Editorially vetted as a production-ready AI tool.";
+  if (source === "github") return `Community signal: ${n} GitHub stars (public repository popularity metric).`;
+  if (source === "hn") return `Community signal: ${metric} Hacker News points.`;
+  if (source === "huggingface") return `Community signal: ${n} Hugging Face likes.`;
+  return "";
 }
 
-// Older stored rows carry boilerplate why_it_matters text. Rewrite those from
-// live signals so every card — existing or newly ingested — says something useful.
+// Strip boilerplate star-repetition sentences so cards only show genuine architectural notes.
 export function normalizeWhyItMatters(tools) {
   for (const t of tools) {
-    if (t.why_it_matters && !BOILERPLATE_WHY.test(t.why_it_matters)) continue;
-    const metricOf = (src) => {
-      const s = (t.signals || []).find(x => x.startsWith(src + ":"));
-      return s ? Number(s.split(":")[1]) || 0 : 0;
-    };
-    const gh = metricOf("github"), hf = metricOf("huggingface"), hn = metricOf("hn");
-    if (gh) t.why_it_matters = signalWhySentence("github", gh);
-    else if (hf) t.why_it_matters = signalWhySentence("huggingface", hf);
-    else if (hn) t.why_it_matters = signalWhySentence("hn", hn);
-    else t.why_it_matters = signalWhySentence("app", 0);
+    if (t.why_it_matters && BOILERPLATE_WHY.test(t.why_it_matters)) {
+      t.why_it_matters = "";
+    }
   }
   return tools;
 }
@@ -266,7 +257,7 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
         "url": SITE_URL,
         "name": "Cipherati — Cybersecurity News, Scam Alerts, AI Developer Tools & Production Realities",
         "alternateName": ["Cipherati", "Cipherati Radar", "Cipherati Cybersecurity & AI Intelligence"],
-        "description": "Independent cybersecurity news desk, citizen scam defense playbooks (1930 helpline, digital arrest, APK malware, UPI fraud), 22 production AI engineering realities, and 221+ battle-tested AI developer tools.",
+        "description": "Independent cybersecurity news desk, citizen scam defense playbooks (1930 helpline, digital arrest, APK malware, UPI fraud), 22 production AI engineering realities, and curated open-source AI developer tools.",
         "publisher": orgNode
       },
       {
@@ -448,8 +439,8 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
   const aiToolsPage = buildPillarPageHtml(html, {
     slug: "ai-tools.html",
     viewName: "tools",
-    title: `Best AI Developer Tools, Coding Agents, MCP Servers & Local LLMs Directory (${tools.length} Verified Tools) | Cipherati`,
-    description: `Curated, zero-affiliate directory of ${tools.length} battle-tested open-source AI developer tools, terminal coding agents (Claude Code, Gemini CLI, Codex, Aider), local LLM runners (Ollama, vLLM, llama.cpp), and RAG frameworks.`,
+    title: `Best AI Developer Tools, Coding Agents, MCP Servers & Local LLMs Directory (${tools.length} Indexed Tools) | Cipherati`,
+    description: `Curated, zero-affiliate directory of ${tools.length} open-source AI developer tools, terminal coding agents (Claude Code, Gemini CLI, Codex, Aider), local LLM runners (Ollama, vLLM, llama.cpp), and RAG frameworks.`,
     keywords: "best AI developer tools, AI coding agents, MCP servers, local LLMs, Ollama, vLLM, Claude Code, Gemini CLI, open source AI tools directory, RAG frameworks, cybersecurity AI tools",
     jsonLdGraph: [
       orgNode,

@@ -56,7 +56,11 @@ const bannedTerms = [
   "taaft",
   "theresanaiforthat",
   "trend" + "shift",
-  "sherlock-project"
+  "sherlock-project",
+  "cybertruck",
+  "real production users",
+  "battle-tested",
+  "practitioner-grade"
 ];
 
 for (const file of [
@@ -287,6 +291,16 @@ assert(indexHtml.includes('href="./cybersecurity-news.html"') && indexHtml.inclu
 assert(indexHtml.includes('<span class="tab-count" id="tab-realities-count">22</span>'), "Mobile/Header AI Realities tab count badge is synced to 22");
 const feedXml = readFileSync("public/feed.xml", "utf8");
 assert(feedXml.includes("<rss version=\"2.0\"") && feedXml.includes("cybersecurity-news.html") && feedXml.includes("scam-alerts.html"), "RSS 2.0 syndication feed (public/feed.xml) is valid and populated");
+
+// 14. Practitioner Credibility & Anti-Hype Gates
+const mediumSeverityCount = threatsData.threats.filter(t => t.severity === "medium").length;
+assert(mediumSeverityCount >= 1, `News severity rubric is calibrated (${mediumSeverityCount} medium/advisory items alongside high/critical incidents)`);
+
+const genericUrgentBadges = threatsData.threats.filter(t => t.impactBadge === "🚨 Urgent Alert").length;
+assert(genericUrgentBadges === 0, `Zero generic '🚨 Urgent Alert' badges inflating non-incident news (${genericUrgentBadges} found)`);
+
+assert(indexHtml.includes("deriveToolEvaluation") && indexHtml.includes("Engineering Evaluation &amp; Trade-offs"), "Tool inspector drawer renders structured Engineering Evaluation & Trade-offs spec sheet");
+assert(indexHtml.includes("GitHub stars and community metrics reflect public popularity, not an independent security audit"), "Tool inspector drawer includes explicit popularity vs. security audit disclaimer");
 
 
 // Summary

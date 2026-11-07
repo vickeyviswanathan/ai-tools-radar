@@ -8,13 +8,13 @@ export const FEATURED_LEADERS = [
     sourceId: "google-antigravity",
     sourceUrl: "https://antigravity.google",
     name: "Google Antigravity",
-    tagline: "Next-gen agentic AI coding environment with deep workspace reasoning, terminal tools, and multi-agent coordination.",
+    tagline: "Agentic AI coding environment with workspace reasoning, terminal tools, and multi-agent coordination.",
     url: "https://antigravity.google",
     emoji: "🚀",
     category: "Coding",
     tags: ["google", "agentic-coding", "ide", "deepmind", "developer-tools"],
     metric: 88000,
-    whyItMatters: "Pioneering agentic coding platform that pairs developers with autonomous coding agents capable of end-to-end task execution.",
+    whyItMatters: "Pairs developers with autonomous coding agents capable of multi-file workspace edits and terminal task execution.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
@@ -28,7 +28,7 @@ export const FEATURED_LEADERS = [
     category: "Coding",
     tags: ["anthropic", "claude", "terminal", "coding-agent", "cli"],
     metric: 75000,
-    whyItMatters: "High-velocity CLI coding agent that operates directly in your local repo with fine-grained permission controls.",
+    whyItMatters: "CLI coding agent that operates directly in local git repositories with explicit command and edit permission controls.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
@@ -36,13 +36,13 @@ export const FEATURED_LEADERS = [
     sourceId: "openai-codex",
     sourceUrl: "https://openai.com/index/openai-codex/",
     name: "OpenAI Codex",
-    tagline: "Foundational AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.",
+    tagline: "AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.",
     url: "https://openai.com/index/openai-codex/",
     emoji: "🧠",
     category: "Coding",
     tags: ["openai", "codex", "code-generation", "foundational-model"],
     metric: 110000,
-    whyItMatters: "The foundational language model architecture that pioneered automated code translation, refactoring, and agentic workflows.",
+    whyItMatters: "Cloud and CLI code-generation runtime supporting automated code translation, refactoring, and sandboxed PR execution.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
   },
   {
@@ -50,13 +50,13 @@ export const FEATURED_LEADERS = [
     sourceId: "kimi-code",
     sourceUrl: "https://kimi.ai",
     name: "Kimi Code",
-    tagline: "Moonshot AI's high-context reasoning and coding model optimized for full-repository understanding and multi-file logic.",
+    tagline: "Moonshot AI's long-context reasoning and coding model optimized for repository understanding and multi-file logic.",
     url: "https://kimi.ai",
     emoji: "🌙",
     category: "Coding",
     tags: ["kimi", "moonshot", "reasoning", "long-context", "coding"],
     metric: 52000,
-    whyItMatters: "Exceptional million-token context reasoning capable of tracking large enterprise codebases and multi-package dependencies.",
+    whyItMatters: "Supports long-context window reasoning for analyzing multi-package repositories and cross-file dependencies.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -70,7 +70,7 @@ export const FEATURED_LEADERS = [
     category: "Coding",
     tags: ["vscode", "microsoft", "in-built-agents", "copilot-agent", "developer-tools"],
     metric: 92000,
-    whyItMatters: "Brings autonomous multi-file refactoring and command execution directly into the world's most widely used code editor.",
+    whyItMatters: "Integrates multi-file refactoring, MCP server tool calls, and terminal execution directly into Visual Studio Code.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -78,13 +78,13 @@ export const FEATURED_LEADERS = [
     sourceId: "amazon-kiro-q-developer",
     sourceUrl: "https://aws.amazon.com/q/developer/",
     name: "Amazon Q Developer / Kiro IDE",
-    tagline: "AWS's generative AI coding companion and cloud-native development environment for code transformation and security scanning.",
+    tagline: "AWS's generative AI coding assistant and spec-driven development environment for code transformation and security scanning.",
     url: "https://aws.amazon.com/q/developer/",
     emoji: "☁️",
     category: "Coding",
     tags: ["amazon", "aws", "q-developer", "kiro-ide", "cloud-coding"],
     metric: 48000,
-    whyItMatters: "Specialized in enterprise Java/Node upgrades, automated vulnerability patching, and deep AWS cloud infrastructure wiring.",
+    whyItMatters: "Focuses on automated Java/Node runtime upgrades, IAM policy analysis, and AWS cloud infrastructure integration.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -92,13 +92,13 @@ export const FEATURED_LEADERS = [
     sourceId: "rtk-ai/rtk",
     sourceUrl: "https://github.com/rtk-ai/rtk",
     name: "RTK (Rust Token Killer)",
-    tagline: "CLI proxy that condenses command outputs by 60–90% to save LLM tokens and execution costs.",
+    tagline: "CLI proxy that condenses command outputs by 60–90% to reduce LLM token consumption and API costs.",
     url: "https://github.com/rtk-ai/rtk",
     emoji: "⚡",
     category: "Coding",
     tags: ["cli", "rust", "token-optimization", "llm-cost", "developer-tools"],
     metric: 1250,
-    whyItMatters: "Essential AI CLI infrastructure that slashes LLM context token usage by up to 90% without losing error signals.",
+    whyItMatters: "Strips repetitive log boilerplate from git, cargo, and test runner outputs before they enter an agent's context window.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
@@ -112,7 +112,7 @@ export const FEATURED_LEADERS = [
     category: "Coding",
     tags: ["terminal", "pair-programming", "git", "cli", "coding-agent"],
     metric: 34500,
-    whyItMatters: "The gold standard for terminal-based AI pair programming with robust repository-wide AST parsing.",
+    whyItMatters: "Uses tree-sitter AST repository maps to supply relevant symbol definitions to LLMs during terminal coding sessions.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -120,13 +120,13 @@ export const FEATURED_LEADERS = [
     sourceId: "continuedev/continue",
     sourceUrl: "https://github.com/continuedev/continue",
     name: "Continue",
-    tagline: "The leading open-source AI code assistant for VS Code and JetBrains connecting any model and codebase.",
+    tagline: "Open-source AI code assistant extension for VS Code and JetBrains supporting custom local and cloud models.",
     url: "https://github.com/continuedev/continue",
     emoji: "⏩",
     category: "Coding",
     tags: ["vscode", "jetbrains", "autocomplete", "code-assistant", "open-source"],
     metric: 24200,
-    whyItMatters: "The most customizable open-source alternative to Copilot that respects privacy and local LLM backends.",
+    whyItMatters: "Allows engineering teams to connect self-hosted Ollama, vLLM, or commercial LLM endpoints to VS Code and JetBrains.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
   },
   {
@@ -140,7 +140,7 @@ export const FEATURED_LEADERS = [
     category: "Coding",
     tags: ["autonomous-agent", "software-engineering", "docker", "coding-agent"],
     metric: 45000,
-    whyItMatters: "Community-driven autonomous developer agent capable of resolving end-to-end GitHub issues in isolated sandboxes.",
+    whyItMatters: "Executes software engineering tasks inside isolated Docker sandboxes with bash, browser, and file-editing tools.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -154,7 +154,7 @@ export const FEATURED_LEADERS = [
     category: "Coding",
     tags: ["vscode", "agent", "autonomous-coding", "developer-tools"],
     metric: 32000,
-    whyItMatters: "Pioneering interactive coding agent extension with strict permission controls and iterative browser verification.",
+    whyItMatters: "VS Code agent extension featuring step-by-step user approval gates for shell execution, file edits, and headless browser checks.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
 
@@ -170,7 +170,7 @@ export const FEATURED_LEADERS = [
     category: "Research & Data",
     tags: ["reverse-engineering", "decompilation", "binary-analysis", "security", "ai-agents"],
     metric: 382000,
-    whyItMatters: "Massive industry-standard agentic reverse-engineering harness with over 380k+ stars across global AI developer teams.",
+    whyItMatters: "Connects disassemblers, decompilers, and runtime instrumentation tools into an MCP workflow for binary analysis.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
@@ -184,7 +184,7 @@ export const FEATURED_LEADERS = [
     category: "Research & Data",
     tags: ["sre", "decompiler", "disassembler", "security-tools"],
     metric: 54000,
-    whyItMatters: "World-class extensible reverse-engineering platform powering both automated static analysis and AI security workflows.",
+    whyItMatters: "Extensible reverse-engineering suite supporting multi-architecture disassembly, decompilation, and headless scripting.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 5
   },
   {
@@ -192,13 +192,13 @@ export const FEATURED_LEADERS = [
     sourceId: "frida/frida",
     sourceUrl: "https://github.com/frida/frida",
     name: "Frida",
-    tagline: "Dynamic instrumentation toolkit for developers, reverse-engineers, and AI security telemetry.",
+    tagline: "Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers.",
     url: "https://github.com/frida/frida",
     emoji: "💉",
     category: "Research & Data",
     tags: ["dynamic-instrumentation", "hooking", "security", "runtime"],
     metric: 16800,
-    whyItMatters: "Essential dynamic hook framework enabling AI agents to trace system calls and inspect live process memory.",
+    whyItMatters: "Injects JavaScript instrumentation into native apps on Windows, macOS, Linux, iOS, and Android to trace live runtime calls.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 4
   },
 
@@ -208,13 +208,13 @@ export const FEATURED_LEADERS = [
     sourceId: "lightpanda-io/browser",
     sourceUrl: "https://github.com/lightpanda-io/browser",
     name: "Lightpanda",
-    tagline: "The headless browser designed for AI agents and web automation, written in Zig with ultra-low memory overhead.",
+    tagline: "Headless browser designed for AI agents and web automation, written in Zig with low memory overhead.",
     url: "https://github.com/lightpanda-io/browser",
     emoji: "🐼",
     category: "Agents & Automation",
     tags: ["browser", "agent-framework", "web-scraping", "zig", "headless"],
     metric: 39600,
-    whyItMatters: "High-efficiency open-source headless browser built specifically for autonomous AI agents, eliminating Chromium GUI rendering overhead.",
+    whyItMatters: "Implements DOM and JavaScript execution in Zig without full Chromium GPU rendering overhead, supporting CDP automation.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -228,7 +228,7 @@ export const FEATURED_LEADERS = [
     category: "Agents & Automation",
     tags: ["claude", "memory", "context", "coding-agent", "persistence"],
     metric: 105400,
-    whyItMatters: "Battle-tested in the open — 105.4K GitHub stars from real production users.",
+    whyItMatters: "Compresses session transcripts and restores structured agent memory across CLI restarts without bloating prompt context.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -236,13 +236,13 @@ export const FEATURED_LEADERS = [
     sourceId: "saffron-health/libretto",
     sourceUrl: "https://github.com/saffron-health/libretto",
     name: "Libretto",
-    tagline: "Browser automation CLI & typed workflow engine for live site inspection, prototyping, and resilient AI interaction.",
+    tagline: "Browser automation CLI & typed workflow engine for live site inspection, prototyping, and deterministic web interaction.",
     url: "https://github.com/saffron-health/libretto",
     emoji: "🌐",
     category: "Agents & Automation",
     tags: ["browser-automation", "playwright", "workflows", "web-agent", "scraping"],
     metric: 840,
-    whyItMatters: "Next-gen browser automation framework with live inspection REPL, snapshot diffs, and anti-bot mitigation.",
+    whyItMatters: "Provides an interactive CLI and Playwright execution harness for inspecting DOM state and scripting browser workflows.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
@@ -250,13 +250,13 @@ export const FEATURED_LEADERS = [
     sourceId: "browser-use/browser-use",
     sourceUrl: "https://github.com/browser-use/browser-use",
     name: "Browser-Use",
-    tagline: "Make websites accessible for AI agents with Playwright, visual grounding, and multi-tab orchestration.",
+    tagline: "Connects LLMs to Playwright for automated web navigation, DOM element extraction, and multi-tab workflows.",
     url: "https://github.com/browser-use/browser-use",
     emoji: "🌍",
     category: "Agents & Automation",
     tags: ["browser-agent", "playwright", "vision", "automation"],
     metric: 29500,
-    whyItMatters: "Fastest-growing autonomous browser agent library allowing LLMs to interact with any web application effortlessly.",
+    whyItMatters: "Extracts interactive DOM elements into indexed bounding boxes so vision and text models can drive Playwright sessions.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -264,13 +264,13 @@ export const FEATURED_LEADERS = [
     sourceId: "crewAIInc/crewAI",
     sourceUrl: "https://github.com/crewAIInc/crewAI",
     name: "CrewAI",
-    tagline: "Cutting-edge framework for orchestrating role-playing, autonomous AI agents to solve complex tasks collaboratively.",
+    tagline: "Python framework for orchestrating role-based AI agents and multi-step task pipelines.",
     url: "https://github.com/crewAIInc/crewAI",
     emoji: "👥",
     category: "Agents & Automation",
     tags: ["multi-agent", "autonomous-agents", "orchestration", "workflow"],
     metric: 26000,
-    whyItMatters: "The standard multi-agent coordination architecture enabling specialized agent personas to collaborate sequentially and hierarchically.",
+    whyItMatters: "Defines explicit agent roles, task handoffs, and tool permissions for sequential or hierarchical multi-agent execution.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -284,7 +284,7 @@ export const FEATURED_LEADERS = [
     category: "Agents & Automation",
     tags: ["mcp", "anthropic", "standards", "integrations", "tools"],
     metric: 16500,
-    whyItMatters: "The universal interoperability standard defining how AI models securely query databases, run code, and invoke APIs.",
+    whyItMatters: "Provides reference JSON-RPC server adapters for connecting AI clients to filesystems, Git, databases, and web APIs.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
@@ -298,7 +298,7 @@ export const FEATURED_LEADERS = [
     category: "Agents & Automation",
     tags: ["llmops", "rag", "agent-builder", "workflow", "production-ai"],
     metric: 69000,
-    whyItMatters: "Production-grade visual AI workflow builder with built-in model routing, knowledge retrieval, and prompt observability.",
+    whyItMatters: "Self-hostable visual workflow builder with model routing, document ingestion, and API endpoint publishing.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
   },
 
@@ -308,13 +308,13 @@ export const FEATURED_LEADERS = [
     sourceId: "ollama/ollama",
     sourceUrl: "https://github.com/ollama/ollama",
     name: "Ollama",
-    tagline: "Get up and running with Llama 3, DeepSeek-R1, Mistral, and local LLMs with one command on macOS, Linux, and Windows.",
+    tagline: "Run Llama, DeepSeek, Mistral, and open-weight LLMs locally via CLI and REST API on macOS, Linux, and Windows.",
     url: "https://github.com/ollama/ollama",
     emoji: "🦙",
     category: "Models & Infra",
     tags: ["local-llm", "llama", "deepseek", "inference", "cli"],
     metric: 125000,
-    whyItMatters: "The undisputed runtime for local LLMs, packaging model weights, GPU acceleration, and REST APIs into zero-fuss binaries.",
+    whyItMatters: "Packages quantized GGUF weights, GPU acceleration, and an OpenAI-compatible local HTTP server into a single CLI binary.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
@@ -328,7 +328,7 @@ export const FEATURED_LEADERS = [
     category: "Models & Infra",
     tags: ["serving", "paged-attention", "high-throughput", "cuda", "inference"],
     metric: 39000,
-    whyItMatters: "State-of-the-art enterprise serving engine that maximizes GPU KV cache utilization and cuts serving costs by 4–8x.",
+    whyItMatters: "Uses PagedAttention and continuous batching to manage GPU KV cache memory for multi-tenant LLM inference.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -342,7 +342,7 @@ export const FEATURED_LEADERS = [
     category: "Models & Infra",
     tags: ["c-plus-plus", "quantization", "apple-silicon", "gguf", "inference"],
     metric: 74500,
-    whyItMatters: "The architectural foundation of consumer LLM inference that created the ubiquitous GGUF quantization ecosystem.",
+    whyItMatters: "C/C++ inference engine and GGUF quantization runtime enabling local model execution across Metal, CUDA, Vulkan, and CPU.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
   },
   {
@@ -350,13 +350,13 @@ export const FEATURED_LEADERS = [
     sourceId: "lmstudio-ai",
     sourceUrl: "https://lmstudio.ai",
     name: "LM Studio",
-    tagline: "Discover, download, and run local LLMs offline with an intuitive desktop GUI and local OpenAI-compatible server.",
+    tagline: "Discover, download, and run local LLMs offline with a desktop GUI and local OpenAI-compatible server.",
     url: "https://lmstudio.ai",
     emoji: "🖥️",
     category: "Models & Infra",
     tags: ["desktop-app", "local-llm", "gui", "offline", "developer-tools"],
     metric: 95000,
-    whyItMatters: "The most polished desktop application for developers to test, benchmark, and serve local open-weight models with zero setup.",
+    whyItMatters: "Desktop application for inspecting Hugging Face GGUF compatibility, hardware memory fit, and local OpenAI API serving.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
 
@@ -366,13 +366,13 @@ export const FEATURED_LEADERS = [
     sourceId: "open-webui/open-webui",
     sourceUrl: "https://github.com/open-webui/open-webui",
     name: "Open WebUI",
-    tagline: "User-friendly, self-hosted AI interface inspired by ChatGPT with full Ollama, RAG, and pipeline support.",
+    tagline: "Self-hosted AI interface with Ollama integration, local RAG document chat, and multi-user role management.",
     url: "https://github.com/open-webui/open-webui",
     emoji: "💬",
     category: "Chat & Assistants",
     tags: ["chatgpt-alternative", "ollama-ui", "self-hosted", "webui", "rag"],
     metric: 66000,
-    whyItMatters: "The gold standard private web UI for teams and power users seeking ChatGPT features without data leakage.",
+    whyItMatters: "Self-hosted web chat interface supporting local Ollama/vLLM backends, RBAC permissions, and offline document retrieval.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -380,13 +380,13 @@ export const FEATURED_LEADERS = [
     sourceId: "janhq/jan",
     sourceUrl: "https://github.com/janhq/jan",
     name: "Jan",
-    tagline: "100% offline, privacy-first open-source desktop ChatGPT alternative running local models on Mac, Windows, and Linux.",
+    tagline: "Offline-first open-source desktop chat application running local models on macOS, Windows, and Linux.",
     url: "https://github.com/janhq/jan",
     emoji: "🤖",
     category: "Chat & Assistants",
     tags: ["desktop", "offline-chat", "privacy", "local-ai", "cross-platform"],
     metric: 26000,
-    whyItMatters: "Completely air-gapped desktop assistant giving users sovereign local intelligence on consumer laptops.",
+    whyItMatters: "Stores conversation history and GGUF model files locally on disk with an optional localhost API server.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
   },
   {
@@ -394,13 +394,13 @@ export const FEATURED_LEADERS = [
     sourceId: "Mintplex-Labs/anything-llm",
     sourceUrl: "https://github.com/Mintplex-Labs/anything-llm",
     name: "AnythingLLM",
-    tagline: "The all-in-one desktop AI application for RAG, enterprise documents, workspaces, and multi-user access.",
+    tagline: "Desktop and Docker application for local RAG, document workspaces, and multi-user chat.",
     url: "https://github.com/Mintplex-Labs/anything-llm",
     emoji: "📚",
     category: "Chat & Assistants",
     tags: ["desktop-rag", "document-chat", "all-in-one", "vector-search", "enterprise"],
     metric: 32000,
-    whyItMatters: "Turn any document, PDF, or GitHub repository into an interactive AI knowledge base with zero configuration.",
+    whyItMatters: "Bundles an embedded vector database, document chunker, and chat UI into a single desktop or Docker deployment.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
   },
 
@@ -416,7 +416,7 @@ export const FEATURED_LEADERS = [
     category: "Image & Design",
     tags: ["stable-diffusion", "flux", "node-ui", "generative-art", "workflows"],
     metric: 62000,
-    whyItMatters: "Industry-standard node-graph architecture powering advanced generative image pipelines and production VFX studios.",
+    whyItMatters: "Directed acyclic graph (DAG) execution engine for chaining diffusion checkpoints, ControlNets, and LoRAs.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -424,13 +424,13 @@ export const FEATURED_LEADERS = [
     sourceId: "lllyasviel/Fooocus",
     sourceUrl: "https://github.com/lllyasviel/Fooocus",
     name: "Fooocus",
-    tagline: "Image generating software combining the prompt simplicity of Midjourney with the local control of Stable Diffusion.",
+    tagline: "Local SDXL image generation interface with automated prompt expansion and inpainting controls.",
     url: "https://github.com/lllyasviel/Fooocus",
     emoji: "🖼️",
     category: "Image & Design",
     tags: ["image-generation", "offline", "midjourney-alternative", "sdxl"],
     metric: 44000,
-    whyItMatters: "Zero-prompt-engineering image creation providing Midjourney-level quality on consumer desktop GPUs.",
+    whyItMatters: "Streamlines local SDXL image generation with built-in GPT-2 prompt expansion and automated sampler tuning.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 4
   },
 
@@ -440,13 +440,13 @@ export const FEATURED_LEADERS = [
     sourceId: "ggerganov/whisper.cpp",
     sourceUrl: "https://github.com/ggerganov/whisper.cpp",
     name: "Whisper.cpp",
-    tagline: "High-performance inference of OpenAI's Whisper speech-to-text model in plain C/C++ without external dependencies.",
+    tagline: "C/C++ inference port of OpenAI's Whisper speech-to-text model with zero external runtime dependencies.",
     url: "https://github.com/ggerganov/whisper.cpp",
     emoji: "🎙️",
     category: "Audio & Voice",
     tags: ["speech-to-text", "whisper", "audio-transcription", "c-plus-plus"],
     metric: 36000,
-    whyItMatters: "Ultra-fast local speech transcription running in real time even on low-power devices and embedded chips.",
+    whyItMatters: "Enables offline speech-to-text transcription on CPU, Apple CoreML, and mobile devices without a Python runtime.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
   },
   {
@@ -454,13 +454,13 @@ export const FEATURED_LEADERS = [
     sourceId: "hexgrad/kokoro",
     sourceUrl: "https://github.com/hexgrad/kokoro",
     name: "Kokoro",
-    tagline: "Open-weight 82M parameter text-to-speech voice model with exceptional human cadence, pitch, and speed.",
+    tagline: "Open-weight 82M parameter text-to-speech voice model licensed under Apache 2.0.",
     url: "https://github.com/hexgrad/kokoro",
     emoji: "🗣️",
     category: "Audio & Voice",
     tags: ["tts", "text-to-speech", "voice-synthesis", "open-weights"],
     metric: 10500,
-    whyItMatters: "Breakthrough ultra-compact voice synthesis model that out-competes models 10x its size in natural speech quality.",
+    whyItMatters: "Compact 82M-parameter TTS checkpoint capable of fast local CPU/GPU synthesis under an Apache 2.0 license.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
 
@@ -470,13 +470,13 @@ export const FEATURED_LEADERS = [
     sourceId: "public-apis/public-apis",
     sourceUrl: "https://github.com/public-apis/public-apis",
     name: "public-apis",
-    tagline: "A collective list of 1,400+ free APIs for software development, agent tool integrations, and data enrichment.",
+    tagline: "Community-maintained directory of 1,400+ public REST APIs categorized by domain, auth model, and CORS support.",
     url: "https://github.com/public-apis/public-apis",
     emoji: "🌐",
     category: "Research & Data",
     tags: ["api", "developer-tools", "tools", "datasets", "free-apis"],
     metric: 310000,
-    whyItMatters: "The world's largest open index of public APIs, serving as a primary registry for autonomous agent tool discovery and execution.",
+    whyItMatters: "Catalogs free and public REST endpoints with authentication, HTTPS, and CORS metadata for rapid prototyping.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 5
   },
   {
@@ -484,13 +484,13 @@ export const FEATURED_LEADERS = [
     sourceId: "infiniflow/ragflow",
     sourceUrl: "https://github.com/infiniflow/ragflow",
     name: "RAGFlow",
-    tagline: "Open-source RAG engine based on deep document understanding and multi-structured document parsing.",
+    tagline: "Open-source RAG engine featuring layout-aware document parsing and table extraction.",
     url: "https://github.com/infiniflow/ragflow",
     emoji: "📑",
     category: "Research & Data",
     tags: ["rag", "deep-parsing", "document-understanding", "enterprise-search"],
     metric: 28000,
-    whyItMatters: "Eliminates RAG hallucinations through OCR-level document layout analysis of complex tables and diagrams.",
+    whyItMatters: "Combines layout-aware PDF/table extraction with hybrid BM25 + vector search and grounded citation links.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -498,13 +498,13 @@ export const FEATURED_LEADERS = [
     sourceId: "qdrant/qdrant",
     sourceUrl: "https://github.com/qdrant/qdrant",
     name: "Qdrant",
-    tagline: "Vector similarity search engine and vector database written in Rust with extended payload filtering.",
+    tagline: "Vector similarity search engine and vector database written in Rust with payload filtering.",
     url: "https://github.com/qdrant/qdrant",
     emoji: "🔎",
     category: "Research & Data",
     tags: ["vector-database", "rust", "similarity-search", "embeddings"],
     metric: 22000,
-    whyItMatters: "Ultra-fast production vector database powering enterprise semantic search and recommendation systems.",
+    whyItMatters: "Rust-based HNSW vector engine supporting pre-filtered payload queries, quantization, and distributed clustering.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 4
   },
 
@@ -514,13 +514,13 @@ export const FEATURED_LEADERS = [
     sourceId: "danielmiessler/fabric",
     sourceUrl: "https://github.com/danielmiessler/fabric",
     name: "Fabric",
-    tagline: "Open-source framework for augmenting humans using AI prompts, modular patterns, and terminal pipelines.",
+    tagline: "Open-source CLI framework for chaining modular Markdown prompt templates in Unix pipelines.",
     url: "https://github.com/danielmiessler/fabric",
     emoji: "🧵",
     category: "Productivity",
     tags: ["prompt-patterns", "cli", "augmentation", "productivity"],
     metric: 27500,
-    whyItMatters: "Community-driven prompt architecture turning routine cognitive tasks into reusable terminal commands.",
+    whyItMatters: "Organizes reusable system prompts into composable CLI filters that accept stdin and pipe structured output.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
   },
   {
@@ -528,13 +528,13 @@ export const FEATURED_LEADERS = [
     sourceId: "mem0ai/mem0",
     sourceUrl: "https://github.com/mem0ai/mem0",
     name: "Mem0",
-    tagline: "The intelligent memory layer for AI assistants and autonomous agents, adapting dynamically across conversations.",
+    tagline: "Memory layer for AI assistants and agents storing user facts across sessions via vector and graph backends.",
     url: "https://github.com/mem0ai/mem0",
     emoji: "🧠",
     category: "Productivity",
     tags: ["long-term-memory", "ai-memory", "personalization", "agent-context"],
     metric: 25000,
-    whyItMatters: "Solves context amnesia by providing persistent, adaptive personal memory graph storage for AI agents.",
+    whyItMatters: "Extracts, updates, and retrieves user/session state across conversations using hybrid vector and graph storage.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
 
@@ -550,7 +550,7 @@ export const FEATURED_LEADERS = [
     category: "Cybersecurity",
     tags: ["reverse-engineering", "decompiler", "binary-analysis", "nsa", "malware"],
     metric: 55000,
-    whyItMatters: "The gold-standard open-source reverse engineering platform for auditing compiled firmware and native binaries.",
+    whyItMatters: "Open-source reverse engineering platform for auditing compiled firmware, PE/ELF/Mach-O binaries, and malware samples.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 10
   },
   {
@@ -564,7 +564,7 @@ export const FEATURED_LEADERS = [
     category: "Cybersecurity",
     tags: ["pentesting", "sql-injection", "database-security", "vulnerability"],
     metric: 33000,
-    whyItMatters: "Industry-standard automated engine for auditing and proving relational database injection vulnerabilities.",
+    whyItMatters: "Automates detection and proof-of-concept exploitation of boolean, time-based, and out-of-band SQL injection flaws.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 9
   },
   {
@@ -572,13 +572,13 @@ export const FEATURED_LEADERS = [
     sourceId: "aquasecurity/trivy",
     sourceUrl: "https://github.com/aquasecurity/trivy",
     name: "Trivy",
-    tagline: "Comprehensive security scanner for container images, Kubernetes, code repositories, and Cloud configurations.",
+    tagline: "Security scanner for container images, Kubernetes manifests, code repositories, and IaC configurations.",
     url: "https://github.com/aquasecurity/trivy",
     emoji: "🛡️",
     category: "Cybersecurity",
     tags: ["container-security", "sbom", "vulnerability-scanner", "kubernetes", "cve"],
     metric: 24000,
-    whyItMatters: "Fast, accurate multi-target scanner generating actionable SBOMs and vulnerability reports across enterprise CI/CD.",
+    whyItMatters: "Scans OS packages, language lockfiles, Terraform/K8s manifests, and container layers for known CVEs and SBOM export.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 8
   },
   {
@@ -592,7 +592,7 @@ export const FEATURED_LEADERS = [
     category: "Cybersecurity",
     tags: ["vulnerability-scanner", "bugbounty", "automation", "yaml-templates"],
     metric: 20500,
-    whyItMatters: "Powers continuous security monitoring and bug bounty hunting with thousands of community-verified zero-day templates.",
+    whyItMatters: "Executes declarative YAML request templates across HTTP, DNS, TCP, and headless browser targets to detect known CVEs.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 7
   },
   {
@@ -606,7 +606,7 @@ export const FEATURED_LEADERS = [
     category: "Cybersecurity",
     tags: ["secret-scanner", "api-keys", "git-security", "credential-leak"],
     metric: 17500,
-    whyItMatters: "Actively verifies found credentials against providers to eliminate false positives and prevent production key leaks.",
+    whyItMatters: "Scans git commit histories and CI logs for 800+ secret patterns and optionally checks whether tokens remain active.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 6
   },
   {
@@ -614,13 +614,13 @@ export const FEATURED_LEADERS = [
     sourceId: "zaproxy/zaproxy",
     sourceUrl: "https://github.com/zaproxy/zaproxy",
     name: "OWASP ZAP",
-    tagline: "The world's most widely used open-source web application dynamic security scanner (DAST).",
+    tagline: "Open-source web application dynamic application security testing (DAST) proxy and scanner.",
     url: "https://github.com/zaproxy/zaproxy",
     emoji: "⚡",
     category: "Cybersecurity",
     tags: ["owasp", "dast", "web-security", "penetration-testing", "scanner"],
     metric: 13500,
-    whyItMatters: "Flagship OWASP project for finding security vulnerabilities in web applications and REST APIs during active testing.",
+    whyItMatters: "Intercepting proxy and automated DAST scanner for probing web applications and OpenAPI/GraphQL endpoints.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 5
   },
   {
@@ -634,7 +634,7 @@ export const FEATURED_LEADERS = [
     category: "Cybersecurity",
     tags: ["owasp", "osint", "reconnaissance", "attack-surface", "dns-mapping"],
     metric: 12000,
-    whyItMatters: "Definitive OWASP reconnaissance framework for discovering shadow IT, unmapped DNS, and exposed perimeter hosts.",
+    whyItMatters: "Maps external subdomains, ASN netblocks, and certificate transparency records into a graph database for recon.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 4
   },
   {
@@ -648,7 +648,7 @@ export const FEATURED_LEADERS = [
     category: "Cybersecurity",
     tags: ["siem", "xdr", "endpoint-security", "intrusion-detection", "compliance"],
     metric: 11500,
-    whyItMatters: "Unified open-source security platform protecting enterprise servers and cloud workloads against active intrusion.",
+    whyItMatters: "Combines endpoint log collection, file integrity monitoring (FIM), and CIS benchmark auditing on a self-hosted stack.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
   },
   {
@@ -662,7 +662,7 @@ export const FEATURED_LEADERS = [
     category: "Cybersecurity",
     tags: ["sast", "static-analysis", "code-security", "semgrep", "devsecops"],
     metric: 11200,
-    whyItMatters: "Readable pattern syntax allows security teams to write custom vulnerability rules in minutes without complex AST learning.",
+    whyItMatters: "Matches source-code AST patterns across 30+ languages using YAML rules that resemble the target language syntax.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 3
   },
   {
@@ -676,7 +676,7 @@ export const FEATURED_LEADERS = [
     category: "Cybersecurity",
     tags: ["ebpf", "runtime-security", "kubernetes", "cloud-native", "threat-detection"],
     metric: 8200,
-    whyItMatters: "CNCF graduated project providing real-time anomaly detection and intrusion alerting inside production Kubernetes clusters.",
+    whyItMatters: "Monitors Linux kernel syscalls via eBPF to alert on unexpected shell spawns, sensitive file reads, or privilege escalation.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -684,13 +684,13 @@ export const FEATURED_LEADERS = [
     sourceId: "promptfoo/promptfoo",
     sourceUrl: "https://github.com/promptfoo/promptfoo",
     name: "Promptfoo",
-    tagline: "LLM red-teaming, automated penetration testing, and security evaluation for production AI apps.",
+    tagline: "LLM red-teaming, automated penetration testing, and security evaluation for AI applications.",
     url: "https://github.com/promptfoo/promptfoo",
     emoji: "🥋",
     category: "Cybersecurity",
     tags: ["llm-security", "red-teaming", "prompt-injection", "jailbreaks", "owasp-top-10"],
     metric: 6200,
-    whyItMatters: "Essential security testing CLI to probe LLM pipelines for prompt injections, hallucination, and PII leakage.",
+    whyItMatters: "CLI test runner for evaluating prompts and RAG pipelines against regression suites, jailbreaks, and PII leak probes.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -704,7 +704,7 @@ export const FEATURED_LEADERS = [
     category: "Cybersecurity",
     tags: ["owasp", "vulnerability-management", "appsec", "devsecops", "orchestration"],
     metric: 4500,
-    whyItMatters: "Central nervous system for enterprise AppSec teams to track, deduplicate, and triage findings across scans.",
+    whyItMatters: "Ingests SARIF and JSON outputs from SAST/DAST/SCA scanners to deduplicate findings and track remediation SLAs.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -712,13 +712,13 @@ export const FEATURED_LEADERS = [
     sourceId: "corazawaf/coraza",
     sourceUrl: "https://github.com/corazawaf/coraza",
     name: "OWASP Coraza",
-    tagline: "Enterprise-grade, high-performance Web Application Firewall (WAF) written in Go with full ModSecurity CRS support.",
+    tagline: "Web Application Firewall (WAF) library written in Go with ModSecurity SecLang and OWASP CRS compatibility.",
     url: "https://github.com/corazawaf/coraza",
     emoji: "🛡️",
     category: "Cybersecurity",
     tags: ["owasp", "waf", "web-application-firewall", "golang", "modsecurity"],
     metric: 2500,
-    whyItMatters: "Modern memory-safe WAF engine deployable as an Envoy proxy plugin or native Golang middleware against zero-days.",
+    whyItMatters: "Go WAF engine compatible with OWASP Core Rule Set (CRS), deployable in Caddy, Envoy/Proxy-Wasm, or Go HTTP servers.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
@@ -732,7 +732,7 @@ export const FEATURED_LEADERS = [
     category: "Cybersecurity",
     tags: ["llm-security", "ai-red-teaming", "vulnerability-scanner", "prompt-injection", "nvidia"],
     metric: 4800,
-    whyItMatters: "The industry-standard AI vulnerability scanner (" + "nmap for LLMs" + ") used by security teams to audit foundation models before deployment.",
+    whyItMatters: "Probes LLM endpoints with automated adversarial generators to test prompt injection, encoding bypasses, and toxic output.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
   },
   {
@@ -740,13 +740,13 @@ export const FEATURED_LEADERS = [
     sourceId: "maximhq/bifrost",
     sourceUrl: "https://github.com/maximhq/bifrost",
     name: "Bifrost AI Gateway",
-    tagline: "High-speed enterprise AI gateway (50x faster than Python proxies) with adaptive load balancing, guardrails, and MCP governance.",
+    tagline: "Go-based AI gateway with load balancing, fallback routing, token budget controls, and MCP governance.",
     url: "https://github.com/maximhq/bifrost",
     emoji: "🌉",
     category: "Models & Infra",
     tags: ["ai-gateway", "llm-routing", "mcp", "guardrails", "enterprise-infra"],
     metric: 3400,
-    whyItMatters: "Ultra-low-latency Go gateway that prevents provider lock-in and enforces token budgets across multi-model clusters.",
+    whyItMatters: "Routes requests across multiple LLM providers with automatic failover, key rotation, and per-team rate limits.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
@@ -754,13 +754,13 @@ export const FEATURED_LEADERS = [
     sourceId: "vercel-labs/json-render",
     sourceUrl: "https://github.com/vercel-labs/json-render",
     name: "json-render",
-    tagline: "The Generative UI framework for deterministic, schema-validated streaming of interactive components from LLM JSON outputs.",
+    tagline: "Generative UI framework for deterministic, schema-validated streaming of interactive components from LLM JSON outputs.",
     url: "https://github.com/vercel-labs/json-render",
     emoji: "🧩",
     category: "Coding",
     tags: ["generative-ui", "json", "frontend", "react", "streaming-ui"],
     metric: 14100,
-    whyItMatters: "Replaces fragile markdown-only chat bubbles with strict schema-bound interactive UI components rendered at 60fps.",
+    whyItMatters: "Maps streamed structured JSON outputs from LLMs directly onto schema-validated React UI components.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   },
   {
@@ -768,13 +768,13 @@ export const FEATURED_LEADERS = [
     sourceId: "jamiepine/voicebox",
     sourceUrl: "https://github.com/jamiepine/voicebox",
     name: "Voicebox",
-    tagline: "Open-source local voice synthesis studio with multi-speaker timelines, cloning, and zero-cloud audio generation.",
+    tagline: "Open-source local voice synthesis studio with multi-speaker timelines, cloning, and offline audio generation.",
     url: "https://github.com/jamiepine/voicebox",
     emoji: "🎙️",
     category: "Audio & Voice",
     tags: ["voice-synthesis", "tts", "voice-studio", "audio-ai", "open-source"],
     metric: 19900,
-    whyItMatters: "Brings multi-track DAW-grade voice synthesis and local cloning to desktop hardware without recurring API fees.",
+    whyItMatters: "Provides a multi-track timeline editor for local TTS models and voice cloning without external cloud API calls.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   }
 ];
