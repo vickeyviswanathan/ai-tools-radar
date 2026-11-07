@@ -8,7 +8,7 @@
 </script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.onesignal.com https://onesignal.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cipherati.com https://docs.google.com https://onesignal.com https://*.onesignal.com; worker-src 'self' blob:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://docs.google.com;" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cipherati.com https://docs.google.com; worker-src 'self' blob:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://docs.google.com;" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 <link rel="canonical" href="https://cipherati.com/" />
@@ -20,7 +20,6 @@
 <link rel="manifest" href="./manifest.json" />
 <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <title>Cipherati — AI Tools Directory, Cybersecurity News &amp; Scam Defense</title>
 <meta name="description" content="Cipherati is an independent, practitioner-grade radar of battle-tested AI developer tools, coding agents, and production systems — with verified direct links and the unfiltered truth on what actually works in production." />
 
@@ -8549,6 +8548,11 @@ function routeHash(hash, categories) {
     const cat = decodeURIComponent(catMatch[1]);
     switchView("tools");
     if (categories.includes(cat)) selectCategory(cat);
+  } else if (hash === "#newsletter-unsubscribe" || hash === "#unsubscribe") {
+    switchView("home");
+    setTimeout(() => {
+      if (typeof openUnsubscribeModal === "function") openUnsubscribeModal();
+    }, 80);
   } else if (hash === "#home" || !hash || hash === "#") {
     switchView("home");
   } else {
@@ -9154,6 +9158,67 @@ function closeBriefingModal(e) {
   if (modal) modal.style.display = "none";
 }
 
+function openUnsubscribeModal() {
+  const modal = document.getElementById("briefing-modal");
+  const contentEl = document.getElementById("briefing-modal-content");
+  const dateEl = document.getElementById("briefing-modal-date");
+  if (!modal || !contentEl) return;
+
+  modal.style.display = "flex";
+  if (dateEl) dateEl.textContent = "Manage Preferences & Unsubscribe";
+
+  contentEl.innerHTML = `
+    <div style="padding:12px 4px;">
+      <div style="font-size:13px;font-weight:800;text-transform:uppercase;color:var(--red);letter-spacing:0.04em;margin-bottom:8px;">🔒 DPDP Act 2023 Consent Withdrawal</div>
+      <h3 style="margin:0 0 8px;font-size:18px;font-weight:800;color:var(--text);">Unsubscribe from The Cipherati Briefing</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin:0 0 16px;line-height:1.5;">
+        Enter your email address below to immediately withdraw consent and opt out of the daily 8:00 AM IST intelligence briefing.
+      </p>
+      <form onsubmit="handleNewsletterUnsubscribe(event)" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+        <input type="email" id="unsubscribe-email-input" class="newsletter-input" style="flex:1;min-width:220px;font-size:13.5px;padding:10px 14px;" placeholder="you@company.com" required />
+        <button type="submit" class="newsletter-btn" style="background:var(--red);padding:10px 18px;font-size:13.5px;">Unsubscribe Now</button>
+      </form>
+      <div id="unsubscribe-feedback" class="newsletter-feedback" style="display:none;"></div>
+    </div>
+  `;
+}
+
+function handleNewsletterUnsubscribe(e) {
+  if (e) e.preventDefault();
+  const input = document.getElementById("unsubscribe-email-input");
+  const fb = document.getElementById("unsubscribe-feedback");
+  const email = (input && input.value ? input.value : "").trim().toLowerCase();
+  const strictEmailRe = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!email || email.length > 254 || !strictEmailRe.test(email) || /^[=+\-@\t\r]/.test(email)) return;
+
+  try {
+    const subs = JSON.parse(localStorage.getItem("cipherati_subscribers") || "[]");
+    const filtered = subs.filter(s => (typeof s === "object" ? s.email : s).toLowerCase() !== email);
+    localStorage.setItem("cipherati_subscribers", JSON.stringify(filtered));
+  } catch (err) {}
+
+  try {
+    const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfKK1ZUBtuoCuACtKN6aLO_HJhF5jaHVegeRCyHwGLfM6R8bA/formResponse";
+    const formData = new URLSearchParams();
+    formData.append("emailAddress", email);
+    formData.append("entry.899492466", "UNSUBSCRIBE: Explicit consent withdrawal under DPDP Act 2023");
+    fetch(formUrl, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formData.toString()
+    }).catch(function() {});
+  } catch (err) {}
+
+  if (fb) {
+    fb.className = "newsletter-feedback success";
+    fb.style.display = "block";
+    fb.textContent = "✓ Your email has been unsubscribed and your consent withdrawal is logged.";
+  }
+  if (input) input.value = "";
+  if (typeof showToast === "function") showToast("✓ Unsubscribed from The Cipherati Briefing.");
+}
+
 // --- PWA, Service Worker & Web Push Notification System ---
 let deferredPwaPrompt = null;
 
@@ -9196,20 +9261,6 @@ function triggerPwaInstall() {
 }
 
 async function togglePushNotifications() {
-  if (window.OneSignal && window.OneSignal.Notifications) {
-    try {
-      await OneSignal.Notifications.requestPermission();
-      const isPushPermitted = OneSignal.Notifications.permission;
-      updatePushStatusUI(isPushPermitted);
-      if (isPushPermitted && typeof showToast === "function") {
-        showToast("🔔 Push alerts enabled! You will receive critical cyber alerts.");
-      }
-      return;
-    } catch (e) {
-      console.log("[Push] OneSignal prompt notice:", e);
-    }
-  }
-
   if (!("Notification" in window)) {
     alert("Web push notifications are not supported in this browser.");
     return;
@@ -9265,21 +9316,6 @@ function updatePushStatusUI(isGranted) {
     }
   });
 }
-
-window.OneSignalDeferred = window.OneSignalDeferred || [];
-window.OneSignalDeferred.push(async function(OneSignal) {
-  try {
-    const appId = window.ONESIGNAL_APP_ID || "1dd3678a-6cb2-47f6-9c8c-1c946ddcbb0e";
-    await OneSignal.init({
-      appId,
-      notifyButton: { enable: false },
-      allowLocalhostAsSecureOrigin: true
-    });
-    updatePushStatusUI();
-  } catch (err) {
-    console.log("[OneSignal] Init deferred:", err.message);
-  }
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   updatePushStatusUI();

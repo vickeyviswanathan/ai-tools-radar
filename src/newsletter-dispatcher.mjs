@@ -1,7 +1,7 @@
 // Cipherati Automated Email Dispatcher & Google Sheet Subscriber Sync (powered by Resend API)
-// 1. Reads live subscriber rows from the linked Google Sheet CSV
-// 2. Syncs any new Google Sheet subscriber into Resend Audience, notifies Vivek, & sends welcome issue
-// 3. Broadcasts multipart (HTML + Plain Text) today.html + today.md from The Cipherati Briefing <briefing@cipherati.com>
+// 1. Reads live subscriber & unsubscribe rows from the linked Google Sheet CSV
+// 2. Syncs new subscribers into Resend Audience, removes unsubscribed contacts (DPDP Act 2023 Section 6(4)), & notifies admin
+// 3. Broadcasts multipart (HTML + Plain Text) today.html + today.md at 8:00 AM IST from The Cipherati Briefing <briefing@cipherati.com>
 
 import { readFileSync, existsSync } from "node:fs";
 
@@ -19,6 +19,13 @@ const STRICT_EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const GOOGLE_SHEET_CSV_URL = process.env.GOOGLE_SHEET_CSV_URL || "";
 const GOOGLE_SHEET_EDIT_URL = process.env.GOOGLE_SHEET_EDIT_URL || "https://docs.google.com/spreadsheets/";
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "";
+
+function getCurrentIstMinutes() {
+  // IST is UTC + 5 hours 30 minutes (330 minutes)
+  const now = new Date();
+  const utcMinutes = now.getUTCHours() * 60 + now.getUTCMinutes();
+  return (utcMinutes + 330) % 1440;
+}
 
 export async function dispatchDailyNewsletter() {
   const apiKey = process.env.RESEND_API_KEY;
@@ -50,8 +57,10 @@ export async function dispatchDailyNewsletter() {
     } catch {}
   }
 
-  // 1. Fetch live subscribers from Google Sheet CSV (only if private GOOGLE_SHEET_CSV_URL secret is configured)
-  const sheetSubscribers = [];
+  // 1. Fetch live subscribers & unsubscribe requests from Google Sheet CSV (if private GOOGLE_SHEET_CSV_URL secret is configured)
+  const sheetSubscribersMap = new Map();
+  const unsubscribedEmails = new Set();
+
   if (GOOGLE_SHEET_CSV_URL) {
     try {
       const csvRes = await fetch(GOOGLE_SHEET_CSV_URL);
@@ -65,16 +74,24 @@ export async function dispatchDailyNewsletter() {
             const email = parts[1].replace(/^"|"$/g, "").trim().toLowerCase();
             const consent = parts.slice(2).join(",").replace(/^"|"$/g, "").trim() || "Explicit opt-in under DPDP Act 2023";
             if (email && STRICT_EMAIL_RE.test(email)) {
-              sheetSubscribers.push({ timestamp, email, consent });
+              if (/^UNSUBSCRIBE/i.test(consent)) {
+                unsubscribedEmails.add(email);
+                sheetSubscribersMap.delete(email);
+              } else {
+                unsubscribedEmails.delete(email);
+                sheetSubscribersMap.set(email, { timestamp, email, consent });
+              }
             }
           }
         }
-        console.log(`[Newsletter] Synced ${sheetSubscribers.length} subscriber(s) from Google Sheet audit log.`);
+        console.log(`[Newsletter] Synced ${sheetSubscribersMap.size} active subscriber(s) and ${unsubscribedEmails.size} opt-out(s) from Google Sheet audit log.`);
       }
     } catch (err) {
       console.warn("[Newsletter] Could not fetch Google Sheet CSV:", err.message);
     }
   }
+
+  const sheetSubscribers = [...sheetSubscribersMap.values()];
 
   if (!apiKey) {
     console.log("[Newsletter] RESEND_API_KEY not configured. Briefing compiled & ready at public/newsletter/today.html.");
@@ -82,7 +99,7 @@ export async function dispatchDailyNewsletter() {
   }
 
   try {
-    // 2. Fetch existing Resend Audience contacts & sync any new subscribers from Google Sheet
+    // 2. Fetch existing Resend Audience contacts, process unsubscribes, & sync any new subscribers from Google Sheet
     const existingEmails = new Set();
     const activeAudienceEmails = new Set();
     const newlyAddedEmails = [];
@@ -98,7 +115,23 @@ export async function dispatchDailyNewsletter() {
             if (c.email) {
               const norm = c.email.trim().toLowerCase();
               existingEmails.add(norm);
-              if (!c.unsubscribed) activeAudienceEmails.add(norm);
+              if (!c.unsubscribed && !unsubscribedEmails.has(norm)) {
+                activeAudienceEmails.add(norm);
+              }
+              // If user submitted an UNSUBSCRIBE via the website, mark them unsubscribed in Resend Audience
+              if (!c.unsubscribed && unsubscribedEmails.has(norm) && c.id) {
+                try {
+                  await fetch(`https://api.resend.com/audiences/${audienceId}/contacts/${c.id}`, {
+                    method: "PATCH",
+                    headers: {
+                      "Authorization": `Bearer ${apiKey}`,
+                      "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ unsubscribed: true })
+                  });
+                  console.log(`[Newsletter] Processed DPDP unsubscribe for ${norm}`);
+                } catch {}
+              }
             }
           }
         }
@@ -106,8 +139,9 @@ export async function dispatchDailyNewsletter() {
         console.warn("[Newsletter] Could not fetch audience contacts:", e.message);
       }
 
-      // Sync new Google Sheet subscribers into Resend Audience & notify Vivek
+      // Sync new Google Sheet subscribers into Resend Audience & notify admin
       for (const sub of sheetSubscribers) {
+        if (unsubscribedEmails.has(sub.email)) continue;
         activeAudienceEmails.add(sub.email);
         if (!existingEmails.has(sub.email)) {
           existingEmails.add(sub.email);
@@ -148,7 +182,15 @@ export async function dispatchDailyNewsletter() {
       }
     }
 
-    // 3. Check if today's daily briefing has already been broadcast today (prevents duplicate sends on 6h runs)
+    // 3. Enforce 8:00 AM IST Morning Dispatch Window (07:45 AM IST = 465 mins)
+    // Code pushes (`push` event) or midnight UTC (`00:00 UTC` = 05:30 AM IST) runs will sync subscribers
+    // and send welcome issues to newly added subscribers, but hold the full morning broadcast until 8:00 AM IST!
+    const eventName = process.env.GITHUB_EVENT_NAME || "";
+    const forceSend = process.env.FORCE_NEWSLETTER_SEND === "true";
+    const istMins = getCurrentIstMinutes();
+    const isMorningWindowReached = istMins >= 465; // >= 07:45 AM IST
+
+    // 4. Check if today's daily briefing has already been broadcast today (prevents duplicate sends on 6h runs)
     let alreadySentToday = false;
     try {
       const recentRes = await fetch("https://api.resend.com/emails", {
@@ -168,16 +210,23 @@ export async function dispatchDailyNewsletter() {
         return { status: "already_sent_today", subject };
       }
       console.log(`[Newsletter] Sending today's issue to ${recipients.length} newly joined subscriber(s)...`);
+    } else if (!forceSend && (eventName === "push" || !isMorningWindowReached)) {
+      // If a push happens or the 05:30 AM IST cron runs before 8:00 AM IST, only send to brand-new signups if any
+      recipients = newlyAddedEmails;
+      if (recipients.length === 0) {
+        console.log(`[Newsletter] Holding morning broadcast ("${subject}") until the 8:00 AM IST scheduled run (current IST minute: ${istMins}, event: ${eventName || "local"}).`);
+        return { status: "held_for_8am_ist", subject };
+      }
     } else {
       recipients = activeAudienceEmails.size > 0 ? [...activeAudienceEmails] : (ADMIN_EMAIL ? [ADMIN_EMAIL] : []);
       if (recipients.length === 0) {
         console.log("[Newsletter] No active recipients found in Resend Audience.");
         return { status: "skipped", reason: "no_recipients" };
       }
-      console.log(`[Newsletter] Broadcasting morning briefing ("${subject}") from ${fromEmail} to ${recipients.length} subscriber(s)...`);
+      console.log(`[Newsletter] Broadcasting 8:00 AM IST morning briefing ("${subject}") from ${fromEmail} to ${recipients.length} subscriber(s)...`);
     }
 
-    // 4. Dispatch via Resend Batch API with BOTH html and text parts (multipart/alternative)
+    // 5. Dispatch via Resend Batch API with BOTH html and text parts (multipart/alternative)
     const batchPayload = recipients.slice(0, 100).map((email) => ({
       from: fromEmail,
       to: [email],

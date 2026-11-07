@@ -226,6 +226,7 @@ assert(!dispatcherCode.includes("2PACX-") && !dispatcherCode.includes("1KLX1pqtE
 
 const ghaCode = readFileSync(".github/workflows/deploy.yml", "utf8");
 assert(!/uses:\s*actions\/[a-z-]+@v\d+/i.test(ghaCode), "All GitHub Actions in deploy.yml are pinned to immutable 40-char commit SHAs");
+assert(ghaCode.includes('cron: "30 2 * * *"'), "GitHub Actions workflow schedules exact 8:00 AM IST (02:30 UTC) morning briefing run");
 
 const rssCode = readFileSync("src/live-cyber-rss.mjs", "utf8");
 assert(rssCode.includes("cleanUrl(link"), "src/live-cyber-rss.mjs enforces SSRF & protocol validation via cleanUrl() on all RSS article links");
@@ -236,6 +237,13 @@ assert(buildStaticCode.includes('replace(/</g, "\\\\u003c")') && seoPublishCode.
 
 const gasCode = readFileSync("scripts/google-apps-script-webhook.js", "utf8");
 assert(gasCode.includes("strictEmailRe") && gasCode.includes("safeCell") && !gasCode.includes("err.toString()"), "Google Apps Script webhook enforces strict email validation, formula neutralization, and generic error responses");
+
+const pkgCode = readFileSync("package.json", "utf8");
+assert(pkgCode.includes('"name": "cipherati"') && !existsSync("workflows") && !existsSync("data/day.json") && !existsSync("data/week.json"), "Legacy scraper workflows and prototype snapshots are completely removed");
+
+assert(indexHtml.includes("#newsletter-unsubscribe") && indexHtml.includes("handleNewsletterUnsubscribe") && dispatcherCode.includes("unsubscribedEmails"), "DPDP Act 2023 Section 6(4) 1-click unsubscribe flow is wired end-to-end from UI to Google Sheet & Resend Audience");
+assert(!cspLine.includes("onesignal.com") && !indexHtml.includes("cdn.onesignal.com"), "Zero external third-party script CDNs allowed in CSP or HTML");
+assert(dispatcherCode.includes("getCurrentIstMinutes") && dispatcherCode.includes("held_for_8am_ist"), "Newsletter dispatcher enforces 8:00 AM IST morning window and blocks accidental push broadcasts");
 
 // Summary
 console.log("=========================================");

@@ -59,7 +59,7 @@ function send(res, status, body, type = "application/json; charset=utf-8") {
     "Cross-Origin-Opener-Policy": "same-origin",
     "Cross-Origin-Resource-Policy": "same-origin",
     "Content-Security-Policy":
-      "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.onesignal.com https://onesignal.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cipherati.com https://docs.google.com https://onesignal.com https://*.onesignal.com; worker-src 'self' blob:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://docs.google.com;"
+      "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cipherati.com https://docs.google.com; worker-src 'self' blob:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://docs.google.com;"
   };
   if (config.https) {
     headers["Strict-Transport-Security"] = "max-age=63072000; includeSubDomains; preload";

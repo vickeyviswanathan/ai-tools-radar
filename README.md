@@ -1,63 +1,34 @@
-# 📡 AI Tools Radar
+# 🛡️ Cipherati — AI Tools Directory, Cybersecurity News & Scam Alerts
 
-**Live site: [vickeyviswanathan.github.io/ai-tools-radar](https://vickeyviswanathan.github.io/ai-tools-radar/)**
+**Live Site: [https://cipherati.com](https://cipherati.com/)**
 
-An open, independent directory of battle-tested AI developer tools, coding agents, and local models — with direct links and the unfiltered truth on what actually works in production.
+An open, independent directory of battle-tested AI developer tools, coding agents, and local models — combined with production engineering realities, verified cybersecurity news, and citizen scam alerts.
 
-![AI Tools Radar](public/og-image.png)
+![Cipherati](public/og-image.png)
 
-## What's inside
+## Four Core Pillars
 
-- **Curated Tools Directory** — 185+ tools across 9 pillars (Coding, Agents & Automation, Image & Design, Video, Audio & Voice, Chat & Assistants, Productivity, Research & Data, Models & Infra), searchable and filterable, with card/list layouts.
-- **8 Production Realities** — the hard technical mechanisms behind why AI projects fail in production, each with the vendor pitch, the engineering truth, the business impact (₹), and proven tools that solve it.
-- **Executive Brief** — the 3 costliest traps translated into business terms, front and center for leaders.
+1. **AI Tools Directory (`#tools`)** — 221+ verified developer tools, coding agents, and local model infrastructure across 10 categories, ranked by real community adoption (GitHub stars, Hugging Face likes, Hacker News scrutiny).
+2. **AI Realities (`#realities`)** — 22 production engineering truths exposing why AI projects fail in production, with the vendor myth, the engineering reality, the business impact, and proven open-source fixes.
+3. **Cybersecurity News (`#news`)** — Real-time incident intelligence across Indian banking/BFSI, crypto exchange heists, and global enterprise defense — strictly open-access and event-deduplicated.
+4. **Scam Alerts (`#scams`)** — 19 verified citizen protection playbooks (Digital Arrest, e-Challan APK Trojans, Wrong UPI Transfers, AI Voice Clones) with the National Cyber Crime Helpline (**1930**) and Golden Hour reporting protocol.
 
-## How it stays fresh
+## Automated Pipeline & Morning Briefing
 
-A GitHub Action runs every 6 hours (`.github/workflows/deploy.yml`) and:
+A hardened GitHub Actions pipeline (`.github/workflows/deploy.yml`) runs automatically on schedule (including **8:00 AM IST** daily) and:
 
-1. **Ingests** from 100% permitted open sources — Hacker News (Algolia API), GitHub Search API, Hugging Face Hub API.
-2. **Filters** through a quality gate (`src/quality.mjs`): minimum traction thresholds, anti-wrapper/anti-junk patterns, brand-safety blocklist, non-English cleanup, promo-fragment stripping.
-3. **Ranks** by real popularity signals (GitHub stars, Hugging Face likes, HN points) with decay velocity.
-4. **Publishes** `public/data/tools.json`, pre-renders all tool cards into `index.html` for SEO/no-JS visitors, injects JSON-LD structured data, and regenerates `sitemap.xml` / `robots.txt` (`src/seo-publish.mjs`).
-5. **Deploys** to GitHub Pages.
+1. **Ingests & Verifies** open-source AI tools and live cybersecurity news (`src/ingest.mjs`, `src/live-cyber-rss.mjs`).
+2. **Enforces Quality & Security Gates** (`src/quality.mjs`, `src/scam-guard.mjs`, `test/verify-build.mjs`).
+3. **Compiles & Dispatches** *The Cipherati Briefing* (`src/newsletter-generator.mjs`, `src/newsletter-dispatcher.mjs`) at **8:00 AM IST** with a persistent non-repeating ledger (`public/data/newsletter-sent-ledger.json`).
+4. **Publishes** static SEO/GEO/AEO artifacts (`public/index.html`, `public/llms.txt`, `public/sitemap.xml`, `public/robots.txt`) to GitHub Pages.
 
-## Local development
+## Local Development
 
 ```bash
-npm ci
-node build-static.mjs   # optional: refresh data (hits public APIs)
-npx serve public        # or any static server; open http://localhost:3000
+node build-static.mjs   # Refresh static data and pre-rendered HTML
+npm test                # Run the 80+ Quality & OWASP Security Gate checks
+node server.mjs         # Start local server on http://localhost:4317
 ```
-
-There is also a standalone server mode (`server.mjs`, port 4317) with SQLite storage (`node:sqlite`) and a submission endpoint, but the public site is the static GitHub Pages build.
-
-### Configuration (server mode / ingestion)
-
-| Variable | Default | Description |
-|---|---|---|
-| `PORT` | `4317` | Web server port (server mode) |
-| `INGEST_INTERVAL_MIN` | `60` | Background sync frequency (server mode) |
-| `GITHUB_TOKEN` | *(optional)* | Unlocks high-rate-limit GitHub search |
-
-## Project structure
-
-- `public/index.html` — the whole frontend (no framework, no build step)
-- `public/data/tools.json` — generated data feed consumed by the frontend
-- `build-static.mjs` — CI build: ingest → rank → publish → deploy
-- `src/quality.mjs` — quality gate, anti-junk filters, editorial summaries
-- `src/seo-publish.mjs` — static pre-render, JSON-LD, sitemap, robots.txt
-- `src/sources*.mjs` — HN / GitHub / Hugging Face API adapters
-- `src/ingest.mjs` — ingestion pipeline, dedup, trending score
-- `src/featured.mjs` — hand-picked editorial entries
-
-## Suggest a tool
-
-Open an issue: [github.com/vickeyviswanathan/ai-tools-radar/issues/new](https://github.com/vickeyviswanathan/ai-tools-radar/issues/new)
-
-## Author
-
-Built tracking what works when AI meets production and continuously updated on cybersecurity defense, banking IT resilience, and crypto security.
 
 ## License
 

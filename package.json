@@ -1,27 +1,20 @@
 {
-  "name": "ai-tools-radar",
+  "name": "cipherati",
   "version": "1.0.0",
-  "description": "Simple UI for new & trending AI tools from theresanaiforthat.com (scraped with Libretto)",
+  "description": "Cipherati — Independent AI Tools Directory, Production Realities, Cybersecurity News & Citizen Scam Defense",
   "scripts": {
     "start": "node server.mjs",
     "build": "node build-static.mjs",
-    "test": "node test/verify-build.mjs",
-    "scrape:day": "set TAAFT_PERIOD=day&& libretto run ./workflows/taaft-radar.ts --headless",
-    "scrape:week": "set TAAFT_PERIOD=week&& libretto run ./workflows/taaft-radar.ts --headless",
-    "scrape:month": "set TAAFT_PERIOD=month&& libretto run ./workflows/taaft-radar.ts --headless",
-    "typecheck": "tsc --noEmit -p ."
+    "test": "node test/verify-build.mjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/node": "^26.6.5",
-    "libretto": "^0.6.45",
-    "tsx": "^4.23.15",
-    "typescript": "^7.0.2",
-    "zod": "^4.6.7"
-  },
-  "overrides": {
-    "esbuild": "^0.28.2"
-  }
+  "keywords": [
+    "ai-tools",
+    "cybersecurity",
+    "scam-alerts",
+    "coding-agents",
+    "llm-infrastructure"
+  ],
+  "author": "Cipherati",
+  "license": "MIT",
+  "dependencies": {}
 }

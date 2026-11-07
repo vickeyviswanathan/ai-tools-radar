@@ -4,7 +4,8 @@ on:
   push:
     branches: ["main"]
   schedule:
-    # Run every 6 hours automatically to refresh the leaderboard
+    # Daily Morning Intelligence Briefing at 8:00 AM IST sharp (02:30 UTC) + 6-hour radar syncs
+    - cron: "30 2 * * *"
     - cron: "0 */6 * * *"
   workflow_dispatch:
 
@@ -30,12 +31,6 @@ jobs:
         uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
         with:
           node-version: 22
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run Dependency Vulnerability Gate (Zero CVEs Allowed)
-        run: npm audit --audit-level=low
 
       - name: Run Thought-Leader Curated Ingest Pipeline
         env:
