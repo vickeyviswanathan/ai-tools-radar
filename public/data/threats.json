@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T07:18:10.551Z",
+  "updatedAt": "2026-11-07T07:34:55.187Z",
   "categories": [
     {
       "id": "all",
@@ -184,19 +184,19 @@
       "consequence": "Read reporting on DT Next."
     },
     {
-      "id": "live-india-bfsi-976960119",
+      "id": "live-india-bfsi-13520529610",
       "category": "india-bfsi",
       "severity": "high",
-      "impactBadge": "🚨 Financial Fraud Probe",
-      "title": "ED busts Rs 400crore cyber fraud network by arresting two TN men",
+      "impactBadge": "🚨 Urgent Alert",
+      "title": "Jamtara police arrest three for cyber fraud, seize Rs 8.13 lakh",
       "sourceName": "The Times of India",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPb1B2YnlGNDZOLVVwaXV5Njk3MHZYV1NVUllwSHJ2RndHUUNlRmp0SXZPMkRXREZqbFRMX3FtQzEtVUVzZmdoc2RHS2E4R2prSHFXQ0psT0ZTMUFVY0VUbnVzRGFMcGpVekRYVFFBZ0FIdDlXSVp1Sm9zLWc1VDAwcUFZOEdtbXFVMzVNUlBJcHFNbEI0ejcwOFBKXzV6NFhmd0V5TVM1MmRjNTVLY2hDUjZMZzdIaXp2NFJ6cmFHMXcyWHVVMzVkQndOWXRxd1Bta2dLVTRn0gHbAUFVX3lxTE5qdHNIUVJFR0dnbTBnbE8yMFE5UkNVRlVWSUlKTmV0OVJOU1ZqTnVOWDFmQ3hxeld1UU9pb2NNVEpaNXJzd1I5dGJuV0swd1Vhd0hWTFNUeGlfS1hXNnRrSkRGM3FPbERiX2JORGxpU1BKOUtzZ3lNWGpiZXRJQXVybHI4TU42ZXFYWlVIc2xnU0Zjd0d4cWVfdVIzbzJtVS03eVU2OGdYX2xDWTAtMGQyeXRSMEctR2JGcms3WjdrelJqdVZ4RUhWUlNFUk9FRlYzM0dGS2wxMVRYZw?oc=5",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxONl8xWnZkWkZQbHpzNlJiakd0MUkwU0UycmYyaGNmQU1TNjVTbUU2V0ljeGFEWTFxU3A4TFJXMG1WZ0tBaXhCNEZBTHREODFQOVpINE1ZYXhkQkZkQXlfZEFKX0JlRWVZbV94QUt2bEJBSTZIM3pDQU1YRnNGOElqV3lQRjJfcFpORjNrUHhIRUZJUjhIdzZRaDBWSG5McjFDQ2c1UWR0R1hzNlBxbFFXVVFjU00yUXpPR3MzLUI5dkZCa3dvVk8zeUtRMV9fdnlkYmfSAdcBQVVfeXFMTzMza2x1YVRGZmRleHQwOWI4d1hHM1I4WTJwREl2QzBqRjIyOHVOQ3o5Q2J4VEJDYTc2eElEUE1SMk5RLWQtV0N6a2t3YllINkJIZVVlVFNpR3RTcldpeVQ2STk5ZTVyenZxVzJGUVpaLVJOcGQtZkxfZlBHcU9ZM1l0RDZfcDNRNnJwM0dRNEctMWpPOTJxVFFuQ1A0VFgxc0V5SHctb3hFbHh6VW11S29WVzhFMHYyUXlHcV9KaXJUUF9VM1dVMDRpOHIwNzVNRUZiYkxVcmc?oc=5",
       "provenanceBadge": "🏦 Banking & Finance",
       "badgeType": "regulatory",
       "ref": "The Times of India",
       "date": "2026-11-05",
-      "pubDate": "Thu, 05 Nov 2026 12:48:00 GMT",
-      "timestamp": 1793882880000,
+      "pubDate": "Thu, 05 Nov 2026 13:43:00 GMT",
+      "timestamp": 1793886180000,
       "timeAgo": "1 day ago",
       "entities": "Banking & Financial Services",
       "incident": "",
