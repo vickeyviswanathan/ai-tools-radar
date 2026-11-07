@@ -13,7 +13,7 @@ LEAD: Cybersecurity Is Becoming Central to Trust in India's Fintech Sector (Tech
 More on the Radar:
 • Spam Calls Drop 99% Across India, 5.5 Million Mobile Numbers Disconnected; ₹6,500 Crore in Cyber Fraud Prevented (The 420.in)
 • Knowledge Nugget | AI cybersecurity race: What does CERT-In's access to Anthropic's Mythos mean for India? (The Indian Express)
-• RBI tightens cybersecurity norms for non-bank payment operators, mandates six-hour incident reporting (bfsi.economictimes.indiatimes.com)
+• OpenAI Unveils New Cybersecurity AI Model Amid Growing Concerns Over AI-Powered Cyberattacks (News18)
 
 Explore all live incidents: https://cipherati.com/#news
 
@@ -30,8 +30,8 @@ The "Look-Alike Voice" AI Deepfake Distress Call [Vector: Phone Call / Audio AI]
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: X AnyLabeling
-• What it does: X-AnyLabeling: A lightweight, efficient, and unified cross-platform desktop application for annotating text, image, video, point cloud and multimodal data, combining versatile built-in tools with sta…
+Featured Tool: InvokeAI
+• What it does: Invoke is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The so…
 • Browse 221+ verified tools: https://cipherati.com/#tools
 
 ------------------------------------------------------------

@@ -15,7 +15,7 @@
     "date": "2026-11-06",
     "pubDate": "Fri, 06 Nov 2026 11:50:37 GMT",
     "timestamp": 1793965837000,
-    "timeAgo": "19 hours ago",
+    "timeAgo": "23 hours ago",
     "entities": "Banking & Financial Services",
     "incident": "",
     "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
@@ -37,7 +37,7 @@
       "date": "2026-11-06",
       "pubDate": "Fri, 06 Nov 2026 10:17:44 GMT",
       "timestamp": 1793960264000,
-      "timeAgo": "21 hours ago",
+      "timeAgo": "1 day ago",
       "entities": "Banking & Financial Services",
       "incident": "",
       "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
@@ -57,31 +57,31 @@
       "date": "2026-11-06",
       "pubDate": "Fri, 06 Nov 2026 10:03:37 GMT",
       "timestamp": 1793959417000,
-      "timeAgo": "21 hours ago",
+      "timeAgo": "1 day ago",
       "entities": "Banking & Financial Services",
       "incident": "",
       "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
       "consequence": "Read reporting on The Indian Express."
     },
     {
-      "id": "live-india-bfsi-541345141",
-      "category": "india-bfsi",
+      "id": "live-global-ransomware-7724216460",
+      "category": "global-ransomware",
       "severity": "high",
-      "impactBadge": "⚖️ RBI Directive",
-      "title": "RBI tightens cybersecurity norms for non-bank payment operators, mandates six-hour incident reporting",
-      "sourceName": "bfsi.economictimes.indiatimes.com",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNelhTWWFOYmc2eVFiM0ZfVkwwUWpuOG1fYkhJTHJndGx1WTBYMDZub1dCWUtaTlJGTzBhWV96U0ZVNnNsaHNGRzNZUUNfZUlfQno4MFhzY3RYYmNTVHVqTDhTajRONzN1Tjl0TDhYZXMza2V3RHIydzlaUDJTZlZQSW8ydnU3VVlDXzNyaUI5M3NvUFpLNmVTSW9ZMDVjSWM3d2NMaWJvY2E4b1VUNWhQU3hwNzd1bHRYOHFyY0ZJWmZNSDByYTNMWnRCZEFYWXNyTHN6dXRRamFSY050eTlHUlRqNlFzQWVtVlJ2ZkhGUGVpblXSAfgBQVVfeXFMTUNCSWl6Y2FBdU4tOFNMN2F2UlF4NEJ0NFZybFFHcW1jYzJiaHl4SmoxOXk5eF9kUmoyUHdsaVRmUGxqcUpqenRqSXNZQ3Rjc2t2NkpHSWhSVnR4UTR2b3hNQXpJeV9tM1B1N0ZRdjcxMXNKQlltVExoUG9KSFRxZEFpQWU5LUpVQjIyd21YRnRUc3AyOFlmUTY3c1V5NXowZUxjbGZ6VGs1b3oyc3p5VTdUbWo1RGJsUFpmZmFqN2ZCRzBwNURuUUJ5Rm5JckdCTFRaaDU0MEpvNlNDUHVuMjFBNFNjN25jenQ0VjRiRXJwU1o0emkwMk0?oc=5",
-      "provenanceBadge": "🏦 Banking & Finance",
-      "badgeType": "regulatory",
-      "ref": "bfsi.economictimes.indiatimes.com",
+      "impactBadge": "🚨 Urgent Alert",
+      "title": "OpenAI Unveils New Cybersecurity AI Model Amid Growing Concerns Over AI-Powered Cyberattacks",
+      "sourceName": "News18",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOYzZoRzFMQ3VCazZldjVTWWpYNVZrUWIwVnltVWVYYXY0ZkM1ZjByOGxidEdTQWtxSjYwRE5HUWIyQ0M3c1BPZ1dfYjUwbXBYa29FeGhEZlpNUmxYTVJWOERNY2ItcjlXcFZpckl6QllIbVh5Zm01cGsxeHkzUm9zSkZLeHlzdE9qb1lzSUdFaDJTdXB0TUNsZ0gzZl9IcTh0Qk94NkdIUnc5R0pHSUdLbnJLWVRTSS1qODhvd2cwRV9La1pyWVVaeHl6TERZNVRY0gHWAUFVX3lxTFB0Y2VsdVl4aXN2VnNSSEowWHl2VkU3QkFtZnZMRDZfYnUxaXdTOXc5VXZkMXE1OW9FX2ZfTjA1X21TMjIzUVAzWF80WkpvcWZKQVd6YnZUdmM5OXdaQTNKMFpIRVluYWJPanQ5SUFMLWw4Y01fd1MwT0xlbG02T05VNTRKRHRva0pibFpraW9yM0VuNm5VYXlkY2xyZFFFdC1LM2tZN3JVWHo1NE1Kc0dzRXhzeFI2VzBuUU12OEN1VU5aRy12MlFBZnA4Zm5CdjNzMDZpWEE?oc=5",
+      "provenanceBadge": "🌐 Global Security",
+      "badgeType": "statutory",
+      "ref": "News18",
       "date": "2026-11-06",
-      "pubDate": "Fri, 06 Nov 2026 02:27:21 GMT",
-      "timestamp": 1793932041000,
+      "pubDate": "Fri, 06 Nov 2026 06:50:05 GMT",
+      "timestamp": 1793947805000,
       "timeAgo": "1 day ago",
-      "entities": "Banking & Financial Services",
-      "incident": "Key updates: RBI Consolidates Cybersecurity Rules For Digital Payment Operators; RBI's new cyber rules could raise the cost of doing business for payment companies.",
+      "entities": "Enterprise & Public Infrastructure",
+      "incident": "Key updates: Tencent rolls out AI model trained with limited cybersecurity data amid hacking fears.",
       "rootCause": "Verified reporting confirmed by primary news desks and security researchers.",
-      "consequence": "Read reporting on bfsi.economictimes.indiatimes.com."
+      "consequence": "Read reporting on News18."
     }
   ],
   "topScam": {
@@ -100,19 +100,19 @@
     "actionUrl": "https://cert-in.org.in/"
   },
   "featuredTool": {
-    "id": 620,
-    "name": "X AnyLabeling",
-    "tagline": "X-AnyLabeling: A lightweight, efficient, and unified cross-platform desktop application for annotating text, image, video, point cloud and multimodal data, combining versatile built-in tools with sta…",
-    "url": "https://xanylabeling.com/",
+    "id": 651,
+    "name": "InvokeAI",
+    "tagline": "Invoke is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The so…",
+    "url": "https://invoke-ai.github.io/InvokeAI/",
     "emoji": null,
     "category": "Image & Design",
-    "why_it_matters": "Battle-tested in the open — 10.8K GitHub stars from real production users.",
-    "launched_at": 1684829670,
-    "score": 0.45720621503912817,
+    "why_it_matters": "Battle-tested in the open — 28.9K GitHub stars from real production users.",
+    "launched_at": 1660698267,
+    "score": 0.9581491844157598,
     "signals": [
-      "github:10846.0"
+      "github:28921.0"
     ],
-    "rank": 10846
+    "rank": 28921
   },
   "realityPick": {
     "id": 4,

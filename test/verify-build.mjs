@@ -19,6 +19,10 @@ function assert(condition, message) {
 // 1. Verify Output Files Exist
 const requiredFiles = [
   "public/index.html",
+  "public/cybersecurity-news.html",
+  "public/scam-alerts.html",
+  "public/ai-realities.html",
+  "public/ai-tools.html",
   "public/data/tools.json",
   "public/data/threats.json",
   "public/data/scams.json",
@@ -26,8 +30,10 @@ const requiredFiles = [
   "public/newsletter/today.html",
   "public/newsletter/today.md",
   "public/llms.txt",
+  "public/llms-full.txt",
   "public/sitemap.xml",
   "public/robots.txt",
+  "public/c9426a40b7894f12a8e3d56c719204ef.txt",
   "public/manifest.json",
   "public/sw.js",
   "public/icons/icon-192.png",
@@ -244,6 +250,20 @@ assert(pkgCode.includes('"name": "cipherati"') && !existsSync("workflows") && !e
 assert(indexHtml.includes("#newsletter-unsubscribe") && indexHtml.includes("handleNewsletterUnsubscribe") && dispatcherCode.includes("unsubscribedEmails"), "DPDP Act 2023 Section 6(4) 1-click unsubscribe flow is wired end-to-end from UI to Google Sheet & Resend Audience");
 assert(!cspLine.includes("onesignal.com") && !indexHtml.includes("cdn.onesignal.com"), "Zero external third-party script CDNs allowed in CSP or HTML");
 assert(dispatcherCode.includes("getCurrentIstMinutes") && dispatcherCode.includes("held_for_8am_ist"), "Newsletter dispatcher enforces 8:00 AM IST morning window and blocks accidental push broadcasts");
+
+// 13. SEO, GEO & AEO Search Dominance Gates
+const sitemapXml = readFileSync("public/sitemap.xml", "utf8");
+assert(sitemapXml.includes("cybersecurity-news.html") && sitemapXml.includes("scam-alerts.html") && sitemapXml.includes("ai-realities.html") && sitemapXml.includes("ai-tools.html") && sitemapXml.includes("llms-full.txt"), "sitemap.xml contains all 4 SEO pillar pages + llms-full.txt");
+
+const cyberPage = readFileSync("public/cybersecurity-news.html", "utf8");
+assert(cyberPage.includes('<section class="section-wrap" id="threats">') && cyberPage.includes("NewsArticle"), "cybersecurity-news.html renders threats section 100% visible without display:none and includes NewsArticle JSON-LD");
+
+const scamPage = readFileSync("public/scam-alerts.html", "utf8");
+assert(scamPage.includes('<section class="section-wrap" id="scams">') && scamPage.includes("FAQPage") && scamPage.includes("HowTo"), "scam-alerts.html renders scams section 100% visible without display:none and includes FAQPage + HowTo JSON-LD");
+
+const realitiesPage = readFileSync("public/ai-realities.html", "utf8");
+assert(realitiesPage.includes('<section class="section-wrap" id="realities">') && realitiesPage.includes("FAQPage"), "ai-realities.html renders realities section 100% visible without display:none and includes FAQPage JSON-LD");
+
 
 // Summary
 console.log("=========================================");

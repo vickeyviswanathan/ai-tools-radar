@@ -5,7 +5,7 @@ import { getDb, now, getMeta } from "./src/db.mjs";
 import { runIngestion } from "./src/ingest.mjs";
 import { evaluateQuality } from "./src/quality.mjs";
 import { refreshLiveMetrics } from "./src/live-metrics.mjs";
-import { publishSeoArtifacts, normalizeWhyItMatters } from "./src/seo-publish.mjs";
+import { publishSeoArtifacts, normalizeWhyItMatters, pingIndexNow } from "./src/seo-publish.mjs";
 import { getLiveCyberNews } from "./src/news-sync.mjs";
 import { validateAndSanitizeScams, generateScamsHtml } from "./src/scam-guard.mjs";
 import { REALITIES_DATA } from "./src/realities-data.mjs";
@@ -209,8 +209,22 @@ async function build() {
   const briefing = generateDailyBriefing();
   updateBriefingInHtml(briefing);
 
-  publishSeoArtifacts(output.tools, output.updatedAt);
-  generateLlmsTxt(output.tools, sanitizedScams);
+  publishSeoArtifacts(output.tools, output.updatedAt, "./public/index.html", {
+    threats: liveThreats,
+    scams: sanitizedScams,
+    realities: REALITIES_DATA
+  });
+  generateLlmsTxt(output.tools, sanitizedScams, liveThreats, REALITIES_DATA);
+  await pingIndexNow([
+    "https://cipherati.com/",
+    "https://cipherati.com/cybersecurity-news.html",
+    "https://cipherati.com/scam-alerts.html",
+    "https://cipherati.com/ai-realities.html",
+    "https://cipherati.com/ai-tools.html",
+    "https://cipherati.com/newsletter/today.html",
+    "https://cipherati.com/llms.txt",
+    "https://cipherati.com/llms-full.txt"
+  ]);
   console.log(`[Gate] Dropped ${rejectedAtBuild.length} stored entries at build time:\n  ` + rejectedAtBuild.join("\n  "));
   console.log(`Generated public/data/tools.json with ${output.tools.length} curated tools across ${categories.length} categories.`);
   console.log(`Generated public/data/threats.json with ${liveThreats.length} verified threat intelligence records.`);
@@ -438,22 +452,30 @@ function syncCountsInHtml(tools, realities, threats, scams) {
   writeFileSync(indexPath, html, "utf8");
 }
 
-function generateLlmsTxt(tools, scams) {
+function generateLlmsTxt(tools, scams, threats = [], realities = []) {
   const SITE_URL = "https://cipherati.com/";
   
   const llmsCompact = `# Cipherati
-> An open, curated directory of battle-tested AI developer tools, coding agents, and local models — with direct links, production realities, verified cybersecurity news, and citizen scam defense.
+> Independent cybersecurity news desk, citizen scam defense playbooks (1930 helpline, digital arrest, APK malware, UPI fraud), 22 production AI engineering realities, and ${tools.length} battle-tested AI developer tools.
 
 - Website: https://cipherati.com/
+- Cybersecurity News Desk: https://cipherati.com/cybersecurity-news.html
+- Scam Alerts & 1930 Citizen Defense: https://cipherati.com/scam-alerts.html
+- AI Engineering Realities in Production: https://cipherati.com/ai-realities.html
+- AI Developer Tools Directory: https://cipherati.com/ai-tools.html
+- Daily 60-Second Morning Briefing: https://cipherati.com/newsletter/today.html
 - National Cyber Crime Helpline (India): 1930
 - Official Cybercrime Reporting Portal: https://cybercrime.gov.in/
 - Spam Reporting (Chakshu): https://sancharsaathi.gov.in/
 
-## Core Sections
-- [Curated Tools Directory](https://cipherati.com/#tools): ${tools.length} production-ready developer tools, coding agents, and local model infrastructure.
-- [AI Realities in Production](https://cipherati.com/#realities): 18 hard truths and traps when deploying AI agents and LLMs.
-- [Cybersecurity News](https://cipherati.com/#news): 15 verified reporting stories across banking, enterprise defense, and critical CVEs.
-- [Scam Alerts & Citizen Defense](https://cipherati.com/#scams): ${scams.length} verified playbooks against digital arrest, APK malware, and financial fraud.
+## Core Sections & Canonical Pages
+- [Cybersecurity News](https://cipherati.com/cybersecurity-news.html): ${threats.length || 16} verified reporting stories across Indian banking/BFSI (RBI, CERT-In), enterprise defense, and global crypto heists.
+- [Scam Alerts & Citizen Defense](https://cipherati.com/scam-alerts.html): ${scams.length} verified playbooks against digital arrest, e-Challan/wedding card APK malware, and UPI financial fraud.
+- [AI Realities in Production](https://cipherati.com/ai-realities.html): ${realities.length || 22} hard engineering truths and architecture fixes when deploying AI agents, RAG, and LLMs.
+- [Curated AI Developer Tools Directory](https://cipherati.com/ai-tools.html): ${tools.length} production-ready developer tools, coding agents, and local model infrastructure.
+
+## Latest Verified Cybersecurity News
+${threats.slice(0, 10).map(t => `- **${t.title}** (${t.sourceName}, ${t.date || "2026"}): ${t.incident || "Verified cybersecurity reporting."}`).join("\n")}
 
 ## Emergency Cyber Crime Reporting (Golden Hour Protocol)
 If funds are unauthorizedly debited or someone is targeted by online fraud:
@@ -478,19 +500,24 @@ For complete listings and full data exports, visit https://cipherati.com/llms-fu
   const llmsFull = `# Cipherati Full Knowledge Digest & LLM System Prompt Context
 Website: https://cipherati.com/
 Publisher: Cipherati Intelligence Desk
+Canonical Pages:
+- https://cipherati.com/cybersecurity-news.html
+- https://cipherati.com/scam-alerts.html
+- https://cipherati.com/ai-realities.html
+- https://cipherati.com/ai-tools.html
 
 ## About Cipherati
-Cipherati is an independent, practitioner-grade radar of battle-tested AI developer tools, coding agents, and production systems — combined with real-time cybersecurity news, statutory threat provenance, and citizen scam defense intelligence. Zero vendor hype.
+Cipherati is an independent, practitioner-grade radar of battle-tested AI developer tools, coding agents, and production systems — combined with real-time cybersecurity news, statutory threat provenance (CERT-In, RBI, I4C, SEBI), and citizen scam defense intelligence. Zero vendor hype.
 
 ---
 
-## 1. Curated AI Developer Tools Directory (${tools.length} Tools)
+## 1. Live Cybersecurity News & Threat Intelligence (${threats.length} Verified Stories)
 
-${tools.map((t, idx) => `### ${idx + 1}. ${t.name}
-- URL: ${t.url}
-- Category: ${t.category}
-- Tagline: ${t.tagline}
-- Why it matters: ${t.why_it_matters || "Verified open-source production utility."}
+${threats.map((t, idx) => `### Story #${idx + 1}: ${t.title}
+- Source: ${t.sourceName} (${t.date || "2026"})
+- Sector: ${t.entities || "Cybersecurity"}
+- Severity: ${(t.severity || "high").toUpperCase()}
+- Context: ${t.incident || "Verified primary cybersecurity reporting."}
 `).join("\n")}
 
 ---
@@ -507,12 +534,35 @@ ${scams.map((s, idx) => `### Scam #${idx + 1}: ${s.title}
 
 ---
 
-## 3. Emergency Golden Hour Protocol for Financial Fraud
+## 3. AI Engineering Realities in Production (${realities.length} Architecture Truths)
+
+${realities.map((r) => `### Reality #${r.id}: ${r.title} (${r.category})
+- The Vendor Myth: "${r.myth}"
+- The Engineering Reality: ${r.reality}
+- What Actually Works: ${r.fix}
+- Business Impact: ${r.impact}
+- Proven Tools: ${(r.tools || []).map(t => `${t.name} (${t.url})`).join(", ")}
+`).join("\n")}
+
+---
+
+## 4. Curated AI Developer Tools Directory (${tools.length} Tools)
+
+${tools.map((t, idx) => `### ${idx + 1}. ${t.name}
+- URL: ${t.url}
+- Category: ${t.category}
+- Tagline: ${t.tagline}
+- Why it matters: ${t.why_it_matters || "Verified open-source production utility."}
+`).join("\n")}
+
+---
+
+## 5. Emergency Golden Hour Protocol for Financial Fraud
 1. Call 1930 (National Cyber Crime Helpline) within 2 hours.
 2. Screenshot all chats, transaction reference numbers (UTR), and caller IDs.
 3. Submit e-FIR on https://cybercrime.gov.in.
 4. Deliver dispute letter with complaint acknowledgement to your bank branch within 24 hours.
 `;
   writeFileSync("./public/llms-full.txt", llmsFull, "utf-8");
-  console.log(`Generated public/llms.txt and public/llms-full.txt (${tools.length} tools, ${scams.length} scams).`);
+  console.log(`Generated public/llms.txt and public/llms-full.txt (${threats.length} news stories, ${scams.length} scams, ${realities.length} AI realities, ${tools.length} tools).`);
 }

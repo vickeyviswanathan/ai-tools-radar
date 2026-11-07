@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://cipherati.com/</loc><lastmod>2026-11-07</lastmod><changefreq>hourly</changefreq></url>
-  <url><loc>https://cipherati.com/newsletter/today.html</loc><lastmod>2026-11-07</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://cipherati.com/llms.txt</loc><lastmod>2026-11-07</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://cipherati.com/</loc><lastmod>2026-11-07</lastmod><changefreq>hourly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cipherati.com/cybersecurity-news.html</loc><lastmod>2026-11-07</lastmod><changefreq>hourly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://cipherati.com/scam-alerts.html</loc><lastmod>2026-11-07</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
+  <url><loc>https://cipherati.com/ai-realities.html</loc><lastmod>2026-11-07</lastmod><changefreq>daily</changefreq><priority>0.90</priority></url>
+  <url><loc>https://cipherati.com/ai-tools.html</loc><lastmod>2026-11-07</lastmod><changefreq>daily</changefreq><priority>0.90</priority></url>
+  <url><loc>https://cipherati.com/newsletter/today.html</loc><lastmod>2026-11-07</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://cipherati.com/llms.txt</loc><lastmod>2026-11-07</lastmod><changefreq>daily</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/llms-full.txt</loc><lastmod>2026-11-07</lastmod><changefreq>daily</changefreq><priority>0.80</priority></url>
 </urlset>
