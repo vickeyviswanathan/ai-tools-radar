@@ -80,12 +80,15 @@ export function canonicalKey(rawUrl) {
   return host;
 }
 
-// Normalize a user/source URL; returns null when unusable.
+const PRIVATE_HOST_RE = /^(localhost|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+|169\.254\.\d+\.\d+|0\.0\.0\.0|\[?::1\]?|\[?fe80:.*|\[?fc00:.*|\[?fd00:.*|.*\.internal|.*\.local)$/i;
+
+// Normalize a user/source URL; returns null when unusable or pointing to private/metadata IPs.
 export function cleanUrl(raw) {
   try {
     const u = new URL(String(raw).trim());
     if (!/^https?:$/.test(u.protocol) || !u.hostname.includes(".")) return null;
     if (u.username || u.password) return null;
+    if (PRIVATE_HOST_RE.test(u.hostname)) return null;
     // Drop tracking params.
     for (const k of [...u.searchParams.keys()]) if (/^(utm_|ref$|fbclid|gclid|mc_)/i.test(k)) u.searchParams.delete(k);
     u.hash = "";

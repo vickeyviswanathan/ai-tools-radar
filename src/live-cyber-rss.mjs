@@ -5,6 +5,8 @@
 // 3. Pre-Flight Link & Content Relevance Verification (checks HTTP 200 and cyber keyword context)
 // 4. Multi-Angle Synthesis (bundles related angles e.g. Heist + Freezes + Raids into sub-bullet insights)
 
+import { cleanUrl } from "./classify.mjs";
+
 const HARD_PAYWALL_DOMAINS = [
   "wsj.com",
   "bloomberg.com",
@@ -136,10 +138,11 @@ async function fetchRssFeed(url) {
         .trim();
       const source = rawSource || (rawTitle.includes("-") ? rawTitle.split("-").pop().trim() : "Verified News Wire");
 
-      if (cleanTitle && link && isCyberRelevant(cleanTitle)) {
+      const safeLink = cleanUrl(link.trim());
+      if (cleanTitle && safeLink && isCyberRelevant(cleanTitle)) {
         items.push({
           title: cleanTitle,
-          link,
+          link: safeLink,
           pubDate,
           source
         });

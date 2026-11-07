@@ -111,7 +111,16 @@ self.addEventListener("notificationclick", (event) => {
 
   if (event.action === "dismiss") return;
 
-  const targetUrl = (event.notification.data && event.notification.data.url) ? event.notification.data.url : "./#news";
+  const rawUrl = (event.notification.data && event.notification.data.url) ? String(event.notification.data.url) : "./#news";
+  let targetUrl = "./#news";
+  try {
+    const parsed = new URL(rawUrl, self.location.origin);
+    if (parsed.origin === self.location.origin || parsed.hostname === "cipherati.com") {
+      targetUrl = parsed.href;
+    }
+  } catch {
+    targetUrl = "./#news";
+  }
 
   event.waitUntil(
     clients.matchAll({ type: "window", includeUncontrolled: true }).then((windowClients) => {

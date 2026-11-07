@@ -190,9 +190,9 @@ assert(indexHtml.includes('else if (hash === "#home" || !hash || hash === "#") {
 // 9. Verify Daily Intelligence Briefing Generator
 const briefingData = JSON.parse(readFileSync("public/data/briefing.json", "utf8"));
 assert(briefingData.leadThreat && briefingData.leadThreat.title, "Briefing has verified Lead Cyber Story");
-assert(briefingData.topScam && briefingData.topScam.title, "Briefing has active Scam Watch");
-assert(briefingData.featuredTool && briefingData.featuredTool.name, "Briefing has featured AI Tool");
-assert(briefingData.realityPick && briefingData.realityPick.title, "Briefing has Reality Check of the day");
+assert(briefingData.topScam === null || (briefingData.topScam && briefingData.topScam.title), "Briefing Scam Alerts is valid or cleanly skipped when all sent");
+assert(briefingData.featuredTool === null || (briefingData.featuredTool && briefingData.featuredTool.name), "Briefing AI Tool is valid or cleanly skipped when all sent");
+assert(briefingData.realityPick === null || (briefingData.realityPick && briefingData.realityPick.title), "Briefing AI Reality is valid or cleanly skipped when all sent");
 
 // 10. Verify PWA Manifest & Service Worker Integrity
 const manifestData = JSON.parse(readFileSync("public/manifest.json", "utf8"));
@@ -203,6 +203,39 @@ assert(indexHtml.includes('rel="manifest"') && indexHtml.includes('serviceWorker
 // 11. Verify Dispatcher Modules
 assert(existsSync("src/newsletter-dispatcher.mjs"), "Email newsletter dispatcher module exists");
 assert(existsSync("src/push-dispatcher.mjs"), "Web push notification dispatcher module exists");
+
+// 12. OWASP Deep Hardening Gates (CSP, Reverse-Tabnabbing, SSRF, Open-Redirect, Auth & Rate Limiting)
+const cspLine = indexHtml.match(/<meta http-equiv="Content-Security-Policy"[^>]+>/i)?.[0] || "";
+assert(cspLine.includes("object-src 'none'") && cspLine.includes("frame-ancestors 'none'") && cspLine.includes("https://docs.google.com"), "CSP includes object-src 'none', frame-ancestors 'none', and explicit Google Forms connect/form-action allowlist");
+
+const blankWithoutNoopener = [...indexHtml.matchAll(/<a[^>]+target="_blank"[^>]*>/gi)].filter(m => !m[0].includes("noopener") || !m[0].includes("noreferrer"));
+assert(blankWithoutNoopener.length === 0, `All target="_blank" links include rel="noopener noreferrer" (${blankWithoutNoopener.length} missing)`);
+
+const swCode = readFileSync("public/sw.js", "utf8");
+assert(swCode.includes('parsed.hostname === "cipherati.com"'), "Service Worker notificationclick enforces strict same-origin / cipherati.com allowlist");
+
+const serverCode = readFileSync("server.mjs", "utf8");
+assert(serverCode.includes("verifyAdminToken") && serverCode.includes("checkRateLimit") && serverCode.includes("MAX_BODY_BYTES"), "server.mjs enforces admin authentication on /api/refresh, rate limiting on /api/submit, and 16KB body cap");
+
+const classifyCode = readFileSync("src/classify.mjs", "utf8");
+assert(classifyCode.includes("PRIVATE_HOST_RE"), "src/classify.mjs blocks SSRF private/loopback/metadata IP ranges in cleanUrl()");
+
+const dispatcherCode = readFileSync("src/newsletter-dispatcher.mjs", "utf8");
+assert(dispatcherCode.includes("escHtml(sub.email)") && dispatcherCode.includes("STRICT_EMAIL_RE"), "src/newsletter-dispatcher.mjs HTML-escapes Google Sheet fields and validates strict email format");
+assert(!dispatcherCode.includes("2PACX-") && !dispatcherCode.includes("1KLX1pqtEP") && !dispatcherCode.includes("@gmail.com") && !dispatcherCode.includes("32ee4aad"), "Zero Google Sheet URLs, personal emails, or Resend Audience IDs exposed in public source code");
+
+const ghaCode = readFileSync(".github/workflows/deploy.yml", "utf8");
+assert(!/uses:\s*actions\/[a-z-]+@v\d+/i.test(ghaCode), "All GitHub Actions in deploy.yml are pinned to immutable 40-char commit SHAs");
+
+const rssCode = readFileSync("src/live-cyber-rss.mjs", "utf8");
+assert(rssCode.includes("cleanUrl(link"), "src/live-cyber-rss.mjs enforces SSRF & protocol validation via cleanUrl() on all RSS article links");
+
+const buildStaticCode = readFileSync("build-static.mjs", "utf8");
+const seoPublishCode = readFileSync("src/seo-publish.mjs", "utf8");
+assert(buildStaticCode.includes('replace(/</g, "\\\\u003c")') && seoPublishCode.includes('replace(/</g, "\\\\u003c")'), "All inline JSON-in-HTML script serializations escape '<' to '\\u003c' to prevent script-breakout XSS");
+
+const gasCode = readFileSync("scripts/google-apps-script-webhook.js", "utf8");
+assert(gasCode.includes("strictEmailRe") && gasCode.includes("safeCell") && !gasCode.includes("err.toString()"), "Google Apps Script webhook enforces strict email validation, formula neutralization, and generic error responses");
 
 // Summary
 console.log("=========================================");

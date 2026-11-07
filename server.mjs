@@ -1,5 +1,6 @@
 // Independent Server & API for AI Tools Radar
 import { createServer } from "node:http";
+import { timingSafeEqual } from "node:crypto";
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { config, ROOT } from "./src/config.mjs";
@@ -9,20 +10,61 @@ import { cleanUrl, clip } from "./src/classify.mjs";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
-  ".js": "text/javascript",
-  ".css": "text/css",
-  ".json": "application/json",
+  ".js": "text/javascript; charset=utf-8",
+  ".css": "text/css; charset=utf-8",
+  ".json": "application/json; charset=utf-8",
   ".svg": "image/svg+xml",
   ".png": "image/png",
   ".ico": "image/x-icon",
 };
 
-function send(res, status, body, type = "application/json") {
-  res.writeHead(status, {
+const MAX_BODY_BYTES = 16 * 1024; // 16 KB max request payload
+const rateLimitBuckets = new Map();
+
+function checkRateLimit(ip, limitPerMin = 10) {
+  const nowMs = Date.now();
+  const bucket = rateLimitBuckets.get(ip) || [];
+  const active = bucket.filter((ts) => nowMs - ts < 60_000);
+  if (active.length >= limitPerMin) {
+    rateLimitBuckets.set(ip, active);
+    return false;
+  }
+  active.push(nowMs);
+  rateLimitBuckets.set(ip, active);
+  return true;
+}
+
+function verifyAdminToken(req) {
+  if (!config.adminToken || config.adminToken.length < 16) return false;
+  const auth = req.headers["authorization"] || "";
+  const token = auth.startsWith("Bearer ") ? auth.slice(7).trim() : (req.headers["x-admin-token"] || "");
+  if (!token || token.length !== config.adminToken.length) return false;
+  try {
+    return timingSafeEqual(Buffer.from(token, "utf8"), Buffer.from(config.adminToken, "utf8"));
+  } catch {
+    return false;
+  }
+}
+
+function send(res, status, body, type = "application/json; charset=utf-8") {
+  const headers = {
     "Content-Type": type,
     "Cache-Control": "no-store",
-    "Access-Control-Allow-Origin": "*",
-  });
+    "Access-Control-Allow-Origin": "https://cipherati.com",
+    "Vary": "Origin",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Cross-Origin-Resource-Policy": "same-origin",
+    "Content-Security-Policy":
+      "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.onesignal.com https://onesignal.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cipherati.com https://docs.google.com https://onesignal.com https://*.onesignal.com; worker-src 'self' blob:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://docs.google.com;"
+  };
+  if (config.https) {
+    headers["Strict-Transport-Security"] = "max-age=63072000; includeSubDomains; preload";
+  }
+  res.writeHead(status, headers);
   res.end(typeof body === "string" || Buffer.isBuffer(body) ? body : JSON.stringify(body));
 }
 
@@ -120,17 +162,43 @@ const server = createServer(async (req, res) => {
       });
     }
 
-    // 2. API: POST /api/refresh (Trigger manual re-sync)
+    // 2. API: POST /api/refresh (Trigger manual re-sync — Admin Authenticated Only)
     if (url.pathname === "/api/refresh" && req.method === "POST") {
+      if (!verifyAdminToken(req)) {
+        return send(res, 401, { error: "Unauthorized: valid admin token required" });
+      }
       triggerIngestion();
       return send(res, 200, { ok: true, message: "Ingestion started" });
     }
 
-    // 3. API: POST /api/submit (Public Tool Submissions)
+    // 3. API: POST /api/submit (Public Tool Submissions — Rate Limited & Size Capped)
     if (url.pathname === "/api/submit" && req.method === "POST") {
+      const clientIp = config.trustProxy
+        ? String(req.headers["x-forwarded-for"] || req.socket.remoteAddress || "unknown").split(",")[0].trim()
+        : String(req.socket.remoteAddress || "unknown");
+
+      if (!checkRateLimit(clientIp, 5)) {
+        return send(res, 429, { error: "Too many submissions. Please try again in a minute." });
+      }
+
       let body = "";
-      req.on("data", (chunk) => (body += chunk));
+      let bodyBytes = 0;
+      let aborted = false;
+
+      req.on("data", (chunk) => {
+        if (aborted) return;
+        bodyBytes += chunk.length;
+        if (bodyBytes > MAX_BODY_BYTES) {
+          aborted = true;
+          send(res, 413, { error: "Payload too large" });
+          req.destroy();
+          return;
+        }
+        body += chunk;
+      });
+
       req.on("end", () => {
+        if (aborted) return;
         try {
           const data = JSON.parse(body);
           const clean = cleanUrl(data.url);
@@ -152,21 +220,25 @@ const server = createServer(async (req, res) => {
 
     // 4. ads.txt support for ad monetization (e.g., AdSense)
     if (url.pathname === "/ads.txt" && req.method === "GET") {
-      return send(res, 200, config.ads.adsTxt || "# Ads.txt placeholder\n", "text/plain");
+      return send(res, 200, config.ads.adsTxt || "# Ads.txt placeholder\n", "text/plain; charset=utf-8");
     }
 
-    // 5. Static file serving from /public
-    const rel = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
-    const file = path.join(ROOT, "public", path.normalize(rel).replace(/^(\.\.[/\\])+/, ""));
-    if (!file.startsWith(path.join(ROOT, "public"))) return send(res, 403, { error: "Forbidden" });
+    // 5. Static file serving from /public (Strict Path Traversal Guard)
+    const publicRoot = path.resolve(ROOT, "public");
+    const rel = url.pathname === "/" ? "index.html" : decodeURIComponent(url.pathname).replace(/^[/\\]+/, "");
+    const file = path.resolve(publicRoot, rel);
+    if (file !== publicRoot && !file.startsWith(publicRoot + path.sep)) {
+      return send(res, 403, { error: "Forbidden" });
+    }
 
-    await stat(file);
-    const ext = path.extname(file);
+    const st = await stat(file);
+    if (!st.isFile()) return send(res, 404, { error: "Not found" });
+    const ext = path.extname(file).toLowerCase();
     return send(res, 200, await readFile(file), MIME[ext] ?? "application/octet-stream");
   } catch (err) {
     if (err.code === "ENOENT") return send(res, 404, { error: "Not found" });
-    console.error(err);
-    return send(res, 500, { error: String(err.message || err) });
+    console.error("[Server Error]", err.message || err);
+    return send(res, 500, { error: "Internal server error" });
   }
 });
 

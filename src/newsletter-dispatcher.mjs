@@ -1,16 +1,32 @@
-// Cipherati Automated Email Dispatcher (powered by Resend API)
-// Integrates seamlessly with the morning intelligence briefing pipeline.
-// If RESEND_API_KEY is configured in environment / GitHub Secrets, broadcasts today.html.
-// Otherwise, safely logs instructions and exits without blocking the build.
+// Cipherati Automated Email Dispatcher & Google Sheet Subscriber Sync (powered by Resend API)
+// 1. Reads live subscriber rows from the linked Google Sheet CSV
+// 2. Syncs any new Google Sheet subscriber into Resend Audience, notifies Vivek, & sends welcome issue
+// 3. Broadcasts multipart (HTML + Plain Text) today.html + today.md from The Cipherati Briefing <briefing@cipherati.com>
 
 import { readFileSync, existsSync } from "node:fs";
 
+function escHtml(str = "") {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+const STRICT_EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+const GOOGLE_SHEET_CSV_URL = process.env.GOOGLE_SHEET_CSV_URL || "";
+const GOOGLE_SHEET_EDIT_URL = process.env.GOOGLE_SHEET_EDIT_URL || "https://docs.google.com/spreadsheets/";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "";
+
 export async function dispatchDailyNewsletter() {
   const apiKey = process.env.RESEND_API_KEY;
-  const audienceId = process.env.RESEND_AUDIENCE_ID;
-  const fromEmail = process.env.RESEND_FROM_EMAIL || "Cipherati Briefing <briefing@cipherati.com>";
+  const audienceId = process.env.RESEND_AUDIENCE_ID || "";
+  const fromEmail = process.env.RESEND_FROM_EMAIL || "The Cipherati Briefing <briefing@cipherati.com>";
 
   const todayHtmlPath = "public/newsletter/today.html";
+  const todayMdPath = "public/newsletter/today.md";
   const briefingJsonPath = "public/data/briefing.json";
 
   if (!existsSync(todayHtmlPath)) {
@@ -19,56 +35,174 @@ export async function dispatchDailyNewsletter() {
   }
 
   const htmlContent = readFileSync(todayHtmlPath, "utf8");
-  let subject = "The Cipherati Morning Briefing";
+  const textContent = existsSync(todayMdPath)
+    ? readFileSync(todayMdPath, "utf8")
+    : "Read today's Cipherati Briefing at https://cipherati.com/";
+
+  let subject = "The Cipherati Briefing";
 
   if (existsSync(briefingJsonPath)) {
     try {
       const briefing = JSON.parse(readFileSync(briefingJsonPath, "utf8"));
       if (briefing.dateFormatted) {
-        subject = `⚡ Cipherati Daily Intelligence — ${briefing.dateFormatted}`;
+        subject = `The Cipherati Briefing — ${briefing.dateFormatted}`;
       }
     } catch {}
   }
 
+  // 1. Fetch live subscribers from Google Sheet CSV (only if private GOOGLE_SHEET_CSV_URL secret is configured)
+  const sheetSubscribers = [];
+  if (GOOGLE_SHEET_CSV_URL) {
+    try {
+      const csvRes = await fetch(GOOGLE_SHEET_CSV_URL);
+      if (csvRes.ok) {
+        const csvText = await csvRes.text();
+        const lines = csvText.trim().split(/\r?\n/).slice(1);
+        for (const line of lines) {
+          const parts = line.split(",");
+          if (parts.length >= 2) {
+            const timestamp = parts[0].replace(/^"|"$/g, "").trim();
+            const email = parts[1].replace(/^"|"$/g, "").trim().toLowerCase();
+            const consent = parts.slice(2).join(",").replace(/^"|"$/g, "").trim() || "Explicit opt-in under DPDP Act 2023";
+            if (email && STRICT_EMAIL_RE.test(email)) {
+              sheetSubscribers.push({ timestamp, email, consent });
+            }
+          }
+        }
+        console.log(`[Newsletter] Synced ${sheetSubscribers.length} subscriber(s) from Google Sheet audit log.`);
+      }
+    } catch (err) {
+      console.warn("[Newsletter] Could not fetch Google Sheet CSV:", err.message);
+    }
+  }
+
   if (!apiKey) {
     console.log("[Newsletter] RESEND_API_KEY not configured. Briefing compiled & ready at public/newsletter/today.html.");
-    console.log("[Newsletter] (Add RESEND_API_KEY and RESEND_AUDIENCE_ID to GitHub Secrets to enable automatic delivery).");
-    return { status: "ready_offline", subject };
+    return { status: "ready_offline", subject, sheetCount: sheetSubscribers.length };
   }
 
   try {
-    console.log(`[Newsletter] Broadcasting morning briefing via Resend API: "${subject}"...`);
+    // 2. Fetch existing Resend Audience contacts & sync any new subscribers from Google Sheet
+    const existingEmails = new Set();
+    const activeAudienceEmails = new Set();
+    const newlyAddedEmails = [];
 
-    // If an Audience ID is provided, broadcast to audience or send batch
-    const payload = {
-      from: fromEmail,
-      to: [fromEmail], // Fallback or broadcast target
-      subject,
-      html: htmlContent,
-      headers: {
-        "List-Unsubscribe": "<https://cipherati.com/#newsletter-unsubscribe>",
-        "X-Entity-Ref-ID": `cipherati-${new Date().toISOString().split("T")[0]}`
-      }
-    };
-
-    // If audience provided, send broadcast to audience contacts
     if (audienceId) {
-      payload.audience_id = audienceId;
+      try {
+        const contactsRes = await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
+          headers: { "Authorization": `Bearer ${apiKey}` }
+        });
+        if (contactsRes.ok) {
+          const contactsData = await contactsRes.json();
+          for (const c of contactsData.data || []) {
+            if (c.email) {
+              const norm = c.email.trim().toLowerCase();
+              existingEmails.add(norm);
+              if (!c.unsubscribed) activeAudienceEmails.add(norm);
+            }
+          }
+        }
+      } catch (e) {
+        console.warn("[Newsletter] Could not fetch audience contacts:", e.message);
+      }
+
+      // Sync new Google Sheet subscribers into Resend Audience & notify Vivek
+      for (const sub of sheetSubscribers) {
+        activeAudienceEmails.add(sub.email);
+        if (!existingEmails.has(sub.email)) {
+          existingEmails.add(sub.email);
+          newlyAddedEmails.push(sub.email);
+          try {
+            await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
+              method: "POST",
+              headers: {
+                "Authorization": `Bearer ${apiKey}`,
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({ email: sub.email, unsubscribed: false })
+            });
+            if (ADMIN_EMAIL) {
+              await fetch("https://api.resend.com/emails", {
+                method: "POST",
+                headers: {
+                  "Authorization": `Bearer ${apiKey}`,
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                  from: fromEmail,
+                  to: [ADMIN_EMAIL],
+                  subject: `New Cipherati Subscriber: ${sub.email.replace(/[\r\n]/g, "")}`,
+                  text: `New Cipherati Briefing Subscriber\n\nEmail: ${sub.email}\nTimestamp: ${sub.timestamp}\nConsent Record: ${sub.consent}\nGoogle Sheet: ${GOOGLE_SHEET_EDIT_URL}`,
+                  html: `<div style="font-family:sans-serif;max-width:600px;padding:20px;border:1px solid #e2e8f0;border-radius:10px;">
+                    <h3>New Cipherati Briefing Subscriber</h3>
+                    <p><strong>Subscriber Email:</strong> ${escHtml(sub.email)}</p>
+                    <p><strong>Timestamp:</strong> ${escHtml(sub.timestamp)}</p>
+                    <p><strong>Consent Record:</strong> ${escHtml(sub.consent)}</p>
+                    <p><a href="${GOOGLE_SHEET_EDIT_URL}" style="color:#2563eb;font-weight:bold;">Open Subscriber Google Sheet →</a></p>
+                  </div>`
+                })
+              });
+            }
+          } catch {}
+        }
+      }
     }
 
-    const res = await fetch("https://api.resend.com/emails", {
+    // 3. Check if today's daily briefing has already been broadcast today (prevents duplicate sends on 6h runs)
+    let alreadySentToday = false;
+    try {
+      const recentRes = await fetch("https://api.resend.com/emails", {
+        headers: { "Authorization": `Bearer ${apiKey}` }
+      });
+      if (recentRes.ok) {
+        const recentData = await recentRes.json();
+        alreadySentToday = (recentData.data || []).some((e) => e.subject === subject);
+      }
+    } catch {}
+
+    let recipients = [];
+    if (alreadySentToday) {
+      recipients = newlyAddedEmails;
+      if (recipients.length === 0) {
+        console.log(`[Newsletter] Today's issue ("${subject}") was already broadcast earlier today. No new subscribers to catch up.`);
+        return { status: "already_sent_today", subject };
+      }
+      console.log(`[Newsletter] Sending today's issue to ${recipients.length} newly joined subscriber(s)...`);
+    } else {
+      recipients = activeAudienceEmails.size > 0 ? [...activeAudienceEmails] : (ADMIN_EMAIL ? [ADMIN_EMAIL] : []);
+      if (recipients.length === 0) {
+        console.log("[Newsletter] No active recipients found in Resend Audience.");
+        return { status: "skipped", reason: "no_recipients" };
+      }
+      console.log(`[Newsletter] Broadcasting morning briefing ("${subject}") from ${fromEmail} to ${recipients.length} subscriber(s)...`);
+    }
+
+    // 4. Dispatch via Resend Batch API with BOTH html and text parts (multipart/alternative)
+    const batchPayload = recipients.slice(0, 100).map((email) => ({
+      from: fromEmail,
+      to: [email],
+      subject,
+      html: htmlContent,
+      text: textContent,
+      headers: {
+        "List-Unsubscribe": "<https://cipherati.com/#newsletter-unsubscribe>",
+        "X-Entity-Ref-ID": `cipherati-${new Date().toISOString().split("T")[0]}-${email}`
+      }
+    }));
+
+    const res = await fetch("https://api.resend.com/emails/batch", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${apiKey}`,
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(batchPayload)
     });
 
     const data = await res.json();
     if (res.ok) {
-      console.log(`[Newsletter] Successfully dispatched morning briefing! Email ID: ${data.id}`);
-      return { status: "sent", id: data.id };
+      console.log(`[Newsletter] Successfully dispatched morning briefing to ${batchPayload.length} subscriber(s)!`);
+      return { status: "sent", count: batchPayload.length, data };
     } else {
       console.warn(`[Newsletter] Resend API responded with status ${res.status}:`, data.message || data);
       return { status: "error", error: data };

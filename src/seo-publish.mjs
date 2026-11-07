@@ -58,7 +58,7 @@ function staticCard(t) {
     : esc(t.emoji || "⚡");
   const why = t.why_it_matters && !BOILERPLATE_WHY.test(t.why_it_matters)
     ? `<div class="why-box"><strong>Why it matters:</strong> ${esc(t.why_it_matters)}</div>` : "";
-  return `<a class="tool-card" href="${esc(t.url)}" target="_blank" rel="noopener">
+  return `<a class="tool-card" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">
         <div class="tool-top">
           <div class="tool-icon">${icon}</div>
           <div style="flex: 1; min-width: 0;">
@@ -187,9 +187,10 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
     /<!-- PRERENDER:BEGIN -->[\s\S]*?<!-- PRERENDER:END -->/,
     `<!-- PRERENDER:BEGIN -->\n      ${cards}\n      <!-- PRERENDER:END -->`
   );
+  const safeJsonLd = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
   html = html.replace(
     /<!-- JSONLD:BEGIN -->[\s\S]*?<!-- JSONLD:END -->/,
-    `<!-- JSONLD:BEGIN -->\n<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n<!-- JSONLD:END -->`
+    `<!-- JSONLD:BEGIN -->\n<script type="application/ld+json">${safeJsonLd}</script>\n<!-- JSONLD:END -->`
   );
   writeFileSync(indexPath, html, "utf8");
 

@@ -44,14 +44,21 @@ function doPost(e) {
     }
 
     const email = (payload.email || "").toString().trim().toLowerCase();
-    if (!email || email.indexOf("@") === -1) {
+    const strictEmailRe = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!email || email.length > 254 || !strictEmailRe.test(email) || /^[=+\-@\t\r]/.test(email)) {
       return ContentService.createTextOutput(JSON.stringify({ status: "error", message: "Invalid email" }))
         .setMimeType(ContentService.MimeType.JSON);
     }
 
-    const timestampIST = payload.timestampIST || Utilities.formatDate(new Date(), "Asia/Kolkata", "yyyy-MM-dd HH:mm:ss 'IST'");
-    const consent = payload.consent || "Explicit opt-in for Cipherati 60-Second Daily Morning Intelligence Briefing under DPDP Act 2023";
-    const source = payload.source || "https://cipherati.com";
+    const safeCell = function(val, fallback) {
+      let s = (val || fallback || "").toString().replace(/[\r\n]+/g, " ").trim().slice(0, 200);
+      if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+      return s;
+    };
+
+    const timestampIST = safeCell(payload.timestampIST, Utilities.formatDate(new Date(), "Asia/Kolkata", "yyyy-MM-dd HH:mm:ss 'IST'"));
+    const consent = safeCell(payload.consent, "Explicit opt-in for Cipherati 60-Second Daily Morning Intelligence Briefing under DPDP Act 2023");
+    const source = safeCell(payload.source, "https://cipherati.com");
 
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     let sheet = ss.getSheetByName(SHEET_NAME);
@@ -100,7 +107,7 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
 
   } catch (err) {
-    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: err.toString() }))
+    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: "Request processing failed" }))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }

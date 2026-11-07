@@ -1,10 +1,66 @@
 // Cipherati Morning Intelligence Briefing Generator
-// Produces a 60-second, high-signal daily briefing:
-// 1. Cybersecurity News (The Lead Story + Quick Hits)
-// 2. Active Scam Defense (The Trap + The Defense Rule + 1930 Helpline)
-// 3. Today's AI Tool & Reality Check (Zero vendor hype)
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+// High-deliverability Axios / TLDR Executive Plain-Paper Format:
+// - 100% domain alignment (all links point to cipherati.com/#news, #scams, #tools, #realities)
+// - Exact 4 site pillars: Cybersecurity News, Scam Alerts, AI Tools, AI Realities
+// - Non-repeating content ledger: tracks sent scams, realities, tools, and lead news; automatically skips any section once all items in its pool have been sent until new items are added.
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { REALITIES_DATA } from "./realities-data.mjs";
+
+const SENT_LEDGER_PATH = "public/data/newsletter-sent-ledger.json";
+
+function loadSentLedger() {
+  if (existsSync(SENT_LEDGER_PATH)) {
+    try {
+      return JSON.parse(readFileSync(SENT_LEDGER_PATH, "utf8"));
+    } catch {}
+  }
+  return {
+    lastUpdatedDate: null,
+    sentScamIds: [],
+    sentRealityIds: [],
+    sentToolNames: [],
+    sentLeadTitles: []
+  };
+}
+
+function escHtml(str = "") {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function buildLeadContext(item) {
+  const titleWords = (item.title || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .split(/\s+/)
+    .filter((w) => w.length > 3);
+  const incRaw = (item.incident || "").replace(/^key updates:\s*/i, "").trim();
+  const incWords = incRaw
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .split(/\s+/)
+    .filter((w) => w.length > 3);
+
+  const overlapCount = incWords.filter((w) => titleWords.includes(w)).length;
+  const overlapRatio = incWords.length > 0 ? overlapCount / incWords.length : 1;
+
+  // Only use incident text if it adds genuinely new information (< 60% word overlap with headline)
+  if (incRaw && overlapRatio < 0.6) {
+    return incRaw;
+  }
+
+  // Otherwise, synthesize genuine analytical context from entities, category, and rootCause
+  const sector = item.entities || "Enterprise & Critical Infrastructure";
+  const desk = item.sourceName || "Primary Security Desk";
+  const root =
+    item.rootCause && !item.rootCause.includes("Verified reporting confirmed")
+      ? item.rootCause
+      : `Confirmed by ${desk}; security teams across ${sector} should assess exposure, review access controls, and monitor vendor advisories.`;
+  return root;
+}
 
 export function generateDailyBriefing() {
   const toolsData = JSON.parse(readFileSync("public/data/tools.json", "utf8")).tools || [];
@@ -12,58 +68,106 @@ export function generateDailyBriefing() {
   const scamsData = JSON.parse(readFileSync("public/data/scams.json", "utf8")).scams || [];
 
   const todayStr = new Date().toISOString().split("T")[0];
-  const dateFormatted = new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  const dateFormatted = new Date().toLocaleDateString("en-US", {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+  });
 
-  // Filter out any false positive RSS matches that are not true cyber security incidents
   const isSecurityItem = (item) => {
     const t = (item.title || "").toLowerCase();
-    if (t.includes("car sales") || t.includes("box office") || t.includes("cricket") ||
-        t.includes("ed attaches") || t.includes("attaches properties") || t.includes("dollar pulls back") ||
-        t.includes("loan fraud") || t.includes("chandra proteco")) return false;
+    if (
+      t.includes("car sales") ||
+      t.includes("box office") ||
+      t.includes("cricket") ||
+      t.includes("ed attaches") ||
+      t.includes("attaches properties") ||
+      t.includes("dollar pulls back") ||
+      t.includes("loan fraud") ||
+      t.includes("chandra proteco")
+    )
+      return false;
     return true;
   };
 
   const validThreats = threatsData.filter(isSecurityItem);
 
-  // 1. Cybersecurity News: Pick top incident as Lead, next 2-3 as Quick Hits
+  const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+  const nowMs = Date.now();
+  const FRESH_WINDOW_MS = 36 * 60 * 60 * 1000; // 36 hours
+
+  // Sort strictly by newest timestamp first; only boost severity among fresh stories (<36h old)
   const sortedThreats = [...validThreats].sort((a, b) => {
-    const sevOrder = { critical: 3, high: 2, medium: 1 };
-    const diffSev = (sevOrder[b.severity] || 0) - (sevOrder[a.severity] || 0);
-    if (diffSev !== 0) return diffSev;
     const tA = a.timestamp || new Date(a.pubDate || a.date || 0).getTime();
     const tB = b.timestamp || new Date(b.pubDate || b.date || 0).getTime();
+    const aFresh = nowMs - tA <= FRESH_WINDOW_MS;
+    const bFresh = nowMs - tB <= FRESH_WINDOW_MS;
+    if (aFresh !== bFresh) return bFresh ? 1 : -1;
+    if (aFresh && bFresh) {
+      const sevOrder = { critical: 3, high: 2, medium: 1 };
+      const diffSev = (sevOrder[b.severity] || 0) - (sevOrder[a.severity] || 0);
+      if (diffSev !== 0) return diffSev;
+    }
     return tB - tA;
   });
 
-  const leadThreat = sortedThreats[0] || {
+  // Load persistent sent ledger so no scam, reality, tool, or lead news is ever repeated
+  const ledger = loadSentLedger();
+  const isSameDay = ledger.lastUpdatedDate === todayStr;
+
+  // If running again on the same day, keep today's already-picked items; otherwise pick strictly from unsent items
+  const prevSentScams = new Set(isSameDay ? ledger.sentScamIds.slice(0, -1) : ledger.sentScamIds);
+  const prevSentRealities = new Set(isSameDay ? ledger.sentRealityIds.slice(0, -1) : ledger.sentRealityIds);
+  const prevSentTools = new Set(isSameDay ? ledger.sentToolNames.slice(0, -1) : ledger.sentToolNames);
+  const prevSentLeads = new Set(isSameDay ? ledger.sentLeadTitles.slice(0, -1) : ledger.sentLeadTitles);
+
+  // 1. Pick Lead News (must not have been featured as Lead before)
+  const unsentThreats = sortedThreats.filter((t) => !prevSentLeads.has(t.title));
+  const leadThreat = unsentThreats[0] || sortedThreats[0] || {
     title: "Global Cybersecurity Incident Monitoring Active",
-    sourceName: "Cipherati Intelligence Desk",
+    sourceName: "Cipherati Desk",
     sourceUrl: "https://cipherati.com/#news",
+    entities: "Enterprise & Financial Infrastructure",
     incident: "Continuous threat tracking active across banking, enterprise, and critical infrastructure."
   };
 
-  const quickHits = sortedThreats.slice(1, 4);
+  const leadContext = buildLeadContext(leadThreat);
+  const quickHits = sortedThreats.filter((t) => t.title !== leadThreat.title).slice(0, 3);
 
-  // 2. Scam Watch: Pick 1 high-impact active scam
-  const topScam = scamsData[0] || {
-    title: "Digital Arrest Video Extortion",
-    platform: "WhatsApp / Video Call",
-    scam: "Fraudsters pose as police or CBI over video claiming illegal parcels or drug links.",
-    protection: "Indian law enforcement NEVER interrogates or arrests citizens via video call. Hang up and dial 1930."
-  };
+  // 2. Pick Scam Alert (strictly unsent only — if all scams have been sent, topScam = null and section is skipped!)
+  const unsentScams = scamsData.filter((s) => !prevSentScams.has(s.id || s.title));
+  const topScam = unsentScams.length > 0 ? unsentScams[dayOfYear % unsentScams.length] : null;
 
-  // 3. AI Tool & Reality of the Day: Pick 1 battle-tested tool and 1 reality trap
-  // Rotate deterministically by day of year so each day has fresh picks
-  const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
-  const realityPick = REALITIES_DATA[dayOfYear % REALITIES_DATA.length] || REALITIES_DATA[0];
-  
-  // Pick top tool relevant to the reality or high-ranked tool
-  const featuredTool = toolsData.find(t => realityPick.tools && realityPick.tools.some(rt => rt.name.toLowerCase() === t.name.toLowerCase())) || toolsData[dayOfYear % toolsData.length] || toolsData[0];
+  // 3. Pick AI Tool (strictly unsent only — if all tools have been sent, featuredTool = null and section is skipped!)
+  const unsentTools = toolsData.filter((t) => !prevSentTools.has(t.name));
+  const featuredTool = unsentTools.length > 0 ? unsentTools[dayOfYear % unsentTools.length] : null;
+
+  // 4. Pick AI Reality (strictly unsent only — if all realities have been sent, realityPick = null and section is skipped!)
+  const unsentRealities = REALITIES_DATA.filter((r) => !prevSentRealities.has(r.id));
+  const realityPick = unsentRealities.length > 0 ? unsentRealities[dayOfYear % unsentRealities.length] : null;
+
+  // Update persistent ledger for today
+  if (!isSameDay) {
+    ledger.lastUpdatedDate = todayStr;
+    if (leadThreat?.title && !ledger.sentLeadTitles.includes(leadThreat.title)) {
+      ledger.sentLeadTitles.push(leadThreat.title);
+    }
+    if (topScam && !ledger.sentScamIds.includes(topScam.id || topScam.title)) {
+      ledger.sentScamIds.push(topScam.id || topScam.title);
+    }
+    if (featuredTool && !ledger.sentToolNames.includes(featuredTool.name)) {
+      ledger.sentToolNames.push(featuredTool.name);
+    }
+    if (realityPick && !ledger.sentRealityIds.includes(realityPick.id)) {
+      ledger.sentRealityIds.push(realityPick.id);
+    }
+  }
 
   const briefing = {
     date: todayStr,
     dateFormatted,
-    leadThreat,
+    leadThreat: { ...leadThreat, synthesizedContext: leadContext },
     quickHits,
     topScam,
     featuredTool,
@@ -73,137 +177,256 @@ export function generateDailyBriefing() {
   mkdirSync("public/data", { recursive: true });
   mkdirSync("public/newsletter", { recursive: true });
 
-  // 1. Write JSON for web UI preview
+  // Save updated ledger & briefing JSON
+  writeFileSync(SENT_LEDGER_PATH, JSON.stringify(ledger, null, 2), "utf8");
   writeFileSync("public/data/briefing.json", JSON.stringify(briefing, null, 2), "utf8");
 
-  // 2. Generate Markdown Newsletter
-  const mdOutput = `# 📬 The Cipherati Morning Briefing · ${dateFormatted}
-*The 60-second intelligence scan: Cybersecurity news, citizen scam defense, and verified AI tools. Zero hype.*
+  // Dynamic numbering so if any section is skipped, section numbers stay sequential (01, 02, 03...)
+  let plainSecNum = 1;
+  const plainSections = [];
 
----
+  plainSections.push(`------------------------------------------------------------
+${plainSecNum++}. CYBERSECURITY NEWS
+------------------------------------------------------------
 
-## 🛡️ Cybersecurity News
-### **Lead Story: ${leadThreat.title}**
-* **Source**: [${leadThreat.sourceName}](${leadThreat.sourceUrl})
-* **Key Context**: ${leadThreat.incident || "Verified primary reporting confirmed by official security desks."}
+LEAD: ${leadThreat.title} (${leadThreat.sourceName})
+• Why it matters: ${leadContext}
+• Sector: ${leadThreat.entities || "Enterprise & Public Infrastructure"}
 
-${quickHits.length > 0 ? `### **Quick Hits (30-Sec Scan)**\n` + quickHits.map(h => `- **${h.title}** ([${h.sourceName}](${h.sourceUrl}))`).join("\n") : ""}
+More on the Radar:
+${quickHits.map((h) => `• ${h.title} (${h.sourceName})`).join("\n")}
 
----
+Explore all live incidents: https://cipherati.com/#news`);
 
-## 🚨 Active Scam Watch
-### **${topScam.title}** (${topScam.platform})
-* **The Trap**: ${topScam.scam}
-* **The Defense Rule**: **${topScam.protection}**
-* **Emergency Action**: If targeted, call **1930** (Toll-Free National Cyber Helpline) within the Golden Hour.
+  if (topScam) {
+    plainSections.push(`------------------------------------------------------------
+${plainSecNum++}. SCAM ALERTS
+------------------------------------------------------------
 
----
+${topScam.title} [Vector: ${topScam.platform}]
+• How it works: ${topScam.scam}
+• Defense rule: ${topScam.protection}
+• Helpline: Dial 1930 (National Cyber Helpline) or report at https://cipherati.com/#scams`);
+  }
 
-## 🛠️ AI Tool & Reality of the Day
-* **Today's Tool**: [**${featuredTool.name}**](${featuredTool.url}) — ${featuredTool.tagline}
-* **Reality Check (#${realityPick.id}: ${realityPick.title})**: 
-  * *Myth*: "${realityPick.myth}"
-  * *What Actually Works*: ${realityPick.fix}
+  if (featuredTool) {
+    plainSections.push(`------------------------------------------------------------
+${plainSecNum++}. AI TOOLS
+------------------------------------------------------------
 
----
-*Read online or explore the live directory at [cipherati.com](https://cipherati.com/)*
+Featured Tool: ${featuredTool.name}
+• What it does: ${featuredTool.tagline}
+• Browse 221+ verified tools: https://cipherati.com/#tools`);
+  }
+
+  if (realityPick) {
+    plainSections.push(`------------------------------------------------------------
+${plainSecNum++}. AI REALITIES
+------------------------------------------------------------
+
+Reality #${realityPick.id}: ${realityPick.title}
+• The Hype Myth: "${realityPick.myth}"
+• What Actually Works: ${realityPick.fix}
+• Read all 22 production realities: https://cipherati.com/#realities`);
+  }
+
+  // 2. Generate Plain-Text / Markdown version (also used as MIME text/plain part for Primary Inbox deliverability)
+  const plainText = `THE CIPHERATI BRIEFING — ${dateFormatted}
+The 60-second morning intelligence scan: Cybersecurity News, Scam Alerts, AI Tools & AI Realities.
+Read online: https://cipherati.com/
+
+${plainSections.join("\n\n")}
+
+------------------------------------------------------------
+Cipherati.com — Independent AI & Cyber Intelligence
+Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
 `;
-  writeFileSync("public/newsletter/today.md", mdOutput, "utf8");
+  writeFileSync("public/newsletter/today.md", plainText, "utf8");
 
-  // 3. Generate Clean, Responsive HTML Email
+  let htmlSecNum = 1;
+  const fmtSec = () => String(htmlSecNum++).padStart(2, "0");
+
+  // 3. Generate Clean, Editorial Plain-Paper HTML Email (Axios / TLDR style — Primary Inbox optimized)
+  // All links point strictly to https://cipherati.com to guarantee 100% sender-domain alignment.
   const htmlEmail = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Cipherati Morning Briefing · ${dateFormatted}</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; color: #0f172a; margin: 0; padding: 24px 12px; line-height: 1.5; }
-    .email-container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; overflow: hidden; }
-    .email-header { background: #0f172a; color: #ffffff; padding: 24px; text-align: left; }
-    .email-badge { display: inline-block; background: #2563eb; color: #ffffff; font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; letter-spacing: 0.05em; margin-bottom: 8px; }
-    .email-title { font-size: 20px; font-weight: 800; margin: 0 0 4px; color: #ffffff; }
-    .email-sub { font-size: 13px; color: #94a3b8; margin: 0; }
-    .email-body { padding: 24px; }
-    .section-title { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: #2563eb; margin: 24px 0 12px; display: flex; align-items: center; gap: 6px; border-bottom: 2px solid #eff6ff; padding-bottom: 6px; }
-    .section-title:first-child { margin-top: 0; }
-    .lead-card { background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #2563eb; border-radius: 8px; padding: 14px 16px; margin-bottom: 12px; }
-    .lead-title { font-size: 15.5px; font-weight: 700; color: #0f172a; text-decoration: none; display: block; margin-bottom: 6px; }
-    .lead-meta { font-size: 12px; color: #64748b; margin-bottom: 6px; }
-    .lead-desc { font-size: 13.5px; color: #334155; margin: 0; }
-    .quick-list { list-style: none; padding: 0; margin: 0; }
-    .quick-item { padding: 8px 0; border-top: 1px solid #f1f5f9; font-size: 13.5px; }
-    .quick-item a { color: #0f172a; font-weight: 600; text-decoration: none; }
-    .quick-source { color: #64748b; font-size: 12px; }
-    .scam-box { background: #fff1f2; border: 1px solid #fecdd3; border-left: 4px solid #e11d48; border-radius: 8px; padding: 14px 16px; margin-bottom: 12px; }
-    .scam-title { font-size: 15px; font-weight: 700; color: #9f1239; margin: 0 0 6px; }
-    .scam-text { font-size: 13.5px; color: #4c0519; margin: 0 0 8px; }
-    .defense-rule { background: #ffffff; border: 1px solid #fecdd3; border-radius: 6px; padding: 8px 12px; font-size: 13px; font-weight: 600; color: #881337; }
-    .tool-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #16a34a; border-radius: 8px; padding: 14px 16px; }
-    .tool-name { font-size: 15px; font-weight: 700; color: #166534; text-decoration: none; }
-    .tool-tag { font-size: 13.5px; color: #14532d; margin: 4px 0 8px; }
-    .reality-quote { font-size: 13px; background: #ffffff; border: 1px solid #bbf7d0; border-radius: 6px; padding: 8px 12px; color: #166534; }
-    .email-footer { background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 18px 24px; text-align: center; font-size: 12px; color: #64748b; }
-    .email-footer a { color: #2563eb; text-decoration: none; font-weight: 600; }
-  </style>
+  <title>The Cipherati Briefing — ${escHtml(dateFormatted)}</title>
 </head>
-<body>
-  <div class="email-container">
-    <div class="email-header">
-      <div class="email-badge">📬 CIPHERATI BRIEFING · 60-SEC SCAN</div>
-      <h1 class="email-title">Today's Intelligence Briefing</h1>
-      <p class="email-sub">${dateFormatted} · Verified Cyber News, Scam Defense &amp; AI Realities</p>
+<body style="margin:0;padding:24px 12px;background-color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111827;line-height:1.6;-webkit-font-smoothing:antialiased;">
+  <div style="max-width:600px;margin:0 auto;background-color:#ffffff;">
+
+    <!-- EDITORIAL MASTHEAD -->
+    <div style="border-bottom:2px solid #111827;padding-bottom:14px;margin-bottom:24px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td align="left" style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;">
+            THE CIPHERATI BRIEFING
+          </td>
+          <td align="right" style="font-size:12px;color:#6b7280;">
+            ${escHtml(dateFormatted)} · 60-Sec Read
+          </td>
+        </tr>
+      </table>
+      <h1 style="margin:8px 0 4px;font-size:22px;line-height:1.3;font-weight:800;color:#111827;letter-spacing:-0.01em;">
+        Morning Cyber &amp; AI Intelligence
+      </h1>
+      <p style="margin:0;font-size:13.5px;color:#4b5563;">
+        Curated across <a href="https://cipherati.com/#news" style="color:#111827;text-decoration:underline;font-weight:600;">Cybersecurity News</a>, <a href="https://cipherati.com/#scams" style="color:#111827;text-decoration:underline;font-weight:600;">Scam Alerts</a>, <a href="https://cipherati.com/#tools" style="color:#111827;text-decoration:underline;font-weight:600;">AI Tools</a> &amp; <a href="https://cipherati.com/#realities" style="color:#111827;text-decoration:underline;font-weight:600;">AI Realities</a>.
+      </p>
     </div>
 
-    <div class="email-body">
-      <!-- 1. Cybersecurity News -->
-      <div class="section-title">🛡️ Cybersecurity News</div>
-      <div class="lead-card">
-        <a class="lead-title" href="${leadThreat.sourceUrl}" target="_blank">${leadThreat.title} ↗</a>
-        <div class="lead-meta">Source: <strong>${leadThreat.sourceName}</strong> · Verified Report</div>
-        <p class="lead-desc">${leadThreat.incident || "Verified primary reporting confirmed by official security desks."}</p>
+    <!-- CYBERSECURITY NEWS -->
+    <div style="margin-bottom:26px;padding-bottom:22px;border-bottom:1px solid #e5e7eb;">
+      <div style="font-size:11.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;margin-bottom:8px;">
+        ${fmtSec()} · CYBERSECURITY NEWS
       </div>
 
-      ${quickHits.length > 0 ? `
-      <ul class="quick-list">
-        ${quickHits.map(h => `
-        <li class="quick-item">
-          🔹 <a href="${h.sourceUrl}" target="_blank">${h.title} ↗</a>
-          <span class="quick-source">(${h.sourceName})</span>
-        </li>`).join("")}
-      </ul>` : ""}
+      <h2 style="margin:0 0 8px;font-size:17px;line-height:1.35;font-weight:700;color:#111827;">
+        <a href="https://cipherati.com/#news" style="color:#111827;text-decoration:none;">
+          ${escHtml(leadThreat.title)}
+        </a>
+      </h2>
 
-      <!-- 2. Active Scam Watch -->
-      <div class="section-title">🚨 Active Scam Watch</div>
-      <div class="scam-box">
-        <div class="scam-title">${topScam.title} <span style="font-size:12px;font-weight:normal;color:#9f1239;">(${topScam.platform})</span></div>
-        <p class="scam-text"><strong>The Trap:</strong> ${topScam.scam}</p>
-        <div class="defense-rule">
-          🛡️ <strong>Defense Rule:</strong> ${topScam.protection}
+      <p style="margin:0 0 10px;font-size:14px;color:#374151;">
+        <strong>Why it matters:</strong> ${escHtml(leadContext)}
+      </p>
+
+      <div style="font-size:12.5px;color:#6b7280;margin-bottom:16px;">
+        Source: <strong>${escHtml(leadThreat.sourceName)}</strong> · Sector: ${escHtml(leadThreat.entities || "Enterprise & Public Infrastructure")} · <a href="https://cipherati.com/#news" style="color:#2563eb;text-decoration:none;font-weight:600;">Read on Cipherati →</a>
+      </div>
+
+      ${
+        quickHits.length > 0
+          ? `
+      <div style="background-color:#f9fafb;border-left:3px solid #cbd5e1;padding:12px 16px;">
+        <div style="font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#4b5563;margin-bottom:6px;">
+          Also on the Radar
         </div>
-      </div>
-
-      <!-- 3. AI Tool & Reality of the Day -->
-      <div class="section-title">🛠️ AI Tool &amp; Reality of the Day</div>
-      <div class="tool-box">
-        <div><a class="tool-name" href="${featuredTool.url}" target="_blank">${featuredTool.name} ↗</a></div>
-        <div class="tool-tag">${featuredTool.tagline}</div>
-        <div class="reality-quote">
-          <strong>⚡ Production Reality (#${realityPick.id}: ${realityPick.title}):</strong> ${realityPick.fix}
-        </div>
-      </div>
+        <ul style="margin:0;padding-left:18px;font-size:13.5px;color:#1f2937;">
+          ${quickHits
+            .map(
+              (h) => `
+          <li style="margin-bottom:6px;">
+            <a href="https://cipherati.com/#news" style="color:#111827;text-decoration:none;font-weight:600;">${escHtml(h.title)}</a>
+            <span style="color:#6b7280;font-size:12px;"> — ${escHtml(h.sourceName)}</span>
+          </li>`
+            )
+            .join("")}
+        </ul>
+      </div>`
+          : ""
+      }
     </div>
 
-    <div class="email-footer">
-      <p>Published by <a href="https://cipherati.com/">Cipherati.com</a> — Independent AI &amp; Cyber Intelligence.</p>
-      <p>Need emergency cyber fraud help? Call <strong>1930</strong> (Toll-Free National Helpline in India).</p>
-      <p style="color:#94a3b8;margin-top:10px;">To manage your preferences or unsubscribe, click <a href="#">here</a>.</p>
+    ${
+      topScam
+        ? `<!-- SCAM ALERTS -->
+    <div style="margin-bottom:26px;padding-bottom:22px;border-bottom:1px solid #e5e7eb;">
+      <div style="font-size:11.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#b91c1c;margin-bottom:8px;">
+        ${fmtSec()} · SCAM ALERTS
+      </div>
+
+      <h2 style="margin:0 0 6px;font-size:16.5px;line-height:1.35;font-weight:700;color:#111827;">
+        <a href="https://cipherati.com/#scams" style="color:#111827;text-decoration:none;">
+          ${escHtml(topScam.title)}
+        </a>
+        <span style="font-size:12px;font-weight:500;color:#6b7280;"> (${escHtml(topScam.platform)})</span>
+      </h2>
+
+      <p style="margin:0 0 8px;font-size:14px;color:#374151;">
+        <strong>The pattern:</strong> ${escHtml(topScam.scam)}
+      </p>
+
+      <p style="margin:0 0 10px;font-size:14px;color:#111827;">
+        <strong>Defense rule:</strong> ${escHtml(topScam.protection)}
+      </p>
+
+      <div style="font-size:12.5px;color:#6b7280;">
+        National Cyber Helpline: Dial <strong>1930</strong> · <a href="https://cipherati.com/#scams" style="color:#2563eb;text-decoration:none;font-weight:600;">View all 19 Scam Alerts →</a>
+      </div>
+    </div>`
+        : ""
+    }
+
+    ${
+      featuredTool
+        ? `<!-- AI TOOLS -->
+    <div style="margin-bottom:26px;padding-bottom:22px;border-bottom:1px solid #e5e7eb;">
+      <div style="font-size:11.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#047857;margin-bottom:8px;">
+        ${fmtSec()} · AI TOOLS
+      </div>
+
+      <h2 style="margin:0 0 6px;font-size:16.5px;line-height:1.35;font-weight:700;color:#111827;">
+        <a href="https://cipherati.com/#tools" style="color:#111827;text-decoration:none;">
+          ${escHtml(featuredTool.name)}
+        </a>
+      </h2>
+
+      <p style="margin:0 0 8px;font-size:14px;color:#374151;">
+        ${escHtml(featuredTool.tagline)}
+      </p>
+
+      <div style="font-size:12.5px;color:#6b7280;">
+        <a href="https://cipherati.com/#tools" style="color:#2563eb;text-decoration:none;font-weight:600;">Explore 221+ verified AI developer tools on Cipherati →</a>
+      </div>
+    </div>`
+        : ""
+    }
+
+    ${
+      realityPick
+        ? `<!-- AI REALITIES -->
+    <div style="margin-bottom:26px;padding-bottom:22px;border-bottom:1px solid #e5e7eb;">
+      <div style="font-size:11.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#4338ca;margin-bottom:8px;">
+        ${fmtSec()} · AI REALITIES
+      </div>
+
+      <h2 style="margin:0 0 6px;font-size:16.5px;line-height:1.35;font-weight:700;color:#111827;">
+        <a href="https://cipherati.com/#realities" style="color:#111827;text-decoration:none;">
+          Reality #${escHtml(realityPick.id)}: ${escHtml(realityPick.title)}
+        </a>
+      </h2>
+
+      <p style="margin:0 0 6px;font-size:13.5px;color:#6b7280;font-style:italic;">
+        <strong>Common myth:</strong> "${escHtml(realityPick.myth)}"
+      </p>
+
+      <p style="margin:0 0 10px;font-size:14px;color:#111827;">
+        <strong>What works in production:</strong> ${escHtml(realityPick.fix)}
+      </p>
+
+      <div style="font-size:12.5px;color:#6b7280;">
+        <a href="https://cipherati.com/#realities" style="color:#2563eb;text-decoration:none;font-weight:600;">Read all 22 AI Realities →</a>
+      </div>
+    </div>`
+        : ""
+    }
+
+    <!-- EDITORIAL FOOTER -->
+    <div style="font-size:12px;color:#6b7280;line-height:1.6;">
+      <p style="margin:0 0 6px;color:#111827;font-weight:600;">
+        <a href="https://cipherati.com/#tools" style="color:#111827;text-decoration:none;">AI Tools</a> &nbsp;·&nbsp;
+        <a href="https://cipherati.com/#realities" style="color:#111827;text-decoration:none;">AI Realities</a> &nbsp;·&nbsp;
+        <a href="https://cipherati.com/#news" style="color:#111827;text-decoration:none;">Cybersecurity News</a> &nbsp;·&nbsp;
+        <a href="https://cipherati.com/#scams" style="color:#111827;text-decoration:none;">Scam Alerts</a>
+      </p>
+      <p style="margin:0;">
+        Published by <a href="https://cipherati.com/" style="color:#2563eb;text-decoration:none;">Cipherati.com</a> · Sent with explicit consent under the India DPDP Act 2023.<br>
+        <a href="https://cipherati.com/newsletter/today.html" style="color:#6b7280;text-decoration:underline;">View web version</a> &nbsp;·&nbsp;
+        <a href="https://cipherati.com/#newsletter-unsubscribe" style="color:#6b7280;text-decoration:underline;">Unsubscribe</a>
+      </p>
     </div>
+
   </div>
 </body>
 </html>`;
   writeFileSync("public/newsletter/today.html", htmlEmail, "utf8");
 
-  console.log(`[Newsletter] Generated today's briefing (${dateFormatted}): 1 Lead + ${quickHits.length} Quick Hits + 1 Scam Alert + 1 Tool & Reality.`);
+  console.log(
+    `[Newsletter] Generated today's briefing (${dateFormatted}): 1 Lead + ${quickHits.length} Quick Hits + 1 Scam Alert + 1 Tool & Reality.`
+  );
   return briefing;
 }

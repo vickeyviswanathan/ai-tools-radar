@@ -288,7 +288,8 @@ ${incidentHtml}
   html = html.replace(/<span class="side-nav-pill" id="side-threats-count">\d+<\/span>/, `<span class="side-nav-pill" id="side-threats-count">${sortedThreats.length}</span>`);
   html = html.replace(/<div class="hero-metric-num" id="stat-news">\d+<\/div>/, `<div class="hero-metric-num" id="stat-news">${sortedThreats.length}</div>`);
   html = html.replace(/<span class="reality-count-pill" id="threat-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="threat-count-badge">Showing all ${sortedThreats.length} verified news stories</span>`);
-  html = html.replace(/let THREATS_DATA = \[[\s\S]*?\];/, `let THREATS_DATA = ${JSON.stringify(sortedThreats)};`);
+  const safeJson = (obj, space) => JSON.stringify(obj, null, space).replace(/</g, "\\u003c");
+  html = html.replace(/let THREATS_DATA = \[[\s\S]*?\];/, `let THREATS_DATA = ${safeJson(sortedThreats)};`);
 
   if (categories && categories.length) {
     const subtabsHtml = categories.map((cat, idx) => {
@@ -339,7 +340,7 @@ function updateScamsInHtml(scams) {
 
   html = html.replace(/<span class="tab-count" id="tab-scams-count">\d*<\/span>/, `<span class="tab-count" id="tab-scams-count">${scams.length}</span>`);
   html = html.replace(/<span class="reality-count-pill" id="scam-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="scam-count-badge">Showing all ${scams.length} verified scam alerts</span>`);
-  html = html.replace(/let SCAMS_DATA = \[[\s\S]*?\];/, `let SCAMS_DATA = ${JSON.stringify(scams)};`);
+  html = html.replace(/let SCAMS_DATA = \[[\s\S]*?\];/, `let SCAMS_DATA = ${JSON.stringify(scams).replace(/</g, "\\u003c")};`);
 
   const containerStartTag = '<div class="scam-grid" id="scams-container">';
   const startIdx = html.indexOf(containerStartTag);
@@ -364,7 +365,7 @@ export function generateRealitiesCardsHtml(realities) {
 
   return realities.map((r, idx) => {
     const toolsHtml = (r.tools || []).map(t =>
-      `          <a class="tool-chip" href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)} ↗</a>`
+      `          <a class="tool-chip" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">${esc(t.name)} ↗</a>`
     ).join("\n");
 
     return `      <!-- ${r.id}. ${r.title} -->
@@ -411,7 +412,7 @@ function updateRealitiesInHtml(realities) {
   // 2. Update inline JavaScript data array
   const scriptRegex = /const REALITIES_DATA = \[[\s\S]*?\];\s*\n\s*let realitySearchQ/;
   if (scriptRegex.test(html)) {
-    html = html.replace(scriptRegex, `const REALITIES_DATA = ${JSON.stringify(realities, null, 2)};\n\nlet realitySearchQ`);
+    html = html.replace(scriptRegex, `const REALITIES_DATA = ${JSON.stringify(realities, null, 2).replace(/</g, "\\u003c")};\n\nlet realitySearchQ`);
   }
 
   writeFileSync(indexPath, html, "utf8");
@@ -420,7 +421,7 @@ function updateRealitiesInHtml(realities) {
 function updateBriefingInHtml(briefing) {
   const indexPath = "./public/index.html";
   let html = readFileSync(indexPath, "utf8");
-  html = html.replace(/let BRIEFING_DATA = (?:\{[\s\S]*?\}|null);/, `let BRIEFING_DATA = ${JSON.stringify(briefing)};`);
+  html = html.replace(/let BRIEFING_DATA = (?:\{[\s\S]*?\}|null);/, `let BRIEFING_DATA = ${JSON.stringify(briefing).replace(/</g, "\\u003c")};`);
   writeFileSync(indexPath, html, "utf8");
 }
 
