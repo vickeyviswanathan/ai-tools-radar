@@ -30,8 +30,8 @@ The "Look-Alike Voice" AI Deepfake Distress Call [Vector: Phone Call / Audio AI]
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: StableStudio
-• What it does: Community interface for generative AI
+Featured Tool: ComfyUI LTXVideo
+• What it does: LTX-Video Support for ComfyUI
 • Browse 221+ verified tools: https://cipherati.com/#tools
 
 ------------------------------------------------------------

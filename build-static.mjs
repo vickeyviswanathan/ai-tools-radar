@@ -18,6 +18,8 @@ import { canonicalKey, categorize, clip } from "./src/classify.mjs";
 function seedFeaturedLeaders() {
   const currentTs = now();
   tx((d) => {
+    // Purge non-AI legacy OSINT tool if previously seeded
+    d.prepare(`DELETE FROM items WHERE url LIKE '%sherlock-project/sherlock%' OR name = 'Sherlock'`).run();
     const upsertItem = d.prepare(`
       INSERT INTO items (key, name, tagline, url, emoji, category, tags, why_it_matters, launched_at, first_seen, last_seen, status)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active')

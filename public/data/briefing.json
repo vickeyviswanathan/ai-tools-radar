@@ -100,19 +100,19 @@
     "actionUrl": "https://cert-in.org.in/"
   },
   "featuredTool": {
-    "id": 656,
-    "name": "StableStudio",
-    "tagline": "Community interface for generative AI",
-    "url": "https://github.com/Stability-AI/StableStudio",
+    "id": 646,
+    "name": "ComfyUI LTXVideo",
+    "tagline": "LTX-Video Support for ComfyUI",
+    "url": "https://github.com/Lightricks/ComfyUI-LTXVideo",
     "emoji": null,
     "category": "Image & Design",
-    "why_it_matters": "Battle-tested in the open — 9K GitHub stars from real production users.",
-    "launched_at": 1682114955,
-    "score": 0.36965834542014503,
+    "why_it_matters": "Battle-tested in the open — 4.2K GitHub stars from real production users.",
+    "launched_at": 1732206365,
+    "score": 0.3547205242513748,
     "signals": [
-      "github:9033.0"
+      "github:4228.0"
     ],
-    "rank": 9033,
+    "rank": 4228,
     "velocity": 0,
     "isRising": false,
     "isNew2026": false

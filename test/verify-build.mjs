@@ -54,7 +54,8 @@ const bannedTerms = [
   "crypto wire",
   "taaft",
   "theresanaiforthat",
-  "trend" + "shift"
+  "trend" + "shift",
+  "sherlock-project"
 ];
 
 for (const file of [
