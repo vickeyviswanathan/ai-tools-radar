@@ -10,6 +10,8 @@ import { getLiveCyberNews } from "./src/news-sync.mjs";
 import { validateAndSanitizeScams, generateScamsHtml } from "./src/scam-guard.mjs";
 import { REALITIES_DATA } from "./src/realities-data.mjs";
 import { generateDailyBriefing } from "./src/newsletter-generator.mjs";
+import { dispatchDailyNewsletter } from "./src/newsletter-dispatcher.mjs";
+import { dispatchCriticalThreatPush } from "./src/push-dispatcher.mjs";
 
 async function build() {
   if (process.env.FULL_INGEST === "true" || process.env.GITHUB_EVENT_NAME === "schedule") {
@@ -213,6 +215,10 @@ async function build() {
   console.log(`Generated public/data/tools.json with ${output.tools.length} curated tools across ${categories.length} categories.`);
   console.log(`Generated public/data/threats.json with ${liveThreats.length} verified threat intelligence records.`);
   console.log(`Generated public/data/scams.json with ${sanitizedScams.length} verified scam defense playbooks.`);
+
+  // Automated Dispatch Pipelines (Resend Email & OneSignal Web Push)
+  await dispatchDailyNewsletter();
+  await dispatchCriticalThreatPush();
 }
 
 function updateThreatsInHtml(categories, threats) {

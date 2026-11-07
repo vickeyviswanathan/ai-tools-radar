@@ -1,0 +1,54 @@
+{
+  "name": "Cipherati — AI Tools Directory, Cyber News & Scam Defense",
+  "short_name": "Cipherati",
+  "description": "Practitioner-grade AI tools radar, real-time cybersecurity news, and citizen scam defense.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07090e",
+  "theme_color": "#07090e",
+  "categories": ["technology", "security", "utilities", "productivity"],
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Cyber News",
+      "url": "/#news",
+      "description": "Real-time verified cyber threat intelligence"
+    },
+    {
+      "name": "Scam Defense",
+      "url": "/#scams",
+      "description": "Citizen defense playbooks and 1930 reporting"
+    },
+    {
+      "name": "Morning Briefing",
+      "url": "/#briefing",
+      "description": "60-second daily intelligence scan"
+    },
+    {
+      "name": "AI Realities",
+      "url": "/#realities",
+      "description": "Production realities beyond vendor marketing"
+    }
+  ]
+}

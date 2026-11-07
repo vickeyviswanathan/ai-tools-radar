@@ -28,33 +28,33 @@ If funds are unauthorizedly debited or someone is targeted by online fraud:
 ## Top Curated AI Developer Tools
 - [OpenAI Codex](https://openai.com/index/openai-codex/): Foundational AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.
 - [headroom](https://docs.headroomlabs.ai/docs): Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
-- [ECC](https://ecc.tools/): The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
-- [OpenSpec](https://openspec.dev/): Spec-driven development (SDD) for AI coding assistants.
-- [claude code best practice](https://linkedin.com/in/shanraisshan): from vibe coding to agentic engineering - practice makes claude perfect
 - [litellm](https://docs.litellm.ai/docs/): The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthrop…
-- [medusa](https://medusajs.com/): The world's most flexible commerce platform for agents and developers
-- [OmniRoute](https://omniroute.online/): Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Clin…
+- [claude code best practice](https://linkedin.com/in/shanraisshan): from vibe coding to agentic engineering - practice makes claude perfect
 - [cc switch](https://ccswitch.io/): A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.
+- [OmniRoute](https://omniroute.online/): Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Clin…
+- [medusa](https://medusajs.com/): The world's most flexible commerce platform for agents and developers
+- [OpenSpec](https://openspec.dev/): Spec-driven development (SDD) for AI coding assistants.
 - [graphify](https://www.graphify.com/): Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing,…
 - [Amazon Q Developer / Kiro IDE](https://aws.amazon.com/q/developer/): AWS's generative AI coding companion and cloud-native development environment for code transformation and security scanning.
-- [Understand Anything](https://understand-anything.com/): Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…
 - [openinterpreter](https://openinterpreter.com/): A coding agent for open models like Kimi K3 and GLM 5.3
-- [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk): CLI proxy that condenses command outputs by 60–90% to save LLM tokens and execution costs.
 - [DeepSeek Reasonix](https://reasonix.io/): A reliable coding agent for complex software engineering tasks.
 - [context mode](https://contextmode.ai/): Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.
-- [VS Code with In-Built AI Agents](https://code.visualstudio.com/docs/copilot/copilot-chat): Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.
+- [Understand Anything](https://understand-anything.com/): Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…
+- [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk): CLI proxy that condenses command outputs by 60–90% to save LLM tokens and execution costs.
+- [Kimi Code](https://kimi.ai): Moonshot AI's high-context reasoning and coding model optimized for full-repository understanding and multi-file logic.
 - [Umi OCR](https://github.com/hiroi-sora/Umi-OCR): OCR software, free and offline. OCR / PDF / /
 - [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code): Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.
-- [Kimi Code](https://kimi.ai): Moonshot AI's high-context reasoning and coding model optimized for full-repository understanding and multi-file logic.
 - [OpenHands](https://github.com/All-Hands-AI/OpenHands): Autonomous software development agent capable of writing code, running bash commands, and browsing the web.
+- [ECC](https://ecc.tools/): The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
 - [Aider](https://github.com/paul-gauthier/aider): AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
-- [next ai draw io](https://next-ai-drawio.jiang.jp/): Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
 - [Codewhale](https://codewhale.net/): Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome
+- [next ai draw io](https://next-ai-drawio.jiang.jp/): Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
+- [VS Code with In-Built AI Agents](https://code.visualstudio.com/docs/copilot/copilot-chat): Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.
 - [oh my openagent](https://omo.dev/): OmO: Just type "mass ulw" keyword with your prompt. Now you are the master of graph engineering.
+- [supermemory](https://supermemory.ai/docs): Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.
 - [hermes agent](https://hermes-agent.nousresearch.com/): The agent that grows with you
 - [n8n](https://n8n.io/): Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.
-- [supermemory](https://supermemory.ai/docs): Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.
-- [agent skills](https://skills.addy.ie/): Production-grade engineering skills for AI coding agents.
+- [AutoGPT](https://agpt.co/): AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.
 - [claude skills](https://alirezarezvani.medium.com/): 380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents —…
 
 For complete listings and full data exports, visit https://cipherati.com/llms-full.txt or https://cipherati.com/data/tools.json.

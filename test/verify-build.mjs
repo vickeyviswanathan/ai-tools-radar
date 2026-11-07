@@ -27,7 +27,11 @@ const requiredFiles = [
   "public/newsletter/today.md",
   "public/llms.txt",
   "public/sitemap.xml",
-  "public/robots.txt"
+  "public/robots.txt",
+  "public/manifest.json",
+  "public/sw.js",
+  "public/icons/icon-192.png",
+  "public/icons/icon-512.png"
 ];
 for (const file of requiredFiles) {
   assert(existsSync(file), `Required build artifact exists: ${file}`);
@@ -189,6 +193,16 @@ assert(briefingData.leadThreat && briefingData.leadThreat.title, "Briefing has v
 assert(briefingData.topScam && briefingData.topScam.title, "Briefing has active Scam Watch");
 assert(briefingData.featuredTool && briefingData.featuredTool.name, "Briefing has featured AI Tool");
 assert(briefingData.realityPick && briefingData.realityPick.title, "Briefing has Reality Check of the day");
+
+// 10. Verify PWA Manifest & Service Worker Integrity
+const manifestData = JSON.parse(readFileSync("public/manifest.json", "utf8"));
+assert(manifestData.name && manifestData.start_url && manifestData.display === "standalone", "PWA manifest is valid with standalone display mode");
+assert(Array.isArray(manifestData.icons) && manifestData.icons.length >= 2, "PWA manifest has required high-resolution icons");
+assert(indexHtml.includes('rel="manifest"') && indexHtml.includes('serviceWorker.register'), "HTML includes PWA manifest link and Service Worker registration");
+
+// 11. Verify Dispatcher Modules
+assert(existsSync("src/newsletter-dispatcher.mjs"), "Email newsletter dispatcher module exists");
+assert(existsSync("src/push-dispatcher.mjs"), "Web push notification dispatcher module exists");
 
 // Summary
 console.log("=========================================");

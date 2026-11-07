@@ -1,4 +1,4 @@
-# 📬 The Cipherati Morning Briefing · Nov 6, 2026
+# 📬 The Cipherati Morning Briefing · Nov 7, 2026
 *The 60-second intelligence scan: Cybersecurity news, citizen scam defense, and verified AI tools. Zero hype.*
 
 ---
@@ -9,9 +9,9 @@
 * **Key Context**: Key updates: OpenAI launches GPT-6 Cyber with 'Critical' cybersecurity risk rating.
 
 ### **Quick Hits (30-Sec Scan)**
-- **Binance seeks to shore up confidence after record $6.3 billion heist** ([Reuters](https://news.google.com/rss/articles/CBMixwFBVV95cUxPT3g4aktSMUNOUXJpZ0NMa2hicVFaR28zZjd6NWF5Qkp5U1RfbURlMWRoc2oxa2wzb24yNUowQWNSSmhsanVLWUFfdUJYalF6b2l5eHFTSzctV0VPQlE0UEpBZm9BdkpJSFo5OTdXWDJINE1JWXVILUhvYk1JVlpKVzFvTGJTYzJGSlQ4VXB2ZnRnNHFORmRDTmdtOG1kam9wNTh3TWYyX1VFVmp4bzMxQ096eUdCTzNIRkVHNDZZelNjWkhpVWlV?oc=5))
-- **India flags Chinese-linked AI tools in hacking campaign against financial firms** ([Reuters](https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWVkN29DQ3RzdVJEWDZTU0JvTXZCSldfNVROUHNLMzFsTF9mSTN1Z1FCV2VQSE16MHR5YU1lR1lhVUgxdkhYQ2VpT0prNktfT3IybFhJTE0zbWZ4U3h5aWUzSTMxZm1JRTVDUkJXeHRGaHBpM1dUYnhDSzhqbVNkVlJMZmJMTS1nRC1vZzBDZDZlMjlzdUZINzZuMFpFM0VnOVRhUEdBZEEzSFRSUHBIX21QTEktTmdCYTFUTjZTUk5qeHpxU2RVdQ?oc=5))
-- **ED arrests two from Tamil Nadu in Rs 400-crore pan India cyber fraud network** ([DT Next](https://news.google.com/rss/articles/CBMiswFBVV95cUxNU2NSV3RKUzBob3FUeXNDU1N4WlMyX08ydkJFVV9zX0tpNld4UUpDbll0TGR4a19lX2VpNXg1QzE0a0RxbHdhWG9LX1d5YzZzS2NBVFFZMTZqSzRnRzhDOGxLTk02TDdIcUQ2Vnh0LTdxUEJDcWpXM0ZoVVdLcEYxX2IwSlRzNUs5SWRRRjdSUlRJVHE0dXZwQmhWN05xS2MxMmxMWWNMRWRlbHRfcVhtNGEzQdIBwAFBVV95cUxOU0pBUTA5NkQ3WDNaaFRHVFV4TzVIVnRjMDVPak1VZ0NUYkpIdW5aSkE1WTZUdDUyUWZLSmdIbWtLbDlZMFl0cDF0WFZSd0xSSVk4cEZiaXRUWXdmTnFna01zYnBoc0VDZEVVVnhYdGt2c3ZOLWh3RXUwaWh6Q0FsZHZWS0JVOHMzU2RRUWhoNTk3S0dUTUFvems4OWRtbUZNR3J6eDFFTFJZOW5WTFUyeWlKODFwRHMzc3c4dk5GWWs?oc=5))
+- **Binance says it has covered $6 billion of $6.3 billion stolen in hack** ([Reuters](https://news.google.com/rss/articles/CBMimgFBVV95cUxQV05QRmVQbjJDUTZkNzRFaTA5VVp5RE9Bd2ctMkxITEVaZnNLZVVzdkx5aHBUUFZYOTJCb19YRFJRM2I1RW5QS0JJUmowaUtsVjlnaTExaWJDM2NsLVJINlJQZ0JHdlUyb05LS0kyRGdRMHlyVWdYRHFJOTNlbFRZc0plbkc2SE1nOHB1SklPVVNUVnhFY3lYdWtR?oc=5))
+- **Cybersecurity Is Becoming Central to Trust in India's Fintech Sector** ([TechGraph](https://news.google.com/rss/articles/CBMipAFBVV95cUxOenlrcThrM3Q2a2lQamRLaWNfOUhBNGhma1BmZkNQMkdjMzFhSzV2OXdONmZQSTRsd2lNd2hZcFBOMFRBbWxRQzNTc0dfUWVSczR5aHBVUU1ial9yZjRXMjdjeEJILUcwSEltYV9scEp6Y2xvRXNzR1lLakhBMW1idWtaNjl1b2c1NU9wMXVXcU91U0hISUVXWGNVR0NwRUF0azBkcQ?oc=5))
+- **Spam Calls Drop 99% Across India, 5.5 Million Mobile Numbers Disconnected; ₹6,500 Crore in Cyber Fraud Prevented** ([The 420.in](https://news.google.com/rss/articles/CBMi0AFBVV95cUxNVkFxQjVpS1dsVFdTM25GcjdoR2E3d2ljandIRG9FZHZDWHVFanMyR010akhJY1VzdkQzUFVHREhUaGU0YlFudm94Uko1SHhJRmpoenQ5enpzTDdwa2FXZ3VCbWZCeU5ucXZkZTNKc2ZKZ2gzdjRXS0FReno1WElkY0VMYTVIbmR2cTc3c1RWUmNrY09HZExpclVTdkNsY2JQd1BFd2FYSUQwNzh5bVJBV2dsdS0wU1Jqb2dDMzBuczJCdlJOZ0JKdndzekNkRHBV?oc=5))
 
 ---
 
@@ -24,10 +24,10 @@
 ---
 
 ## 🛠️ AI Tool & Reality of the Day
-* **Today's Tool**: [**Claude Code**](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code) — Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.
-* **Reality Check (#3: The Coding Agent Benchmark Myth)**: 
-  * *Myth*: "Our autonomous coding agent resolves 60% of GitHub issues end-to-end without humans!"
-  * *What Actually Works*: Restrict agents to tight loops with mandatory git rollback checkpoints, deterministic test validation, and human-in-the-loop diff approvals.
+* **Today's Tool**: [**unsloth**](https://unsloth.ai/docs) — Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.
+* **Reality Check (#4: The Fine-Tuning Money Pit)**: 
+  * *Myth*: "Fine-tune a private custom model on your company's proprietary data to teach it your domain!"
+  * *What Actually Works*: Keep the base model frozen. Use high-accuracy RAG with hybrid search for proprietary knowledge, and run open-weight models on-premise for zero ongoing API fees.
 
 ---
 *Read online or explore the live directory at [cipherati.com](https://cipherati.com/)*
