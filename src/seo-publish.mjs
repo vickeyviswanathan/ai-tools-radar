@@ -349,6 +349,7 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
       <a href="./ai-realities.html">AI Realities in Production</a> •
       <a href="./ai-tools.html">AI Developer Tools Directory</a> •
       <a href="./newsletter/today.html">Today's Morning Briefing</a> •
+      <a href="./feed.xml">RSS Feed</a> •
       <a href="./llms.txt">LLMs.txt</a> •
       <a href="./llms-full.txt">Full AI Knowledge Base</a>
     </div>`;
@@ -359,6 +360,13 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
     html = html.replace(
       'Synced automatically from live open-source and global statutory feeds every 6 hours.',
       `Synced automatically from live open-source and global statutory feeds every 6 hours.\n    ${seoFooterNav}`
+    );
+  }
+
+  if (!html.includes('href="./feed.xml"')) {
+    html = html.replace(
+      '<link rel="manifest" href="./manifest.json" />',
+      '<link rel="manifest" href="./manifest.json" />\n<link rel="alternate" type="application/rss+xml" title="Cipherati — Cybersecurity News, Scam Alerts &amp; AI Intelligence RSS Feed" href="./feed.xml" />'
     );
   }
 
@@ -479,6 +487,56 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
   // Write static IndexNow key verification file for Bing / ChatGPT Search / Perplexity / Copilot
   writeFileSync(`./public/${INDEXNOW_KEY}.txt`, INDEXNOW_KEY, "utf8");
 
+  // Generate standard RSS 2.0 feed (/feed.xml) for Google News, Feedly, and AI news aggregators
+  const rssItems = [
+    ...threats.slice(0, 16).map(t => ({
+      title: `[Cyber News] ${t.title}`,
+      link: `${SITE_URL}cybersecurity-news.html#${t.id || ""}`,
+      guid: `${SITE_URL}cybersecurity-news.html#${t.id || t.title}`,
+      pubDate: t.pubDate || new Date(updatedAt).toUTCString(),
+      description: `${t.incident || t.title} (Source: ${t.sourceName} · Sector: ${t.entities || "Cybersecurity"})`,
+      category: "Cybersecurity News"
+    })),
+    ...scams.slice(0, 10).map(s => ({
+      title: `[Scam Alert] ${s.title} (${s.platform})`,
+      link: `${SITE_URL}scam-alerts.html#${s.id}`,
+      guid: `${SITE_URL}scam-alerts.html#${s.id}`,
+      pubDate: new Date(updatedAt).toUTCString(),
+      description: `Trap: ${s.scam} | Defense Rule: ${s.protection} (Verified by ${s.sourceName} · Emergency Helpline: 1930)`,
+      category: "Scam Defense"
+    })),
+    ...realities.slice(0, 10).map((r, idx) => ({
+      title: `[AI Reality #${r.id}] ${r.title}`,
+      link: `${SITE_URL}ai-realities.html#reality-${idx}`,
+      guid: `${SITE_URL}ai-realities.html#reality-${idx}`,
+      pubDate: new Date(updatedAt).toUTCString(),
+      description: `Vendor Myth: "${r.myth}" | Reality: ${r.reality} | Production Fix: ${r.fix}`,
+      category: "AI Engineering Realities"
+    }))
+  ];
+
+  const feedXml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cipherati — Cybersecurity News, Scam Alerts, AI Developer Tools &amp; Production Realities</title>
+    <link>${SITE_URL}</link>
+    <description>Independent cybersecurity news desk, 1930 citizen scam defense playbooks, 22 production AI engineering realities, and ${tools.length} verified open-source AI developer tools.</description>
+    <language>en-in</language>
+    <lastBuildDate>${new Date(updatedAt).toUTCString()}</lastBuildDate>
+    <atom:link href="${SITE_URL}feed.xml" rel="self" type="application/rss+xml" />
+${rssItems.map(item => `    <item>
+      <title>${esc(item.title)}</title>
+      <link>${esc(item.link)}</link>
+      <guid isPermaLink="false">${esc(item.guid)}</guid>
+      <pubDate>${esc(item.pubDate)}</pubDate>
+      <category>${esc(item.category)}</category>
+      <description>${esc(item.description)}</description>
+    </item>`).join("\n")}
+  </channel>
+</rss>
+`;
+  writeFileSync("./public/feed.xml", feedXml, "utf8");
+
   const lastmod = updatedAt.slice(0, 10);
   const sitemapUrls = [
     { loc: `${SITE_URL}`, changefreq: "hourly", priority: "1.0" },
@@ -487,6 +545,7 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
     { loc: `${SITE_URL}ai-realities.html`, changefreq: "daily", priority: "0.90" },
     { loc: `${SITE_URL}ai-tools.html`, changefreq: "daily", priority: "0.90" },
     { loc: `${SITE_URL}newsletter/today.html`, changefreq: "daily", priority: "0.85" },
+    { loc: `${SITE_URL}feed.xml`, changefreq: "hourly", priority: "0.85" },
     { loc: `${SITE_URL}llms.txt`, changefreq: "daily", priority: "0.80" },
     { loc: `${SITE_URL}llms-full.txt`, changefreq: "daily", priority: "0.80" }
   ];

@@ -280,6 +280,7 @@ async function build() {
     "https://cipherati.com/ai-realities.html",
     "https://cipherati.com/ai-tools.html",
     "https://cipherati.com/newsletter/today.html",
+    "https://cipherati.com/feed.xml",
     "https://cipherati.com/llms.txt",
     "https://cipherati.com/llms-full.txt"
   ]);
@@ -506,7 +507,8 @@ function syncCountsInHtml(tools, realities, threats, scams) {
   html = html.replace(/<span class="tab-count" id="tab-tools-count">\d*<\/span>/, `<span class="tab-count" id="tab-tools-count">${tools.length}</span>`);
   html = html.replace(/<span class="side-nav-pill" id="side-tools-count">\d*<\/span>/, `<span class="side-nav-pill" id="side-tools-count">${tools.length}</span>`);
   html = html.replace(/<div class="hero-metric-num" id="stat-realities">\d+<\/div>/, `<div class="hero-metric-num" id="stat-realities">${realities.length}</div>`);
-  html = html.replace(/(id="side-tab-realities"[\s\S]*?<span class="side-nav-pill"[^>]*>)\d+(<\/span>)/, `$1${realities.length}$2`);
+  html = html.replace(/<span class="tab-count" id="tab-realities-count">\d*<\/span>/, `<span class="tab-count" id="tab-realities-count">${realities.length}</span>`);
+  html = html.replace(/<span class="side-nav-pill" id="side-realities-count">\d*<\/span>/, `<span class="side-nav-pill" id="side-realities-count">${realities.length}</span>`);
   html = html.replace(/<div class="hero-metric-num" id="stat-news">\d+<\/div>/, `<div class="hero-metric-num" id="stat-news">${threats.length}</div>`);
   html = html.replace(/<span class="side-nav-pill" id="side-threats-count">\d*<\/span>/, `<span class="side-nav-pill" id="side-threats-count">${threats.length}</span>`);
   html = html.replace(/<div class="hero-metric-num" id="stat-scams">\d+<\/div>/, `<div class="hero-metric-num" id="stat-scams">${scams.length}</div>`);

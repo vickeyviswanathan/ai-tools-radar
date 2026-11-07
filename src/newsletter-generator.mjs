@@ -196,7 +196,7 @@ LEAD: ${leadThreat.title} (${leadThreat.sourceName})
 More on the Radar:
 ${quickHits.map((h) => `• ${h.title} (${h.sourceName})`).join("\n")}
 
-Explore all live incidents: https://cipherati.com/#news`);
+Explore all live incidents: https://cipherati.com/cybersecurity-news.html`);
 
   if (topScam) {
     plainSections.push(`------------------------------------------------------------
@@ -206,7 +206,7 @@ ${plainSecNum++}. SCAM ALERTS
 ${topScam.title} [Vector: ${topScam.platform}]
 • How it works: ${topScam.scam}
 • Defense rule: ${topScam.protection}
-• Helpline: Dial 1930 (National Cyber Helpline) or report at https://cipherati.com/#scams`);
+• Helpline: Dial 1930 (National Cyber Helpline) or report at https://cipherati.com/scam-alerts.html`);
   }
 
   if (featuredTool) {
@@ -216,7 +216,7 @@ ${plainSecNum++}. AI TOOLS
 
 Featured Tool: ${featuredTool.name}
 • What it does: ${featuredTool.tagline}
-• Browse 221+ verified tools: https://cipherati.com/#tools`);
+• Browse 223+ verified tools: https://cipherati.com/ai-tools.html`);
   }
 
   if (realityPick) {
@@ -227,7 +227,7 @@ ${plainSecNum++}. AI REALITIES
 Reality #${realityPick.id}: ${realityPick.title}
 • The Hype Myth: "${realityPick.myth}"
 • What Actually Works: ${realityPick.fix}
-• Read all 22 production realities: https://cipherati.com/#realities`);
+• Read all 22 production realities: https://cipherati.com/ai-realities.html`);
   }
 
   // 2. Generate Plain-Text / Markdown version (also used as MIME text/plain part for Primary Inbox deliverability)
@@ -274,7 +274,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
         Morning Cyber &amp; AI Intelligence
       </h1>
       <p style="margin:0;font-size:13.5px;color:#4b5563;">
-        Curated across <a href="https://cipherati.com/#news" style="color:#111827;text-decoration:underline;font-weight:600;">Cybersecurity News</a>, <a href="https://cipherati.com/#scams" style="color:#111827;text-decoration:underline;font-weight:600;">Scam Alerts</a>, <a href="https://cipherati.com/#tools" style="color:#111827;text-decoration:underline;font-weight:600;">AI Tools</a> &amp; <a href="https://cipherati.com/#realities" style="color:#111827;text-decoration:underline;font-weight:600;">AI Realities</a>.
+        Curated across <a href="https://cipherati.com/cybersecurity-news.html" style="color:#111827;text-decoration:underline;font-weight:600;">Cybersecurity News</a>, <a href="https://cipherati.com/scam-alerts.html" style="color:#111827;text-decoration:underline;font-weight:600;">Scam Alerts</a>, <a href="https://cipherati.com/ai-tools.html" style="color:#111827;text-decoration:underline;font-weight:600;">AI Tools</a> &amp; <a href="https://cipherati.com/ai-realities.html" style="color:#111827;text-decoration:underline;font-weight:600;">AI Realities</a>.
       </p>
     </div>
 
@@ -285,7 +285,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </div>
 
       <h2 style="margin:0 0 8px;font-size:17px;line-height:1.35;font-weight:700;color:#111827;">
-        <a href="https://cipherati.com/#news" style="color:#111827;text-decoration:none;">
+        <a href="https://cipherati.com/cybersecurity-news.html" style="color:#111827;text-decoration:none;">
           ${escHtml(leadThreat.title)}
         </a>
       </h2>
@@ -295,7 +295,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </p>
 
       <div style="font-size:12.5px;color:#6b7280;margin-bottom:16px;">
-        Source: <strong>${escHtml(leadThreat.sourceName)}</strong> · Sector: ${escHtml(leadThreat.entities || "Enterprise & Public Infrastructure")} · <a href="https://cipherati.com/#news" style="color:#2563eb;text-decoration:none;font-weight:600;">Read on Cipherati →</a>
+        Source: <strong>${escHtml(leadThreat.sourceName)}</strong> · Sector: ${escHtml(leadThreat.entities || "Enterprise & Public Infrastructure")} · <a href="https://cipherati.com/cybersecurity-news.html" style="color:#2563eb;text-decoration:none;font-weight:600;">Read on Cipherati →</a>
       </div>
 
       ${
@@ -310,7 +310,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
             .map(
               (h) => `
           <li style="margin-bottom:6px;">
-            <a href="https://cipherati.com/#news" style="color:#111827;text-decoration:none;font-weight:600;">${escHtml(h.title)}</a>
+            <a href="https://cipherati.com/cybersecurity-news.html" style="color:#111827;text-decoration:none;font-weight:600;">${escHtml(h.title)}</a>
             <span style="color:#6b7280;font-size:12px;"> — ${escHtml(h.sourceName)}</span>
           </li>`
             )
@@ -330,7 +330,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </div>
 
       <h2 style="margin:0 0 6px;font-size:16.5px;line-height:1.35;font-weight:700;color:#111827;">
-        <a href="https://cipherati.com/#scams" style="color:#111827;text-decoration:none;">
+        <a href="https://cipherati.com/scam-alerts.html" style="color:#111827;text-decoration:none;">
           ${escHtml(topScam.title)}
         </a>
         <span style="font-size:12px;font-weight:500;color:#6b7280;"> (${escHtml(topScam.platform)})</span>
@@ -345,7 +345,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </p>
 
       <div style="font-size:12.5px;color:#6b7280;">
-        National Cyber Helpline: Dial <strong>1930</strong> · <a href="https://cipherati.com/#scams" style="color:#2563eb;text-decoration:none;font-weight:600;">View all 19 Scam Alerts →</a>
+        National Cyber Helpline: Dial <strong>1930</strong> · <a href="https://cipherati.com/scam-alerts.html" style="color:#2563eb;text-decoration:none;font-weight:600;">View all 19 Scam Alerts →</a>
       </div>
     </div>`
         : ""
@@ -360,7 +360,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </div>
 
       <h2 style="margin:0 0 6px;font-size:16.5px;line-height:1.35;font-weight:700;color:#111827;">
-        <a href="https://cipherati.com/#tools" style="color:#111827;text-decoration:none;">
+        <a href="https://cipherati.com/ai-tools.html" style="color:#111827;text-decoration:none;">
           ${escHtml(featuredTool.name)}
         </a>
       </h2>
@@ -370,7 +370,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </p>
 
       <div style="font-size:12.5px;color:#6b7280;">
-        <a href="https://cipherati.com/#tools" style="color:#2563eb;text-decoration:none;font-weight:600;">Explore 221+ verified AI developer tools on Cipherati →</a>
+        <a href="https://cipherati.com/ai-tools.html" style="color:#2563eb;text-decoration:none;font-weight:600;">Explore 223+ verified AI developer tools on Cipherati →</a>
       </div>
     </div>`
         : ""
@@ -385,7 +385,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </div>
 
       <h2 style="margin:0 0 6px;font-size:16.5px;line-height:1.35;font-weight:700;color:#111827;">
-        <a href="https://cipherati.com/#realities" style="color:#111827;text-decoration:none;">
+        <a href="https://cipherati.com/ai-realities.html" style="color:#111827;text-decoration:none;">
           Reality #${escHtml(realityPick.id)}: ${escHtml(realityPick.title)}
         </a>
       </h2>
@@ -399,7 +399,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </p>
 
       <div style="font-size:12.5px;color:#6b7280;">
-        <a href="https://cipherati.com/#realities" style="color:#2563eb;text-decoration:none;font-weight:600;">Read all 22 AI Realities →</a>
+        <a href="https://cipherati.com/ai-realities.html" style="color:#2563eb;text-decoration:none;font-weight:600;">Read all 22 AI Realities →</a>
       </div>
     </div>`
         : ""
@@ -408,10 +408,10 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
     <!-- EDITORIAL FOOTER -->
     <div style="font-size:12px;color:#6b7280;line-height:1.6;">
       <p style="margin:0 0 6px;color:#111827;font-weight:600;">
-        <a href="https://cipherati.com/#tools" style="color:#111827;text-decoration:none;">AI Tools</a> &nbsp;·&nbsp;
-        <a href="https://cipherati.com/#realities" style="color:#111827;text-decoration:none;">AI Realities</a> &nbsp;·&nbsp;
-        <a href="https://cipherati.com/#news" style="color:#111827;text-decoration:none;">Cybersecurity News</a> &nbsp;·&nbsp;
-        <a href="https://cipherati.com/#scams" style="color:#111827;text-decoration:none;">Scam Alerts</a>
+        <a href="https://cipherati.com/ai-tools.html" style="color:#111827;text-decoration:none;">AI Tools</a> &nbsp;·&nbsp;
+        <a href="https://cipherati.com/ai-realities.html" style="color:#111827;text-decoration:none;">AI Realities</a> &nbsp;·&nbsp;
+        <a href="https://cipherati.com/cybersecurity-news.html" style="color:#111827;text-decoration:none;">Cybersecurity News</a> &nbsp;·&nbsp;
+        <a href="https://cipherati.com/scam-alerts.html" style="color:#111827;text-decoration:none;">Scam Alerts</a>
       </p>
       <p style="margin:0;">
         Published by <a href="https://cipherati.com/" style="color:#2563eb;text-decoration:none;">Cipherati.com</a> · Sent with explicit consent under the India DPDP Act 2023.<br>

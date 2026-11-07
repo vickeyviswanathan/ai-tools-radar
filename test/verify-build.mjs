@@ -31,6 +31,7 @@ const requiredFiles = [
   "public/newsletter/today.md",
   "public/llms.txt",
   "public/llms-full.txt",
+  "public/feed.xml",
   "public/sitemap.xml",
   "public/robots.txt",
   "public/c9426a40b7894f12a8e3d56c719204ef.txt",
@@ -282,6 +283,10 @@ assert(realitiesPage.includes('<section class="section-wrap" id="realities">') &
 const toolsPage = readFileSync("public/ai-tools.html", "utf8");
 assert(toolsPage.includes("SoftwareSourceCode") && indexHtml.includes("SoftwareSourceCode"), "Rich SoftwareSourceCode repository Schema.org JSON-LD is embedded in index.html and ai-tools.html");
 assert(indexHtml.includes("omnibox-dropdown") && indexHtml.includes("selectOmniboxHit"), "Cross-pillar omnibox command search is wired across AI Tools, AI Realities, Cyber News, and Scam Alerts");
+assert(indexHtml.includes('href="./cybersecurity-news.html"') && indexHtml.includes('href="./scam-alerts.html"') && indexHtml.includes('href="./ai-realities.html"') && indexHtml.includes('href="./ai-tools.html"'), "Sidebar navigation uses crawlable <a href> pillar links for PageRank distribution");
+assert(indexHtml.includes('<span class="tab-count" id="tab-realities-count">22</span>'), "Mobile/Header AI Realities tab count badge is synced to 22");
+const feedXml = readFileSync("public/feed.xml", "utf8");
+assert(feedXml.includes("<rss version=\"2.0\"") && feedXml.includes("cybersecurity-news.html") && feedXml.includes("scam-alerts.html"), "RSS 2.0 syndication feed (public/feed.xml) is valid and populated");
 
 
 // Summary

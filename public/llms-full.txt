@@ -12,103 +12,97 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 
 ---
 
-## 1. Live Cybersecurity News & Threat Intelligence (16 Verified Stories)
+## 1. Live Cybersecurity News & Threat Intelligence (15 Verified Stories)
 
-### Story #1: Hyderabad-based NBFC hit by cyber Fraud, loses Rs 7.09 crore
+### Story #1: Car Cybersecurity In India: Can Connected Cars Be Hacked?
+- Source: CarAndBike (2026-11-07)
+- Sector: Banking & Financial Services
+- Severity: HIGH
+- Context: Verified primary cybersecurity reporting.
+
+### Story #2: Bihar: Two held in East Champaran for cyber fraud linked to Pakistan
+- Source: The Hawk (2026-11-07)
+- Sector: Enterprise & Public Infrastructure
+- Severity: HIGH
+- Context: Verified primary cybersecurity reporting.
+
+### Story #3: Hyderabad-based NBFC hit by cyber Fraud, loses Rs 7.09 crore
 - Source: Hyderabad Mail (2026-11-07)
 - Sector: Banking & Financial Services
 - Severity: HIGH
 - Context: Verified primary cybersecurity reporting.
 
-### Story #2: Government, RBI strengthen fintech regulatory framework to boost consumer protection and cybersecurity
-- Source: DD News (2026-11-06)
+### Story #4: RBI Consolidates Cybersecurity Rules, Prescribes New Safeguards For Non-Bank Payment Firms
+- Source: NDTV Profit (2026-11-07)
 - Sector: Banking & Financial Services
 - Severity: HIGH
-- Context: Key updates: RBI tightens cybersecurity norms for non-bank payment operators, mandates six-hour incident reporting; RBI's new cyber rules could raise the cost of doing business for payment companies.
+- Context: Key updates: Government, RBI strengthen fintech regulatory framework to boost consumer protection and cybersecurity; RBI tightens cybersecurity norms for non-bank payment operators, mandates six-hour incident reporting.
 
-### Story #3: Cybersecurity Is Becoming Central to Trust in India's Fintech Sector
+### Story #5: Cybersecurity Is Becoming Central to Trust in India's Fintech Sector
 - Source: TechGraph (2026-11-06)
 - Sector: Banking & Financial Services
 - Severity: HIGH
 - Context: Verified primary cybersecurity reporting.
 
-### Story #4: Spam Calls Drop 99% Across India, 5.5 Million Mobile Numbers Disconnected; ₹6,500 Crore in Cyber Fraud Prevented
-- Source: The 420.in (2026-11-06)
-- Sector: Banking & Financial Services
-- Severity: HIGH
-- Context: Verified primary cybersecurity reporting.
-
-### Story #5: Knowledge Nugget | AI cybersecurity race: What does CERT-In's access to Anthropic's Mythos mean for India?
+### Story #6: Knowledge Nugget | AI cybersecurity race: What does CERT-In's access to Anthropic's Mythos mean for India?
 - Source: The Indian Express (2026-11-06)
 - Sector: Banking & Financial Services
 - Severity: HIGH
 - Context: Verified primary cybersecurity reporting.
 
-### Story #6: India flags Chinese-linked AI tools in hacking campaign against financial firms
+### Story #7: Tesla to pull the plug on Cybertruck after years of poor sales
+- Source: Reuters (2026-11-06)
+- Sector: Enterprise & Public Infrastructure
+- Severity: HIGH
+- Context: Verified primary cybersecurity reporting.
+
+### Story #8: India flags Chinese-linked AI tools in hacking campaign against financial firms
 - Source: Reuters (2026-11-05)
 - Sector: Enterprise & Public Infrastructure
 - Severity: HIGH
 - Context: Verified primary cybersecurity reporting.
 
-### Story #7: Mercado Bitcoin Said Its Hack Was Contained, But Blockchain Data Tells a Different Story
+### Story #9: Mercado Bitcoin Said Its Hack Was Contained, But Blockchain Data Tells a Different Story
 - Source: Yahoo Finance (2026-11-05)
 - Sector: Crypto & Digital Assets
 - Severity: HIGH
 - Context: Key updates: Mercado Bitcoin hack continued hours after exchange said attack was contained, report finds; Mercado Bitcoin Hack $8 Million Larger Than First Reported.
 
-### Story #8: OpenAI launches GPT-6 Cyber with 'Critical' cybersecurity rating
+### Story #10: OpenAI launches GPT-6 Cyber with 'Critical' cybersecurity rating
 - Source: Reuters (2026-11-05)
 - Sector: Enterprise & Public Infrastructure
 - Severity: CRITICAL
 - Context: Key updates: OpenAI launches GPT-6 Cyber with 'Critical' cybersecurity risk rating.
 
-### Story #9: ED arrests two from Tamil Nadu in Rs 400-crore pan India cyber fraud network
+### Story #11: ED arrests two from Tamil Nadu in Rs 400-crore pan India cyber fraud network
 - Source: DT Next (2026-11-05)
 - Sector: Banking & Financial Services
 - Severity: HIGH
 - Context: Verified primary cybersecurity reporting.
 
-### Story #10: Tencent rolls out AI model trained with limited cybersecurity data amid hacking fears
+### Story #12: Binance hackers used fake job interview in $6.3 billion attack
+- Source: Reuters (2026-11-04)
+- Sector: Crypto & Digital Assets
+- Severity: CRITICAL
+- Context: Key updates: Foreign Money Returns to India, Binance Survives a Record Hack, and Democrats Retake Congress; Binance, SBI cyberattacks highlight financial sector vulnerabilities.
+
+### Story #13: Tencent rolls out AI model trained with limited cybersecurity data amid hacking fears
 - Source: Reuters (2026-11-04)
 - Sector: Enterprise & Public Infrastructure
 - Severity: HIGH
 - Context: Key updates: OpenAI Unveils New Cybersecurity AI Model Amid Growing Concerns Over AI-Powered Cyberattacks.
 
-### Story #11: Crypto's biggest heist ever, the spy who loved Nvidia and Hacktober's unsolved mysteries : Machine Gods
+### Story #14: Crypto's biggest heist ever, the spy who loved Nvidia and Hacktober's unsolved mysteries : Machine Gods
 - Source: NPR (2026-11-04)
 - Sector: Crypto & Digital Assets
 - Severity: HIGH
 - Context: Verified primary cybersecurity reporting.
 
-### Story #12: Supermarket fridge attack is just the start, says UK cybersecurity chief
+### Story #15: Supermarket fridge attack is just the start, says UK cybersecurity chief
 - Source: Reuters (2026-11-04)
 - Sector: Enterprise & Public Infrastructure
 - Severity: HIGH
 - Context: Key updates: Investigators hunt French supermarket fridge hackers, no claim of responsibility.
-
-### Story #13: Crypto heist will revitalise Kim Jong-un's latest power play
-- Source: The Times (2026-11-03)
-- Sector: Crypto & Digital Assets
-- Severity: HIGH
-- Context: Verified primary cybersecurity reporting.
-
-### Story #14: European supermarkets rush to patch vulnerabilities after region-wide fridge hack
-- Source: Reuters (2026-11-03)
-- Sector: Enterprise & Public Infrastructure
-- Severity: HIGH
-- Context: Key updates: Is Putin behind European bomb threat chaos & freezer hack? Why Brits must be ready for spiralling sabotage blitz.
-
-### Story #15: New cyberattack on supermarket fridges sweeps across Europe
-- Source: Reuters (2026-11-03)
-- Sector: Enterprise & Public Infrastructure
-- Severity: HIGH
-- Context: Verified primary cybersecurity reporting.
-
-### Story #16: Binance says it has covered $6 billion of $6.3 billion stolen in hack
-- Source: Reuters (2026-10-31)
-- Sector: Crypto & Digital Assets
-- Severity: CRITICAL
-- Context: Key updates: Foreign Money Returns to India, Binance Survives a Record Hack, and Democrats Retake Congress; Binance, SBI cyberattacks highlight financial sector vulnerabilities.
 
 
 ---
@@ -412,11 +406,11 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 
 ## 4. Curated AI Developer Tools Directory (223 Tools)
 
-### 1. headroom
-- URL: https://docs.headroomlabs.ai/docs
+### 1. OpenAI Codex
+- URL: https://openai.com/index/openai-codex/
 - Category: Coding
-- Tagline: Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
-- Why it matters: Battle-tested in the open — 78.3K GitHub stars from real production users.
+- Tagline: Foundational AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.
+- Why it matters: The foundational language model architecture that pioneered automated code translation, refactoring, and agentic workflows.
 
 ### 2. litellm
 - URL: https://docs.litellm.ai/docs/
@@ -430,83 +424,83 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…
 - Why it matters: Battle-tested in the open — 89K GitHub stars from real production users.
 
-### 4. claude code best practice
-- URL: https://linkedin.com/in/shanraisshan
-- Category: Coding
-- Tagline: from vibe coding to agentic engineering - practice makes claude perfect
-- Why it matters: Battle-tested in the open — 68.3K GitHub stars from real production users.
-
-### 5. medusa
-- URL: https://medusajs.com/
-- Category: Coding
-- Tagline: The world's most flexible commerce platform for agents and developers
-- Why it matters: Battle-tested in the open — 37K GitHub stars from real production users.
-
-### 6. OmniRoute
-- URL: https://omniroute.online/
-- Category: Coding
-- Tagline: Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Clin…
-- Why it matters: Battle-tested in the open — 82.7K GitHub stars from real production users.
-
-### 7. DeepSeek Reasonix
-- URL: https://reasonix.io/
-- Category: Coding
-- Tagline: A reliable coding agent for complex software engineering tasks.
-- Why it matters: Battle-tested in the open — 36K GitHub stars from real production users.
-
-### 8. openinterpreter
-- URL: https://openinterpreter.com/
-- Category: Coding
-- Tagline: A coding agent for open models like Kimi K3 and GLM 5.3
-- Why it matters: Battle-tested in the open — 68.7K GitHub stars from real production users.
-
-### 9. ECC
+### 4. ECC
 - URL: https://ecc.tools/
 - Category: Coding
 - Tagline: The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
 - Why it matters: Battle-tested in the open — 293.1K GitHub stars from real production users.
 
-### 10. OpenAI Codex
-- URL: https://openai.com/index/openai-codex/
+### 5. claude code best practice
+- URL: https://linkedin.com/in/shanraisshan
 - Category: Coding
-- Tagline: Foundational AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.
-- Why it matters: The foundational language model architecture that pioneered automated code translation, refactoring, and agentic workflows.
+- Tagline: from vibe coding to agentic engineering - practice makes claude perfect
+- Why it matters: Battle-tested in the open — 68.3K GitHub stars from real production users.
 
-### 11. cc switch
-- URL: https://ccswitch.io/
-- Category: Coding
-- Tagline: A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.
-- Why it matters: Battle-tested in the open — 150.3K GitHub stars from real production users.
-
-### 12. VS Code with In-Built AI Agents
-- URL: https://code.visualstudio.com/docs/copilot/copilot-chat
-- Category: Coding
-- Tagline: Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.
-- Why it matters: Brings autonomous multi-file refactoring and command execution directly into the world's most widely used code editor.
-
-### 13. OpenSpec
-- URL: https://openspec.dev/
-- Category: Coding
-- Tagline: Spec-driven development (SDD) for AI coding assistants.
-- Why it matters: Battle-tested in the open — 73.4K GitHub stars from real production users.
-
-### 14. context mode
+### 6. context mode
 - URL: https://contextmode.ai/
 - Category: Coding
 - Tagline: Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.
 - Why it matters: Battle-tested in the open — 32.9K GitHub stars from real production users.
 
-### 15. RTK (Rust Token Killer)
-- URL: https://github.com/rtk-ai/rtk
+### 7. medusa
+- URL: https://medusajs.com/
 - Category: Coding
-- Tagline: CLI proxy that condenses command outputs by 60–90% to save LLM tokens and execution costs.
-- Why it matters: Essential AI CLI infrastructure that slashes LLM context token usage by up to 90% without losing error signals.
+- Tagline: The world's most flexible commerce platform for agents and developers
+- Why it matters: Battle-tested in the open — 37K GitHub stars from real production users.
 
-### 16. Amazon Q Developer / Kiro IDE
+### 8. Amazon Q Developer / Kiro IDE
 - URL: https://aws.amazon.com/q/developer/
 - Category: Coding
 - Tagline: AWS's generative AI coding companion and cloud-native development environment for code transformation and security scanning.
 - Why it matters: Specialized in enterprise Java/Node upgrades, automated vulnerability patching, and deep AWS cloud infrastructure wiring.
+
+### 9. graphify
+- URL: https://www.graphify.com/
+- Category: Coding
+- Tagline: Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing,…
+- Why it matters: Battle-tested in the open — 139.1K GitHub stars from real production users.
+
+### 10. VS Code with In-Built AI Agents
+- URL: https://code.visualstudio.com/docs/copilot/copilot-chat
+- Category: Coding
+- Tagline: Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.
+- Why it matters: Brings autonomous multi-file refactoring and command execution directly into the world's most widely used code editor.
+
+### 11. DeepSeek Reasonix
+- URL: https://reasonix.io/
+- Category: Coding
+- Tagline: A reliable coding agent for complex software engineering tasks.
+- Why it matters: Battle-tested in the open — 36K GitHub stars from real production users.
+
+### 12. headroom
+- URL: https://docs.headroomlabs.ai/docs
+- Category: Coding
+- Tagline: Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
+- Why it matters: Battle-tested in the open — 78.3K GitHub stars from real production users.
+
+### 13. cc switch
+- URL: https://ccswitch.io/
+- Category: Coding
+- Tagline: A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.
+- Why it matters: Battle-tested in the open — 150.3K GitHub stars from real production users.
+
+### 14. openinterpreter
+- URL: https://openinterpreter.com/
+- Category: Coding
+- Tagline: A coding agent for open models like Kimi K3 and GLM 5.3
+- Why it matters: Battle-tested in the open — 68.7K GitHub stars from real production users.
+
+### 15. OmniRoute
+- URL: https://omniroute.online/
+- Category: Coding
+- Tagline: Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Clin…
+- Why it matters: Battle-tested in the open — 82.7K GitHub stars from real production users.
+
+### 16. RTK (Rust Token Killer)
+- URL: https://github.com/rtk-ai/rtk
+- Category: Coding
+- Tagline: CLI proxy that condenses command outputs by 60–90% to save LLM tokens and execution costs.
+- Why it matters: Essential AI CLI infrastructure that slashes LLM context token usage by up to 90% without losing error signals.
 
 ### 17. Umi OCR
 - URL: https://github.com/hiroi-sora/Umi-OCR
@@ -514,11 +508,11 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: OCR software, free and offline. OCR / PDF / /
 - Why it matters: Battle-tested in the open — 48.3K GitHub stars from real production users.
 
-### 18. Kimi Code
-- URL: https://kimi.ai
+### 18. Aider
+- URL: https://github.com/paul-gauthier/aider
 - Category: Coding
-- Tagline: Moonshot AI's high-context reasoning and coding model optimized for full-repository understanding and multi-file logic.
-- Why it matters: Exceptional million-token context reasoning capable of tracking large enterprise codebases and multi-package dependencies.
+- Tagline: AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
+- Why it matters: The gold standard for terminal-based AI pair programming with robust repository-wide AST parsing.
 
 ### 19. OpenHands
 - URL: https://github.com/All-Hands-AI/OpenHands
@@ -526,35 +520,35 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Autonomous software development agent capable of writing code, running bash commands, and browsing the web.
 - Why it matters: Community-driven autonomous developer agent capable of resolving end-to-end GitHub issues in isolated sandboxes.
 
-### 20. Aider
-- URL: https://github.com/paul-gauthier/aider
+### 20. Kimi Code
+- URL: https://kimi.ai
 - Category: Coding
-- Tagline: AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
-- Why it matters: The gold standard for terminal-based AI pair programming with robust repository-wide AST parsing.
+- Tagline: Moonshot AI's high-context reasoning and coding model optimized for full-repository understanding and multi-file logic.
+- Why it matters: Exceptional million-token context reasoning capable of tracking large enterprise codebases and multi-package dependencies.
 
-### 21. Codewhale
-- URL: https://codewhale.net/
+### 21. OpenSpec
+- URL: https://openspec.dev/
 - Category: Coding
-- Tagline: Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome
-- Why it matters: Battle-tested in the open — 41.2K GitHub stars from real production users.
+- Tagline: Spec-driven development (SDD) for AI coding assistants.
+- Why it matters: Battle-tested in the open — 73.4K GitHub stars from real production users.
 
-### 22. next ai draw io
-- URL: https://next-ai-drawio.jiang.jp/
-- Category: Coding
-- Tagline: Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
-- Why it matters: Battle-tested in the open — 36.5K GitHub stars from real production users.
-
-### 23. Claude Code
+### 22. Claude Code
 - URL: https://docs.anthropic.com/en/docs/agents-and-tools/claude-code
 - Category: Coding
 - Tagline: Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.
 - Why it matters: High-velocity CLI coding agent that operates directly in your local repo with fine-grained permission controls.
 
-### 24. graphify
-- URL: https://www.graphify.com/
+### 23. next ai draw io
+- URL: https://next-ai-drawio.jiang.jp/
 - Category: Coding
-- Tagline: Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing,…
-- Why it matters: Battle-tested in the open — 139.1K GitHub stars from real production users.
+- Tagline: Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
+- Why it matters: Battle-tested in the open — 36.5K GitHub stars from real production users.
+
+### 24. Codewhale
+- URL: https://codewhale.net/
+- Category: Coding
+- Tagline: Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome
+- Why it matters: Battle-tested in the open — 41.2K GitHub stars from real production users.
 
 ### 25. oh my openagent
 - URL: https://omo.dev/
@@ -562,89 +556,89 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: OmO: Just type "mass ulw" keyword with your prompt. Now you are the master of graph engineering.
 - Why it matters: Battle-tested in the open — 70.5K GitHub stars from real production users.
 
-### 26. supermemory
-- URL: https://supermemory.ai/docs
-- Category: Coding
-- Tagline: Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.
-- Why it matters: Battle-tested in the open — 31.5K GitHub stars from real production users.
-
-### 27. claude skills
+### 26. claude skills
 - URL: https://alirezarezvani.medium.com/
 - Category: Coding
 - Tagline: 380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents —…
 - Why it matters: Battle-tested in the open — 29K GitHub stars from real production users.
 
-### 28. n8n
-- URL: https://n8n.io/
-- Category: Agents & Automation
-- Tagline: Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.
-- Why it matters: Battle-tested in the open — 209.1K GitHub stars from real production users.
-
-### 29. kilocode
-- URL: https://kilo.ai/
-- Category: Coding
-- Tagline: Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
-- Why it matters: Battle-tested in the open — 27.8K GitHub stars from real production users.
-
-### 30. hermes agent
+### 27. hermes agent
 - URL: https://hermes-agent.nousresearch.com/
 - Category: Agents & Automation
 - Tagline: The agent that grows with you
 - Why it matters: Battle-tested in the open — 258.7K GitHub stars from real production users.
 
-### 31. Cline
-- URL: https://github.com/cline/cline
+### 28. supermemory
+- URL: https://supermemory.ai/docs
 - Category: Coding
-- Tagline: Autonomous coding agent inside VS Code with file editing, shell command execution, and browser interaction.
-- Why it matters: Pioneering interactive coding agent extension with strict permission controls and iterative browser verification.
+- Tagline: Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.
+- Why it matters: Battle-tested in the open — 31.5K GitHub stars from real production users.
 
-### 32. AutoGPT
-- URL: https://agpt.co/
+### 29. n8n
+- URL: https://n8n.io/
 - Category: Agents & Automation
-- Tagline: AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.
-- Why it matters: Battle-tested in the open — 187.8K GitHub stars from real production users.
+- Tagline: Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.
+- Why it matters: Battle-tested in the open — 209.1K GitHub stars from real production users.
 
-### 33. Continue
-- URL: https://github.com/continuedev/continue
+### 30. kilocode
+- URL: https://kilo.ai/
 - Category: Coding
-- Tagline: The leading open-source AI code assistant for VS Code and JetBrains connecting any model and codebase.
-- Why it matters: The most customizable open-source alternative to Copilot that respects privacy and local LLM backends.
+- Tagline: Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
+- Why it matters: Battle-tested in the open — 27.8K GitHub stars from real production users.
 
-### 34. Google Antigravity
-- URL: https://antigravity.google
-- Category: Coding
-- Tagline: Next-gen agentic AI coding environment with deep workspace reasoning, terminal tools, and multi-agent coordination.
-- Why it matters: Pioneering agentic coding platform that pairs developers with autonomous coding agents capable of end-to-end task execution.
-
-### 35. agent skills
-- URL: https://skills.addy.ie/
-- Category: Agents & Automation
-- Tagline: Production-grade engineering skills for AI coding agents.
-- Why it matters: Battle-tested in the open — 111.9K GitHub stars from real production users.
-
-### 36. paperclip
-- URL: https://paperclip.ing/
-- Category: Agents & Automation
-- Tagline: The open-source app everyone uses to manage agents at work
-- Why it matters: Battle-tested in the open — 108.8K GitHub stars from real production users.
-
-### 37. onlook
-- URL: https://onlook.com/
-- Category: Coding
-- Tagline: The Developer Tool for Visual Engineers • An Open-Source AI-First Design tool • Visually build, style, and edit your code with AI • World's best, top-most agent recommended #1 Developer tool for Desi…
-- Why it matters: Battle-tested in the open — 27K GitHub stars from real production users.
-
-### 38. skills
+### 31. skills
 - URL: https://github.com/anthropics/skills
 - Category: Agents & Automation
 - Tagline: Public repository for Agent Skills
 - Why it matters: Battle-tested in the open — 185K GitHub stars from real production users.
 
-### 39. Browser-Use
-- URL: https://github.com/browser-use/browser-use
+### 32. langflow
+- URL: https://www.langflow.org/
 - Category: Agents & Automation
-- Tagline: Make websites accessible for AI agents with Playwright, visual grounding, and multi-tab orchestration.
-- Why it matters: Fastest-growing autonomous browser agent library allowing LLMs to interact with any web application effortlessly.
+- Tagline: Langflow is a powerful tool for building and deploying AI-powered agents and workflows.
+- Why it matters: Battle-tested in the open — 156.2K GitHub stars from real production users.
+
+### 33. deepseek harness
+- URL: https://deepseek.com/harness
+- Category: Agents & Automation
+- Tagline: DeepSeek Harness: Everything is a Plugin.
+- Why it matters: Battle-tested in the open — 266.5K GitHub stars from real production users.
+
+### 34. paperclip
+- URL: https://paperclip.ing/
+- Category: Agents & Automation
+- Tagline: The open-source app everyone uses to manage agents at work
+- Why it matters: Battle-tested in the open — 108.8K GitHub stars from real production users.
+
+### 35. Cline
+- URL: https://github.com/cline/cline
+- Category: Coding
+- Tagline: Autonomous coding agent inside VS Code with file editing, shell command execution, and browser interaction.
+- Why it matters: Pioneering interactive coding agent extension with strict permission controls and iterative browser verification.
+
+### 36. Continue
+- URL: https://github.com/continuedev/continue
+- Category: Coding
+- Tagline: The leading open-source AI code assistant for VS Code and JetBrains connecting any model and codebase.
+- Why it matters: The most customizable open-source alternative to Copilot that respects privacy and local LLM backends.
+
+### 37. gemini cli
+- URL: https://geminicli.com/
+- Category: Agents & Automation
+- Tagline: An open-source AI agent that brings the power of Gemini directly into your terminal.
+- Why it matters: Battle-tested in the open — 108.6K GitHub stars from real production users.
+
+### 38. AutoGPT
+- URL: https://agpt.co/
+- Category: Agents & Automation
+- Tagline: AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.
+- Why it matters: Battle-tested in the open — 187.8K GitHub stars from real production users.
+
+### 39. Google Antigravity
+- URL: https://antigravity.google
+- Category: Coding
+- Tagline: Next-gen agentic AI coding environment with deep workspace reasoning, terminal tools, and multi-agent coordination.
+- Why it matters: Pioneering agentic coding platform that pairs developers with autonomous coding agents capable of end-to-end task execution.
 
 ### 40. dyad
 - URL: https://dyad.sh/
@@ -652,17 +646,17 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Local, open-source AI app builder for power users ✨ v0 / Lovable / Replit / Bolt alternative 🌟 Star if you like it!
 - Why it matters: Battle-tested in the open — 22.1K GitHub stars from real production users.
 
-### 41. claude mem
-- URL: https://github.com/thedotmack/claude-mem
-- Category: Agents & Automation
-- Tagline: Persistent Context Across Sessions for Every Agent – Captures agent actions, compresses with AI, and restores memory into future sessions.
-- Why it matters: Battle-tested in the open — 105.4K GitHub stars from real production users.
-
-### 42. code review graph
-- URL: https://code-review-graph.com/
+### 41. serena
+- URL: https://oraios.github.io/serena
 - Category: Coding
-- Tagline: Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo…
-- Why it matters: Battle-tested in the open — 32.5K GitHub stars from real production users.
+- Tagline: A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities - the IDE for your agent
+- Why it matters: Battle-tested in the open — 30.9K GitHub stars from real production users.
+
+### 42. Dify
+- URL: https://github.com/langgenius/dify
+- Category: Agents & Automation
+- Tagline: Open-source LLM app development platform combining BaaS, RAG pipeline orchestration, and visual agent builder.
+- Why it matters: Production-grade visual AI workflow builder with built-in model routing, knowledge retrieval, and prompt observability.
 
 ### 43. qwen code
 - URL: https://qwenlm.github.io/qwen-code-docs/en/users/overview
@@ -670,53 +664,53 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: An open-source AI coding agent that lives in your terminal.
 - Why it matters: Battle-tested in the open — 28.8K GitHub stars from real production users.
 
-### 44. gemini cli
-- URL: https://geminicli.com/
-- Category: Agents & Automation
-- Tagline: An open-source AI agent that brings the power of Gemini directly into your terminal.
-- Why it matters: Battle-tested in the open — 108.6K GitHub stars from real production users.
+### 44. onlook
+- URL: https://onlook.com/
+- Category: Coding
+- Tagline: The Developer Tool for Visual Engineers • An Open-Source AI-First Design tool • Visually build, style, and edit your code with AI • World's best, top-most agent recommended #1 Developer tool for Desi…
+- Why it matters: Battle-tested in the open — 27K GitHub stars from real production users.
 
-### 45. worldmonitor
+### 45. code review graph
+- URL: https://code-review-graph.com/
+- Category: Coding
+- Tagline: Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo…
+- Why it matters: Battle-tested in the open — 32.5K GitHub stars from real production users.
+
+### 46. worldmonitor
 - URL: https://worldmonitor.app/
 - Category: Agents & Automation
 - Tagline: Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface
 - Why it matters: Battle-tested in the open — 89.8K GitHub stars from real production users.
 
-### 46. deepseek harness
-- URL: https://deepseek.com/harness
+### 47. Browser-Use
+- URL: https://github.com/browser-use/browser-use
 - Category: Agents & Automation
-- Tagline: DeepSeek Harness: Everything is a Plugin.
-- Why it matters: Battle-tested in the open — 266.5K GitHub stars from real production users.
+- Tagline: Make websites accessible for AI agents with Playwright, visual grounding, and multi-tab orchestration.
+- Why it matters: Fastest-growing autonomous browser agent library allowing LLMs to interact with any web application effortlessly.
 
-### 47. Dify
-- URL: https://github.com/langgenius/dify
+### 48. agent skills
+- URL: https://skills.addy.ie/
 - Category: Agents & Automation
-- Tagline: Open-source LLM app development platform combining BaaS, RAG pipeline orchestration, and visual agent builder.
-- Why it matters: Production-grade visual AI workflow builder with built-in model routing, knowledge retrieval, and prompt observability.
+- Tagline: Production-grade engineering skills for AI coding agents.
+- Why it matters: Battle-tested in the open — 111.9K GitHub stars from real production users.
 
-### 48. orca
+### 49. claude mem
+- URL: https://github.com/thedotmack/claude-mem
+- Category: Agents & Automation
+- Tagline: Persistent Context Across Sessions for Every Agent – Captures agent actions, compresses with AI, and restores memory into future sessions.
+- Why it matters: Battle-tested in the open — 105.4K GitHub stars from real production users.
+
+### 50. orca
 - URL: https://orca.dev/
 - Category: Agents & Automation
 - Tagline: Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.
 - Why it matters: Battle-tested in the open — 110.7K GitHub stars from real production users.
 
-### 49. langflow
-- URL: https://www.langflow.org/
+### 51. context7
+- URL: https://context7.com/
 - Category: Agents & Automation
-- Tagline: Langflow is a powerful tool for building and deploying AI-powered agents and workflows.
-- Why it matters: Battle-tested in the open — 156.2K GitHub stars from real production users.
-
-### 50. serena
-- URL: https://oraios.github.io/serena
-- Category: Coding
-- Tagline: A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities - the IDE for your agent
-- Why it matters: Battle-tested in the open — 30.9K GitHub stars from real production users.
-
-### 51. deer flow
-- URL: https://deerflow.tech/
-- Category: Agents & Automation
-- Tagline: An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of t…
-- Why it matters: Battle-tested in the open — 84.7K GitHub stars from real production users.
+- Tagline: Context7 Platform -- Up-to-date docs for AI agents
+- Why it matters: Battle-tested in the open — 64K GitHub stars from real production users.
 
 ### 52. lobehub
 - URL: https://lobehub.com/
@@ -724,47 +718,47 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.
 - Why it matters: Battle-tested in the open — 83.6K GitHub stars from real production users.
 
-### 53. ruflo
+### 53. hindsight
+- URL: https://hindsight.vectorize.io/
+- Category: Agents & Automation
+- Tagline: Hindsight: Agent Memory That Learns
+- Why it matters: Battle-tested in the open — 56.4K GitHub stars from real production users.
+
+### 54. deer flow
+- URL: https://deerflow.tech/
+- Category: Agents & Automation
+- Tagline: An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of t…
+- Why it matters: Battle-tested in the open — 84.7K GitHub stars from real production users.
+
+### 55. ruflo
 - URL: https://cognitum.one/
 - Category: Agents & Automation
 - Tagline: 🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, fede…
 - Why it matters: Battle-tested in the open — 80.2K GitHub stars from real production users.
 
-### 54. cherry studio
-- URL: https://cherryai.com/
-- Category: Agents & Automation
-- Tagline: AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs
-- Why it matters: Battle-tested in the open — 53K GitHub stars from real production users.
-
-### 55. MetaGPT
-- URL: https://atoms.dev/
-- Category: Agents & Automation
-- Tagline: 🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming
-- Why it matters: Battle-tested in the open — 71.1K GitHub stars from real production users.
-
-### 56. context7
-- URL: https://context7.com/
-- Category: Agents & Automation
-- Tagline: Context7 Platform -- Up-to-date docs for AI agents
-- Why it matters: Battle-tested in the open — 64K GitHub stars from real production users.
-
-### 57. Flowise
-- URL: https://flowiseai.com/
-- Category: Agents & Automation
-- Tagline: Build AI Agents, Visually
-- Why it matters: Battle-tested in the open — 55.5K GitHub stars from real production users.
-
-### 58. nanobot
+### 56. nanobot
 - URL: https://nanobot.wiki/
 - Category: Agents & Automation
 - Tagline: Your lightweight open-source personal agent.
 - Why it matters: Battle-tested in the open — 49.7K GitHub stars from real production users.
 
-### 59. CowAgent
-- URL: https://cowagent.ai/
+### 57. reactive resume
+- URL: https://rxresu.me/
 - Category: Agents & Automation
-- Tagline: Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-li…
-- Why it matters: Battle-tested in the open — 47.7K GitHub stars from real production users.
+- Tagline: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
+- Why it matters: Battle-tested in the open — 45.1K GitHub stars from real production users.
+
+### 58. oh my claudecode
+- URL: https://oh-my-claudecode.dev/
+- Category: Agents & Automation
+- Tagline: Teams-first Multi-agent orchestration for Claude Code
+- Why it matters: Battle-tested in the open — 40.4K GitHub stars from real production users.
+
+### 59. Flowise
+- URL: https://flowiseai.com/
+- Category: Agents & Automation
+- Tagline: Build AI Agents, Visually
+- Why it matters: Battle-tested in the open — 55.5K GitHub stars from real production users.
 
 ### 60. ai agent book
 - URL: https://github.com/bojieli/ai-agent-book
@@ -772,59 +766,59 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: "Deep Understanding of AI Agent: Design Principles and Engineering Practices" (by Li Bojie) Open source main repository: full book body, compiled PDF and chapter-by-chapter supporting code
 - Why it matters: Battle-tested in the open — 56.7K GitHub stars from real production users.
 
-### 61. chrome devtools mcp
-- URL: https://developer.chrome.com/docs/devtools/agents
-- Category: Agents & Automation
-- Tagline: Chrome DevTools for coding agents
-- Why it matters: Battle-tested in the open — 54.5K GitHub stars from real production users.
-
-### 62. reactive resume
-- URL: https://rxresu.me/
-- Category: Agents & Automation
-- Tagline: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
-- Why it matters: Battle-tested in the open — 45.1K GitHub stars from real production users.
-
-### 63. oh my claudecode
-- URL: https://oh-my-claudecode.dev/
-- Category: Agents & Automation
-- Tagline: Teams-first Multi-agent orchestration for Claude Code
-- Why it matters: Battle-tested in the open — 40.4K GitHub stars from real production users.
-
-### 64. OpenViking
+### 61. OpenViking
 - URL: https://openviking.ai/
 - Category: Agents & Automation
 - Tagline: Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.
 - Why it matters: Battle-tested in the open — 41.2K GitHub stars from real production users.
 
-### 65. hindsight
-- URL: https://hindsight.vectorize.io/
+### 62. agents
+- URL: https://sethhobson.com/
 - Category: Agents & Automation
-- Tagline: Hindsight: Agent Memory That Learns
-- Why it matters: Battle-tested in the open — 56.4K GitHub stars from real production users.
+- Tagline: Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi
+- Why it matters: Battle-tested in the open — 42K GitHub stars from real production users.
 
-### 66. TrendRadar
-- URL: https://trendradar.sandev.cc/
+### 63. MetaGPT
+- URL: https://atoms.dev/
 - Category: Agents & Automation
-- Tagline: ⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 Say goodbye to information overload, your AI public opinion monitoring assistant and hotspot screen…
-- Why it matters: Battle-tested in the open — 63.3K GitHub stars from real production users.
+- Tagline: 🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming
+- Why it matters: Battle-tested in the open — 71.1K GitHub stars from real production users.
 
-### 67. NVIDIA Garak
+### 64. CowAgent
+- URL: https://cowagent.ai/
+- Category: Agents & Automation
+- Tagline: Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-li…
+- Why it matters: Battle-tested in the open — 47.7K GitHub stars from real production users.
+
+### 65. NVIDIA Garak
 - URL: https://github.com/NVIDIA/garak
 - Category: Cybersecurity
 - Tagline: LLM vulnerability scanner and automated AI red-teaming framework probing for prompt injection, jailbreaks, and data leakage.
 - Why it matters: The industry-standard AI vulnerability scanner (nmap for LLMs) used by security teams to audit foundation models before deployment.
 
-### 68. stable diffusion webui
+### 66. Lightpanda
+- URL: https://github.com/lightpanda-io/browser
+- Category: Agents & Automation
+- Tagline: The headless browser designed for AI agents and web automation, written in Zig with ultra-low memory overhead.
+- Why it matters: High-efficiency open-source headless browser built specifically for autonomous AI agents, eliminating Chromium GUI rendering overhead.
+
+### 67. stable diffusion webui
 - URL: https://github.com/AUTOMATIC1111/stable-diffusion-webui
 - Category: Image & Design
 - Tagline: Stable Diffusion web UI
 - Why it matters: Battle-tested in the open — 165.2K GitHub stars from real production users.
 
-### 69. agents
-- URL: https://sethhobson.com/
+### 68. cherry studio
+- URL: https://cherryai.com/
 - Category: Agents & Automation
-- Tagline: Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi
-- Why it matters: Battle-tested in the open — 42K GitHub stars from real production users.
+- Tagline: AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs
+- Why it matters: Battle-tested in the open — 53K GitHub stars from real production users.
+
+### 69. chrome devtools mcp
+- URL: https://developer.chrome.com/docs/devtools/agents
+- Category: Agents & Automation
+- Tagline: Chrome DevTools for coding agents
+- Why it matters: Battle-tested in the open — 54.5K GitHub stars from real production users.
 
 ### 70. PageIndex
 - URL: https://pageindex.ai/
@@ -838,29 +832,29 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Build resilient agents.
 - Why it matters: Battle-tested in the open — 44.2K GitHub stars from real production users.
 
-### 72. Lightpanda
-- URL: https://github.com/lightpanda-io/browser
+### 72. TrendRadar
+- URL: https://trendradar.sandev.cc/
 - Category: Agents & Automation
-- Tagline: The headless browser designed for AI agents and web automation, written in Zig with ultra-low memory overhead.
-- Why it matters: High-efficiency open-source headless browser built specifically for autonomous AI agents, eliminating Chromium GUI rendering overhead.
+- Tagline: ⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 Say goodbye to information overload, your AI public opinion monitoring assistant and hotspot screen…
+- Why it matters: Battle-tested in the open — 63.3K GitHub stars from real production users.
 
-### 73. humanizer
-- URL: https://skills.sh/Yannis100/vita-port-skill
-- Category: Agents & Automation
-- Tagline: Agent skill that removes signs of AI-generated writing from text
-- Why it matters: Battle-tested in the open — 62.6K GitHub stars from real production users.
-
-### 74. siyuan
+### 73. siyuan
 - URL: https://b3log.org/siyuan
 - Category: Agents & Automation
 - Tagline: An open-source, privacy-first, self-hosted knowledge workspace where humans and AI agents work together An open-source, privacy-first, self-hosted knowledge workspace where people and agents collabor…
 - Why it matters: Battle-tested in the open — 47K GitHub stars from real production users.
 
-### 75. ComfyUI
+### 74. ComfyUI
 - URL: https://github.com/comfyanonymous/ComfyUI
 - Category: Image & Design
 - Tagline: Modular node-based graphical interface and backend pipeline for Stable Diffusion, SDXL, and Flux models.
 - Why it matters: Industry-standard node-graph architecture powering advanced generative image pipelines and production VFX studios.
+
+### 75. humanizer
+- URL: https://skills.sh/Yannis100/vita-port-skill
+- Category: Agents & Automation
+- Tagline: Agent skill that removes signs of AI-generated writing from text
+- Why it matters: Battle-tested in the open — 62.6K GitHub stars from real production users.
 
 ### 76. IOPaint
 - URL: https://www.iopaint.com/
@@ -874,95 +868,95 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Diffusion Bee is the easiest way to run Stable Diffusion locally on your M1 Mac. Comes with a one-click installer. No dependencies or technical knowledge needed.
 - Why it matters: Battle-tested in the open — 13.6K GitHub stars from real production users.
 
-### 78. unsloth
-- URL: https://unsloth.ai/docs
-- Category: Image & Design
-- Tagline: Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.
-- Why it matters: Battle-tested in the open — 78.8K GitHub stars from real production users.
-
-### 79. Fooocus
-- URL: https://github.com/lllyasviel/Fooocus
-- Category: Image & Design
-- Tagline: Image generating software combining the prompt simplicity of Midjourney with the local control of Stable Diffusion.
-- Why it matters: Zero-prompt-engineering image creation providing Midjourney-level quality on consumer desktop GPUs.
-
-### 80. LocalAI
+### 78. LocalAI
 - URL: https://localai.io/
 - Category: Image & Design
 - Tagline: LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.
 - Why it matters: Battle-tested in the open — 50.1K GitHub stars from real production users.
 
-### 81. Duix Avatar
+### 79. Duix Avatar
 - URL: https://www.duix.com/
 - Category: Image & Design
 - Tagline: 🚀 Truly open-source AI avatar(digital human) toolkit for offline video generation and digital human cloning.
 - Why it matters: Battle-tested in the open — 16.1K GitHub stars from real production users.
 
-### 82. OpenMontage
-- URL: https://www.openmontage.video/
-- Category: Video
-- Tagline: World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video produ…
-- Why it matters: Battle-tested in the open — 73.2K GitHub stars from real production users.
+### 80. unsloth
+- URL: https://unsloth.ai/docs
+- Category: Image & Design
+- Tagline: Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.
+- Why it matters: Battle-tested in the open — 78.8K GitHub stars from real production users.
 
-### 83. TRELLIS.2
+### 81. TRELLIS.2
 - URL: https://huggingface.co/spaces/microsoft/TRELLIS.2
 - Category: Image & Design
 - Tagline: High-fidelity 3D Generation from images
 - Why it matters: Trending with the builder community — 2.3K Hugging Face likes.
 
-### 84. Wan2.2 14B Preview
-- URL: https://huggingface.co/spaces/kulkas2pintu/wan777
-- Category: Image & Design
-- Tagline: generate a video from an image with a text prompt
-- Why it matters: Trending with the builder community — 1.1K Hugging Face likes.
-
-### 85. InternVL
+### 82. InternVL
 - URL: https://internvl.readthedocs.io/en/latest/
 - Category: Image & Design
 - Tagline: CVPR 2024 Oral InternVL Family: A Pioneering Open-Source Alternative to GPT-4o. GPT-4o
 - Why it matters: Battle-tested in the open — 10.2K GitHub stars from real production users.
 
-### 86. diffusers
-- URL: https://huggingface.co/docs/diffusers
+### 83. StabilityMatrix
+- URL: https://lykos.ai/
 - Category: Image & Design
-- Tagline: 🤗 Diffusers: State-of-the-art diffusion models for image, video, and audio generation in PyTorch.
-- Why it matters: Battle-tested in the open — 34.8K GitHub stars from real production users.
+- Tagline: Multi-Platform Package Manager for Stable Diffusion
+- Why it matters: Battle-tested in the open — 9K GitHub stars from real production users.
 
-### 87. StableStudio
+### 84. Fooocus
+- URL: https://github.com/lllyasviel/Fooocus
+- Category: Image & Design
+- Tagline: Image generating software combining the prompt simplicity of Midjourney with the local control of Stable Diffusion.
+- Why it matters: Zero-prompt-engineering image creation providing Midjourney-level quality on consumer desktop GPUs.
+
+### 85. Wan2.2 14B Preview
+- URL: https://huggingface.co/spaces/kulkas2pintu/wan777
+- Category: Image & Design
+- Tagline: generate a video from an image with a text prompt
+- Why it matters: Trending with the builder community — 1.1K Hugging Face likes.
+
+### 86. StableStudio
 - URL: https://github.com/Stability-AI/StableStudio
 - Category: Image & Design
 - Tagline: Community interface for generative AI
 - Why it matters: Battle-tested in the open — 9K GitHub stars from real production users.
 
-### 88. Auto Photoshop StableDiffusion Plugin
+### 87. Auto Photoshop StableDiffusion Plugin
 - URL: https://github.com/AbdullahAlfaraj/Auto-Photoshop-StableDiffusion-Plugin
 - Category: Image & Design
 - Tagline: A user-friendly plug-in that makes it easy to generate stable diffusion images inside Photoshop using either Automatic or ComfyUI as a backend.
 - Why it matters: Battle-tested in the open — 7.3K GitHub stars from real production users.
 
-### 89. ComfyUI LTXVideo
-- URL: https://github.com/Lightricks/ComfyUI-LTXVideo
-- Category: Image & Design
-- Tagline: LTX-Video Support for ComfyUI
-- Why it matters: Battle-tested in the open — 4.2K GitHub stars from real production users.
-
-### 90. InvokeAI
+### 88. InvokeAI
 - URL: https://invoke-ai.github.io/InvokeAI/
 - Category: Image & Design
 - Tagline: Invoke is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The so…
 - Why it matters: Battle-tested in the open — 28.9K GitHub stars from real production users.
 
-### 91. open design
-- URL: https://open-design.ai/
+### 89. jaaz
+- URL: https://jaaz.app/
 - Category: Image & Design
-- Tagline: The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create motion, prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents. Sh…
-- Why it matters: Battle-tested in the open — 105K GitHub stars from real production users.
+- Tagline: The world's first open-source multimodal creative assistant This is a substitute for Canva and Manus that prioritizes privacy and is usable locally.
+- Why it matters: Battle-tested in the open — 6.7K GitHub stars from real production users.
 
-### 92. ComfyUI 3D Pack
-- URL: https://github.com/MrForExample/ComfyUI-3D-Pack
+### 90. OGAM
+- URL: https://github.com/off-grid-ai/OGAM
 - Category: Image & Design
-- Tagline: An extensive node suite that enables ComfyUI to process 3D inputs (Mesh & UV Texture, etc) using cutting edge algorithms (3DGS, NeRF, etc.)
-- Why it matters: Battle-tested in the open — 3.9K GitHub stars from real production users.
+- Tagline: The Swiss Army Knife of Offline AI. Chat, see, speak, and generate images on your phone or Mac — GGUF LLMs, vision, Whisper speech-to-text, Stable Diffusion, tool calling, and local-network servers.…
+- Why it matters: Battle-tested in the open — 3.3K GitHub stars from real production users.
+
+### 91. diffusers
+- URL: https://huggingface.co/docs/diffusers
+- Category: Image & Design
+- Tagline: 🤗 Diffusers: State-of-the-art diffusion models for image, video, and audio generation in PyTorch.
+- Why it matters: Battle-tested in the open — 34.8K GitHub stars from real production users.
+
+### 92. OpenMontage
+- URL: https://www.openmontage.video/
+- Category: Video
+- Tagline: World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video produ…
+- Why it matters: Battle-tested in the open — 73.2K GitHub stars from real production users.
 
 ### 93. krita ai diffusion
 - URL: https://www.interstice.cloud/
@@ -970,137 +964,137 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Streamlined interface for generating images with AI in Krita. Inpaint and outpaint with optional text prompt, no tweaking required.
 - Why it matters: Battle-tested in the open — 10.8K GitHub stars from real production users.
 
-### 94. jaaz
-- URL: https://jaaz.app/
+### 94. ComfyUI LTXVideo
+- URL: https://github.com/Lightricks/ComfyUI-LTXVideo
 - Category: Image & Design
-- Tagline: The world's first open-source multimodal creative assistant This is a substitute for Canva and Manus that prioritizes privacy and is usable locally.
-- Why it matters: Battle-tested in the open — 6.7K GitHub stars from real production users.
+- Tagline: LTX-Video Support for ComfyUI
+- Why it matters: Battle-tested in the open — 4.2K GitHub stars from real production users.
 
-### 95. StabilityMatrix
-- URL: https://lykos.ai/
+### 95. open design
+- URL: https://open-design.ai/
 - Category: Image & Design
-- Tagline: Multi-Platform Package Manager for Stable Diffusion
-- Why it matters: Battle-tested in the open — 9K GitHub stars from real production users.
+- Tagline: The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create motion, prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents. Sh…
+- Why it matters: Battle-tested in the open — 105K GitHub stars from real production users.
 
-### 96. SwarmUI
-- URL: https://github.com/mcmonkeyprojects/SwarmUI
-- Category: Image & Design
-- Tagline: SwarmUI (formerly StableSwarmUI), A Modular Stable Diffusion Web-User-Interface, with an emphasis on making powertools easily accessible, high performance, and extensibility.
-- Why it matters: Battle-tested in the open — 4.7K GitHub stars from real production users.
-
-### 97. onediff
-- URL: https://github.com/siliconflow/onediff/wiki
-- Category: Image & Design
-- Tagline: OneDiff: An out-of-the-box acceleration library for diffusion models.
-- Why it matters: Battle-tested in the open — 2K GitHub stars from real production users.
-
-### 98. X AnyLabeling
-- URL: https://xanylabeling.com/
-- Category: Image & Design
-- Tagline: X-AnyLabeling: A lightweight, efficient, and unified cross-platform desktop application for annotating text, image, video, point cloud and multimodal data, combining versatile built-in tools with sta…
-- Why it matters: Battle-tested in the open — 10.8K GitHub stars from real production users.
-
-### 99. yft design
+### 96. yft design
 - URL: https://yft.design/
 - Category: Image & Design
 - Tagline: yft-design is a powerful, visually stunning online design tool built with Vue3, fabric.js, and Element Plus. fabric.js / …
 - Why it matters: Battle-tested in the open — 1.7K GitHub stars from real production users.
 
-### 100. OGAM
-- URL: https://github.com/off-grid-ai/OGAM
+### 97. SwarmUI
+- URL: https://github.com/mcmonkeyprojects/SwarmUI
 - Category: Image & Design
-- Tagline: The Swiss Army Knife of Offline AI. Chat, see, speak, and generate images on your phone or Mac — GGUF LLMs, vision, Whisper speech-to-text, Stable Diffusion, tool calling, and local-network servers.…
-- Why it matters: Battle-tested in the open — 3.3K GitHub stars from real production users.
+- Tagline: SwarmUI (formerly StableSwarmUI), A Modular Stable Diffusion Web-User-Interface, with an emphasis on making powertools easily accessible, high performance, and extensibility.
+- Why it matters: Battle-tested in the open — 4.7K GitHub stars from real production users.
 
-### 101. OpenVoice
-- URL: https://research.myshell.ai/open-voice
-- Category: Audio & Voice
-- Tagline: Instant voice cloning by MIT and MyShell. Audio foundation model.
-- Why it matters: Battle-tested in the open — 38.1K GitHub stars from real production users.
+### 98. ComfyUI 3D Pack
+- URL: https://github.com/MrForExample/ComfyUI-3D-Pack
+- Category: Image & Design
+- Tagline: An extensive node suite that enables ComfyUI to process 3D inputs (Mesh & UV Texture, etc) using cutting edge algorithms (3DGS, NeRF, etc.)
+- Why it matters: Battle-tested in the open — 3.9K GitHub stars from real production users.
 
-### 102. VoxCPM
-- URL: https://voxcpm.com/
-- Category: Audio & Voice
-- Tagline: VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning
-- Why it matters: Battle-tested in the open — 40.8K GitHub stars from real production users.
+### 99. X AnyLabeling
+- URL: https://xanylabeling.com/
+- Category: Image & Design
+- Tagline: X-AnyLabeling: A lightweight, efficient, and unified cross-platform desktop application for annotating text, image, video, point cloud and multimodal data, combining versatile built-in tools with sta…
+- Why it matters: Battle-tested in the open — 10.8K GitHub stars from real production users.
 
-### 103. GPT SoVITS
-- URL: https://github.com/RVC-Boss/GPT-SoVITS
-- Category: Audio & Voice
-- Tagline: 1 min voice data can also be used to train a good TTS model! (few shot voice cloning)
-- Why it matters: Battle-tested in the open — 64.3K GitHub stars from real production users.
+### 100. onediff
+- URL: https://github.com/siliconflow/onediff/wiki
+- Category: Image & Design
+- Tagline: OneDiff: An out-of-the-box acceleration library for diffusion models.
+- Why it matters: Battle-tested in the open — 2K GitHub stars from real production users.
 
-### 104. llamafile
-- URL: https://docs.mozilla.ai/llamafile
-- Category: Audio & Voice
-- Tagline: Distribute and run LLMs with a single file.
-- Why it matters: Battle-tested in the open — 26.5K GitHub stars from real production users.
-
-### 105. TTS
-- URL: https://github.com/coqui-ai/TTS
-- Category: Audio & Voice
-- Tagline: 🐸💬 - a deep learning toolkit for Text-to-Speech, battle-tested in research and production
-- Why it matters: Battle-tested in the open — 46.2K GitHub stars from real production users.
-
-### 106. kaldi
-- URL: https://kaldi-asr.org/
-- Category: Audio & Voice
-- Tagline: kaldi-asr/kaldi is the official location of the Kaldi project.
-- Why it matters: Battle-tested in the open — 15.5K GitHub stars from real production users.
-
-### 107. Handy
+### 101. Handy
 - URL: https://handy.computer/
 - Category: Audio & Voice
 - Tagline: A free, open source, and extensible speech-to-text application that works completely offline.
 - Why it matters: Battle-tested in the open — 35.1K GitHub stars from real production users.
 
-### 108. pyvideotrans
+### 102. OpenVoice
+- URL: https://research.myshell.ai/open-voice
+- Category: Audio & Voice
+- Tagline: Instant voice cloning by MIT and MyShell. Audio foundation model.
+- Why it matters: Battle-tested in the open — 38.1K GitHub stars from real production users.
+
+### 103. llamafile
+- URL: https://docs.mozilla.ai/llamafile
+- Category: Audio & Voice
+- Tagline: Distribute and run LLMs with a single file.
+- Why it matters: Battle-tested in the open — 26.5K GitHub stars from real production users.
+
+### 104. pyvideotrans
 - URL: https://pyvideotrans.com/
 - Category: Audio & Voice
 - Tagline: Translate the video from one language to another and embed dubbing & subtitles.
 - Why it matters: Battle-tested in the open — 19.6K GitHub stars from real production users.
 
-### 109. video search and summarization
+### 105. video search and summarization
 - URL: https://build.nvidia.com/nvidia/video-search-and-summarization
 - Category: Video
 - Tagline: NVIDIA AI Blueprint for video search and summarization (VSS) is a GPU-accelerated reference architecture for building video analytics agents with real-time verified alerts, visual Q&A, and automated…
 - Why it matters: Battle-tested in the open — 2K GitHub stars from real production users.
 
-### 110. DeepSpeech
-- URL: https://github.com/mozilla/DeepSpeech
-- Category: Audio & Voice
-- Tagline: DeepSpeech is an open source embedded (offline, on-device) speech-to-text engine which can run in real time on devices ranging from a Raspberry Pi 4 to high power GPU servers.
-- Why it matters: Battle-tested in the open — 26.8K GitHub stars from real production users.
-
-### 111. SenseVoice
+### 106. SenseVoice
 - URL: https://huggingface.co/spaces/FunAudioLLM/SenseVoice
 - Category: Audio & Voice
 - Tagline: Open-source SenseVoiceSmall model for Mandarin, Cantonese, English, Japanese, and Korean ASR, language ID, emotion recognition, and audio event detection.
 - Why it matters: Battle-tested in the open — 9.6K GitHub stars from real production users.
 
-### 112. Kokoro
-- URL: https://github.com/hexgrad/kokoro
-- Category: Audio & Voice
-- Tagline: Open-weight 82M parameter text-to-speech voice model with exceptional human cadence, pitch, and speed.
-- Why it matters: Breakthrough ultra-compact voice synthesis model that out-competes models 10x its size in natural speech quality.
-
-### 113. faster whisper
-- URL: https://github.com/SYSTRAN/faster-whisper
-- Category: Audio & Voice
-- Tagline: Faster Whisper transcription with CTranslate2
-- Why it matters: Battle-tested in the open — 26.3K GitHub stars from real production users.
-
-### 114. sherpa onnx
+### 107. sherpa onnx
 - URL: https://k2-fsa.github.io/sherpa/onnx/index.html
 - Category: Audio & Voice
 - Tagline: Speech-to-text, text-to-speech, speaker diarization, speech enhancement, source separation, and VAD using next-gen Kaldi with onnxruntime without Internet connection. Support embedded systems, Androi…
 - Why it matters: Battle-tested in the open — 15.6K GitHub stars from real production users.
 
-### 115. VoiceStudio
+### 108. kaldi
+- URL: https://kaldi-asr.org/
+- Category: Audio & Voice
+- Tagline: kaldi-asr/kaldi is the official location of the Kaldi project.
+- Why it matters: Battle-tested in the open — 15.5K GitHub stars from real production users.
+
+### 109. DeepSpeech
+- URL: https://github.com/mozilla/DeepSpeech
+- Category: Audio & Voice
+- Tagline: DeepSpeech is an open source embedded (offline, on-device) speech-to-text engine which can run in real time on devices ranging from a Raspberry Pi 4 to high power GPU servers.
+- Why it matters: Battle-tested in the open — 26.8K GitHub stars from real production users.
+
+### 110. dia
+- URL: https://github.com/nari-labs/dia
+- Category: Audio & Voice
+- Tagline: A TTS model capable of generating ultra-realistic dialogue in one pass.
+- Why it matters: Battle-tested in the open — 19.4K GitHub stars from real production users.
+
+### 111. whisperX
+- URL: https://github.com/m-bain/whisperX
+- Category: Audio & Voice
+- Tagline: WhisperX: Automatic Speech Recognition with Word-level Timestamps (& Diarization)
+- Why it matters: Battle-tested in the open — 24.9K GitHub stars from real production users.
+
+### 112. VoiceStudio
 - URL: https://voicestudio.sh/
 - Category: Audio & Voice
 - Tagline: VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.
 - Why it matters: Battle-tested in the open — 95K GitHub stars from real production users.
+
+### 113. FluidVoice
+- URL: https://altic.dev/fluid
+- Category: Audio & Voice
+- Tagline: Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. Windows, iOS testflight! Android, Linux waitlist open! A local Wispr Flow alternative. Follow https://…
+- Why it matters: Battle-tested in the open — 12.6K GitHub stars from real production users.
+
+### 114. Pixelle Video
+- URL: https://github.com/AIDC-AI/Pixelle-Video
+- Category: Video
+- Tagline: 🚀 AI AI Fully Automated Short Video Engine
+- Why it matters: Battle-tested in the open — 29.6K GitHub stars from real production users.
+
+### 115. VoxCPM
+- URL: https://voxcpm.com/
+- Category: Audio & Voice
+- Tagline: VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning
+- Why it matters: Battle-tested in the open — 40.8K GitHub stars from real production users.
 
 ### 116. Whisper.cpp
 - URL: https://github.com/ggerganov/whisper.cpp
@@ -1108,47 +1102,47 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: High-performance inference of OpenAI's Whisper speech-to-text model in plain C/C++ without external dependencies.
 - Why it matters: Ultra-fast local speech transcription running in real time even on low-power devices and embedded chips.
 
-### 117. dia
-- URL: https://github.com/nari-labs/dia
-- Category: Audio & Voice
-- Tagline: A TTS model capable of generating ultra-realistic dialogue in one pass.
-- Why it matters: Battle-tested in the open — 19.4K GitHub stars from real production users.
-
-### 118. Pixelle Video
-- URL: https://github.com/AIDC-AI/Pixelle-Video
-- Category: Video
-- Tagline: 🚀 AI AI Fully Automated Short Video Engine
-- Why it matters: Battle-tested in the open — 29.6K GitHub stars from real production users.
-
-### 119. index tts
-- URL: https://github.com/index-tts/index-tts
-- Category: Audio & Voice
-- Tagline: An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System
-- Why it matters: Battle-tested in the open — 24.8K GitHub stars from real production users.
-
-### 120. Voicebox
-- URL: https://github.com/jamiepine/voicebox
-- Category: Audio & Voice
-- Tagline: Open-source local voice synthesis studio with multi-speaker timelines, cloning, and zero-cloud audio generation.
-- Why it matters: Brings multi-track DAW-grade voice synthesis and local cloning to desktop hardware without recurring API fees.
-
-### 121. FluidVoice
-- URL: https://altic.dev/fluid
-- Category: Audio & Voice
-- Tagline: Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. Windows, iOS testflight! Android, Linux waitlist open! A local Wispr Flow alternative. Follow https://…
-- Why it matters: Battle-tested in the open — 12.6K GitHub stars from real production users.
-
-### 122. CosyVoice
+### 117. CosyVoice
 - URL: https://github.com/FunAudioLLM/CosyVoice
 - Category: Audio & Voice
 - Tagline: Multi-lingual large voice generation model, providing inference, training and deployment full-stack ability.
 - Why it matters: Battle-tested in the open — 24.2K GitHub stars from real production users.
 
-### 123. whisperX
-- URL: https://github.com/m-bain/whisperX
+### 118. TTS
+- URL: https://github.com/coqui-ai/TTS
 - Category: Audio & Voice
-- Tagline: WhisperX: Automatic Speech Recognition with Word-level Timestamps (& Diarization)
-- Why it matters: Battle-tested in the open — 24.9K GitHub stars from real production users.
+- Tagline: 🐸💬 - a deep learning toolkit for Text-to-Speech, battle-tested in research and production
+- Why it matters: Battle-tested in the open — 46.2K GitHub stars from real production users.
+
+### 119. faster whisper
+- URL: https://github.com/SYSTRAN/faster-whisper
+- Category: Audio & Voice
+- Tagline: Faster Whisper transcription with CTranslate2
+- Why it matters: Battle-tested in the open — 26.3K GitHub stars from real production users.
+
+### 120. Kokoro
+- URL: https://github.com/hexgrad/kokoro
+- Category: Audio & Voice
+- Tagline: Open-weight 82M parameter text-to-speech voice model with exceptional human cadence, pitch, and speed.
+- Why it matters: Breakthrough ultra-compact voice synthesis model that out-competes models 10x its size in natural speech quality.
+
+### 121. index tts
+- URL: https://github.com/index-tts/index-tts
+- Category: Audio & Voice
+- Tagline: An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System
+- Why it matters: Battle-tested in the open — 24.8K GitHub stars from real production users.
+
+### 122. EVA OS
+- URL: https://eva.autoarkai.com/en
+- Category: Audio & Voice
+- Tagline: EVA OS — A real-time multimodal AIOS for next-generation hardware, enabling your devices being “alive” and as intelligent as a real brain.
+- Why it matters: Battle-tested in the open — 1.9K GitHub stars from real production users.
+
+### 123. GPT SoVITS
+- URL: https://github.com/RVC-Boss/GPT-SoVITS
+- Category: Audio & Voice
+- Tagline: 1 min voice data can also be used to train a good TTS model! (few shot voice cloning)
+- Why it matters: Battle-tested in the open — 64.3K GitHub stars from real production users.
 
 ### 124. FunASR
 - URL: https://github.com/modelscope/FunASR
@@ -1156,11 +1150,11 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Open-source speech recognition toolkit for training, inference, streaming ASR, VAD, punctuation, speaker diarization pipelines, and OpenAI-compatible/MCP serving.
 - Why it matters: Battle-tested in the open — 20.9K GitHub stars from real production users.
 
-### 125. EVA OS
-- URL: https://eva.autoarkai.com/en
+### 125. Voicebox
+- URL: https://github.com/jamiepine/voicebox
 - Category: Audio & Voice
-- Tagline: EVA OS — A real-time multimodal AIOS for next-generation hardware, enabling your devices being “alive” and as intelligent as a real brain.
-- Why it matters: Battle-tested in the open — 1.9K GitHub stars from real production users.
+- Tagline: Open-source local voice synthesis studio with multi-speaker timelines, cloning, and zero-cloud audio generation.
+- Why it matters: Brings multi-track DAW-grade voice synthesis and local cloning to desktop hardware without recurring API fees.
 
 ### 126. leon
 - URL: https://getleon.ai/
@@ -1168,113 +1162,113 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: 🧠 Leon is your open-source personal assistant.
 - Why it matters: Battle-tested in the open — 17.6K GitHub stars from real production users.
 
-### 127. Open WebUI
-- URL: https://github.com/open-webui/open-webui
-- Category: Chat & Assistants
-- Tagline: User-friendly, self-hosted AI interface inspired by ChatGPT with full Ollama, RAG, and pipeline support.
-- Why it matters: The gold standard private web UI for teams and power users seeking ChatGPT features without data leakage.
-
-### 128. AnythingLLM
-- URL: https://github.com/Mintplex-Labs/anything-llm
-- Category: Chat & Assistants
-- Tagline: The all-in-one desktop AI application for RAG, enterprise documents, workspaces, and multi-user access.
-- Why it matters: Turn any document, PDF, or GitHub repository into an interactive AI knowledge base with zero configuration.
-
-### 129. Langchain Chatchat
-- URL: https://github.com/chatchat-space/Langchain-Chatchat
-- Category: Chat & Assistants
-- Tagline: Langchain-Chatchat (formerly Langchain-ChatGLM) rag and Agent application based on Langchain and ChatGLM, Qwen and Llama language models | Langchain-Chatchat (formerly langchain-ChatGLM), local knowl…
-- Why it matters: Battle-tested in the open — 38.7K GitHub stars from real production users.
-
-### 130. paperless ngx
-- URL: https://docs.paperless-ngx.com/
-- Category: Productivity
-- Tagline: A community-supported supercharged document management system: scan, index and archive all your documents
-- Why it matters: Battle-tested in the open — 47.4K GitHub stars from real production users.
-
-### 131. llama gpt
-- URL: https://apps.umbrel.com/app/llama-gpt
-- Category: Chat & Assistants
-- Tagline: A self-hosted, offline, ChatGPT-like chatbot. Powered by Llama 2. 100% private, with no data leaving your device. New: Code Llama support!
-- Why it matters: Battle-tested in the open — 10.9K GitHub stars from real production users.
-
-### 132. meetily
-- URL: https://meetily.ai/
-- Category: Productivity
-- Tagline: Privacy first AI meeting note taker. Download Free and open source granola, otter ai, fireflies alternative. Parakeet / Whisper live transcription, on-device speaker diarization, built on Rust. 100%…
-- Why it matters: Battle-tested in the open — 32.3K GitHub stars from real production users.
-
-### 133. Jan
-- URL: https://github.com/janhq/jan
-- Category: Chat & Assistants
-- Tagline: 100% offline, privacy-first open-source desktop ChatGPT alternative running local models on Mac, Windows, and Linux.
-- Why it matters: Completely air-gapped desktop assistant giving users sovereign local intelligence on consumer laptops.
-
-### 134. NextChat
+### 127. NextChat
 - URL: https://nextchat.club/
 - Category: Chat & Assistants
 - Tagline: ✨ Zero-config AI chat assistant. No API key needed — sign up and instantly chat with GPT-5, Claude 4, Gemini 2.5, DeepSeek & 100+ top models. Pay-as-you-go saves you more. Available on Web, iOS, macO…
 - Why it matters: Battle-tested in the open — 88.9K GitHub stars from real production users.
 
-### 135. memobase
-- URL: https://github.com/memodb-io/memobase
-- Category: Chat & Assistants
-- Tagline: User Profile-Based Long-Term Memory for AI Chatbot Applications.
-- Why it matters: Battle-tested in the open — 2.9K GitHub stars from real production users.
-
-### 136. MinerU
-- URL: https://opendatalab.github.io/MinerU/
+### 128. Mem0
+- URL: https://github.com/mem0ai/mem0
 - Category: Productivity
-- Tagline: Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.
-- Why it matters: Battle-tested in the open — 82.8K GitHub stars from real production users.
+- Tagline: The intelligent memory layer for AI assistants and autonomous agents, adapting dynamically across conversations.
+- Why it matters: Solves context amnesia by providing persistent, adaptive personal memory graph storage for AI agents.
 
-### 137. sglang omni
+### 129. sglang omni
 - URL: https://sgl-project.github.io/sglang-omni/
 - Category: Audio & Voice
 - Tagline: High Performance Serving Runtime For Interactive Super Intelligence System
 - Why it matters: Battle-tested in the open — 1.7K GitHub stars from real production users.
 
-### 138. ChatTTS
-- URL: https://2noise.com/
-- Category: Chat & Assistants
-- Tagline: A generative speech model for daily dialogue.
-- Why it matters: Battle-tested in the open — 40K GitHub stars from real production users.
-
-### 139. kirara ai
+### 130. kirara ai
 - URL: https://kirara-docs.app.lss233.com/
 - Category: Chat & Assistants
 - Tagline: 🤖 DIY-enabled multimodal AI chatbots | 🚀 Quick access to WeChat, QQ, Telegram, and other chat platforms | 🦈Support for DeepSeek, Grok, Claude, Ollama, Gemini, OpenAI | Workflow systems, web search…
 - Why it matters: Battle-tested in the open — 19.3K GitHub stars from real production users.
 
-### 140. opendataloader pdf
+### 131. paperless ngx
+- URL: https://docs.paperless-ngx.com/
+- Category: Productivity
+- Tagline: A community-supported supercharged document management system: scan, index and archive all your documents
+- Why it matters: Battle-tested in the open — 47.4K GitHub stars from real production users.
+
+### 132. AnythingLLM
+- URL: https://github.com/Mintplex-Labs/anything-llm
+- Category: Chat & Assistants
+- Tagline: The all-in-one desktop AI application for RAG, enterprise documents, workspaces, and multi-user access.
+- Why it matters: Turn any document, PDF, or GitHub repository into an interactive AI knowledge base with zero configuration.
+
+### 133. MinerU
+- URL: https://opendatalab.github.io/MinerU/
+- Category: Productivity
+- Tagline: Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.
+- Why it matters: Battle-tested in the open — 82.8K GitHub stars from real production users.
+
+### 134. opendataloader pdf
 - URL: https://opendataloader.org/
 - Category: Productivity
 - Tagline: PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.
 - Why it matters: Battle-tested in the open — 30.1K GitHub stars from real production users.
 
-### 141. PaddleOCR
-- URL: https://www.paddleocr.com/
-- Category: Productivity
-- Tagline: Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.
-- Why it matters: Battle-tested in the open — 92K GitHub stars from real production users.
+### 135. llama gpt
+- URL: https://apps.umbrel.com/app/llama-gpt
+- Category: Chat & Assistants
+- Tagline: A self-hosted, offline, ChatGPT-like chatbot. Powered by Llama 2. 100% private, with no data leaving your device. New: Code Llama support!
+- Why it matters: Battle-tested in the open — 10.9K GitHub stars from real production users.
 
-### 142. maid
+### 136. LLaVA
+- URL: https://github.com/haotian-liu/LLaVA
+- Category: Chat & Assistants
+- Tagline: [NeurIPS'23 Oral] Visual Instruction Tuning (LLaVA) built towards GPT-4V level capabilities and beyond.
+- Why it matters: Battle-tested in the open — 25.1K GitHub stars from real production users.
+
+### 137. maid
 - URL: https://github.com/Mobile-Artificial-Intelligence/maid
 - Category: Chat & Assistants
 - Tagline: Maid is a free and open source application for interfacing with llama.cpp models locally, and with Anthropic, DeepSeek, Ollama, Mistral and OpenAI models remotely.
 - Why it matters: Battle-tested in the open — 2.7K GitHub stars from real production users.
 
-### 143. codex with chatgpt
+### 138. meetily
+- URL: https://meetily.ai/
+- Category: Productivity
+- Tagline: Privacy first AI meeting note taker. Download Free and open source granola, otter ai, fireflies alternative. Parakeet / Whisper live transcription, on-device speaker diarization, built on Rust. 100%…
+- Why it matters: Battle-tested in the open — 32.3K GitHub stars from real production users.
+
+### 139. Langchain Chatchat
+- URL: https://github.com/chatchat-space/Langchain-Chatchat
+- Category: Chat & Assistants
+- Tagline: Langchain-Chatchat (formerly Langchain-ChatGLM) rag and Agent application based on Langchain and ChatGLM, Qwen and Llama language models | Langchain-Chatchat (formerly langchain-ChatGLM), local knowl…
+- Why it matters: Battle-tested in the open — 38.7K GitHub stars from real production users.
+
+### 140. memobase
+- URL: https://github.com/memodb-io/memobase
+- Category: Chat & Assistants
+- Tagline: User Profile-Based Long-Term Memory for AI Chatbot Applications.
+- Why it matters: Battle-tested in the open — 2.9K GitHub stars from real production users.
+
+### 141. codex with chatgpt
 - URL: https://github.com/XiaoDuoYa/codex-with-chatgpt
 - Category: Chat & Assistants
 - Tagline: ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.
 - Why it matters: Battle-tested in the open — 7.6K GitHub stars from real production users.
 
-### 144. LLaVA
-- URL: https://github.com/haotian-liu/LLaVA
+### 142. LLamaSharp
+- URL: https://scisharp.github.io/LLamaSharp
 - Category: Chat & Assistants
-- Tagline: [NeurIPS'23 Oral] Visual Instruction Tuning (LLaVA) built towards GPT-4V level capabilities and beyond.
-- Why it matters: Battle-tested in the open — 25.1K GitHub stars from real production users.
+- Tagline: A C#/.NET library to run LLM (🦙LLaMA/LLaVA) on your local device efficiently.
+- Why it matters: Battle-tested in the open — 3.8K GitHub stars from real production users.
+
+### 143. docling
+- URL: https://docling-project.github.io/docling
+- Category: Productivity
+- Tagline: Get your documents ready for gen AI
+- Why it matters: Battle-tested in the open — 69.9K GitHub stars from real production users.
+
+### 144. ChatTTS
+- URL: https://2noise.com/
+- Category: Chat & Assistants
+- Tagline: A generative speech model for daily dialogue.
+- Why it matters: Battle-tested in the open — 40K GitHub stars from real production users.
 
 ### 145. OCRmyPDF
 - URL: https://ocrmypdf.readthedocs.io/
@@ -1282,23 +1276,23 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched
 - Why it matters: Battle-tested in the open — 35.2K GitHub stars from real production users.
 
-### 146. Mem0
-- URL: https://github.com/mem0ai/mem0
+### 146. PaddleOCR
+- URL: https://www.paddleocr.com/
 - Category: Productivity
-- Tagline: The intelligent memory layer for AI assistants and autonomous agents, adapting dynamically across conversations.
-- Why it matters: Solves context amnesia by providing persistent, adaptive personal memory graph storage for AI agents.
+- Tagline: Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.
+- Why it matters: Battle-tested in the open — 92K GitHub stars from real production users.
 
-### 147. LLamaSharp
-- URL: https://scisharp.github.io/LLamaSharp
+### 147. Open WebUI
+- URL: https://github.com/open-webui/open-webui
 - Category: Chat & Assistants
-- Tagline: A C#/.NET library to run LLM (🦙LLaMA/LLaVA) on your local device efficiently.
-- Why it matters: Battle-tested in the open — 3.8K GitHub stars from real production users.
+- Tagline: User-friendly, self-hosted AI interface inspired by ChatGPT with full Ollama, RAG, and pipeline support.
+- Why it matters: The gold standard private web UI for teams and power users seeking ChatGPT features without data leakage.
 
-### 148. MOVA
-- URL: https://mosi.cn/models/moss-ttsd
-- Category: Audio & Voice
-- Tagline: A foundation model that generates synchronized video and audio in a single model
-- Why it matters: Battle-tested in the open — 1.1K GitHub stars from real production users.
+### 148. Jan
+- URL: https://github.com/janhq/jan
+- Category: Chat & Assistants
+- Tagline: 100% offline, privacy-first open-source desktop ChatGPT alternative running local models on Mac, Windows, and Linux.
+- Why it matters: Completely air-gapped desktop assistant giving users sovereign local intelligence on consumer laptops.
 
 ### 149. chatbox
 - URL: https://chatboxai.app/
@@ -1306,125 +1300,125 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Powerful AI Client
 - Why it matters: Battle-tested in the open — 42.2K GitHub stars from real production users.
 
-### 150. docling
-- URL: https://docling-project.github.io/docling
-- Category: Productivity
-- Tagline: Get your documents ready for gen AI
-- Why it matters: Battle-tested in the open — 69.9K GitHub stars from real production users.
+### 150. MOVA
+- URL: https://mosi.cn/models/moss-ttsd
+- Category: Audio & Voice
+- Tagline: A foundation model that generates synchronized video and audio in a single model
+- Why it matters: Battle-tested in the open — 1.1K GitHub stars from real production users.
 
-### 151. Scrapling
-- URL: https://scrapling.readthedocs.io/en/latest/
-- Category: Research & Data
-- Tagline: 🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tric…
-- Why it matters: Battle-tested in the open — 90.4K GitHub stars from real production users.
-
-### 152. pypdf
-- URL: https://pypdf.readthedocs.io/en/latest/
-- Category: Productivity
-- Tagline: A pure-python PDF library capable of splitting, merging, cropping, and transforming the pages of PDF files
-- Why it matters: Battle-tested in the open — 10.3K GitHub stars from real production users.
-
-### 153. pdf craft
-- URL: https://pdfcraft.ai/
-- Category: Productivity
-- Tagline: PDF craft can convert PDF files into various other formats. This project will focus on processing PDF files of scanned books.
-- Why it matters: Battle-tested in the open — 6.5K GitHub stars from real production users.
-
-### 154. crawl4ai
+### 151. crawl4ai
 - URL: https://crawl4ai.com/
 - Category: Research & Data
 - Tagline: Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key. Join our Discord https://discord.gg/VuxzM8…
 - Why it matters: Battle-tested in the open — 86.6K GitHub stars from real production users.
 
-### 155. Dolphin
-- URL: https://github.com/bytedance/Dolphin
-- Category: Productivity
-- Tagline: The official repo for “Dolphin: Document Image Parsing via Heterogeneous Anchor Prompting”, ACL, 2025.
-- Why it matters: Battle-tested in the open — 9.1K GitHub stars from real production users.
-
-### 156. meilisearch
-- URL: https://www.meilisearch.com/
-- Category: Research & Data
-- Tagline: A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.
-- Why it matters: Battle-tested in the open — 59.7K GitHub stars from real production users.
-
-### 157. pdf inspector
-- URL: https://firecrawl.github.io/pdf-inspector/
-- Category: Productivity
-- Tagline: Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.
-- Why it matters: Battle-tested in the open — 19.8K GitHub stars from real production users.
-
-### 158. docling api
-- URL: https://github.com/drmingler/docling-api
-- Category: Productivity
-- Tagline: Easily deployable and scalable backend server that efficiently converts various document formats (pdf, docx, pptx, html, images, etc) into Markdown. With support for both CPU and GPU processing, it i…
-- Why it matters: Battle-tested in the open — 1.7K GitHub stars from real production users.
-
-### 159. unstructured
-- URL: https://www.unstructured.io/
-- Category: Productivity
-- Tagline: Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models. Visit our website to…
-- Why it matters: Battle-tested in the open — 15.6K GitHub stars from real production users.
-
-### 160. REA (Reverse Engineer Anything)
-- URL: https://github.com/morluto/rea
-- Category: Research & Data
-- Tagline: Decompile, analyze binaries, extract managed artifacts, and inspect runtime evidence for AI coding agents.
-- Why it matters: Massive industry-standard agentic reverse-engineering harness with over 380k+ stars across global AI developer teams.
-
-### 161. academic research skills
-- URL: https://buymeacoffee.com/crucify020v
-- Category: Research & Data
-- Tagline: Academic Research Skills for Claude Code: research → write → review → revise → finalize
-- Why it matters: Battle-tested in the open — 54.6K GitHub stars from real production users.
-
-### 162. docstrange
-- URL: https://docstrange.nanonets.com/
-- Category: Productivity
-- Tagline: Extract and convert data from any document, images, pdfs, word doc, ppt or URL into multiple formats (Markdown, JSON, CSV, HTML) with intelligent structured data extraction and advanced OCR.
-- Why it matters: Battle-tested in the open — 1.6K GitHub stars from real production users.
-
-### 163. pdfx
+### 152. pdfx
 - URL: https://pdfx.zip/
 - Category: Productivity
 - Tagline: A free-floating 2D Canvas for processing multiple PDF files simultaneously
 - Why it matters: Battle-tested in the open — 1.1K GitHub stars from real production users.
 
-### 164. pdf oxide
-- URL: https://oxide.fyi/
-- Category: Productivity
-- Tagline: The fastest PDF library for Python and Rust. Text extraction, image extraction, markdown conversion, PDF creation & editing. 0.8ms mean, 5× faster than industry leaders, 100% pass rate on 3,830 PDFs.…
-- Why it matters: Battle-tested in the open — 1.2K GitHub stars from real production users.
+### 153. memvid
+- URL: https://www.memvid.com/
+- Category: Research & Data
+- Tagline: Memory layer for AI Agents. Replace complex RAG pipelines with a serverless, single-file memory layer. Give your agents instant retrieval and long-term memory.
+- Why it matters: Battle-tested in the open — 17.3K GitHub stars from real production users.
 
-### 165. Qdrant
+### 154. Scrapling
+- URL: https://scrapling.readthedocs.io/en/latest/
+- Category: Research & Data
+- Tagline: 🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tric…
+- Why it matters: Battle-tested in the open — 90.4K GitHub stars from real production users.
+
+### 155. docstrange
+- URL: https://docstrange.nanonets.com/
+- Category: Productivity
+- Tagline: Extract and convert data from any document, images, pdfs, word doc, ppt or URL into multiple formats (Markdown, JSON, CSV, HTML) with intelligent structured data extraction and advanced OCR.
+- Why it matters: Battle-tested in the open — 1.6K GitHub stars from real production users.
+
+### 156. pypdf
+- URL: https://pypdf.readthedocs.io/en/latest/
+- Category: Productivity
+- Tagline: A pure-python PDF library capable of splitting, merging, cropping, and transforming the pages of PDF files
+- Why it matters: Battle-tested in the open — 10.3K GitHub stars from real production users.
+
+### 157. academic research skills
+- URL: https://buymeacoffee.com/crucify020v
+- Category: Research & Data
+- Tagline: Academic Research Skills for Claude Code: research → write → review → revise → finalize
+- Why it matters: Battle-tested in the open — 54.6K GitHub stars from real production users.
+
+### 158. xerj
+- URL: https://xerj.org/
+- Category: Research & Data
+- Tagline: AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory…
+- Why it matters: Battle-tested in the open — 17.6K GitHub stars from real production users.
+
+### 159. pdf craft
+- URL: https://pdfcraft.ai/
+- Category: Productivity
+- Tagline: PDF craft can convert PDF files into various other formats. This project will focus on processing PDF files of scanned books.
+- Why it matters: Battle-tested in the open — 6.5K GitHub stars from real production users.
+
+### 160. firecrawl
+- URL: https://firecrawl.dev/
+- Category: Research & Data
+- Tagline: Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥
+- Why it matters: Battle-tested in the open — 196.9K GitHub stars from real production users.
+
+### 161. pdf inspector
+- URL: https://firecrawl.github.io/pdf-inspector/
+- Category: Productivity
+- Tagline: Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.
+- Why it matters: Battle-tested in the open — 19.8K GitHub stars from real production users.
+
+### 162. Dolphin
+- URL: https://github.com/bytedance/Dolphin
+- Category: Productivity
+- Tagline: The official repo for “Dolphin: Document Image Parsing via Heterogeneous Anchor Prompting”, ACL, 2025.
+- Why it matters: Battle-tested in the open — 9.1K GitHub stars from real production users.
+
+### 163. public-apis
+- URL: https://github.com/public-apis/public-apis
+- Category: Research & Data
+- Tagline: A collective list of 1,400+ free APIs for software development, agent tool integrations, and data enrichment.
+- Why it matters: The world's largest open index of public APIs, serving as a primary registry for autonomous agent tool discovery and execution.
+
+### 164. Qdrant
 - URL: https://github.com/qdrant/qdrant
 - Category: Research & Data
 - Tagline: Vector similarity search engine and vector database written in Rust with extended payload filtering.
 - Why it matters: Ultra-fast production vector database powering enterprise semantic search and recommendation systems.
 
-### 166. serviette
-- URL: https://github.com/pathwaycom/serviette/blob/main/docs/README.md
+### 165. meilisearch
+- URL: https://www.meilisearch.com/
 - Category: Research & Data
-- Tagline: A no-code RAG server that keeps answers in sync with your documents. Works with 8 vector databases. Built on Pathway.
-- Why it matters: Battle-tested in the open — 58.8K GitHub stars from real production users.
+- Tagline: A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.
+- Why it matters: Battle-tested in the open — 59.7K GitHub stars from real production users.
 
-### 167. Fabric
-- URL: https://github.com/danielmiessler/fabric
+### 166. REA (Reverse Engineer Anything)
+- URL: https://github.com/morluto/rea
+- Category: Research & Data
+- Tagline: Decompile, analyze binaries, extract managed artifacts, and inspect runtime evidence for AI coding agents.
+- Why it matters: Massive industry-standard agentic reverse-engineering harness with over 380k+ stars across global AI developer teams.
+
+### 167. unstructured
+- URL: https://www.unstructured.io/
 - Category: Productivity
-- Tagline: Open-source framework for augmenting humans using AI prompts, modular patterns, and terminal pipelines.
-- Why it matters: Community-driven prompt architecture turning routine cognitive tasks into reusable terminal commands.
+- Tagline: Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models. Visit our website to…
+- Why it matters: Battle-tested in the open — 15.6K GitHub stars from real production users.
 
-### 168. RAGFlow
-- URL: https://github.com/infiniflow/ragflow
-- Category: Research & Data
-- Tagline: Open-source RAG engine based on deep document understanding and multi-structured document parsing.
-- Why it matters: Eliminates RAG hallucinations through OCR-level document layout analysis of complex tables and diagrams.
-
-### 169. Ghidra
+### 168. Ghidra
 - URL: https://github.com/NationalSecurityAgency/ghidra
 - Category: Research & Data
 - Tagline: NSA software reverse engineering framework for binary disassembly, decompiler analysis, and malware inspection.
 - Why it matters: The gold-standard open-source reverse engineering platform for auditing compiled firmware and native binaries.
+
+### 169. serviette
+- URL: https://github.com/pathwaycom/serviette/blob/main/docs/README.md
+- Category: Research & Data
+- Tagline: A no-code RAG server that keeps answers in sync with your documents. Works with 8 vector databases. Built on Pathway.
+- Why it matters: Battle-tested in the open — 58.8K GitHub stars from real production users.
 
 ### 170. llama cloud services
 - URL: https://cloud.llamaindex.ai/
@@ -1432,35 +1426,35 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Knowledge Agents and Management in the Cloud
 - Why it matters: Battle-tested in the open — 4.3K GitHub stars from real production users.
 
-### 171. firecrawl
-- URL: https://firecrawl.dev/
-- Category: Research & Data
-- Tagline: Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥
-- Why it matters: Battle-tested in the open — 196.9K GitHub stars from real production users.
+### 171. pdf oxide
+- URL: https://oxide.fyi/
+- Category: Productivity
+- Tagline: The fastest PDF library for Python and Rust. Text extraction, image extraction, markdown conversion, PDF creation & editing. 0.8ms mean, 5× faster than industry leaders, 100% pass rate on 3,830 PDFs.…
+- Why it matters: Battle-tested in the open — 1.2K GitHub stars from real production users.
 
-### 172. memvid
-- URL: https://www.memvid.com/
-- Category: Research & Data
-- Tagline: Memory layer for AI Agents. Replace complex RAG pipelines with a serverless, single-file memory layer. Give your agents instant retrieval and long-term memory.
-- Why it matters: Battle-tested in the open — 17.3K GitHub stars from real production users.
+### 172. docling api
+- URL: https://github.com/drmingler/docling-api
+- Category: Productivity
+- Tagline: Easily deployable and scalable backend server that efficiently converts various document formats (pdf, docx, pptx, html, images, etc) into Markdown. With support for both CPU and GPU processing, it i…
+- Why it matters: Battle-tested in the open — 1.7K GitHub stars from real production users.
 
-### 173. xerj
-- URL: https://xerj.org/
-- Category: Research & Data
-- Tagline: AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory…
-- Why it matters: Battle-tested in the open — 17.6K GitHub stars from real production users.
-
-### 174. weaviate
+### 173. weaviate
 - URL: https://weaviate.io/developers/weaviate/
 - Category: Research & Data
 - Tagline: Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a…
 - Why it matters: Battle-tested in the open — 16.9K GitHub stars from real production users.
 
-### 175. public-apis
-- URL: https://github.com/public-apis/public-apis
+### 174. RAGFlow
+- URL: https://github.com/infiniflow/ragflow
 - Category: Research & Data
-- Tagline: A collective list of 1,400+ free APIs for software development, agent tool integrations, and data enrichment.
-- Why it matters: The world's largest open index of public APIs, serving as a primary registry for autonomous agent tool discovery and execution.
+- Tagline: Open-source RAG engine based on deep document understanding and multi-structured document parsing.
+- Why it matters: Eliminates RAG hallucinations through OCR-level document layout analysis of complex tables and diagrams.
+
+### 175. Fabric
+- URL: https://github.com/danielmiessler/fabric
+- Category: Productivity
+- Tagline: Open-source framework for augmenting humans using AI prompts, modular patterns, and terminal pipelines.
+- Why it matters: Community-driven prompt architecture turning routine cognitive tasks into reusable terminal commands.
 
 ### 176. memgraph
 - URL: https://memgraph.com/
@@ -1474,11 +1468,11 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Build, Evaluate, and Optimize AI Systems. Includes evals, RAG, agents, fine-tuning, synthetic data generation, dataset management, MCP, and more.
 - Why it matters: Battle-tested in the open — 5.2K GitHub stars from real production users.
 
-### 178. LongMemory
-- URL: https://cavira.app/projects/longmemory
+### 178. zvec
+- URL: https://zvec.org/
 - Category: Research & Data
-- Tagline: Local persistent memory store for LLM applications including claude desktop, github copilot, codex, antigravity, etc.
-- Why it matters: Battle-tested in the open — 4.6K GitHub stars from real production users.
+- Tagline: A lightweight, lightning-fast, in-process vector database
+- Why it matters: Battle-tested in the open — 16.2K GitHub stars from real production users.
 
 ### 179. langfuse
 - URL: https://langfuse.com/
@@ -1486,71 +1480,71 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: 🪢 Open source agent evals & observability: Trace, evaluate, and improve LLM applications with one open platform.
 - Why it matters: Battle-tested in the open — 36.8K GitHub stars from real production users.
 
-### 180. sglang
-- URL: https://sglang.io/
-- Category: Models & Infra
-- Tagline: SGLang is a high-performance serving framework for large language models and multimodal models.
-- Why it matters: Battle-tested in the open — 38.3K GitHub stars from real production users.
-
-### 181. DigUp
-- URL: https://digup.arahim.dev/
-- Category: Research & Data
-- Tagline: Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMind's EmbeddingGemma 2.
-- Why it matters: Battle-tested in the open — 6K GitHub stars from real production users.
-
-### 182. zvec
-- URL: https://zvec.org/
-- Category: Research & Data
-- Tagline: A lightweight, lightning-fast, in-process vector database
-- Why it matters: Battle-tested in the open — 16.2K GitHub stars from real production users.
-
-### 183. ludwig
+### 180. ludwig
 - URL: https://ludwig.ai/
 - Category: Research & Data
 - Tagline: Low-code framework for building custom LLMs, neural networks, and other AI models
 - Why it matters: Battle-tested in the open — 11.8K GitHub stars from real production users.
 
-### 184. liteparse
-- URL: https://developers.llamaindex.ai/
-- Category: Research & Data
-- Tagline: A fast, helpful, and open-source document parser
-- Why it matters: Battle-tested in the open — 13K GitHub stars from real production users.
+### 181. sglang
+- URL: https://sglang.io/
+- Category: Models & Infra
+- Tagline: SGLang is a high-performance serving framework for large language models and multimodal models.
+- Why it matters: Battle-tested in the open — 38.3K GitHub stars from real production users.
 
-### 185. Frida
+### 182. Frida
 - URL: https://github.com/frida/frida
 - Category: Research & Data
 - Tagline: Dynamic instrumentation toolkit for developers, reverse-engineers, and AI security telemetry.
 - Why it matters: Essential dynamic hook framework enabling AI agents to trace system calls and inspect live process memory.
 
-### 186. LM Studio
+### 183. LongMemory
+- URL: https://cavira.app/projects/longmemory
+- Category: Research & Data
+- Tagline: Local persistent memory store for LLM applications including claude desktop, github copilot, codex, antigravity, etc.
+- Why it matters: Battle-tested in the open — 4.6K GitHub stars from real production users.
+
+### 184. LM Studio
 - URL: https://lmstudio.ai
 - Category: Models & Infra
 - Tagline: Discover, download, and run local LLMs offline with an intuitive desktop GUI and local OpenAI-compatible server.
 - Why it matters: The most polished desktop application for developers to test, benchmark, and serve local open-weight models with zero setup.
 
-### 187. extractous
+### 185. contextgem
+- URL: https://contextgem.shcherbak.ai/
+- Category: Research & Data
+- Tagline: Extract structured data and insights from documents using LLMs and decision models
+- Why it matters: Battle-tested in the open — 2K GitHub stars from real production users.
+
+### 186. DigUp
+- URL: https://digup.arahim.dev/
+- Category: Research & Data
+- Tagline: Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMind's EmbeddingGemma 2.
+- Why it matters: Battle-tested in the open — 6K GitHub stars from real production users.
+
+### 187. liteparse
+- URL: https://developers.llamaindex.ai/
+- Category: Research & Data
+- Tagline: A fast, helpful, and open-source document parser
+- Why it matters: Battle-tested in the open — 13K GitHub stars from real production users.
+
+### 188. Ollama
+- URL: https://github.com/ollama/ollama
+- Category: Models & Infra
+- Tagline: Get up and running with Llama 3, DeepSeek-R1, Mistral, and local LLMs with one command on macOS, Linux, and Windows.
+- Why it matters: The undisputed runtime for local LLMs, packaging model weights, GPU acceleration, and REST APIs into zero-fuss binaries.
+
+### 189. extractous
 - URL: https://github.com/yobix-ai/extractous
 - Category: Research & Data
 - Tagline: Fast and efficient unstructured data extraction. Written in Rust with bindings for many languages.
 - Why it matters: Battle-tested in the open — 1.8K GitHub stars from real production users.
 
-### 188. vLLM
-- URL: https://github.com/vllm-project/vllm
-- Category: Models & Infra
-- Tagline: High-throughput and memory-efficient LLM serving engine powered by PagedAttention and CUDA kernels.
-- Why it matters: State-of-the-art enterprise serving engine that maximizes GPU KV cache utilization and cuts serving costs by 4–8x.
-
-### 189. xiaoyaosearch
-- URL: https://www.xiaoyaosai.com/
+### 190. AI Research SKILLs
+- URL: https://orchestra-research.com/
 - Category: Research & Data
-- Tagline: AI XiaoyaoSearch: Understands your words, reads your images, finds any local file with AI. Making search as easy as chatting.
-- Why it matters: Battle-tested in the open — 1K GitHub stars from real production users.
-
-### 190. Ollama
-- URL: https://github.com/ollama/ollama
-- Category: Models & Infra
-- Tagline: Get up and running with Llama 3, DeepSeek-R1, Mistral, and local LLMs with one command on macOS, Linux, and Windows.
-- Why it matters: The undisputed runtime for local LLMs, packaging model weights, GPU acceleration, and REST APIs into zero-fuss binaries.
+- Tagline: Comprehensive open-source library of AI research and engineering skills for any AI model. Package the skills and your claude code/codex/gemini agent will be an AI research agent with full horsepower.…
+- Why it matters: Battle-tested in the open — 14.1K GitHub stars from real production users.
 
 ### 191. airllm
 - URL: https://github.com/lyogavin/airllm
@@ -1558,29 +1552,29 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: AirLLM 2.8T LLM inference with single 4GB GPU
 - Why it matters: Battle-tested in the open — 41.3K GitHub stars from real production users.
 
-### 192. transformers
-- URL: https://huggingface.co/transformers
-- Category: Models & Infra
-- Tagline: 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.
-- Why it matters: Battle-tested in the open — 168.3K GitHub stars from real production users.
-
-### 193. LlamaFactory
+### 192. LlamaFactory
 - URL: https://llamafactory.readthedocs.io/
 - Category: Models & Infra
 - Tagline: Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)
 - Why it matters: Battle-tested in the open — 75.8K GitHub stars from real production users.
 
-### 194. contextgem
-- URL: https://contextgem.shcherbak.ai/
-- Category: Research & Data
-- Tagline: Extract structured data and insights from documents using LLMs and decision models
-- Why it matters: Battle-tested in the open — 2K GitHub stars from real production users.
-
-### 195. llama.cpp
-- URL: https://github.com/ggerganov/llama.cpp
+### 193. llmfit
+- URL: https://github.com/AlexsJones/llmfit
 - Category: Models & Infra
-- Tagline: Pure C/C++ LLM inference engine supporting 4-bit, 5-bit, and 8-bit quantization on CPU and Apple Silicon.
-- Why it matters: The architectural foundation of consumer LLM inference that created the ubiquitous GGUF quantization ecosystem.
+- Tagline: Hundreds of models & providers. One command to find what runs on your hardware.
+- Why it matters: Battle-tested in the open — 38.5K GitHub stars from real production users.
+
+### 194. transformers
+- URL: https://huggingface.co/transformers
+- Category: Models & Infra
+- Tagline: 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.
+- Why it matters: Battle-tested in the open — 168.3K GitHub stars from real production users.
+
+### 195. xiaoyaosearch
+- URL: https://www.xiaoyaosai.com/
+- Category: Research & Data
+- Tagline: AI XiaoyaoSearch: Understands your words, reads your images, finds any local file with AI. Making search as easy as chatting.
+- Why it matters: Battle-tested in the open — 1K GitHub stars from real production users.
 
 ### 196. semantica
 - URL: https://getsemantica.ai/
@@ -1594,17 +1588,17 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Open-source AI gateway. Self-hosted LLM gateway with OpenAI-, Claude- and Gemini-compatible APIs, model routing, access control, usage tracking and cost accounting.
 - Why it matters: Battle-tested in the open — 51K GitHub stars from real production users.
 
-### 198. AI Research SKILLs
-- URL: https://orchestra-research.com/
-- Category: Research & Data
-- Tagline: Comprehensive open-source library of AI research and engineering skills for any AI model. Package the skills and your claude code/codex/gemini agent will be an AI research agent with full horsepower.…
-- Why it matters: Battle-tested in the open — 14.1K GitHub stars from real production users.
-
-### 199. llmfit
-- URL: https://github.com/AlexsJones/llmfit
+### 198. vLLM
+- URL: https://github.com/vllm-project/vllm
 - Category: Models & Infra
-- Tagline: Hundreds of models & providers. One command to find what runs on your hardware.
-- Why it matters: Battle-tested in the open — 38.5K GitHub stars from real production users.
+- Tagline: High-throughput and memory-efficient LLM serving engine powered by PagedAttention and CUDA kernels.
+- Why it matters: State-of-the-art enterprise serving engine that maximizes GPU KV cache utilization and cuts serving costs by 4–8x.
+
+### 199. llama.cpp
+- URL: https://github.com/ggerganov/llama.cpp
+- Category: Models & Infra
+- Tagline: Pure C/C++ LLM inference engine supporting 4-bit, 5-bit, and 8-bit quantization on CPU and Apple Silicon.
+- Why it matters: The architectural foundation of consumer LLM inference that created the ubiquitous GGUF quantization ecosystem.
 
 ### 200. milvus
 - URL: https://milvus.io/
@@ -1612,11 +1606,11 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search
 - Why it matters: Battle-tested in the open — 46.5K GitHub stars from real production users.
 
-### 201. langchain4j
-- URL: https://docs.langchain4j.dev/
+### 201. llm action
+- URL: https://www.zhihu.com/column/c_1456193767213043713
 - Category: Models & Infra
-- Tagline: LangChain4j is an idiomatic, open-source Java library for building LLM-powered applications on the JVM. It offers a unified API over popular LLM providers and vector stores, and makes implementing to…
-- Why it matters: Battle-tested in the open — 13.3K GitHub stars from real production users.
+- Tagline: The purpose of this project is to share the technical principles related to large models and practical experience (large model engineering, large model application landing)
+- Why it matters: Battle-tested in the open — 25.2K GitHub stars from real production users.
 
 ### 202. oumi
 - URL: https://oumi.ai/
@@ -1624,17 +1618,17 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: Easily fine-tune (SFT/RL), evaluate, and deploy Qwen, Gemma, or any open agentic LLM/VLM!
 - Why it matters: Battle-tested in the open — 9.4K GitHub stars from real production users.
 
-### 203. OpenLLM
-- URL: https://bentoml.com/
+### 203. axolotl
+- URL: https://docs.axolotl.ai/
 - Category: Models & Infra
-- Tagline: Run any open-source LLMs, such as DeepSeek and Llama, as OpenAI compatible API endpoint in the cloud.
+- Tagline: Go ahead and axolotl questions
 - Why it matters: Battle-tested in the open — 12.6K GitHub stars from real production users.
 
-### 204. kimi k3 in c
-- URL: https://medium.com/@fareedkhandev/building-kimi-k3-in-c-to-run-a-2-8t-model-on-consumer-hardware-a5792cbf3b59
+### 204. langchain4j
+- URL: https://docs.langchain4j.dev/
 - Category: Models & Infra
-- Tagline: A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.
-- Why it matters: Battle-tested in the open — 9.2K GitHub stars from real production users.
+- Tagline: LangChain4j is an idiomatic, open-source Java library for building LLM-powered applications on the JVM. It offers a unified API over popular LLM providers and vector stores, and makes implementing to…
+- Why it matters: Battle-tested in the open — 13.3K GitHub stars from real production users.
 
 ### 205. firmware
 - URL: https://meshtastic.org/
@@ -1642,113 +1636,113 @@ Cipherati is an independent, practitioner-grade radar of battle-tested AI develo
 - Tagline: The official firmware for Meshtastic, an open-source, off-grid mesh communication system.
 - Why it matters: Battle-tested in the open — 8.5K GitHub stars from real production users.
 
-### 206. runanywhere sdks
-- URL: https://www.runanywhere.ai/
-- Category: Models & Infra
-- Tagline: Production ready toolkit to run AI locally
-- Why it matters: Battle-tested in the open — 10.3K GitHub stars from real production users.
-
-### 207. axolotl
-- URL: https://docs.axolotl.ai/
-- Category: Models & Infra
-- Tagline: Go ahead and axolotl questions
-- Why it matters: Battle-tested in the open — 12.6K GitHub stars from real production users.
-
-### 208. llm action
-- URL: https://www.zhihu.com/column/c_1456193767213043713
-- Category: Models & Infra
-- Tagline: The purpose of this project is to share the technical principles related to large models and practical experience (large model engineering, large model application landing)
-- Why it matters: Battle-tested in the open — 25.2K GitHub stars from real production users.
-
-### 209. Chinese LLaMA Alpaca
-- URL: https://github.com/ymcui/Chinese-LLaMA-Alpaca/wiki
-- Category: Models & Infra
-- Tagline: Chinese LLaMA&Alpaca Large Language Model + Local CPU/GPU Training Deployment (Chinese LLaMA & Alpaca LLMs)
-- Why it matters: Battle-tested in the open — 18.9K GitHub stars from real production users.
-
-### 210. LMCache
-- URL: https://lmcache.ai/
-- Category: Models & Infra
-- Tagline: LMCache: Supercharge Your LLM with the Fastest KV Cache Layer
-- Why it matters: Battle-tested in the open — 12.2K GitHub stars from real production users.
-
-### 211. Reticulum
-- URL: https://reticulum.network/
-- Category: Models & Infra
-- Tagline: The cryptography-based networking stack for building unstoppable networks with LoRa, Packet Radio, WiFi and everything in between.
-- Why it matters: Battle-tested in the open — 7.6K GitHub stars from real production users.
-
-### 212. peft
-- URL: https://huggingface.co/docs/peft
-- Category: Models & Infra
-- Tagline: 🤗 PEFT: State-of-the-art Parameter-Efficient Fine-Tuning.
-- Why it matters: Battle-tested in the open — 21.9K GitHub stars from real production users.
-
-### 213. dynamo
-- URL: https://docs.nvidia.com/dynamo/latest
-- Category: Models & Infra
-- Tagline: A Datacenter Scale Distributed Inference Serving Framework
-- Why it matters: Battle-tested in the open — 8.4K GitHub stars from real production users.
-
-### 214. Bifrost AI Gateway
-- URL: https://github.com/maximhq/bifrost
-- Category: Models & Infra
-- Tagline: High-speed enterprise AI gateway (50x faster than Python proxies) with adaptive load balancing, guardrails, and MCP governance.
-- Why it matters: Ultra-low-latency Go gateway that prevents provider lock-in and enforces token budgets across multi-model clusters.
-
-### 215. bitsandbytes
-- URL: https://huggingface.co/docs/bitsandbytes/main/en/index
-- Category: Models & Infra
-- Tagline: Accessible large language models via k-bit quantization for PyTorch.
-- Why it matters: Battle-tested in the open — 8.5K GitHub stars from real production users.
-
-### 216. BELLE
-- URL: https://github.com/LianjiaTech/BELLE
-- Category: Models & Infra
-- Tagline: BELLE: Be Everyone's Large Language model Engine
-- Why it matters: Battle-tested in the open — 8.3K GitHub stars from real production users.
-
-### 217. turbo fieldfare
-- URL: https://github.com/drumih/turbo-fieldfare
-- Category: Models & Infra
-- Tagline: Gemma 4 26B-A4B inference in ~2 GB of RAM on any M-series MacBook
-- Why it matters: Battle-tested in the open — 7.1K GitHub stars from real production users.
-
-### 218. Soup
-- URL: https://trysoup.dev/
-- Category: Models & Infra
-- Tagline: Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.
-- Why it matters: Battle-tested in the open — 9.8K GitHub stars from real production users.
-
-### 219. phoenix
-- URL: https://arize.com/docs/phoenix
-- Category: Models & Infra
-- Tagline: AI Observability & Evaluation
-- Why it matters: Battle-tested in the open — 12.1K GitHub stars from real production users.
-
-### 220. openvino
-- URL: https://docs.openvino.ai/
-- Category: Models & Infra
-- Tagline: OpenVINO™ is an open source toolkit for optimizing and deploying AI inference
-- Why it matters: Battle-tested in the open — 11.1K GitHub stars from real production users.
-
-### 221. ms swift
+### 206. ms swift
 - URL: https://swift.readthedocs.io/zh-cn/latest/
 - Category: Models & Infra
 - Tagline: Use PEFT or Full-parameter to CPT/SFT/DPO/GRPO 600+ LLMs (Qwen3.8, DeepSeek-V4, GLM-5.1, InternLM3, Llama4, ...) and 300+ MLLMs (Qwen3-VL, Qwen3-Omni, InternVL3.5, Ovis2.5, GLM5.3, Gemma4, Llava, Phi…
 - Why it matters: Battle-tested in the open — 16K GitHub stars from real production users.
 
-### 222. mlflow
+### 207. runanywhere sdks
+- URL: https://www.runanywhere.ai/
+- Category: Models & Infra
+- Tagline: Production ready toolkit to run AI locally
+- Why it matters: Battle-tested in the open — 10.3K GitHub stars from real production users.
+
+### 208. openvino
+- URL: https://docs.openvino.ai/
+- Category: Models & Infra
+- Tagline: OpenVINO™ is an open source toolkit for optimizing and deploying AI inference
+- Why it matters: Battle-tested in the open — 11.1K GitHub stars from real production users.
+
+### 209. OpenLLM
+- URL: https://bentoml.com/
+- Category: Models & Infra
+- Tagline: Run any open-source LLMs, such as DeepSeek and Llama, as OpenAI compatible API endpoint in the cloud.
+- Why it matters: Battle-tested in the open — 12.6K GitHub stars from real production users.
+
+### 210. Soup
+- URL: https://trysoup.dev/
+- Category: Models & Infra
+- Tagline: Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.
+- Why it matters: Battle-tested in the open — 9.8K GitHub stars from real production users.
+
+### 211. mlflow
 - URL: https://mlflow.org/
 - Category: Models & Infra
 - Tagline: The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlli…
 - Why it matters: Battle-tested in the open — 28.6K GitHub stars from real production users.
 
-### 223. inference
+### 212. Chinese LLaMA Alpaca
+- URL: https://github.com/ymcui/Chinese-LLaMA-Alpaca/wiki
+- Category: Models & Infra
+- Tagline: Chinese LLaMA&Alpaca Large Language Model + Local CPU/GPU Training Deployment (Chinese LLaMA & Alpaca LLMs)
+- Why it matters: Battle-tested in the open — 18.9K GitHub stars from real production users.
+
+### 213. kimi k3 in c
+- URL: https://medium.com/@fareedkhandev/building-kimi-k3-in-c-to-run-a-2-8t-model-on-consumer-hardware-a5792cbf3b59
+- Category: Models & Infra
+- Tagline: A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.
+- Why it matters: Battle-tested in the open — 9.2K GitHub stars from real production users.
+
+### 214. bitsandbytes
+- URL: https://huggingface.co/docs/bitsandbytes/main/en/index
+- Category: Models & Infra
+- Tagline: Accessible large language models via k-bit quantization for PyTorch.
+- Why it matters: Battle-tested in the open — 8.5K GitHub stars from real production users.
+
+### 215. Reticulum
+- URL: https://reticulum.network/
+- Category: Models & Infra
+- Tagline: The cryptography-based networking stack for building unstoppable networks with LoRa, Packet Radio, WiFi and everything in between.
+- Why it matters: Battle-tested in the open — 7.6K GitHub stars from real production users.
+
+### 216. dynamo
+- URL: https://docs.nvidia.com/dynamo/latest
+- Category: Models & Infra
+- Tagline: A Datacenter Scale Distributed Inference Serving Framework
+- Why it matters: Battle-tested in the open — 8.4K GitHub stars from real production users.
+
+### 217. peft
+- URL: https://huggingface.co/docs/peft
+- Category: Models & Infra
+- Tagline: 🤗 PEFT: State-of-the-art Parameter-Efficient Fine-Tuning.
+- Why it matters: Battle-tested in the open — 21.9K GitHub stars from real production users.
+
+### 218. turbo fieldfare
+- URL: https://github.com/drumih/turbo-fieldfare
+- Category: Models & Infra
+- Tagline: Gemma 4 26B-A4B inference in ~2 GB of RAM on any M-series MacBook
+- Why it matters: Battle-tested in the open — 7.1K GitHub stars from real production users.
+
+### 219. BELLE
+- URL: https://github.com/LianjiaTech/BELLE
+- Category: Models & Infra
+- Tagline: BELLE: Be Everyone's Large Language model Engine
+- Why it matters: Battle-tested in the open — 8.3K GitHub stars from real production users.
+
+### 220. inference
 - URL: https://inference.readthedocs.io/
 - Category: Models & Infra
 - Tagline: Swap GPT for any LLM by changing a single line of code. Xinference lets you run open-source, speech, and multimodal models on cloud, on-prem, or your laptop — all through one unified, production-read…
 - Why it matters: Battle-tested in the open — 9.6K GitHub stars from real production users.
+
+### 221. Bifrost AI Gateway
+- URL: https://github.com/maximhq/bifrost
+- Category: Models & Infra
+- Tagline: High-speed enterprise AI gateway (50x faster than Python proxies) with adaptive load balancing, guardrails, and MCP governance.
+- Why it matters: Ultra-low-latency Go gateway that prevents provider lock-in and enforces token budgets across multi-model clusters.
+
+### 222. phoenix
+- URL: https://arize.com/docs/phoenix
+- Category: Models & Infra
+- Tagline: AI Observability & Evaluation
+- Why it matters: Battle-tested in the open — 12.1K GitHub stars from real production users.
+
+### 223. LMCache
+- URL: https://lmcache.ai/
+- Category: Models & Infra
+- Tagline: LMCache: Supercharge Your LLM with the Fastest KV Cache Layer
+- Why it matters: Battle-tested in the open — 12.2K GitHub stars from real production users.
 
 
 ---
