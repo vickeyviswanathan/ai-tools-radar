@@ -6,14 +6,14 @@ Read online: https://cipherati.com/
 1. CYBERSECURITY NEWS
 ------------------------------------------------------------
 
-LEAD: Cybersecurity Is Becoming Central to Trust in India's Fintech Sector (TechGraph)
-• Why it matters: Confirmed by TechGraph; security teams across Banking & Financial Services should assess exposure, review access controls, and monitor vendor advisories.
+LEAD: Hyderabad-based NBFC hit by cyber Fraud, loses Rs 7.09 crore (Hyderabad Mail)
+• Why it matters: Confirmed by Hyderabad Mail; security teams across Banking & Financial Services should assess exposure, review access controls, and monitor vendor advisories.
 • Sector: Banking & Financial Services
 
 More on the Radar:
+• Government, RBI strengthen fintech regulatory framework to boost consumer protection and cybersecurity (DD News)
+• Cybersecurity Is Becoming Central to Trust in India's Fintech Sector (TechGraph)
 • Spam Calls Drop 99% Across India, 5.5 Million Mobile Numbers Disconnected; ₹6,500 Crore in Cyber Fraud Prevented (The 420.in)
-• Knowledge Nugget | AI cybersecurity race: What does CERT-In's access to Anthropic's Mythos mean for India? (The Indian Express)
-• OpenAI Unveils New Cybersecurity AI Model Amid Growing Concerns Over AI-Powered Cyberattacks (News18)
 
 Explore all live incidents: https://cipherati.com/#news
 
@@ -30,8 +30,8 @@ The "Look-Alike Voice" AI Deepfake Distress Call [Vector: Phone Call / Audio AI]
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: InvokeAI
-• What it does: Invoke is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The so…
+Featured Tool: StableStudio
+• What it does: Community interface for generative AI
 • Browse 221+ verified tools: https://cipherati.com/#tools
 
 ------------------------------------------------------------

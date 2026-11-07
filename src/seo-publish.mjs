@@ -52,6 +52,18 @@ function staticSignals(signals = []) {
   }).join("");
 }
 
+function staticDecisionBadges(t) {
+  let out = "";
+  if (t.isRising) {
+    const label = t.velocity >= 50 ? `🔥 +${t.velocity}/d` : `🔥 Rising`;
+    out += `<span class="badge momentum">${label}</span>`;
+  }
+  if (t.isNew2026) {
+    out += `<span class="badge new-2026">✨ New 2026</span>`;
+  }
+  return out;
+}
+
 function staticCard(t) {
   let domain = "";
   try { domain = new URL(t.url).hostname; } catch {}
@@ -71,6 +83,7 @@ function staticCard(t) {
         ${why}
         <div class="tool-meta">
           <span class="badge cat">${esc(t.category)}</span>
+          ${staticDecisionBadges(t)}
           ${staticSignals(t.signals)}
         </div>
       </a>`;
@@ -286,13 +299,27 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
         "name": "Cipherati AI Developer Tools & Coding Agents Directory",
         "url": `${SITE_URL}ai-tools.html`,
         "numberOfItems": tools.length,
-        "itemListElement": ranked.slice(0, 60).map((t, i) => ({
-          "@type": "ListItem",
-          "position": i + 1,
-          "name": t.name,
-          "url": t.url,
-          "description": `${t.tagline} (${t.category})`
-        }))
+        "itemListElement": ranked.slice(0, 60).map((t, i) => {
+          const isRepo = /github\.com/i.test(t.url);
+          return {
+            "@type": "ListItem",
+            "position": i + 1,
+            "item": isRepo ? {
+              "@type": "SoftwareSourceCode",
+              "name": t.name,
+              "codeRepository": t.url,
+              "url": t.url,
+              "description": `${t.tagline} (${t.category})`,
+              "dateModified": updatedAt.slice(0, 10)
+            } : {
+              "@type": "SoftwareApplication",
+              "name": t.name,
+              "url": t.url,
+              "applicationCategory": t.category || "DeveloperApplication",
+              "description": `${t.tagline} (${t.category})`
+            }
+          };
+        })
       },
       howToNode,
       {
@@ -423,13 +450,27 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
         "@id": `${SITE_URL}ai-tools.html#directory`,
         "name": "Cipherati Curated AI Developer Tools Directory",
         "numberOfItems": tools.length,
-        "itemListElement": ranked.slice(0, 100).map((t, i) => ({
-          "@type": "ListItem",
-          "position": i + 1,
-          "name": t.name,
-          "url": t.url,
-          "description": `${t.tagline} — ${t.why_it_matters || ""}`
-        }))
+        "itemListElement": ranked.slice(0, 100).map((t, i) => {
+          const isRepo = /github\.com/i.test(t.url);
+          return {
+            "@type": "ListItem",
+            "position": i + 1,
+            "item": isRepo ? {
+              "@type": "SoftwareSourceCode",
+              "name": t.name,
+              "codeRepository": t.url,
+              "url": t.url,
+              "description": `${t.tagline} — ${t.why_it_matters || ""}`,
+              "dateModified": updatedAt.slice(0, 10)
+            } : {
+              "@type": "SoftwareApplication",
+              "name": t.name,
+              "url": t.url,
+              "applicationCategory": t.category || "DeveloperApplication",
+              "description": `${t.tagline} — ${t.why_it_matters || ""}`
+            }
+          };
+        })
       }
     ]
   });

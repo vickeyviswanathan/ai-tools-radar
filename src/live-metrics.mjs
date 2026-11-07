@@ -126,24 +126,42 @@ export async function refreshLiveMetrics() {
 
   // 3. Apply all updates cleanly in a single synchronous SQLite transaction
   tx((d) => {
+    const getPrevSnapshot = d.prepare(`
+      SELECT value, ts FROM snapshots
+      WHERE item_id = ? AND source = ?
+      ORDER BY ts DESC LIMIT 1
+    `);
+    const insertSnapshot = d.prepare(`
+      INSERT INTO snapshots (item_id, source, value, ts)
+      VALUES (?, ?, ?, ?)
+    `);
     const upsertSignal = d.prepare(`
-      INSERT INTO signals (item_id, source, source_id, source_url, metric, extra, updated_at)
-      VALUES (?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO signals (item_id, source, source_id, source_url, metric, velocity, extra, updated_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
       ON CONFLICT(item_id, source) DO UPDATE SET
         source_id = excluded.source_id,
         source_url = excluded.source_url,
         metric = excluded.metric,
+        velocity = CASE WHEN excluded.velocity > 0 THEN excluded.velocity ELSE signals.velocity END,
         extra = excluded.extra,
         updated_at = excluded.updated_at
     `);
 
     for (const u of updates) {
+      let velocity = 0;
+      const prev = getPrevSnapshot.get(u.itemId, u.source);
+      if (prev && u.metric >= prev.value) {
+        const elapsedHours = Math.max(1, (currentTs - prev.ts) / 3600);
+        velocity = Math.round(((u.metric - prev.value) / elapsedHours) * 24);
+      }
+      insertSnapshot.run(u.itemId, u.source, u.metric, currentTs);
       upsertSignal.run(
         u.itemId,
         u.source,
         u.sourceId,
         u.sourceUrl,
         u.metric,
+        velocity,
         u.extra,
         currentTs
       );

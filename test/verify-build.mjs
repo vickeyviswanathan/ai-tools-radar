@@ -43,7 +43,7 @@ for (const file of requiredFiles) {
   assert(existsSync(file), `Required build artifact exists: ${file}`);
 }
 
-// 2. Strict Ban on Deprecated / Synthetic / Fluff Strings
+// 2. Strict Ban on Deprecated / Synthetic / Fluff / Competitor Strings
 const bannedTerms = [
   "skype",
   "live wire",
@@ -51,14 +51,28 @@ const bannedTerms = [
   "bfsi wire",
   "breaking wire",
   "statutory wire",
-  "crypto wire"
+  "crypto wire",
+  "taaft",
+  "theresanaiforthat",
+  "trend" + "shift"
 ];
 
-for (const file of ["public/index.html", "public/data/scams.json", "public/data/threats.json", "public/llms.txt"]) {
+for (const file of [
+  "public/index.html",
+  "public/cybersecurity-news.html",
+  "public/scam-alerts.html",
+  "public/ai-realities.html",
+  "public/ai-tools.html",
+  "public/data/tools.json",
+  "public/data/scams.json",
+  "public/data/threats.json",
+  "public/llms.txt",
+  "public/llms-full.txt"
+]) {
   if (existsSync(file)) {
     const content = readFileSync(file, "utf8").toLowerCase();
     for (const term of bannedTerms) {
-      assert(!content.includes(term), `No banned term "${term}" in ${file}`);
+      assert(!content.includes(term), `Zero occurrences of banned term in ${file}`);
     }
   }
 }
@@ -263,6 +277,10 @@ assert(scamPage.includes('<section class="section-wrap" id="scams">') && scamPag
 
 const realitiesPage = readFileSync("public/ai-realities.html", "utf8");
 assert(realitiesPage.includes('<section class="section-wrap" id="realities">') && realitiesPage.includes("FAQPage"), "ai-realities.html renders realities section 100% visible without display:none and includes FAQPage JSON-LD");
+
+const toolsPage = readFileSync("public/ai-tools.html", "utf8");
+assert(toolsPage.includes("SoftwareSourceCode") && indexHtml.includes("SoftwareSourceCode"), "Rich SoftwareSourceCode repository Schema.org JSON-LD is embedded in index.html and ai-tools.html");
+assert(indexHtml.includes("omnibox-dropdown") && indexHtml.includes("selectOmniboxHit"), "Cross-pillar omnibox command search is wired across AI Tools, AI Realities, Cyber News, and Scam Alerts");
 
 
 // Summary

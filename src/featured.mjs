@@ -720,5 +720,61 @@ export const FEATURED_LEADERS = [
     metric: 2500,
     whyItMatters: "Modern memory-safe WAF engine deployable as an Envoy proxy plugin or native Golang middleware against zero-days.",
     launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
+  },
+  {
+    source: "github",
+    sourceId: "sherlock-project/sherlock",
+    sourceUrl: "https://github.com/sherlock-project/sherlock",
+    name: "Sherlock",
+    tagline: "Hunt down social media accounts and digital footprints by username across 400+ global networks for OSINT investigations.",
+    url: "https://github.com/sherlock-project/sherlock",
+    emoji: "🕵️",
+    category: "Cybersecurity",
+    tags: ["osint", "reconnaissance", "threat-intelligence", "username-search", "security"],
+    metric: 64000,
+    whyItMatters: "Definitive open-source OSINT reconnaissance utility used by threat analysts and investigators to map adversary identities.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 2
+  },
+  {
+    source: "github",
+    sourceId: "maximhq/bifrost",
+    sourceUrl: "https://github.com/maximhq/bifrost",
+    name: "Bifrost AI Gateway",
+    tagline: "High-speed enterprise AI gateway (50x faster than Python proxies) with adaptive load balancing, guardrails, and MCP governance.",
+    url: "https://github.com/maximhq/bifrost",
+    emoji: "🌉",
+    category: "Models & Infra",
+    tags: ["ai-gateway", "llm-routing", "mcp", "guardrails", "enterprise-infra"],
+    metric: 3400,
+    whyItMatters: "Ultra-low-latency Go gateway that prevents provider lock-in and enforces token budgets across multi-model clusters.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
+  },
+  {
+    source: "github",
+    sourceId: "vercel-labs/json-render",
+    sourceUrl: "https://github.com/vercel-labs/json-render",
+    name: "json-render",
+    tagline: "The Generative UI framework for deterministic, schema-validated streaming of interactive components from LLM JSON outputs.",
+    url: "https://github.com/vercel-labs/json-render",
+    emoji: "🧩",
+    category: "Coding",
+    tags: ["generative-ui", "json", "frontend", "react", "streaming-ui"],
+    metric: 14100,
+    whyItMatters: "Replaces fragile markdown-only chat bubbles with strict schema-bound interactive UI components rendered at 60fps.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
+  },
+  {
+    source: "github",
+    sourceId: "jamiepine/voicebox",
+    sourceUrl: "https://github.com/jamiepine/voicebox",
+    name: "Voicebox",
+    tagline: "Open-source local voice synthesis studio with multi-speaker timelines, cloning, and zero-cloud audio generation.",
+    url: "https://github.com/jamiepine/voicebox",
+    emoji: "🎙️",
+    category: "Audio & Voice",
+    tags: ["voice-synthesis", "tts", "voice-studio", "audio-ai", "open-source"],
+    metric: 19900,
+    whyItMatters: "Brings multi-track DAW-grade voice synthesis and local cloning to desktop hardware without recurring API fees.",
+    launchedAt: Math.floor(Date.now() / 1000) - 86400 * 1
   }
 ];

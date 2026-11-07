@@ -1,7 +1,7 @@
 // Builds static data/tools.json for GitHub Pages deployment
 import { writeFileSync, readFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
-import { getDb, now, getMeta } from "./src/db.mjs";
+import { getDb, now, getMeta, tx } from "./src/db.mjs";
 import { runIngestion } from "./src/ingest.mjs";
 import { evaluateQuality } from "./src/quality.mjs";
 import { refreshLiveMetrics } from "./src/live-metrics.mjs";
@@ -12,8 +12,57 @@ import { REALITIES_DATA } from "./src/realities-data.mjs";
 import { generateDailyBriefing } from "./src/newsletter-generator.mjs";
 import { dispatchDailyNewsletter } from "./src/newsletter-dispatcher.mjs";
 import { dispatchCriticalThreatPush } from "./src/push-dispatcher.mjs";
+import { FEATURED_LEADERS } from "./src/featured.mjs";
+import { canonicalKey, categorize, clip } from "./src/classify.mjs";
+
+function seedFeaturedLeaders() {
+  const currentTs = now();
+  tx((d) => {
+    const upsertItem = d.prepare(`
+      INSERT INTO items (key, name, tagline, url, emoji, category, tags, why_it_matters, launched_at, first_seen, last_seen, status)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active')
+      ON CONFLICT(key) DO UPDATE SET
+        name = excluded.name,
+        last_seen = excluded.last_seen,
+        tagline = excluded.tagline,
+        emoji = COALESCE(items.emoji, excluded.emoji),
+        category = COALESCE(items.category, excluded.category),
+        tags = COALESCE(items.tags, excluded.tags),
+        why_it_matters = COALESCE(excluded.why_it_matters, items.why_it_matters)
+      RETURNING id
+    `);
+    const upsertSignal = d.prepare(`
+      INSERT INTO signals (item_id, source, source_id, source_url, metric, extra, updated_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+      ON CONFLICT(item_id, source) DO UPDATE SET
+        metric = MAX(signals.metric, excluded.metric),
+        updated_at = excluded.updated_at
+    `);
+    for (const item of FEATURED_LEADERS) {
+      const key = canonicalKey(item.url);
+      const category = item.category || categorize(`${item.name} ${item.tagline || ""} ${(item.tags || []).join(" ")}`);
+      const row = upsertItem.get(
+        key,
+        clip(item.name, 60),
+        clip(item.tagline, 200),
+        item.url,
+        item.emoji || null,
+        category,
+        JSON.stringify(item.tags || []),
+        item.whyItMatters || null,
+        item.launchedAt || currentTs,
+        currentTs,
+        currentTs
+      );
+      if (row && row.id) {
+        upsertSignal.run(row.id, item.source, item.sourceId, item.sourceUrl, item.metric, "{}", currentTs);
+      }
+    }
+  });
+}
 
 async function build() {
+  seedFeaturedLeaders();
   if (process.env.FULL_INGEST === "true" || process.env.GITHUB_EVENT_NAME === "schedule") {
     console.log("Ingesting latest top-tier tools via full scraper...");
     await runIngestion();
@@ -62,14 +111,21 @@ async function build() {
 
   const all = db.prepare(`
     SELECT i.id, i.name, i.tagline, i.url, i.emoji, i.category, i.why_it_matters, i.launched_at, i.score,
-           GROUP_CONCAT(s.source || ':' || s.metric, ',') as signal_summary
+           GROUP_CONCAT(s.source || ':' || s.metric, ',') as signal_summary,
+           MAX(COALESCE(s.velocity, 0)) as max_velocity
     FROM items i
     LEFT JOIN signals s ON s.item_id = i.id
     WHERE i.status = 'active'
     GROUP BY i.id
   `).all().map(r => {
     const signals = (r.signal_summary || "").split(",").filter(Boolean);
-    return { ...r, signals, rank: rankOf(signals), repo: repoOf.get(r.id) || null };
+    const rank = rankOf(signals);
+    const launchedAt = Number(r.launched_at) || 0;
+    const isNew2026 = launchedAt >= 1767225600; // 2026-01-01T00:00:00Z
+    const velocity = Number(r.max_velocity) || 0;
+    const isRising = velocity >= 50 || (Number(r.score) >= 35 && rank >= 2500);
+    const { max_velocity, ...cleanRow } = r;
+    return { ...cleanRow, signals, rank, velocity, isRising, isNew2026, repo: repoOf.get(r.id) || null };
   }).filter(t => {
     // Hand-picked tools (seeded with an "app" signal) are always kept. Everything the scrapers
     // found must pass the quality gate today, which also cleans out rows stored under older, looser rules.
@@ -446,9 +502,13 @@ function syncCountsInHtml(tools, realities, threats, scams) {
   let html = readFileSync(indexPath, "utf8");
   html = html.replace(/<div class="hero-metric-num" id="stat-tools">\d+<\/div>/, `<div class="hero-metric-num" id="stat-tools">${tools.length}</div>`);
   html = html.replace(/<span class="tab-count" id="tab-tools-count">\d*<\/span>/, `<span class="tab-count" id="tab-tools-count">${tools.length}</span>`);
+  html = html.replace(/<span class="side-nav-pill" id="side-tools-count">\d*<\/span>/, `<span class="side-nav-pill" id="side-tools-count">${tools.length}</span>`);
   html = html.replace(/<div class="hero-metric-num" id="stat-realities">\d+<\/div>/, `<div class="hero-metric-num" id="stat-realities">${realities.length}</div>`);
+  html = html.replace(/(id="side-tab-realities"[\s\S]*?<span class="side-nav-pill"[^>]*>)\d+(<\/span>)/, `$1${realities.length}$2`);
   html = html.replace(/<div class="hero-metric-num" id="stat-news">\d+<\/div>/, `<div class="hero-metric-num" id="stat-news">${threats.length}</div>`);
+  html = html.replace(/<span class="side-nav-pill" id="side-threats-count">\d*<\/span>/, `<span class="side-nav-pill" id="side-threats-count">${threats.length}</span>`);
   html = html.replace(/<div class="hero-metric-num" id="stat-scams">\d+<\/div>/, `<div class="hero-metric-num" id="stat-scams">${scams.length}</div>`);
+  html = html.replace(/<span class="side-nav-pill" id="side-scams-count">\d*<\/span>/, `<span class="side-nav-pill" id="side-scams-count">${scams.length}</span>`);
   writeFileSync(indexPath, html, "utf8");
 }
 
