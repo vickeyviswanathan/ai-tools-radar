@@ -302,6 +302,14 @@ assert(genericUrgentBadges === 0, `Zero generic '🚨 Urgent Alert' badges infla
 assert(indexHtml.includes("deriveToolEvaluation") && indexHtml.includes("Engineering Evaluation &amp; Trade-offs"), "Tool inspector drawer renders structured Engineering Evaluation & Trade-offs spec sheet");
 assert(indexHtml.includes("GitHub stars and community metrics reflect public popularity, not an independent security audit"), "Tool inspector drawer includes explicit popularity vs. security audit disclaimer");
 
+// 15. Programmatic SEO Long-Tail Scale Gates (300+ Canonical Pages)
+const sitemapLocMatches = sitemapXml.match(/<loc>/g) || [];
+assert(sitemapLocMatches.length >= 300, `sitemap.xml includes 300+ programmatic long-tail URLs (found ${sitemapLocMatches.length})`);
+assert(existsSync("public/tools/ollama.html") && existsSync("public/scams/accidental-upi-transfer-trap.html") && existsSync("public/realities/the-context-window-lie.html"), "Dedicated programmatic HTML pages exist for tools, scams, and realities");
+const sampleToolPage = readFileSync("public/tools/ollama.html", "utf8");
+assert(sampleToolPage.includes("Engineering Evaluation &amp; Trade-offs Spec Sheet") && sampleToolPage.includes("FAQPage") && sampleToolPage.includes("BreadcrumbList"), "Programmatic tool page contains full engineering spec table, FAQPage, and BreadcrumbList JSON-LD");
+assert(dispatcherCode.includes("api.resend.com/audiences") && dispatcherCode.includes("DEFAULT_SHEET_CSV"), "Newsletter dispatcher auto-discovers Resend Audience ID and syncs Google Sheet subscribers");
+
 
 // Summary
 console.log("=========================================");

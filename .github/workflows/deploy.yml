@@ -34,6 +34,7 @@ jobs:
 
       - name: Run Thought-Leader Curated Ingest Pipeline
         env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_AUDIENCE_ID: ${{ secrets.RESEND_AUDIENCE_ID }}

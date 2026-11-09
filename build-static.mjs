@@ -269,13 +269,13 @@ async function build() {
   const briefing = generateDailyBriefing();
   updateBriefingInHtml(briefing);
 
-  publishSeoArtifacts(output.tools, output.updatedAt, "./public/index.html", {
+  const seoResult = publishSeoArtifacts(output.tools, output.updatedAt, "./public/index.html", {
     threats: liveThreats,
     scams: sanitizedScams,
     realities: REALITIES_DATA
   });
   generateLlmsTxt(output.tools, sanitizedScams, liveThreats, REALITIES_DATA);
-  await pingIndexNow([
+  await pingIndexNow(seoResult?.sitemapUrls || [
     "https://cipherati.com/",
     "https://cipherati.com/cybersecurity-news.html",
     "https://cipherati.com/scam-alerts.html",

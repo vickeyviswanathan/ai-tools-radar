@@ -1,15 +1,19 @@
 {
-  "lastUpdatedDate": "2026-11-07",
+  "lastUpdatedDate": "2026-11-09",
   "sentScamIds": [
-    "ai-deepfake-voice-clone"
+    "ai-deepfake-voice-clone",
+    "electricity-bill-disconnection-sms"
   ],
   "sentRealityIds": [
-    4
+    4,
+    21
   ],
   "sentToolNames": [
-    "X AnyLabeling"
+    "X AnyLabeling",
+    "krita ai diffusion"
   ],
   "sentLeadTitles": [
-    "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector"
+    "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
+    "India Reviews Telecom Cybersecurity as AI-Powered Threats Rise"
   ]
 }

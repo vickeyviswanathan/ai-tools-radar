@@ -3,6 +3,7 @@
 // Claude, Gemini AI Overviews) see 100%-visible dedicated pillar pages and rich Schema.org graphs.
 // Imported by build-static.mjs and covered by test/verify-build.mjs.
 import { readFileSync, writeFileSync } from "node:fs";
+import { generateProgrammaticSeoPages, slugify } from "./programmatic-seo.mjs";
 
 const SITE_URL = "https://cipherati.com/";
 export const INDEXNOW_KEY = "c9426a40b7894f12a8e3d56c719204ef";
@@ -529,6 +530,10 @@ ${rssItems.map(item => `    <item>
   writeFileSync("./public/feed.xml", feedXml, "utf8");
 
   const lastmod = updatedAt.slice(0, 10);
+
+  // 5. Generate 300+ Programmatic Long-Tail SEO Pages (/tools/*, /compare/*, /scams/*, /realities/*)
+  const progSeo = generateProgrammaticSeoPages({ tools: ranked, scams, realities, updatedAt });
+
   const sitemapUrls = [
     { loc: `${SITE_URL}`, changefreq: "hourly", priority: "1.0" },
     { loc: `${SITE_URL}cybersecurity-news.html`, changefreq: "hourly", priority: "0.95" },
@@ -538,7 +543,8 @@ ${rssItems.map(item => `    <item>
     { loc: `${SITE_URL}newsletter/today.html`, changefreq: "daily", priority: "0.85" },
     { loc: `${SITE_URL}feed.xml`, changefreq: "hourly", priority: "0.85" },
     { loc: `${SITE_URL}llms.txt`, changefreq: "daily", priority: "0.80" },
-    { loc: `${SITE_URL}llms-full.txt`, changefreq: "daily", priority: "0.80" }
+    { loc: `${SITE_URL}llms-full.txt`, changefreq: "daily", priority: "0.80" },
+    ...progSeo.generatedUrls
   ];
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`).join("\n")}\n</urlset>\n`;
@@ -589,5 +595,6 @@ Allow: /llms-full.txt
 Sitemap: ${SITE_URL}sitemap.xml
 `;
   writeFileSync("./public/robots.txt", robotsTxt, "utf8");
-  console.log(`Pre-rendered ${ranked.length} tool cards into index.html + 4 dedicated SEO pillar pages (/cybersecurity-news.html, /scam-alerts.html, /ai-realities.html, /ai-tools.html), full Schema.org JSON-LD, sitemap.xml (8 URLs), and IndexNow key.`);
+  console.log(`Pre-rendered ${ranked.length} tool cards into index.html + 4 pillar pages + ${progSeo.counts.total} programmatic long-tail pages (${progSeo.counts.tools} tools, ${progSeo.counts.comparisons} comparisons, ${progSeo.counts.scams} scams, ${progSeo.counts.realities} realities). sitemap.xml now has ${sitemapUrls.length} URLs.`);
+  return { sitemapUrls: sitemapUrls.map(u => u.loc), progSeo };
 }
