@@ -6,10 +6,11 @@ on:
   schedule:
     # Daily Morning Intelligence Briefing:
     # - 01:45 UTC (07:15 AM IST): compiles & schedules exact 08:00:00 AM IST delivery inside Resend (scheduled_at)
-    # - 02:30 UTC (08:00 AM IST): immediate backup dispatch + 6-hour radar syncs
+    # - 02:30 UTC (08:00 AM IST): immediate backup dispatch
+    # - 0 */3 * * *: high-frequency 3-hour radar & live cybersecurity news syncs
     - cron: "45 1 * * *"
     - cron: "30 2 * * *"
-    - cron: "0 */6 * * *"
+    - cron: "0 */3 * * *"
   workflow_dispatch:
 
 permissions:

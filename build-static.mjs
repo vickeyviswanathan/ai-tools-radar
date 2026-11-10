@@ -330,9 +330,16 @@ function updateThreatsInHtml(categories, threats) {
           <span class="threat-badge threat-sev ${severityClass}">${item.severity.toUpperCase()}</span>
           <span class="threat-badge threat-prov threat-prov-${esc(item.badgeType)}">${esc(item.provenanceBadge)}</span>
         </div>
-        <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('${esc(item.id)}')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
-        </button>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div class="threat-meta-time">
+            <span class="threat-date">${esc(item.date)}</span>
+            <span class="threat-sep">·</span>
+            <span class="threat-ago">${esc(item.timeAgo)}</span>
+          </div>
+          <button class="share-btn" type="button" title="Share cybersecurity news" aria-label="Share news" onclick="shareThreat('${esc(item.id)}')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          </button>
+        </div>
       </div>
 
       <h3 class="threat-title">

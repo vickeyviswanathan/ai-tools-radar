@@ -6,14 +6,14 @@ Read online: https://cipherati.com/
 1. CYBERSECURITY NEWS
 ------------------------------------------------------------
 
-LEAD: $133M French Bank Hack: 5 Confirmed, 5 Unknown [2026] (shattered.io)
-• Why it matters: Primary source reporting.
+LEAD: North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack (CoinDesk)
+• Why it matters: Foreign Money Returns to India, Binance Survives a Record Hack, and Democrats Retake Congress; $6 billion cryptocurrency heist puts investors on edge.
 • Sector: Crypto & Digital Assets
 
 More on the Radar:
-• India Reviews Telecom Cybersecurity as AI-Powered Threats Rise (www.nationpathindia.com)
-• University Hospitals says MyChart now accessible after cybersecurity incident (Ashland Source)
-• Car Cybersecurity In India: Can Connected Cars Be Hacked? (CarAndBike)
+• Bitcoin struggles to hold $75,000 as tightening fears, heist and US poll outcome weigh (Deccan Herald)
+• ⚡ Weekly Recap: SSHole Exploited, APT Root RCE, Robot Takeovers, 15K Hacked Sites, and More (The Hacker News)
+• How small deposits drained 77 ACryptoS vaults and what users can still withdraw (Crypto News)
 
 Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 
@@ -30,8 +30,8 @@ The DoT / TRAI "Mobile Number Disconnection in 2 Hours" Robocall [Vector: Phone 
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: ComfyUI 3D Pack
-• What it does: An extensive node suite that enables ComfyUI to process 3D inputs (Mesh & UV Texture, etc) using cutting edge algorithms (3DGS, NeRF, etc.)
+Featured Tool: Auto Photoshop StableDiffusion Plugin
+• What it does: A user-friendly plug-in that makes it easy to generate stable diffusion images inside Photoshop using either Automatic or ComfyUI as a backend.
 • Browse 223 indexed tools: https://cipherati.com/ai-tools.html
 
 ------------------------------------------------------------

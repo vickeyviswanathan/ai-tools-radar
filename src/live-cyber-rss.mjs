@@ -60,9 +60,11 @@ const JUNK_NOISE_KEYWORDS = [
   "ed attaches", "attaches properties", "attached properties", "property attached",
   "pmla", "money laundering", "loan fraud", "bank loan", "chandra proteco",
   "dollar pulls back", "ahead of us midterms", "forex", "stock market", "shares dip", "shares surge",
-  // College seminars / career guidance / student workshops
+  // College seminars / career guidance / student workshops / corporate offsites & stock promos
   "career guidance", "students briefed", "briefed on cybersecurity", "organizes cybersecurity",
-  "polytechnic", "college organizes", "campus drive", "workshop on cybersecurity", "webinar on"
+  "polytechnic", "college organizes", "campus drive", "workshop on cybersecurity", "webinar on",
+  "flew employees", "katy perry", "six-month certificate", "certificate programme", "bags orders from",
+  "cybersecurity stock", "revenue jumps", "psychology of policing"
 ];
 
 function isPaywalled(url, source) {
@@ -103,7 +105,7 @@ function formatDate(dateString) {
   }
 }
 
-async function fetchRssFeed(url) {
+async function fetchRssFeed(url, defaultSource = "") {
   try {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
@@ -122,23 +124,36 @@ async function fetchRssFeed(url) {
     const matches = text.match(/<item>[\s\S]*?<\/item>/g) || [];
 
     for (const m of matches) {
-      const rawTitle = (m.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || "";
-      const link = (m.match(/<link>([\s\S]*?)<\/link>/) || [])[1] || "";
-      const pubDate = (m.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || "";
-      const rawSource = (m.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1] || "";
+      let rawTitle = (m.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || "";
+      let link = (m.match(/<link>([\s\S]*?)<\/link>/) || [])[1] || "";
+      let pubDate = (m.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || "";
+      let rawSource = (m.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1] || "";
 
+      rawTitle = rawTitle.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").trim();
+      link = link.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").trim();
+      pubDate = pubDate.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").trim();
+      rawSource = rawSource.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").trim();
+
+      const hasGoogleSuffix = !defaultSource && /\s*[-|]\s*[^-|]+$/.test(rawTitle);
       const cleanTitle = rawTitle
         .replace(/&amp;/g, "&")
         .replace(/&quot;/g, '"')
         .replace(/&#39;/g, "'")
+        .replace(/&#039;/g, "'")
+        .replace(/&#8217;/g, "'")
+        .replace(/&#8216;/g, "'")
+        .replace(/&#8220;/g, '"')
+        .replace(/&#8221;/g, '"')
+        .replace(/&#8211;/g, "-")
+        .replace(/&#8212;/g, "-")
         .replace(/&lt;/g, "<")
         .replace(/&gt;/g, ">")
         .replace(/[‘’`]/g, "'")
         .replace(/[“”]/g, '"')
         .replace(/[–—]/g, "-")
-        .replace(/\s*[-|]\s*[^-|]+$/, "")
+        .replace(hasGoogleSuffix ? /\s*[-|]\s*[^-|]+$/ : /(?!)/, "")
         .trim();
-      const source = rawSource || (rawTitle.includes("-") ? rawTitle.split("-").pop().trim() : "Verified News Wire");
+      const source = rawSource || defaultSource || (rawTitle.includes("-") ? rawTitle.split("-").pop().trim() : "Primary Cyber Desk");
 
       const safeLink = cleanUrl(link.trim());
       if (cleanTitle && safeLink && isCyberRelevant(cleanTitle)) {
@@ -295,7 +310,7 @@ function getEventSignatureAndCategory(title, originalCategory) {
   }
 
   // 6. State Bank of India
-  if (lower.includes("state bank of india") || lower.includes("sbi")) {
+  if (lower.includes("state bank of india") || /\bsbi\b/.test(lower)) {
     return {
       category: "india-bfsi",
       clusterKey: "india:sbi-bank-security",
@@ -304,7 +319,7 @@ function getEventSignatureAndCategory(title, originalCategory) {
   }
 
   // 7. Punjab National Bank
-  if (lower.includes("punjab national bank") || lower.includes("pnb")) {
+  if (lower.includes("punjab national bank") || /\bpnb\b/.test(lower)) {
     return {
       category: "india-bfsi",
       clusterKey: "india:pnb-fraud-case",
@@ -313,7 +328,7 @@ function getEventSignatureAndCategory(title, originalCategory) {
   }
 
   // 8. IDFC First Bank / Haryana labour board scam
-  if (lower.includes("idfc") || lower.includes("haryana labour board")) {
+  if (/\bidfc\b/.test(lower) || lower.includes("haryana labour board")) {
     return {
       category: "india-bfsi",
       clusterKey: "india:idfc-bank-scam",
@@ -331,7 +346,7 @@ function getEventSignatureAndCategory(title, originalCategory) {
   }
 
   // 10. Reserve Bank of India (RBI Directives & Checks)
-  if (lower.includes("reserve bank of india") || lower.includes("rbi")) {
+  if (lower.includes("reserve bank of india") || /\brbi\b/.test(lower)) {
     return {
       category: "india-bfsi",
       clusterKey: "india:rbi-regulatory-action",
@@ -384,6 +399,16 @@ function getEventSignatureAndCategory(title, originalCategory) {
     };
   }
 
+  // 15b. French / European Supermarket Refrigerator Cyberattack (Iran)
+  if ((lower.includes("fridge") || lower.includes("refrigerator") || lower.includes("supermarket")) &&
+      (lower.includes("iran") || lower.includes("france") || lower.includes("french") || lower.includes("europe"))) {
+    return {
+      category: "global-ransomware",
+      clusterKey: "global:france-iran-refrigerator-hack",
+      isSpecific: true
+    };
+  }
+
   // 16. General Financial Fraud Amount Matcher in India (e.g. "280 crore", "5.17 crore")
   const croreMatch = lower.match(/(\d+[\.\d]*)\s*crore/);
   if (croreMatch) {
@@ -408,25 +433,46 @@ function getEventSignatureAndCategory(title, originalCategory) {
 }
 
 export async function getLiveCyberRss() {
-  console.log("[LiveRSS] Fetching live feeds from Reuters, ANI, Moneycontrol, and primary cyber desks...");
+  console.log("[LiveRSS] Fetching live feeds from Reuters, BleepingComputer, The Hacker News, CISA, Moneycontrol, and primary cyber desks...");
 
-  const [indiaItems, cryptoItems, reutersItems] = await Promise.all([
+  const [
+    indiaBreaking,
+    indiaItems,
+    cryptoBreaking,
+    cryptoItems,
+    reutersItems,
+    bleepingItems,
+    hackerNewsItems,
+    cisaItems
+  ] = await Promise.all([
+    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud"+OR+"digital+arrest"+OR+"CERT-In")+AND+(India+OR+RBI+OR+SEBI+OR+NPCI+OR+SBI+OR+HDFC+OR+ICICI+OR+"UPI")+when:2d&hl=en-IN&gl=IN&ceid=IN:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud")+AND+(India+OR+RBI+OR+NBFC+OR+SBI+OR+"UPI+payment"+OR+"cyber+cell"+OR+CBI+OR+"digital+arrest")+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
+    fetchRssFeed('https://news.google.com/rss/search?q=(crypto+OR+bitcoin+OR+exchange+OR+DeFi+OR+Binance)+AND+(hack+OR+hacked+OR+exploit+OR+drained+OR+heist+OR+stolen)+when:3d&hl=en-US&gl=US&ceid=US:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(Binance+OR+crypto+OR+bitcoin)+AND+(hack+OR+freeze+OR+heist+OR+stolen)+when:7d&hl=en-US&gl=US&ceid=US:en'),
-    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+ransomware+OR+breach)+source:Reuters+when:7d&hl=en-US&gl=US&ceid=US:en')
+    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+ransomware+OR+breach)+source:Reuters+when:7d&hl=en-US&gl=US&ceid=US:en'),
+    fetchRssFeed('https://www.bleepingcomputer.com/feed/', 'BleepingComputer'),
+    fetchRssFeed('https://feeds.feedburner.com/TheHackersNews', 'The Hacker News'),
+    fetchRssFeed('https://www.cisa.gov/cybersecurity-advisories/all.xml', 'CISA Advisory')
   ]);
 
+  const mapIndiaItem = (i) => {
+    const srcL = (i.source || "").toLowerCase();
+    const titleL = (i.title || "").toLowerCase();
+    const isIndianBfsiContext = /\b(india|indian|rbi|sebi|cbi|ed|cert-in|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|aadhaar|pan|delhi police|mumbai police|cyber cell|digital arrest|nbfc|sc seeks|supreme court|enforcement directorate|tamil nadu|bengaluru|bangalore|hyderabad|chennai|pune|kolkata|kerala|noida|gurugram)\b|(?:\d+\s*)?(?:crore|lakh|cr)\b|\brs\.?\s*\d+/i.test(titleL);
+    const isForeign = srcL === "upi" || srcL.includes("united press") || srcL.includes("chosun") || srcL.includes("ghana") || srcL.includes("lawfuel") || titleL.includes("korean") || titleL.includes("calif") || titleL.includes("medicare") || titleL.includes("ghana") || titleL.includes("mtn") || titleL.includes("dhs") || titleL.includes("homeland security") || titleL.includes("pentagon") || titleL.includes("trump");
+    const normalizedSource = (srcL === "upi" || srcL.includes("united press")) ? "United Press International" : i.source;
+    return { ...i, source: normalizedSource, defaultCategory: (isIndianBfsiContext && !isForeign) ? "india-bfsi" : "global-ransomware" };
+  };
+
   const rawCandidatePool = [
-    ...indiaItems.map(i => {
-      const srcL = (i.source || "").toLowerCase();
-      const titleL = (i.title || "").toLowerCase();
-      const isIndianBfsiContext = /\b(rbi|sebi|sbi|hdfc|icici|pnb|axis|kotak|bob|canara|uco|idfc|indusind|au bank|au small finance|paytm|phonepe|cred|npci|neft|rtgs|imps|nbfc|fintech|bank|banking|upi|rupee|crore|lakh|cr)\b|\brs\.?\s*\d+/i.test(titleL);
-      const isForeign = srcL === "upi" || srcL.includes("united press") || srcL.includes("chosun") || srcL.includes("ghana") || srcL.includes("lawfuel") || titleL.includes("korean") || titleL.includes("calif") || titleL.includes("medicare") || titleL.includes("ghana") || titleL.includes("mtn") || titleL.includes("dhs") || titleL.includes("homeland security") || titleL.includes("pentagon") || titleL.includes("trump");
-      const normalizedSource = (srcL === "upi" || srcL.includes("united press")) ? "United Press International" : i.source;
-      return { ...i, source: normalizedSource, defaultCategory: (isIndianBfsiContext && !isForeign) ? "india-bfsi" : "global-ransomware" };
-    }),
+    ...indiaBreaking.map(mapIndiaItem),
+    ...indiaItems.map(mapIndiaItem),
+    ...cryptoBreaking.map(i => ({ ...i, defaultCategory: "crypto-heists" })),
     ...cryptoItems.map(i => ({ ...i, defaultCategory: "crypto-heists" })),
-    ...reutersItems.map(i => ({ ...i, defaultCategory: "global-ransomware" }))
+    ...reutersItems.map(i => ({ ...i, defaultCategory: "global-ransomware" })),
+    ...bleepingItems.slice(0, 12).map(i => ({ ...i, defaultCategory: "global-ransomware" })),
+    ...hackerNewsItems.slice(0, 12).map(i => ({ ...i, defaultCategory: "global-ransomware" })),
+    ...cisaItems.slice(0, 6).map(i => ({ ...i, defaultCategory: "global-ransomware" }))
   ];
 
   // Group candidate articles into unique event clusters
@@ -487,15 +533,25 @@ export async function getLiveCyberRss() {
       cluster.articles.push(item);
       cluster.relatedSources.add(item.source);
 
-      // Prefer high-authority open-access wire services as primary headline
+      // Prefer newer stories first (if >18 hours newer, always promote the newer story);
+      // for contemporaneous stories, prefer high-authority open-access wire services & security desks
       const srcLower = item.source.toLowerCase();
       const currentSrcLower = cluster.primary.source.toLowerCase();
-      
-      const priorityOrder = ["reuters", "moneycontrol", "ndtv", "the hindu", "theprint", "trm labs", "cnbc", "bbc", "ani", "al jazeera", "guardian"];
+      const newTs = new Date(item.pubDate).getTime() || 0;
+      const curTs = new Date(cluster.primary.pubDate).getTime() || 0;
+      const hoursNewer = (newTs - curTs) / (1000 * 60 * 60);
+
+      const priorityOrder = [
+        "reuters", "bleepingcomputer", "the hacker news", "cisa", "cert-in",
+        "moneycontrol", "ndtv", "the hindu", "indian express", "economic times",
+        "theprint", "trm labs", "coindesk", "cnbc", "bbc", "ani", "al jazeera", "guardian"
+      ];
       const newRank = priorityOrder.findIndex(p => srcLower.includes(p));
       const curRank = priorityOrder.findIndex(p => currentSrcLower.includes(p));
 
-      if (newRank !== -1 && (curRank === -1 || newRank < curRank)) {
+      if (hoursNewer >= 18) {
+        cluster.primary = item;
+      } else if (hoursNewer > -18 && newRank !== -1 && (curRank === -1 || newRank < curRank)) {
         cluster.primary = item;
       }
     }
@@ -508,6 +564,12 @@ export async function getLiveCyberRss() {
     const category = item.category;
     const { severity, impactBadge } = classifyNewsSeverityAndBadge(item.title, item.source, category);
     const sector = classifyNewsSector(item.title, category);
+
+    // Track the freshest article timestamp in the cluster so breaking updates bubble up
+    const latestClusterTs = Math.max(
+      ...cluster.articles.map(a => new Date(a.pubDate).getTime() || 0),
+      new Date(item.pubDate).getTime() || 0
+    );
 
     // Only build sub-angles if there are actually distinct developments
     let synthesizedSummary = "";
@@ -532,19 +594,22 @@ export async function getLiveCyberRss() {
       sourceName: item.source,
       sourceUrl: item.link,
       provenanceBadge: item.source.toLowerCase().includes("reuters") ? "📰 Reuters" :
+                       item.source.toLowerCase().includes("cisa") ? "🏛️ CISA Advisory" :
+                       item.source.toLowerCase().includes("bleeping") ? "🛡️ BleepingComputer" :
+                       item.source.toLowerCase().includes("hacker news") ? "🛡️ The Hacker News" :
                        item.source.toLowerCase().includes("ani") ? "🇮🇳 ANI" :
                        sector === "Banking & Financial Services" ? "🏦 Banking & Finance" :
                        sector === "Crypto & Digital Assets" ? "⛓️ Crypto & Web3" :
                        sector === "AI & Cloud Security" ? "🤖 AI & Cloud" :
                        sector === "IoT, Automotive & Supply Chain" ? "🔌 IoT & Supply Chain" : "🌐 Cyber Desk",
-      badgeType: item.source.toLowerCase().includes("reuters") ? "statutory" :
+      badgeType: (item.source.toLowerCase().includes("reuters") || item.source.toLowerCase().includes("cisa")) ? "statutory" :
                  category === "india-bfsi" ? "regulatory" :
                  category === "crypto-heists" ? "onchain" : "statutory",
       ref: item.source,
-      date: formatDate(item.pubDate),
-      pubDate: item.pubDate,
-      timestamp: new Date(item.pubDate).getTime() || 0,
-      timeAgo: timeAgo(item.pubDate),
+      date: formatDate(new Date(latestClusterTs || item.pubDate).toISOString()),
+      pubDate: new Date(latestClusterTs || item.pubDate).toUTCString(),
+      timestamp: latestClusterTs,
+      timeAgo: timeAgo(new Date(latestClusterTs || item.pubDate).toISOString()),
       entities: sector,
       incident: synthesizedSummary,
       rootCause: "Primary source reporting.",
@@ -559,10 +624,10 @@ export async function getLiveCyberRss() {
     return tB - tA;
   });
 
-  // Cap at top 6 distinct master incident cards per category
-  const indiaSelected = allArticles.filter(a => a.category === "india-bfsi").slice(0, 6);
-  const cryptoSelected = allArticles.filter(a => a.category === "crypto-heists").slice(0, 6);
-  const globalSelected = allArticles.filter(a => a.category === "global-ransomware").slice(0, 6);
+  // Cap at top 8 distinct master incident cards per category (up to 24 total)
+  const indiaSelected = allArticles.filter(a => a.category === "india-bfsi").slice(0, 8);
+  const cryptoSelected = allArticles.filter(a => a.category === "crypto-heists").slice(0, 8);
+  const globalSelected = allArticles.filter(a => a.category === "global-ransomware").slice(0, 8);
 
   // Live verification: drop any news articles with broken links (404/DNS error)
   const rawPool = [...indiaSelected, ...cryptoSelected, ...globalSelected];
