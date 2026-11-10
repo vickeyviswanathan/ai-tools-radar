@@ -4,7 +4,10 @@ on:
   push:
     branches: ["main"]
   schedule:
-    # Daily Morning Intelligence Briefing at 8:00 AM IST sharp (02:30 UTC) + 6-hour radar syncs
+    # Daily Morning Intelligence Briefing:
+    # - 01:45 UTC (07:15 AM IST): compiles & schedules exact 08:00:00 AM IST delivery inside Resend (scheduled_at)
+    # - 02:30 UTC (08:00 AM IST): immediate backup dispatch + 6-hour radar syncs
+    - cron: "45 1 * * *"
     - cron: "30 2 * * *"
     - cron: "0 */6 * * *"
   workflow_dispatch:

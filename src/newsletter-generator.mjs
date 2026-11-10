@@ -67,13 +67,20 @@ export function generateDailyBriefing() {
   const threatsData = JSON.parse(readFileSync("public/data/threats.json", "utf8")).threats || [];
   const scamsData = JSON.parse(readFileSync("public/data/scams.json", "utf8")).scams || [];
 
-  const todayStr = new Date().toISOString().split("T")[0];
-  const dateFormatted = new Date().toLocaleDateString("en-US", {
+  const nowIst = new Date();
+  const todayStr = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(nowIst);
+  const dateFormatted = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Kolkata",
     weekday: "short",
     month: "short",
     day: "numeric",
     year: "numeric"
-  });
+  }).format(nowIst);
 
   const isSecurityItem = (item) => {
     const t = (item.title || "").toLowerCase();

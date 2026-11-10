@@ -1,19 +1,23 @@
 {
-  "lastUpdatedDate": "2026-11-09",
+  "lastUpdatedDate": "2026-11-10",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
-    "electricity-bill-disconnection-sms"
+    "electricity-bill-disconnection-sms",
+    "dot-trai-disconnection-robocall"
   ],
   "sentRealityIds": [
     4,
-    21
+    21,
+    16
   ],
   "sentToolNames": [
     "X AnyLabeling",
-    "krita ai diffusion"
+    "krita ai diffusion",
+    "ComfyUI 3D Pack"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
-    "India Reviews Telecom Cybersecurity as AI-Powered Threats Rise"
+    "India Reviews Telecom Cybersecurity as AI-Powered Threats Rise",
+    "$133M French Bank Hack: 5 Confirmed, 5 Unknown [2026]"
   ]
 }

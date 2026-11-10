@@ -203,14 +203,24 @@ export async function dispatchDailyNewsletter() {
     }
 
     // 3. Enforce 8:00 AM IST Morning Dispatch Window (07:45 AM IST = 465 mins)
-    // Code pushes (`push` event) or midnight UTC (`00:00 UTC` = 05:30 AM IST) runs will sync subscribers
-    // and send welcome issues to newly added subscribers, but hold the full morning broadcast until 8:00 AM IST!
+    // If a scheduled run starts early (e.g. 05:30 AM – 07:44 AM IST), we use Resend's exact-minute `scheduled_at` parameter
+    // to lock delivery to 08:00:00 AM IST sharp (02:30:00Z), bypassing GitHub Actions cron jitter completely!
     const eventName = process.env.GITHUB_EVENT_NAME || "";
     const forceSend = process.env.FORCE_NEWSLETTER_SEND === "true";
     const istMins = getCurrentIstMinutes();
     const isMorningWindowReached = istMins >= 465; // >= 07:45 AM IST
 
-    // 4. Check if today's daily briefing has already been broadcast today (prevents duplicate sends on 6h runs)
+    let scheduledAtIso = null;
+    if (!forceSend && eventName === "schedule" && !isMorningWindowReached) {
+      // Compute today's 02:30:00 UTC (08:00:00 AM IST)
+      const nowUtc = new Date();
+      const targetUtc = new Date(Date.UTC(nowUtc.getUTCFullYear(), nowUtc.getUTCMonth(), nowUtc.getUTCDate(), 2, 30, 0));
+      if (targetUtc.getTime() > nowUtc.getTime() + 60000) {
+        scheduledAtIso = targetUtc.toISOString();
+      }
+    }
+
+    // 4. Check if today's daily briefing has already been broadcast or scheduled today (prevents duplicate sends on 6h runs)
     let alreadySentToday = false;
     try {
       const recentRes = await fetch("https://api.resend.com/emails", {
@@ -218,20 +228,21 @@ export async function dispatchDailyNewsletter() {
       });
       if (recentRes.ok) {
         const recentData = await recentRes.json();
-        alreadySentToday = (recentData.data || []).some((e) => e.subject === subject);
+        alreadySentToday = (recentData.data || []).some((e) => e.subject === subject && e.last_event !== "canceled");
       }
     } catch {}
 
     let recipients = [];
     if (alreadySentToday) {
       recipients = newlyAddedEmails;
+      scheduledAtIso = null; // Newly joined subscribers get immediate catch-up issue
       if (recipients.length === 0) {
-        console.log(`[Newsletter] Today's issue ("${subject}") was already broadcast earlier today. No new subscribers to catch up.`);
+        console.log(`[Newsletter] Today's issue ("${subject}") was already broadcast/scheduled earlier today. No new subscribers to catch up.`);
         return { status: "already_sent_today", subject };
       }
       console.log(`[Newsletter] Sending today's issue to ${recipients.length} newly joined subscriber(s)...`);
-    } else if (!forceSend && (eventName === "push" || !isMorningWindowReached)) {
-      // If a push happens or the 05:30 AM IST cron runs before 8:00 AM IST, only send to brand-new signups if any
+    } else if (!forceSend && (eventName === "push" || (!isMorningWindowReached && !scheduledAtIso))) {
+      // If a push happens or local build runs before 8:00 AM IST, only send to brand-new signups if any
       recipients = newlyAddedEmails;
       if (recipients.length === 0) {
         console.log(`[Newsletter] Holding morning broadcast ("${subject}") until the 8:00 AM IST scheduled run (current IST minute: ${istMins}, event: ${eventName || "local"}).`);
@@ -243,10 +254,44 @@ export async function dispatchDailyNewsletter() {
         console.log("[Newsletter] No active recipients found in Resend Audience.");
         return { status: "skipped", reason: "no_recipients" };
       }
-      console.log(`[Newsletter] Broadcasting 8:00 AM IST morning briefing ("${subject}") from ${fromEmail} to ${recipients.length} subscriber(s)...`);
+      if (scheduledAtIso) {
+        console.log(`[Newsletter] Queuing morning briefing ("${subject}") in Resend for exact 8:00 AM IST delivery (${scheduledAtIso}) to ${recipients.length} subscriber(s)...`);
+      } else {
+        console.log(`[Newsletter] Broadcasting 8:00 AM IST morning briefing ("${subject}") from ${fromEmail} to ${recipients.length} subscriber(s)...`);
+      }
     }
 
-    // 5. Dispatch via Resend Batch API with BOTH html and text parts (multipart/alternative)
+    // 5. Dispatch via Resend API with BOTH html and text parts (multipart/alternative)
+    const todayIsoDate = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date());
+    if (scheduledAtIso) {
+      const ids = [];
+      for (const email of recipients.slice(0, 100)) {
+        const singleRes = await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${apiKey}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            from: fromEmail,
+            to: [email],
+            subject,
+            html: htmlContent,
+            text: textContent,
+            scheduled_at: scheduledAtIso,
+            headers: {
+              "List-Unsubscribe": "<https://cipherati.com/#newsletter-unsubscribe>",
+              "X-Entity-Ref-ID": `cipherati-${todayIsoDate}-${email}`
+            }
+          })
+        });
+        const singleData = await singleRes.json();
+        if (singleRes.ok && singleData.id) ids.push(singleData.id);
+      }
+      console.log(`[Newsletter] Successfully scheduled ${ids.length} email(s) in Resend for exact 8:00 AM IST delivery (${scheduledAtIso})!`);
+      return { status: "scheduled_for_8am_ist", scheduledAt: scheduledAtIso, count: ids.length, ids };
+    }
+
     const batchPayload = recipients.slice(0, 100).map((email) => ({
       from: fromEmail,
       to: [email],
@@ -255,7 +300,7 @@ export async function dispatchDailyNewsletter() {
       text: textContent,
       headers: {
         "List-Unsubscribe": "<https://cipherati.com/#newsletter-unsubscribe>",
-        "X-Entity-Ref-ID": `cipherati-${new Date().toISOString().split("T")[0]}-${email}`
+        "X-Entity-Ref-ID": `cipherati-${todayIsoDate}-${email}`
       }
     }));
 
