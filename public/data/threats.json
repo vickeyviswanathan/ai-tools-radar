@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T05:07:15.647Z",
+  "updatedAt": "2026-11-11T05:10:47.279Z",
   "categories": [
     {
       "id": "all",
@@ -77,7 +77,7 @@
       "date": "2026-11-11",
       "pubDate": "Wed, 11 Nov 2026 01:10:00 GMT",
       "timestamp": 1794359400000,
-      "timeAgo": "3 hours ago",
+      "timeAgo": "4 hours ago",
       "entities": "Crypto & Digital Assets",
       "incident": "Key updates: Foreign Money Returns to India, Binance Survives a Record Hack, and Democrats Retake Congress; North Korea is minting meme coins to launder the Binance hack.",
       "rootCause": "Primary source reporting.",
@@ -117,7 +117,7 @@
       "date": "2026-11-11",
       "pubDate": "Wed, 11 Nov 2026 00:08:51 GMT",
       "timestamp": 1794355731000,
-      "timeAgo": "4 hours ago",
+      "timeAgo": "5 hours ago",
       "entities": "Banking & Financial Services",
       "incident": "",
       "rootCause": "Primary source reporting.",

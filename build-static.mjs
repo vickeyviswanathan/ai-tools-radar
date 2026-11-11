@@ -1,5 +1,5 @@
 // Builds static data/tools.json for GitHub Pages deployment
-import { writeFileSync, readFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, readFileSync, mkdirSync, existsSync } from "node:fs";
 import path from "node:path";
 import { getDb, now, getMeta, tx } from "./src/db.mjs";
 import { runIngestion } from "./src/ingest.mjs";
@@ -63,6 +63,43 @@ function seedFeaturedLeaders() {
       );
       if (row && row.id) {
         upsertSignal.run(row.id, item.source, item.sourceId, item.sourceUrl, item.metric, "{}", currentTs);
+      }
+    }
+
+    // Hydrate from committed public/data/tools.json when running on a fresh CI runner (where data/radar.db is ephemeral)
+    if (existsSync("./public/data/tools.json")) {
+      try {
+        const snapshot = JSON.parse(readFileSync("./public/data/tools.json", "utf8"));
+        for (const t of snapshot.tools || []) {
+          if (!t.url || !t.name) continue;
+          const key = canonicalKey(t.url);
+          const category = t.category || categorize(`${t.name} ${t.tagline || ""}`);
+          const row = upsertItem.get(
+            key,
+            clip(t.name, 60),
+            clip(t.tagline || "", 200),
+            t.url,
+            t.emoji || null,
+            category,
+            "[]",
+            t.why_it_matters || null,
+            t.launched_at || currentTs,
+            currentTs,
+            currentTs
+          );
+          if (row && row.id && Array.isArray(t.signals)) {
+            for (const sigStr of t.signals) {
+              const [src, val] = String(sigStr).split(":");
+              const metric = Number(val) || 0;
+              if (src && metric > 0) {
+                const sourceId = /github\.com\/([^/]+\/[^/]+)/i.exec(t.url)?.[1] || key;
+                upsertSignal.run(row.id, src, sourceId, t.url, metric, "{}", currentTs);
+              }
+            }
+          }
+        }
+      } catch (e) {
+        console.warn("[Seed] Could not hydrate from public/data/tools.json:", e.message);
       }
     }
   });

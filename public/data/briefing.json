@@ -15,7 +15,7 @@
     "date": "2026-11-11",
     "pubDate": "Wed, 11 Nov 2026 01:10:00 GMT",
     "timestamp": 1794359400000,
-    "timeAgo": "3 hours ago",
+    "timeAgo": "4 hours ago",
     "entities": "Crypto & Digital Assets",
     "incident": "Key updates: Foreign Money Returns to India, Binance Survives a Record Hack, and Democrats Retake Congress; North Korea is minting meme coins to launder the Binance hack.",
     "rootCause": "Primary source reporting.",
@@ -100,19 +100,19 @@
     "actionUrl": "https://www.cert-in.org.in/"
   },
   "featuredTool": {
-    "id": 567,
-    "name": "yft design",
-    "tagline": "yft-design is a powerful, visually stunning online design tool built with Vue3, fabric.js, and Element Plus. fabric.js / …",
-    "url": "https://yft.design/",
+    "id": 123,
+    "name": "InvokeAI",
+    "tagline": "Invoke is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The so…",
+    "url": "https://invoke-ai.github.io/InvokeAI/",
     "emoji": null,
     "category": "Image & Design",
     "why_it_matters": null,
-    "launched_at": 1684986127,
-    "score": 0.07056197450984927,
+    "launched_at": 1660698267,
+    "score": 0,
     "signals": [
-      "github:1671.0"
+      "github:28921.0"
     ],
-    "rank": 1671,
+    "rank": 28921,
     "velocity": 0,
     "isRising": false,
     "isNew2026": false

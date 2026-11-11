@@ -30,9 +30,9 @@ The Corporate Tax & MCA Notice Archive Trap (Infostealer ZIP) [Vector: Email / W
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: yft design
-• What it does: yft-design is a powerful, visually stunning online design tool built with Vue3, fabric.js, and Element Plus. fabric.js / …
-• Browse 223 indexed tools: https://cipherati.com/ai-tools.html
+Featured Tool: InvokeAI
+• What it does: Invoke is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The so…
+• Browse 233 indexed tools: https://cipherati.com/ai-tools.html
 
 ------------------------------------------------------------
 4. AI REALITIES
