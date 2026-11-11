@@ -30,6 +30,7 @@ export function getDb() {
       last_seen    INTEGER NOT NULL,
       score        REAL NOT NULL DEFAULT 0,
       status       TEXT NOT NULL DEFAULT 'active',  -- active | hidden
+      why_it_matters TEXT,
       enriched_at  INTEGER,
       name_src     INTEGER NOT NULL DEFAULT 99,     -- priority of the source that set name/tagline
       tagline_src  INTEGER NOT NULL DEFAULT 99

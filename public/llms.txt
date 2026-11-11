@@ -12,22 +12,22 @@
 - Spam Reporting (Chakshu): https://sancharsaathi.gov.in/
 
 ## Core Sections & Canonical Pages
-- [Cybersecurity News](https://cipherati.com/cybersecurity-news.html): 23 verified reporting stories across Indian banking/BFSI (RBI, CERT-In), enterprise defense, and global crypto heists.
+- [Cybersecurity News](https://cipherati.com/cybersecurity-news.html): 24 verified reporting stories across Indian banking/BFSI (RBI, CERT-In), enterprise defense, and global crypto heists.
 - [Scam Alerts & Citizen Defense](https://cipherati.com/scam-alerts.html): 19 verified playbooks against digital arrest, e-Challan/wedding card APK malware, and UPI financial fraud.
 - [AI Realities in Production](https://cipherati.com/ai-realities.html): 22 hard engineering truths and architecture fixes when deploying AI agents, RAG, and LLMs.
 - [Curated AI Developer Tools Directory](https://cipherati.com/ai-tools.html): 223 production-ready developer tools, coding agents, and local model infrastructure.
 
 ## Latest Verified Cybersecurity News
-- **CISA Warns of Active Exploitation of OpenSSH, GPUStack, FreeSWITCH, and IBM Flaws** (The Hacker News, 2026-11-10): Key updates: CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation.
-- **Sajjanar Urges Banks and Digital Platforms to Strengthen Cybersecurity Infrastructure** (Munsif News 24x7, 2026-11-10): Verified cybersecurity reporting.
-- **North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack** (CoinDesk, 2026-11-10): Key updates: Foreign Money Returns to India, Binance Survives a Record Hack, and Democrats Retake Congress; $6 billion cryptocurrency heist puts investors on edge.
-- **Hackers Exploit Qubole's Trusted AWS Access to Breach Customer Accounts and Steal Data** (The Hacker News, 2026-11-10): Key updates: KT Corp's Q3 operating profit down amid data breach fallout, AI expenditures; Tencent rolls out AI model trained with limited cybersecurity data amid hacking fears.
-- **EXCLUSIVE: French officials blame Iran for refrigerator hacks, vow retaliation** (Reuters, 2026-11-10): Key updates: European supermarkets rush to patch vulnerabilities after region-wide fridge hack; France accuses Iran's Revolutionary Guards of hacking supermarket refrigerators.
-- **SOL news: Solana moves to scrap the transaction feature used in the $270 million Drift hack** (CoinDesk, 2026-11-10): Key updates: Solana weighs cutting feature exploited in $270m DeFi hack.
-- **Black Hat India 2026 Makes a Landmark Debut in Bengaluru, Bringing the Global Cybersecurity Community to India** (Dark Reading, 2026-11-09): Key updates: India Reviews Telecom Cybersecurity as AI-Powered Threats Rise; Mumbai Police arrest three in Nagpur cyber fraud racket, establish links to 73 cases across India.
-- **Mercado Bitcoin Resumes Read-Only Access After $49M Hack, Withdrawals Unspecified** (KuCoin, 2026-11-09): Key updates: Mercado Bitcoin Begins View-Only Reopening After Hack; Bitcoin Price Crashes as Iran Strike and Crypto Hack Spree Shake Markets.
-- **75-yr-old woman duped of ₹32 lakh in monthlong digital arrest** (The Times of India, 2026-11-09): Verified cybersecurity reporting.
-- **Hackers Compromise Ethersphere's bee-js and Swarm Desktop to Deliver Wallet-Stealing Malware** (The Hacker News, 2026-11-09): Verified cybersecurity reporting.
+- **India, France Deepen Cooperation in Critical Technologies and Cybersecurity** (Dainik Jagran MP CG, 2026-11-11): Verified cybersecurity reporting.
+- **NEAR AI hack: data of 100 users exposed via SGLang** (CryptoTicker.io, 2026-11-11): Verified cybersecurity reporting.
+- **Binance CFO exits days after $6.3B crypto hack** (CFO.com, 2026-11-11): Key updates: Foreign Money Returns to India, Binance Survives a Record Hack, and Democrats Retake Congress; North Korea is minting meme coins to launder the Binance hack.
+- **Supreme Court tells banks to pay victims for cyber fraud losses if found negligent** (The New Indian Express, 2026-11-11): Key updates: ​Supreme Court Orders RBI to Mandate Full Compensation for Digital Arrest Victims; Supreme Court Directs WhatsApp To Act Against Digital Arrest Scams.
+- **Seceon Brings Cybersecurity Intelligence to Real-Time Financial Fraud Prevention** (INDIA New England News, 2026-11-11): Verified cybersecurity reporting.
+- **Digital arrest scams: SC seeks prevention plan from WhatsApp & others, sends notice to RBI** (The Times of India, 2026-11-10): Key updates: SC asks WhatsApp to detail steps to prevent digital arrest scams; List Measures To Prevent Digital Arrest, Related Cybercrimes: SC Tells WhatsApp, Intermediaries.
+- **NC Educations Strengthens Online IT Training with Advanced Networking, Cloud and Cybersecurity Programs** (India CSR, 2026-11-10): Verified cybersecurity reporting.
+- **Brazil's Mercado Bitcoin to Resume Cash Withdrawals After $49M Hack** (Finanzen.net, 2026-11-10): Key updates: Mercado Bitcoin Begins View-Only Reopening After Hack; Mercado Bitcoin to resume cash withdrawals after $49M hack.
+- **Delhi Police arrest 2 kingpins of Jamtara cyber fraud network in Rs 27.10 lakh fake bank website case** (https://www.indiagazette.com/, 2026-11-10): Verified cybersecurity reporting.
+- **SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users** (The Hacker News, 2026-11-10): Key updates: Hackers Exploit Qubole's Trusted AWS Access to Breach Customer Accounts and Steal Data.
 
 ## Emergency Cyber Crime Reporting (Golden Hour Protocol)
 If funds are unauthorizedly debited or someone is targeted by online fraud:
@@ -43,30 +43,30 @@ If funds are unauthorizedly debited or someone is targeted by online fraud:
 - **Fake IPO WhatsApp Groups**: SEBI-registered brokerages never conduct institutional IPO bidding or accept investments via WhatsApp groups or personal accounts.
 
 ## Top Curated AI Developer Tools
-- [ECC](https://ecc.tools/): The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
 - [OpenAI Codex](https://openai.com/index/openai-codex/): AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.
-- [DeepSeek Reasonix](https://reasonix.io/): A reliable coding agent for complex software engineering tasks.
-- [claude code best practice](https://linkedin.com/in/shanraisshan): from vibe coding to agentic engineering - practice makes claude perfect
-- [litellm](https://docs.litellm.ai/docs/): The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthrop…
-- [medusa](https://medusajs.com/): The world's most flexible commerce platform for agents and developers
-- [headroom](https://docs.headroomlabs.ai/docs): Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
 - [OpenSpec](https://openspec.dev/): Spec-driven development (SDD) for AI coding assistants.
-- [context mode](https://contextmode.ai/): Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.
+- [ECC](https://ecc.tools/): The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
+- [litellm](https://docs.litellm.ai/docs/): The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthrop…
+- [claude code best practice](https://linkedin.com/in/shanraisshan): from vibe coding to agentic engineering - practice makes claude perfect
+- [Understand Anything](https://understand-anything.com/): Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…
+- [headroom](https://docs.headroomlabs.ai/docs): Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
 - [OmniRoute](https://omniroute.online/): Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Clin…
 - [graphify](https://www.graphify.com/): Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing,…
-- [openinterpreter](https://openinterpreter.com/): A coding agent for open models like Kimi K3 and GLM 5.3
-- [Amazon Q Developer / Kiro IDE](https://aws.amazon.com/q/developer/): AWS's generative AI coding assistant and spec-driven development environment for code transformation and security scanning.
-- [cc switch](https://ccswitch.io/): A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.
-- [Understand Anything](https://understand-anything.com/): Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…
+- [medusa](https://medusajs.com/): The world's most flexible commerce platform for agents and developers
 - [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk): CLI proxy that condenses command outputs by 60–90% to reduce LLM token consumption and API costs.
-- [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code): Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.
-- [Codewhale](https://codewhale.net/): Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome
+- [cc switch](https://ccswitch.io/): A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.
+- [DeepSeek Reasonix](https://reasonix.io/): A reliable coding agent for complex software engineering tasks.
+- [Amazon Q Developer / Kiro IDE](https://aws.amazon.com/q/developer/): AWS's generative AI coding assistant and spec-driven development environment for code transformation and security scanning.
+- [context mode](https://contextmode.ai/): Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.
+- [openinterpreter](https://openinterpreter.com/): A coding agent for open models like Kimi K3 and GLM 5.3
 - [Umi OCR](https://github.com/hiroi-sora/Umi-OCR): OCR software, free and offline. OCR / PDF / /
-- [Aider](https://github.com/paul-gauthier/aider): AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
+- [Kimi Code](https://kimi.ai): Moonshot AI's long-context reasoning and coding model optimized for repository understanding and multi-file logic.
+- [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code): Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.
 - [OpenHands](https://github.com/All-Hands-AI/OpenHands): Autonomous software development agent capable of writing code, running bash commands, and browsing the web.
 - [next ai draw io](https://next-ai-drawio.jiang.jp/): Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
-- [Kimi Code](https://kimi.ai): Moonshot AI's long-context reasoning and coding model optimized for repository understanding and multi-file logic.
 - [VS Code with In-Built AI Agents](https://code.visualstudio.com/docs/copilot/copilot-chat): Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.
+- [Aider](https://github.com/paul-gauthier/aider): AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
+- [Codewhale](https://codewhale.net/): Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome
 - [oh my openagent](https://omo.dev/): OmO: Just type "mass ulw" keyword with your prompt. Now you are the master of graph engineering.
 - [claude skills](https://alirezarezvani.medium.com/): 380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents —…
 - [supermemory](https://supermemory.ai/docs): Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.

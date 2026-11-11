@@ -1,4 +1,4 @@
-THE CIPHERATI BRIEFING — Tue, Nov 10, 2026
+THE CIPHERATI BRIEFING — Wed, Nov 11, 2026
 The 60-second morning intelligence scan: Cybersecurity News, Scam Alerts, AI Tools & AI Realities.
 Read online: https://cipherati.com/
 
@@ -6,14 +6,14 @@ Read online: https://cipherati.com/
 1. CYBERSECURITY NEWS
 ------------------------------------------------------------
 
-LEAD: North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack (CoinDesk)
-• Why it matters: Foreign Money Returns to India, Binance Survives a Record Hack, and Democrats Retake Congress; $6 billion cryptocurrency heist puts investors on edge.
+LEAD: Binance CFO exits days after $6.3B crypto hack (CFO.com)
+• Why it matters: Foreign Money Returns to India, Binance Survives a Record Hack, and Democrats Retake Congress; North Korea is minting meme coins to launder the Binance hack.
 • Sector: Crypto & Digital Assets
 
 More on the Radar:
-• Bitcoin struggles to hold $75,000 as tightening fears, heist and US poll outcome weigh (Deccan Herald)
-• ⚡ Weekly Recap: SSHole Exploited, APT Root RCE, Robot Takeovers, 15K Hacked Sites, and More (The Hacker News)
-• How small deposits drained 77 ACryptoS vaults and what users can still withdraw (Crypto News)
+• North Korea-linked hackers used meme coins to move stolen crypto (grafa.com)
+• India, France Deepen Cooperation in Critical Technologies and Cybersecurity (Dainik Jagran MP CG)
+• NEAR AI hack: data of 100 users exposed via SGLang (CryptoTicker.io)
 
 Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 
@@ -21,26 +21,26 @@ Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 2. SCAM ALERTS
 ------------------------------------------------------------
 
-The DoT / TRAI "Mobile Number Disconnection in 2 Hours" Robocall [Vector: Phone Call / Robocall IVR]
-• How it works: An automated IVR robocall says: "This is the Department of Telecommunications (DoT). Your mobile number will be disconnected in 2 hours due to illegal cybercrime complaints. Press 9 to speak with an officer." Pressing 9 routes you to fake police who threaten immediate arrest under PMLA unless you pay money to verify your Aadhaar.
-• Defense rule: DoT and TRAI NEVER disconnect phone numbers via automated calls or ask you to press 9. If you receive such a call, hang up immediately. Check your registered mobile connections on the official Sanchar Saathi (sancharsaathi.gov.in) portal or dial 1930.
+The Corporate Tax & MCA Notice Archive Trap (Infostealer ZIP) [Vector: Email / WhatsApp]
+• How it works: Accountants, CAs, company directors, and finance personnel receive an urgent email or WhatsApp: "Statutory notice regarding pending tax filing discrepancies / MCA audit. Attached: Statement_of_Account.zip or MCA_Notice.zip." Extracting the file runs a disguised Windows executable that quietly exfiltrates corporate net banking tokens, DSC credentials, and browser passwords.
+• Defense rule: Tax authorities and the Ministry of Corporate Affairs (MCA) never send audit notices as compressed .zip or .rar files via WhatsApp or personal email. Check all corporate filings directly on the official mca.gov.in portal.
 • Helpline: Dial 1930 (National Cyber Helpline) or report at https://cipherati.com/scam-alerts.html
 
 ------------------------------------------------------------
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: Auto Photoshop StableDiffusion Plugin
-• What it does: A user-friendly plug-in that makes it easy to generate stable diffusion images inside Photoshop using either Automatic or ComfyUI as a backend.
+Featured Tool: yft design
+• What it does: yft-design is a powerful, visually stunning online design tool built with Vue3, fabric.js, and Element Plus. fabric.js / …
 • Browse 223 indexed tools: https://cipherati.com/ai-tools.html
 
 ------------------------------------------------------------
 4. AI REALITIES
 ------------------------------------------------------------
 
-Reality #16: The Tool-Calling Ambiguity Trap
-• The Hype Myth: "Just list 20 API tool definitions and the LLM will pick the right function and arguments every time!"
-• What Actually Works: Use two-stage hierarchical tool routing with strict runtime schema validation and retry guards that feed errors directly back into the context.
+Reality #13: The Vector DB RAM Explosion
+• The Hype Myth: "Store billions of high-dimensional vectors in memory for instant enterprise search!"
+• What Actually Works: Use disk-backed scalar and product quantization (PQ/SQ) with memory-mapped vector indexes, storing full vectors on NVMe rather than raw RAM.
 • Read all 22 production realities: https://cipherati.com/ai-realities.html
 
 ------------------------------------------------------------

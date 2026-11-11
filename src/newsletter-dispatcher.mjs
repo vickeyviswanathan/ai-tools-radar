@@ -203,7 +203,7 @@ export async function dispatchDailyNewsletter() {
     }
 
     // 3. Enforce 8:00 AM IST Morning Dispatch Window (07:45 AM IST = 465 mins)
-    // If a scheduled run starts early (e.g. 05:30 AM – 07:44 AM IST), we use Resend's exact-minute `scheduled_at` parameter
+    // If ANY run (schedule, push, or manual) executes before 07:45 AM IST, we use Resend's exact-minute `scheduled_at` parameter
     // to lock delivery to 08:00:00 AM IST sharp (02:30:00Z), bypassing GitHub Actions cron jitter completely!
     const eventName = process.env.GITHUB_EVENT_NAME || "";
     const forceSend = process.env.FORCE_NEWSLETTER_SEND === "true";
@@ -211,13 +211,14 @@ export async function dispatchDailyNewsletter() {
     const isMorningWindowReached = istMins >= 465; // >= 07:45 AM IST
 
     let scheduledAtIso = null;
-    if (!forceSend && eventName === "schedule" && !isMorningWindowReached) {
-      // Compute today's 02:30:00 UTC (08:00:00 AM IST)
+    if (!forceSend && !isMorningWindowReached) {
+      // Compute the next upcoming 08:00:00 AM IST (02:30:00 UTC)
       const nowUtc = new Date();
-      const targetUtc = new Date(Date.UTC(nowUtc.getUTCFullYear(), nowUtc.getUTCMonth(), nowUtc.getUTCDate(), 2, 30, 0));
-      if (targetUtc.getTime() > nowUtc.getTime() + 60000) {
-        scheduledAtIso = targetUtc.toISOString();
+      let targetUtc = new Date(Date.UTC(nowUtc.getUTCFullYear(), nowUtc.getUTCMonth(), nowUtc.getUTCDate(), 2, 30, 0));
+      if (targetUtc.getTime() <= nowUtc.getTime() + 60000) {
+        targetUtc = new Date(targetUtc.getTime() + 24 * 60 * 60 * 1000);
       }
+      scheduledAtIso = targetUtc.toISOString();
     }
 
     // 4. Check if today's daily briefing has already been broadcast or scheduled today (prevents duplicate sends on 6h runs)

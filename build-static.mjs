@@ -18,6 +18,9 @@ import { canonicalKey, categorize, clip } from "./src/classify.mjs";
 function seedFeaturedLeaders() {
   const currentTs = now();
   tx((d) => {
+    try {
+      d.exec(`ALTER TABLE items ADD COLUMN why_it_matters TEXT;`);
+    } catch {}
     // Purge non-AI legacy OSINT tool and clear boilerplate star-equating why_it_matters strings
     d.prepare(`DELETE FROM items WHERE url LIKE '%sherlock-project/sherlock%' OR name = 'Sherlock'`).run();
     d.prepare(`UPDATE items SET why_it_matters = NULL WHERE why_it_matters LIKE '%production users%' OR why_it_matters LIKE '%verified GitHub stars%' OR why_it_matters LIKE '%vetted for production%'`).run();
@@ -507,7 +510,10 @@ function updateBriefingInHtml(briefing) {
   writeFileSync(indexPath, html, "utf8");
 }
 
-build().catch(console.error);
+build().catch((err) => {
+  console.error("❌ Fatal error in build-static.mjs:", err);
+  process.exit(1);
+});
 
 function syncCountsInHtml(tools, realities, threats, scams) {
   const indexPath = "./public/index.html";

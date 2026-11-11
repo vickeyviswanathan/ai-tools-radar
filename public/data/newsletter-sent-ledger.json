@@ -1,23 +1,27 @@
 {
-  "lastUpdatedDate": "2026-11-10",
+  "lastUpdatedDate": "2026-11-11",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
-    "dot-trai-disconnection-robocall"
+    "dot-trai-disconnection-robocall",
+    "corporate-malware-zip-mca"
   ],
   "sentRealityIds": [
     4,
     21,
-    16
+    16,
+    13
   ],
   "sentToolNames": [
     "X AnyLabeling",
     "krita ai diffusion",
-    "ComfyUI 3D Pack"
+    "ComfyUI 3D Pack",
+    "yft design"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
     "India Reviews Telecom Cybersecurity as AI-Powered Threats Rise",
-    "$133M French Bank Hack: 5 Confirmed, 5 Unknown [2026]"
+    "$133M French Bank Hack: 5 Confirmed, 5 Unknown [2026]",
+    "Binance CFO exits days after $6.3B crypto hack"
   ]
 }
