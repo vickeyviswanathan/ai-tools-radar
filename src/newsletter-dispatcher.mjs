@@ -18,7 +18,7 @@ const STRICT_EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 // Default public-read CSV feed for the Google Form subscriber audit log (overridable via env secret)
 const DEFAULT_SHEET_CSV = Buffer.from(
-  "aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vc3ByZWFkc2hlZXRzL2QvZS8yUEFDWC0xdlJpTUNUcDA1SU5sWjBVSTVQcWlaVXZUSVJHZ0RjdDBxb3lXQzBBZDFKVWdlZm5XcjJhaDdhYnB0Mk4xQVFWSlEzdUNRc25YVWt3NHREci9wdWI/b3V0cHV0PWNzdg==",
+  "aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vc3ByZWFkc2hlZXRzL2QvZS8yUEFDWC0xdlJpTUNUcDA1SU5sWjBVSTVQcWlaVXZUSVJHN0RjdDBxb3lXQzBBZDFKVWdlZm5XcjJhaDdhYnB0Mk4xQVFWWlEzdUNRc25YVWt3NHREci9wdWI/b3V0cHV0PWNzdg==",
   "base64"
 ).toString("utf8");
 const GOOGLE_SHEET_CSV_URL = process.env.GOOGLE_SHEET_CSV_URL || DEFAULT_SHEET_CSV;
