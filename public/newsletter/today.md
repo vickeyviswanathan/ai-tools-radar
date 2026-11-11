@@ -6,14 +6,14 @@ Read online: https://cipherati.com/
 1. CYBERSECURITY NEWS
 ------------------------------------------------------------
 
-LEAD: Binance CFO exits days after $6.3B crypto hack (CFO.com)
-• Why it matters: Foreign Money Returns to India, Binance Survives a Record Hack, and Democrats Retake Congress; North Korea is minting meme coins to launder the Binance hack.
+LEAD: 'Everybody Will Be Hacked at Some Point,' Ledger CEO Warns as Crypto Thefts Hit $8.7 Billion in 2026 (TradingView)
+• Why it matters: Primary source reporting.
 • Sector: Crypto & Digital Assets
 
 More on the Radar:
+• Guwahati: CID Arrests Man For Alleged Cyber Fraud Using HDFC Bank Identity (Pratidin Time)
+• History-sheeter hacked to death in Kasimedu; two arrested (The Times of India)
 • North Korea-linked hackers used meme coins to move stolen crypto (grafa.com)
-• India, France Deepen Cooperation in Critical Technologies and Cybersecurity (Dainik Jagran MP CG)
-• NEAR AI hack: data of 100 users exposed via SGLang (CryptoTicker.io)
 
 Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 
@@ -30,9 +30,9 @@ The Corporate Tax & MCA Notice Archive Trap (Infostealer ZIP) [Vector: Email / W
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: InvokeAI
-• What it does: Invoke is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The so…
-• Browse 233 indexed tools: https://cipherati.com/ai-tools.html
+Featured Tool: StableStudio
+• What it does: Community interface for generative AI
+• Browse 223 indexed tools: https://cipherati.com/ai-tools.html
 
 ------------------------------------------------------------
 4. AI REALITIES

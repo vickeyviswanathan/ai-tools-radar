@@ -31,15 +31,18 @@ const PAYWALLED_SOURCE_NAMES = [
 ];
 
 const CYBER_SECURITY_KEYWORDS = [
-  "hack", "hacked", "hacker", "hacking", "data breach", "security breach", "network breach",
+  "hacked", "hacker", "hacking", "cyberhack", "data breach", "security breach", "network breach",
   "data leak", "credential leak", "database leak", "heist", "cybersecurity", "cyberattack",
   "cybercrime", "cyber fraud", "cyber cell", "cyber threat", "cyber espionage", "cyber incident",
   "ransomware", "trojan", "malware", "phishing", "smishing", "vishing", "spyware", "ddos",
   "zero-day", "vulnerability", "cve-", "exploit", "drained", "compromised",
   "digital arrest", "deepfake", "e-sim", "sim swap", "infostealer",
   "dark web", "cert-in", "cisa", "crypto heist",
-  "online fraud", "upi fraud", "apk", "botnet"
+  "online fraud", "upi fraud", "apk", "botnet", "rce", "auth bypass", "backdoor", "flaw", "flaws"
 ];
+
+// Colloquial "hack" ("shares a hack", "life hack", agriculture/solar "food security") & non-cyber noise
+const COLLOQUIAL_HACK_OR_NON_CYBER_RE = /\b(shares a hack|simple hack|clever hack|life hack|growth hack|travel hack|kitchen hack|farming hack|productivity hack|beauty hack|sleep hack|solar farm|solar power|food security|agrivoltaics|kisan|crops?\b|farming|agriculture|fertilizer|irrigation|monsoon|weather forecast)\b/i;
 
 const JUNK_NOISE_KEYWORDS = [
   "podcast", "video", "photos", "song", "rahman", "cricket", "honey singh",
@@ -54,17 +57,21 @@ const JUNK_NOISE_KEYWORDS = [
   "ev sales", "sales breach", "growth target", "deliveries", "showroom",
   "quarterly sales", "q1 sales", "q2 sales", "q3 sales", "q4 sales", "quarterly results", "financial results",
   "semiconductor supply chain", "supply chains and", "publicly releases", "announces gemini",
-  // Environmental / climate noise matching 'breach'
+  // Environmental / climate / agriculture noise matching 'breach' or 'security' or slang 'hack'
   "warming", "glacier", "ice sheet", "climate", "temperature", "greenhouse", "emission",
-  // Traditional non-cyber financial / white-collar crime & forex noise
+  "solar farm", "solar power", "food security", "agrivoltaics", "grow food",
+  // Traditional non-cyber financial / white-collar crime & forex / crypto price-chart noise
   "ed attaches", "attaches properties", "attached properties", "property attached",
   "pmla", "money laundering", "loan fraud", "bank loan", "chandra proteco",
   "dollar pulls back", "ahead of us midterms", "forex", "stock market", "shares dip", "shares surge",
-  // College seminars / career guidance / student workshops / corporate offsites & stock promos
+  "levels that decide", "struggles to hold", "tightening fears", "election jitters", "price prediction",
+  // College seminars / career guidance / student workshops / corporate offsites & vendor PR
   "career guidance", "students briefed", "briefed on cybersecurity", "organizes cybersecurity",
   "polytechnic", "college organizes", "campus drive", "workshop on cybersecurity", "webinar on",
   "flew employees", "katy perry", "six-month certificate", "certificate programme", "bags orders from",
-  "cybersecurity stock", "revenue jumps", "psychology of policing"
+  "cybersecurity stock", "revenue jumps", "psychology of policing", "online it training",
+  "cybersecurity programs", "brings cybersecurity intelligence", "next cybersecurity advantage",
+  "hacktober", "machine gods"
 ];
 
 function isPaywalled(url, source) {
@@ -77,8 +84,14 @@ function isPaywalled(url, source) {
 
 function isCyberRelevant(title) {
   const lower = title.toLowerCase();
+  if (COLLOQUIAL_HACK_OR_NON_CYBER_RE.test(lower)) return false;
   if (JUNK_NOISE_KEYWORDS.some(k => lower.includes(k))) return false;
-  return CYBER_SECURITY_KEYWORDS.some(k => lower.includes(k));
+  if (CYBER_SECURITY_KEYWORDS.some(k => lower.includes(k))) return true;
+  // Only allow bare "hack" or "hacks" when paired with genuine cyber/tech/financial/security context
+  if (/\bhacks?\b/i.test(lower) && /\b(cyber|breach|data|bank|crypto|bitcoin|exchange|wallet|system|network|server|account|cloud|ai\b|software|app\b|firm|company|agency|government|cisa|cert-in|rbi|police|stolen|million|billion|crore|lakh|fridge|supermarket|iran|china|russia|korea|espionage)\b/i.test(lower)) {
+    return true;
+  }
+  return false;
 }
 
 function timeAgo(dateString) {
@@ -409,6 +422,15 @@ function getEventSignatureAndCategory(title, originalCategory) {
     };
   }
 
+  // 15c. NEAR AI / SGLang RCE Exploit Breach (merge across categories into 1 single card)
+  if (lower.includes("near ai") || lower.includes("sglang")) {
+    return {
+      category: "global-ransomware",
+      clusterKey: "global:sglang-near-ai-breach",
+      isSpecific: true
+    };
+  }
+
   // 16. General Financial Fraud Amount Matcher in India (e.g. "280 crore", "5.17 crore")
   const croreMatch = lower.match(/(\d+[\.\d]*)\s*crore/);
   if (croreMatch) {
@@ -445,8 +467,8 @@ export async function getLiveCyberRss() {
     hackerNewsItems,
     cisaItems
   ] = await Promise.all([
-    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud"+OR+"digital+arrest"+OR+"CERT-In")+AND+(India+OR+RBI+OR+SEBI+OR+NPCI+OR+SBI+OR+HDFC+OR+ICICI+OR+"UPI")+when:2d&hl=en-IN&gl=IN&ceid=IN:en'),
-    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud")+AND+(India+OR+RBI+OR+NBFC+OR+SBI+OR+"UPI+payment"+OR+"cyber+cell"+OR+CBI+OR+"digital+arrest")+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
+    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+cyberattack+OR+hacked+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud"+OR+"digital+arrest"+OR+"CERT-In")+AND+(India+OR+RBI+OR+SEBI+OR+NPCI+OR+SBI+OR+HDFC+OR+ICICI+OR+"UPI")+when:2d&hl=en-IN&gl=IN&ceid=IN:en'),
+    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+cyberattack+OR+hacked+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud")+AND+(India+OR+RBI+OR+NBFC+OR+SBI+OR+"UPI+payment"+OR+"cyber+cell"+OR+CBI+OR+"digital+arrest")+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(crypto+OR+bitcoin+OR+exchange+OR+DeFi+OR+Binance)+AND+(hack+OR+hacked+OR+exploit+OR+drained+OR+heist+OR+stolen)+when:3d&hl=en-US&gl=US&ceid=US:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(Binance+OR+crypto+OR+bitcoin)+AND+(hack+OR+freeze+OR+heist+OR+stolen)+when:7d&hl=en-US&gl=US&ceid=US:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+ransomware+OR+breach)+source:Reuters+when:7d&hl=en-US&gl=US&ceid=US:en'),

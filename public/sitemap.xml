@@ -17,13 +17,17 @@
   <url><loc>https://cipherati.com/tools/n8n.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/firecrawl.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/autogpt.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/ollama.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/skills.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/transformers.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/stable-diffusion-webui.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/dify.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/open-webui.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/langflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/cc-switch.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/comfyui.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/graphify.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/ollama.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/browser-use.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/agent-skills.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/orca.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/openai-codex.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -32,8 +36,10 @@
   <url><loc>https://cipherati.com/tools/claude-mem.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/open-design.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/ghidra.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/vllm.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/voicestudio.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/lm-studio.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/ragflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/vs-code-with-in-built-ai-agents.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/paddleocr.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/scrapling.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -41,6 +47,7 @@
   <url><loc>https://cipherati.com/tools/understand-anything.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/nextchat.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/crawl4ai.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/rtk.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/deer-flow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/lobehub.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/mineru.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -56,21 +63,21 @@
   <url><loc>https://cipherati.com/tools/metagpt.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/oh-my-openagent.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/docling.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/dify.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/openinterpreter.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/claude-code-best-practice.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/open-webui.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/mem0.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/anythingllm.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/gpt-sovits.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/context7.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/trendradar.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/humanizer.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/litellm.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/comfyui.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/meilisearch.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/serviette.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/ai-agent-book.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/hindsight.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/flowise.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/whisper-cpp.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/academic-research-skills.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/chrome-devtools-mcp.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/cherry-studio.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -99,7 +106,6 @@
   <url><loc>https://cipherati.com/tools/chattts.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/pageindex.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/lightpanda.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/vllm.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/langchain-chatchat.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/llmfit.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/sglang.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -108,17 +114,15 @@
   <url><loc>https://cipherati.com/tools/langfuse.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/next-ai-draw-io.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/deepseek-reasonix.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/whisper-cpp.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/qdrant.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/ocrmypdf.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/handy.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/diffusers.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/aider.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/sqlmap.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/context-mode.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/code-review-graph.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/meetily.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/cline.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/anythingllm.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/supermemory.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/serena.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/opendataloader-pdf.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -127,7 +131,6 @@
   <url><loc>https://cipherati.com/tools/invokeai.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/qwen-code.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/mlflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/ragflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/kilocode.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/fabric.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/onlook.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -137,18 +140,14 @@
   <url><loc>https://cipherati.com/tools/jan.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/llm-action.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/llava.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/mem0.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/whisperx.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/index-tts.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/continue.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/cosyvoice.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/trivy.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/iopaint.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/dyad.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/qdrant.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/peft.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/funasr.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/nuclei.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/voicebox.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/pdf-inspector.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/pyvideotrans.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -168,9 +167,7 @@
   <url><loc>https://cipherati.com/tools/kaldi.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/semantica.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/ai-research-skills.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/json-render.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/diffusionbee-stable-diffusion-ui.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/owasp-zap.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/langchain4j.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/liteparse.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/axolotl.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -178,10 +175,7 @@
   <url><loc>https://cipherati.com/tools/openllm.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/lmcache.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/phoenix.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/owasp-amass.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/ludwig.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/wazuh.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/semgrep.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/openvino.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/llama-gpt.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/x-anylabeling.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -195,6 +189,7 @@
   <url><loc>https://cipherati.com/tools/inference.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/oumi.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/kimi-k3-in-c.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://cipherati.com/tools/bifrost-ai-gateway.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/dolphin.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/stablestudio.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/stabilitymatrix.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -202,31 +197,26 @@
   <url><loc>https://cipherati.com/tools/firmware.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/dynamo.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/belle.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/falco.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/reticulum.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/codex-with-chatgpt.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/auto-photoshop-stablediffusion-plugin.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/turbo-fieldfare.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/jaaz.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/pdf-craft.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/promptfoo.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/digup.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/kiln.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/nvidia-garak.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/swarmui.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/memgraph.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/longmemory.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/owasp-defectdojo.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/llama-cloud-services.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/comfyui-ltxvideo.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/comfyui-3d-pack.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/google-antigravity.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/llamasharp.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/bifrost-ai-gateway.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/ogam.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/memobase.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/maid.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://cipherati.com/tools/owasp-coraza.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/trellis-2.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/contextgem.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
   <url><loc>https://cipherati.com/tools/onediff.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -245,18 +235,18 @@
   <url><loc>https://cipherati.com/compare/rea-vs-public-apis.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/rea-vs-firecrawl.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/rea-vs-ghidra.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/rea-vs-ragflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/rea-vs-scrapling.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/rea-vs-crawl4ai.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/public-apis-vs-firecrawl.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/public-apis-vs-ghidra.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/public-apis-vs-ragflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/public-apis-vs-scrapling.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/public-apis-vs-crawl4ai.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/firecrawl-vs-ghidra.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/firecrawl-vs-ragflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/firecrawl-vs-scrapling.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/firecrawl-vs-crawl4ai.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/ghidra-vs-ragflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/ghidra-vs-scrapling.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/ghidra-vs-crawl4ai.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/scrapling-vs-crawl4ai.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/ragflow-vs-scrapling.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/ecc-vs-cc-switch.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/ecc-vs-graphify.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/ecc-vs-openai-codex.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -276,35 +266,35 @@
   <url><loc>https://cipherati.com/compare/deepseek-harness-vs-n8n.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/deepseek-harness-vs-autogpt.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/deepseek-harness-vs-skills.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/deepseek-harness-vs-langflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/deepseek-harness-vs-dify.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/hermes-agent-vs-n8n.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/hermes-agent-vs-autogpt.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/hermes-agent-vs-skills.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/hermes-agent-vs-langflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/hermes-agent-vs-dify.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/n8n-vs-autogpt.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/n8n-vs-skills.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/n8n-vs-langflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/n8n-vs-dify.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/autogpt-vs-skills.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/autogpt-vs-langflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/skills-vs-langflow.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/transformers-vs-ollama.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/transformers-vs-lm-studio.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/transformers-vs-llamafactory.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/transformers-vs-llama-cpp.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/transformers-vs-new-api.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/autogpt-vs-dify.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/skills-vs-dify.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/ollama-vs-transformers.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/ollama-vs-vllm.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/ollama-vs-lm-studio.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/ollama-vs-llamafactory.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/ollama-vs-llama-cpp.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/ollama-vs-new-api.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/transformers-vs-vllm.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/transformers-vs-lm-studio.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/transformers-vs-llamafactory.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/transformers-vs-llama-cpp.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/vllm-vs-lm-studio.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/vllm-vs-llamafactory.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/vllm-vs-llama-cpp.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/lm-studio-vs-llamafactory.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/lm-studio-vs-llama-cpp.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/lm-studio-vs-new-api.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/llamafactory-vs-llama-cpp.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/llamafactory-vs-new-api.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/llama-cpp-vs-new-api.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://cipherati.com/compare/stable-diffusion-webui-vs-comfyui.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/stable-diffusion-webui-vs-open-design.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/stable-diffusion-webui-vs-unsloth.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://cipherati.com/compare/stable-diffusion-webui-vs-comfyui.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/stable-diffusion-webui-vs-localai.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/compare/stable-diffusion-webui-vs-fooocus.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
   <url><loc>https://cipherati.com/scams/digital-arrest-video-call.html</loc><lastmod>2026-11-11</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>

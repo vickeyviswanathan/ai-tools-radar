@@ -178,7 +178,9 @@ for (const threat of threatsData.threats) {
       tLow.includes("ed attaches") || tLow.includes("attaches properties") || tLow.includes("car sales") ||
       tLow.includes("dollar pulls back") || tLow.includes("loan fraud") || tLow.includes("chandra proteco") ||
       tLow.includes("warming") || tLow.includes("glacier") || tLow.includes("ice sheet") ||
-      tLow.includes("career guidance") || tLow.includes("students briefed") || tLow.includes("polytechnic")) {
+      tLow.includes("career guidance") || tLow.includes("students briefed") || tLow.includes("polytechnic") ||
+      tLow.includes("shares a hack") || tLow.includes("solar power") || tLow.includes("food security") ||
+      tLow.includes("agrivoltaics") || tLow.includes("online it training")) {
     nonCyberStories++;
   }
 
