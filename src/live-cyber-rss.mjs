@@ -41,8 +41,8 @@ const CYBER_SECURITY_KEYWORDS = [
   "online fraud", "upi fraud", "apk", "botnet", "rce", "auth bypass", "backdoor", "flaw", "flaws"
 ];
 
-// Colloquial "hack" ("shares a hack", "life hack", agriculture/solar "food security") & non-cyber noise
-const COLLOQUIAL_HACK_OR_NON_CYBER_RE = /\b(shares a hack|simple hack|clever hack|life hack|growth hack|travel hack|kitchen hack|farming hack|productivity hack|beauty hack|sleep hack|solar farm|solar power|food security|agrivoltaics|kisan|crops?\b|farming|agriculture|fertilizer|irrigation|monsoon|weather forecast)\b/i;
+// Colloquial "hack" ("shares a hack", "life hack", agriculture/solar "food security") & physical crime "hacked to death"
+const COLLOQUIAL_HACK_OR_NON_CYBER_RE = /\b(hacked to death|stabbed to death|beaten to death|chopped|machete|live-in partner|history-sheeter|shares a hack|simple hack|clever hack|life hack|growth hack|travel hack|kitchen hack|farming hack|productivity hack|beauty hack|sleep hack|solar farm|solar power|food security|agrivoltaics|kisan|crops?\b|farming|agriculture|fertilizer|irrigation|monsoon|weather forecast)\b/i;
 
 const JUNK_NOISE_KEYWORDS = [
   "podcast", "video", "photos", "song", "rahman", "cricket", "honey singh",
@@ -164,6 +164,7 @@ async function fetchRssFeed(url, defaultSource = "") {
         .replace(/[‘’`]/g, "'")
         .replace(/[“”]/g, '"')
         .replace(/[–—]/g, "-")
+        .replace(/\uFFFD+,?/g, "₹")
         .replace(hasGoogleSuffix ? /\s*[-|]\s*[^-|]+$/ : /(?!)/, "")
         .trim();
       const source = rawSource || defaultSource || (rawTitle.includes("-") ? rawTitle.split("-").pop().trim() : "Primary Cyber Desk");
@@ -277,11 +278,22 @@ function getEventSignatureAndCategory(title, originalCategory) {
   }
 
   // 1b. Supreme Court / RBI Bank Cyber Fraud Compensation & Mandatory Payouts
-  if ((lower.includes("supreme court") || lower.includes("sc cracks") || lower.includes("sc pushes") || lower.includes("sc directives")) && 
-      (lower.includes("bank") || lower.includes("cyber fraud") || lower.includes("compensation") || lower.includes("payout"))) {
+  if ((lower.includes("supreme court") || /\bsc\b/.test(lower)) && 
+      (lower.includes("bank") || lower.includes("cyber fraud") || lower.includes("compensation") || lower.includes("payout")) &&
+      !lower.includes("whatsapp")) {
     return {
       category: "india-bfsi",
       clusterKey: "india:supreme-court-bank-compensation",
+      isSpecific: true
+    };
+  }
+
+  // 1c. Supreme Court / WhatsApp / RBI Digital Arrest Scams Notice
+  if ((lower.includes("supreme court") || /\bsc\b/.test(lower) || lower.includes("whatsapp")) &&
+      lower.includes("digital arrest")) {
+    return {
+      category: "india-bfsi",
+      clusterKey: "india:sc-whatsapp-digital-arrest",
       isSpecific: true
     };
   }
@@ -467,8 +479,8 @@ export async function getLiveCyberRss() {
     hackerNewsItems,
     cisaItems
   ] = await Promise.all([
-    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+cyberattack+OR+hacked+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud"+OR+"digital+arrest"+OR+"CERT-In")+AND+(India+OR+RBI+OR+SEBI+OR+NPCI+OR+SBI+OR+HDFC+OR+ICICI+OR+"UPI")+when:2d&hl=en-IN&gl=IN&ceid=IN:en'),
-    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+cyberattack+OR+hacked+OR+breach+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud")+AND+(India+OR+RBI+OR+NBFC+OR+SBI+OR+"UPI+payment"+OR+"cyber+cell"+OR+CBI+OR+"digital+arrest")+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
+    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+cyberattack+OR+"data+breach"+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud"+OR+"digital+arrest"+OR+"CERT-In")+AND+(India+OR+RBI+OR+SEBI+OR+NPCI+OR+SBI+OR+HDFC+OR+ICICI+OR+"UPI")+when:2d&hl=en-IN&gl=IN&ceid=IN:en'),
+    fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+cyberattack+OR+"data+breach"+OR+"data+leak"+OR+"bank+fraud"+OR+"cyber+fraud")+AND+(India+OR+RBI+OR+NBFC+OR+SBI+OR+"UPI+payment"+OR+"cyber+cell"+OR+CBI+OR+"digital+arrest")+when:7d&hl=en-IN&gl=IN&ceid=IN:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(crypto+OR+bitcoin+OR+exchange+OR+DeFi+OR+Binance)+AND+(hack+OR+hacked+OR+exploit+OR+drained+OR+heist+OR+stolen)+when:3d&hl=en-US&gl=US&ceid=US:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(Binance+OR+crypto+OR+bitcoin)+AND+(hack+OR+freeze+OR+heist+OR+stolen)+when:7d&hl=en-US&gl=US&ceid=US:en'),
     fetchRssFeed('https://news.google.com/rss/search?q=(cybersecurity+OR+hack+OR+ransomware+OR+breach)+source:Reuters+when:7d&hl=en-US&gl=US&ceid=US:en'),

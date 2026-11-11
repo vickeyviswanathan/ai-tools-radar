@@ -44,26 +44,6 @@
       "consequence": "Read reporting on Pratidin Time."
     },
     {
-      "id": "live-global-ransomware-20018503023",
-      "category": "global-ransomware",
-      "severity": "high",
-      "impactBadge": "📰 Security Report",
-      "title": "History-sheeter hacked to death in Kasimedu; two arrested",
-      "sourceName": "The Times of India",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiywFBVV95cUxONUFtejRDNlBGMF9IdFR2eHhaQ2U0bUpTN2hvQWw4NERLcDVsMlFWb0UzWWtPTkRGSDFMNzZpekZIQnFHeW93SUh5QVNpTS05ZlV3ZkhBdzFUcTllYk5ZTVdEc1RCUWtYNlk1NWJEVWg3a0pBaDBUQ0FOeWwzZmlCYjFMdGtIZ2NNd0xjdzJyd1RmTFYtMlR5ODF3SHhfdjF0S3BqeEhaSkFSTWdfWHFZanBXYmNpNUdtaHo4bnN2Yk05Y05GcGF4SFZkc9IB0AFBVV95cUxORmJJLVg3ekIwcENCOWZDNEhSczZ5M2tPeWhISWtTWTRHUjlHblBIcUtlcXg4RmNTNjNpaHJhekpLTGlnSW5RTTQ1aG1PcVpKMlhrdDIwNk9OSGVCWEdVaFNVUGtJaXRWOHhBVVZBbjdSYlg4dE43RXNUU0ZUODQ4VFNzU3FUTko4Q25ER3ExV2xPRXk3TklPdXJLU1pjT0VhVldhQTdRU0hzOEJvSDd6N0RFRTNPdzNITWFMc1JQMEFBQUd4NUo0WFNxbWt4aEE3?oc=5",
-      "provenanceBadge": "🌐 Cyber Desk",
-      "badgeType": "statutory",
-      "ref": "The Times of India",
-      "date": "2026-11-10",
-      "pubDate": "Tue, 10 Nov 2026 18:13:00 GMT",
-      "timestamp": 1794334380000,
-      "timeAgo": "16 hours ago",
-      "entities": "Enterprise & Critical Infrastructure",
-      "incident": "Key updates: 'Slapped one of them, paid with his life': Animal activist hacked to death after objecting to firecracker; 'Slapped one of them, paid with his life': Animal activist hacked to death after objecting to firecracker.",
-      "rootCause": "Primary source reporting.",
-      "consequence": "Read reporting on The Times of India."
-    },
-    {
       "id": "live-crypto-heists-3428753281",
       "category": "crypto-heists",
       "severity": "high",
@@ -82,6 +62,26 @@
       "incident": "Key updates: Hackers Exploit Plex2Shell Flaws to Take Over Plex Media Servers and Deploy Crypto Miners; North Korean Hackers Lose approximately $122 Million in Rush to Convert Stolen Crypto; Traders Pocket approximately $61.5 Million in Arbitrage.",
       "rootCause": "Primary source reporting.",
       "consequence": "Read reporting on grafa.com."
+    },
+    {
+      "id": "live-crypto-heists-3055126658",
+      "category": "crypto-heists",
+      "severity": "medium",
+      "impactBadge": "💰 $6.3B Exchange Hack",
+      "title": "Binance hack reveals crypto's uphill battle against hackers",
+      "sourceName": "Reuters",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPalZrZE4zekRsSWZIS2FZNkZ4SG5JcGRDdlptSlNnNGJvR1luV1I5cHFtcEN0RFB5VkpSMjZRSXlOcU5oekFVbDNXSXBhSWYzMzRQcTUwTmF0Sm1LUTA5RjdUSHJPMXhTQ0h4RElvaFpXeGloaUNzQVJVQWZqaGNsanpOSWMzQVpNQ1hLOVBTcHFWZXZCWHpvbzBULTlJaU9uM2dxTjlDLVNpWkplUDlHYQ?oc=5",
+      "provenanceBadge": "📰 Reuters",
+      "badgeType": "statutory",
+      "ref": "Reuters",
+      "date": "2026-11-11",
+      "pubDate": "Wed, 11 Nov 2026 11:06:30 GMT",
+      "timestamp": 1794395190000,
+      "timeAgo": "just now",
+      "entities": "Crypto & Digital Assets",
+      "incident": "Key updates: North Korea is minting meme coins to launder the Binance hack; Binance CFO exits days after $6.3B crypto hack.",
+      "rootCause": "Primary source reporting.",
+      "consequence": "Read reporting on Reuters."
     }
   ],
   "topScam": {
@@ -100,19 +100,19 @@
     "actionUrl": "https://www.cert-in.org.in/"
   },
   "featuredTool": {
-    "id": 656,
-    "name": "StableStudio",
-    "tagline": "Community interface for generative AI",
-    "url": "https://github.com/Stability-AI/StableStudio",
+    "id": 650,
+    "name": "diffusers",
+    "tagline": "🤗 Diffusers: State-of-the-art diffusion models for image, video, and audio generation in PyTorch.",
+    "url": "https://huggingface.co/docs/diffusers",
     "emoji": null,
     "category": "Image & Design",
     "why_it_matters": null,
-    "launched_at": 1682114955,
-    "score": 0.36965834542014503,
+    "launched_at": 1653926642,
+    "score": 1.087314300112534,
     "signals": [
-      "github:9033.0"
+      "github:34840.0"
     ],
-    "rank": 9033,
+    "rank": 34840,
     "velocity": 0,
     "isRising": false,
     "isNew2026": false

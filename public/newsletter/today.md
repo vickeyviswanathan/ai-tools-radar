@@ -12,8 +12,8 @@ LEAD: 'Everybody Will Be Hacked at Some Point,' Ledger CEO Warns as Crypto Theft
 
 More on the Radar:
 • Guwahati: CID Arrests Man For Alleged Cyber Fraud Using HDFC Bank Identity (Pratidin Time)
-• History-sheeter hacked to death in Kasimedu; two arrested (The Times of India)
 • North Korea-linked hackers used meme coins to move stolen crypto (grafa.com)
+• Binance hack reveals crypto's uphill battle against hackers (Reuters)
 
 Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 
@@ -30,8 +30,8 @@ The Corporate Tax & MCA Notice Archive Trap (Infostealer ZIP) [Vector: Email / W
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: StableStudio
-• What it does: Community interface for generative AI
+Featured Tool: diffusers
+• What it does: 🤗 Diffusers: State-of-the-art diffusion models for image, video, and audio generation in PyTorch.
 • Browse 223 indexed tools: https://cipherati.com/ai-tools.html
 
 ------------------------------------------------------------

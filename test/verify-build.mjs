@@ -180,7 +180,7 @@ for (const threat of threatsData.threats) {
       tLow.includes("warming") || tLow.includes("glacier") || tLow.includes("ice sheet") ||
       tLow.includes("career guidance") || tLow.includes("students briefed") || tLow.includes("polytechnic") ||
       tLow.includes("shares a hack") || tLow.includes("solar power") || tLow.includes("food security") ||
-      tLow.includes("agrivoltaics") || tLow.includes("online it training")) {
+      tLow.includes("agrivoltaics") || tLow.includes("online it training") || tLow.includes("hacked to death")) {
     nonCyberStories++;
   }
 
