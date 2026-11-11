@@ -1,27 +1,31 @@
 {
-  "lastUpdatedDate": "2026-11-11",
+  "lastUpdatedDate": "2026-11-12",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
     "dot-trai-disconnection-robocall",
-    "corporate-malware-zip-mca"
+    "corporate-malware-zip-mca",
+    "digital-arrest-video-call"
   ],
   "sentRealityIds": [
     4,
     21,
     16,
-    13
+    13,
+    11
   ],
   "sentToolNames": [
     "X AnyLabeling",
     "krita ai diffusion",
     "ComfyUI 3D Pack",
-    "yft design"
+    "yft design",
+    "sqlmap"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
     "India Reviews Telecom Cybersecurity as AI-Powered Threats Rise",
     "$133M French Bank Hack: 5 Confirmed, 5 Unknown [2026]",
-    "Binance CFO exits days after $6.3B crypto hack"
+    "Binance CFO exits days after $6.3B crypto hack",
+    "'Everybody Will Be Hacked at Some Point,' Ledger CEO Warns as Crypto Thefts Hit $8.7 Billion in 2026"
   ]
 }
