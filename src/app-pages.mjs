@@ -243,9 +243,9 @@ export function buildAppPages(ctx) {
       { "@type": "FAQPage", "@id": `${SITE_URL}scam-alerts.html#faq`, "mainEntity": scamFaqItems }
     ]
   });
-  const emergencyMarker = "<!-- Emergency Reporting & Action Deck -->";
-  if (!scamPage.includes(emergencyMarker)) throw new Error("Scam section marker missing from shell");
-  scamPage = scamPage.replace(emergencyMarker, () => `${guidesBlock(guides, ctx.scamPlaybooks)}${emergencyMarker}`);
+  const scamFilterMarker = "<!-- Scam Categories & Search Filter -->";
+  if (!scamPage.includes(scamFilterMarker)) throw new Error("Scam filter marker missing from shell");
+  scamPage = scamPage.replace(scamFilterMarker, () => `${guidesBlock(guides, ctx.scamPlaybooks)}\n    ${scamFilterMarker}`);
   pages["scam-alerts.html"] = scamPage;
 
   pages["index.html"] = buildHomeViewPage(
