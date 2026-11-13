@@ -86,22 +86,13 @@ ${guides.map((g) => `      <a href="${g.path}">${esc(g.footerLabel || g.title)}<
     </div>`;
 }
 
-function guidesBlock(guides, playbooks = []) {
+function guidesBlock(guides) {
   return `<div class="guides-box">
       <h2 class="guides-heading">In-depth scam-defense guides</h2>
       <ul class="feature-list">${guides
         .map((g) => `<li><a href="${esc(g.path)}"><strong>${esc(g.title)}</strong><span>${esc(g.excerpt)}</span></a></li>`)
         .join("")}</ul>
-    </div>
-    ${
-      playbooks.length
-        ? `<div class="guides-box">
-      <h2 class="guides-heading">Full playbook for each scam pattern</h2>
-      <ul class="cat-links">${playbooks.map((p) => `<li><a href="${esc(p.href)}">${esc(p.title)}</a></li>`).join("")}</ul>
-    </div>
-    `
-        : ""
-    }`;
+    </div>`;
 }
 
 function realitiesBlock(items = []) {
@@ -245,7 +236,7 @@ export function buildAppPages(ctx) {
   });
   const scamFilterMarker = "<!-- Scam Categories & Search Filter -->";
   if (!scamPage.includes(scamFilterMarker)) throw new Error("Scam filter marker missing from shell");
-  scamPage = scamPage.replace(scamFilterMarker, () => `${guidesBlock(guides, ctx.scamPlaybooks)}\n    ${scamFilterMarker}`);
+  scamPage = scamPage.replace(scamFilterMarker, () => `${guidesBlock(guides)}\n    ${scamFilterMarker}`);
   pages["scam-alerts.html"] = scamPage;
 
   pages["index.html"] = buildHomeViewPage(
