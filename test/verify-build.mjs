@@ -154,16 +154,17 @@ assert(untrustedScamUrls === 0, `All scam defense action links point to official
 
 // 6. Verify AI Realities Relevance, Non-duplication & Accurate Tool Stacks
 const indexHtml = readFileSync("public/index.html", "utf8").replace(/\r\n/g, "\n");
-const realityCardsCount = (indexHtml.match(/class="reality-card"/g) || []).length;
+const realitiesPage = readFileSync("public/ai-realities.html", "utf8").replace(/\r\n/g, "\n");
+const realityCardsCount = (realitiesPage.match(/class="reality-card"/g) || []).length;
 assert(realityCardsCount === 22, `Exactly 22 AI Realities cards pre-rendered (found ${realityCardsCount})`);
 
 // Ensure Scrapling is NOT in the Realities section
-const realitiesSectionMatch = indexHtml.match(/<div class="reality-grid" id="reality-grid">([\s\S]*?)<\/div>\s*<div id="reality-empty-state"/);
+const realitiesSectionMatch = realitiesPage.match(/<div class="reality-grid" id="reality-grid">([\s\S]*?)<\/div>\s*<div id="reality-empty-state"/);
 const realitiesHtml = realitiesSectionMatch ? realitiesSectionMatch[1] : "";
 assert(!realitiesHtml.toLowerCase().includes("scrapling"), `Zero occurrences of Scrapling in AI Realities grid`);
 
 // Verify Reality 10 contains PyMuPDF4LLM, MinerU, and pdf oxide
-const reality10Match = indexHtml.match(/id="reality-9"[\s\S]*?<\/div>\s*<\/div>/);
+const reality10Match = realitiesPage.match(/id="reality-9"[\s\S]*?<\/div>\s*<\/div>/);
 const reality10Text = reality10Match ? reality10Match[0] : "";
 assert(reality10Text.includes("MinerU") && reality10Text.includes("PyMuPDF4LLM") && reality10Text.includes("pdf oxide"), `Reality #10 (PDF & Table Chunking) has exact PDF/OCR tools (MinerU, PyMuPDF4LLM, pdf oxide)`);
 
@@ -212,8 +213,8 @@ for (let i = 0; i < threatsData.threats.length - 1; i++) {
 assert(outOfOrderNewsCount === 0, `Cybersecurity news is strictly ordered newest first (${threatsData.threats.length} items checked)`);
 
 // 8. Verify App Starts on Homepage (not AI Tools)
-assert(indexHtml.includes('let currentView = "home";'), `Default view is initialized to 'home'`);
-assert(indexHtml.includes('else if (hash === "#home" || !hash || hash === "#") {\n    switchView("home");'), `Default fallback route opens 'home'`);
+assert(indexHtml.includes('let currentView = PAGE_VIEW;') && indexHtml.includes('<meta name="cipherati-view" content="home" />'), `Homepage view is initialized to 'home' (PAGE_VIEW from <meta name="cipherati-view">)`);
+assert(indexHtml.includes('} else {\n    switchView(PAGE_VIEW);\n  }'), `Unknown/empty hashes fall back to the current page's own view`);
 
 // 9. Verify Daily Intelligence Briefing Generator
 const briefingData = JSON.parse(readFileSync("public/data/briefing.json", "utf8"));
@@ -261,7 +262,7 @@ assert(rssCode.includes("cleanUrl(link"), "src/live-cyber-rss.mjs enforces SSRF 
 
 const buildStaticCode = readFileSync("build-static.mjs", "utf8");
 const seoPublishCode = readFileSync("src/seo-publish.mjs", "utf8");
-assert(buildStaticCode.includes('replace(/</g, "\\\\u003c")') && seoPublishCode.includes('replace(/</g, "\\\\u003c")'), "All inline JSON-in-HTML script serializations escape '<' to '\\u003c' to prevent script-breakout XSS");
+assert(buildStaticCode.includes('replace(/</g, "\\\\u003c")') && readFileSync("src/view-pages.mjs", "utf8").includes('replace(/</g, "\\\\u003c")'), "All inline JSON-in-HTML script serializations escape '<' to '\\u003c' to prevent script-breakout XSS");
 
 const gasCode = readFileSync("scripts/google-apps-script-webhook.js", "utf8");
 assert(gasCode.includes("strictEmailRe") && gasCode.includes("safeCell") && !gasCode.includes("err.toString()"), "Google Apps Script webhook enforces strict email validation, formula neutralization, and generic error responses");
@@ -276,7 +277,7 @@ assert(dispatcherCode.includes("getCurrentIstMinutes") && dispatcherCode.include
 
 // 13. SEO, GEO & AEO Search Dominance Gates
 const sitemapXml = readFileSync("public/sitemap.xml", "utf8");
-assert(sitemapXml.includes("cybersecurity-news.html") && sitemapXml.includes("scam-alerts.html") && sitemapXml.includes("ai-realities.html") && sitemapXml.includes("ai-tools.html") && sitemapXml.includes("llms-full.txt"), "sitemap.xml contains all 4 SEO pillar pages + llms-full.txt");
+assert(sitemapXml.includes("cybersecurity-news.html") && sitemapXml.includes("scam-alerts.html") && sitemapXml.includes("ai-realities.html") && sitemapXml.includes("ai-tools.html") && !sitemapXml.includes("llms-full.txt") && !sitemapXml.includes("feed.xml"), "sitemap.xml contains all 4 SEO pillar pages and only HTML URLs (no feed/txt files)");
 
 const cyberPage = readFileSync("public/cybersecurity-news.html", "utf8");
 assert(cyberPage.includes('<section class="section-wrap" id="threats">') && cyberPage.includes("NewsArticle"), "cybersecurity-news.html renders threats section 100% visible without display:none and includes NewsArticle JSON-LD");
@@ -284,11 +285,11 @@ assert(cyberPage.includes('<section class="section-wrap" id="threats">') && cybe
 const scamPage = readFileSync("public/scam-alerts.html", "utf8");
 assert(scamPage.includes('<section class="section-wrap" id="scams">') && scamPage.includes("FAQPage") && scamPage.includes("HowTo"), "scam-alerts.html renders scams section 100% visible without display:none and includes FAQPage + HowTo JSON-LD");
 
-const realitiesPage = readFileSync("public/ai-realities.html", "utf8");
 assert(realitiesPage.includes('<section class="section-wrap" id="realities">') && realitiesPage.includes("FAQPage"), "ai-realities.html renders realities section 100% visible without display:none and includes FAQPage JSON-LD");
 
 const toolsPage = readFileSync("public/ai-tools.html", "utf8");
-assert(toolsPage.includes("SoftwareSourceCode") && indexHtml.includes("SoftwareSourceCode"), "Rich SoftwareSourceCode repository Schema.org JSON-LD is embedded in index.html and ai-tools.html");
+function sampleToolPage0() { return readFileSync("public/tools/ollama.html", "utf8"); }
+assert(sampleToolPage0().includes("SoftwareSourceCode") && toolsPage.includes('"@type":"ItemList"'), "Tool review pages carry SoftwareSourceCode JSON-LD and /ai-tools.html carries an ItemList of internal review URLs");
 assert(indexHtml.includes("omnibox-dropdown") && indexHtml.includes("selectOmniboxHit"), "Cross-pillar omnibox command search is wired across AI Tools, AI Realities, Cyber News, and Scam Alerts");
 assert(indexHtml.includes('href="./cybersecurity-news.html"') && indexHtml.includes('href="./scam-alerts.html"') && indexHtml.includes('href="./ai-realities.html"') && indexHtml.includes('href="./ai-tools.html"'), "Sidebar navigation uses crawlable <a href> pillar links for PageRank distribution");
 assert(indexHtml.includes('<span class="tab-count" id="tab-realities-count">22</span>'), "Mobile/Header AI Realities tab count badge is synced to 22");
@@ -312,6 +313,83 @@ assert(existsSync("public/tools/ollama.html") && existsSync("public/scams/accide
 const sampleToolPage = readFileSync("public/tools/ollama.html", "utf8");
 assert(sampleToolPage.includes("Engineering Evaluation &amp; Trade-offs Spec Sheet") && sampleToolPage.includes("FAQPage") && sampleToolPage.includes("BreadcrumbList"), "Programmatic tool page contains full engineering spec table, FAQPage, and BreadcrumbList JSON-LD");
 assert(dispatcherCode.includes("api.resend.com/audiences") && dispatcherCode.includes("DEFAULT_SHEET_CSV"), "Newsletter dispatcher auto-discovers Resend Audience ID and syncs Google Sheet subscribers");
+
+// 16. Dual-pillar SEO structure gates: unique H1s, self-canonicals, lighter pages, internal discovery, guides
+const readPage = (p) => readFileSync(p, "utf8").replace(/\r\n/g, "\n");
+const h1Of = (html) => [...html.matchAll(/<h1[^>]*>([\s\S]*?)<\/h1>/g)].map((m) => m[1].replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").trim());
+const canonicalOf = (html) => (html.match(/<link rel="canonical" href="([^"]*)"/) || [])[1] || "";
+const APP_PAGES = {
+  "public/index.html": ["Build Better with AI. Stay Safer Online.", "https://cipherati.com/"],
+  "public/ai-tools.html": ["AI Developer Tools, Coding Agents and Local Models", "https://cipherati.com/ai-tools.html"],
+  "public/ai-realities.html": ["AI Engineering Lessons from Production", "https://cipherati.com/ai-realities.html"],
+  "public/cybersecurity-news.html": ["Cybersecurity News and Threat Intelligence", "https://cipherati.com/cybersecurity-news.html"],
+  "public/scam-alerts.html": ["Cyber Scam Alerts and Practical Defense for India", "https://cipherati.com/scam-alerts.html"]
+};
+const seenH1 = new Set();
+for (const [file, [h1, canon]] of Object.entries(APP_PAGES)) {
+  const html = readPage(file);
+  const found = h1Of(html);
+  assert(found.length === 1 && found[0] === h1, `${file} has exactly one H1: "${h1}" (found ${JSON.stringify(found)})`);
+  assert(canonicalOf(html) === canon, `${file} has self-referencing canonical ${canon}`);
+  seenH1.add(found[0]);
+}
+assert(seenH1.size === Object.keys(APP_PAGES).length, "All five app pages use different H1s");
+
+const homePage = readPage("public/index.html");
+const newsPage = readPage("public/cybersecurity-news.html");
+const scamsPage = readPage("public/scam-alerts.html");
+const pageSizeKb = (f) => Buffer.byteLength(readPage(f), "utf8") / 1024;
+assert(!homePage.includes('id="threats"') && !homePage.includes('id="scams"') && !homePage.includes('id="realities"'), "Homepage no longer embeds the news, scams or realities sections");
+assert(!newsPage.includes('id="scams"') && !newsPage.includes('id="radar"') && !newsPage.includes('id="grid"'), "News page does not duplicate the scams section or the tools directory");
+assert(!scamsPage.includes('id="threats"') && !scamsPage.includes('id="radar"') && !scamsPage.includes('id="grid"'), "Scam page does not duplicate the news section or the tools directory");
+assert(!realitiesPage.includes('id="threats"') && !realitiesPage.includes('id="scams"') && !realitiesPage.includes('id="grid"'), "Realities page does not duplicate other sections or the tools directory");
+assert(!/display:\s*none[^>]*id="(?:threats|scams|realities|radar)"|id="(?:threats|scams|realities)"[^>]*display:\s*none/.test(homePage + newsPage + scamsPage + realitiesPage + toolsPage), "No hidden duplicate portal sections remain on any app page");
+assert(pageSizeKb("public/index.html") < 320 && pageSizeKb("public/ai-realities.html") < 380 && pageSizeKb("public/cybersecurity-news.html") < 400 && pageSizeKb("public/scam-alerts.html") < 380 && pageSizeKb("public/ai-tools.html") < 600, "App pages stay well under the pre-change ~650 KB size");
+
+// Internal discovery: every tool card links to its own review first; official URL is a labelled secondary link.
+const toolSlugsInJson = JSON.parse(readFileSync("public/data/tools.json", "utf8")).tools.map((t) => t.slug);
+assert(toolSlugsInJson.every(Boolean) && new Set(toolSlugsInJson).size === toolSlugsInJson.length, "Every tool in tools.json has a unique review slug");
+const toolReviewLinks = (toolsPage.match(/class="tool-card-link" href="\/tools\/[^"]+\.html"/g) || []).length;
+assert(toolReviewLinks === toolSlugsInJson.length, `/ai-tools.html links all ${toolSlugsInJson.length} tool cards to their /tools/ review first (found ${toolReviewLinks})`);
+assert(toolSlugsInJson.every((slug) => existsSync(`public/tools/${slug}.html`)), "Every linked /tools/ review page exists");
+assert((toolsPage.match(/class="tool-ext" href="https?:\/\/[^"]+" target="_blank" rel="noopener noreferrer">Official source/g) || []).length === toolSlugsInJson.length, "Each tool card keeps a clearly labelled, rel-protected 'Official source' secondary link");
+assert((homePage.match(/href="\/tools\/[^"]+\.html"/g) || []).length >= 3, "Homepage features at least three internal tool reviews");
+
+// Guides
+const GUIDE_SLUGS = ["upi-fraud-what-to-do", "digital-arrest-scam-india", "report-scam-call-india"];
+for (const slug of GUIDE_SLUGS) {
+  const file = `public/scam-defense/${slug}/index.html`;
+  assert(existsSync(file), `Guide page exists: /scam-defense/${slug}/`);
+  const g = readPage(file);
+  assert(h1Of(g).length === 1, `Guide ${slug} has one H1`);
+  assert(canonicalOf(g) === `https://cipherati.com/scam-defense/${slug}/`, `Guide ${slug} has a self-referencing canonical`);
+  assert(!/<meta name="robots" content="[^"]*noindex/i.test(g), `Guide ${slug} is not noindex`);
+  const ld = [...g.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
+  const types = ld.flatMap((j) => (j["@graph"] || [j]).map((n) => n["@type"]));
+  assert(types.includes("Article") && types.includes("BreadcrumbList") && !types.includes("FAQPage") && !types.includes("Review") && !types.includes("AggregateRating"), `Guide ${slug} JSON-LD parses and has Article + BreadcrumbList only (no FAQ/rating markup)`);
+  assert(g.includes('class="table-wrap"') || !g.includes("<table"), `Guide ${slug} tables are wrapped for mobile scrolling`);
+  for (const other of GUIDE_SLUGS.filter((x) => x !== slug)) {
+    assert(g.includes(`href="/scam-defense/${other}/"`), `Guide ${slug} links to guide ${other}`);
+  }
+  assert(homePage.includes(`href="/scam-defense/${slug}/"`), `Homepage links to guide ${slug}`);
+  assert(scamsPage.includes(`href="/scam-defense/${slug}/"`), `/scam-alerts.html links to guide ${slug}`);
+  assert(sitemapXml.includes(`<loc>https://cipherati.com/scam-defense/${slug}/</loc>`), `sitemap.xml lists guide ${slug}`);
+}
+const guideAll = GUIDE_SLUGS.map((slug) => readPage(`public/scam-defense/${slug}/index.html`)).join("\n");
+for (const host of ["cybercrime.gov.in", "sancharsaathi.gov.in/sfc", "npci.org.in", "pib.gov.in"]) {
+  assert(guideAll.includes(host), `Guides keep a direct official link to ${host}`);
+}
+assert(GUIDE_SLUGS.every((slug) => readPage(`public/scam-defense/${slug}/index.html`).includes("promise of recovery")), "Every guide states it is not a promise of recovery");
+
+// Newsletter canonical + description
+const todayHtml = readPage("public/newsletter/today.html");
+assert(canonicalOf(todayHtml) === "https://cipherati.com/newsletter/today.html" && /<meta name="description" content="[^"]{40,}"/.test(todayHtml), "/newsletter/today.html has a unique meta description and a self-canonical");
+
+// Sitemap: only canonical https://cipherati.com HTML URLs with real lastmod dates, no tracking params
+const sitemapLocs = [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+assert(sitemapLocs.every((u) => u.startsWith("https://cipherati.com/") && /\.html$|\/$/.test(u)), "sitemap.xml contains only canonical HTML URLs");
+assert(new Set(sitemapLocs).size === sitemapLocs.length, "sitemap.xml has no duplicate URLs");
+assert(!sitemapXml.includes("<changefreq>") && /<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/.test(sitemapXml), "sitemap.xml uses ledger-based lastmod and no changefreq hints");
 
 
 // Summary

@@ -113,7 +113,7 @@ function formatSignalText(signals = []) {
   return "Editorially indexed developer tool";
 }
 
-function renderPageShell({ title, description, canonicalPath, keywords, jsonLd, activeNav, breadcrumbs, mainHtml }) {
+export function renderPageShell({ title, description, canonicalPath, keywords, jsonLd, activeNav, breadcrumbs, mainHtml, extraCss = "", ogType = "article", image = "https://cipherati.com/og-image.png" }) {
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
   const safeJsonLd = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
 
@@ -142,13 +142,13 @@ function renderPageShell({ title, description, canonicalPath, keywords, jsonLd, 
   <meta property="og:site_name" content="Cipherati" />
   <meta property="og:title" content="${esc(title)}" />
   <meta property="og:description" content="${esc(description)}" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="${esc(ogType)}" />
   <meta property="og:url" content="${esc(canonicalUrl)}" />
-  <meta property="og:image" content="https://cipherati.com/og-image.png" />
+  <meta property="og:image" content="${esc(image)}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${esc(title)}" />
   <meta name="twitter:description" content="${esc(description)}" />
-  <meta name="twitter:image" content="https://cipherati.com/og-image.png" />
+  <meta name="twitter:image" content="${esc(image)}" />
   <script type="application/ld+json">${safeJsonLd}</script>
   <style>
     :root {
@@ -398,6 +398,30 @@ function renderPageShell({ title, description, canonicalPath, keywords, jsonLd, 
       font-size: 13px;
       color: var(--text-muted);
     }
+    .page-nav-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 4px 0 24px; font-size: 14px; font-weight: 700; }
+    .prose { font-size: 16px; line-height: 1.7; color: var(--text-secondary); }
+    .prose h2 { font-size: 22px; line-height: 1.3; color: var(--text); margin: 30px 0 10px; }
+    .prose h3 { font-size: 18px; color: var(--text); margin: 22px 0 8px; }
+    .prose p { margin: 0 0 14px; }
+    .prose ul, .prose ol { margin: 0 0 16px; padding-left: 22px; }
+    .prose li { margin: 0 0 6px; }
+    .prose strong { color: var(--text); }
+    .prose blockquote { margin: 0 0 16px; padding: 12px 16px; border-left: 4px solid var(--accent); background: var(--surface-subtle); border-radius: 0 10px 10px 0; color: var(--text); }
+    .prose blockquote p { margin: 0; }
+    .table-wrap { overflow-x: auto; margin: 0 0 18px; border: 1px solid var(--line); border-radius: 10px; }
+    .table-wrap table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 460px; }
+    .table-wrap th, .table-wrap td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    .table-wrap th { background: var(--surface-subtle); color: var(--text); font-weight: 700; }
+    .table-wrap tr:last-child td { border-bottom: none; }
+    .guide-meta { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 16px; font-size: 13px; color: var(--text-muted); }
+    .guide-note { font-size: 13.5px; color: var(--text-muted); border-top: 1px solid var(--line); padding-top: 14px; margin-top: 8px; }
+    .source-list { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.7; }
+    @media (max-width: 600px) {
+      .container { padding: 20px 14px 48px; }
+      .hero-card { padding: 20px; }
+      .prose { font-size: 15.5px; }
+    }
+    ${extraCss}
   </style>
 </head>
 <body>
@@ -433,6 +457,9 @@ function renderPageShell({ title, description, canonicalPath, keywords, jsonLd, 
       <a href="/scam-alerts.html">1930 Scam Alerts</a> ·
       <a href="/ai-realities.html">22 AI Realities</a> ·
       <a href="/ai-tools.html">AI Tools Directory</a> ·
+      <a href="/scam-defense/upi-fraud-what-to-do/">UPI Fraud Guide</a> ·
+      <a href="/scam-defense/digital-arrest-scam-india/">Digital Arrest Guide</a> ·
+      <a href="/scam-defense/report-scam-call-india/">Report a Scam Call</a> ·
       <a href="/sitemap.xml">Sitemap</a> ·
       <a href="/llms-full.txt">LLMs.txt</a>
     </p>
@@ -441,13 +468,29 @@ function renderPageShell({ title, description, canonicalPath, keywords, jsonLd, 
 </html>`;
 }
 
-export function generateProgrammaticSeoPages({ tools = [], scams = [], realities = [], updatedAt }) {
+/** Stable, unique review-page slug per tool name. Shared by the build (tools.json) and the page generator. */
+export function buildToolSlugMap(tools) {
+  const map = new Map();
+  const used = new Set();
+  for (const t of tools) {
+    let s = slugify(t.name);
+    if (!s) s = "tool";
+    if (used.has(s)) s = `${s}-${slugify(t.category || "ai")}`;
+    used.add(s);
+    map.set(t.name, s);
+  }
+  return map;
+}
+
+export function generateProgrammaticSeoPages({ tools = [], scams = [], realities = [], updatedAt, guides = [], ledger = null }) {
   mkdirSync("./public/tools", { recursive: true });
   mkdirSync("./public/compare", { recursive: true });
   mkdirSync("./public/scams", { recursive: true });
   mkdirSync("./public/realities", { recursive: true });
 
-  const lastmod = (updatedAt || new Date().toISOString()).slice(0, 10);
+  const buildDate = (updatedAt || new Date().toISOString()).slice(0, 10);
+  // lastmod only moves when the page's substantive content changes (see lastmod-ledger.mjs).
+  const stamp = (url, payload) => (ledger ? ledger.stamp(url, payload) : buildDate);
   const generatedUrls = [];
 
   const orgNode = {
@@ -459,15 +502,7 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
   };
 
   // Precompute slugs for all entities
-  const toolSlugMap = new Map();
-  const usedToolSlugs = new Set();
-  for (const t of tools) {
-    let s = slugify(t.name);
-    if (!s) s = "tool";
-    if (usedToolSlugs.has(s)) s = `${s}-${slugify(t.category || "ai")}`;
-    usedToolSlugs.add(s);
-    toolSlugMap.set(t.name, s);
-  }
+  const toolSlugMap = buildToolSlugMap(tools);
 
   const realitySlugMap = new Map();
   for (const r of realities) {
@@ -510,10 +545,26 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
     }
   }
 
+  // Previous/next within each category (ranked) so every review is reachable through a crawlable chain.
+  const rankedByCategory = new Map();
+  for (const t of tools) {
+    if (!rankedByCategory.has(t.category)) rankedByCategory.set(t.category, []);
+    rankedByCategory.get(t.category).push(t);
+  }
+  for (const list of rankedByCategory.values()) list.sort((a, b) => (b.rank || 0) - (a.rank || 0));
+
   // 1. Generate 223+ Individual Tool Evaluation Pages (/tools/[slug].html)
   for (const tool of tools) {
     const slug = toolSlugMap.get(tool.name);
     const canonicalPath = `tools/${slug}.html`;
+    const toolLastmod = stamp(`${SITE_URL}${canonicalPath}`, {
+      n: tool.name, t: tool.tagline, w: tool.why_it_matters || "", c: tool.category, u: tool.url
+    });
+    const categoryUrl = `${SITE_URL}ai-tools.html#tools/${encodeURIComponent(tool.category)}`;
+    const catList = rankedByCategory.get(tool.category) || [];
+    const catIdx = catList.findIndex((t) => t.name === tool.name);
+    const prevTool = catIdx > 0 ? catList[catIdx - 1] : null;
+    const nextTool = catIdx >= 0 && catIdx < catList.length - 1 ? catList[catIdx + 1] : null;
     const evalSpec = deriveToolEvaluation(tool);
     const signalStr = formatSignalText(tool.signals);
 
@@ -558,7 +609,8 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Cipherati", "item": SITE_URL },
             { "@type": "ListItem", "position": 2, "name": "AI Tools Directory", "item": `${SITE_URL}ai-tools.html` },
-            { "@type": "ListItem", "position": 3, "name": tool.name, "item": `${SITE_URL}${canonicalPath}` }
+            { "@type": "ListItem", "position": 3, "name": tool.category, "item": categoryUrl },
+            { "@type": "ListItem", "position": 4, "name": tool.name, "item": `${SITE_URL}${canonicalPath}` }
           ]
         },
         evalSpec.isGithub
@@ -568,8 +620,7 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
               "codeRepository": tool.url,
               "url": `${SITE_URL}${canonicalPath}`,
               "description": `${tool.tagline} — Engineering evaluation, deployment model, privacy posture, and alternatives.`,
-              "programmingLanguage": "AI / Developer Tooling",
-              "dateModified": lastmod
+              "dateModified": toolLastmod
             }
           : {
               "@type": "SoftwareApplication",
@@ -711,6 +762,12 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
           )
           .join("")}
       </section>
+
+      <nav class="page-nav-row" aria-label="More ${esc(tool.category)} tools">
+        ${prevTool ? `<a href="/tools/${esc(toolSlugMap.get(prevTool.name))}.html" rel="prev">← Previous in ${esc(tool.category)}: ${esc(prevTool.name)}</a>` : "<span></span>"}
+        <a href="/ai-tools.html#tools/${encodeURIComponent(tool.category)}">All ${esc(tool.category)} tools</a>
+        ${nextTool ? `<a href="/tools/${esc(toolSlugMap.get(nextTool.name))}.html" rel="next">Next in ${esc(tool.category)}: ${esc(nextTool.name)} →</a>` : "<span></span>"}
+      </nav>
     `;
 
     const htmlOut = renderPageShell({
@@ -722,14 +779,14 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
       activeNav: "tools",
       breadcrumbs: [
         { name: "AI Tools", url: "/ai-tools.html" },
-        { name: tool.category, url: "/ai-tools.html" },
+        { name: tool.category, url: `/ai-tools.html#tools/${encodeURIComponent(tool.category)}` },
         { name: tool.name }
       ],
       mainHtml
     });
 
     writeFileSync(`./public/${canonicalPath}`, htmlOut, "utf8");
-    generatedUrls.push({ loc: `${SITE_URL}${canonicalPath}`, changefreq: "weekly", priority: "0.80" });
+    generatedUrls.push({ loc: `${SITE_URL}${canonicalPath}`, lastmod: toolLastmod });
   }
 
   // 2. Generate 50+ Head-to-Head Comparison Pages (/compare/[a]-vs-[b].html)
@@ -879,7 +936,12 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
     });
 
     writeFileSync(`./public/${canonicalPath}`, htmlOut, "utf8");
-    generatedUrls.push({ loc: `${SITE_URL}${canonicalPath}`, changefreq: "weekly", priority: "0.82" });
+    generatedUrls.push({
+      loc: `${SITE_URL}${canonicalPath}`,
+      lastmod: stamp(`${SITE_URL}${canonicalPath}`, {
+        a: [a.name, a.tagline, a.url], b: [b.name, b.tagline, b.url], c: category
+      })
+    });
   }
 
   // 3. Generate 19+ Citizen Scam Defense Playbook Pages (/scams/[slug].html)
@@ -887,6 +949,13 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
     const slug = scamSlugMap.get(scam.id || scam.title);
     const canonicalPath = `scams/${slug}.html`;
     const otherScams = scams.filter((s) => (s.id || s.title) !== (scam.id || scam.title)).slice(0, 6);
+    // Contextual links from each scam playbook to the relevant in-depth defense guides.
+    const scamText = `${scam.title} ${scam.tag} ${scam.scam} ${scam.protection}`;
+    const relatedGuides = guides.filter((g) => {
+      if (g.slug === "digital-arrest-scam-india") return /digital arrest/i.test(scamText);
+      if (g.slug === "upi-fraud-what-to-do") return /\bupi\b/i.test(scamText);
+      return true; // reporting guide applies to every suspicious call/SMS/WhatsApp scam
+    });
 
     const faqItems = [
       {
@@ -985,6 +1054,25 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
           .join("")}
       </section>
 
+      ${
+        relatedGuides.length
+          ? `<section class="panel">
+        <h2>📘 In-Depth Defense Guides</h2>
+        <div class="alt-list">
+          ${relatedGuides
+            .map(
+              (g) => `<a href="${esc(g.path)}" class="alt-card" style="text-decoration:none;">
+            <strong style="color:var(--text);font-size:14.5px;">${esc(g.title)}</strong>
+            <span style="font-size:12.5px;color:var(--text-muted);">${esc(g.excerpt)}</span>
+            <span style="font-size:12.5px;color:var(--accent);font-weight:700;">Read the guide →</span>
+          </a>`
+            )
+            .join("")}
+        </div>
+      </section>`
+          : ""
+      }
+
       <section class="panel">
         <h2>🔍 Other Active Citizen Scam Playbooks</h2>
         <div class="alt-list">
@@ -1016,7 +1104,12 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
     });
 
     writeFileSync(`./public/${canonicalPath}`, htmlOut, "utf8");
-    generatedUrls.push({ loc: `${SITE_URL}${canonicalPath}`, changefreq: "weekly", priority: "0.88" });
+    generatedUrls.push({
+      loc: `${SITE_URL}${canonicalPath}`,
+      lastmod: stamp(`${SITE_URL}${canonicalPath}`, {
+        id: scam.id, t: scam.title, s: scam.scam, p: scam.protection, pl: scam.platform, src: scam.sourceName, g: relatedGuides.map((g) => g.slug)
+      })
+    });
   }
 
   // 4. Generate 22+ AI Production Reality Pages (/realities/[slug].html)
@@ -1058,7 +1151,9 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
           "description": `${reality.reality} Architectural Fix: ${reality.fix}`,
           "author": orgNode,
           "publisher": orgNode,
-          "dateModified": lastmod,
+          "dateModified": stamp(`${SITE_URL}${canonicalPath}`, {
+          id: reality.id, t: reality.title, m: reality.myth, r: reality.reality, f: reality.fix, i: reality.impact
+        }),
           "mainEntityOfPage": `${SITE_URL}${canonicalPath}`
         },
         {
@@ -1171,7 +1266,12 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
     });
 
     writeFileSync(`./public/${canonicalPath}`, htmlOut, "utf8");
-    generatedUrls.push({ loc: `${SITE_URL}${canonicalPath}`, changefreq: "weekly", priority: "0.85" });
+    generatedUrls.push({
+      loc: `${SITE_URL}${canonicalPath}`,
+      lastmod: stamp(`${SITE_URL}${canonicalPath}`, {
+        id: reality.id, t: reality.title, m: reality.myth, r: reality.reality, f: reality.fix, i: reality.impact
+      })
+    });
   }
 
   return {

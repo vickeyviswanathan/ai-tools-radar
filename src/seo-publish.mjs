@@ -4,6 +4,9 @@
 // Imported by build-static.mjs and covered by test/verify-build.mjs.
 import { readFileSync, writeFileSync } from "node:fs";
 import { generateProgrammaticSeoPages, slugify } from "./programmatic-seo.mjs";
+import { buildAppPages } from "./app-pages.mjs";
+import { loadGuides, generateGuidePages } from "./guides.mjs";
+import { createLedger } from "./lastmod-ledger.mjs";
 
 const SITE_URL = "https://cipherati.com/";
 export const INDEXNOW_KEY = "c9426a40b7894f12a8e3d56c719204ef";
@@ -32,105 +35,6 @@ export function normalizeWhyItMatters(tools) {
   return tools;
 }
 
-function staticSignals(signals = []) {
-  return signals.map(s => {
-    const [src, metric] = s.split(":");
-    const num = Number(metric);
-    const fmt = num >= 1000 ? (num / 1000).toFixed(1) + "k" : num;
-    if (src === "github") return `<span class="badge source-gh">★ ${fmt} stars</span>`;
-    if (src === "hn") return `<span class="badge source-hn">▲ ${fmt} pts</span>`;
-    if (src === "huggingface") return `<span class="badge source-hf">♥ ${fmt} likes</span>`;
-    return "";
-  }).join("");
-}
-
-function staticDecisionBadges(t) {
-  let out = "";
-  if (t.isRising) {
-    const label = t.velocity >= 50 ? `🔥 +${t.velocity}/d` : `🔥 Rising`;
-    out += `<span class="badge momentum">${label}</span>`;
-  }
-  if (t.isNew2026) {
-    out += `<span class="badge new-2026">✨ New 2026</span>`;
-  }
-  return out;
-}
-
-function staticCard(t) {
-  let domain = "";
-  try { domain = new URL(t.url).hostname; } catch {}
-  const icon = domain
-    ? `<span class="icon-fallback">${esc(t.emoji || "⚡")}</span><img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=64" alt="" loading="lazy" onload="const fb=this.parentElement.querySelector('.icon-fallback');if(fb)fb.style.display='none';" onerror="this.remove()" style="position:absolute;inset:0;margin:auto;" />`
-    : esc(t.emoji || "⚡");
-  const why = t.why_it_matters && !BOILERPLATE_WHY.test(t.why_it_matters)
-    ? `<div class="why-box"><strong>Why it matters:</strong> ${esc(t.why_it_matters)}</div>` : "";
-  return `<a class="tool-card" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">
-        <div class="tool-top">
-          <div class="tool-icon">${icon}</div>
-          <div style="flex: 1; min-width: 0;">
-            <div class="tool-name">${esc(t.name)} <span class="tool-name-link">↗</span></div>
-            <p class="tool-tag">${esc(t.tagline)}</p>
-          </div>
-        </div>
-        ${why}
-        <div class="tool-meta">
-          <span class="badge cat">${esc(t.category)}</span>
-          ${staticDecisionBadges(t)}
-          ${staticSignals(t.signals)}
-        </div>
-      </a>`;
-}
-
-function buildPillarPageHtml(baseHtml, {
-  slug,
-  viewName,
-  title,
-  description,
-  keywords,
-  jsonLdGraph
-}) {
-  const canonicalUrl = `${SITE_URL}${slug}`;
-  let page = baseHtml;
-
-  // 1. Canonical URL, Title, Description, Keywords & OpenGraph/Twitter tags
-  page = page.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${esc(canonicalUrl)}" />\n<meta name="keywords" content="${esc(keywords)}" />`);
-  page = page.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`);
-  page = page.replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${esc(description)}" />`);
-  page = page.replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${esc(title)}" />`);
-  page = page.replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${esc(description)}" />`);
-  page = page.replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${esc(canonicalUrl)}" />`);
-  page = page.replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${esc(title)}" />`);
-  page = page.replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${esc(description)}" />`);
-
-  // 2. Make the target section 100% visible in static HTML (no display:none!) so Googlebot Mobile-First Indexer treats it as primary content
-  if (viewName === "news") {
-    page = page.replace('<section class="section-wrap" id="radar">', '<section class="section-wrap" id="radar" style="display: none;">');
-    page = page.replace('<section class="section-wrap" id="threats" style="display: none;">', '<section class="section-wrap" id="threats">');
-  } else if (viewName === "scams") {
-    page = page.replace('<section class="section-wrap" id="radar">', '<section class="section-wrap" id="radar" style="display: none;">');
-    page = page.replace('<section class="section-wrap" id="scams" style="display: none;">', '<section class="section-wrap" id="scams">');
-  } else if (viewName === "realities") {
-    page = page.replace('<section class="section-wrap" id="radar">', '<section class="section-wrap" id="radar" style="display: none;">');
-    page = page.replace('<section class="section-wrap" id="realities" style="display: none;">', '<section class="section-wrap" id="realities">');
-  }
-
-  // 3. Set default client view so JS hydration preserves the active pillar view without overriding URL path
-  page = page.replace('let currentView = "home";', `let currentView = "${viewName}";`);
-  page = page.replace(
-    'else if (hash === "#home" || !hash || hash === "#") {\n    switchView("home");',
-    `else if (hash === "#home" || !hash || hash === "#") {\n    switchView("${viewName}");`
-  );
-
-  // 4. Inject page-specific JSON-LD Schema.org graph
-  const safeJsonLd = JSON.stringify({ "@context": "https://schema.org", "@graph": jsonLdGraph }).replace(/</g, "\\u003c");
-  page = page.replace(
-    /<!-- JSONLD:BEGIN -->[\s\S]*?<!-- JSONLD:END -->/,
-    `<!-- JSONLD:BEGIN -->\n<script type="application/ld+json">${safeJsonLd}</script>\n<!-- JSONLD:END -->`
-  );
-
-  return page;
-}
-
 // Ping IndexNow API (Bing, ChatGPT Search / OAI-SearchBot, Microsoft Copilot, Perplexity, Yandex)
 export async function pingIndexNow(urls) {
   try {
@@ -153,9 +57,8 @@ export async function pingIndexNow(urls) {
 }
 
 // Inject static cards, full Schema.org JSON-LD, 4 dedicated SEO pillar pages, sitemap.xml, IndexNow key, and robots.txt.
-export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/index.html", extra = {}) {
+export function publishSeoArtifacts(tools, updatedAt, shellPath = "./.build/app.html", extra = {}) {
   const ranked = [...tools].sort((a, b) => (b.rank || 0) - (a.rank || 0));
-  const cards = ranked.map(staticCard).join("\n      ");
 
   let threats = extra.threats || [];
   let scams = extra.scams || [];
@@ -247,234 +150,38 @@ export function publishSeoArtifacts(tools, updatedAt, indexPath = "./public/inde
     "mainEntityOfPage": `${SITE_URL}cybersecurity-news.html`
   }));
 
-  // Rich Schema.org Graph for Homepage combining WebSite, Organization, SiteNavigationElement, ItemList (Tools), ItemList (News), HowTo, and FAQPage
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      orgNode,
-      {
-        "@type": "WebSite",
-        "@id": `${SITE_URL}#website`,
-        "url": SITE_URL,
-        "name": "Cipherati — Cybersecurity News, Scam Alerts, AI Developer Tools & Production Realities",
-        "alternateName": ["Cipherati", "Cipherati Radar", "Cipherati Cybersecurity & AI Intelligence"],
-        "description": "Independent cybersecurity news desk, citizen scam defense playbooks (1930 helpline, digital arrest, APK malware, UPI fraud), 22 production AI engineering realities, and curated open-source AI developer tools.",
-        "publisher": orgNode
-      },
-      {
-        "@type": "ItemList",
-        "@id": `${SITE_URL}#pillars`,
-        "name": "Cipherati Intelligence Pillars",
-        "itemListElement": [
-          { "@type": "SiteNavigationElement", "position": 1, "name": "Cybersecurity News & Threat Intelligence", "url": `${SITE_URL}cybersecurity-news.html` },
-          { "@type": "SiteNavigationElement", "position": 2, "name": "Scam Alerts & 1930 Citizen Cyber Defense", "url": `${SITE_URL}scam-alerts.html` },
-          { "@type": "SiteNavigationElement", "position": 3, "name": "AI Engineering Realities in Production", "url": `${SITE_URL}ai-realities.html` },
-          { "@type": "SiteNavigationElement", "position": 4, "name": "Curated AI Developer Tools & Coding Agents", "url": `${SITE_URL}ai-tools.html` },
-          { "@type": "SiteNavigationElement", "position": 5, "name": "The Cipherati 60-Second Morning Briefing", "url": `${SITE_URL}newsletter/today.html` }
-        ]
-      },
-      {
-        "@type": "ItemList",
-        "@id": `${SITE_URL}#cyber-news-list`,
-        "name": "Live Cybersecurity News, RBI/CERT-In Directives, Breaches & Crypto Heists",
-        "url": `${SITE_URL}cybersecurity-news.html`,
-        "numberOfItems": newsArticleNodes.length,
-        "itemListElement": newsArticleNodes.map((n, i) => ({
-          "@type": "ListItem",
-          "position": i + 1,
-          "item": n
-        }))
-      },
-      {
-        "@type": "ItemList",
-        "@id": `${SITE_URL}#tools`,
-        "name": "Cipherati AI Developer Tools & Coding Agents Directory",
-        "url": `${SITE_URL}ai-tools.html`,
-        "numberOfItems": tools.length,
-        "itemListElement": ranked.slice(0, 60).map((t, i) => {
-          const isRepo = /github\.com/i.test(t.url);
-          return {
-            "@type": "ListItem",
-            "position": i + 1,
-            "item": isRepo ? {
-              "@type": "SoftwareSourceCode",
-              "name": t.name,
-              "codeRepository": t.url,
-              "url": t.url,
-              "description": `${t.tagline} (${t.category})`,
-              "dateModified": updatedAt.slice(0, 10)
-            } : {
-              "@type": "SoftwareApplication",
-              "name": t.name,
-              "url": t.url,
-              "applicationCategory": t.category || "DeveloperApplication",
-              "description": `${t.tagline} (${t.category})`
-            }
-          };
-        })
-      },
-      howToNode,
-      {
-        "@type": "FAQPage",
-        "@id": `${SITE_URL}#faq`,
-        "mainEntity": [...scamFaqItems.slice(0, 12), ...realityFaqItems.slice(0, 8)]
-      }
-    ]
-  };
+  // The five app pages are assembled from the shell by app-pages.mjs. Each renders only its own content
+  // and carries only the JSON-LD that matches that content.
+  const ledger = extra.ledger || createLedger();
+  const guides = extra.guides || loadGuides();
+  const buildDate = updatedAt.slice(0, 10);
 
-  let html = readFileSync(indexPath, "utf8");
-  html = html.replace(
-    /<!-- PRERENDER:BEGIN -->[\s\S]*?<!-- PRERENDER:END -->/,
-    `<!-- PRERENDER:BEGIN -->\n      ${cards}\n      <!-- PRERENDER:END -->`
-  );
-  const safeJsonLd = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
-  html = html.replace(
-    /<!-- JSONLD:BEGIN -->[\s\S]*?<!-- JSONLD:END -->/,
-    `<!-- JSONLD:BEGIN -->\n<script type="application/ld+json">${safeJsonLd}</script>\n<!-- JSONLD:END -->`
-  );
+  // Long-tail pages first: the hubs link to them (scam playbooks, comparisons, realities) so none are orphaned.
+  const progSeo = generateProgrammaticSeoPages({ tools: ranked, scams, realities, updatedAt, guides, ledger });
+  const guideUrls = generateGuidePages(guides, { ledger, buildDate });
 
-  // Ensure semantic internal crawl links exist in the footer of index.html and all pillar pages
-  const seoFooterNav = `<div class="seo-pillar-links" style="margin: 14px 0; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-size: 13px; font-weight: 600;">
-      <a href="./">Home</a> •
-      <a href="./cybersecurity-news.html">Cybersecurity News</a> •
-      <a href="./scam-alerts.html">Scam Alerts (1930 Helpline)</a> •
-      <a href="./ai-realities.html">AI Realities in Production</a> •
-      <a href="./ai-tools.html">AI Developer Tools Directory</a> •
-      <a href="./newsletter/today.html">Today's Morning Briefing</a> •
-      <a href="./feed.xml">RSS Feed</a> •
-      <a href="./llms.txt">LLMs.txt</a> •
-      <a href="./llms-full.txt">Full AI Knowledge Base</a>
-    </div>`;
+  const scamPlaybooks = scams.map((x) => ({ title: x.title, href: `/scams/${progSeo.scamSlugMap.get(x.id || x.title)}.html` }));
+  const comparisons = progSeo.comparisonPairs.map((p) => ({ title: `${p.a.name} vs ${p.b.name}`, href: `/compare/${p.compSlug}.html` }));
+  const realityIndex = realities.map((r) => ({ title: `#${r.id} ${r.title}`, href: `/realities/${progSeo.realitySlugMap.get(r.id)}.html` }));
 
-  if (html.includes('<div class="seo-pillar-links"')) {
-    html = html.replace(/<div class="seo-pillar-links"[\s\S]*?<\/div>/, seoFooterNav);
-  } else {
-    html = html.replace(
-      'Synced automatically from live open-source and global statutory feeds every 6 hours.',
-      `Synced automatically from live open-source and global statutory feeds every 6 hours.\n    ${seoFooterNav}`
-    );
-  }
-
-  if (!html.includes('href="./feed.xml"')) {
-    html = html.replace(
-      '<link rel="manifest" href="./manifest.json" />',
-      '<link rel="manifest" href="./manifest.json" />\n<link rel="alternate" type="application/rss+xml" title="Cipherati — Cybersecurity News, Scam Alerts &amp; AI Intelligence RSS Feed" href="./feed.xml" />'
-    );
-  }
-
-  writeFileSync(indexPath, html, "utf8");
-
-  // Generate 4 Dedicated, 100%-Visible Static SEO Pillar Pages for Google & LLM Search Dominance
-  // 1. /cybersecurity-news.html
-  const cyberNewsPage = buildPillarPageHtml(html, {
-    slug: "cybersecurity-news.html",
-    viewName: "news",
-    title: "Cybersecurity News India & Global Threat Intelligence — CERT-In, RBI BFSI Alerts, Ransomware & Crypto Heists | Cipherati",
-    description: "Real-time verified cybersecurity news across Indian banking & fintech (RBI, CERT-In, I4C), enterprise ransomware breaches, critical zero-day CVEs, AI cyber threats, and global crypto heists.",
-    keywords: "cybersecurity news, cybersecurity news India, CERT-In advisory, RBI cybersecurity directive, banking cyber attack India, ransomware news, crypto heist news, zero day vulnerability, AI cybersecurity threats, Cipherati",
-    jsonLdGraph: [
-      orgNode,
-      {
-        "@type": "CollectionPage",
-        "@id": `${SITE_URL}cybersecurity-news.html#webpage`,
-        "url": `${SITE_URL}cybersecurity-news.html`,
-        "name": "Cybersecurity News India & Global Threat Intelligence — Cipherati",
-        "description": "Verified cybersecurity news covering RBI/CERT-In directives, Indian banking & fintech security, global ransomware, and crypto exploits.",
-        "isPartOf": { "@id": `${SITE_URL}#website` }
-      },
-      {
-        "@type": "ItemList",
-        "name": "Latest Verified Cybersecurity News Stories",
-        "numberOfItems": newsArticleNodes.length,
-        "itemListElement": newsArticleNodes.map((n, i) => ({ "@type": "ListItem", "position": i + 1, "item": n }))
-      }
-    ]
+  const pages = buildAppPages({
+    shellHtml: readFileSync(shellPath, "utf8"),
+    ranked,
+    realities,
+    scams,
+    threats,
+    guides: guides.map((g) => ({ ...g, footerLabel: g.footerLabel })),
+    orgNode,
+    howToNode,
+    scamFaqItems,
+    newsArticleNodes,
+    updatedAt,
+    categories: extra.categories,
+    scamPlaybooks,
+    comparisons,
+    realityIndex
   });
-  writeFileSync("./public/cybersecurity-news.html", cyberNewsPage, "utf8");
-
-  // 2. /scam-alerts.html
-  const scamAlertsPage = buildPillarPageHtml(html, {
-    slug: "scam-alerts.html",
-    viewName: "scams",
-    title: "Scam Alerts India & Citizen Cyber Defense — 1930 Helpline, Digital Arrest Scam, e-Challan APK & UPI Fraud | Cipherati",
-    description: "Verified citizen scam defense guide for India: how to spot and stop Digital Arrest police video calls, WhatsApp Wedding Card & Traffic e-Challan APK malware, wrong UPI transfer traps, fake IPO groups, and how to freeze stolen funds via 1930.",
-    keywords: "scam alerts India, digital arrest scam, 1930 cyber crime helpline, cybercrime.gov.in reporting, e-challan APK scam, wedding card APK virus, wrong UPI transfer scam, FedEx customs parcel scam, Sanchar Saathi Chakshu, RBI Sachet",
-    jsonLdGraph: [
-      orgNode,
-      howToNode,
-      {
-        "@type": "FAQPage",
-        "@id": `${SITE_URL}scam-alerts.html#faq`,
-        "mainEntity": scamFaqItems
-      }
-    ]
-  });
-  writeFileSync("./public/scam-alerts.html", scamAlertsPage, "utf8");
-
-  // 3. /ai-realities.html
-  const aiRealitiesPage = buildPillarPageHtml(html, {
-    slug: "ai-realities.html",
-    viewName: "realities",
-    title: "AI Engineering Realities in Production — 22 Hard Truths on RAG, Coding Agents, Token Costs & LLM Architecture | Cipherati",
-    description: "The unfiltered engineering truth on what breaks when AI meets production: 1M context window degradation, agent token cost bleed, fine-tuning vs hybrid RAG, prompt injection guardrails, and multi-agent runaway loops.",
-    keywords: "AI engineering realities, production LLM failures, RAG vs fine-tuning, coding agent benchmarks, LLM token cost optimization, prompt injection defense, hybrid search BM25 vector database, enterprise AI architecture",
-    jsonLdGraph: [
-      orgNode,
-      {
-        "@type": "FAQPage",
-        "@id": `${SITE_URL}ai-realities.html#faq`,
-        "mainEntity": realities.map(r => ({
-          "@type": "Question",
-          "name": `Trap #${r.id}: ${r.title} — Why does "${r.myth}" fail in production?`,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": `Reality: ${r.reality} What Actually Works: ${r.fix} Business Impact: ${r.impact} Proven Tools: ${(r.tools || []).map(t => t.name).join(", ")}.`
-          }
-        }))
-      }
-    ]
-  });
-  writeFileSync("./public/ai-realities.html", aiRealitiesPage, "utf8");
-
-  // 4. /ai-tools.html
-  const aiToolsPage = buildPillarPageHtml(html, {
-    slug: "ai-tools.html",
-    viewName: "tools",
-    title: `Best AI Developer Tools, Coding Agents, MCP Servers & Local LLMs Directory (${tools.length} Indexed Tools) | Cipherati`,
-    description: `Curated, zero-affiliate directory of ${tools.length} open-source AI developer tools, terminal coding agents (Claude Code, Gemini CLI, Codex, Aider), local LLM runners (Ollama, vLLM, llama.cpp), and RAG frameworks.`,
-    keywords: "best AI developer tools, AI coding agents, MCP servers, local LLMs, Ollama, vLLM, Claude Code, Gemini CLI, open source AI tools directory, RAG frameworks, cybersecurity AI tools",
-    jsonLdGraph: [
-      orgNode,
-      {
-        "@type": "ItemList",
-        "@id": `${SITE_URL}ai-tools.html#directory`,
-        "name": "Cipherati Curated AI Developer Tools Directory",
-        "numberOfItems": tools.length,
-        "itemListElement": ranked.slice(0, 100).map((t, i) => {
-          const isRepo = /github\.com/i.test(t.url);
-          return {
-            "@type": "ListItem",
-            "position": i + 1,
-            "item": isRepo ? {
-              "@type": "SoftwareSourceCode",
-              "name": t.name,
-              "codeRepository": t.url,
-              "url": t.url,
-              "description": `${t.tagline} — ${t.why_it_matters || ""}`,
-              "dateModified": updatedAt.slice(0, 10)
-            } : {
-              "@type": "SoftwareApplication",
-              "name": t.name,
-              "url": t.url,
-              "applicationCategory": t.category || "DeveloperApplication",
-              "description": `${t.tagline} — ${t.why_it_matters || ""}`
-            }
-          };
-        })
-      }
-    ]
-  });
-  writeFileSync("./public/ai-tools.html", aiToolsPage, "utf8");
+  for (const [name, content] of Object.entries(pages)) writeFileSync(`./public/${name}`, content, "utf8");
 
   // Write static IndexNow key verification file for Bing / ChatGPT Search / Perplexity / Copilot
   writeFileSync(`./public/${INDEXNOW_KEY}.txt`, INDEXNOW_KEY, "utf8");
@@ -529,25 +236,35 @@ ${rssItems.map(item => `    <item>
 `;
   writeFileSync("./public/feed.xml", feedXml, "utf8");
 
-  const lastmod = updatedAt.slice(0, 10);
+  // 5. Programmatic long-tail pages (/tools/*, /compare/*, /scams/*, /realities/*) and the scam-defense guides.
 
-  // 5. Generate 300+ Programmatic Long-Tail SEO Pages (/tools/*, /compare/*, /scams/*, /realities/*)
-  const progSeo = generateProgrammaticSeoPages({ tools: ranked, scams, realities, updatedAt });
-
+  // Sitemap: canonical, indexable HTML URLs only. lastmod comes from the content-hash ledger, so it only moves when
+  // a page's substantive content changes (not on every build). changefreq/priority are omitted (ignored by Google).
+  const hubStamp = (path, payload) => ledger.stamp(`${SITE_URL}${path}`, payload);
+  const guideSlugs = guides.map((g) => g.slug);
+  let briefingHtml = "";
+  try { briefingHtml = readFileSync("./public/newsletter/today.html", "utf8"); } catch {}
   const sitemapUrls = [
-    { loc: `${SITE_URL}`, changefreq: "hourly", priority: "1.0" },
-    { loc: `${SITE_URL}cybersecurity-news.html`, changefreq: "hourly", priority: "0.95" },
-    { loc: `${SITE_URL}scam-alerts.html`, changefreq: "daily", priority: "0.95" },
-    { loc: `${SITE_URL}ai-realities.html`, changefreq: "daily", priority: "0.90" },
-    { loc: `${SITE_URL}ai-tools.html`, changefreq: "daily", priority: "0.90" },
-    { loc: `${SITE_URL}newsletter/today.html`, changefreq: "daily", priority: "0.85" },
-    { loc: `${SITE_URL}feed.xml`, changefreq: "hourly", priority: "0.85" },
-    { loc: `${SITE_URL}llms.txt`, changefreq: "daily", priority: "0.80" },
-    { loc: `${SITE_URL}llms-full.txt`, changefreq: "daily", priority: "0.80" },
-    ...progSeo.generatedUrls
+    {
+      loc: SITE_URL,
+      lastmod: hubStamp("", {
+        g: guideSlugs,
+        n: threats.slice(0, 3).map((n) => n.id),
+        r: realities.slice(0, 3).map((r) => r.id),
+        t: ranked.slice(0, 40).map((t) => [t.name, t.tagline])
+      })
+    },
+    { loc: `${SITE_URL}cybersecurity-news.html`, lastmod: hubStamp("cybersecurity-news.html", threats.map((n) => [n.id, n.title])) },
+    { loc: `${SITE_URL}scam-alerts.html`, lastmod: hubStamp("scam-alerts.html", { s: scams.map((x) => [x.id, x.title, x.scam, x.protection]), g: guideSlugs }) },
+    { loc: `${SITE_URL}ai-realities.html`, lastmod: hubStamp("ai-realities.html", realities.map((r) => [r.id, r.title, r.reality, r.fix])) },
+    { loc: `${SITE_URL}ai-tools.html`, lastmod: hubStamp("ai-tools.html", ranked.map((t) => [t.name, t.slug, t.tagline, t.category])) },
+    { loc: `${SITE_URL}newsletter/today.html`, lastmod: hubStamp("newsletter/today.html", briefingHtml) },
+    ...progSeo.generatedUrls,
+    ...guideUrls
   ];
+  ledger.save();
 
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>`).join("\n")}\n</urlset>\n`;
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`;
   writeFileSync("./public/sitemap.xml", sitemapXml, "utf8");
 
   // Modern robots.txt explicitly welcoming all major search and generative AI engines
@@ -595,6 +312,6 @@ Allow: /llms-full.txt
 Sitemap: ${SITE_URL}sitemap.xml
 `;
   writeFileSync("./public/robots.txt", robotsTxt, "utf8");
-  console.log(`Pre-rendered ${ranked.length} tool cards into index.html + 4 pillar pages + ${progSeo.counts.total} programmatic long-tail pages (${progSeo.counts.tools} tools, ${progSeo.counts.comparisons} comparisons, ${progSeo.counts.scams} scams, ${progSeo.counts.realities} realities). sitemap.xml now has ${sitemapUrls.length} URLs.`);
-  return { sitemapUrls: sitemapUrls.map(u => u.loc), progSeo };
+  console.log(`Rendered home + 4 pillar pages (each with only its own content), ${ranked.length} tool cards, ${guides.length} scam-defense guides + ${progSeo.counts.total} programmatic long-tail pages (${progSeo.counts.tools} tools, ${progSeo.counts.comparisons} comparisons, ${progSeo.counts.scams} scams, ${progSeo.counts.realities} realities). sitemap.xml now has ${sitemapUrls.length} URLs.`);
+  return { sitemapUrls: sitemapUrls.map(u => u.loc), progSeo, guideUrls };
 }

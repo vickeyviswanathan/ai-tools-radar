@@ -5,3 +5,5 @@ data/radar.db*
 data/logos/
 .env
 npm-debug.log*
+
+.build/

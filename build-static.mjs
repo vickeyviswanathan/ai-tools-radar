@@ -1,11 +1,12 @@
 // Builds static data/tools.json for GitHub Pages deployment
-import { writeFileSync, readFileSync, mkdirSync, existsSync } from "node:fs";
+import { writeFileSync, readFileSync, mkdirSync, existsSync, copyFileSync } from "node:fs";
 import path from "node:path";
 import { getDb, now, getMeta, tx } from "./src/db.mjs";
 import { runIngestion } from "./src/ingest.mjs";
 import { evaluateQuality } from "./src/quality.mjs";
 import { refreshLiveMetrics } from "./src/live-metrics.mjs";
 import { publishSeoArtifacts, normalizeWhyItMatters, pingIndexNow } from "./src/seo-publish.mjs";
+import { buildToolSlugMap } from "./src/programmatic-seo.mjs";
 import { getLiveCyberNews } from "./src/news-sync.mjs";
 import { validateAndSanitizeScams, generateScamsHtml } from "./src/scam-guard.mjs";
 import { REALITIES_DATA } from "./src/realities-data.mjs";
@@ -105,11 +106,18 @@ function seedFeaturedLeaders() {
   });
 }
 
+// The app shell (src/shell/app.html) is the source template for all five app pages. The build mutates a working
+// copy (.build/app.html, git-ignored) with live data, then app-pages.mjs renders each public page from it.
+const SHELL_PATH = "./src/shell/app.html";
+const WORK_HTML = "./.build/app.html";
+
 // CIPHERATI_LOCAL=1: safe local build. No IndexNow ping, no newsletter/push dispatch,
 // no live link health-check and no live news fetch (uses the committed data instead).
 const LOCAL_BUILD = process.env.CIPHERATI_LOCAL === "1";
 
 async function build() {
+  mkdirSync("./.build", { recursive: true });
+  copyFileSync(SHELL_PATH, WORK_HTML);
   seedFeaturedLeaders();
   if (process.env.FULL_INGEST === "true" || process.env.GITHUB_EVENT_NAME === "schedule") {
     console.log("Ingesting latest top-tier tools via full scraper...");
@@ -282,6 +290,11 @@ async function build() {
 
   console.log(`[Health Check] Verified tools: ${verifiedTools.length} active (dropped ${tools.length - verifiedTools.length} dead links).`);
 
+  // Review-page slug per tool, assigned once and written into tools.json so the directory cards link to /tools/<slug>.html.
+  const slugOrder = [...verifiedTools].sort((a, b) => (b.rank || 0) - (a.rank || 0));
+  const toolSlugs = buildToolSlugMap(slugOrder);
+  for (const t of verifiedTools) t.slug = toolSlugs.get(t.name);
+
   const output = {
     updatedAt: new Date().toISOString(),
     categories,
@@ -321,7 +334,7 @@ async function build() {
   const briefing = generateDailyBriefing();
   updateBriefingInHtml(briefing);
 
-  const seoResult = publishSeoArtifacts(output.tools, output.updatedAt, "./public/index.html", {
+  const seoResult = publishSeoArtifacts(output.tools, output.updatedAt, WORK_HTML, {
     threats: liveThreats,
     scams: sanitizedScams,
     realities: REALITIES_DATA
@@ -351,7 +364,7 @@ async function build() {
 }
 
 function updateThreatsInHtml(categories, threats) {
-  const indexPath = "./public/index.html";
+  const indexPath = WORK_HTML;
   let html = readFileSync(indexPath, "utf8");
 
   // Strictly sort reverse-chronological (newest first)
@@ -471,7 +484,7 @@ ${incidentHtml}
 }
 
 function updateScamsInHtml(scams) {
-  const indexPath = "./public/index.html";
+  const indexPath = WORK_HTML;
   let html = readFileSync(indexPath, "utf8");
 
   html = html.replace(/<span class="tab-count" id="tab-scams-count">\d*<\/span>/, `<span class="tab-count" id="tab-scams-count">${scams.length}</span>`);
@@ -526,7 +539,7 @@ ${toolsHtml}
 }
 
 function updateRealitiesInHtml(realities) {
-  const indexPath = "./public/index.html";
+  const indexPath = WORK_HTML;
   let html = readFileSync(indexPath, "utf8");
 
   // 1. Update static card grid
@@ -555,7 +568,7 @@ function updateRealitiesInHtml(realities) {
 }
 
 function updateBriefingInHtml(briefing) {
-  const indexPath = "./public/index.html";
+  const indexPath = WORK_HTML;
   let html = readFileSync(indexPath, "utf8");
   html = html.replace(/let BRIEFING_DATA = (?:\{[\s\S]*?\}|null);/, `let BRIEFING_DATA = ${JSON.stringify(briefing).replace(/</g, "\\u003c")};`);
   writeFileSync(indexPath, html, "utf8");
@@ -567,7 +580,7 @@ build().catch((err) => {
 });
 
 function syncCountsInHtml(tools, realities, threats, scams) {
-  const indexPath = "./public/index.html";
+  const indexPath = WORK_HTML;
   let html = readFileSync(indexPath, "utf8");
   html = html.replace(/<div class="hero-metric-num" id="stat-tools">\d+<\/div>/, `<div class="hero-metric-num" id="stat-tools">${tools.length}</div>`);
   html = html.replace(/<span class="tab-count" id="tab-tools-count">\d*<\/span>/, `<span class="tab-count" id="tab-tools-count">${tools.length}</span>`);
@@ -591,6 +604,9 @@ function generateLlmsTxt(tools, scams, threats = [], realities = []) {
 - Website: https://cipherati.com/
 - Cybersecurity News Desk: https://cipherati.com/cybersecurity-news.html
 - Scam Alerts & 1930 Citizen Defense: https://cipherati.com/scam-alerts.html
+- UPI Fraud: What to Do Immediately in India: https://cipherati.com/scam-defense/upi-fraud-what-to-do/
+- Digital Arrest Scam in India: https://cipherati.com/scam-defense/digital-arrest-scam-india/
+- How to Report a Scam Call in India (Chakshu & 1930): https://cipherati.com/scam-defense/report-scam-call-india/
 - AI Engineering Realities in Production: https://cipherati.com/ai-realities.html
 - AI Developer Tools Directory: https://cipherati.com/ai-tools.html
 - Daily 60-Second Morning Briefing: https://cipherati.com/newsletter/today.html

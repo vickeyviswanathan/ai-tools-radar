@@ -62,6 +62,19 @@ function buildLeadContext(item) {
   return root;
 }
 
+/** Unique, content-derived meta description for the rolling /newsletter/today.html page (<= ~160 chars). */
+export function briefingMetaDescription({ leadThreat, topScam, featuredTool, realityPick }) {
+  const bits = [];
+  if (leadThreat?.title) bits.push(`${leadThreat.title}`);
+  const extras = [];
+  if (topScam?.title) extras.push("a scam alert");
+  if (featuredTool?.name) extras.push("an AI tool");
+  if (realityPick?.title) extras.push("a production AI lesson");
+  let text = `Today's 60-second Cipherati briefing: ${bits.join("")}${extras.length ? `, plus ${extras.join(", ")}` : ""}.`;
+  if (text.length > 158) text = text.slice(0, 155).replace(/\s+\S*$/, "") + "…";
+  return text;
+}
+
 export function generateDailyBriefing() {
   const toolsData = JSON.parse(readFileSync("public/data/tools.json", "utf8")).tools || [];
   const threatsData = JSON.parse(readFileSync("public/data/threats.json", "utf8")).threats || [];
@@ -261,6 +274,8 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Cipherati Briefing — ${escHtml(dateFormatted)}</title>
+  <meta name="description" content="${escHtml(briefingMetaDescription({ leadThreat, topScam, featuredTool, realityPick }))}">
+  <link rel="canonical" href="https://cipherati.com/newsletter/today.html">
 </head>
 <body style="margin:0;padding:24px 12px;background-color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111827;line-height:1.6;-webkit-font-smoothing:antialiased;">
   <div style="max-width:600px;margin:0 auto;background-color:#ffffff;">

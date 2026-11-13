@@ -22,6 +22,7 @@
 <link rel="canonical" href="https://cipherati.com/" />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 <meta name="theme-color" content="#07090e" />
+<meta name="cipherati-view" content="home" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="Cipherati" />
@@ -1899,6 +1900,87 @@
       width: 100%;
     }
   }
+  /* ==========================================================================
+     INTERNAL-FIRST TOOL LINKS, PAGE HEROES & BALANCED HOMEPAGE (dual pillar)
+     ========================================================================== */
+  .tool-card-link { color: inherit; text-decoration: none; }
+  .tool-card-link:hover, .tool-card-link:focus-visible { color: var(--accent-text); text-decoration: underline; }
+  .tool-card .tool-card-link::after, .tool-row .tool-card-link::after {
+    content: ""; position: absolute; inset: 0; border-radius: 16px; z-index: 1;
+  }
+  .tool-card .share-btn, .tool-card .inspect-btn, .tool-card .tool-ext,
+  .tool-row .share-btn, .tool-row .inspect-btn, .tool-row .tool-ext { position: relative; z-index: 2; }
+  .tool-row { position: relative; }
+  .tool-meta-links { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .tool-ext { font-size: 12px; font-weight: 700; color: var(--text-muted); text-decoration: none; white-space: nowrap; }
+  .tool-ext:hover, .tool-ext:focus-visible { color: var(--accent-text); text-decoration: underline; }
+  .section-title[data-emoji]::before { content: attr(data-emoji) " "; }
+
+  .page-hero {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 22px 24px; margin: 4px 0 18px; box-shadow: var(--shadow-sm);
+  }
+  .page-hero h1 { margin: 0 0 8px; font-size: clamp(22px, 3.2vw, 32px); line-height: 1.2; letter-spacing: -0.02em; color: var(--text); }
+  .page-hero p { margin: 0 0 12px; color: var(--text-secondary); font-size: 14.5px; max-width: 760px; line-height: 1.55; }
+  .cat-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .cat-links a {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px;
+    border: 1.5px solid var(--line-strong); background: var(--card); color: var(--text-secondary);
+    font-size: 12.5px; font-weight: 700; text-decoration: none;
+  }
+  .cat-links a:hover, .cat-links a:focus-visible { border-color: var(--accent); color: var(--accent-text); background: var(--accent-soft); }
+  .cat-links .count { color: var(--text-muted); font-weight: 600; }
+  .tool-cat-section { margin: 0 0 8px; }
+  .tool-cat-heading { font-size: 14px; font-weight: 800; color: var(--text-secondary); margin: 18px 0 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .page-nav-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 6px 0 28px; font-size: 13.5px; font-weight: 700; }
+
+  .home-hero { background: var(--hero-grad); color: #fff; border-radius: 20px; padding: 30px 28px; margin: 4px 0 20px; box-shadow: var(--shadow-md); }
+  .home-hero h1 { margin: 0 0 10px; font-size: clamp(26px, 4.2vw, 40px); line-height: 1.12; letter-spacing: -0.03em; color: #fff; }
+  .home-hero p { margin: 0 0 16px; color: rgba(255,255,255,0.88); font-size: 15.5px; line-height: 1.55; max-width: 720px; }
+  .home-cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+  .btn-cta, .btn-cta-alt {
+    display: inline-flex; align-items: center; gap: 6px; padding: 12px 20px; border-radius: 12px;
+    font-weight: 800; font-size: 14.5px; text-decoration: none; border: 2px solid transparent;
+  }
+  .btn-cta { background: #fff; color: #0f172a; }
+  .btn-cta:hover, .btn-cta:focus-visible { background: #e2e8f0; }
+  .btn-cta-alt { background: transparent; color: #fff; border-color: rgba(255,255,255,0.7); }
+  .btn-cta-alt:hover, .btn-cta-alt:focus-visible { background: rgba(255,255,255,0.14); }
+  .trust-strip { font-size: 12.5px; font-weight: 700; letter-spacing: 0.02em; color: rgba(255,255,255,0.78); margin: 0; }
+  .home-stats { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 22px; }
+  .home-stat { flex: 1 1 130px; text-decoration: none; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; color: var(--text); }
+  .home-stat:hover, .home-stat:focus-visible { border-color: var(--accent); }
+  .home-stat strong { display: block; font-size: 22px; line-height: 1.1; }
+  .home-stat span { font-size: 12px; color: var(--text-muted); font-weight: 700; }
+  .pillar-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 22px; }
+  .pillar-panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 12px; }
+  .pillar-panel.pillar-ai { border-top: 4px solid var(--accent); }
+  .pillar-panel.pillar-cyber { border-top: 4px solid var(--red); }
+  .pillar-kicker { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+  .pillar-panel h2 { margin: 0; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em; color: var(--text); }
+  .pillar-panel > p { margin: 0; color: var(--text-secondary); font-size: 14.5px; line-height: 1.55; }
+  .pillar-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pillar-links a {
+    display: inline-flex; padding: 8px 14px; border-radius: 10px; font-size: 13px; font-weight: 800; text-decoration: none;
+    background: var(--accent-soft); color: var(--accent-text); border: 1px solid var(--accent-border);
+  }
+  .pillar-cyber .pillar-links a { background: var(--red-soft); color: var(--red-text); border-color: var(--red-border); }
+  .pillar-links a:hover, .pillar-links a:focus-visible { filter: brightness(0.96); text-decoration: underline; }
+  .feature-heading { margin: 6px 0 0; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+  .feature-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .feature-list a { display: block; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-subtle); text-decoration: none; color: var(--text); }
+  .feature-list a:hover, .feature-list a:focus-visible { border-color: var(--accent); }
+  .feature-list strong { display: block; font-size: 14px; }
+  .feature-list span { display: block; font-size: 12.5px; color: var(--text-secondary); line-height: 1.45; margin-top: 2px; }
+  .home-briefing-heading { margin: 8px 0 4px; font-size: 20px; letter-spacing: -0.02em; color: var(--text); }
+  .home-briefing-copy { margin: 0 0 12px; color: var(--text-secondary); font-size: 14.5px; max-width: 720px; }
+  .home-briefing-link { display: inline-block; margin: 0 0 28px; font-weight: 800; font-size: 14px; }
+  .guides-box { margin: 0 0 18px; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--card); box-shadow: var(--shadow-sm); }
+  .guides-heading { margin: 0 0 10px; font-size: 17px; letter-spacing: -0.01em; color: var(--text); }
+  @media (max-width: 860px) {
+    .pillar-grid { grid-template-columns: 1fr; }
+    .home-hero { padding: 22px 18px; }
+  }
 </style>
 </head>
 <body>
@@ -2029,6 +2111,7 @@
   <div id="home"></div>
   <!-- Section 1: Curated Tools Directory -->
   <section class="section-wrap" id="radar">
+    <!--HOME_HERO:BEGIN-->
     <!-- Layout 1 Hero Bento Row: Royal Blue Command Banner + Live Cybersecurity News -->
     <div class="portal-hero-grid">
       <div class="hero-blue-banner">
@@ -2118,6 +2201,7 @@
       <span class="eq-cta">1930 Helpline &amp; Scam Alerts →</span>
     </div>
 
+    <!--NEWSLETTER:BEGIN-->
     <!-- The Cipherati Morning Briefing Newsletter Card -->
     <div class="newsletter-card" id="newsletter-signup-card">
       <div class="newsletter-card-left">
@@ -2139,6 +2223,9 @@
         </form>
       </div>
     </div>
+
+    <!--NEWSLETTER:END-->
+    <!--HOME_HERO:END-->
 
     <div class="radar-header" id="radar-directory-anchor">
       <div id="tools"></div>
@@ -8557,7 +8644,7 @@ function selectOmniboxHit(type, idOrIdx) {
   } else if (type === "threat") {
     jumpToThreatStory(String(idOrIdx));
   } else if (type === "scam") {
-    switchView("scams");
+    if (switchView("scams", { fn: "selectOmniboxHit", args: ["scam", String(idOrIdx)] }) === false) return;
     setTimeout(() => {
       const card = document.getElementById("scam-" + idOrIdx);
       if (card) {
@@ -8567,7 +8654,7 @@ function selectOmniboxHit(type, idOrIdx) {
       }
     }, 80);
   } else if (type === "tool") {
-    switchView("tools");
+    if (switchView("tools", { fn: "selectOmniboxHit", args: ["tool", String(idOrIdx)] }) === false) return;
     const qInput = document.getElementById("q");
     if (qInput) {
       qInput.value = String(idOrIdx);
@@ -8644,7 +8731,7 @@ function handleOmniboxInput(val) {
 }
 
 function jumpToRealitySymptom(symptomKey) {
-  switchView("realities");
+  if (switchView("realities", { fn: "jumpToRealitySymptom", args: [symptomKey] }) === false) return;
   setTimeout(() => {
     const chips = Array.from(document.querySelectorAll(".symptom-chip"));
     const target = chips.find(btn => (btn.getAttribute("onclick") || "").includes("'" + symptomKey + "'"));
@@ -8654,7 +8741,7 @@ function jumpToRealitySymptom(symptomKey) {
 }
 
 function jumpToThreatStory(threatId) {
-  switchView("news");
+  if (switchView("news", { fn: "jumpToThreatStory", args: [threatId] }) === false) return;
   selectThreatCategory("all");
   const qInput = document.getElementById("threat-q");
   if (qInput) qInput.value = "";
@@ -8712,7 +8799,7 @@ function renderHeroNewsTicker(threats) {
 }
 
 function filterByStackCategory(catName) {
-  switchView("tools");
+  if (switchView("tools", { fn: "filterByStackCategory", args: [catName] }) === false) return;
   activeCat = catName;
   document.querySelectorAll("#category-bar .cat-pill").forEach(b => {
     b.classList.toggle("active", (b.dataset.cat || "") === catName);
@@ -8725,7 +8812,35 @@ function filterByStackCategory(catName) {
 applyTheme(getInitialTheme());
 
 let compareList = [];
-let currentView = "home";
+// Multi-page awareness: every public URL renders only its own view. PAGE_VIEW comes from
+// <meta name="cipherati-view">. Asking for a view that lives on another page navigates there.
+const PAGE_VIEW = (document.querySelector('meta[name="cipherati-view"]') || {}).content || "home";
+const VIEW_PAGES = { home: "./", tools: "./ai-tools.html", realities: "./ai-realities.html", news: "./cybersecurity-news.html", scams: "./scam-alerts.html" };
+const PENDING_KEY = "cipherati_pending_action";
+function normalizeView(v) { return v === "threats" ? "news" : v; }
+function hashBelongsToView(hash, view) {
+  if (view === "scams") return hash.startsWith("#scams");
+  if (view === "news") return hash.startsWith("#news") || hash.startsWith("#threats");
+  if (view === "realities") return hash.startsWith("#realities");
+  if (view === "tools") return hash === "#tools" || hash.startsWith("#tools/");
+  return hash === "#newsletter-unsubscribe" || hash === "#unsubscribe";
+}
+function crossPageNavigate(view, pending) {
+  const target = normalizeView(view);
+  try { if (pending) sessionStorage.setItem(PENDING_KEY, JSON.stringify(pending)); } catch (e) {}
+  const hash = window.location.hash || "";
+  window.location.href = (VIEW_PAGES[target] || "./") + (hashBelongsToView(hash, target) ? hash : "");
+}
+function runPendingAction() {
+  try {
+    const raw = sessionStorage.getItem(PENDING_KEY);
+    if (!raw) return;
+    sessionStorage.removeItem(PENDING_KEY);
+    const p = JSON.parse(raw);
+    if (p && typeof window[p.fn] === "function") window[p.fn](...(p.args || []));
+  } catch (e) {}
+}
+let currentView = PAGE_VIEW;
 let currentLayout = "cards";
 let allTools = [];
 let allCategories = [];
@@ -8743,7 +8858,9 @@ function selectCategory(cat) {
 }
 let searchQ = "";
 
-const $ = s => document.querySelector(s);
+// Missing elements resolve to a detached, hidden node so pages that render only one view
+// (and therefore lack the other views' containers) never throw on lookups.
+const $ = s => document.querySelector(s) || (() => { const d = document.createElement("div"); d.style.display = "none"; return d; })();
 const esc = s => String(s || "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const safeUrl = (u) => {
   const s = String(u || "").trim();
@@ -8815,7 +8932,7 @@ function shareReality(idx, network) {
 
 // Deep-link entry point used by the Executive Brief cards.
 function openReality(idx) {
-  switchView("realities");
+  if (switchView("realities", { fn: "openReality", args: [idx] }) === false) return;
   if (typeof history !== "undefined" && history.replaceState) history.replaceState(null, "", `#realities/${idx + 1}`);
   setTimeout(() => {
     const card = document.getElementById(`reality-${idx}`);
@@ -8831,13 +8948,18 @@ function openReality(idx) {
 // hidden — the metric badge on the card already carries that information.
 const BOILERPLATE_WHY = /verified GitHub stars\.$|upvotes on Hacker News\.$|likes on Hugging Face\.$|vetted for production\.$|production users\.$|Community signal:|Indexed open-source|Editorially indexed/i;
 
+// Internal Cipherati review first; the official repository/product URL is a labelled secondary link.
+function toolReviewHref(tool) {
+  return tool && tool.slug ? `/tools/${encodeURIComponent(tool.slug)}.html` : safeUrl(tool && tool.url);
+}
+
 // Prefer the tool's real site icon over a generic emoji; the emoji stays as fallback.
 function toolIconHtml(tool) {
   const emoji = esc(tool.emoji || "⚡");
   let domain = "";
   try { domain = new URL(tool.url).hostname; } catch {}
   if (!domain) return emoji;
-  return `<span class="icon-fallback">${emoji}</span><img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=64" alt="" loading="lazy" onload="const fb=this.parentElement.querySelector('.icon-fallback');if(fb)fb.style.display='none';" onerror="this.remove()" style="position:absolute;inset:0;margin:auto;" />`;
+  return `<span class="icon-fallback">${emoji}</span><img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=64" alt="" width="22" height="22" loading="lazy" onload="const fb=this.parentElement.querySelector('.icon-fallback');if(fb)fb.style.display='none';" onerror="this.remove()" style="position:absolute;inset:0;margin:auto;" />`;
 }
 
 // Decision badges leaders filter by, derived from facts we already have.
@@ -9042,6 +9164,7 @@ function closeInspector() {
 }
 
 function render() {
+  if (!document.getElementById("grid")) return; // pages without the tools directory
   const grid = $("#grid");
   const empty = $("#empty-state");
   const countBadge = $("#tool-count-badge");
@@ -9085,9 +9208,8 @@ function render() {
               <tr>
                 <td style="font-weight:700;color:var(--text-muted);">${idx + 1}</td>
                 <td>
-                  <a class="tbl-name" href="${safeUrl(tool.url)}" target="_blank" rel="noopener noreferrer">
+                  <a class="tbl-name" href="${toolReviewHref(tool)}">
                     <span>${esc(tool.name)}</span>
-                    <span class="tool-name-link">↗</span>
                   </a>
                 </td>
                 <td><span class="badge cat">${esc(tool.category)}</span></td>
@@ -9095,6 +9217,7 @@ function render() {
                 <td><div style="display:flex;gap:5px;flex-wrap:wrap;">${decisionBadges(tool)}${renderSignals(tool.signals)}</div></td>
                 <td>
                   <div style="display:flex;gap:6px;align-items:center;">
+                    <a class="tool-ext" href="${safeUrl(tool.url)}" target="_blank" rel="noopener noreferrer">Official source ↗</a>
                     <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect Tool →</button>
                     <button type="button" class="share-btn" style="width:28px;height:28px;" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
                   </div>
@@ -9112,27 +9235,28 @@ function render() {
   filtered.forEach((tool, idx) => {
     if (layout === "list") {
       html += `
-        <a class="tool-row" href="${safeUrl(tool.url)}" target="_blank" rel="noopener noreferrer">
+        <div class="tool-row">
           <span class="row-rank">${idx + 1}</span>
           <div class="row-icon">${toolIconHtml(tool)}</div>
           <div class="row-main">
-            <div class="row-name">${esc(tool.name)} <span class="tool-name-link">↗</span></div>
+            <div class="row-name"><a class="tool-card-link" href="${toolReviewHref(tool)}">${esc(tool.name)}</a></div>
             <p class="row-tag">${esc(tool.tagline)}</p>
           </div>
           <div class="row-meta">
             <span class="badge cat">${esc(tool.category)}</span>
             ${decisionBadges(tool)}
             ${renderSignals(tool.signals)}
+            <a class="tool-ext" href="${safeUrl(tool.url)}" target="_blank" rel="noopener noreferrer">Official source ↗</a>
             <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect →</button>
           </div>
           <button class="share-btn" type="button" title="Share this tool" aria-label="Share ${esc(tool.name)}" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
-        </a>
+        </div>
       `;
       return;
     }
 
     html += `
-      <a class="tool-card" href="${safeUrl(tool.url)}" target="_blank" rel="noopener noreferrer">
+      <article class="tool-card">
         <div class="tool-card-top-row">
           <span class="tool-cat-kicker">${esc(tool.category)}</span>
           <button class="share-btn" type="button" title="Share this tool" aria-label="Share ${esc(tool.name)}" onclick="shareTool(event, ${idx})">${SHARE_ICON}</button>
@@ -9140,7 +9264,7 @@ function render() {
         <div class="tool-top">
           <div class="tool-icon">${toolIconHtml(tool)}</div>
           <div style="flex: 1; min-width: 0;">
-            <div class="tool-name">${esc(tool.name)} <span class="tool-name-link">↗</span></div>
+            <div class="tool-name"><a class="tool-card-link" href="${toolReviewHref(tool)}">${esc(tool.name)}</a></div>
             <p class="tool-tag">${esc(tool.tagline)}</p>
           </div>
         </div>
@@ -9150,16 +9274,24 @@ function render() {
             ${decisionBadges(tool)}
             ${renderSignals(tool.signals)}
           </div>
-          <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect Tool →</button>
+          <div class="tool-meta-links">
+            <a class="tool-ext" href="${safeUrl(tool.url)}" target="_blank" rel="noopener noreferrer">Official source ↗</a>
+            <button type="button" class="inspect-btn" onclick="openInspector(event, ${idx})">Inspect Tool →</button>
+          </div>
         </div>
-      </a>
+      </article>
     `;
   });
 
   grid.innerHTML = html;
 }
 
-function switchView(viewName) {
+function switchView(viewName, pending) {
+  const targetView = normalizeView(viewName);
+  if (targetView !== PAGE_VIEW && VIEW_PAGES[targetView]) {
+    crossPageNavigate(targetView, pending);
+    return false;
+  }
   currentView = viewName;
   const radarSection = document.getElementById("radar");
   const realitiesSection = document.getElementById("realities");
@@ -9247,7 +9379,11 @@ function bootstrapFromDom() {
     const hfBadge = card.querySelector(".badge.source-hf");
     const hnBadge = card.querySelector(".badge.source-hn");
     const iconEl = card.querySelector(".tool-icon");
-    const url = card.getAttribute("href") || "";
+    const extEl = card.querySelector(".tool-ext");
+    const reviewEl = card.querySelector(".tool-card-link");
+    const url = extEl ? (extEl.getAttribute("href") || "") : (card.getAttribute("href") || "");
+    const slugMatch = reviewEl ? (reviewEl.getAttribute("href") || "").match(/^\/tools\/([^/]+)\.html$/) : null;
+    const slug = slugMatch ? decodeURIComponent(slugMatch[1]) : "";
     const name = nameEl ? nameEl.textContent.replace("↗", "").trim() : "";
     const tagline = tagEl ? tagEl.textContent.trim() : "";
     const category = catEl ? catEl.textContent.trim() : "";
@@ -9275,6 +9411,7 @@ function bootstrapFromDom() {
     }
     list.push({
       name,
+      slug,
       tagline,
       url,
       category,
@@ -9363,6 +9500,7 @@ async function init() {
     render();
 
     routeHash(window.location.hash || "", json.categories || []);
+    runPendingAction();
   } catch (err) {
     console.error("Failed to load tools.json", err);
   }
@@ -9415,10 +9553,10 @@ function routeHash(hash, categories) {
     setTimeout(() => {
       if (typeof openUnsubscribeModal === "function") openUnsubscribeModal();
     }, 80);
-  } else if (hash === "#home" || !hash || hash === "#") {
+  } else if (hash === "#home") {
     switchView("home");
   } else {
-    switchView("home");
+    switchView(PAGE_VIEW);
   }
 }
 

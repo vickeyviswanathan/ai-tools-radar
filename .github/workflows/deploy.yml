@@ -50,13 +50,13 @@ jobs:
       - name: Run Strict Quality, Safety & Anti-Junk Gate
         run: npm test
 
-      - name: Persist Newsletter Sent Ledger (Prevent Any Repeat Scam/Tool/Reality)
+      - name: Persist Newsletter Sent Ledger & Sitemap Lastmod Ledger (Prevent Any Repeat Scam/Tool/Reality)
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
           git config user.name "Cipherati Bot"
           git config user.email "briefing@cipherati.com"
-          git add public/data/newsletter-sent-ledger.json
-          git diff --staged --quiet || git commit -m "chore(newsletter): update sent-items ledger [skip ci]"
+          git add public/data/newsletter-sent-ledger.json data/lastmod-ledger.json
+          git diff --staged --quiet || git commit -m "chore(newsletter): update sent-items and lastmod ledgers [skip ci]"
           git push origin HEAD:main || true
 
       - name: Upload artifact

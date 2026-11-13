@@ -1,0 +1,586 @@
+{
+  "ranAt": "2026-11-13T18:38:24.224Z",
+  "failures": 0,
+  "results": [
+    {
+      "name": "home @360px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 360 vs 360"
+    },
+    {
+      "name": "home @360px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "home @360px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home @768px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 768 vs 768"
+    },
+    {
+      "name": "home @768px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "home @768px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home @1440px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 1440 vs 1440"
+    },
+    {
+      "name": "home @1440px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "home @1440px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ai-tools @360px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 360 vs 360"
+    },
+    {
+      "name": "ai-tools @360px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "ai-tools @360px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ai-tools @768px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 768 vs 768"
+    },
+    {
+      "name": "ai-tools @768px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "ai-tools @768px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ai-tools @1440px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 1440 vs 1440"
+    },
+    {
+      "name": "ai-tools @1440px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "ai-tools @1440px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ai-realities @360px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 360 vs 360"
+    },
+    {
+      "name": "ai-realities @360px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "ai-realities @360px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ai-realities @768px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 768 vs 768"
+    },
+    {
+      "name": "ai-realities @768px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "ai-realities @768px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ai-realities @1440px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 1440 vs 1440"
+    },
+    {
+      "name": "ai-realities @1440px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "ai-realities @1440px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cyber-news @360px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 360 vs 360"
+    },
+    {
+      "name": "cyber-news @360px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "cyber-news @360px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cyber-news @768px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 768 vs 768"
+    },
+    {
+      "name": "cyber-news @768px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "cyber-news @768px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cyber-news @1440px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 1440 vs 1440"
+    },
+    {
+      "name": "cyber-news @1440px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "cyber-news @1440px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "scam-alerts @360px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 360 vs 360"
+    },
+    {
+      "name": "scam-alerts @360px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "scam-alerts @360px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "scam-alerts @768px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 768 vs 768"
+    },
+    {
+      "name": "scam-alerts @768px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "scam-alerts @768px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "scam-alerts @1440px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 1440 vs 1440"
+    },
+    {
+      "name": "scam-alerts @1440px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "scam-alerts @1440px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "newsletter @360px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 360 vs 360"
+    },
+    {
+      "name": "newsletter @360px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "newsletter @360px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "newsletter @768px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 768 vs 768"
+    },
+    {
+      "name": "newsletter @768px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "newsletter @768px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "newsletter @1440px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 1440 vs 1440"
+    },
+    {
+      "name": "newsletter @1440px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "newsletter @1440px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide-upi @360px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 360 vs 360"
+    },
+    {
+      "name": "guide-upi @360px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "guide-upi @360px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide-upi @768px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 768 vs 768"
+    },
+    {
+      "name": "guide-upi @768px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "guide-upi @768px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide-upi @1440px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 1440 vs 1440"
+    },
+    {
+      "name": "guide-upi @1440px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "guide-upi @1440px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide-digital-arrest @360px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 360 vs 360"
+    },
+    {
+      "name": "guide-digital-arrest @360px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "guide-digital-arrest @360px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide-digital-arrest @768px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 768 vs 768"
+    },
+    {
+      "name": "guide-digital-arrest @768px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "guide-digital-arrest @768px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide-digital-arrest @1440px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 1440 vs 1440"
+    },
+    {
+      "name": "guide-digital-arrest @1440px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "guide-digital-arrest @1440px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide-report @360px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 360 vs 360"
+    },
+    {
+      "name": "guide-report @360px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "guide-report @360px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide-report @768px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 768 vs 768"
+    },
+    {
+      "name": "guide-report @768px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "guide-report @768px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide-report @1440px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 1440 vs 1440"
+    },
+    {
+      "name": "guide-report @1440px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "guide-report @1440px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tool-ollama @360px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 360 vs 360"
+    },
+    {
+      "name": "tool-ollama @360px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "tool-ollama @360px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tool-ollama @768px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 768 vs 768"
+    },
+    {
+      "name": "tool-ollama @768px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "tool-ollama @768px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tool-ollama @1440px: no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth 1440 vs 1440"
+    },
+    {
+      "name": "tool-ollama @1440px: one H1 at runtime",
+      "ok": true,
+      "detail": "h1 count 1"
+    },
+    {
+      "name": "tool-ollama @1440px: no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ai-tools: directory renders cards",
+      "ok": true,
+      "detail": "223 cards"
+    },
+    {
+      "name": "ai-tools: client-rendered cards link to /tools/ review first",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ai-tools: every card has labelled external 'Official source' link",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ai-tools: search filters the grid",
+      "ok": true,
+      "detail": "5 of 223"
+    },
+    {
+      "name": "ai-tools: category link filters to one category",
+      "ok": true,
+      "detail": "36 Coding tools"
+    },
+    {
+      "name": "ai-tools: #tools/<category> deep link pre-filters",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "theme toggle switches light/dark",
+      "ok": true,
+      "detail": "light -> dark"
+    },
+    {
+      "name": "home: two primary CTAs and guide + review links present",
+      "ok": true,
+      "detail": "{\"tools\":true,\"scam\":true,\"guides\":true,\"review\":3}"
+    },
+    {
+      "name": "home: AI and Cybersecurity pillars have equal width and top alignment",
+      "ok": true,
+      "detail": "{\"aw\":551,\"cw\":551,\"at\":498,\"ct\":498}"
+    },
+    {
+      "name": "sidebar 'AI Realities' navigates to /ai-realities.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "realities page shows its reality cards after navigation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "legacy deep link /#scams/<id> lands on /scam-alerts.html and highlights the card",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "legacy deep link /#realities/3 lands on /ai-realities.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "legacy deep link /#news lands on /cybersecurity-news.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "omnibox shows cross-pillar hits",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "omnibox scam hit jumps to /scam-alerts.html and focuses the card",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "scam-alerts: search filter narrows results",
+      "ok": true,
+      "detail": "4 of 19"
+    },
+    {
+      "name": "scam-alerts: guides panel with 3 guide links is visible",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cyber-news: category filter works",
+      "ok": true,
+      "detail": "8 of 21"
+    },
+    {
+      "name": "guide upi-fraud-what-to-do: related guide links present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide upi-fraud-what-to-do: tables are mobile-scroll wrapped",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide digital-arrest-scam-india: related guide links present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide digital-arrest-scam-india: tables are mobile-scroll wrapped",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide report-scam-call-india: related guide links present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "guide report-scam-call-india: tables are mobile-scroll wrapped",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "keyboard: Tab moves focus through interactive elements",
+      "ok": true,
+      "detail": "A:#home > A:./ > A:./ai-tools.html > A:./ai-realities.html > A:./cybersecurity-news.html > A:./scam-alerts.html"
+    }
+  ]
+}
