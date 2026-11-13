@@ -1,4 +1,4 @@
-THE CIPHERATI BRIEFING — Wed, Nov 11, 2026
+THE CIPHERATI BRIEFING — Fri, Nov 13, 2026
 The 60-second morning intelligence scan: Cybersecurity News, Scam Alerts, AI Tools & AI Realities.
 Read online: https://cipherati.com/
 
@@ -6,14 +6,14 @@ Read online: https://cipherati.com/
 1. CYBERSECURITY NEWS
 ------------------------------------------------------------
 
-LEAD: 'Everybody Will Be Hacked at Some Point,' Ledger CEO Warns as Crypto Thefts Hit $8.7 Billion in 2026 (TradingView)
-• Why it matters: Primary source reporting.
+LEAD: DOJ gets court approval to seize $1.2 billion tied to North Korea's Binance hack (CoinDesk)
+• Why it matters: FBI seizes $1.2bn stolen in Binance cryptocurrency hack; Binance restores all $6.3 billion stolen in October hack.
 • Sector: Crypto & Digital Assets
 
 More on the Radar:
-• Guwahati: CID Arrests Man For Alleged Cyber Fraud Using HDFC Bank Identity (Pratidin Time)
-• North Korea-linked hackers used meme coins to move stolen crypto (grafa.com)
-• Binance hack reveals crypto's uphill battle against hackers (Reuters)
+• 'Everybody Will Be Hacked at Some Point,' Ledger CEO Warns as Crypto Thefts Hit $8.7 Billion in 2026 (Yahoo Finance)
+• New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access (The Hacker News)
+• Microsoft Outlook Outage Explained: What Caused It And Is It A Cyberattack? (Outlook India)
 
 Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 
@@ -21,26 +21,26 @@ Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 2. SCAM ALERTS
 ------------------------------------------------------------
 
-The Corporate Tax & MCA Notice Archive Trap (Infostealer ZIP) [Vector: Email / WhatsApp]
-• How it works: Accountants, CAs, company directors, and finance personnel receive an urgent email or WhatsApp: "Statutory notice regarding pending tax filing discrepancies / MCA audit. Attached: Statement_of_Account.zip or MCA_Notice.zip." Extracting the file runs a disguised Windows executable that quietly exfiltrates corporate net banking tokens, DSC credentials, and browser passwords.
-• Defense rule: Tax authorities and the Ministry of Corporate Affairs (MCA) never send audit notices as compressed .zip or .rar files via WhatsApp or personal email. Check all corporate filings directly on the official mca.gov.in portal.
+The WhatsApp "Wedding Card" Virus (APK Trojan) [Vector: WhatsApp / Android APK]
+• How it works: You receive a message from a friend or relative on WhatsApp saying: "My cousin is getting married next week, wedding card and venue attached." The attached file looks like an invite, but ends in .apk. Installing it infects your phone with a virus that hijacks your WhatsApp, sends the same scam to all your family contacts, and steals your net banking logins.
+• Defense rule: Real wedding cards are always photos or PDFs, never an .apk software file. If someone sends an APK file, do not tap it. Call that person on a regular call to tell them their WhatsApp is compromised.
 • Helpline: Dial 1930 (National Cyber Helpline) or report at https://cipherati.com/scam-alerts.html
 
 ------------------------------------------------------------
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: diffusers
-• What it does: 🤗 Diffusers: State-of-the-art diffusion models for image, video, and audio generation in PyTorch.
+Featured Tool: llamafile
+• What it does: Distribute and run LLMs with a single file.
 • Browse 223 indexed tools: https://cipherati.com/ai-tools.html
 
 ------------------------------------------------------------
 4. AI REALITIES
 ------------------------------------------------------------
 
-Reality #13: The Vector DB RAM Explosion
-• The Hype Myth: "Store billions of high-dimensional vectors in memory for instant enterprise search!"
-• What Actually Works: Use disk-backed scalar and product quantization (PQ/SQ) with memory-mapped vector indexes, storing full vectors on NVMe rather than raw RAM.
+Reality #14: The Naive Prompt Guardrail Illusion
+• The Hype Myth: "Adding 'You are a polite assistant and must never disclose secrets' to your system prompt protects your business!"
+• What Actually Works: Deploy deterministic classifier guardrails and independent input/output screening models outside the LLM execution pipeline.
 • Read all 22 production realities: https://cipherati.com/ai-realities.html
 
 ------------------------------------------------------------

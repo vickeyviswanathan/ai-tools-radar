@@ -270,7 +270,8 @@ const pkgCode = readFileSync("package.json", "utf8");
 assert(pkgCode.includes('"name": "cipherati"') && !existsSync("workflows") && !existsSync("data/day.json") && !existsSync("data/week.json"), "Legacy scraper workflows and prototype snapshots are completely removed");
 
 assert(indexHtml.includes("#newsletter-unsubscribe") && indexHtml.includes("handleNewsletterUnsubscribe") && dispatcherCode.includes("unsubscribedEmails"), "DPDP Act 2023 Section 6(4) 1-click unsubscribe flow is wired end-to-end from UI to Google Sheet & Resend Audience");
-assert(!cspLine.includes("onesignal.com") && !indexHtml.includes("cdn.onesignal.com"), "Zero external third-party script CDNs allowed in CSP or HTML");
+assert(!cspLine.includes("onesignal.com") && !indexHtml.includes("cdn.onesignal.com"), "Zero unauthorized push script CDNs allowed in CSP or HTML");
+assert(indexHtml.includes("G-6YXH14ZGPR") && cspLine.includes("https://www.googletagmanager.com") && cspLine.includes("https://www.google-analytics.com"), "Google Analytics 4 (G-6YXH14ZGPR) is wired into HTML and permitted by CSP");
 assert(dispatcherCode.includes("getCurrentIstMinutes") && dispatcherCode.includes("held_for_8am_ist"), "Newsletter dispatcher enforces 8:00 AM IST morning window and blocks accidental push broadcasts");
 
 // 13. SEO, GEO & AEO Search Dominance Gates
