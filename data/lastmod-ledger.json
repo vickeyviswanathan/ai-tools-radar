@@ -1,6 +1,6 @@
 {
   "https://cipherati.com/": {
-    "hash": "ea20fb45f524a7d3",
+    "hash": "34aebb1f2017ab42",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/ai-realities.html": {
@@ -8,15 +8,11 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/ai-tools.html": {
-    "hash": "9c4f55bd98603c19",
+    "hash": "f3d1dd2a506ae6af",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/autogpt-vs-dify.html": {
     "hash": "97d2cf600a666d38",
-    "lastmod": "2026-11-13"
-  },
-  "https://cipherati.com/compare/autogpt-vs-skills.html": {
-    "hash": "ccad81f45ca2d3df",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/cc-switch-vs-graphify.html": {
@@ -27,12 +23,12 @@
     "hash": "646b4ac4c184322d",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/cc-switch-vs-understand-anything.html": {
-    "hash": "3c6abe0a92b1b958",
+  "https://cipherati.com/compare/cc-switch-vs-openhands.html": {
+    "hash": "92b054ec3084f197",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/cc-switch-vs-vs-code-with-in-built-ai-agents.html": {
-    "hash": "b5416cf1bb35f63b",
+  "https://cipherati.com/compare/cc-switch-vs-understand-anything.html": {
+    "hash": "3c6abe0a92b1b958",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/deepseek-harness-vs-autogpt.html": {
@@ -67,16 +63,16 @@
     "hash": "ada459175eaf2770",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/compare/ecc-vs-openhands.html": {
+    "hash": "7c9ccbf58988a70d",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/compare/ecc-vs-understand-anything.html": {
     "hash": "ff4aefe2e0ae04f8",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/ecc-vs-vs-code-with-in-built-ai-agents.html": {
-    "hash": "19fd24a885e4cb64",
-    "lastmod": "2026-11-13"
-  },
   "https://cipherati.com/compare/firecrawl-vs-ghidra.html": {
-    "hash": "7dd5cbc9499c9b21",
+    "hash": "d92d038be959687f",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/firecrawl-vs-ragflow.html": {
@@ -88,23 +84,19 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/ghidra-vs-ragflow.html": {
-    "hash": "797aeca856c9ba54",
-    "lastmod": "2026-11-13"
-  },
-  "https://cipherati.com/compare/ghidra-vs-scrapling.html": {
-    "hash": "1e935f57bace51db",
+    "hash": "a674d9b40688bd70",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/graphify-vs-openai-codex.html": {
     "hash": "813a9790af863fa4",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/graphify-vs-understand-anything.html": {
-    "hash": "29d668b999da67ad",
+  "https://cipherati.com/compare/graphify-vs-openhands.html": {
+    "hash": "25ee4267c80c9804",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/graphify-vs-vs-code-with-in-built-ai-agents.html": {
-    "hash": "94b899484dc101b2",
+  "https://cipherati.com/compare/graphify-vs-understand-anything.html": {
+    "hash": "29d668b999da67ad",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/hermes-agent-vs-autogpt.html": {
@@ -123,12 +115,16 @@
     "hash": "816e8c1292494789",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/llamafactory-vs-llama-cpp.html": {
-    "hash": "7f711e1ef3997351",
+  "https://cipherati.com/compare/llama-cpp-vs-llamafactory.html": {
+    "hash": "67342a927f88dbf7",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/lm-studio-vs-llama-cpp.html": {
-    "hash": "cb5f17ad6687f866",
+  "https://cipherati.com/compare/llama-cpp-vs-lm-studio.html": {
+    "hash": "dc725b490e4818ca",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/compare/llama-cpp-vs-vllm.html": {
+    "hash": "246415ed14ca6b66",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/lm-studio-vs-llamafactory.html": {
@@ -167,32 +163,36 @@
     "hash": "a572b5f9b4c1a6bb",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/compare/openai-codex-vs-openhands.html": {
+    "hash": "ab869e4a259efd55",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/compare/openai-codex-vs-understand-anything.html": {
     "hash": "efa73e9f9b22bb7e",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/openai-codex-vs-vs-code-with-in-built-ai-agents.html": {
-    "hash": "c2b6581cf9097e6f",
+  "https://cipherati.com/compare/openhands-vs-understand-anything.html": {
+    "hash": "88f446564247602a",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/public-apis-vs-firecrawl.html": {
-    "hash": "8b615143a2212e35",
+    "hash": "49463fbef097956a",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/public-apis-vs-ghidra.html": {
-    "hash": "37c4064267c4a375",
+    "hash": "5b9010918fb0ae44",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/public-apis-vs-ragflow.html": {
-    "hash": "b28ef4492455a23d",
+    "hash": "47a03e3e7dc24e13",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/compare/public-apis-vs-rea.html": {
+    "hash": "7934f01062760ba2",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/public-apis-vs-scrapling.html": {
-    "hash": "f79916e7d9364600",
-    "lastmod": "2026-11-13"
-  },
-  "https://cipherati.com/compare/ragflow-vs-scrapling.html": {
-    "hash": "b13b38235f363c24",
+    "hash": "98219a8994f55f55",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/rea-vs-firecrawl.html": {
@@ -200,11 +200,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/rea-vs-ghidra.html": {
-    "hash": "8deccf4bbaa554a6",
-    "lastmod": "2026-11-13"
-  },
-  "https://cipherati.com/compare/rea-vs-public-apis.html": {
-    "hash": "7acaae2aab06f278",
+    "hash": "1f477852564d5683",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/rea-vs-ragflow.html": {
@@ -213,6 +209,18 @@
   },
   "https://cipherati.com/compare/rea-vs-scrapling.html": {
     "hash": "331c3638076d50c7",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/compare/scrapling-vs-ghidra.html": {
+    "hash": "b09e194c77beccca",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/compare/scrapling-vs-ragflow.html": {
+    "hash": "69357a00df8acd4c",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/compare/skills-vs-autogpt.html": {
+    "hash": "3a37922c05b96414",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/skills-vs-dify.html": {
@@ -255,10 +263,6 @@
     "hash": "ceed01f649f10ac4",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/vllm-vs-llama-cpp.html": {
-    "hash": "f2fe7a5ab9921096",
-    "lastmod": "2026-11-13"
-  },
   "https://cipherati.com/compare/vllm-vs-llamafactory.html": {
     "hash": "7d6cf67ac4d7e4db",
     "lastmod": "2026-11-13"
@@ -267,16 +271,12 @@
     "hash": "6dd606e8dedc21cf",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/vs-code-with-in-built-ai-agents-vs-understand-anything.html": {
-    "hash": "165cc0308f234f06",
-    "lastmod": "2026-11-13"
-  },
   "https://cipherati.com/cybersecurity-news.html": {
-    "hash": "043204a1d7fa86d4",
+    "hash": "340ea405746b1810",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/newsletter/today.html": {
-    "hash": "b64b86092a2efd0f",
+    "hash": "c89efc7ea14ed9fd",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/realities/the-agent-security-blindspot.html": {
@@ -515,12 +515,8 @@
     "hash": "63289929a40cfee7",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/agents.html": {
-    "hash": "693c03e9f05fd6f9",
-    "lastmod": "2026-11-13"
-  },
   "https://cipherati.com/tools/ai-agent-book.html": {
-    "hash": "9dd25646d6a6e333",
+    "hash": "2bccf819aaa095d9",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/ai-research-skills.html": {
@@ -535,12 +531,24 @@
     "hash": "c876d2259e394d37",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/aisoc.html": {
+    "hash": "d43151cddf0a03c1",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/amazon-q-developer-kiro-ide.html": {
     "hash": "c1c86c69ff654be1",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/antigravity-sdk-python.html": {
+    "hash": "a15e764d3ac61b63",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/anythingllm.html": {
     "hash": "9bf5dbb1e105bcf5",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/apktool.html": {
+    "hash": "c9c00f509a6b7f40",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/auto-photoshop-stablediffusion-plugin.html": {
@@ -556,7 +564,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/belle.html": {
-    "hash": "2f7f47b64da56d2f",
+    "hash": "b49278789bb6a0a0",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/bifrost-ai-gateway.html": {
@@ -565,6 +573,10 @@
   },
   "https://cipherati.com/tools/bitsandbytes.html": {
     "hash": "cbf4d0acf7f9f6f1",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/book-to-skill.html": {
+    "hash": "1fa2493e0cf41857",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/browser-use.html": {
@@ -584,11 +596,11 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/cherry-studio.html": {
-    "hash": "817260c631a2aa6c",
+    "hash": "1dcec24759e4a89a",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/chinese-llama-alpaca.html": {
-    "hash": "92e529d08e08808b",
+    "hash": "3e32a03dd42a67f2",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/chrome-devtools-mcp.html": {
@@ -620,7 +632,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/codewhale.html": {
-    "hash": "e145831ed7b1421f",
+    "hash": "a26d8e41daf68d37",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/codex-with-chatgpt.html": {
@@ -640,7 +652,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/context-mode.html": {
-    "hash": "1f966d9234ef2912",
+    "hash": "66caac4119364393",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/context7.html": {
@@ -665,6 +677,22 @@
   },
   "https://cipherati.com/tools/crawl4ai.html": {
     "hash": "ebb40f1b394a7989",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/crewai.html": {
+    "hash": "9a79d4b85267c035",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/cutter.html": {
+    "hash": "8c5003e257eca3f5",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/dashboard-icons.html": {
+    "hash": "4b9241ef8ce4f500",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/deepcamera.html": {
+    "hash": "39e7b7d7cd42f704",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/deepseek-harness.html": {
@@ -723,12 +751,12 @@
     "hash": "c6b1d7c151591231",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/dyad.html": {
-    "hash": "80d604b6c2e1132f",
-    "lastmod": "2026-11-13"
-  },
   "https://cipherati.com/tools/dynamo.html": {
     "hash": "8cc6e12cffcb264e",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/easyocr.html": {
+    "hash": "8026013352ad47bd",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/ecc.html": {
@@ -745,6 +773,10 @@
   },
   "https://cipherati.com/tools/fabric.html": {
     "hash": "6e8546b4d5f70b98",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/falco.html": {
+    "hash": "2e65f89bf1254139",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/faster-whisper.html": {
@@ -784,11 +816,11 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/ghidra.html": {
-    "hash": "ba9ea469b43f1cd1",
+    "hash": "81ec1b7c5cbda226",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/google-antigravity.html": {
-    "hash": "910e1275e2b75caf",
+  "https://cipherati.com/tools/giskard-oss.html": {
+    "hash": "6b2a10a5867fc59a",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/gpt-sovits.html": {
@@ -819,20 +851,28 @@
     "hash": "bbc59f3ea861f480",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/ifixai.html": {
+    "hash": "09ccfd095561ca53",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/imhex.html": {
+    "hash": "f7b3eb48c8434535",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/index-tts.html": {
     "hash": "f529eb6d917f84d2",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/inference.html": {
-    "hash": "45fbb3c085dd0986",
+    "hash": "7907be7bb8924c54",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/internvl.html": {
-    "hash": "9765a1f75c173928",
+    "hash": "8b22bd74b8953dac",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/invokeai.html": {
-    "hash": "c9b67865735c5969",
+    "hash": "65b5ef381d647622",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/iopaint.html": {
@@ -868,11 +908,15 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/kirara-ai.html": {
-    "hash": "513525f095306ec9",
+    "hash": "3459f20dd70aded6",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/kokoro.html": {
     "hash": "566473992465c135",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/kordoc.html": {
+    "hash": "93e673eb46777cb7",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/krita-ai-diffusion.html": {
@@ -880,7 +924,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/langchain-chatchat.html": {
-    "hash": "845023245d159453",
+    "hash": "6b54e24da8c548bc",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/langchain4j.html": {
@@ -892,19 +936,23 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/langfuse.html": {
-    "hash": "a019c7dff3011158",
+    "hash": "8d55d3dffc771ef2",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/langgraph.html": {
-    "hash": "33f83102bb5cb4d2",
+  "https://cipherati.com/tools/latex-ocr.html": {
+    "hash": "d03473b1ef7576e2",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/leon.html": {
     "hash": "53937143d44ece0f",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/librechat.html": {
+    "hash": "ccf4a6202cb917f8",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/lightpanda.html": {
-    "hash": "68b49fbfd2e3a444",
+    "hash": "5f1547d2ebbd7db2",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/litellm.html": {
@@ -944,7 +992,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/llm-action.html": {
-    "hash": "10cf6c8493d3d817",
+    "hash": "a9b19f6808bb182d",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/llmfit.html": {
@@ -979,12 +1027,16 @@
     "hash": "1f7b642b6ef18960",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/mcp-servers.html": {
+    "hash": "88be43bb3f43efa7",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/medusa.html": {
     "hash": "61909a02305bda1c",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/meetily.html": {
-    "hash": "a1b132bbc89aba58",
+    "hash": "780d246bbf791ffa",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/meilisearch.html": {
@@ -1023,8 +1075,8 @@
     "hash": "fe8d6cc923e58a2c",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/mova.html": {
-    "hash": "7ec6ba60c0bb76f7",
+  "https://cipherati.com/tools/moss-ttsd.html": {
+    "hash": "ce993d0adb416b67",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/ms-swift.html": {
@@ -1051,6 +1103,14 @@
     "hash": "86b4a093aeb07c7f",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/nuclei.html": {
+    "hash": "ad0eba8cda6b7015",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/nuwa-skill.html": {
+    "hash": "2993f6634cb570c0",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/nvidia-garak.html": {
     "hash": "5f99ec3a81b91873",
     "lastmod": "2026-11-13"
@@ -1061,10 +1121,6 @@
   },
   "https://cipherati.com/tools/ogam.html": {
     "hash": "4b5b627dc9c23692",
-    "lastmod": "2026-11-13"
-  },
-  "https://cipherati.com/tools/oh-my-claudecode.html": {
-    "hash": "399a34b8e74a6875",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/oh-my-openagent.html": {
@@ -1083,12 +1139,12 @@
     "hash": "9ff785c8c0d7dc45",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/onlook.html": {
-    "hash": "eaa107fb7d1f733c",
-    "lastmod": "2026-11-13"
-  },
   "https://cipherati.com/tools/open-design.html": {
     "hash": "0096c8f1e2c68195",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/open-parse.html": {
+    "hash": "4b40b33c7f59a93f",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/open-webui.html": {
@@ -1123,10 +1179,6 @@
     "hash": "e586a663c4a7762c",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/openviking.html": {
-    "hash": "911bbfd3911ddbac",
-    "lastmod": "2026-11-13"
-  },
   "https://cipherati.com/tools/openvino.html": {
     "hash": "22b4362d0aeebef1",
     "lastmod": "2026-11-13"
@@ -1136,19 +1188,31 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/orca.html": {
-    "hash": "0d1f28f10194f234",
+    "hash": "168bc1d0f0b582b6",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/oumi.html": {
     "hash": "7bb8275a5a10a75d",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/paddleocr.html": {
-    "hash": "dab7b186c73746b3",
+  "https://cipherati.com/tools/owasp-amass.html": {
+    "hash": "6787b610a4378aa6",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/pageindex.html": {
-    "hash": "9be18b58fd3e1168",
+  "https://cipherati.com/tools/owasp-coraza.html": {
+    "hash": "aab78f3368426bc5",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/owasp-defectdojo.html": {
+    "hash": "d90b6d55d8bd58f7",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/owasp-zap.html": {
+    "hash": "4995948dd294caea",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/paddleocr.html": {
+    "hash": "dab7b186c73746b3",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/paperclip.html": {
@@ -1187,8 +1251,12 @@
     "hash": "b2db16de29ec9aab",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/promptfoo.html": {
+    "hash": "8693141451dc0eb4",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/public-apis.html": {
-    "hash": "d880d764aa2aa415",
+    "hash": "01e2ae3e54b04eb0",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/pypdf.html": {
@@ -1207,8 +1275,16 @@
     "hash": "eeaac26d5673a0d8",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/radare2.html": {
+    "hash": "3f50e8bdb6d3092f",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/ragflow.html": {
     "hash": "079fabe53aa3743f",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/rea-video.html": {
+    "hash": "8accef4a2329401c",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/rea.html": {
@@ -1243,6 +1319,10 @@
     "hash": "8ff579529a49756e",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/semgrep.html": {
+    "hash": "74e1475ec0e613aa",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/sensevoice.html": {
     "hash": "51f79d0c520a475d",
     "lastmod": "2026-11-13"
@@ -1268,7 +1348,11 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/siyuan.html": {
-    "hash": "13771d64ab15c4f5",
+    "hash": "53fde186c10454f9",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/skill-seekers.html": {
+    "hash": "b59fce199693865c",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/skills.html": {
@@ -1277,6 +1361,10 @@
   },
   "https://cipherati.com/tools/soup.html": {
     "hash": "4af4d944ae0a7066",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/sqlmap.html": {
+    "hash": "0c19db5db7bcb433",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/stabilitymatrix.html": {
@@ -1299,16 +1387,40 @@
     "hash": "57b1158191da351e",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/t3code.html": {
+    "hash": "3fa64f0046890394",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/tesseract-js.html": {
+    "hash": "c368528e15436fec",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/tesseract.html": {
+    "hash": "803d0144040f745a",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/text-grab.html": {
+    "hash": "1a0d789e5228bbcb",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/tradingagents.html": {
+    "hash": "b21cf14c9f9edeb4",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/transformers.html": {
     "hash": "3a5021ab78004b37",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/trellis-2.html": {
-    "hash": "4d8b15b032efbe16",
+    "hash": "e04648c9eaea8f93",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/trendradar.html": {
-    "hash": "0e2cd095e4ab38a0",
+    "hash": "40a7bbe0dd014f89",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/trivy.html": {
+    "hash": "079997c20adde102",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/tts.html": {
@@ -1359,8 +1471,16 @@
     "hash": "b53fda149fb9f6c3",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/wan2-2-14b-fast.html": {
+    "hash": "1f827bcdeff6989a",
+    "lastmod": "2026-11-13"
+  },
   "https://cipherati.com/tools/wan2-2-14b-preview.html": {
-    "hash": "42a5228749422cd2",
+    "hash": "4c7e2ac9c9cdac5e",
+    "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/wazuh.html": {
+    "hash": "e971a9d098eb3d9d",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/weaviate.html": {
@@ -1387,12 +1507,8 @@
     "hash": "4cfed660e747ad29",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/xiaoyaosearch.html": {
-    "hash": "ae260436e08ae207",
-    "lastmod": "2026-11-13"
-  },
   "https://cipherati.com/tools/yft-design.html": {
-    "hash": "44ac660abda86c28",
+    "hash": "5bdf05711f103381",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/zvec.html": {
