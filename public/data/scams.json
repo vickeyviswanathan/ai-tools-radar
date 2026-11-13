@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T20:06:20.773Z",
+  "updatedAt": "2026-11-13T20:16:44.199Z",
   "scams": [
     {
       "id": "digital-arrest-video-call",
@@ -285,6 +285,861 @@
       "verifiedDate": "2026-10-30",
       "actionLinkText": "SEBI Investor Portal ↗",
       "actionUrl": "https://www.sebi.gov.in/"
+    },
+    {
+      "id": "sim-swap-esim-hijack-scam",
+      "category": "messaging",
+      "platform": "Telecom / SIM / SMS OTP",
+      "tag": "SIM Swap & eSIM",
+      "severity": "critical",
+      "title": "The SIM Swap / eSIM Hijack Scam",
+      "scam": "Fraudsters obtain your identity details through phishing or data leaks and convince your telecom provider—or trick you into approving an eSIM activation/SIM replacement request—to issue a duplicate SIM or transfer your mobile number to their device. Your phone suddenly drops to 'No Service' or 'SOS Only' while all banking OTPs, UPI re-registrations, and corporate MFA codes route straight to the attacker's SIM.",
+      "protection": "Enable a SIM PIN on your physical SIM, use app-based authenticators instead of SMS OTPs wherever possible, and treat any sudden unexplained loss of mobile network signal as an urgent security emergency—contact your telecom carrier immediately and check Sanchar Saathi.",
+      "sourceName": "DoT Sanchar Saathi & RBI Advisory",
+      "sourceUrl": "https://sancharsaathi.gov.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "DoT Sanchar Saathi Portal ↗",
+      "actionUrl": "https://sancharsaathi.gov.in/",
+      "playbook": {
+        "overview": "In a SIM Swap or eSIM Hijack scam, attackers hijack your active mobile number by transferring it to a new physical SIM or eSIM profile they control. Because Indian banking, UPI, Aadhaar, and many corporate login systems rely on SMS OTPs bound to your mobile number, controlling your SIM gives criminals direct access to financial accounts and workplace logins. It targets salaried employees, business owners, and senior executives whose numbers are linked to high-limit bank accounts.",
+        "initialContact": {
+          "channel": "SMS & Follow-up Phone Call",
+          "message": "[Illustrative Educational Example]\nSMS from VM-TELCO-ALERT: \"Dear Customer, your SIM card is scheduled for suspension in 2 hours due to incomplete eKYC / 4G-to-5G SIM profile mismatch. Reply 'SIM' or forward the 20-digit SIM activation code from your SMS to complete verification.\"\nFollow-up Call: \"Sir, I am calling from your telecom priority desk. You will receive an eSIM confirmation SMS—just read out the 6-digit code so your number stays active.\""
+        },
+        "howItWorks": [
+          "Information gathering: The fraudster collects your mobile number, full name, date of birth, or PAN/Aadhaar details from phishing forms, social media, or leaked databases.",
+          "Initiating the swap: They either visit a telecom retail outlet using forged KYC documents or trigger an online eSIM transfer / SIM replacement request.",
+          "Tricking the victim (for eSIM/consent-based swaps): They call or message you posing as telecom support, pressuring you to forward an OTP, scan an eSIM QR code, or dial a USSD call-forwarding code.",
+          "Network cut-off: Once the telecom operator activates the new SIM/eSIM, your genuine phone suddenly shows 'No Service', 'Emergency Calls Only', or loses mobile data.",
+          "Account takeover: The attacker now receives all SMS OTPs, resets netbanking and UPI PINs, approves high-value transfers, and attempts resets on email and corporate SSO accounts."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "Phone Status Bar & Email Alert (Simulated Educational Example)",
+          "screenBody": "Signal Bar: ❌ No Service / Emergency Calls Only (at 2:15 PM on a normal workday)\n\nEmail Notification (on office Wi-Fi):\n\"Subject: New eSIM Profile Activated / SIM Change Completed\"\n\"Alert: Your UPI app was registered on a new device.\"\n\"Bank SMS (missed on phone, seen in email statement): INR 1,45,000 debited via IMPS.\"",
+          "caption": "Victims often notice nothing until their phone loses signal completely while email alerts show password resets or bank debits."
+        },
+        "psychology": "Urgency and fear of service disruption. Losing mobile connectivity during work hours feels inconvenient, so employees rush to comply with a 'telecom support' caller before checking whether the request is genuine.",
+        "redFlags": [
+          "Sudden unexplained 'No Service' or 'SOS Only' on your phone while colleagues on the same network have full signal.",
+          "Receiving an unrequested SMS about SIM replacement, eSIM activation, or Mobile Number Portability (MNP).",
+          "A caller claiming your SIM will be deactivated in 2 hours unless you share an OTP or forward a 20-digit SIM/eSIM code.",
+          "Spam calls or missed-call floods just before your signal drops (used to distract you from reading genuine telecom warning SMS)."
+        ],
+        "consequences": [
+          "Financial loss: Rapid draining of savings accounts, credit cards, and overdraft limits via OTP-authorised transfers.",
+          "Identity & account lockouts: Attackers reset passwords on personal Gmail, WhatsApp, and linked cloud accounts.",
+          "Organisational risk: If your mobile number is used for corporate VPN, Microsoft 365/Google Workspace SMS MFA, or HR portals, attackers can attempt lateral access into company systems."
+        ],
+        "prevention": [
+          "Set a SIM PIN in your phone settings so a stolen physical SIM cannot be used in another handset.",
+          "Enable Telecom DND and register an alternate recovery email with your telecom operator so SIM-change alerts still reach you.",
+          "Switch personal and corporate logins from SMS OTP to hardware keys or authenticator apps (TOTP).",
+          "Never share any OTP, eSIM QR code, or 20-digit SIM serial number over a phone call or WhatsApp."
+        ],
+        "immediateAction": [
+          "Do not wait—borrow a colleague's phone or use Wi-Fi immediately if your mobile network drops unexpectedly without an outage.",
+          "Call your telecom provider's official customer care immediately to freeze the SIM and reverse any unauthorised eSIM/SIM swap.",
+          "Call your banks' 24x7 fraud helplines to freeze debit/credit cards, netbanking, and UPI.",
+          "Alert your company IT/Security desk if the compromised number is tied to corporate MFA or work accounts.",
+          "Dial 1930 and file a complaint at cybercrime.gov.in with timestamps of signal loss and any bank transaction alerts."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Helpline",
+            "detail": "Dial 1930 immediately (Golden Hour) to freeze fraudulent bank transfers.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "DoT Sanchar Saathi (Chakshu & Know Your Mobile)",
+            "detail": "Check mobile numbers issued in your name and report telecom fraud.",
+            "url": "https://sancharsaathi.gov.in/"
+          },
+          {
+            "name": "Telecom Operator Fraud Desk",
+            "detail": "Contact Airtel, Jio, Vi, or BSNL official helpline from another phone to block the swapped SIM."
+          }
+        ]
+      }
+    },
+    {
+      "id": "whatsapp-qr-linked-device-hijack",
+      "category": "messaging",
+      "platform": "WhatsApp Web / QR Code",
+      "tag": "Linked Device Hijack",
+      "severity": "high",
+      "title": "The WhatsApp QR Code / Linked Device Hijack",
+      "scam": "Fraudsters trick you into scanning a WhatsApp Web QR code or entering a 'Link with phone number' 8-character pairing code under the pretext of verifying a colleague's message, unlocking a PDF document, or claiming a reward. Once paired, the attacker runs your WhatsApp session silently on their browser, reads private and work chats, and messages your contacts asking for urgent money.",
+      "protection": "Never scan a WhatsApp Web QR code or enter an 8-digit 'Link a device' code sent by anyone. Regularly check WhatsApp Settings → Linked Devices and log out any browser or device you do not recognise.",
+      "sourceName": "CERT-In & I4C Cyber Dost Advisory",
+      "sourceUrl": "https://www.cert-in.org.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "CERT-In Official Portal ↗",
+      "actionUrl": "https://www.cert-in.org.in/",
+      "playbook": {
+        "overview": "WhatsApp allows up to four companion devices to stay linked to your primary phone. In a Linked Device Hijack, attackers exploit this legitimate feature by persuading you to scan their WhatsApp Web QR code or type in a pairing code. Unlike a full account takeover that logs you out, your own WhatsApp continues working normally—so the attacker can spy on messages and impersonate you to coworkers, family, and clients without you realising it.",
+        "initialContact": {
+          "channel": "WhatsApp Message from a Compromised Friend or Unknown HR/Vendor",
+          "message": "[Illustrative Educational Example]\n\"Hey! My WhatsApp is glitching on laptop and I need to verify this group invite/invoice PDF. Open WhatsApp → Linked Devices → Link a Device and enter this code: K7M2-9P4Q. Takes 5 seconds, please help!\""
+        },
+        "howItWorks": [
+          "Account setup: The attacker opens web.whatsapp.com on their computer and generates a login QR code or an 8-character 'Link with phone number' code.",
+          "Social engineering: Using a compromised friend's account, a fake HR message, or a bogus delivery/discount link, they ask you to scan the QR code or enter the pairing code inside 'Linked Devices'.",
+          "Silent pairing: As soon as you approve it, the attacker's browser syncs your recent chats, group conversations, and contact list.",
+          "Impersonation & lateral spread: The attacker messages your office colleagues, manager, or family members asking for an urgent ₹15,000–₹40,000 UPI transfer ('stuck in a meeting, will return by evening') and repeats the QR trick on your contacts."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "WhatsApp 'Linked Devices' Screen (Simulated Educational Example)",
+          "screenBody": "WhatsApp → Linked Devices\n\nDevice Status:\n• Google Chrome (Windows) — Last active today at 3:42 PM  [UNKNOWN LOCATION]\n\nMeanwhile, your colleague pings you on Slack/phone:\n\"Hey, did you just WhatsApp me asking for ₹25,000 on a stranger's UPI ID?\"",
+          "caption": "Because your phone stays logged in, the first clue is often a colleague calling to ask why you requested money—or an unfamiliar browser listed under Linked Devices."
+        },
+        "psychology": "Trust and helpfulness. When the request appears to come from a friend, teammate, or familiar vendor, employees want to help quickly and do not realise that 'Linked Devices' grants full live chat access.",
+        "redFlags": [
+          "Anyone asking you to open WhatsApp → Linked Devices to 'verify', 'unlock a file', 'join a group', or 'receive a voucher'.",
+          "Requests to read out or enter an 8-character alphanumeric pairing code.",
+          "An unfamiliar Windows, macOS, or Linux browser entry appearing under Linked Devices.",
+          "Contacts telling you they received urgent money requests from your WhatsApp number."
+        ],
+        "consequences": [
+          "Financial fraud against contacts: Colleagues, clients, or family members send money believing they are helping you.",
+          "Confidential data exposure: Attackers can read sensitive HR, finance, client, or project chats synced to WhatsApp Web.",
+          "Reputational damage: Your identity is used to spread the same hijack or phishing links across workplace groups."
+        ],
+        "prevention": [
+          "Treat WhatsApp 'Linked Devices' like giving someone an unlocked copy of your phone—only pair browsers on computers you physically own and lock.",
+          "Enable WhatsApp Two-Step Verification (6-digit PIN) under Settings → Account.",
+          "Audit Settings → Linked Devices once a week and immediately log out unknown sessions.",
+          "Always verify urgent money requests from coworkers or friends via a direct voice call."
+        ],
+        "immediateAction": [
+          "Open WhatsApp → Settings → Linked Devices and tap 'Log out' on every unrecognised device immediately.",
+          "Enable or reset your Two-Step Verification PIN in WhatsApp.",
+          "Broadcast a clear warning in active family and office groups that your account was briefly accessed and to ignore any money requests.",
+          "If any contact transferred money, advise them to call 1930 immediately and report at cybercrime.gov.in."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Helpline",
+            "detail": "Call 1930 if any contact transferred money to the impersonator.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "CERT-In Incident Reporting",
+            "detail": "Report enterprise WhatsApp impersonation or data exposure affecting workplace teams.",
+            "url": "https://www.cert-in.org.in/"
+          },
+          {
+            "name": "WhatsApp In-App Support",
+            "detail": "Report impersonating or compromised sender accounts inside WhatsApp Settings → Help."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fake-upi-autopay-mandate-scam",
+      "category": "banking",
+      "platform": "UPI Autopay / Collect Request",
+      "tag": "UPI Mandate Fraud",
+      "severity": "critical",
+      "title": "The Fake UPI Autopay / Mandate Approval Scam",
+      "scam": "Fraudsters pose as customer care, OTT/telecom billing teams, or marketplace buyers and send a UPI Autopay mandate request disguised as a 'refund approval', 'subscription cancellation', or 'KYC renewal'. When you enter your UPI PIN, you do not receive money—you authorise recurring automatic debits that quietly drain your bank account.",
+      "protection": "Entering your UPI PIN is ALWAYS for paying or authorising a debit—never to receive a refund or cancel a plan. Regularly inspect the 'UPI Autopay / Mandates' section in your UPI app and revoke any unknown mandate.",
+      "sourceName": "NPCI & RBI Digital Payment Safety",
+      "sourceUrl": "https://www.npci.org.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "NPCI Official Safety Info ↗",
+      "actionUrl": "https://www.npci.org.in/",
+      "playbook": {
+        "overview": "UPI Autopay was built by NPCI for legitimate recurring bills like OTT subscriptions, SIPs, and utility bills. Fraudsters abuse this feature by disguising an Autopay creation request as a 'refund credit', 'cashback claim', or 'auto-debit cancellation'. Because the prompt shows a small initial amount or misleading merchant name like 'Refund Desk', victims enter their UPI PIN and unknowingly lock in recurring debits.",
+        "initialContact": {
+          "channel": "Phone Call + In-App UPI Collect / Mandate Notification",
+          "message": "[Illustrative Educational Example]\nCaller: \"Hello, your annual OTT/antivirus plan was charged ₹4,999 by mistake. To cancel auto-renewal and receive your instant ₹4,999 refund, open your UPI app, tap the pending Autopay/Mandate notification, and enter your UPI PIN.\""
+        },
+        "howItWorks": [
+          "Pretext call or message: The scammer claims you were overcharged for a subscription, insurance policy, or failed order—or pretends to be a buyer sending an advance.",
+          "Sending the mandate request: Instead of sending money, they trigger a UPI Autopay mandate creation request to your UPI ID.",
+          "Deceptive instruction: They tell you that entering your UPI PIN 'completes the cancellation' or 'unlocks the refund credit'.",
+          "PIN authorisation: Once you enter your UPI PIN, the mandate becomes active and allows scheduled or repeated debits up to the mandated cap without asking for your PIN again."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "UPI App Mandate Approval Prompt (Simulated Educational Example)",
+          "screenBody": "UPI Autopay Request\nMerchant: DIGITAL-REFUND-SERVICES\nFrequency: As Presented / Weekly\nMax Mandate Amount: ₹15,000\nAction Button: [Approve & Enter UPI PIN]",
+          "caption": "Notice the words 'Autopay Request' and 'Max Mandate Amount'—approving with a UPI PIN authorises money to leave your account, never to enter it."
+        },
+        "psychology": "Loss aversion and relief. Victims worried about losing ₹4,999 to an unwanted renewal are eager to 'cancel' quickly and overlook the mandate wording on their UPI screen.",
+        "redFlags": [
+          "Anyone claiming you must approve a UPI mandate or enter your UPI PIN to receive a refund or cancel a subscription.",
+          "Unfamiliar merchant names like 'Refund Desk', 'Customer Support', or personal-looking handles on an Autopay request.",
+          "Mandate requests showing 'Frequency: As Presented' or a high maximum amount (e.g. ₹15,000) for a small refund."
+        ],
+        "consequences": [
+          "Repeated unauthorised debits: Funds can be pulled automatically on schedule or 'as presented' until the mandate is revoked or the account is empty.",
+          "Delayed detection: Small recurring debits may go unnoticed for days if SMS alerts are missed."
+        ],
+        "prevention": [
+          "Memorise the golden rule of UPI: You NEVER need to enter your UPI PIN to receive money or cancel a service.",
+          "Always read the full UPI prompt ('Pay to' vs 'Autopay Mandate') before touching the PIN pad.",
+          "Open your UPI app's 'Autopay / Mandates' menu monthly and pause or revoke anything you did not intentionally set up."
+        ],
+        "immediateAction": [
+          "Open your UPI app immediately, go to Autopay / Mandates, and REVOKE / DELETE the fraudulent mandate.",
+          "Call your bank's fraud helpline to block further UPI debits if needed and check recent account statements.",
+          "Dial 1930 immediately if any money has already been debited, and file a report at cybercrime.gov.in with the UPI Reference / UTR number."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Helpline",
+            "detail": "Dial 1930 within the Golden Hour to freeze debited funds.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "NPCI UPI Dispute Portal",
+            "detail": "Raise an unauthorised UPI transaction or mandate dispute via your UPI app and NPCI.",
+            "url": "https://www.npci.org.in/"
+          },
+          {
+            "name": "RBI Sachet / Banking Ombudsman",
+            "detail": "Escalate unresolved bank disputes through RBI's official grievance channels.",
+            "url": "https://sachet.rbi.org.in/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "instant-loan-app-digital-blackmail",
+      "category": "apk-malware",
+      "platform": "Malicious Loan App / Contacts",
+      "tag": "Loan App Extortion",
+      "severity": "critical",
+      "title": "The Instant Loan App / Digital Blackmail Scam",
+      "scam": "Unlicensed instant loan apps—often downloaded via APK links, social media ads, or rogue app clones—promise 5-minute 'no paperwork' credit. During setup, they demand access to your phone contacts, photo gallery, and call logs, then disburse a tiny amount (or nothing at all) and extort multiple times the sum by threatening to send morphed photos to your family and office colleagues.",
+      "protection": "Never install loan apps from WhatsApp/SMS APK links or unverified ads. Borrow only from RBI-registered banks or NBFCs, never grant contacts/gallery permissions to financial apps, and never pay extortion demands—paying encourages further blackmail.",
+      "sourceName": "RBI Sachet & I4C Cybercrime Portal",
+      "sourceUrl": "https://sachet.rbi.org.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "Verify Lenders on RBI Sachet ↗",
+      "actionUrl": "https://sachet.rbi.org.in/",
+      "playbook": {
+        "overview": "Predatory and illegal instant loan apps target employees facing short-term cash crunches or medical expenses. Even if the victim repays the original amount—or declines the loan mid-way—the app's operators use the harvested contact list and gallery photos to run coordinated digital blackmail via WhatsApp messages and abusive calls to relatives and coworkers.",
+        "initialContact": {
+          "channel": "SMS / Social Media Ad / WhatsApp Link",
+          "message": "[Illustrative Educational Example]\n\"Pre-approved Instant Cash ₹50,000 in 3 minutes! Zero CIBIL check, Aadhaar & PAN only. Download FastCash-Pro APK now: [shortened link]\""
+        },
+        "howItWorks": [
+          "Baiting with instant credit: Social ads or SMS links promote effortless 7-day loans with no credit score check.",
+          "Excessive permission harvesting: Upon installation, the app demands full access to Contacts, Storage/Photos, Camera, Call Logs, and Location before showing any loan terms.",
+          "Trap disbursement: A small sum (for example, ₹3,200 out of a ₹5,000 'loan') is credited with hidden 40% processing fees and a 7-day repayment deadline.",
+          "Harassment & extortion: Even before the due date—or after repayment—recovery agents send abusive WhatsApp messages with fabricated/morphed images of the victim to their parents, spouse, and office contacts demanding more money."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "App Permission Prompt & Extortion WhatsApp (Simulated Educational Example)",
+          "screenBody": "App Prompt: \"Allow FastCash-Pro to access your Contacts, Photos & Media, and Call Logs?\" [ALLOW]\n\n7 Days Later (WhatsApp from unknown international/VoIP number):\n\"Your loan overdue ₹12,500. Pay in 1 hour or we will forward this edited photo to all 340 numbers in your contact list including [Manager Name].\"",
+          "caption": "Once contacts and photos are uploaded at install time, uninstalling the app alone does not erase the copy on the fraudster's server—making prevention and official reporting essential."
+        },
+        "psychology": "Shame, social panic, and financial stress. Victims fear humiliation at their workplace or among relatives, which pushes them to pay repeated extortion demands in silence.",
+        "redFlags": [
+          "Loan offers distributed as .apk files or via WhatsApp/Telegram instead of official RBI-registered bank/NBFC channels.",
+          "Short 7-day or 14-day repayment windows with huge upfront 'processing deductions'.",
+          "Apps demanding access to your Contact List and Photo Gallery to evaluate a loan.",
+          "No clear NBFC partner name, RBI registration number, or physical grievance officer listed."
+        ],
+        "consequences": [
+          "Severe financial drain: Victims often take more loans to pay off extortionists, spiralling into debt.",
+          "Privacy breach: Personal photos and family/colleague phone numbers are exposed to harassment.",
+          "Workplace disruption: Recovery callers may spam office reception or colleagues, creating intense psychological distress."
+        ],
+        "prevention": [
+          "Verify any digital lending app's NBFC partner on RBI's official list or RBI Sachet before installing.",
+          "Deny Contacts and Photos/Gallery permissions to any lending app; genuine RBI-regulated digital lenders do not need your contact book.",
+          "Never download financial apps via browser .apk links."
+        ],
+        "immediateAction": [
+          "Stop paying extortionists immediately—paying does not stop the harassment.",
+          "Switch off the app's permissions, uninstall it, and run a mobile security scan.",
+          "Save screenshots of all threatening chats, caller numbers, UPI IDs, and bank account details used by the scammers.",
+          "Inform trusted family members and your HR/manager proactively that your phone data was targeted by a known cyber extortion scam.",
+          "File a complaint on cybercrime.gov.in (under 'Report Cyber Crime' / Loan App harassment) and dial 1930."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Portal & Helpline 1930",
+            "detail": "Report extortion messages, morphed images, and payment accounts.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "RBI Sachet Portal",
+            "detail": "Report unauthorised digital lending apps operating illegally.",
+            "url": "https://sachet.rbi.org.in/"
+          },
+          {
+            "name": "DoT Sanchar Saathi Chakshu",
+            "detail": "Report threatening international/local numbers used for harassment.",
+            "url": "https://sancharsaathi.gov.in/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ai-deepfake-video-sextortion-scam",
+      "category": "messaging",
+      "platform": "Video Call / Social Media",
+      "tag": "Deepfake Sextortion",
+      "severity": "critical",
+      "title": "The AI Deepfake Video / Sextortion Scam",
+      "scam": "Fraudsters initiate an unsolicited video call from an attractive stranger's profile—or scrape your public LinkedIn/Instagram photos—and use AI face-swap/deepfake tools to fabricate compromising videos. They immediately threaten to send the video to your family, LinkedIn connections, or HR department unless you pay hush money.",
+      "protection": "Never answer unexpected video calls from unknown numbers. Lock down social media friend lists and public profile photos, never pay blackmailers, and preserve screenshots immediately for Cyber Police.",
+      "sourceName": "I4C & State Cyber Police Advisory",
+      "sourceUrl": "https://cybercrime.gov.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "Report at Cybercrime.gov.in ↗",
+      "actionUrl": "https://cybercrime.gov.in/",
+      "playbook": {
+        "overview": "Modern sextortion combines classic video-call recording traps with AI deepfake face-swapping. Even if a victim never appears inappropriately on camera, attackers overlay the victim's face from social media photos onto explicit footage. They target professionals, students, and executives, using LinkedIn and Instagram follower lists as leverage.",
+        "initialContact": {
+          "channel": "WhatsApp / Instagram / Facebook Messenger Video Call",
+          "message": "[Illustrative Educational Example]\n11:15 PM: Unknown WhatsApp profile sends a friendly 'Hi' followed within seconds by a direct video call.\n11:17 PM (Message after call ends): \"Your video is recorded and ready. Look at your Instagram followers / office LinkedIn list—send ₹35,000 in 15 minutes or I upload this to everyone now.\""
+        },
+        "howItWorks": [
+          "Reconnaissance: Attackers collect your public profile pictures and identify your family members, friends, or workplace on Facebook, Instagram, or LinkedIn.",
+          "The trap or deepfake: Either they lure you into answering a short video call where pre-recorded explicit footage plays alongside your camera feed, or they use AI tools to swap your face onto a fabricated clip without any call.",
+          "Rapid extortion: Within minutes, they send a screen recording showing the fabricated video next to screenshots of your contacts' profiles.",
+          "Escalating demands: If you pay once, they pretend a 'senior officer' or 'YouTube upload team' needs a second and third payment to delete the file."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "Extortion Chat Screen (Simulated Educational Example)",
+          "screenBody": "[Forwarded 12-second screen recording showing your face in an AI-altered video]\n\n\"I already tagged 4 of your relatives and your company HR page. Pay ₹35,000 to UPI [redacted] in 10:00 minutes or I press Send.\"",
+          "caption": "Fraudsters often stage fake 'upload in progress' screenshots to create maximum panic within a 10-minute countdown."
+        },
+        "psychology": "Panic, embarrassment, and time pressure. Fear of permanent career or family damage causes rational people to pay before verifying whether the attacker can—or will—actually publish anything.",
+        "redFlags": [
+          "Late-night or unsolicited video calls from unknown profiles on WhatsApp, Instagram, or Messenger.",
+          "Immediate blackmail threats featuring a 10-minute countdown and screenshots of your social media follower list.",
+          "Demands for payment via UPI, gift cards, or crypto to 'delete the video permanently'."
+        ],
+        "consequences": [
+          "Repeated financial extortion: Paying once confirms you are willing to pay, leading to endless follow-up demands.",
+          "Severe emotional distress and anxiety.",
+          "Possible reputational embarrassment if fabricated media is sent to contacts before accounts are locked down."
+        ],
+        "prevention": [
+          "Enable 'Silence Unknown Callers' in WhatsApp Privacy settings and restrict who can call you on social apps.",
+          "Make Instagram/Facebook accounts private and hide your friend/follower lists from public view.",
+          "Never accept video calls from strangers, and keep your camera covered or angled away if answering an unknown call."
+        ],
+        "immediateAction": [
+          "Do NOT pay a single rupee—payment never buys permanent deletion.",
+          "Do NOT delete the chat right away; take clear screenshots of the caller's profile, phone number, threatening messages, and any payment handles.",
+          "Lock down your social media privacy settings immediately and temporarily deactivate public profiles if needed.",
+          "Block the number after saving evidence, dial 1930, and file a confidential complaint at cybercrime.gov.in (you can also use StopNCII.org to hash/block non-consensual intimate images across participating platforms)."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Portal",
+            "detail": "File an extortion / morphed content complaint online (anonymous/victim-protected handling).",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "National Cyber Crime Helpline 1930",
+            "detail": "Call 1930 immediately if you already transferred money.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "StopNCII.org",
+            "detail": "Generate a digital hash to help participating platforms block non-consensual intimate or deepfake imagery.",
+            "url": "https://stopncii.org/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "romance-to-investment-pig-butchering",
+      "category": "banking",
+      "platform": "Dating Apps / Fake Crypto & Trading",
+      "tag": "Pig Butchering",
+      "severity": "critical",
+      "title": "The Romance-to-Investment / Pig Butchering Scam",
+      "scam": "Fraudsters build a warm, patient online friendship or romantic relationship over weeks on dating apps, LinkedIn, or Instagram—often using stolen photos or AI-enhanced personas—before casually introducing a 'guaranteed' crypto, forex, or gold trading platform. Initial small withdrawals succeed to build trust, followed by massive losses when you deposit life savings and are blocked from withdrawing.",
+      "protection": "Never mix online romance or unverified social connections with financial investments. Verify any trading platform with SEBI before depositing funds, and treat any request to move from a dating app to WhatsApp/Telegram to 'invest together' as a major red flag.",
+      "sourceName": "I4C & SEBI Investor Alert",
+      "sourceUrl": "https://www.sebi.gov.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "Verify SEBI Intermediaries ↗",
+      "actionUrl": "https://www.sebi.gov.in/",
+      "playbook": {
+        "overview": "Known globally as 'Pig Butchering' (Sha Zhu Pan), this long-con scam combines emotional grooming with fake investment platforms. Unlike fast-moving phishing scams, scammers invest weeks of daily conversation, empathy, and fake lifestyle photos before introducing a 'side income' opportunity in cryptocurrency, forex, or commodities.",
+        "initialContact": {
+          "channel": "Dating App / LinkedIn / Wrong-Number WhatsApp",
+          "message": "[Illustrative Educational Example]\nWeek 1: \"Hi, sorry I think I saved the wrong number for my yoga studio—nice meeting you anyway! What do you do?\"\nWeek 4 (after daily chats): \"By the way, my uncle works with an institutional gold/USDT liquidity desk. I made ₹42,000 today in 20 minutes—want me to show you how with just ₹10,000?\""
+        },
+        "howItWorks": [
+          "Grooming & trust building: The scammer chats daily for 2–6 weeks, mirrors your interests, and avoids live unscripted video meetings.",
+          "Casual introduction of wealth: They mention profitable side trades and offer to 'teach' you using a custom trading website or sideloaded app.",
+          "The hook (small withdrawal): You deposit ₹10,000, see fake 20% profits on the dashboard, and are allowed to withdraw ₹12,000 to your real bank account.",
+          "Escalation: Convinced the platform is real, you invest lakhs—sometimes taking personal loans—while the fake dashboard shows huge paper gains.",
+          "The freeze: When you try to withdraw a large sum, 'customer support' demands 20–30% 'capital gains tax', 'AML verification deposit', or 'liquidity fee' before vanishing."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "Fraudulent Trading Dashboard (Simulated Educational Example)",
+          "screenBody": "Account Balance: $48,650 (Simulated Profit: +312%)\nWithdrawal Request: $40,000 — STATUS: FROZEN\n\nSupport Notice: \"Your account triggered Anti-Money Laundering review. Deposit 20% ($8,000) within 48 hours to unlock withdrawal.\"",
+          "caption": "Every number on the trading app is fabricated by the scammers; real money sent via UPI or crypto left your control the moment you deposited it."
+        },
+        "psychology": "Emotional attachment, loneliness, and sunk-cost fallacy. Once victims feel emotionally invested in the 'partner' and have seen one small successful withdrawal, they ignore outside warnings.",
+        "redFlags": [
+          "An online match or 'wrong-number' contact who quickly moves to WhatsApp/Telegram, showers affection, and refuses unscripted in-person or video meetings.",
+          "Anyone steering conversations toward crypto, forex, or gold trading on an unfamiliar website or custom app.",
+          "Allowing a small initial withdrawal, then demanding 'taxes' or 'verification fees' upfront to release larger profits.",
+          "Instructing you to transfer investment funds to rotating personal bank accounts or unknown UPI IDs."
+        ],
+        "consequences": [
+          "Catastrophic financial loss: Victims frequently lose entire life savings, retirement funds, and borrowed money.",
+          "Severe emotional trauma from simultaneous financial ruin and romantic betrayal.",
+          "Risk of unknowingly receiving funds from other victims during 'small profit payouts', which can trigger bank account freezes."
+        ],
+        "prevention": [
+          "Never invest money through platforms recommended by someone you have only met online.",
+          "Check whether any trading app or advisor is registered with SEBI (sebi.gov.in) before transferring a single rupee.",
+          "Never pay upfront 'tax' or 'unlock fees' to withdraw your own money—legitimate platforms deduct applicable taxes automatically or let you file them yourself."
+        ],
+        "immediateAction": [
+          "Stop all deposits immediately, including any 'tax' or 'unlock fee' demands.",
+          "Preserve all chat logs, profile photos, website URLs, crypto wallet addresses, and bank/UPI transaction receipts.",
+          "Dial 1930 immediately and submit a detailed complaint at cybercrime.gov.in.",
+          "Notify your bank immediately if you shared bank credentials or deposited via IMPS/NEFT/UPI."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Helpline 1930 & Portal",
+            "detail": "Report fraudulent investment websites, bank/UPI mule accounts, and chat logs.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "SEBI Investor Grievance / SCORES",
+            "detail": "Check and report unregistered investment advisory or bogus trading schemes.",
+            "url": "https://www.sebi.gov.in/"
+          },
+          {
+            "name": "CERT-In",
+            "detail": "Report malicious trading APK downloads or phishing domains.",
+            "url": "https://www.cert-in.org.in/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fake-bank-refund-transaction-reversal",
+      "category": "banking",
+      "platform": "Phone Call / Screen Share",
+      "tag": "Bank Refund Fraud",
+      "severity": "critical",
+      "title": "The Fake Bank Refund / Transaction Reversal Scam",
+      "scam": "Scammers impersonate bank fraud-desk officers or customer care agents—often right after you post a complaint on social media or search for a helpline online—and offer an instant 'transaction reversal' or 'failed payment refund'. They trick you into installing a screen-sharing app or entering netbanking credentials and OTPs on a fake refund form, emptying your account.",
+      "protection": "Real banks NEVER ask for OTPs, CVV, netbanking passwords, or screen-sharing apps to process a refund or transaction reversal. Use only the helpline number printed on the back of your card or inside your official banking app.",
+      "sourceName": "RBI Kehta Hai & CERT-In",
+      "sourceUrl": "https://www.rbi.org.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "RBI Consumer Guidance ↗",
+      "actionUrl": "https://www.rbi.org.in/",
+      "playbook": {
+        "overview": "Whenever a customer experiences a failed UPI payment, double debit, or delayed refund, anxiety runs high. Fraudsters monitor public complaints on X/Twitter or run fake Google Ads for bank customer care numbers. Posing as helpful bank executives, they guide victims into handing over full control of their banking session under the guise of 'reversing the failed transaction'.",
+        "initialContact": {
+          "channel": "Phone Call (often triggered after searching for customer care or posting on social media)",
+          "message": "[Illustrative Educational Example]\n\"Good afternoon, I am calling from [Bank Name] Priority Refund Desk regarding your failed ₹6,500 transaction. To credit the reversal immediately, please open the refund verification link I just sent on WhatsApp—or install AnyDesk/TeamViewer so our server can push the credit.\""
+        },
+        "howItWorks": [
+          "Intercepting distressed customers: Scammers either reply to your public social media complaint using a lookalike handle or answer a fake helpline number listed on search engines.",
+          "Building false credibility: They use banking jargon ('settlement server', 'reversal token', 'RBI chargeback code') to sound official.",
+          "Credential or device capture: They either send a phishing link asking for netbanking login/card CVV/OTP, or ask you to install a remote-access app (AnyDesk, TeamViewer, RustDesk) to 'approve the refund'.",
+          "Account drain: While watching your screen or using your harvested OTPs, they transfer funds out or raise your netbanking/UPI limits."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "Fake Refund Form / Remote Access Prompt (Simulated Educational Example)",
+          "screenBody": "Webpage: bank-instant-refund-desk[.]example\n\"Enter Account / Card Details to Receive ₹6,500 Reversal\"\n• Debit Card Number & CVV: [________]\n• Netbanking Password: [________]\n• Enter 6-digit Refund Verification OTP: [______]",
+          "caption": "A genuine bank refund is automatic or processed internally via a ticket number—it never requires your CVV, password, or OTP."
+        },
+        "psychology": "Frustration and urgency to recover stuck money. People who already lost ₹5,000 to a failed payment lower their guard when someone promises an immediate fix.",
+        "redFlags": [
+          "Calling a customer care number found via Google search ads or random social media replies instead of your bank's official app/card back.",
+          "Any agent asking you to install AnyDesk, TeamViewer, or any screen-sharing app.",
+          "Forms or callers asking for CVV, ATM PIN, netbanking password, or an OTP to 'credit' a refund."
+        ],
+        "consequences": [
+          "Immediate unauthorised bank/card debits far exceeding the original failed transaction.",
+          "Compromise of saved passwords or corporate emails if screen-sharing was active."
+        ],
+        "prevention": [
+          "Save your bank's official toll-free helpline from the back of your debit/credit card or inside the bank's official mobile app.",
+          "Never install remote-access or screen-sharing apps on a personal or work phone for any banking, delivery, or utility support.",
+          "Never enter CVV, PIN, or OTP to receive a refund."
+        ],
+        "immediateAction": [
+          "Disconnect Wi-Fi and mobile data immediately if you installed a screen-sharing app, then uninstall it.",
+          "Call your bank's genuine 24x7 helpline immediately to block cards, freeze netbanking, and change passwords from a clean device.",
+          "Dial 1930 within the Golden Hour and file a report at cybercrime.gov.in."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Helpline 1930",
+            "detail": "Dial 1930 immediately to initiate an inter-bank fund freeze.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "RBI Sachet & Banking Ombudsman (CMS)",
+            "detail": "Report unauthorised bank debits and escalate if bank resolution stalls.",
+            "url": "https://sachet.rbi.org.in/"
+          },
+          {
+            "name": "CERT-In",
+            "detail": "Report fake banking phishing domains and spoofed support numbers.",
+            "url": "https://www.cert-in.org.in/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "work-from-home-registration-fee-scam",
+      "category": "messaging",
+      "platform": "WhatsApp / Job Portals",
+      "tag": "Fake Job Fee",
+      "severity": "high",
+      "title": "The Work-from-Home Registration Fee Scam",
+      "scam": "Fake recruiters send tempting WhatsApp messages, emails, or job-portal offers promising ₹2,500–₹4,000 per day for simple remote data entry, form filling, or brand-promotion tasks. Before releasing 'project files' or 'company laptop dispatch', they demand upfront registration, training, ID-card, or background-verification fees—then disappear or invent legal penalties.",
+      "protection": "Legitimate employers NEVER charge candidates for registration, training, laptop shipping, or background verification. Always verify job offers on the company's official careers page before paying a rupee or sharing identity documents.",
+      "sourceName": "I4C & PIB Fact Check",
+      "sourceUrl": "https://cybercrime.gov.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "Report Fake Jobs on 1930 ↗",
+      "actionUrl": "https://cybercrime.gov.in/",
+      "playbook": {
+        "overview": "Work-from-home registration fee scams target job seekers, students, homemakers, and employees looking for secondary income. Fraudsters impersonate well-known Indian IT companies, e-commerce brands, or international publishing houses, offering unrealistic daily pay for minimal effort and monetising the victim through stacked upfront 'processing fees'.",
+        "initialContact": {
+          "channel": "WhatsApp / Email / SMS",
+          "message": "[Illustrative Educational Example]\n\"HR Desk Notice: Your resume was shortlisted for Part-Time Work-From-Home Data Entry & Brand Verification. Earn ₹3,000/day (2 hrs flexible). No interview required! Pay ₹999 refundable security & ID registration fee to receive login credentials today.\""
+        },
+        "howItWorks": [
+          "Mass outreach: Fraudsters send bulk WhatsApp messages or emails using scraped job-portal phone numbers.",
+          "Fake offer letter: Once you express interest, they send an official-looking PDF offer letter with a stolen corporate logo.",
+          "Upfront fee demand: Before work starts, they ask for ₹500–₹2,500 for 'registration', 'portal activation', 'background check', or 'laptop courier insurance'.",
+          "Escalating fee chain: After the first payment, they invent 'GST clearance', 'salary account activation', or 'agreement stamp duty' fees.",
+          "Intimidation (in data-entry variants): Some scams give impossible typing tasks, reject the work for 'accuracy errors', and threaten fake legal notices demanding ₹15,000+ in 'breach penalties'."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "Fake Offer & Fee Demand (Simulated Educational Example)",
+          "screenBody": "PDF Header: [Stolen Corporate Logo] — APPOINTMENT LETTER\n\"Role: Remote Data Associate | Stipend: ₹3,000/day\"\n\nHR WhatsApp Follow-up:\n\"Please transfer ₹1,450 refundable ID & Training Portal fee to UPI [redacted] to unlock your Batch-4 login ID.\"",
+          "caption": "Real companies deduct statutory taxes from salary after you work—they never ask recruits to pay UPI fees to unlock an employee portal."
+        },
+        "psychology": "Hope for financial independence and sunk-cost pressure. Once someone pays ₹999, they feel pressured to pay another ₹2,000 so they do not 'lose' the job offer.",
+        "redFlags": [
+          "Guaranteed high daily earnings (e.g. ₹3,000/day) with zero interview or skill screening.",
+          "HR communication happening solely via personal WhatsApp/Telegram numbers or Gmail/Yahoo addresses instead of a verified company domain.",
+          "Any request to pay for registration, training, ID cards, background verification, or laptop courier charges.",
+          "Threats of 'legal notice' or 'penalty fees' if you refuse to finish an impossible typing task."
+        ],
+        "consequences": [
+          "Direct financial loss across multiple 'refundable' fee instalments.",
+          "Identity theft risk if Aadhaar, PAN, and bank details were submitted on fake onboarding forms.",
+          "Psychological stress from fabricated legal-notice threats."
+        ],
+        "prevention": [
+          "Apply the universal hiring rule: legitimate employers pay you; they never ask you to pay for a job, kit, or verification.",
+          "Cross-check any offer letter directly on the employer's official careers portal.",
+          "Never upload Aadhaar/PAN scans to unverified Google Forms or WhatsApp numbers."
+        ],
+        "immediateAction": [
+          "Stop all further payments immediately and ignore fake 'legal notice' threats sent over WhatsApp.",
+          "Save screenshots of the offer letter, recruiter's phone number, UPI IDs, and payment receipts.",
+          "Dial 1930 and file a complaint at cybercrime.gov.in.",
+          "If you shared PAN/Aadhaar copies, monitor your credit report and lock your Aadhaar biometrics on the official UIDAI portal/mAadhaar app."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Helpline 1930 & Portal",
+            "detail": "Report fake recruiters, UPI IDs, and extortion/legal-threat messages.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "DoT Sanchar Saathi Chakshu",
+            "detail": "Report WhatsApp/SMS job scam sender numbers.",
+            "url": "https://sancharsaathi.gov.in/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "money-mule-bank-account-rental",
+      "category": "banking",
+      "platform": "Telegram / Bank Account",
+      "tag": "Money Mule Trap",
+      "severity": "critical",
+      "title": "The Money Mule / Bank Account Rental Scam",
+      "scam": "Fraudsters on Telegram, Instagram, or college/job groups offer easy monthly 'commissions' (2%–5% per transaction or ₹10,000/week) just to receive money in your bank account and forward it via UPI, IMPS, or crypto—or to 'rent out' your savings account and ATM card. The money moving through your account is stolen from other cybercrime victims, making YOU the primary suspect when police and banks freeze accounts.",
+      "protection": "Never allow anyone—not even a friend or 'online employer'—to use your bank account, UPI ID, or debit card to route funds, and never accept commissions to forward money.",
+      "sourceName": "RBI & I4C Anti-Mule Advisory",
+      "sourceUrl": "https://www.rbi.org.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "RBI Safe Banking Advisory ↗",
+      "actionUrl": "https://www.rbi.org.in/",
+      "playbook": {
+        "overview": "Cybercrime syndicates cannot withdraw stolen funds directly from their own accounts without immediate arrest. Instead, they recruit 'Money Mules'—often students, job seekers, or salaried employees looking for passive income—to receive stolen money and pass it onward. Under Indian law and RBI/I4C enforcement, allowing your account to launder fraud proceeds can lead to full bank freezes, blacklisting, and criminal prosecution.",
+        "initialContact": {
+          "channel": "Telegram / Instagram DM / Part-Time Job Ad",
+          "message": "[Illustrative Educational Example]\n\"Need active Savings Account holders for our payment gateway & gaming settlement desk! Just receive funds and forward to our vendor UPI/USDT. Earn 3% daily commission (₹5,000–₹15,000/week) sitting at home. Zero investment!\""
+        },
+        "howItWorks": [
+          "Recruitment: Scammers advertise 'payment agent', 'escrow handler', or 'account rental' gigs offering easy commissions.",
+          "Account onboarding: Either they ask you to hand over your netbanking credentials/ATM card/SIM, or they instruct you to act as a manual forwarder.",
+          "Routing stolen money: When another victim is cheated (for example, in a Digital Arrest or Fake IPO scam), their money is deposited straight into your account.",
+          "Layering: You immediately transfer 95–97% of those funds to another mule account or crypto wallet, keeping 3–5% as your 'commission'.",
+          "Law enforcement freeze: When the original victim dials 1930, the automated inter-bank trail immediately freezes YOUR bank account, flags your PAN, and triggers police notices."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "Account Freeze Notice (Simulated Educational Example)",
+          "screenBody": "Bank SMS / Email Notice:\n\"Your Savings Account XXXX4821 has been placed on DEBIT FREEZE / LIEN marked (₹2,50,000) pursuant to Cyber Crime Portal Complaint Ack No. [redacted] under Section 106 BNSS / 1930 Trail.\"",
+          "caption": "Even if you only kept a ₹5,000 'commission', the entire ₹2,50,000 lien and police inquiry lands on the account holder whose KYC is on the bank account."
+        },
+        "psychology": "Greed disguised as harmless 'freelance payment processing'. Fraudsters reassure recruits with fake company registration certificates so it feels like a normal fintech job.",
+        "redFlags": [
+          "Any job or 'side hustle' paying you a percentage simply to receive and forward money through your personal bank account.",
+          "Requests to rent, sell, or hand over your bank account kit, netbanking login, debit card, or linked SIM.",
+          "Explaining away large random deposits as 'gaming', 'forex', or 'merchant overflow'."
+        ],
+        "consequences": [
+          "Immediate bank account freeze across one or multiple accounts linked to your PAN.",
+          "Criminal investigation for abetting cyber fraud or money laundering.",
+          "Loss of salary access, loan eligibility damage, and severe career impact for corporate employees."
+        ],
+        "prevention": [
+          "Treat your bank account and UPI ID strictly for your own personal transactions.",
+          "Decline any remote job that involves receiving funds into your personal account and transferring them onward.",
+          "Never share your netbanking password, debit card, PIN, or SIM with anyone."
+        ],
+        "immediateAction": [
+          "Stop all transfers immediately if you suspect you were recruited as a money mule.",
+          "Do NOT delete Telegram/WhatsApp chats with the recruiters—they are vital evidence showing how you were recruited.",
+          "Proactively report the recruiter's handles and transaction details at cybercrime.gov.in and notify your home bank branch in writing."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Portal & Helpline 1930",
+            "detail": "Report account-rental recruiters and suspicious inbound transfers.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "Your Home Bank Branch / Nodal Officer",
+            "detail": "Submit written proof and chat logs if suspicious funds entered your account."
+          },
+          {
+            "name": "RBI Sachet",
+            "detail": "Report illegal deposit/payment-agent schemes.",
+            "url": "https://sachet.rbi.org.in/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "aadhaar-pan-update-identity-theft",
+      "category": "transport",
+      "platform": "SMS / Fake Govt Portal",
+      "tag": "Aadhaar / PAN Theft",
+      "severity": "high",
+      "title": "The Aadhaar / PAN Update and Identity Theft Scam",
+      "scam": "Fraudsters send SMS or WhatsApp messages warning that your PAN card will be deactivated, your Aadhaar biometrics need urgent re-verification, or your PAN-Aadhaar link failed. The link opens a cloned government portal that harvests your Aadhaar number, PAN, date of birth, bank details, and OTPs—enabling identity theft, unauthorised loans, or bank account compromise.",
+      "protection": "Check PAN and Aadhaar status ONLY on official .gov.in portals (incometax.gov.in and myaadhaar.uidai.gov.in). Never share Aadhaar OTPs with callers or enter them on links received via SMS or WhatsApp.",
+      "sourceName": "UIDAI, Income Tax & CERT-In",
+      "sourceUrl": "https://cybercrime.gov.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "Report Phishing on Cybercrime ↗",
+      "actionUrl": "https://cybercrime.gov.in/",
+      "playbook": {
+        "overview": "Because PAN-Aadhaar linking, KYC updates, and tax compliance are mandatory in India, scammers weaponise official deadlines and penalty fears. By mimicking government portals (often using lookalike domains ending in .com, .in, or .online instead of .gov.in), attackers steal full KYC profiles to open fraudulent accounts, apply for instant credit, or bypass bank verification.",
+        "initialContact": {
+          "channel": "SMS / WhatsApp Message",
+          "message": "[Illustrative Educational Example]\n\"URGENT: Your PAN card will be deactivated today at 5:00 PM due to pending Aadhaar-PAN eKYC re-verification. Update immediately to avoid ₹10,000 penalty: https://incometax-ekyc-update[.]example\""
+        },
+        "howItWorks": [
+          "Urgent penalty lure: Scammers send bulk SMS or WhatsApp alerts threatening immediate PAN deactivation, bank freeze, or ₹10,000 fine.",
+          "Cloned portal: Clicking the link opens a page copying official government logos and colours, asking for PAN, Aadhaar, mobile number, and bank account details.",
+          "OTP / APK harvest: The site either triggers an OTP capture step or prompts you to download a fake 'eKYC Update.apk' app.",
+          "Identity misuse: Harvested KYC details and OTPs are used for SIM swaps, fraudulent BNPL/instant loans, or unauthorised banking logins."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "Cloned Government Portal (Simulated Educational Example)",
+          "screenBody": "URL Bar: https://uidai-pan-kyc-verify[.]online  (NOT .gov.in!)\n\nForm Fields:\n• Full Name & Date of Birth\n• Aadhaar Number & PAN\n• Linked Bank Account & Debit Card / UPI PIN (to verify ₹1 KYC)\n• Enter Aadhaar OTP: [______]",
+          "caption": "Real Aadhaar/Income Tax portals end in .gov.in and never ask for your debit card PIN or UPI PIN to verify identity."
+        },
+        "psychology": "Fear of government penalties and frozen bank accounts. Employees worry their salary credit will be blocked if PAN becomes inoperative, prompting rushed clicks.",
+        "redFlags": [
+          "Web links that do NOT end in .gov.in (for example .com, .in, .org, .online, or shortened URLs).",
+          "Messages threatening same-day PAN/Aadhaar deactivation within hours.",
+          "Any 'KYC' form asking for debit card CVV, netbanking password, or a ₹1/₹10 verification payment."
+        ],
+        "consequences": [
+          "Fraudulent loans or Buy-Now-Pay-Later accounts opened in your name, damaging your CIBIL score.",
+          "Unauthorised bank debits if card/OTP details were also entered.",
+          "Long-term identity misuse requiring credit bureau disputes and police records."
+        ],
+        "prevention": [
+          "Always type official URLs manually: incometax.gov.in for PAN and myaadhaar.uidai.gov.in for Aadhaar.",
+          "Lock your Aadhaar biometrics via the mAadhaar app or myaadhaar.uidai.gov.in when not actively performing eKYC.",
+          "Check your CIBIL/credit report periodically for unknown loan enquiries."
+        ],
+        "immediateAction": [
+          "If you entered bank/card details or an OTP, call your bank immediately to block cards and freeze online banking.",
+          "Lock your Aadhaar biometrics immediately on myaadhaar.uidai.gov.in.",
+          "Dial 1930 if money was debited, and report the phishing URL and incident at cybercrime.gov.in and CERT-In."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Helpline 1930 & Portal",
+            "detail": "Report identity theft, phishing sites, and any financial loss.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "UIDAI Official Portal",
+            "detail": "Lock biometrics and review Aadhaar authentication history.",
+            "url": "https://myaadhaar.uidai.gov.in/"
+          },
+          {
+            "name": "CERT-In",
+            "detail": "Report fake government lookalike phishing domains.",
+            "url": "https://www.cert-in.org.in/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fake-insurance-claim-policy-refund",
+      "category": "banking",
+      "platform": "Phone Call / Fake IRDAI Letter",
+      "tag": "Insurance Bonus Fraud",
+      "severity": "high",
+      "title": "The Fake Insurance Claim / Policy Refund Scam",
+      "scam": "Fraudsters impersonate insurance company officers, IRDAI officials, or 'unclaimed bonus settlement desks' and call policyholders claiming a lapsed or active life/health policy has earned a massive bonus or maturity refund. To release the payout, they demand upfront 'processing charges', 'GST', 'NOC fees', or 'policy revival premiums' paid into personal/shell accounts.",
+      "protection": "IRDAI NEVER calls policyholders or collects fees to release insurance bonuses or maturity claims. Verify any policy payout directly inside your insurer's official app, customer portal, or local branch—and never pay an upfront fee to receive a claim.",
+      "sourceName": "IRDAI & RBI Sachet Advisory",
+      "sourceUrl": "https://sachet.rbi.org.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "Report on RBI Sachet ↗",
+      "actionUrl": "https://sachet.rbi.org.in/",
+      "playbook": {
+        "overview": "Insurance bonus and lapsed-policy refund scams rely on leaked policyholder databases—scammers often already know your real policy number, insurer name, and premium history. Using this insider-sounding data, they convince working professionals and retirees that lakhs in 'unclaimed loyalty bonuses' or 'IRDAI surplus refunds' are waiting, provided a small processing tax is paid first.",
+        "initialContact": {
+          "channel": "Phone Call + WhatsApp Document",
+          "message": "[Illustrative Educational Example]\n\"Hello, I am calling from the IRDAI Policyholder Bonus Settlement Cell regarding your [Insurer Name] policy #XXXX912. Your policy has been approved for a ₹4,80,000 maturity bonus. Before RTGS transfer, please deposit ₹18,500 towards GST & NOC clearance—it is 100% refundable with the payout.\""
+        },
+        "howItWorks": [
+          "Credibility hook: The caller reads out your real name, age, and policy number to prove they are 'official'.",
+          "Fake approval letter: They send a forged PDF on WhatsApp bearing IRDAI or RBI logos showing a large ₹3–8 lakh payout.",
+          "Upfront fee trap: They ask you to transfer 'processing fee', 'agent commission reversal', or 'TDS/GST' first via NEFT/UPI to a seemingly official-sounding account.",
+          "Endless fee loop: Once you pay ₹18,500, a 'senior director' calls demanding another ₹35,000 for 'file release' until you run out of money or realise it is a scam."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "Forged Approval Letter on WhatsApp (Simulated Educational Example)",
+          "screenBody": "[Forged Letterhead: INSURANCE REGULATORY & BONUS DISBURSEMENT DESK]\nBeneficiary: [Your Name] | Policy: XXXX912\nApproved Bonus Payout: ₹4,80,000\nPending Clearance Fee: ₹18,500 (Mandatory before RTGS release)",
+          "caption": "IRDAI has repeatedly warned citizens that neither IRDAI nor insurers ask for upfront fee transfers to release maturity or bonus payouts."
+        },
+        "psychology": "Greed mixed with authority and false trust. Because the caller already knows your real policy number, victims assume the call must be genuine.",
+        "redFlags": [
+          "Any caller claiming to represent IRDAI, RBI, or a 'central bonus cell' offering unexpected maturity bonuses.",
+          "Demanding upfront GST, NOC, file-release, or verification fees before releasing an insurance payout.",
+          "Receiving 'official' sanction letters over personal WhatsApp numbers."
+        ],
+        "consequences": [
+          "Heavy cumulative financial loss across multiple 'clearance fee' instalments (often hitting senior citizens' savings).",
+          "Leakage of personal KYC and bank account copies sent for 'payout processing'."
+        ],
+        "prevention": [
+          "Verify any policy status, bonus, or surrender value only by logging into your insurer's official website/app or visiting a physical branch.",
+          "Remember: genuine insurers deduct applicable taxes directly from the payout—they never ask you to transfer tax money first.",
+          "Verify any advisor or intermediary through IRDAI's official Bima Bharosa / insurer directories."
+        ],
+        "immediateAction": [
+          "Stop all further fee transfers immediately.",
+          "Preserve call recordings (if any), WhatsApp PDFs, sender numbers, and bank/UPI transaction receipts.",
+          "Dial 1930 within the Golden Hour and file a complaint at cybercrime.gov.in.",
+          "Report the fraudulent policy call to your genuine insurance company's Grievance Redressal Officer."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Helpline 1930 & Portal",
+            "detail": "Report fake insurance callers and recipient bank accounts.",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "IRDAI Bima Bharosa",
+            "detail": "Log official insurance fraud/impersonation grievances.",
+            "url": "https://bimabharosa.irdai.gov.in/"
+          },
+          {
+            "name": "RBI Sachet",
+            "detail": "Report unauthorised financial collection entities.",
+            "url": "https://sachet.rbi.org.in/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cyber-fraud-recovery-agent-scam",
+      "category": "messaging",
+      "platform": "Social Media / Phone Call",
+      "tag": "Fake Recovery Agent",
+      "severity": "high",
+      "title": "The Cyber Fraud Recovery Agent Scam",
+      "scam": "Fraudsters target people who have already lost money to a cyber scam—finding them through social media comments, fake 'cyber help' pages, or leaked complaint data—and pose as ethical hackers, cyber lawyers, RBI recovery officers, or special investigators. They claim they have traced your stolen ₹5 lakh and demand an advance 'server fee' or 'legal processing fee' to recover it, scamming the victim a second time.",
+      "protection": "NO private hacker, lawyer, or 'recovery agent' on Instagram, Telegram, or WhatsApp can trace or reverse stolen funds outside official police and banking channels. Use ONLY the government's free 1930 helpline and cybercrime.gov.in.",
+      "sourceName": "I4C National Cybercrime Advisory",
+      "sourceUrl": "https://cybercrime.gov.in/",
+      "verifiedDate": "2026-11-12",
+      "actionLinkText": "Official Free 1930 Portal ↗",
+      "actionUrl": "https://cybercrime.gov.in/",
+      "playbook": {
+        "overview": "Recovery Agent scams are 'secondary victimisation' frauds that prey on people who are already desperate after losing money to an investment, job, or UPI scam. Scammers run sponsored ads and comment bots on YouTube, Instagram, and X promising '100% Crypto/Bank Scam Recovery in 24 Hours', charging advance fees for fake tracing tools and forged refund orders.",
+        "initialContact": {
+          "channel": "Instagram / YouTube Comment / Telegram / Phone Call",
+          "message": "[Illustrative Educational Example]\n\"Sorry to hear you lost ₹5,00,000 to a trading scam! Contact @CyberRecovery_Desk—our licensed ethical hackers & I4C liaison team traced and froze ₹4.85 lakh in the scammer's server. Pay ₹12,500 recovery & court-stamp processing fee today to release it to your bank.\""
+        },
+        "howItWorks": [
+          "Targeting vulnerable victims: Scammers reply to people posting about fraud losses on social media, or run Google/Instagram ads for 'Cyber Fraud Fund Recovery'.",
+          "Fabricated proof: They ask for your transaction receipt, wait an hour, and send back a fake 'traced fund dashboard' or forged police/RBI release certificate.",
+          "Advance fee extraction: They demand an upfront fee for 'blockchain decryption software', 'court order stamp', or 'cyber cell liaison'.",
+          "Double loss: Once paid, they invent new clearance charges or block you—leaving you worse off than before."
+        ],
+        "whatVictimSees": {
+          "screenTitle": "Fake Recovery Guarantee Message (Simulated Educational Example)",
+          "screenBody": "\"CASE STATUS: TRACED ✅\nLost Amount: ₹5,00,000 | Recoverable: ₹4,85,000\nAction Required: Pay ₹12,500 Software & Legal Release Fee to initiate instant bank reversal.\"",
+          "caption": "Neither I4C, Cyber Police, nor RBI charge any fee to trace or release frozen cybercrime funds."
+        },
+        "psychology": "Desperation, shame, and hope for a shortcut. Victims frustrated by slow legal timelines are vulnerable to anyone promising a fast, guaranteed recovery.",
+        "redFlags": [
+          "Anyone on Instagram, Telegram, YouTube comments, or WhatsApp claiming they can 'hack back' or recover lost cyber funds for a fee.",
+          "Requests for upfront 'software', 'gas fee', 'court stamp', or 'officer liaison' payments.",
+          "Claims of special backdoor access to I4C, RBI, or bank freeze systems."
+        ],
+        "consequences": [
+          "Secondary financial loss on top of the original scam.",
+          "Exposure of original complaint documents, Aadhaar, and bank statements shared with the fake recovery agent.",
+          "Deepened emotional burnout and distrust of legitimate reporting systems."
+        ],
+        "prevention": [
+          "Never trust social media 'ethical hackers' or paid cyber recovery agencies.",
+          "Never share your cybercrime.gov.in acknowledgement number, Aadhaar, or bank statements with unverified online 'agents'.",
+          "Track legitimate recovery exclusively through your local Cyber Police Station, your bank's nodal officer, and cybercrime.gov.in (all 100% free of charge)."
+        ],
+        "immediateAction": [
+          "Cut off contact and block the fake recovery agent immediately—do not pay any release fee.",
+          "Save screenshots of the ad, profile handle, fake certificates, and any payment receipts.",
+          "Update your existing complaint or file a fresh complaint at cybercrime.gov.in and dial 1930 if you paid the recovery scammer."
+        ],
+        "reportingChannels": [
+          {
+            "name": "National Cyber Crime Helpline 1930 & Portal",
+            "detail": "The ONLY official national channel for freezing and recovering cyber fraud funds (100% free).",
+            "url": "https://cybercrime.gov.in/"
+          },
+          {
+            "name": "Local Cyber Police Station",
+            "detail": "Follow up in person with your 14-digit cybercrime.gov.in acknowledgement number."
+          }
+        ]
+      }
     }
   ]
 }

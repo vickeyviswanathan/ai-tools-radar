@@ -489,7 +489,17 @@ function updateScamsInHtml(scams) {
 
   html = html.replace(/<span class="tab-count" id="tab-scams-count">\d*<\/span>/, `<span class="tab-count" id="tab-scams-count">${scams.length}</span>`);
   html = html.replace(/<span class="reality-count-pill" id="scam-count-badge">[^<]+<\/span>/, `<span class="reality-count-pill" id="scam-count-badge">Showing all ${scams.length} scam alerts</span>`);
-  html = html.replace(/let SCAMS_DATA = \[[\s\S]*?\];/, `let SCAMS_DATA = ${JSON.stringify(scams).replace(/</g, "\\u003c")};`);
+  const catCounts = scams.reduce((acc, s) => {
+    const c = s.category || "all";
+    acc[c] = (acc[c] || 0) + 1;
+    return acc;
+  }, {});
+  html = html.replace(/(<button[^>]*data-cat="all"[^>]*>[^<]*?)\(\d+\)(<\/button>)/, `$1(${scams.length})$2`);
+  for (const cat of ["messaging", "banking", "apk-malware", "transport"]) {
+    html = html.replace(new RegExp(`(<button[^>]*data-cat="${cat}"[^>]*>[^<]*?)\\(\\d+\\)(<\\/button>)`), `$1(${catCounts[cat] || 0})$2`);
+  }
+  const compactScams = scams.map(({ playbook, ...rest }) => rest);
+  html = html.replace(/let SCAMS_DATA = \[[\s\S]*?\];/, `let SCAMS_DATA = ${JSON.stringify(compactScams).replace(/</g, "\\u003c")};`);
 
   const containerStartTag = '<div class="scam-grid" id="scams-container">';
   const startIdx = html.indexOf(containerStartTag);

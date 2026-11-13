@@ -1122,6 +1122,79 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
         </div>
       </section>
 
+      ${
+        scam.playbook
+          ? `
+      <section class="panel">
+        <h2>1. Scam Overview</h2>
+        <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.75;margin:0;">${esc(scam.playbook.overview)}</p>
+      </section>
+
+      <section class="panel">
+        <h2>2. The Initial Contact <span class="pill" style="margin-left:8px;vertical-align:middle;">Simulated Educational Example</span></h2>
+        <p style="font-size:13px;color:var(--text-muted);margin:0 0 10px;"><strong>Channel:</strong> ${esc(scam.playbook.initialContact.channel)} · <em>Note: The message below is a simulated educational example showing typical wording used by fraudsters.</em></p>
+        <div style="background:var(--surface-2);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;font-family:var(--mono, ui-monospace, monospace);font-size:13.5px;color:var(--text);line-height:1.65;white-space:pre-wrap;">${esc(scam.playbook.initialContact.message)}</div>
+      </section>
+
+      <section class="panel">
+        <h2>3. How the Scam Works (Step-by-Step)</h2>
+        <ol style="font-size:14.5px;color:var(--text-secondary);padding-left:20px;line-height:1.8;margin:0;">
+          ${scam.playbook.howItWorks.map((step) => `<li style="margin-bottom:8px;">${esc(step)}</li>`).join("")}
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>4. What the Victim Sees <span class="pill" style="margin-left:8px;vertical-align:middle;">Simulated Screen — Educational Example</span></h2>
+        <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:16px;">
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-bottom:8px;">${esc(scam.playbook.whatVictimSees.screenTitle)}</div>
+          <div style="background:var(--surface);border:1px dashed var(--border);border-radius:8px;padding:14px;font-size:13.5px;color:var(--text);line-height:1.65;white-space:pre-wrap;">${esc(scam.playbook.whatVictimSees.screenBody)}</div>
+          ${scam.playbook.whatVictimSees.caption ? `<p style="font-size:12.5px;color:var(--text-muted);margin:10px 0 0;">${esc(scam.playbook.whatVictimSees.caption)}</p>` : ""}
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>5. The Psychology Behind It</h2>
+        <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.75;margin:0;">${esc(scam.playbook.psychology)}</p>
+      </section>
+
+      <section class="panel">
+        <h2>6. Red Flags to Spot Immediately</h2>
+        <ul style="font-size:14.5px;color:var(--text-secondary);padding-left:20px;line-height:1.8;margin:0;">
+          ${scam.playbook.redFlags.map((flag) => `<li style="margin-bottom:6px;">${esc(flag)}</li>`).join("")}
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>7. What Happens If the Victim Falls for It</h2>
+        <ul style="font-size:14.5px;color:var(--text-secondary);padding-left:20px;line-height:1.8;margin:0;">
+          ${scam.playbook.consequences.map((c) => `<li style="margin-bottom:6px;">${esc(c)}</li>`).join("")}
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>8. How to Protect Yourself</h2>
+        <ul style="font-size:14.5px;color:var(--text-secondary);padding-left:20px;line-height:1.8;margin:0;">
+          ${scam.playbook.prevention.map((p) => `<li style="margin-bottom:6px;">${esc(p)}</li>`).join("")}
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>9. What to Do If Already Scammed</h2>
+        <ol style="font-size:14.5px;color:var(--text-secondary);padding-left:20px;line-height:1.8;margin:0;">
+          ${scam.playbook.immediateAction.map((a) => `<li style="margin-bottom:8px;">${esc(a)}</li>`).join("")}
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>10. India-Specific Reporting Channels</h2>
+        <ul style="font-size:14.5px;color:var(--text-secondary);padding-left:20px;line-height:1.8;margin:0;">
+          ${scam.playbook.reportingChannels.map((ch) => `<li style="margin-bottom:6px;"><strong>${esc(ch.name)}:</strong> ${esc(ch.detail)}${ch.url ? ` (<a href="${esc(ch.url)}" target="_blank" rel="noopener noreferrer">${esc(ch.url)}</a>)` : ""}</li>`).join("")}
+        </ul>
+      </section>
+      `
+          : ""
+      }
+
       <section class="panel">
         <h2>🚨 Emergency 4-Step Golden Hour Protocol (If Targeted)</h2>
         <ol style="font-size:14.5px;color:var(--text-secondary);padding-left:20px;line-height:1.75;">

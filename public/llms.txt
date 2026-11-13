@@ -16,7 +16,7 @@
 
 ## Core Sections & Canonical Pages
 - [Cybersecurity News](https://cipherati.com/cybersecurity-news.html): 21 verified reporting stories across Indian banking/BFSI (RBI, CERT-In), enterprise defense, and global crypto heists.
-- [Scam Alerts & Citizen Defense](https://cipherati.com/scam-alerts.html): 19 verified playbooks against digital arrest, e-Challan/wedding card APK malware, and UPI financial fraud.
+- [Scam Alerts & Citizen Defense](https://cipherati.com/scam-alerts.html): 31 verified playbooks against digital arrest, e-Challan/wedding card APK malware, and UPI financial fraud.
 - [AI Realities in Production](https://cipherati.com/ai-realities.html): 22 hard engineering truths and architecture fixes when deploying AI agents, RAG, and LLMs.
 - [Curated AI Developer Tools Directory](https://cipherati.com/ai-tools.html): 223 production-ready developer tools, coding agents, and local model infrastructure.
 

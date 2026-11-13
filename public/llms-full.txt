@@ -143,7 +143,7 @@ Cipherati is an independent engineering directory of open-source AI developer to
 
 ---
 
-## 2. Citizen Scam Defense Playbooks (19 Verified Modus Operandi)
+## 2. Citizen Scam Defense Playbooks (31 Verified Modus Operandi)
 
 ### Scam #1: The "Digital Arrest" Police Video Call
 - Platform: WhatsApp / Video Call
@@ -277,6 +277,90 @@ Cipherati is an independent engineering directory of open-source AI developer to
 - The Trap: You are added to a WhatsApp group named after a famous global brokerage. "Mentors" promise guaranteed 100% allocation in blockbuster IPOs and instruct you to trade through a customized app. The app shows massive fake profits, but when you attempt to withdraw, they demand a 20% "tax release fee" and freeze your account.
 - Defense Rule: SEBI-registered brokerages never conduct institutional IPO bidding or accept investments via WhatsApp groups. Never deposit money into personal accounts for stock market trading.
 - Statutory Authority: Securities and Exchange Board of India (SEBI) (https://www.sebi.gov.in/)
+
+### Scam #20: The SIM Swap / eSIM Hijack Scam
+- Platform: Telecom / SIM / SMS OTP
+- Severity: CRITICAL
+- The Trap: Fraudsters obtain your identity details through phishing or data leaks and convince your telecom provider—or trick you into approving an eSIM activation/SIM replacement request—to issue a duplicate SIM or transfer your mobile number to their device. Your phone suddenly drops to 'No Service' or 'SOS Only' while all banking OTPs, UPI re-registrations, and corporate MFA codes route straight to the attacker's SIM.
+- Defense Rule: Enable a SIM PIN on your physical SIM, use app-based authenticators instead of SMS OTPs wherever possible, and treat any sudden unexplained loss of mobile network signal as an urgent security emergency—contact your telecom carrier immediately and check Sanchar Saathi.
+- Statutory Authority: DoT Sanchar Saathi & RBI Advisory (https://sancharsaathi.gov.in/)
+
+### Scam #21: The WhatsApp QR Code / Linked Device Hijack
+- Platform: WhatsApp Web / QR Code
+- Severity: HIGH
+- The Trap: Fraudsters trick you into scanning a WhatsApp Web QR code or entering a 'Link with phone number' 8-character pairing code under the pretext of verifying a colleague's message, unlocking a PDF document, or claiming a reward. Once paired, the attacker runs your WhatsApp session silently on their browser, reads private and work chats, and messages your contacts asking for urgent money.
+- Defense Rule: Never scan a WhatsApp Web QR code or enter an 8-digit 'Link a device' code sent by anyone. Regularly check WhatsApp Settings → Linked Devices and log out any browser or device you do not recognise.
+- Statutory Authority: CERT-In & I4C Cyber Dost Advisory (https://www.cert-in.org.in/)
+
+### Scam #22: The Fake UPI Autopay / Mandate Approval Scam
+- Platform: UPI Autopay / Collect Request
+- Severity: CRITICAL
+- The Trap: Fraudsters pose as customer care, OTT/telecom billing teams, or marketplace buyers and send a UPI Autopay mandate request disguised as a 'refund approval', 'subscription cancellation', or 'KYC renewal'. When you enter your UPI PIN, you do not receive money—you authorise recurring automatic debits that quietly drain your bank account.
+- Defense Rule: Entering your UPI PIN is ALWAYS for paying or authorising a debit—never to receive a refund or cancel a plan. Regularly inspect the 'UPI Autopay / Mandates' section in your UPI app and revoke any unknown mandate.
+- Statutory Authority: NPCI & RBI Digital Payment Safety (https://www.npci.org.in/)
+
+### Scam #23: The Instant Loan App / Digital Blackmail Scam
+- Platform: Malicious Loan App / Contacts
+- Severity: CRITICAL
+- The Trap: Unlicensed instant loan apps—often downloaded via APK links, social media ads, or rogue app clones—promise 5-minute 'no paperwork' credit. During setup, they demand access to your phone contacts, photo gallery, and call logs, then disburse a tiny amount (or nothing at all) and extort multiple times the sum by threatening to send morphed photos to your family and office colleagues.
+- Defense Rule: Never install loan apps from WhatsApp/SMS APK links or unverified ads. Borrow only from RBI-registered banks or NBFCs, never grant contacts/gallery permissions to financial apps, and never pay extortion demands—paying encourages further blackmail.
+- Statutory Authority: RBI Sachet & I4C Cybercrime Portal (https://sachet.rbi.org.in/)
+
+### Scam #24: The AI Deepfake Video / Sextortion Scam
+- Platform: Video Call / Social Media
+- Severity: CRITICAL
+- The Trap: Fraudsters initiate an unsolicited video call from an attractive stranger's profile—or scrape your public LinkedIn/Instagram photos—and use AI face-swap/deepfake tools to fabricate compromising videos. They immediately threaten to send the video to your family, LinkedIn connections, or HR department unless you pay hush money.
+- Defense Rule: Never answer unexpected video calls from unknown numbers. Lock down social media friend lists and public profile photos, never pay blackmailers, and preserve screenshots immediately for Cyber Police.
+- Statutory Authority: I4C & State Cyber Police Advisory (https://cybercrime.gov.in/)
+
+### Scam #25: The Romance-to-Investment / Pig Butchering Scam
+- Platform: Dating Apps / Fake Crypto & Trading
+- Severity: CRITICAL
+- The Trap: Fraudsters build a warm, patient online friendship or romantic relationship over weeks on dating apps, LinkedIn, or Instagram—often using stolen photos or AI-enhanced personas—before casually introducing a 'guaranteed' crypto, forex, or gold trading platform. Initial small withdrawals succeed to build trust, followed by massive losses when you deposit life savings and are blocked from withdrawing.
+- Defense Rule: Never mix online romance or unverified social connections with financial investments. Verify any trading platform with SEBI before depositing funds, and treat any request to move from a dating app to WhatsApp/Telegram to 'invest together' as a major red flag.
+- Statutory Authority: I4C & SEBI Investor Alert (https://www.sebi.gov.in/)
+
+### Scam #26: The Fake Bank Refund / Transaction Reversal Scam
+- Platform: Phone Call / Screen Share
+- Severity: CRITICAL
+- The Trap: Scammers impersonate bank fraud-desk officers or customer care agents—often right after you post a complaint on social media or search for a helpline online—and offer an instant 'transaction reversal' or 'failed payment refund'. They trick you into installing a screen-sharing app or entering netbanking credentials and OTPs on a fake refund form, emptying your account.
+- Defense Rule: Real banks NEVER ask for OTPs, CVV, netbanking passwords, or screen-sharing apps to process a refund or transaction reversal. Use only the helpline number printed on the back of your card or inside your official banking app.
+- Statutory Authority: RBI Kehta Hai & CERT-In (https://www.rbi.org.in/)
+
+### Scam #27: The Work-from-Home Registration Fee Scam
+- Platform: WhatsApp / Job Portals
+- Severity: HIGH
+- The Trap: Fake recruiters send tempting WhatsApp messages, emails, or job-portal offers promising ₹2,500–₹4,000 per day for simple remote data entry, form filling, or brand-promotion tasks. Before releasing 'project files' or 'company laptop dispatch', they demand upfront registration, training, ID-card, or background-verification fees—then disappear or invent legal penalties.
+- Defense Rule: Legitimate employers NEVER charge candidates for registration, training, laptop shipping, or background verification. Always verify job offers on the company's official careers page before paying a rupee or sharing identity documents.
+- Statutory Authority: I4C & PIB Fact Check (https://cybercrime.gov.in/)
+
+### Scam #28: The Money Mule / Bank Account Rental Scam
+- Platform: Telegram / Bank Account
+- Severity: CRITICAL
+- The Trap: Fraudsters on Telegram, Instagram, or college/job groups offer easy monthly 'commissions' (2%–5% per transaction or ₹10,000/week) just to receive money in your bank account and forward it via UPI, IMPS, or crypto—or to 'rent out' your savings account and ATM card. The money moving through your account is stolen from other cybercrime victims, making YOU the primary suspect when police and banks freeze accounts.
+- Defense Rule: Never allow anyone—not even a friend or 'online employer'—to use your bank account, UPI ID, or debit card to route funds, and never accept commissions to forward money.
+- Statutory Authority: RBI & I4C Anti-Mule Advisory (https://www.rbi.org.in/)
+
+### Scam #29: The Aadhaar / PAN Update and Identity Theft Scam
+- Platform: SMS / Fake Govt Portal
+- Severity: HIGH
+- The Trap: Fraudsters send SMS or WhatsApp messages warning that your PAN card will be deactivated, your Aadhaar biometrics need urgent re-verification, or your PAN-Aadhaar link failed. The link opens a cloned government portal that harvests your Aadhaar number, PAN, date of birth, bank details, and OTPs—enabling identity theft, unauthorised loans, or bank account compromise.
+- Defense Rule: Check PAN and Aadhaar status ONLY on official .gov.in portals (incometax.gov.in and myaadhaar.uidai.gov.in). Never share Aadhaar OTPs with callers or enter them on links received via SMS or WhatsApp.
+- Statutory Authority: UIDAI, Income Tax & CERT-In (https://cybercrime.gov.in/)
+
+### Scam #30: The Fake Insurance Claim / Policy Refund Scam
+- Platform: Phone Call / Fake IRDAI Letter
+- Severity: HIGH
+- The Trap: Fraudsters impersonate insurance company officers, IRDAI officials, or 'unclaimed bonus settlement desks' and call policyholders claiming a lapsed or active life/health policy has earned a massive bonus or maturity refund. To release the payout, they demand upfront 'processing charges', 'GST', 'NOC fees', or 'policy revival premiums' paid into personal/shell accounts.
+- Defense Rule: IRDAI NEVER calls policyholders or collects fees to release insurance bonuses or maturity claims. Verify any policy payout directly inside your insurer's official app, customer portal, or local branch—and never pay an upfront fee to receive a claim.
+- Statutory Authority: IRDAI & RBI Sachet Advisory (https://sachet.rbi.org.in/)
+
+### Scam #31: The Cyber Fraud Recovery Agent Scam
+- Platform: Social Media / Phone Call
+- Severity: HIGH
+- The Trap: Fraudsters target people who have already lost money to a cyber scam—finding them through social media comments, fake 'cyber help' pages, or leaked complaint data—and pose as ethical hackers, cyber lawyers, RBI recovery officers, or special investigators. They claim they have traced your stolen ₹5 lakh and demand an advance 'server fee' or 'legal processing fee' to recover it, scamming the victim a second time.
+- Defense Rule: NO private hacker, lawyer, or 'recovery agent' on Instagram, Telegram, or WhatsApp can trace or reverse stolen funds outside official police and banking channels. Use ONLY the government's free 1930 helpline and cybercrime.gov.in.
+- Statutory Authority: I4C National Cybercrime Advisory (https://cybercrime.gov.in/)
 
 
 ---

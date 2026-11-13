@@ -79,7 +79,7 @@ export function generateScamsHtml(scams) {
           </button>
         </div>
 
-        <h3 class="scam-title">${esc(item.title)}</h3>
+        <h3 class="scam-title"><a href="/scams/${esc(item.id)}.html" class="scam-title-link">${esc(item.title)}</a></h3>
 
         <div class="scam-body">
           <p class="scam-desc">${esc(item.scam)}</p>

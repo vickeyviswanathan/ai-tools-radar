@@ -21,9 +21,9 @@ Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 2. SCAM ALERTS
 ------------------------------------------------------------
 
-The WhatsApp Part-Time "Hotel Review / Like" Job [Vector: WhatsApp / Telegram]
-• How it works: You get a WhatsApp message offering ₹2,000–₹5,000 per day to like YouTube videos or review hotels. You complete initial tasks and receive ₹300 genuine payout to build trust. Then you are added to a Telegram VIP group and convinced to deposit ₹50,000 to "unlock" higher commissions, which you can never withdraw.
-• Defense rule: Legitimate businesses never recruit over WhatsApp to pay for video likes. Any scheme paying small token amounts upfront to lure you into depositing larger "prepaid" funds is a scam.
+The Romance-to-Investment / Pig Butchering Scam [Vector: Dating Apps / Fake Crypto & Trading]
+• How it works: Fraudsters build a warm, patient online friendship or romantic relationship over weeks on dating apps, LinkedIn, or Instagram—often using stolen photos or AI-enhanced personas—before casually introducing a 'guaranteed' crypto, forex, or gold trading platform. Initial small withdrawals succeed to build trust, followed by massive losses when you deposit life savings and are blocked from withdrawing.
+• Defense rule: Never mix online romance or unverified social connections with financial investments. Verify any trading platform with SEBI before depositing funds, and treat any request to move from a dating app to WhatsApp/Telegram to 'invest together' as a major red flag.
 • Helpline: Dial 1930 (National Cyber Helpline) or report at https://cipherati.com/scam-alerts.html
 
 ------------------------------------------------------------
