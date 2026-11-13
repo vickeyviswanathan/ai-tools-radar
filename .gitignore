@@ -7,3 +7,5 @@ data/logos/
 npm-debug.log*
 
 .build/
+reports/
+drafts/
