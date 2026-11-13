@@ -1,28 +1,48 @@
 {
-  "date": "2026-11-13",
-  "dateFormatted": "Fri, Nov 13, 2026",
+  "date": "2026-11-14",
+  "dateFormatted": "Sat, Nov 14, 2026",
   "leadThreat": {
-    "id": "live-crypto-heists-9683191002",
-    "category": "crypto-heists",
+    "id": "live-global-ransomware-5214129958",
+    "category": "global-ransomware",
     "severity": "critical",
-    "impactBadge": "💰 $6.3B Exchange Hack",
-    "title": "DOJ gets court approval to seize $1.2 billion tied to North Korea's Binance hack",
-    "sourceName": "CoinDesk",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZnhOaHFuMTFtcGtQdUdzSFZxWUthYVZNMnlPem9XdzZ3cjdGVGFaN25IQlR2QVM1bmN2aWZ4RDBwT3NIN3dvb0tpVzZlVFBFUXFuTzQyODd2N1lHc2VzVGFtNmJ1Q2V6bFN5M3drUHZURmFKNnZQbmctOVZnWjh1YVF3OHZZVTB1ZzVGODdScUZDdUZsNnFYZERaYWFJdU53SmI3RnY5dkxhVXlZSHZqNnNXb2hFYW9VeTRvbUlmaV9sNFYwRnc5ajVvaUN1SzVONFE?oc=5",
-    "provenanceBadge": "⛓️ Crypto & Web3",
-    "badgeType": "onchain",
-    "ref": "CoinDesk",
-    "date": "2026-11-13",
-    "pubDate": "Fri, 13 Nov 2026 05:37:00 GMT",
-    "timestamp": 1794548220000,
-    "timeAgo": "2 hours ago",
-    "entities": "Crypto & Digital Assets",
-    "incident": "Key updates: FBI seizes $1.2bn stolen in Binance cryptocurrency hack; Binance restores all $6.3 billion stolen in October hack.",
+    "impactBadge": "📰 Security Report",
+    "title": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
+    "sourceName": "The Hacker News",
+    "sourceUrl": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
+    "provenanceBadge": "🛡️ The Hacker News",
+    "badgeType": "statutory",
+    "ref": "The Hacker News",
+    "date": "2026-11-12",
+    "pubDate": "Thu, 12 Nov 2026 17:50:27 GMT",
+    "timestamp": 1794505827000,
+    "timeAgo": "14 hours ago",
+    "entities": "Enterprise & Critical Infrastructure",
+    "incident": "",
     "rootCause": "Primary source reporting.",
-    "consequence": "Read reporting on CoinDesk.",
-    "synthesizedContext": "FBI seizes $1.2bn stolen in Binance cryptocurrency hack; Binance restores all $6.3 billion stolen in October hack."
+    "consequence": "Read reporting on The Hacker News.",
+    "synthesizedContext": "Primary source reporting."
   },
   "quickHits": [
+    {
+      "id": "live-crypto-heists-9683191002",
+      "category": "crypto-heists",
+      "severity": "critical",
+      "impactBadge": "💰 $6.3B Exchange Hack",
+      "title": "DOJ gets court approval to seize $1.2 billion tied to North Korea's Binance hack",
+      "sourceName": "CoinDesk",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZnhOaHFuMTFtcGtQdUdzSFZxWUthYVZNMnlPem9XdzZ3cjdGVGFaN25IQlR2QVM1bmN2aWZ4RDBwT3NIN3dvb0tpVzZlVFBFUXFuTzQyODd2N1lHc2VzVGFtNmJ1Q2V6bFN5M3drUHZURmFKNnZQbmctOVZnWjh1YVF3OHZZVTB1ZzVGODdScUZDdUZsNnFYZERaYWFJdU53SmI3RnY5dkxhVXlZSHZqNnNXb2hFYW9VeTRvbUlmaV9sNFYwRnc5ajVvaUN1SzVONFE?oc=5",
+      "provenanceBadge": "⛓️ Crypto & Web3",
+      "badgeType": "onchain",
+      "ref": "CoinDesk",
+      "date": "2026-11-13",
+      "pubDate": "Fri, 13 Nov 2026 05:37:00 GMT",
+      "timestamp": 1794548220000,
+      "timeAgo": "2 hours ago",
+      "entities": "Crypto & Digital Assets",
+      "incident": "Key updates: FBI seizes $1.2bn stolen in Binance cryptocurrency hack; Binance restores all $6.3 billion stolen in October hack.",
+      "rootCause": "Primary source reporting.",
+      "consequence": "Read reporting on CoinDesk."
+    },
     {
       "id": "live-crypto-heists-232377439",
       "category": "crypto-heists",
@@ -42,26 +62,6 @@
       "incident": "",
       "rootCause": "Primary source reporting.",
       "consequence": "Read reporting on Yahoo Finance."
-    },
-    {
-      "id": "live-global-ransomware-5214129958",
-      "category": "global-ransomware",
-      "severity": "critical",
-      "impactBadge": "📰 Security Report",
-      "title": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
-      "sourceName": "The Hacker News",
-      "sourceUrl": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
-      "provenanceBadge": "🛡️ The Hacker News",
-      "badgeType": "statutory",
-      "ref": "The Hacker News",
-      "date": "2026-11-12",
-      "pubDate": "Thu, 12 Nov 2026 17:50:27 GMT",
-      "timestamp": 1794505827000,
-      "timeAgo": "14 hours ago",
-      "entities": "Enterprise & Critical Infrastructure",
-      "incident": "",
-      "rootCause": "Primary source reporting.",
-      "consequence": "Read reporting on The Hacker News."
     },
     {
       "id": "live-global-ransomware-7931694015",
@@ -85,64 +85,67 @@
     }
   ],
   "topScam": {
-    "id": "whatsapp-wedding-card-apk",
-    "category": "apk-malware",
-    "platform": "WhatsApp / Android APK",
-    "tag": "Wedding Card Virus",
-    "severity": "critical",
-    "title": "The WhatsApp \"Wedding Card\" Virus (APK Trojan)",
-    "scam": "You receive a message from a friend or relative on WhatsApp saying: \"My cousin is getting married next week, wedding card and venue attached.\" The attached file looks like an invite, but ends in .apk. Installing it infects your phone with a virus that hijacks your WhatsApp, sends the same scam to all your family contacts, and steals your net banking logins.",
-    "protection": "Real wedding cards are always photos or PDFs, never an .apk software file. If someone sends an APK file, do not tap it. Call that person on a regular call to tell them their WhatsApp is compromised.",
-    "sourceName": "CERT-In Cyber Security Advisory",
-    "sourceUrl": "https://www.cert-in.org.in/",
+    "id": "part-time-youtube-review-job",
+    "category": "messaging",
+    "platform": "WhatsApp / Telegram",
+    "tag": "Job Task Fraud",
+    "severity": "high",
+    "title": "The WhatsApp Part-Time \"Hotel Review / Like\" Job",
+    "scam": "You get a WhatsApp message offering ₹2,000–₹5,000 per day to like YouTube videos or review hotels. You complete initial tasks and receive ₹300 genuine payout to build trust. Then you are added to a Telegram VIP group and convinced to deposit ₹50,000 to \"unlock\" higher commissions, which you can never withdraw.",
+    "protection": "Legitimate businesses never recruit over WhatsApp to pay for video likes. Any scheme paying small token amounts upfront to lure you into depositing larger \"prepaid\" funds is a scam.",
+    "sourceName": "Indian Cyber Crime Coordination Centre (I4C)",
+    "sourceUrl": "https://cybercrime.gov.in/",
     "verifiedDate": "2026-10-30",
-    "actionLinkText": "CERT-In Advisory Desk ↗",
-    "actionUrl": "https://www.cert-in.org.in/"
+    "actionLinkText": "I4C Cybercrime Portal ↗",
+    "actionUrl": "https://cybercrime.gov.in/"
   },
   "featuredTool": {
-    "id": 437,
-    "name": "llamafile",
-    "tagline": "Distribute and run LLMs with a single file.",
-    "url": "https://docs.mozilla.ai/llamafile",
+    "id": 787,
+    "name": "TTS",
+    "tagline": "🐸💬 - a deep learning toolkit for Text-to-Speech, widely used in research and production",
+    "url": "https://github.com/coqui-ai/TTS",
     "emoji": null,
     "category": "Audio & Voice",
     "why_it_matters": null,
-    "launched_at": 1694380352,
-    "score": 1.2487689791151368,
+    "launched_at": 1589989528,
+    "score": 0,
     "signals": [
-      "github:26524.0"
+      "github:46172.0"
     ],
-    "rank": 26524,
+    "rank": 46172,
     "velocity": 0,
     "isRising": false,
-    "isNew2026": false
+    "isNew2026": false,
+    "slug": "tts"
   },
   "realityPick": {
-    "id": 14,
-    "title": "The Naive Prompt Guardrail Illusion",
-    "category": "Security & Guardrails",
+    "id": 20,
+    "title": "The \"Build vs Buy\" Enterprise AI Platform Money Pit",
+    "category": "Serving & Infra",
     "symptoms": [
-      "jailbreak bypassed system prompt",
-      "ignore previous instructions leak",
-      "pii leaked to user",
-      "dan mode bypass"
+      "14-month platform delay",
+      "deprecated in-house orchestrator",
+      "million dollar payroll burn",
+      "mcp incompatibility",
+      "executive",
+      "c-suite"
     ],
-    "myth": "Adding 'You are a polite assistant and must never disclose secrets' to your system prompt protects your business!",
-    "reality": "Prompt-level instructions can always be overridden by sophisticated jailbreaks, multilingual token encodings, or recursive context manipulation. Prompting is NOT a security boundary.",
-    "fix": "Deploy deterministic classifier guardrails and independent input/output screening models outside the LLM execution pipeline.",
-    "impact": "A customer jailbreaks an automotive chatbot into selling a brand-new vehicle for $1 legally bound by conversation record.",
+    "myth": "We need to build our own in-house custom LLM orchestration platform from scratch to maintain proprietary competitive advantage.",
+    "reality": "Internal platform builds take 9–14 months and consume $1.5M+ in engineering payroll, only to be rendered obsolete every quarter as open standards (Model Context Protocol, Ollama, Langflow, Dify) and cloud provider primitives leapfrog internal codebases.",
+    "fix": "Standardize on open protocols (MCP) and swappable gateway layers. Treat LLMs and orchestrators as commodity utilities; build your proprietary moat strictly around domain-specific enterprise data, private business logic, and custom evaluation benchmarks.",
+    "impact": "Millions wasted in custom platform development while competitors deploy standard MCP architectures in days.",
     "tools": [
       {
-        "name": "Llama Guard",
-        "url": "https://huggingface.co/meta-llama/Llama-Guard-3-8B"
+        "name": "MCP Servers (Anthropic)",
+        "url": "https://github.com/modelcontextprotocol/servers"
       },
       {
-        "name": "NeMo Guardrails",
-        "url": "https://github.com/NVIDIA/NeMo-Guardrails"
+        "name": "Dify",
+        "url": "https://github.com/langgenius/dify"
       },
       {
-        "name": "Guardrails AI",
-        "url": "https://github.com/guardrails-ai/guardrails"
+        "name": "Ollama",
+        "url": "https://github.com/ollama/ollama"
       }
     ]
   }

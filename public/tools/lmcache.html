@@ -30,7 +30,7 @@
   <meta name="twitter:title" content="LMCache — Engineering Review, Self-Hosting, Privacy &amp; Alternatives | Cipherati" />
   <meta name="twitter:description" content="Independent engineering evaluation of LMCache (Models &amp; Infra): LMCache: Supercharge Your LLM with the Fastest KV Cache Layer Compare deployment runtime, data privacy posture, operational caveats, and top open-source alternatives." />
   <meta name="twitter:image" content="https://cipherati.com/og-image.png" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cipherati.com/#organization","name":"Cipherati","url":"https://cipherati.com/","logo":"https://cipherati.com/icons/icon-512.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cipherati","item":"https://cipherati.com/"},{"@type":"ListItem","position":2,"name":"AI Tools Directory","item":"https://cipherati.com/ai-tools.html"},{"@type":"ListItem","position":3,"name":"LMCache","item":"https://cipherati.com/tools/lmcache.html"}]},{"@type":"SoftwareApplication","name":"LMCache","url":"https://cipherati.com/tools/lmcache.html","applicationCategory":"Models & Infra","operatingSystem":"Cross-platform","description":"LMCache: Supercharge Your LLM with the Fastest KV Cache Layer — Engineering evaluation, deployment model, privacy posture, and alternatives."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is LMCache used for in AI engineering?","acceptedAnswer":{"@type":"Answer","text":"LMCache is an indexed tool in the Models & Infra category: LMCache: Supercharge Your LLM with the Fastest KV Cache Layer Primary engineering fit: Running quantized open-weight models locally or serving high-throughput inference on dedicated GPU clusters."}},{"@type":"Question","name":"Can LMCache be self-hosted or run locally?","acceptedAnswer":{"@type":"Answer","text":"Managed Cloud / API or Desktop Client. Data & privacy posture: Prompts and context may transit vendor cloud infrastructure; verify SOC2/DPDP data retention and zero-data-retention (ZDR) policies before sending proprietary code or PII."}},{"@type":"Question","name":"What are the operational trade-offs and limitations of LMCache?","acceptedAnswer":{"@type":"Answer","text":"Self-hosting requires GPU VRAM provisioning and KV-cache tuning; evaluate hardware utilization vs. pay-per-token API economics. Note that public community metrics (★ 12.2k GitHub stars (public popularity metric)) measure repository or community popularity, not an independent security audit or enterprise SLA."}},{"@type":"Question","name":"What are the top alternatives to LMCache?","acceptedAnswer":{"@type":"Answer","text":"Top alternatives to LMCache in Models & Infra include Ollama (Run Llama, DeepSeek, Mistral, and open-weight LLMs locally via CLI and REST API on macOS, Linux, and Windows.); transformers (🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.); vLLM (High-throughput and memory-efficient LLM serving engine powered by PagedAttention and CUDA kernels.); LM Studio (Discover, download, and run local LLMs offline with a desktop GUI and local OpenAI-compatible server.); LlamaFactory (Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024))."}}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cipherati.com/#organization","name":"Cipherati","url":"https://cipherati.com/","logo":"https://cipherati.com/icons/icon-512.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cipherati","item":"https://cipherati.com/"},{"@type":"ListItem","position":2,"name":"AI Tools Directory","item":"https://cipherati.com/ai-tools.html"},{"@type":"ListItem","position":3,"name":"Models & Infra","item":"https://cipherati.com/ai-tools.html#tools/Models%20%26%20Infra"},{"@type":"ListItem","position":4,"name":"LMCache","item":"https://cipherati.com/tools/lmcache.html"}]},{"@type":"SoftwareApplication","name":"LMCache","url":"https://cipherati.com/tools/lmcache.html","applicationCategory":"Models & Infra","operatingSystem":"Cross-platform","description":"LMCache: Supercharge Your LLM with the Fastest KV Cache Layer — Engineering evaluation, deployment model, privacy posture, and alternatives."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is LMCache used for in AI engineering?","acceptedAnswer":{"@type":"Answer","text":"LMCache is an indexed tool in the Models & Infra category: LMCache: Supercharge Your LLM with the Fastest KV Cache Layer Primary engineering fit: Running quantized open-weight models locally or serving high-throughput inference on dedicated GPU clusters."}},{"@type":"Question","name":"Can LMCache be self-hosted or run locally?","acceptedAnswer":{"@type":"Answer","text":"Managed Cloud / API or Desktop Client. Data & privacy posture: Prompts and context may transit vendor cloud infrastructure; verify SOC2/DPDP data retention and zero-data-retention (ZDR) policies before sending proprietary code or PII."}},{"@type":"Question","name":"What are the operational trade-offs and limitations of LMCache?","acceptedAnswer":{"@type":"Answer","text":"Self-hosting requires GPU VRAM provisioning and KV-cache tuning; evaluate hardware utilization vs. pay-per-token API economics. Note that public community metrics (★ 12.2k GitHub stars (public popularity metric)) measure repository or community popularity, not an independent security audit or enterprise SLA."}},{"@type":"Question","name":"What are the top alternatives to LMCache?","acceptedAnswer":{"@type":"Answer","text":"Top alternatives to LMCache in Models & Infra include Ollama (Run Llama, DeepSeek, Mistral, and open-weight LLMs locally via CLI and REST API on macOS, Linux, and Windows.); transformers (🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.); vLLM (High-throughput and memory-efficient LLM serving engine powered by PagedAttention and CUDA kernels.); LM Studio (Discover, download, and run local LLMs offline with a desktop GUI and local OpenAI-compatible server.); LlamaFactory (Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024))."}}]}]}</script>
   <style>
     :root {
       --bg: #07090e;
@@ -279,6 +279,30 @@
       font-size: 13px;
       color: var(--text-muted);
     }
+    .page-nav-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 4px 0 24px; font-size: 14px; font-weight: 700; }
+    .prose { font-size: 16px; line-height: 1.7; color: var(--text-secondary); }
+    .prose h2 { font-size: 22px; line-height: 1.3; color: var(--text); margin: 30px 0 10px; }
+    .prose h3 { font-size: 18px; color: var(--text); margin: 22px 0 8px; }
+    .prose p { margin: 0 0 14px; }
+    .prose ul, .prose ol { margin: 0 0 16px; padding-left: 22px; }
+    .prose li { margin: 0 0 6px; }
+    .prose strong { color: var(--text); }
+    .prose blockquote { margin: 0 0 16px; padding: 12px 16px; border-left: 4px solid var(--accent); background: var(--surface-subtle); border-radius: 0 10px 10px 0; color: var(--text); }
+    .prose blockquote p { margin: 0; }
+    .table-wrap { overflow-x: auto; margin: 0 0 18px; border: 1px solid var(--line); border-radius: 10px; }
+    .table-wrap table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 460px; }
+    .table-wrap th, .table-wrap td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    .table-wrap th { background: var(--surface-subtle); color: var(--text); font-weight: 700; }
+    .table-wrap tr:last-child td { border-bottom: none; }
+    .guide-meta { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 16px; font-size: 13px; color: var(--text-muted); }
+    .guide-note { font-size: 13.5px; color: var(--text-muted); border-top: 1px solid var(--line); padding-top: 14px; margin-top: 8px; }
+    .source-list { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.7; }
+    @media (max-width: 600px) {
+      .container { padding: 20px 14px 48px; }
+      .hero-card { padding: 20px; }
+      .prose { font-size: 15.5px; }
+    }
+    
   </style>
 </head>
 <body>
@@ -301,7 +325,7 @@
   <main class="container">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="/">Cipherati</a>
-      <span>›</span> <a href="/ai-tools.html">AI Tools</a> <span>›</span> <a href="/ai-tools.html">Models &amp; Infra</a> <span>›</span> <span>LMCache</span>
+      <span>›</span> <a href="/ai-tools.html">AI Tools</a> <span>›</span> <a href="/ai-tools.html#tools/Models%20%26%20Infra">Models &amp; Infra</a> <span>›</span> <span>LMCache</span>
     </nav>
     
       <article class="hero-card">
@@ -424,6 +448,12 @@
           <p class="faq-a">Top alternatives to LMCache in Models &amp; Infra include Ollama (Run Llama, DeepSeek, Mistral, and open-weight LLMs locally via CLI and REST API on macOS, Linux, and Windows.); transformers (🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.); vLLM (High-throughput and memory-efficient LLM serving engine powered by PagedAttention and CUDA kernels.); LM Studio (Discover, download, and run local LLMs offline with a desktop GUI and local OpenAI-compatible server.); LlamaFactory (Unified Efficient Fine-Tuning of 100+ LLMs &amp; VLMs (ACL 2024)).</p>
         </div>
       </section>
+
+      <nav class="page-nav-row" aria-label="More Models &amp; Infra tools">
+        <a href="/tools/openllm.html" rel="prev">← Previous in Models &amp; Infra: OpenLLM</a>
+        <a href="/ai-tools.html#tools/Models%20%26%20Infra">All Models &amp; Infra tools</a>
+        <a href="/tools/phoenix.html" rel="next">Next in Models &amp; Infra: phoenix →</a>
+      </nav>
     
   </main>
 
@@ -435,6 +465,9 @@
       <a href="/scam-alerts.html">1930 Scam Alerts</a> ·
       <a href="/ai-realities.html">22 AI Realities</a> ·
       <a href="/ai-tools.html">AI Tools Directory</a> ·
+      <a href="/scam-defense/upi-fraud-what-to-do/">UPI Fraud Guide</a> ·
+      <a href="/scam-defense/digital-arrest-scam-india/">Digital Arrest Guide</a> ·
+      <a href="/scam-defense/report-scam-call-india/">Report a Scam Call</a> ·
       <a href="/sitemap.xml">Sitemap</a> ·
       <a href="/llms-full.txt">LLMs.txt</a>
     </p>

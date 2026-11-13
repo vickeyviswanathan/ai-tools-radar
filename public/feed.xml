@@ -5,7 +5,7 @@
     <link>https://cipherati.com/</link>
     <description>Independent cybersecurity news desk, 1930 citizen scam defense playbooks, 22 production AI engineering realities, and 223 verified open-source AI developer tools.</description>
     <language>en-in</language>
-    <lastBuildDate>Fri, 13 Nov 2026 08:17:50 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 18:36:06 GMT</lastBuildDate>
     <atom:link href="https://cipherati.com/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Cyber News] Unocoin Says BitGo Multisig Backup Was Likely Exploited Despite Account Freeze</title>
@@ -139,7 +139,7 @@
       <title>[Scam Alert] The &quot;Digital Arrest&quot; Police Video Call (WhatsApp / Video Call)</title>
       <link>https://cipherati.com/scam-alerts.html#digital-arrest-video-call</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#digital-arrest-video-call</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: A caller in uniform claims your Aadhaar or passport was found in an illegal parcel or money laundering probe. They place you on a fraudulent WhatsApp video call or custom video link with a backdrop resembling a police station, CBI, or ED cyber cell, declaring you are under &#39;Digital Arrest&#39; and coercing you to transfer savings into a fake &#39;RBI verification escrow&#39;. | Defense Rule: Indian law and law enforcement agencies have NO legal concept of &#39;Digital Arrest&#39;. Police, CBI, ED, and customs NEVER conduct interrogations, trials, or arrests over video calls. Hang up immediately, block the number, and report to the National Cybercrime Portal or dial 1930. (Verified by I4C &amp; PM Mann Ki Baat Cyber Alert · Emergency Helpline: 1930)</description>
     </item>
@@ -147,7 +147,7 @@
       <title>[Scam Alert] The Fake Traffic Fine Message (e-Challan APK) (SMS / Android APK)</title>
       <link>https://cipherati.com/scam-alerts.html#traffic-echallan-apk</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#traffic-echallan-apk</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You get an SMS claiming your vehicle was caught overspeeding on camera with a pending fine of ₹1,000, and a link to download an app (echallan.apk) to pay before court action. If you install it, the app silently reads all your incoming SMS, steals your bank OTPs, and drains your account. | Defense Rule: Traffic police never send app files to pay fines. Never install any file ending in .apk. Always check and pay traffic fines only on the official government website: echallan.parivahan.gov.in. (Verified by I4C (Ministry of Home Affairs) Cyber Alert · Emergency Helpline: 1930)</description>
     </item>
@@ -155,7 +155,7 @@
       <title>[Scam Alert] The WhatsApp &quot;Wedding Card&quot; Virus (APK Trojan) (WhatsApp / Android APK)</title>
       <link>https://cipherati.com/scam-alerts.html#whatsapp-wedding-card-apk</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#whatsapp-wedding-card-apk</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You receive a message from a friend or relative on WhatsApp saying: &quot;My cousin is getting married next week, wedding card and venue attached.&quot; The attached file looks like an invite, but ends in .apk. Installing it infects your phone with a virus that hijacks your WhatsApp, sends the same scam to all your family contacts, and steals your net banking logins. | Defense Rule: Real wedding cards are always photos or PDFs, never an .apk software file. If someone sends an APK file, do not tap it. Call that person on a regular call to tell them their WhatsApp is compromised. (Verified by CERT-In Cyber Security Advisory · Emergency Helpline: 1930)</description>
     </item>
@@ -163,7 +163,7 @@
       <title>[Scam Alert] The &quot;Wrong UPI Transfer&quot; Crying Call (UPI / Phone Call)</title>
       <link>https://cipherati.com/scam-alerts.html#accidental-upi-transfer-trap</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#accidental-upi-transfer-trap</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You get a genuine bank alert that ₹30,000 was credited to your account. Seconds later, a crying person calls saying: &quot;Sir, my child is in the hospital, I sent money to your number by mistake. Please send it back to my UPI ID.&quot; If you send the money back yourself, you lose your own money—because the original transfer was made using stolen funds. Within 48 hours, cyber police freeze your bank account for receiving criminal money. | Defense Rule: Never transfer the money back yourself. Tell the caller: &quot;I will not touch this money. Please call your bank and file a wrong-transfer dispute. My bank will reverse it officially.&quot; (Verified by Reserve Bank of India (RBI Sachet Advisory) · Emergency Helpline: 1930)</description>
     </item>
@@ -171,7 +171,7 @@
       <title>[Scam Alert] The Fake QR Code &quot;To Receive Payment&quot; Trap (OLX / UPI QR Code)</title>
       <link>https://cipherati.com/scam-alerts.html#olx-qr-code-receive-trap</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#olx-qr-code-receive-trap</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You list furniture or a vehicle for sale on OLX or Marketplace. A buyer immediately agrees to the price without negotiation and sends you a UPI QR code saying: &quot;Scan this QR code and enter your UPI PIN to receive the advance payment of ₹15,000.&quot; The moment you enter your PIN, ₹15,000 is debited from your account. | Defense Rule: Remember the golden rule of UPI: You NEVER need to enter your UPI PIN or scan a QR code to RECEIVE money. Entering a PIN is only required when money leaves your bank account. (Verified by NPCI &amp; National Cyber Crime Reporting Portal · Emergency Helpline: 1930)</description>
     </item>
@@ -179,7 +179,7 @@
       <title>[Scam Alert] The &quot;5G Plus Upgrade&quot; Number Steal (eSIM / SMS)</title>
       <link>https://cipherati.com/scam-alerts.html#esim-5g-upgrade-hijack</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#esim-5g-upgrade-hijack</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: A caller claiming to be from Airtel or Jio says they are upgrading your SIM to 5G for free. They tell you to send a simple SMS like eSIM &lt;email&gt; to 121. The moment you do this, your physical SIM card stops working permanently, and your phone number transfers to the scammer&#39;s phone. All your bank SMS OTPs now go to them. | Defense Rule: Never send an eSIM request to any email given by a caller. Telecom companies never call you to set up an eSIM. To upgrade your SIM, always visit an official Airtel/Jio store in person. (Verified by DoT (Department of Telecommunications) / Sanchar Saathi · Emergency Helpline: 1930)</description>
     </item>
@@ -187,7 +187,7 @@
       <title>[Scam Alert] The FASTag Highway Blacklist Trap (SMS / Web Clone)</title>
       <link>https://cipherati.com/scam-alerts.html#fastag-blacklist-panic</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#fastag-blacklist-panic</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You get an urgent SMS saying your FASTag is blacklisted or KYC is expired, demanding a ₹45 pending fee within 2 hours or your vehicle will be stopped at the next toll plaza. The link opens a fake cloned website that captures your bank account and debit card details. | Defense Rule: Highway authorities never send SMS links to collect ₹45 or update KYC. Never click links in SMS. If you want to check your FASTag, open your own banking app or Paytm directly. (Verified by NPCI &amp; Cyber Crime Coordination Centre · Emergency Helpline: 1930)</description>
     </item>
@@ -195,7 +195,7 @@
       <title>[Scam Alert] The &quot;Look-Alike Voice&quot; AI Deepfake Distress Call (Phone Call / Audio AI)</title>
       <link>https://cipherati.com/scam-alerts.html#ai-deepfake-voice-clone</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#ai-deepfake-voice-clone</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: An elderly parent receives a call that sounds identically like their son or daughter crying in panic: &quot;Dad, I was in a car crash / police detained me, please send ₹50,000 to this inspector&#39;s UPI immediately to avoid lockup.&quot; The voice is an AI clone generated from a 5-second public Instagram clip. | Defense Rule: Establish a family secret safe-word. Never transfer money under emotional pressure. Hang up immediately and dial your child&#39;s number directly on a normal voice call or video call. (Verified by CERT-In AI Threat Advisory · Emergency Helpline: 1930)</description>
     </item>
@@ -203,7 +203,7 @@
       <title>[Scam Alert] The Fake Electricity Bill Disconnection Warning (SMS / Remote App)</title>
       <link>https://cipherati.com/scam-alerts.html#electricity-bill-disconnection-sms</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#electricity-bill-disconnection-sms</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You get an urgent SMS: &quot;Dear consumer, your electricity connection will be disconnected tonight at 9:30 PM due to unpaid balance. Call power officer immediately.&quot; If you call, they tell you to install QuickSupport or AnyDesk to pay ₹11 for KYC update, which gives them full control to drain your bank account. | Defense Rule: Power boards never threaten same-night power cuts over SMS or ask you to call personal mobile numbers. Never install screen-sharing apps on advice from a stranger. Pay bills only via authorized electricity board portals. (Verified by Ministry of Power &amp; I4C Advisory · Emergency Helpline: 1930)</description>
     </item>
@@ -211,7 +211,7 @@
       <title>[Scam Alert] The WhatsApp Part-Time &quot;Hotel Review / Like&quot; Job (WhatsApp / Telegram)</title>
       <link>https://cipherati.com/scam-alerts.html#part-time-youtube-review-job</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#part-time-youtube-review-job</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You get a WhatsApp message offering ₹2,000–₹5,000 per day to like YouTube videos or review hotels. You complete initial tasks and receive ₹300 genuine payout to build trust. Then you are added to a Telegram VIP group and convinced to deposit ₹50,000 to &quot;unlock&quot; higher commissions, which you can never withdraw. | Defense Rule: Legitimate businesses never recruit over WhatsApp to pay for video likes. Any scheme paying small token amounts upfront to lure you into depositing larger &quot;prepaid&quot; funds is a scam. (Verified by Indian Cyber Crime Coordination Centre (I4C) · Emergency Helpline: 1930)</description>
     </item>
@@ -219,7 +219,7 @@
       <title>[AI Reality #1] The Context Window Lie</title>
       <link>https://cipherati.com/ai-realities.html#reality-0</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-0</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;1-million-token context window! Dump your entire company wiki or codebase into one prompt!&quot; | Reality: Loss-in-the-middle degradation causes LLMs to ignore needle-in-the-haystack facts once context exceeds 32K tokens. High Time-To-First-Token (TTFT) and linear token costs make unindexed raw-file prompting unusable in production. | Production Fix: Never dump raw unindexed documents into an LLM prompt. Use prompt compression to discard low-entropy tokens and targeted cross-encoder rerankers on small, precise retrieved chunks.</description>
     </item>
@@ -227,7 +227,7 @@
       <title>[AI Reality #2] The Token Cost Bleed</title>
       <link>https://cipherati.com/ai-realities.html#reality-1</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-1</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Per-token prices are dropping 10x every year — don&#39;t worry about cost optimization!&quot; | Reality: Agentic tool runs, compiler output dumps, and large git diffs consume millions of tokens in minutes. Automated CI/CD agents burn budgets on whitespace and noisy terminal logs. | Production Fix: Strip stack traces, memory addresses, and repetitive logs before tokenization using specialized CLI proxies (RTK) and pre-LLM output compressors (headroom).</description>
     </item>
@@ -235,7 +235,7 @@
       <title>[AI Reality #3] The Coding Agent Benchmark Myth</title>
       <link>https://cipherati.com/ai-realities.html#reality-2</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-2</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Our autonomous coding agent resolves 60% of GitHub issues end-to-end without humans!&quot; | Reality: High benchmark scores test synthetic micro-tasks on cherry-picked repositories. In real messy codebases, unsupervised agents invent fake dependencies, delete critical tests, or claim a bug is fixed by deleting the failing test suite. | Production Fix: Restrict agents to tight loops with mandatory git rollback checkpoints, deterministic test validation, and human-in-the-loop diff approvals.</description>
     </item>
@@ -243,7 +243,7 @@
       <title>[AI Reality #4] The Fine-Tuning Money Pit</title>
       <link>https://cipherati.com/ai-realities.html#reality-3</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-3</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Fine-tune a private custom model on your company&#39;s proprietary data to teach it your domain!&quot; | Reality: Fine-tuning adjusts style, tone, and grammar format — it does NOT reliably store retrievable factual knowledge. It induces catastrophic forgetting of base capabilities while rapidly growing stale when company documents update. | Production Fix: Keep the base model frozen. Use high-accuracy RAG with hybrid search for proprietary knowledge, and run open-weight models on-premise for zero ongoing API fees.</description>
     </item>
@@ -251,7 +251,7 @@
       <title>[AI Reality #5] The Agent Security Blindspot</title>
       <link>https://cipherati.com/ai-realities.html#reality-4</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-4</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Give your AI agent terminal access, browser control, and API keys to automate your entire workflow!&quot; | Reality: An LLM interpreting external web pages or untrusted user inputs can be hijacked via indirect prompt injection to execute `rm -rf`, clone malicious packages, or curl environment secrets to external attacker servers. | Production Fix: Run agents inside disposable, ephemeral Docker sandboxes with no access to production credentials, and enforce human approval on destructive operations.</description>
     </item>
@@ -259,7 +259,7 @@
       <title>[AI Reality #6] The Structured JSON Illusion</title>
       <link>https://cipherati.com/ai-realities.html#reality-5</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-5</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Just tell the LLM to output valid JSON matching your schema — instant API integration!&quot; | Reality: Under latency pressure or novel input tokens, LLMs will prepend conversational preamble, output trailing commas, or truncate JSON arrays when nearing token limits, breaking downstream backend parsers. | Production Fix: Never rely on raw prompting for JSON. Use constrained grammar sampling at the model engine level (forcing logits to only output valid schema tokens).</description>
     </item>
@@ -267,7 +267,7 @@
       <title>[AI Reality #7] The Pure Vector Search Trap</title>
       <link>https://cipherati.com/ai-realities.html#reality-6</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-6</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Embed your documents into a vector database and semantic search will magically find every answer!&quot; | Reality: Dense embeddings compress semantic meaning into float vectors, entirely erasing exact matches for error codes, part numbers, stock tickers, and proper names where semantic proximity is useless. | Production Fix: Use hybrid search combining BM25 exact keyword matching with dense vectors, followed by a cross-encoder reranker.</description>
     </item>
@@ -275,7 +275,7 @@
       <title>[AI Reality #8] The Silent Model Regression Trap</title>
       <link>https://cipherati.com/ai-realities.html#reality-7</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-7</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Auto-upgrade to the newest flagship model release for instant free intelligence!&quot; | Reality: New model checkpoints regularly regress on edge cases: system prompt adherence shifts, refusal behaviors change, and structured output formatting alters slightly, breaking brittle production parsers. | Production Fix: Never upgrade production model versions without an automated CI/CD eval suite testing against a frozen golden dataset of edge cases.</description>
     </item>
@@ -283,7 +283,7 @@
       <title>[AI Reality #9] The Multi-Agent Runaway Loop Trap</title>
       <link>https://cipherati.com/ai-realities.html#reality-8</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-8</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Deploy autonomous swarms of agents that critique and coordinate with each other 24/7!&quot; | Reality: Autonomous agent swarms rapidly descend into recursive critique loops, infinite agreement deadlocks, or hallucination cascades. Without strict iteration counters and cycle detection, two agents can burn through thousands of dollars in minutes. | Production Fix: Enforce strict hard-stop turn budgets (max 5-8 iterations), acyclic execution graphs (DAGs), and deterministic exit criteria for all subagents.</description>
     </item>
@@ -291,7 +291,7 @@
       <title>[AI Reality #10] The PDF &amp; Table Chunking Shredder</title>
       <link>https://cipherati.com/ai-realities.html#reality-9</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-9</guid>
-      <pubDate>Fri, 13 Nov 2026 08:17:50 GMT</pubDate>
+      <pubDate>Fri, 13 Nov 2026 18:36:06 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Simple character or sentence RAG chunking easily handles enterprise PDFs and balance sheets!&quot; | Reality: Standard text chunkers slice documents at arbitrary token limits, severing table rows from headers. Financial figures end up mapped to wrong columns, causing RAG models to confidently invert financial reports and legal contract numbers. | Production Fix: Replace text-based chunking with layout-aware vision-OCR parsers that reconstruct multi-column layouts and tables into structured Markdown tables prior to vector embedding.</description>
     </item>

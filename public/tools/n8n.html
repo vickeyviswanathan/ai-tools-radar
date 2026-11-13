@@ -30,7 +30,7 @@
   <meta name="twitter:title" content="n8n — Engineering Review, Self-Hosting, Privacy &amp; Alternatives | Cipherati" />
   <meta name="twitter:description" content="Independent engineering evaluation of n8n (Agents &amp; Automation): Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations. Compare deployment runtime, data privacy posture, operational caveats, and top open-source alternatives." />
   <meta name="twitter:image" content="https://cipherati.com/og-image.png" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cipherati.com/#organization","name":"Cipherati","url":"https://cipherati.com/","logo":"https://cipherati.com/icons/icon-512.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cipherati","item":"https://cipherati.com/"},{"@type":"ListItem","position":2,"name":"AI Tools Directory","item":"https://cipherati.com/ai-tools.html"},{"@type":"ListItem","position":3,"name":"n8n","item":"https://cipherati.com/tools/n8n.html"}]},{"@type":"SoftwareApplication","name":"n8n","url":"https://cipherati.com/tools/n8n.html","applicationCategory":"Agents & Automation","operatingSystem":"Cross-platform","description":"Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations. — Engineering evaluation, deployment model, privacy posture, and alternatives."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is n8n used for in AI engineering?","acceptedAnswer":{"@type":"Answer","text":"n8n is an indexed tool in the Agents & Automation category: Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations. Primary engineering fit: Orchestrating bounded, deterministic multi-step workflows, browser automation, or tool-calling pipelines via MCP."}},{"@type":"Question","name":"Can n8n be self-hosted or run locally?","acceptedAnswer":{"@type":"Answer","text":"Managed Cloud / API or Desktop Client. Data & privacy posture: Prompts and context may transit vendor cloud infrastructure; verify SOC2/DPDP data retention and zero-data-retention (ZDR) policies before sending proprietary code or PII."}},{"@type":"Question","name":"What are the operational trade-offs and limitations of n8n?","acceptedAnswer":{"@type":"Answer","text":"Unbounded multi-agent loops risk runaway API token costs and compounding hallucinations; enforce max-step budgets and schema validation. Note that public community metrics (★ 209.1k GitHub stars (public popularity metric)) measure repository or community popularity, not an independent security audit or enterprise SLA."}},{"@type":"Question","name":"What are the top alternatives to n8n?","acceptedAnswer":{"@type":"Answer","text":"Top alternatives to n8n in Agents & Automation include deepseek harness (DeepSeek Harness: Everything is a Plugin.); hermes agent (The agent that grows with you); AutoGPT (AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.); skills (Public repository for Agent Skills); Dify (Open-source LLM app development platform combining BaaS, RAG pipeline orchestration, and visual agent builder.)."}}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cipherati.com/#organization","name":"Cipherati","url":"https://cipherati.com/","logo":"https://cipherati.com/icons/icon-512.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cipherati","item":"https://cipherati.com/"},{"@type":"ListItem","position":2,"name":"AI Tools Directory","item":"https://cipherati.com/ai-tools.html"},{"@type":"ListItem","position":3,"name":"Agents & Automation","item":"https://cipherati.com/ai-tools.html#tools/Agents%20%26%20Automation"},{"@type":"ListItem","position":4,"name":"n8n","item":"https://cipherati.com/tools/n8n.html"}]},{"@type":"SoftwareApplication","name":"n8n","url":"https://cipherati.com/tools/n8n.html","applicationCategory":"Agents & Automation","operatingSystem":"Cross-platform","description":"Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations. — Engineering evaluation, deployment model, privacy posture, and alternatives."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is n8n used for in AI engineering?","acceptedAnswer":{"@type":"Answer","text":"n8n is an indexed tool in the Agents & Automation category: Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations. Primary engineering fit: Orchestrating bounded, deterministic multi-step workflows, browser automation, or tool-calling pipelines via MCP."}},{"@type":"Question","name":"Can n8n be self-hosted or run locally?","acceptedAnswer":{"@type":"Answer","text":"Managed Cloud / API or Desktop Client. Data & privacy posture: Prompts and context may transit vendor cloud infrastructure; verify SOC2/DPDP data retention and zero-data-retention (ZDR) policies before sending proprietary code or PII."}},{"@type":"Question","name":"What are the operational trade-offs and limitations of n8n?","acceptedAnswer":{"@type":"Answer","text":"Unbounded multi-agent loops risk runaway API token costs and compounding hallucinations; enforce max-step budgets and schema validation. Note that public community metrics (★ 209.1k GitHub stars (public popularity metric)) measure repository or community popularity, not an independent security audit or enterprise SLA."}},{"@type":"Question","name":"What are the top alternatives to n8n?","acceptedAnswer":{"@type":"Answer","text":"Top alternatives to n8n in Agents & Automation include deepseek harness (DeepSeek Harness: Everything is a Plugin.); hermes agent (The agent that grows with you); AutoGPT (AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.); skills (Public repository for Agent Skills); Dify (Open-source LLM app development platform combining BaaS, RAG pipeline orchestration, and visual agent builder.)."}}]}]}</script>
   <style>
     :root {
       --bg: #07090e;
@@ -279,6 +279,30 @@
       font-size: 13px;
       color: var(--text-muted);
     }
+    .page-nav-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 4px 0 24px; font-size: 14px; font-weight: 700; }
+    .prose { font-size: 16px; line-height: 1.7; color: var(--text-secondary); }
+    .prose h2 { font-size: 22px; line-height: 1.3; color: var(--text); margin: 30px 0 10px; }
+    .prose h3 { font-size: 18px; color: var(--text); margin: 22px 0 8px; }
+    .prose p { margin: 0 0 14px; }
+    .prose ul, .prose ol { margin: 0 0 16px; padding-left: 22px; }
+    .prose li { margin: 0 0 6px; }
+    .prose strong { color: var(--text); }
+    .prose blockquote { margin: 0 0 16px; padding: 12px 16px; border-left: 4px solid var(--accent); background: var(--surface-subtle); border-radius: 0 10px 10px 0; color: var(--text); }
+    .prose blockquote p { margin: 0; }
+    .table-wrap { overflow-x: auto; margin: 0 0 18px; border: 1px solid var(--line); border-radius: 10px; }
+    .table-wrap table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 460px; }
+    .table-wrap th, .table-wrap td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    .table-wrap th { background: var(--surface-subtle); color: var(--text); font-weight: 700; }
+    .table-wrap tr:last-child td { border-bottom: none; }
+    .guide-meta { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 16px; font-size: 13px; color: var(--text-muted); }
+    .guide-note { font-size: 13.5px; color: var(--text-muted); border-top: 1px solid var(--line); padding-top: 14px; margin-top: 8px; }
+    .source-list { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.7; }
+    @media (max-width: 600px) {
+      .container { padding: 20px 14px 48px; }
+      .hero-card { padding: 20px; }
+      .prose { font-size: 15.5px; }
+    }
+    
   </style>
 </head>
 <body>
@@ -301,7 +325,7 @@
   <main class="container">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="/">Cipherati</a>
-      <span>›</span> <a href="/ai-tools.html">AI Tools</a> <span>›</span> <a href="/ai-tools.html">Agents &amp; Automation</a> <span>›</span> <span>n8n</span>
+      <span>›</span> <a href="/ai-tools.html">AI Tools</a> <span>›</span> <a href="/ai-tools.html#tools/Agents%20%26%20Automation">Agents &amp; Automation</a> <span>›</span> <span>n8n</span>
     </nav>
     
       <article class="hero-card">
@@ -453,6 +477,12 @@
           <p class="faq-a">Top alternatives to n8n in Agents &amp; Automation include deepseek harness (DeepSeek Harness: Everything is a Plugin.); hermes agent (The agent that grows with you); AutoGPT (AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.); skills (Public repository for Agent Skills); Dify (Open-source LLM app development platform combining BaaS, RAG pipeline orchestration, and visual agent builder.).</p>
         </div>
       </section>
+
+      <nav class="page-nav-row" aria-label="More Agents &amp; Automation tools">
+        <a href="/tools/hermes-agent.html" rel="prev">← Previous in Agents &amp; Automation: hermes agent</a>
+        <a href="/ai-tools.html#tools/Agents%20%26%20Automation">All Agents &amp; Automation tools</a>
+        <a href="/tools/autogpt.html" rel="next">Next in Agents &amp; Automation: AutoGPT →</a>
+      </nav>
     
   </main>
 
@@ -464,6 +494,9 @@
       <a href="/scam-alerts.html">1930 Scam Alerts</a> ·
       <a href="/ai-realities.html">22 AI Realities</a> ·
       <a href="/ai-tools.html">AI Tools Directory</a> ·
+      <a href="/scam-defense/upi-fraud-what-to-do/">UPI Fraud Guide</a> ·
+      <a href="/scam-defense/digital-arrest-scam-india/">Digital Arrest Guide</a> ·
+      <a href="/scam-defense/report-scam-call-india/">Report a Scam Call</a> ·
       <a href="/sitemap.xml">Sitemap</a> ·
       <a href="/llms-full.txt">LLMs.txt</a>
     </p>
