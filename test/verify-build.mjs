@@ -153,7 +153,7 @@ for (const scam of scamsData.scams) {
 assert(untrustedScamUrls === 0, `All scam defense action links point to official statutory/regulatory domains`);
 
 // 6. Verify AI Realities Relevance, Non-duplication & Accurate Tool Stacks
-const indexHtml = readFileSync("public/index.html", "utf8");
+const indexHtml = readFileSync("public/index.html", "utf8").replace(/\r\n/g, "\n");
 const realityCardsCount = (indexHtml.match(/class="reality-card"/g) || []).length;
 assert(realityCardsCount === 22, `Exactly 22 AI Realities cards pre-rendered (found ${realityCardsCount})`);
 

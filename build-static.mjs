@@ -105,6 +105,10 @@ function seedFeaturedLeaders() {
   });
 }
 
+// CIPHERATI_LOCAL=1: safe local build. No IndexNow ping, no newsletter/push dispatch,
+// no live link health-check and no live news fetch (uses the committed data instead).
+const LOCAL_BUILD = process.env.CIPHERATI_LOCAL === "1";
+
 async function build() {
   seedFeaturedLeaders();
   if (process.env.FULL_INGEST === "true" || process.env.GITHUB_EVENT_NAME === "schedule") {
@@ -251,6 +255,7 @@ async function build() {
 
       // 3. Fast HEAD / reachability check
       let reachable = true;
+      if (LOCAL_BUILD) { verifiedTools.push(tool); return; }
       try {
         const res = await fetch(tool.url, {
           method: "HEAD",
@@ -286,7 +291,14 @@ async function build() {
   mkdirSync("./public/data", { recursive: true });
   writeFileSync("./public/data/tools.json", JSON.stringify(output, null, 2), "utf-8");
   
-  const { categories: threatCategories, threats: liveThreats } = await getLiveCyberNews();
+  let threatCategories, liveThreats;
+  if (LOCAL_BUILD) {
+    const prevThreats = JSON.parse(readFileSync("./public/data/threats.json", "utf8"));
+    threatCategories = prevThreats.categories;
+    liveThreats = prevThreats.threats;
+  } else {
+    ({ categories: threatCategories, threats: liveThreats } = await getLiveCyberNews());
+  }
   const threatOutput = {
     updatedAt: output.updatedAt,
     categories: threatCategories,
@@ -315,7 +327,7 @@ async function build() {
     realities: REALITIES_DATA
   });
   generateLlmsTxt(output.tools, sanitizedScams, liveThreats, REALITIES_DATA);
-  await pingIndexNow(seoResult?.sitemapUrls || [
+  if (!LOCAL_BUILD) await pingIndexNow(seoResult?.sitemapUrls || [
     "https://cipherati.com/",
     "https://cipherati.com/cybersecurity-news.html",
     "https://cipherati.com/scam-alerts.html",
@@ -332,8 +344,10 @@ async function build() {
   console.log(`Generated public/data/scams.json with ${sanitizedScams.length} verified scam defense playbooks.`);
 
   // Automated Dispatch Pipelines (Resend Email & OneSignal Web Push)
-  await dispatchDailyNewsletter();
-  await dispatchCriticalThreatPush();
+  if (!LOCAL_BUILD) {
+    await dispatchDailyNewsletter();
+    await dispatchCriticalThreatPush();
+  }
 }
 
 function updateThreatsInHtml(categories, threats) {
