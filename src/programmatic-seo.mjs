@@ -5,7 +5,7 @@
 // 3. /scams/[slug].html      — 19+ citizen cyber scam defense playbooks (1930 Golden Hour + FAQPage)
 // 4. /realities/[slug].html  — 22+ production AI engineering failure post-mortems & reference stacks
 
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, rmSync } from "node:fs";
 
 const SITE_URL = "https://cipherati.com/";
 
@@ -573,6 +573,8 @@ export function buildToolSlugMap(tools) {
 }
 
 export function generateProgrammaticSeoPages({ tools = [], scams = [], realities = [], updatedAt, guides = [], ledger = null }) {
+  rmSync("./public/tools", { recursive: true, force: true });
+  rmSync("./public/compare", { recursive: true, force: true });
   mkdirSync("./public/tools", { recursive: true });
   mkdirSync("./public/compare", { recursive: true });
   mkdirSync("./public/scams", { recursive: true });

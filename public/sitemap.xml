@@ -4,8 +4,8 @@
   <url><loc>https://cipherati.com/cybersecurity-news.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/scam-alerts.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/ai-realities.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/ai-tools.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/newsletter/today.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/ai-tools.html</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://cipherati.com/newsletter/today.html</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://cipherati.com/tools/rea.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/public-apis.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/ecc.html</loc><lastmod>2026-11-13</lastmod></url>
@@ -61,21 +61,17 @@
   <url><loc>https://cipherati.com/tools/oh-my-openagent.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/docling.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/openinterpreter.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/claude-code-best-practice.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/mem0.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/anythingllm.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/gpt-sovits.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/context7.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/trendradar.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/humanizer.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/litellm.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/meilisearch.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/serviette.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/ai-agent-book.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/hindsight.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/flowise.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/whisper-cpp.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/academic-research-skills.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/chrome-devtools-mcp.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/cherry-studio.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/kimi-code.html</loc><lastmod>2026-11-13</lastmod></url>
@@ -89,7 +85,6 @@
   <url><loc>https://cipherati.com/tools/siyuan.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/milvus.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/tts.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/reactive-resume.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/openhands.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/langgraph.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/fooocus.html</loc><lastmod>2026-11-13</lastmod></url>
@@ -103,11 +98,12 @@
   <url><loc>https://cipherati.com/tools/chattts.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/pageindex.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/lightpanda.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/tools/ui-tars-desktop.html</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://cipherati.com/tools/langchain-chatchat.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/tools/ifixai.html</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://cipherati.com/tools/llmfit.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/sglang.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/openvoice.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/medusa.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/langfuse.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/next-ai-draw-io.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/deepseek-reasonix.html</loc><lastmod>2026-11-13</lastmod></url>
@@ -124,7 +120,6 @@
   <url><loc>https://cipherati.com/tools/serena.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/opendataloader-pdf.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/pixelle-video.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/claude-skills.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/invokeai.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/qwen-code.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/mlflow.html</loc><lastmod>2026-11-13</lastmod></url>
@@ -135,7 +130,6 @@
   <url><loc>https://cipherati.com/tools/llamafile.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/faster-whisper.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/jan.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/llm-action.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/llava.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/whisperx.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/index-tts.html</loc><lastmod>2026-11-13</lastmod></url>
@@ -144,12 +138,15 @@
   <url><loc>https://cipherati.com/tools/iopaint.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/dyad.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/peft.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/tools/jcode.html</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://cipherati.com/tools/funasr.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/tools/cutter.html</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://cipherati.com/tools/voicebox.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/pdf-inspector.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/pyvideotrans.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/dia.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/kirara-ai.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/tools/deepeval.html</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://cipherati.com/tools/chinese-llama-alpaca.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/xerj.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/leon.html</loc><lastmod>2026-11-13</lastmod></url>
@@ -179,27 +176,27 @@
   <url><loc>https://cipherati.com/tools/krita-ai-diffusion.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/kokoro.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/runanywhere-sdks.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/pypdf.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/internvl.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/soup.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/sensevoice.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/inference.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/oumi.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/kimi-k3-in-c.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/bifrost-ai-gateway.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/dolphin.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/stablestudio.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/stabilitymatrix.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/bitsandbytes.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/firmware.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/dynamo.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/belle.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/reticulum.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/codex-with-chatgpt.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/auto-photoshop-stablediffusion-plugin.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/turbo-fieldfare.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/tools/mooncake.html</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://cipherati.com/tools/qwen-vl.html</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://cipherati.com/tools/jaaz.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/tools/chinese-llm-benchmark.html</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://cipherati.com/tools/pdf-craft.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/tools/semantic-router.html</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://cipherati.com/tools/digup.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/kiln.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/nvidia-garak.html</loc><lastmod>2026-11-13</lastmod></url>
@@ -226,7 +223,6 @@
   <url><loc>https://cipherati.com/tools/docstrange.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/pdf-oxide.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/mova.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/wan2-2-14b-preview.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/pdfx.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/xiaoyaosearch.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/compare/rea-vs-public-apis.html</loc><lastmod>2026-11-13</lastmod></url>

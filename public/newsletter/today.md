@@ -6,14 +6,14 @@ Read online: https://cipherati.com/
 1. CYBERSECURITY NEWS
 ------------------------------------------------------------
 
-LEAD: New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access (The Hacker News)
+LEAD: Microsoft Outlook Outage Explained: What Caused It And Is It A Cyberattack? (Outlook India)
 • Why it matters: Primary source reporting.
 • Sector: Enterprise & Critical Infrastructure
 
 More on the Radar:
 • DOJ gets court approval to seize $1.2 billion tied to North Korea's Binance hack (CoinDesk)
-• 'Everybody Will Be Hacked at Some Point,' Ledger CEO Warns as Crypto Thefts Hit $8.7 Billion in 2026 (Yahoo Finance)
-• Microsoft Outlook Outage Explained: What Caused It And Is It A Cyberattack? (Outlook India)
+• FBI: North Korean hackers have stolen $400 million in crypto over last 18 months (The Hill)
+• Ransomware Without Data Theft Can Still Trigger Mandatory Breach Reporting Under India's DPDP Law: K7 CyberSecurity (CXOToday.com)
 
 Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 
@@ -30,9 +30,9 @@ The Romance-to-Investment / Pig Butchering Scam [Vector: Dating Apps / Fake Cryp
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: TTS
-• What it does: 🐸💬 - a deep learning toolkit for Text-to-Speech, widely used in research and production
-• Browse 223 indexed tools: https://cipherati.com/ai-tools.html
+Featured Tool: faster whisper
+• What it does: Faster Whisper transcription with CTranslate2
+• Browse 219 indexed tools: https://cipherati.com/ai-tools.html
 
 ------------------------------------------------------------
 4. AI REALITIES

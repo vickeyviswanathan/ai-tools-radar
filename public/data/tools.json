@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T20:16:44.199Z",
+  "updatedAt": "2026-11-14T07:48:16.338Z",
   "categories": [
     "Coding",
     "Agents & Automation",
@@ -261,25 +261,6 @@
       "slug": "openinterpreter"
     },
     {
-      "id": 334,
-      "name": "claude code best practice",
-      "tagline": "from vibe coding to agentic engineering - practice makes claude perfect",
-      "url": "https://linkedin.com/in/shanraisshan",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1761920128,
-      "score": 12.734092351547353,
-      "signals": [
-        "github:68326.0"
-      ],
-      "rank": 68326,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": false,
-      "slug": "claude-code-best-practice"
-    },
-    {
       "id": 582,
       "name": "litellm",
       "tagline": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthrop…",
@@ -392,25 +373,6 @@
       "isRising": false,
       "isNew2026": true,
       "slug": "codewhale"
-    },
-    {
-      "id": 297,
-      "name": "medusa",
-      "tagline": "The world's most flexible commerce platform for agents and developers",
-      "url": "https://medusajs.com/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1579354744,
-      "score": 0.6908034629011683,
-      "signals": [
-        "github:37011.0"
-      ],
-      "rank": 37011,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": false,
-      "slug": "medusa"
     },
     {
       "id": 370,
@@ -565,25 +527,6 @@
       "slug": "serena"
     },
     {
-      "id": 424,
-      "name": "claude skills",
-      "tagline": "380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents —…",
-      "url": "https://alirezarezvani.medium.com/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1760846645,
-      "score": 5.192892139010536,
-      "signals": [
-        "github:29008.0"
-      ],
-      "rank": 29008,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": false,
-      "slug": "claude-skills"
-    },
-    {
       "id": 301,
       "name": "qwen code",
       "tagline": "An open-source AI coding agent that lives in your terminal.",
@@ -677,6 +620,63 @@
       "isRising": false,
       "isNew2026": false,
       "slug": "dyad"
+    },
+    {
+      "id": 314,
+      "name": "jcode",
+      "tagline": "High performance coding agent harness written in Rust, built for heavy multi-agent dev workflows",
+      "url": "https://jcode.sh/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1767606216,
+      "score": 5.047206499564989,
+      "signals": [
+        "github:21318.0"
+      ],
+      "rank": 21318,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": true,
+      "slug": "jcode"
+    },
+    {
+      "id": 682,
+      "name": "cutter",
+      "tagline": "Free and Open Source Reverse Engineering Platform powered by rizin",
+      "url": "https://cutter.re/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1506333051,
+      "score": 0.2639824531263946,
+      "signals": [
+        "github:20116.0"
+      ],
+      "rank": 20116,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": false,
+      "slug": "cutter"
+    },
+    {
+      "id": 593,
+      "name": "deepeval",
+      "tagline": "The LLM Evaluation Framework",
+      "url": "https://deepeval.com/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1691645704,
+      "score": 0.8747772939653533,
+      "signals": [
+        "github:19198.0"
+      ],
+      "rank": 19198,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": false,
+      "slug": "deepeval"
     },
     {
       "id": 253,
@@ -1079,44 +1079,6 @@
       "slug": "trendradar"
     },
     {
-      "id": 165,
-      "name": "humanizer",
-      "tagline": "Agent skill that removes signs of AI-generated writing from text",
-      "url": "https://skills.sh/Yannis100/vita-port-skill",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1768714215,
-      "score": 15.617280421034803,
-      "signals": [
-        "github:62574.0"
-      ],
-      "rank": 62574,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": true,
-      "slug": "humanizer"
-    },
-    {
-      "id": 311,
-      "name": "ai agent book",
-      "tagline": "\"Deep Understanding of AI Agent: Design Principles and Engineering Practices\" (by Li Bojie) Open source main repository: full book body, compiled PDF and chapter-by-chapter supporting code",
-      "url": "https://github.com/bojieli/ai-agent-book",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1757385704,
-      "score": 8.982587503698133,
-      "signals": [
-        "github:56651.0"
-      ],
-      "rank": 56651,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": false,
-      "slug": "ai-agent-book"
-    },
-    {
       "id": 398,
       "name": "hindsight",
       "tagline": "Hindsight: Agent Memory That Learns",
@@ -1250,25 +1212,6 @@
       "slug": "siyuan"
     },
     {
-      "id": 368,
-      "name": "reactive resume",
-      "tagline": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!",
-      "url": "https://rxresu.me/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1585145302,
-      "score": 0.8698743843630181,
-      "signals": [
-        "github:45096.0"
-      ],
-      "rank": 45096,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": false,
-      "slug": "reactive-resume"
-    },
-    {
       "id": 374,
       "name": "langgraph",
       "tagline": "Build resilient agents.",
@@ -1382,6 +1325,44 @@
       "isRising": false,
       "isNew2026": true,
       "slug": "lightpanda"
+    },
+    {
+      "id": 369,
+      "name": "UI TARS desktop",
+      "tagline": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+      "url": "https://agent-tars.com/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1737277483,
+      "score": 3.671720111260663,
+      "signals": [
+        "github:39447.0"
+      ],
+      "rank": 39447,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": false,
+      "slug": "ui-tars-desktop"
+    },
+    {
+      "id": 592,
+      "name": "iFixAi",
+      "tagline": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have t…",
+      "url": "https://www.ifixai.ai/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1777294954,
+      "score": 16.06337105113817,
+      "signals": [
+        "github:38524.0"
+      ],
+      "rank": 38524,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": true,
+      "slug": "ifixai"
     },
     {
       "id": 786,
@@ -1876,25 +1857,6 @@
       "isRising": false,
       "isNew2026": false,
       "slug": "yft-design"
-    },
-    {
-      "id": 51,
-      "name": "Wan2.2 14B Preview",
-      "tagline": "generate a video from an image with a text prompt",
-      "url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
-      "emoji": "🐌",
-      "category": "Image & Design",
-      "why_it_matters": "Trending with the builder community — 1.1K Hugging Face likes.",
-      "launched_at": 1784116156,
-      "score": 0.8824108517695837,
-      "signals": [
-        "huggingface:1091.0"
-      ],
-      "rank": 1091,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": true,
-      "slug": "wan2-2-14b-preview"
     },
     {
       "id": 332,
@@ -2924,25 +2886,6 @@
       "slug": "unstructured"
     },
     {
-      "id": 563,
-      "name": "pypdf",
-      "tagline": "A pure-python PDF library capable of splitting, merging, cropping, and transforming the pages of PDF files",
-      "url": "https://pypdf.readthedocs.io/en/latest/",
-      "emoji": null,
-      "category": "Productivity",
-      "why_it_matters": null,
-      "launched_at": 1325870018,
-      "score": 0.07513038560152446,
-      "signals": [
-        "github:10280.0"
-      ],
-      "rank": 10280,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": false,
-      "slug": "pypdf"
-    },
-    {
       "id": 564,
       "name": "Dolphin",
       "tagline": "The official repo for “Dolphin: Document Image Parsing via Heterogeneous Anchor Prompting”, ACL, 2025.",
@@ -3246,25 +3189,6 @@
       "isRising": false,
       "isNew2026": false,
       "slug": "serviette"
-    },
-    {
-      "id": 420,
-      "name": "academic research skills",
-      "tagline": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
-      "url": "https://buymeacoffee.com/crucify020v",
-      "emoji": null,
-      "category": "Research & Data",
-      "why_it_matters": null,
-      "launched_at": 1772087461,
-      "score": 16.26677521871599,
-      "signals": [
-        "github:54629.0"
-      ],
-      "rank": 54629,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": true,
-      "slug": "academic-research-skills"
     },
     {
       "id": 189,
@@ -3837,25 +3761,6 @@
       "slug": "mlflow"
     },
     {
-      "id": 586,
-      "name": "llm action",
-      "tagline": "The purpose of this project is to share the technical principles related to large models and practical experience (large model engineering, large model application landing)",
-      "url": "https://www.zhihu.com/column/c_1456193767213043713",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": null,
-      "launched_at": 1684819756,
-      "score": 1.0636066043406172,
-      "signals": [
-        "github:25234.0"
-      ],
-      "rank": 25234,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": false,
-      "slug": "llm-action"
-    },
-    {
       "id": 509,
       "name": "peft",
       "tagline": "🤗 PEFT: State-of-the-art Parameter-Efficient Fine-Tuning.",
@@ -4103,25 +4008,6 @@
       "slug": "oumi"
     },
     {
-      "id": 475,
-      "name": "kimi k3 in c",
-      "tagline": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
-      "url": "https://medium.com/@fareedkhandev/building-kimi-k3-in-c-to-run-a-2-8t-model-on-consumer-hardware-a5792cbf3b59",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": null,
-      "launched_at": 1785576578,
-      "score": 9.189425090553364,
-      "signals": [
-        "github:9246.0"
-      ],
-      "rank": 9246,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": true,
-      "slug": "kimi-k3-in-c"
-    },
-    {
       "id": 783,
       "name": "Bifrost AI Gateway",
       "tagline": "Go-based AI gateway with load balancing, fallback routing, token budget controls, and MCP governance.",
@@ -4158,25 +4044,6 @@
       "isRising": false,
       "isNew2026": false,
       "slug": "bitsandbytes"
-    },
-    {
-      "id": 520,
-      "name": "firmware",
-      "tagline": "The official firmware for Meshtastic, an open-source, off-grid mesh communication system.",
-      "url": "https://meshtastic.org/",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": null,
-      "launched_at": 1580576435,
-      "score": 0.15974455756336145,
-      "signals": [
-        "github:8500.0"
-      ],
-      "rank": 8500,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": false,
-      "slug": "firmware"
     },
     {
       "id": 456,
@@ -4217,25 +4084,6 @@
       "slug": "belle"
     },
     {
-      "id": 522,
-      "name": "Reticulum",
-      "tagline": "The cryptography-based networking stack for building unstoppable networks with LoRa, Packet Radio, WiFi and everything in between.",
-      "url": "https://reticulum.network/",
-      "emoji": null,
-      "category": "Models & Infra",
-      "why_it_matters": null,
-      "launched_at": 1522848486,
-      "score": 0.10776165462691857,
-      "signals": [
-        "github:7648.0"
-      ],
-      "rank": 7648,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": false,
-      "slug": "reticulum"
-    },
-    {
       "id": 442,
       "name": "turbo fieldfare",
       "tagline": "Gemma 4 26B-A4B inference in ~2 GB of RAM on any M-series MacBook",
@@ -4253,6 +4101,82 @@
       "isRising": false,
       "isNew2026": true,
       "slug": "turbo-fieldfare"
+    },
+    {
+      "id": 457,
+      "name": "Mooncake",
+      "tagline": "Mooncake is the serving platform for Kimi, a leading LLM service provided by Moonshot AI.",
+      "url": "https://kvcache-ai.github.io/Mooncake/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": null,
+      "launched_at": 1719292865,
+      "score": 0.46195138140642916,
+      "signals": [
+        "github:6929.0"
+      ],
+      "rank": 6929,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": false,
+      "slug": "mooncake"
+    },
+    {
+      "id": 623,
+      "name": "Qwen VL",
+      "tagline": "The official repo of Qwen-VL -VL chat & pretrained large vision language model proposed by Alibaba Cloud.",
+      "url": "https://github.com/QwenLM/Qwen-VL",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": null,
+      "launched_at": 1692604635,
+      "score": 0.31002657466274236,
+      "signals": [
+        "github:6727.0"
+      ],
+      "rank": 6727,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": false,
+      "slug": "qwen-vl"
+    },
+    {
+      "id": 595,
+      "name": "chinese llm benchmark",
+      "tagline": "NoneLinear - ReLE AI 374 chatgpt gpt-5.4 gemini-3.1-pro Claude-4.6 ERNIE-X1.1 ERNIE-5.0 qwen3.6-max qwen3.6-plus senseChat step3.5-flash kimi-k2…",
+      "url": "https://nonelinear.com.cn/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": null,
+      "launched_at": 1685863400,
+      "score": 0.27682680621432076,
+      "signals": [
+        "github:6492.0"
+      ],
+      "rank": 6492,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": false,
+      "slug": "chinese-llm-benchmark"
+    },
+    {
+      "id": 458,
+      "name": "semantic router",
+      "tagline": "An open, programmable decision layer for models and compute.",
+      "url": "https://vllm-sr.ai/",
+      "emoji": null,
+      "category": "Models & Infra",
+      "why_it_matters": null,
+      "launched_at": 1756244990,
+      "score": 0.9680167187996939,
+      "signals": [
+        "github:6338.0"
+      ],
+      "rank": 6338,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": false,
+      "slug": "semantic-router"
     }
   ]
 }
