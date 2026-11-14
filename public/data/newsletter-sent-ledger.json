@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-14",
+  "lastUpdatedDate": "2026-11-15",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -7,7 +7,8 @@
     "corporate-malware-zip-mca",
     "digital-arrest-video-call",
     "deepfake-political-welfare-ads",
-    "part-time-youtube-review-job"
+    "part-time-youtube-review-job",
+    "fedex-narcotics-customs-parcel"
   ],
   "sentRealityIds": [
     4,
@@ -16,7 +17,8 @@
     13,
     11,
     14,
-    20
+    20,
+    5
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -25,7 +27,8 @@
     "yft design",
     "sqlmap",
     "siyuan",
-    "TTS"
+    "TTS",
+    "Promptfoo"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -34,6 +37,7 @@
     "Binance CFO exits days after $6.3B crypto hack",
     "'Everybody Will Be Hacked at Some Point,' Ledger CEO Warns as Crypto Thefts Hit $8.7 Billion in 2026",
     "DOJ gets court approval to seize $1.2 billion tied to North Korea's Binance hack",
-    "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access"
+    "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
+    "Binance Reopens 87 Crypto Networks After $6.3B Hack, Targets Full Withdrawals Next Week"
   ]
 }
