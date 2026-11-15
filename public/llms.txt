@@ -66,7 +66,6 @@ If funds are unauthorizedly debited or someone is targeted by online fraud:
 - [OpenHands](https://github.com/All-Hands-AI/OpenHands): Autonomous software development agent capable of writing code, running bash commands, and browsing the web.
 - [Codewhale](https://codewhale.net/): Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome
 - [next ai draw io](https://next-ai-drawio.jiang.jp/): Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
-- [DeepSeek Reasonix](https://reasonix.io/): A reliable coding agent for complex software engineering tasks.
 - [Aider](https://github.com/paul-gauthier/aider): AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
 - [context mode](https://contextmode.ai/): Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.
 - [code review graph](https://code-review-graph.com/): Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo…
@@ -76,5 +75,6 @@ If funds are unauthorizedly debited or someone is targeted by online fraud:
 - [qwen code](https://qwenlm.github.io/qwen-code-docs/en/users/overview): An open-source AI coding agent that lives in your terminal.
 - [kilocode](https://kilo.ai/): Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
 - [onlook](https://onlook.com/): The Developer Tool for Visual Engineers • An Open-Source AI-First Design tool • Visually build, style, and edit your code with AI • World's best, top-most agent recommended #1 Developer tool for Desi…
+- [Continue](https://github.com/continuedev/continue): Open-source AI code assistant extension for VS Code and JetBrains supporting custom local and cloud models.
 
 For complete listings and full data exports, visit https://cipherati.com/llms-full.txt or https://cipherati.com/data/tools.json.

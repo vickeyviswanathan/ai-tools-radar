@@ -14,7 +14,7 @@ const BLOCKED = [
   "stablediffusionwebuicolab", "faststablediffusion", "removeaiwatermarks",
   // Spam redirects, checkpoints, and transient demos
   "aiwebsiteclonertemplate", "qwenimageedit2511lorasfast", "qwen3ttsdemo", "easydataset",
-  "wan2214bpreview",
+  "wan2214bpreview", "deepseekreasonix", "uitarsdesktop",
   // Non-AI software, hardware firmware, generic libraries, blogs, books, lists & tip-jars
   "medusa", "reactiveresume", "pypdf", "firmware", "reticulum",
   "claudecodebestpractice", "claudeskills", "aiagentbook", "publicapis",

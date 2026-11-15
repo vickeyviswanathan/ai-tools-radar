@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T07:48:16.338Z",
+  "updatedAt": "2026-11-15T09:50:40.400Z",
   "categories": [
     "Coding",
     "Agents & Automation",
@@ -394,25 +394,6 @@
       "slug": "next-ai-draw-io"
     },
     {
-      "id": 298,
-      "name": "DeepSeek Reasonix",
-      "tagline": "A reliable coding agent for complex software engineering tasks.",
-      "url": "https://reasonix.io/",
-      "emoji": null,
-      "category": "Coding",
-      "why_it_matters": null,
-      "launched_at": 1776760022,
-      "score": 14.43398414421573,
-      "signals": [
-        "github:36003.0"
-      ],
-      "rank": 36003,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": true,
-      "slug": "deepseek-reasonix"
-    },
-    {
       "id": 167,
       "name": "Aider",
       "tagline": "AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.",
@@ -677,6 +658,25 @@
       "isRising": false,
       "isNew2026": false,
       "slug": "deepeval"
+    },
+    {
+      "id": 434,
+      "name": "deepwiki open",
+      "tagline": "Open Source DeepWiki: AI-Powered Wiki Generator for GitHub/Gitlab/Bitbucket Repositories. Join the discord: https://discord.gg/gMwThUMeme",
+      "url": "https://grok-wiki.com/",
+      "emoji": null,
+      "category": "Coding",
+      "why_it_matters": null,
+      "launched_at": 1745992889,
+      "score": 2.0892674067859063,
+      "signals": [
+        "github:18329.0"
+      ],
+      "rank": 18329,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": false,
+      "slug": "deepwiki-open"
     },
     {
       "id": 253,
@@ -1327,25 +1327,6 @@
       "slug": "lightpanda"
     },
     {
-      "id": 369,
-      "name": "UI TARS desktop",
-      "tagline": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
-      "url": "https://agent-tars.com/",
-      "emoji": null,
-      "category": "Agents & Automation",
-      "why_it_matters": null,
-      "launched_at": 1737277483,
-      "score": 3.671720111260663,
-      "signals": [
-        "github:39447.0"
-      ],
-      "rank": 39447,
-      "velocity": 0,
-      "isRising": false,
-      "isNew2026": false,
-      "slug": "ui-tars-desktop"
-    },
-    {
       "id": 592,
       "name": "iFixAi",
       "tagline": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have t…",
@@ -1363,6 +1344,25 @@
       "isRising": false,
       "isNew2026": true,
       "slug": "ifixai"
+    },
+    {
+      "id": 401,
+      "name": "CopilotKit",
+      "tagline": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more. Makers of the AG-UI Protocol",
+      "url": "https://docs.copilotkit.ai/",
+      "emoji": null,
+      "category": "Agents & Automation",
+      "why_it_matters": null,
+      "launched_at": 1687147711,
+      "score": 1.6605593636448313,
+      "signals": [
+        "github:38385.0"
+      ],
+      "rank": 38385,
+      "velocity": 0,
+      "isRising": false,
+      "isNew2026": false,
+      "slug": "copilotkit"
     },
     {
       "id": 786,

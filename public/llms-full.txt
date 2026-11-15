@@ -646,94 +646,94 @@ Cipherati is an independent engineering directory of open-source AI developer to
 - Tagline: Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
 - Why it matters: Verified open-source production utility.
 
-### 21. DeepSeek Reasonix
-- URL: https://reasonix.io/
-- Category: Coding
-- Tagline: A reliable coding agent for complex software engineering tasks.
-- Why it matters: Verified open-source production utility.
-
-### 22. Aider
+### 21. Aider
 - URL: https://github.com/paul-gauthier/aider
 - Category: Coding
 - Tagline: AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
 - Why it matters: Uses tree-sitter AST repository maps to supply relevant symbol definitions to LLMs during terminal coding sessions.
 
-### 23. context mode
+### 22. context mode
 - URL: https://contextmode.ai/
 - Category: Coding
 - Tagline: Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.
 - Why it matters: Verified open-source production utility.
 
-### 24. code review graph
+### 23. code review graph
 - URL: https://code-review-graph.com/
 - Category: Coding
 - Tagline: Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo…
 - Why it matters: Verified open-source production utility.
 
-### 25. Cline
+### 24. Cline
 - URL: https://github.com/cline/cline
 - Category: Coding
 - Tagline: Autonomous coding agent inside VS Code with file editing, shell command execution, and browser interaction.
 - Why it matters: VS Code agent extension featuring step-by-step user approval gates for shell execution, file edits, and headless browser checks.
 
-### 26. supermemory
+### 25. supermemory
 - URL: https://supermemory.ai/docs
 - Category: Coding
 - Tagline: Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.
 - Why it matters: Verified open-source production utility.
 
-### 27. serena
+### 26. serena
 - URL: https://oraios.github.io/serena
 - Category: Coding
 - Tagline: A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities - the IDE for your agent
 - Why it matters: Verified open-source production utility.
 
-### 28. qwen code
+### 27. qwen code
 - URL: https://qwenlm.github.io/qwen-code-docs/en/users/overview
 - Category: Coding
 - Tagline: An open-source AI coding agent that lives in your terminal.
 - Why it matters: Verified open-source production utility.
 
-### 29. kilocode
+### 28. kilocode
 - URL: https://kilo.ai/
 - Category: Coding
 - Tagline: Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
 - Why it matters: Verified open-source production utility.
 
-### 30. onlook
+### 29. onlook
 - URL: https://onlook.com/
 - Category: Coding
 - Tagline: The Developer Tool for Visual Engineers • An Open-Source AI-First Design tool • Visually build, style, and edit your code with AI • World's best, top-most agent recommended #1 Developer tool for Desi…
 - Why it matters: Verified open-source production utility.
 
-### 31. Continue
+### 30. Continue
 - URL: https://github.com/continuedev/continue
 - Category: Coding
 - Tagline: Open-source AI code assistant extension for VS Code and JetBrains supporting custom local and cloud models.
 - Why it matters: Allows engineering teams to connect self-hosted Ollama, vLLM, or commercial LLM endpoints to VS Code and JetBrains.
 
-### 32. dyad
+### 31. dyad
 - URL: https://dyad.sh/
 - Category: Coding
 - Tagline: Local, open-source AI app builder for power users ✨ v0 / Lovable / Replit / Bolt alternative 🌟 Star if you like it!
 - Why it matters: Verified open-source production utility.
 
-### 33. jcode
+### 32. jcode
 - URL: https://jcode.sh/
 - Category: Coding
 - Tagline: High performance coding agent harness written in Rust, built for heavy multi-agent dev workflows
 - Why it matters: Verified open-source production utility.
 
-### 34. cutter
+### 33. cutter
 - URL: https://cutter.re/
 - Category: Coding
 - Tagline: Free and Open Source Reverse Engineering Platform powered by rizin
 - Why it matters: Verified open-source production utility.
 
-### 35. deepeval
+### 34. deepeval
 - URL: https://deepeval.com/
 - Category: Coding
 - Tagline: The LLM Evaluation Framework
+- Why it matters: Verified open-source production utility.
+
+### 35. deepwiki open
+- URL: https://grok-wiki.com/
+- Category: Coding
+- Tagline: Open Source DeepWiki: AI-Powered Wiki Generator for GitHub/Gitlab/Bitbucket Repositories. Join the discord: https://discord.gg/gMwThUMeme
 - Why it matters: Verified open-source production utility.
 
 ### 36. Google Antigravity
@@ -940,16 +940,16 @@ Cipherati is an independent engineering directory of open-source AI developer to
 - Tagline: The headless browser designed for AI agents and web automation, written in Zig with ultra-low memory overhead.
 - Why it matters: High-efficiency open-source headless browser built specifically for autonomous AI agents, eliminating Chromium GUI rendering overhead.
 
-### 70. UI TARS desktop
-- URL: https://agent-tars.com/
-- Category: Agents & Automation
-- Tagline: The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra
-- Why it matters: Verified open-source production utility.
-
-### 71. iFixAi
+### 70. iFixAi
 - URL: https://www.ifixai.ai/
 - Category: Agents & Automation
 - Tagline: Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have t…
+- Why it matters: Verified open-source production utility.
+
+### 71. CopilotKit
+- URL: https://docs.copilotkit.ai/
+- Category: Agents & Automation
+- Tagline: The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more. Makers of the AG-UI Protocol
 - Why it matters: Verified open-source production utility.
 
 ### 72. NVIDIA Garak
