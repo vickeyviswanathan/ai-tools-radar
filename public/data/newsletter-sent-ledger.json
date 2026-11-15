@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-15",
+  "lastUpdatedDate": "2026-11-16",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -8,7 +8,8 @@
     "digital-arrest-video-call",
     "deepfake-political-welfare-ads",
     "part-time-youtube-review-job",
-    "fedex-narcotics-customs-parcel"
+    "fedex-narcotics-customs-parcel",
+    "aadhaar-pan-update-identity-theft"
   ],
   "sentRealityIds": [
     4,
@@ -18,7 +19,8 @@
     11,
     14,
     20,
-    5
+    5,
+    18
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -28,7 +30,8 @@
     "sqlmap",
     "siyuan",
     "TTS",
-    "Promptfoo"
+    "Promptfoo",
+    "open design"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -38,6 +41,7 @@
     "'Everybody Will Be Hacked at Some Point,' Ledger CEO Warns as Crypto Thefts Hit $8.7 Billion in 2026",
     "DOJ gets court approval to seize $1.2 billion tied to North Korea's Binance hack",
     "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
-    "Binance Reopens 87 Crypto Networks After $6.3B Hack, Targets Full Withdrawals Next Week"
+    "Binance Reopens 87 Crypto Networks After $6.3B Hack, Targets Full Withdrawals Next Week",
+    "SEBI assures continuous evolving mechanism to thwart possible cyberattack"
   ]
 }
