@@ -1,6 +1,6 @@
 {
   "https://cipherati.com/": {
-    "hash": "360840dc2983235a",
+    "hash": "547e5a97f815c123",
     "lastmod": "2026-11-17"
   },
   "https://cipherati.com/ai-realities.html": {
@@ -8,7 +8,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/ai-tools.html": {
-    "hash": "cce0d48665b98bd8",
+    "hash": "15cb99f185201ebe",
     "lastmod": "2026-11-17"
   },
   "https://cipherati.com/compare/autogpt-vs-dify.html": {
@@ -75,10 +75,6 @@
     "hash": "19fd24a885e4cb64",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/firecrawl-vs-crawl4ai.html": {
-    "hash": "ea63b164088ad0a0",
-    "lastmod": "2026-11-17"
-  },
   "https://cipherati.com/compare/firecrawl-vs-ghidra.html": {
     "hash": "7dd5cbc9499c9b21",
     "lastmod": "2026-11-13"
@@ -90,10 +86,6 @@
   "https://cipherati.com/compare/firecrawl-vs-scrapling.html": {
     "hash": "42a33f64f73de6c1",
     "lastmod": "2026-11-13"
-  },
-  "https://cipherati.com/compare/ghidra-vs-crawl4ai.html": {
-    "hash": "f572fc8273f6d816",
-    "lastmod": "2026-11-17"
   },
   "https://cipherati.com/compare/ghidra-vs-ragflow.html": {
     "hash": "797aeca856c9ba54",
@@ -183,10 +175,6 @@
     "hash": "c2b6581cf9097e6f",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/public-apis-vs-crawl4ai.html": {
-    "hash": "4103c3eb4cae3e3f",
-    "lastmod": "2026-11-17"
-  },
   "https://cipherati.com/compare/public-apis-vs-firecrawl.html": {
     "hash": "8b615143a2212e35",
     "lastmod": "2026-11-13"
@@ -203,16 +191,28 @@
     "hash": "f79916e7d9364600",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/ragflow-vs-crawl4ai.html": {
-    "hash": "6bcf448ce76caf8f",
-    "lastmod": "2026-11-17"
-  },
   "https://cipherati.com/compare/ragflow-vs-scrapling.html": {
     "hash": "b13b38235f363c24",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/compare/scrapling-vs-crawl4ai.html": {
-    "hash": "a7d2c9ccc3a85331",
+  "https://cipherati.com/compare/rea-vs-firecrawl.html": {
+    "hash": "4917f9eedd5f4698",
+    "lastmod": "2026-11-17"
+  },
+  "https://cipherati.com/compare/rea-vs-ghidra.html": {
+    "hash": "8deccf4bbaa554a6",
+    "lastmod": "2026-11-17"
+  },
+  "https://cipherati.com/compare/rea-vs-public-apis.html": {
+    "hash": "7acaae2aab06f278",
+    "lastmod": "2026-11-17"
+  },
+  "https://cipherati.com/compare/rea-vs-ragflow.html": {
+    "hash": "d1016fcf02003cda",
+    "lastmod": "2026-11-17"
+  },
+  "https://cipherati.com/compare/rea-vs-scrapling.html": {
+    "hash": "331c3638076d50c7",
     "lastmod": "2026-11-17"
   },
   "https://cipherati.com/compare/skills-vs-dify.html": {
@@ -272,11 +272,11 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/cybersecurity-news.html": {
-    "hash": "e335bf72de0bc5d3",
+    "hash": "d291afca5ebc2f9b",
     "lastmod": "2026-11-17"
   },
   "https://cipherati.com/newsletter/today.html": {
-    "hash": "1aeac2c8153f92b1",
+    "hash": "af8998559aaa1bd7",
     "lastmod": "2026-11-17"
   },
   "https://cipherati.com/realities/the-agent-security-blindspot.html": {
@@ -1198,6 +1198,10 @@
   "https://cipherati.com/tools/ragflow.html": {
     "hash": "079fabe53aa3743f",
     "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/rea.html": {
+    "hash": "f5be4096ed30171f",
+    "lastmod": "2026-11-17"
   },
   "https://cipherati.com/tools/rtk.html": {
     "hash": "d6d1561da7866b5a",

@@ -272,6 +272,8 @@ async function build() {
           signal: AbortSignal.timeout(4000)
         });
         if (res.status >= 400 && res.status !== 401 && res.status !== 403 && res.status !== 405 && res.status !== 429) {
+          const g = await fetch(tool.url, { method: "GET", headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" }, redirect: "follow", signal: AbortSignal.timeout(5000) });
+          if (g.status === 404 || g.status === 410)
           reachable = false;
         }
       } catch (err) {
