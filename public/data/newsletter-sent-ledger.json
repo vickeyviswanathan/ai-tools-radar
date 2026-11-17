@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-16",
+  "lastUpdatedDate": "2026-11-17",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -9,7 +9,8 @@
     "deepfake-political-welfare-ads",
     "part-time-youtube-review-job",
     "fedex-narcotics-customs-parcel",
-    "aadhaar-pan-update-identity-theft"
+    "aadhaar-pan-update-identity-theft",
+    "fake-upi-autopay-mandate-scam"
   ],
   "sentRealityIds": [
     4,
@@ -20,7 +21,8 @@
     14,
     20,
     5,
-    18
+    18,
+    15
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -31,7 +33,8 @@
     "siyuan",
     "TTS",
     "Promptfoo",
-    "open design"
+    "open design",
+    "FluidVoice"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -42,6 +45,12 @@
     "DOJ gets court approval to seize $1.2 billion tied to North Korea's Binance hack",
     "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
     "Binance Reopens 87 Crypto Networks After $6.3B Hack, Targets Full Withdrawals Next Week",
-    "SEBI assures continuous evolving mechanism to thwart possible cyberattack"
+    "SEBI assures continuous evolving mechanism to thwart possible cyberattack",
+    "US judge clears MIT-educated brothers of $25 million cryptocurrency heist charges"
+  ],
+  "sentQuickHitTitles": [
+    "Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned",
+    "178 Websites Including Zoom, CNN, IKEA Hit By Cyberattack; Malware Targets iPhones, Steals Crypto",
+    "In a first, Google detects AI-automated cyberattack"
   ]
 }

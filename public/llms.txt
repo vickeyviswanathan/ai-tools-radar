@@ -15,22 +15,22 @@
 - Spam Reporting (Chakshu): https://sancharsaathi.gov.in/
 
 ## Core Sections & Canonical Pages
-- [Cybersecurity News](https://cipherati.com/cybersecurity-news.html): 21 verified reporting stories across Indian banking/BFSI (RBI, CERT-In), enterprise defense, and global crypto heists.
+- [Cybersecurity News](https://cipherati.com/cybersecurity-news.html): 24 verified reporting stories across Indian banking/BFSI (RBI, CERT-In), enterprise defense, and global crypto heists.
 - [Scam Alerts & Citizen Defense](https://cipherati.com/scam-alerts.html): 31 verified playbooks against digital arrest, e-Challan/wedding card APK malware, and UPI financial fraud.
 - [AI Realities in Production](https://cipherati.com/ai-realities.html): 22 hard engineering truths and architecture fixes when deploying AI agents, RAG, and LLMs.
 - [Curated AI Developer Tools Directory](https://cipherati.com/ai-tools.html): 219 production-ready developer tools, coding agents, and local model infrastructure.
 
 ## Latest Verified Cybersecurity News
-- **Unocoin Says BitGo Multisig Backup Was Likely Exploited Despite Account Freeze** (The Crypto Times, 2026-11-13): Verified cybersecurity reporting.
-- **Coinbase Stock And Crypto Security Plays In Focus After Fresh Hack Claims** (Simply Wall St, 2026-11-13): Key updates: South Korea to Let Crypto Exchanges Freeze Suspected Hack Withdrawals; South Korea to Let Crypto Exchanges Freeze Suspected Hack Withdrawals.
-- **Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2** (The Hacker News, 2026-11-13): Key updates: Air India says February's data breach affected 4.5 mln passengers; Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass.
-- **DOJ gets court approval to seize $1.2 billion tied to North Korea's Binance hack** (CoinDesk, 2026-11-13): Key updates: FBI seizes $1.2bn stolen in Binance cryptocurrency hack; Binance restores all $6.3 billion stolen in October hack.
-- **Microsoft Outlook Outage Explained: What Caused It And Is It A Cyberattack?** (Outlook India, 2026-11-13): Verified cybersecurity reporting.
-- **Maersk reports Cybersecurity incident involving legacy IT System; investigation underway** (India Shipping News, 2026-11-13): Verified cybersecurity reporting.
-- **FBI: North Korean hackers have stolen $400 million in crypto over last 18 months** (The Hill, 2026-11-13): Key updates: FBI reveals cunning ruse North Korean hackers used in massive crypto heist as feds claw back $1.2B; FBI reveals cunning ruse North Korean hackers used in massive crypto heist as feds claw back $1.2B.
-- **SBI has told the stock exchanges about its data breach, but not the customers whose data was leaked** (Internet Freedom Foundation, 2026-11-12): Key updates: State Bank of India reports cyberattack involving nearly 3,900 customer records; India GCCs boost AI, data, cybersecurity hiring amid talent gap.
-- **Ransomware Without Data Theft Can Still Trigger Mandatory Breach Reporting Under India's DPDP Law: K7 CyberSecurity** (CXOToday.com, 2026-11-12): Key updates: EXCLUSIVE: Files relating to India's largest nuclear power plant Kudankulam exposed in data breach; Data breach reportedly targets India's Kudankulam nuclear power plant.
-- **'Everybody Will Be Hacked at Some Point,' Ledger CEO Warns as Crypto Thefts Hit $8.7 Billion in 2026** (Yahoo Finance, 2026-11-12): Verified cybersecurity reporting.
+- **Black Hat India 2026 Makes a Landmark Debut in Bengaluru, Bringing the Global Cybersecurity Community to India** (PR Newswire, 2026-11-17): Key updates: Deloitte India Partners with CrowdStrike to Modernize Cybersecurity Operations in India; US cybersecurity firm N-able opens India GCC, plans 50% local workforce expansion by end-2026.
+- **Hackers behind record Binance breach move $63 million in ether following DOJ seizures** (CoinDesk, 2026-11-17): Key updates: $6.3 billion stolen from Binance: The largest hack in cryptocurrency to date; Binance hack laundering: Elliptic's NEAR wallet clues.
+- **NPCI, UPI apps seek Google's intervention to curb cyber fraud: Report** (Business Today, 2026-11-17): Verified cybersecurity reporting.
+- **US judge clears MIT-educated brothers of $25 million cryptocurrency heist charges** (Reuters, 2026-11-17): Key updates: Court clears brothers of $25 million Ethereum crypto heist charges; MIT Brothers Beat 'First Of Its Kind' $25M Crypto Heist Case.
+- **Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned** (Tech Times, 2026-11-17): Key updates: Crypto exchange Lighter pauses withdrawals after about $10 million is drained through a leaked API key; Lighter recovers $5M after $10M exploit linked to compromised API keys.
+- **NCCDFI 2026 - Day 1 concludes in New Delhi, Strengthening India's Cybersecurity and Digital Forensics Ecosystem** (Technology For You, 2026-11-17): Key updates: India's Space Ecosystem Gets Cyber Shield as SIA-India, CERT-In Release Joint Guidelines.
+- **178 Websites Including Zoom, CNN, IKEA Hit By Cyberattack; Malware Targets iPhones, Steals Crypto** (Outlook India, 2026-11-17): Key updates: Zoom, HSBC, CNN, IKEA among 178 websites targeted in cyberattack; Hackers attempt to steal crypto, card detai; Zoom, HSBC, CNN, IKEA among 178 websites targeted in cyberattack; Hackers attempt to steal crypto, card detai.
+- **Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors** (The Hacker News, 2026-11-17): Verified cybersecurity reporting.
+- **In a first, Google detects AI-automated cyberattack** (United Press International, 2026-11-17): Verified cybersecurity reporting.
+- **Yes Bank: RBI Files Review Petition On ₹8,415-Crore Bond Ruling; Denies Cyber Fraud** (Sahi, 2026-11-17): Key updates: RBI's Data Centre and Cybersecurity Institute inaugurated in Bhubaneswar.; Digital Payment Fraud: RBI Introduces New Cybersecurity Rules; What Is The 6-Hour Reporting Deadline?.
 
 ## Emergency Cyber Crime Reporting (Golden Hour Protocol)
 If funds are unauthorizedly debited or someone is targeted by online fraud:
@@ -46,35 +46,35 @@ If funds are unauthorizedly debited or someone is targeted by online fraud:
 - **Fake IPO WhatsApp Groups**: SEBI-registered brokerages never conduct institutional IPO bidding or accept investments via WhatsApp groups or personal accounts.
 
 ## Top Curated AI Developer Tools
-- [ECC](https://ecc.tools/): The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
-- [cc switch](https://ccswitch.io/): A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.
-- [graphify](https://www.graphify.com/): Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing,…
 - [OpenAI Codex](https://openai.com/index/openai-codex/): AI code generation engine powering automated syntax completion, agentic logic, and test synthesis.
-- [VS Code with In-Built AI Agents](https://code.visualstudio.com/docs/copilot/copilot-chat): Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.
-- [Understand Anything](https://understand-anything.com/): Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…
-- [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk): CLI proxy that condenses command outputs by 60–90% to reduce LLM token consumption and API costs.
-- [OmniRoute](https://omniroute.online/): Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Clin…
-- [headroom](https://docs.headroomlabs.ai/docs): Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
-- [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code): Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.
-- [OpenSpec](https://openspec.dev/): Spec-driven development (SDD) for AI coding assistants.
-- [oh my openagent](https://omo.dev/): OmO: Just type "mass ulw" keyword with your prompt. Now you are the master of graph engineering.
-- [openinterpreter](https://openinterpreter.com/): A coding agent for open models like Kimi K3 and GLM 5.3
+- [ECC](https://ecc.tools/): The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
 - [litellm](https://docs.litellm.ai/docs/): The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthrop…
-- [Kimi Code](https://kimi.ai): Moonshot AI's long-context reasoning and coding model optimized for repository understanding and multi-file logic.
-- [Umi OCR](https://github.com/hiroi-sora/Umi-OCR): OCR software, free and offline. OCR / PDF / /
-- [Amazon Q Developer / Kiro IDE](https://aws.amazon.com/q/developer/): AWS's generative AI coding assistant and spec-driven development environment for code transformation and security scanning.
-- [OpenHands](https://github.com/All-Hands-AI/OpenHands): Autonomous software development agent capable of writing code, running bash commands, and browsing the web.
-- [Codewhale](https://codewhale.net/): Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome
-- [next ai draw io](https://next-ai-drawio.jiang.jp/): Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
-- [Aider](https://github.com/paul-gauthier/aider): AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
+- [OpenSpec](https://openspec.dev/): Spec-driven development (SDD) for AI coding assistants.
 - [context mode](https://contextmode.ai/): Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.
-- [code review graph](https://code-review-graph.com/): Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo…
-- [Cline](https://github.com/cline/cline): Autonomous coding agent inside VS Code with file editing, shell command execution, and browser interaction.
+- [OmniRoute](https://omniroute.online/): Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Clin…
 - [supermemory](https://supermemory.ai/docs): Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.
-- [serena](https://oraios.github.io/serena): A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities - the IDE for your agent
-- [qwen code](https://qwenlm.github.io/qwen-code-docs/en/users/overview): An open-source AI coding agent that lives in your terminal.
-- [kilocode](https://kilo.ai/): Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
-- [onlook](https://onlook.com/): The Developer Tool for Visual Engineers • An Open-Source AI-First Design tool • Visually build, style, and edit your code with AI • World's best, top-most agent recommended #1 Developer tool for Desi…
-- [Continue](https://github.com/continuedev/continue): Open-source AI code assistant extension for VS Code and JetBrains supporting custom local and cloud models.
+- [openinterpreter](https://openinterpreter.com/): A coding agent for open models like Kimi K3 and GLM 5.3
+- [cc switch](https://ccswitch.io/): A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more.
+- [headroom](https://docs.headroomlabs.ai/docs): Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
+- [Amazon Q Developer / Kiro IDE](https://aws.amazon.com/q/developer/): AWS's generative AI coding assistant and spec-driven development environment for code transformation and security scanning.
+- [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code): Anthropic's terminal-based agentic coding tool that navigates codebases, edits files, and manages git commits autonomously.
+- [Understand Anything](https://understand-anything.com/): Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…
+- [Kimi Code](https://kimi.ai): Moonshot AI's long-context reasoning and coding model optimized for repository understanding and multi-file logic.
+- [graphify](https://www.graphify.com/): Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing,…
+- [Umi OCR](https://github.com/hiroi-sora/Umi-OCR): OCR software, free and offline. OCR / PDF / /
+- [Codewhale](https://codewhale.net/): Open-source agent for the terminal written in Rust. Use any provider or model. Issues & PRs always welcome
+- [Cline](https://github.com/cline/cline): Autonomous coding agent inside VS Code with file editing, shell command execution, and browser interaction.
+- [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk): CLI proxy that condenses command outputs by 60–90% to reduce LLM token consumption and API costs.
+- [Aider](https://github.com/paul-gauthier/aider): AI pair programming in your terminal with git auto-commits, multi-file edits, and tree-sitter context.
+- [OpenHands](https://github.com/All-Hands-AI/OpenHands): Autonomous software development agent capable of writing code, running bash commands, and browsing the web.
+- [code review graph](https://code-review-graph.com/): Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo…
+- [next ai draw io](https://next-ai-drawio.jiang.jp/): Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
+- [VS Code with In-Built AI Agents](https://code.visualstudio.com/docs/copilot/copilot-chat): Visual Studio Code's native agent mode for multi-file workspace editing, terminal command execution, and test fixing.
+- [oh my openagent](https://omo.dev/): OmO: Just type "mass ulw" keyword with your prompt. Now you are the master of graph engineering.
+- [agent skills](https://skills.addy.ie/): Production-grade engineering skills for AI coding agents.
+- [deepwiki open](https://grok-wiki.com/): Open Source DeepWiki: AI-Powered Wiki Generator for GitHub/Gitlab/Bitbucket Repositories. Join the discord: https://discord.gg/gMwThUMeme
+- [deepeval](https://deepeval.com/): The LLM Evaluation Framework
+- [n8n](https://n8n.io/): Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.
+- [jcode](https://jcode.sh/): High performance coding agent harness written in Rust, built for heavy multi-agent dev workflows
 
 For complete listings and full data exports, visit https://cipherati.com/llms-full.txt or https://cipherati.com/data/tools.json.

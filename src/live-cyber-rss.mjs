@@ -658,10 +658,23 @@ export async function getLiveCyberRss() {
     return tB - tA;
   });
 
+  // Deduplicate by normalized headline & sourceUrl across all categories before slicing
+  const seenTitles = new Set();
+  const seenUrls = new Set();
+  const uniqueArticles = [];
+  for (const a of allArticles) {
+    const tKey = String(a.title || "").trim().toLowerCase().replace(/\s+/g, " ");
+    const uKey = String(a.sourceUrl || "").trim();
+    if (!tKey || seenTitles.has(tKey) || (uKey && seenUrls.has(uKey))) continue;
+    seenTitles.add(tKey);
+    if (uKey) seenUrls.add(uKey);
+    uniqueArticles.push(a);
+  }
+
   // Cap at top 8 distinct master incident cards per category (up to 24 total)
-  const indiaSelected = allArticles.filter(a => a.category === "india-bfsi").slice(0, 8);
-  const cryptoSelected = allArticles.filter(a => a.category === "crypto-heists").slice(0, 8);
-  const globalSelected = allArticles.filter(a => a.category === "global-ransomware").slice(0, 8);
+  const indiaSelected = uniqueArticles.filter(a => a.category === "india-bfsi").slice(0, 8);
+  const cryptoSelected = uniqueArticles.filter(a => a.category === "crypto-heists").slice(0, 8);
+  const globalSelected = uniqueArticles.filter(a => a.category === "global-ransomware").slice(0, 8);
 
   // Live verification: drop any news articles with broken links (404/DNS error)
   const rawPool = [...indiaSelected, ...cryptoSelected, ...globalSelected];
