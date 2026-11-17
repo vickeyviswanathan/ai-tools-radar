@@ -11,7 +11,15 @@ const SENT_LEDGER_PATH = "public/data/newsletter-sent-ledger.json";
 function loadSentLedger() {
   if (existsSync(SENT_LEDGER_PATH)) {
     try {
-      return JSON.parse(readFileSync(SENT_LEDGER_PATH, "utf8"));
+      const parsed = JSON.parse(readFileSync(SENT_LEDGER_PATH, "utf8"));
+      return {
+        lastUpdatedDate: parsed.lastUpdatedDate || null,
+        sentScamIds: Array.isArray(parsed.sentScamIds) ? parsed.sentScamIds : [],
+        sentRealityIds: Array.isArray(parsed.sentRealityIds) ? parsed.sentRealityIds : [],
+        sentToolNames: Array.isArray(parsed.sentToolNames) ? parsed.sentToolNames : [],
+        sentLeadTitles: Array.isArray(parsed.sentLeadTitles) ? parsed.sentLeadTitles : [],
+        sentQuickHitTitles: Array.isArray(parsed.sentQuickHitTitles) ? parsed.sentQuickHitTitles : []
+      };
     } catch {}
   }
   return {
@@ -19,8 +27,50 @@ function loadSentLedger() {
     sentScamIds: [],
     sentRealityIds: [],
     sentToolNames: [],
-    sentLeadTitles: []
+    sentLeadTitles: [],
+    sentQuickHitTitles: []
   };
+}
+
+const slugify = (s) =>
+  String(s || "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+const safeHttpsUrl = (url, fallback = "https://cipherati.com/") =>
+  /^https:\/\//i.test(String(url || "").trim()) ? String(url).trim() : fallback;
+
+const STORY_STOP_WORDS = new Set([
+  "about", "after", "amid", "before", "being", "between", "claims", "could", "despite",
+  "during", "every", "first", "found", "from", "global", "hours", "india", "indian",
+  "into", "latest", "more", "most", "near", "next", "over", "report", "reports",
+  "says", "security", "cyber", "cybersecurity", "threat", "threats", "today", "under",
+  "update", "using", "week", "what", "when", "where", "which", "while", "with", "year",
+  "2025", "2026"
+]);
+
+function storyTokens(title = "") {
+  return new Set(
+    String(title)
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, " ")
+      .split(/\s+/)
+      .filter((w) => w.length >= 4 && !STORY_STOP_WORDS.has(w))
+  );
+}
+
+function isSimilarStory(titleA, titleB) {
+  if (!titleA || !titleB) return false;
+  if (titleA.trim().toLowerCase() === titleB.trim().toLowerCase()) return true;
+  const a = storyTokens(titleA);
+  const b = storyTokens(titleB);
+  if (a.size === 0 || b.size === 0) return false;
+  let overlap = 0;
+  for (const tok of a) if (b.has(tok)) overlap++;
+  const minSize = Math.min(a.size, b.size);
+  return overlap >= 2 && overlap / minSize >= 0.4;
 }
 
 function escHtml(str = "") {
@@ -140,20 +190,41 @@ export function generateDailyBriefing() {
   const prevSentScams = new Set(isSameDay ? ledger.sentScamIds.slice(0, -1) : ledger.sentScamIds);
   const prevSentRealities = new Set(isSameDay ? ledger.sentRealityIds.slice(0, -1) : ledger.sentRealityIds);
   const prevSentTools = new Set(isSameDay ? ledger.sentToolNames.slice(0, -1) : ledger.sentToolNames);
-  const prevSentLeads = new Set(isSameDay ? ledger.sentLeadTitles.slice(0, -1) : ledger.sentLeadTitles);
+  const prevSentLeads = isSameDay ? ledger.sentLeadTitles.slice(0, -1) : ledger.sentLeadTitles;
+  const prevSentQuickHits = isSameDay ? ledger.sentQuickHitTitles.slice(0, -3) : ledger.sentQuickHitTitles;
+  const prevNewsHistory = [...prevSentLeads, ...prevSentQuickHits];
 
-  // 1. Pick Lead News (must not have been featured as Lead before)
-  const unsentThreats = sortedThreats.filter((t) => !prevSentLeads.has(t.title));
-  const leadThreat = unsentThreats[0] || sortedThreats[0] || {
+  // 1. Pick Lead News (must not repeat an already-covered story OR follow-up on the same incident)
+  const freshUnsentLeads = sortedThreats.filter(
+    (t) => !prevNewsHistory.some((prevTitle) => isSimilarStory(t.title, prevTitle))
+  );
+  const exactUnsentLeads = sortedThreats.filter((t) => !prevSentLeads.includes(t.title));
+  const leadThreat = freshUnsentLeads[0] || exactUnsentLeads[0] || sortedThreats[0] || {
     title: "Global Cybersecurity Incident Monitoring Active",
     sourceName: "Cipherati Desk",
-    sourceUrl: "https://cipherati.com/#news",
+    sourceUrl: "https://cipherati.com/cybersecurity-news.html",
     entities: "Enterprise & Financial Infrastructure",
     incident: "Continuous threat tracking active across banking, enterprise, and critical infrastructure."
   };
 
   const leadContext = buildLeadContext(leadThreat);
-  const quickHits = sortedThreats.filter((t) => t.title !== leadThreat.title).slice(0, 3);
+  const quickHits = [];
+  for (const candidate of sortedThreats) {
+    if (quickHits.length >= 3) break;
+    if (isSimilarStory(candidate.title, leadThreat.title)) continue;
+    if (prevNewsHistory.some((prevTitle) => isSimilarStory(candidate.title, prevTitle))) continue;
+    if (quickHits.some((picked) => isSimilarStory(candidate.title, picked.title))) continue;
+    quickHits.push(candidate);
+  }
+  if (quickHits.length < 3) {
+    for (const candidate of sortedThreats) {
+      if (quickHits.length >= 3) break;
+      if (candidate.title === leadThreat.title) continue;
+      if (quickHits.some((picked) => picked.title === candidate.title)) continue;
+      if (prevSentLeads.includes(candidate.title)) continue;
+      quickHits.push(candidate);
+    }
+  }
 
   // 2. Pick Scam Alert (strictly unsent only — if all scams have been sent, topScam = null and section is skipped!)
   const unsentScams = scamsData.filter((s) => !prevSentScams.has(s.id || s.title));
@@ -172,6 +243,14 @@ export function generateDailyBriefing() {
     ledger.lastUpdatedDate = todayStr;
     if (leadThreat?.title && !ledger.sentLeadTitles.includes(leadThreat.title)) {
       ledger.sentLeadTitles.push(leadThreat.title);
+    }
+    for (const qh of quickHits) {
+      if (qh?.title && !ledger.sentQuickHitTitles.includes(qh.title)) {
+        ledger.sentQuickHitTitles.push(qh.title);
+      }
+    }
+    if (ledger.sentQuickHitTitles.length > 150) {
+      ledger.sentQuickHitTitles = ledger.sentQuickHitTitles.slice(-150);
     }
     if (topScam && !ledger.sentScamIds.includes(topScam.id || topScam.title)) {
       ledger.sentScamIds.push(topScam.id || topScam.title);
@@ -201,6 +280,21 @@ export function generateDailyBriefing() {
   writeFileSync(SENT_LEDGER_PATH, JSON.stringify(ledger, null, 2), "utf8");
   writeFileSync("public/data/briefing.json", JSON.stringify(briefing, null, 2), "utf8");
 
+  const leadCipheratiUrl = leadThreat.id
+    ? `https://cipherati.com/cybersecurity-news.html#threat-${leadThreat.id}`
+    : "https://cipherati.com/cybersecurity-news.html";
+  const leadArticleUrl = safeHttpsUrl(leadThreat.sourceUrl, leadCipheratiUrl);
+  const scamPlaybookUrl = topScam?.id
+    ? `https://cipherati.com/scams/${topScam.id}.html`
+    : "https://cipherati.com/scam-alerts.html";
+  const toolReviewUrl = featuredTool?.slug
+    ? `https://cipherati.com/tools/${featuredTool.slug}.html`
+    : "https://cipherati.com/ai-tools.html";
+  const toolDirectUrl = featuredTool ? safeHttpsUrl(featuredTool.url, toolReviewUrl) : "https://cipherati.com/ai-tools.html";
+  const realityUrl = realityPick?.title
+    ? `https://cipherati.com/realities/${slugify(realityPick.title)}.html`
+    : "https://cipherati.com/ai-realities.html";
+
   // Dynamic numbering so if any section is skipped, section numbers stay sequential (01, 02, 03...)
   let plainSecNum = 1;
   const plainSections = [];
@@ -212,9 +306,15 @@ ${plainSecNum++}. CYBERSECURITY NEWS
 LEAD: ${leadThreat.title} (${leadThreat.sourceName})
 • Why it matters: ${leadContext}
 • Sector: ${leadThreat.entities || "Enterprise & Public Infrastructure"}
+• Read article: ${leadArticleUrl}
+• View on Cipherati: ${leadCipheratiUrl}
 
 More on the Radar:
-${quickHits.map((h) => `• ${h.title} (${h.sourceName})`).join("\n")}
+${quickHits.map((h) => {
+  const hCiph = h.id ? `https://cipherati.com/cybersecurity-news.html#threat-${h.id}` : "https://cipherati.com/cybersecurity-news.html";
+  const hUrl = safeHttpsUrl(h.sourceUrl, hCiph);
+  return `• ${h.title} (${h.sourceName}) — ${hUrl}`;
+}).join("\n")}
 
 Explore all live incidents: https://cipherati.com/cybersecurity-news.html`);
 
@@ -226,7 +326,8 @@ ${plainSecNum++}. SCAM ALERTS
 ${topScam.title} [Vector: ${topScam.platform}]
 • How it works: ${topScam.scam}
 • Defense rule: ${topScam.protection}
-• Helpline: Dial 1930 (National Cyber Helpline) or report at https://cipherati.com/scam-alerts.html`);
+• Full playbook: ${scamPlaybookUrl}
+• Helpline: Dial 1930 (National Cyber Helpline) or view all ${scamsData.length} alerts at https://cipherati.com/scam-alerts.html`);
   }
 
   if (featuredTool) {
@@ -236,6 +337,8 @@ ${plainSecNum++}. AI TOOLS
 
 Featured Tool: ${featuredTool.name}
 • What it does: ${featuredTool.tagline}
+• Open tool: ${toolDirectUrl}
+• Engineering review: ${toolReviewUrl}
 • Browse ${toolsData.length} indexed tools: https://cipherati.com/ai-tools.html`);
   }
 
@@ -247,6 +350,7 @@ ${plainSecNum++}. AI REALITIES
 Reality #${realityPick.id}: ${realityPick.title}
 • The Hype Myth: "${realityPick.myth}"
 • What Actually Works: ${realityPick.fix}
+• Full breakdown: ${realityUrl}
 • Read all 22 production realities: https://cipherati.com/ai-realities.html`);
   }
 
@@ -309,8 +413,8 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </div>
 
       <h2 style="margin:0 0 8px;font-size:17px;line-height:1.35;font-weight:700;color:#111827;">
-        <a href="https://cipherati.com/cybersecurity-news.html" style="color:#111827;text-decoration:none;">
-          ${escHtml(leadThreat.title)}
+        <a href="${escHtml(leadArticleUrl)}" style="color:#111827;text-decoration:underline;">
+          ${escHtml(leadThreat.title)} ↗
         </a>
       </h2>
 
@@ -319,7 +423,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </p>
 
       <div style="font-size:12.5px;color:#6b7280;margin-bottom:16px;">
-        Source: <strong>${escHtml(leadThreat.sourceName)}</strong> · Sector: ${escHtml(leadThreat.entities || "Enterprise & Public Infrastructure")} · <a href="https://cipherati.com/cybersecurity-news.html" style="color:#2563eb;text-decoration:none;font-weight:600;">Read on Cipherati →</a>
+        Source: <strong>${escHtml(leadThreat.sourceName)}</strong> · Sector: ${escHtml(leadThreat.entities || "Enterprise & Public Infrastructure")} · <a href="${escHtml(leadArticleUrl)}" style="color:#2563eb;text-decoration:none;font-weight:600;">Read Source ↗</a> · <a href="${escHtml(leadCipheratiUrl)}" style="color:#2563eb;text-decoration:none;font-weight:600;">View on Cipherati →</a>
       </div>
 
       ${
@@ -331,13 +435,15 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
         </div>
         <ul style="margin:0;padding-left:18px;font-size:13.5px;color:#1f2937;">
           ${quickHits
-            .map(
-              (h) => `
+            .map((h) => {
+              const hCiph = h.id ? `https://cipherati.com/cybersecurity-news.html#threat-${h.id}` : "https://cipherati.com/cybersecurity-news.html";
+              const hUrl = safeHttpsUrl(h.sourceUrl, hCiph);
+              return `
           <li style="margin-bottom:6px;">
-            <a href="https://cipherati.com/cybersecurity-news.html" style="color:#111827;text-decoration:none;font-weight:600;">${escHtml(h.title)}</a>
-            <span style="color:#6b7280;font-size:12px;"> — ${escHtml(h.sourceName)}</span>
-          </li>`
-            )
+            <a href="${escHtml(hUrl)}" style="color:#111827;text-decoration:underline;font-weight:600;">${escHtml(h.title)} ↗</a>
+            <span style="color:#6b7280;font-size:12px;"> — ${escHtml(h.sourceName)} · <a href="${escHtml(hCiph)}" style="color:#2563eb;text-decoration:none;">Cipherati</a></span>
+          </li>`;
+            })
             .join("")}
         </ul>
       </div>`
@@ -354,8 +460,8 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </div>
 
       <h2 style="margin:0 0 6px;font-size:16.5px;line-height:1.35;font-weight:700;color:#111827;">
-        <a href="https://cipherati.com/scam-alerts.html" style="color:#111827;text-decoration:none;">
-          ${escHtml(topScam.title)}
+        <a href="${escHtml(scamPlaybookUrl)}" style="color:#111827;text-decoration:underline;">
+          ${escHtml(topScam.title)} →
         </a>
         <span style="font-size:12px;font-weight:500;color:#6b7280;"> (${escHtml(topScam.platform)})</span>
       </h2>
@@ -369,7 +475,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </p>
 
       <div style="font-size:12.5px;color:#6b7280;">
-        National Cyber Helpline: Dial <strong>1930</strong> · <a href="https://cipherati.com/scam-alerts.html" style="color:#2563eb;text-decoration:none;font-weight:600;">View all 19 Scam Alerts →</a>
+        National Cyber Helpline: Dial <strong>1930</strong> · <a href="${escHtml(scamPlaybookUrl)}" style="color:#2563eb;text-decoration:none;font-weight:600;">Read Full Playbook →</a> · <a href="https://cipherati.com/scam-alerts.html" style="color:#2563eb;text-decoration:none;font-weight:600;">All ${scamsData.length} Scam Alerts →</a>
       </div>
     </div>`
         : ""
@@ -384,8 +490,8 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </div>
 
       <h2 style="margin:0 0 6px;font-size:16.5px;line-height:1.35;font-weight:700;color:#111827;">
-        <a href="https://cipherati.com/ai-tools.html" style="color:#111827;text-decoration:none;">
-          ${escHtml(featuredTool.name)}
+        <a href="${escHtml(toolDirectUrl)}" style="color:#111827;text-decoration:underline;">
+          ${escHtml(featuredTool.name)} ↗
         </a>
       </h2>
 
@@ -394,7 +500,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </p>
 
       <div style="font-size:12.5px;color:#6b7280;">
-        <a href="https://cipherati.com/ai-tools.html" style="color:#2563eb;text-decoration:none;font-weight:600;">Explore ${toolsData.length} indexed AI developer tools on Cipherati →</a>
+        <a href="${escHtml(toolDirectUrl)}" style="color:#2563eb;text-decoration:none;font-weight:600;">Open ${escHtml(featuredTool.name)} ↗</a> · <a href="${escHtml(toolReviewUrl)}" style="color:#2563eb;text-decoration:none;font-weight:600;">Read Engineering Review →</a> · <a href="https://cipherati.com/ai-tools.html" style="color:#6b7280;text-decoration:none;">All ${toolsData.length} Tools</a>
       </div>
     </div>`
         : ""
@@ -409,8 +515,8 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </div>
 
       <h2 style="margin:0 0 6px;font-size:16.5px;line-height:1.35;font-weight:700;color:#111827;">
-        <a href="https://cipherati.com/ai-realities.html" style="color:#111827;text-decoration:none;">
-          Reality #${escHtml(realityPick.id)}: ${escHtml(realityPick.title)}
+        <a href="${escHtml(realityUrl)}" style="color:#111827;text-decoration:underline;">
+          Reality #${escHtml(realityPick.id)}: ${escHtml(realityPick.title)} →
         </a>
       </h2>
 
@@ -423,7 +529,7 @@ Manage preferences or unsubscribe: https://cipherati.com/#newsletter-unsubscribe
       </p>
 
       <div style="font-size:12.5px;color:#6b7280;">
-        <a href="https://cipherati.com/ai-realities.html" style="color:#2563eb;text-decoration:none;font-weight:600;">Read all 22 AI Realities →</a>
+        <a href="${escHtml(realityUrl)}" style="color:#2563eb;text-decoration:none;font-weight:600;">Read Full Breakdown →</a> · <a href="https://cipherati.com/ai-realities.html" style="color:#6b7280;text-decoration:none;">All 22 AI Realities</a>
       </div>
     </div>`
         : ""
