@@ -187,7 +187,9 @@ async function fetchRssFeed(url, defaultSource = "") {
 }
 
 // Non-news filter: drops op-eds, PR listicles, corporate alliances, MoUs, and advice columns
-const JUNK_TITLE_REGEX = /\b(influential cisos|top cisos|ciso of the year|awards? 202\d|how to recover|can ai make|why india needs|opinion:|explainer:|sponsored|quiz:|how to avoid|here is how|things to know|key takeaways|expanding its ambitions|join forces to advance|cybersecurity 100|signs mou|signs pact|training program|expert thinks)\b|^how to\b/i;
+const JUNK_TITLE_REGEX = /\b(influential cisos|top cisos|ciso of the year|awards? 202\d|how to recover|can ai make|why india needs|opinion:|explainer:|sponsored|quiz:|how to avoid|here is how|things to know|key takeaways|expanding its ambitions|join forces to advance|cybersecurity 100|signs mou|signs pact|training program|expert thinks|denies cyber fraud|bond ruling|boost cybersecurity spending)\b|^how to\b/i;
+const JUNK_SOURCE_REGEX = /\b(vajiram|drishti|byjus|testbook|clearias|iasbaba)\b/i;
+const NON_LATIN_SCRIPT_REGEX = /[\u0400-\u04FF\u0600-\u06FF\u3040-\u30FF\u3400-\u9FFF\uAC00-\uD7AF]/;
 
 function classifyNewsSector(title, category) {
   const lower = (title || "").toLowerCase();
@@ -513,8 +515,12 @@ export async function getLiveCyberRss() {
   const clusterMap = new Map();
 
   for (const item of rawCandidatePool) {
-    // 1. Skip non-news (advice columns, PR listicles, how-tos)
-    if (JUNK_TITLE_REGEX.test(item.title)) {
+    // 1. Skip non-news (advice columns, PR listicles, how-tos, exam-prep blogs, non-English outlets)
+    if (
+      JUNK_TITLE_REGEX.test(item.title) ||
+      JUNK_SOURCE_REGEX.test(`${item.source || ""} ${item.link || ""}`) ||
+      NON_LATIN_SCRIPT_REGEX.test(`${item.title || ""} ${item.source || ""}`)
+    ) {
       continue;
     }
 

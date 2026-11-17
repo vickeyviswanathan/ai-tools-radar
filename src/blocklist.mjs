@@ -18,7 +18,7 @@ const BLOCKED = [
   // Non-AI software, hardware firmware, generic libraries, blogs, books, lists & tip-jars
   "medusa", "reactiveresume", "pypdf", "firmware", "reticulum",
   "claudecodebestpractice", "claudeskills", "aiagentbook", "publicapis",
-  "academicresearchskills", "llmaction", "kimik3inc", "humanizer",
+  "academicresearchskills", "llmaction", "kimik3inc", "humanizer", "paperlessngx",
 ];
 
 const normalize = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");

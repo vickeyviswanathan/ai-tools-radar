@@ -6,16 +6,16 @@ Read online: https://cipherati.com/
 1. CYBERSECURITY NEWS
 ------------------------------------------------------------
 
-LEAD: US judge clears MIT-educated brothers of $25 million cryptocurrency heist charges (Reuters)
-• Why it matters: Court clears brothers of $25 million Ethereum crypto heist charges; MIT Brothers Beat 'First Of Its Kind' $25M Crypto Heist Case.
+LEAD: Optimjack Crypto Malware: 178 Sites, $6,600 Stolen (shattered.io)
+• Why it matters: Optimizely Hack Hid Crypto Redirect Code on BBC, CNN and Zoom Sites.
 • Sector: Crypto & Digital Assets
-• Read article: https://news.google.com/rss/articles/CBMiygFBVV95cUxOdW1pNlZXMVNNRXJtVGFiRUhPUm0tWGFqeGt4Q1VwallIOGtKTGFiTlZGZnZCd2F5RldrQ2E0b0V0emF1TkFkOTh0Q1FOa3phejllUmhxZGpGUkhlUFJqUlhoSkNFUWR6ZVhhbmxiUDRENXJXTEFZS3ZVUzQ1clVybUVIUFBzTWNhejhxSURKeUVEa2RSaWNGd3czU1B4WWxmZ1R6QURmVWJLWWJIMkVlck5UVnRxY1luMlFXVFBqMVVmeWQ2clpvOGhn?oc=5
-• View on Cipherati: https://cipherati.com/cybersecurity-news.html#threat-live-crypto-heists-284322756
+• Read article: https://news.google.com/rss/articles/CBMiggFBVV95cUxPUFlHQS1GdS1HcUF5Snk4TlhTN3A0S0ROYnpOc05HYk5UOG04OXNhSWZKVDh2R191Z296VFdRRllrLXU0RUxINnVMTGVrdlZZSlpfVnNod0hLc1ZCa0puM1ZSeU9tdWt5WXktN1BCd2drSWVFNnFueHl6WjJSejBXVml3?oc=5
+• View on Cipherati: https://cipherati.com/cybersecurity-news.html#threat-live-crypto-heists-4567547935
 
 More on the Radar:
-• Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned (Tech Times) — https://news.google.com/rss/articles/CBMi0wFBVV95cUxPRldia2lUYzdiVFZva3BPMVJVN2tONkd3cWxOSTM3RF9lTTM0dlFHcTdQaHluZ2R5V1VIUm0yMGsydlFPQkdkNHQ5VnpXeklramZNcVBCQ3c5WWtyb2k5SHJYRElQQWhCUlJncjNES2NIMkFwMXlEQ3NvV0MxWkVndE52ckZweFlBZGlhRjhCcTFOLWtwakgzR2ZYLWp0MElSWHd3dlhTVDZLekd0dE5BbF8xS3dnTF91STJRRVhSTGlvR090RWpjWkdVZThtUHB5OVNB?oc=5
-• 178 Websites Including Zoom, CNN, IKEA Hit By Cyberattack; Malware Targets iPhones, Steals Crypto (Outlook India) — https://news.google.com/rss/articles/CBMi0gFBVV95cUxPcEpwN2k1UjdITEFOcUlwT1R4ZC16eDlFUExlSlN5R3VGNGxwb2w5bnhaNVpLRDViekFPN1dBRTVieWZsSlBTNHd4U2dSZzBXYWJIXzF1UjlVS05Wb2VtY0RfYU5fM3AxYWN6QUU3WkZqM3RsNHFWU2dBcnM5OWF1T2F3M1VBSVFTZV9iRGVRdVlMLTZVM1lJNnd1XzJJc1J6TzI5dW5VR1p5U0FQQVg3Ums0cElpTWFPaFR4enlqUzlzSV94NE9LYVdfeVdNc2k1b1HSAd8BQVVfeXFMUDZhSThQWnpyeWZ1N3NYSHZ0RUx6aHVYam5Wdm1aVmZ1bUp5TV83ZEdtM3BpQlpsdDFrTktpNjlwU3JFbWxnRDhwS3N1Vi15V0ROeVpmMHR2emFXcG5pcEhOMzRlSnlESjhONUxfN2lxYl84TjR5Tnh5cnRHZ0tEa1ZVUmhMajhhWW1BY0FVOF82cjVrbGtWYXZ1T2pMeWhfWFFZUkJWckhteVZrcmtvLXpmeW9RRlRpNV9pZ0RIVEppaGRORzN4Zy1tSEFVaWFKRGo4LTRVV2ppSDJxenVpOA?oc=5
-• In a first, Google detects AI-automated cyberattack (United Press International) — https://news.google.com/rss/articles/CBMirAFBVV95cUxNM2t5RHYxRENmb1ZYUS1ELUU1WlhuV0pna2dOcGFNa0ZyYmJIN216QnpTblRiSF9vb0tpc3BwREhEeVJXN2JDeU11MHZZV202MmpCcjU3U3RXdWxUd01BQUp2MlM1aUV5U1dfdjNMeHRkNkZTSFRRajVQRUdiUS1zS25MRUZRYTZnYTJ4bUZEUk1fZWhuYVlDLXJ1TTJ5cUJBTE04ZUVVMEtHZE830gGyAUFVX3lxTE9VRjZLbTFpRE12VGlZOHViODltbzBGMjhVZkdfRHhoNW1UUWNkNTJmMlVhTzVFTTZGVjMtUFY5c1dtdzk3Zm5vbGFWS09tNWVWTlpIdTdybTFOS01RVi0zZlBPRUtacjhPNDhfTnFtNy1mb2xrMkM0MDVKeHVuUjNsQlF3SUdoVFBkSmRfbjd5THlYQmtobGhxOW5DcnpwdmltOVFiOTdpWm54VzFmbm1oMkE?oc=5
+• America's spy agency goes dark: NSA's classified internal network goes down; no cyberattack evidence yet (The Times of India) — https://news.google.com/rss/articles/CBMiigJBVV95cUxOWUJLQldFNFdMSlEtY0EzOWRtQ1RZNUNRaEhSTTZTblRlamNvZElFZm1IcVBZVUxCWVlNMGJRMEFnN2l2QTViR0RfYWphMHlyZnRuc3dyeFU1SWJXczNYRWdreVpzWUlxeXU1aWFKWnBLaVpVNDgza201NXducFlJQUJxSzNMdWxEOE9BQkdlejFHT1VpSTU1VFhKQ2RJRDJXOWVuUS1WUGVtUGpLQkJLX3A3RVJ4T1RqUWw1R2R0VDJpUmxHZVRoaE02SjdpXzNUb0xFY0lyem5RYXBIMURoVkplT3RhZnpkVXJOYW9ZdWttQ3ZCYUh5MHFTcFNwWkVKdHYwcXNxWXBCUdIBjwJBVV95cUxQdG8tQ2JWT2FrS0prakxuLUVWQ3hvTTFxTjZzRnJjSnpTdWNGR1pLQlNTN1g3aGZXUWxsSU5rLW9PeWp1QXZNWXVoejljd3ZDN0NVenZsbU9TM2NwMl9mMUFPZF9yNXhwY1pLQUZzTlRRdkFnbks5VEVja0dyOEdWRXpqaXAtaV9HbWZaU0pQamUxYzEtOWV0NjgwOTIxZ3E3M1lyMzdfX1d0YjNtOGtZNFM0a0c2TFhuNUx0OW1jNENKTXZWVG9OQURSQzUtZndMNkdweWtPR2hZZnJQSWY3OWtzR0laWXQ3WUUtZWxzaGxaVENfOE9zT2c3OXFrRncyOU1jektTbEU3Tl9Zb1JZ?oc=5
+• Lighter Reopens Withdrawals, Hands 5 Million USDC Back to Drained Trader (unchainedcrypto.com) — https://news.google.com/rss/articles/CBMiogFBVV95cUxNYlhYcm9uNm02UWY1UGRLeGs3SzBEbVhjSUNLblMyN0xhVTFscVVEMUJrRlR3cEJ2cjJTMElBaHVEOHVDV3lIRlVqSHFIbHRseWZuUUZrNGJVa3prTlQzV2hKUUY5dnQ2cXgwMDg3YjNyOF9Md2VkME54dVFnZDJSRWtoS0N4eFkzb0lZY0NsbzZ4MmJiRi1UcElYUTJneWcwb2c?oc=5
+• US judge clears MIT-educated brothers of $25 million cryptocurrency heist charges (Reuters) — https://news.google.com/rss/articles/CBMiygFBVV95cUxOdW1pNlZXMVNNRXJtVGFiRUhPUm0tWGFqeGt4Q1VwallIOGtKTGFiTlZGZnZCd2F5RldrQ2E0b0V0emF1TkFkOTh0Q1FOa3phejllUmhxZGpGUkhlUFJqUlhoSkNFUWR6ZVhhbmxiUDRENXJXTEFZS3ZVUzQ1clVybUVIUFBzTWNhejhxSURKeUVEa2RSaWNGd3czU1B4WWxmZ1R6QURmVWJLWWJIMkVlck5UVnRxY1luMlFXVFBqMVVmeWQ2clpvOGhn?oc=5
 
 Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 
@@ -37,7 +37,7 @@ Featured Tool: index tts
 • What it does: An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System
 • Open tool: https://github.com/index-tts/index-tts
 • Engineering review: https://cipherati.com/tools/index-tts.html
-• Browse 219 indexed tools: https://cipherati.com/ai-tools.html
+• Browse 217 indexed tools: https://cipherati.com/ai-tools.html
 
 ------------------------------------------------------------
 4. AI REALITIES

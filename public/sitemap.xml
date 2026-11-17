@@ -6,7 +6,6 @@
   <url><loc>https://cipherati.com/ai-realities.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/ai-tools.html</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://cipherati.com/newsletter/today.html</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://cipherati.com/tools/rea.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/public-apis.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/ecc.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/deepseek-harness.html</loc><lastmod>2026-11-13</lastmod></url>
@@ -81,7 +80,6 @@
   <url><loc>https://cipherati.com/tools/umi-ocr.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/amazon-q-developer-kiro-ide.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/cowagent.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/tools/paperless-ngx.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/siyuan.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/milvus.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/tts.html</loc><lastmod>2026-11-13</lastmod></url>
@@ -225,21 +223,21 @@
   <url><loc>https://cipherati.com/tools/mova.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/pdfx.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/tools/xiaoyaosearch.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/compare/rea-vs-public-apis.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/compare/rea-vs-firecrawl.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/compare/rea-vs-ghidra.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/compare/rea-vs-ragflow.html</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://cipherati.com/compare/rea-vs-scrapling.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/compare/public-apis-vs-firecrawl.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/compare/public-apis-vs-ghidra.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/compare/public-apis-vs-ragflow.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/compare/public-apis-vs-scrapling.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/compare/public-apis-vs-crawl4ai.html</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://cipherati.com/compare/firecrawl-vs-ghidra.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/compare/firecrawl-vs-ragflow.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/compare/firecrawl-vs-scrapling.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/compare/firecrawl-vs-crawl4ai.html</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://cipherati.com/compare/ghidra-vs-ragflow.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/compare/ghidra-vs-scrapling.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/compare/ghidra-vs-crawl4ai.html</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://cipherati.com/compare/ragflow-vs-scrapling.html</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://cipherati.com/compare/ragflow-vs-crawl4ai.html</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://cipherati.com/compare/scrapling-vs-crawl4ai.html</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://cipherati.com/compare/ecc-vs-cc-switch.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/compare/ecc-vs-graphify.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://cipherati.com/compare/ecc-vs-openai-codex.html</loc><lastmod>2026-11-13</lastmod></url>
