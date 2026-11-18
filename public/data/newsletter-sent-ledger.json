@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-18",
+  "lastUpdatedDate": "2026-11-19",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -11,7 +11,8 @@
     "fedex-narcotics-customs-parcel",
     "aadhaar-pan-update-identity-theft",
     "fake-upi-autopay-mandate-scam",
-    "pensioner-jeevan-pramaan-kyc"
+    "pensioner-jeevan-pramaan-kyc",
+    "traffic-echallan-apk"
   ],
   "sentRealityIds": [
     4,
@@ -24,7 +25,8 @@
     5,
     18,
     15,
-    19
+    19,
+    6
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -37,7 +39,8 @@
     "Promptfoo",
     "open design",
     "FluidVoice",
-    "OWASP ZAP"
+    "OWASP ZAP",
+    "LocalAI"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -50,7 +53,8 @@
     "Binance Reopens 87 Crypto Networks After $6.3B Hack, Targets Full Withdrawals Next Week",
     "SEBI assures continuous evolving mechanism to thwart possible cyberattack",
     "US judge clears MIT-educated brothers of $25 million cryptocurrency heist charges",
-    "World hockey governing body hit by cyberattack after Russia exclusion"
+    "World hockey governing body hit by cyberattack after Russia exclusion",
+    "Reental's Polygon Contracts Drained of $454K After Admin Upgrade"
   ],
   "sentQuickHitTitles": [
     "Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned",
@@ -58,6 +62,9 @@
     "In a first, Google detects AI-automated cyberattack",
     "America's spy agency goes dark: NSA's classified internal network goes down; no cyberattack evidence yet",
     "Lighter Reopens Withdrawals, Hands 5 Million USDC Back to Drained Trader",
-    "Hackers behind record Binance breach move $63 million in ether following DOJ seizures"
+    "Hackers behind record Binance breach move $63 million in ether following DOJ seizures",
+    "Delhi Police busts Rs 2 crore 'digital arrest' cyber fraud; three arrested",
+    "A Hacker Who Stole $270 Million Is Moving It Into Tornado Cash. Can Stolen Crypto Ever Be Recovered?",
+    "RBI asks lenders to tighten API security amid rising cyberattack risks"
   ]
 }
