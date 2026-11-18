@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-17",
+  "lastUpdatedDate": "2026-11-18",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -10,7 +10,8 @@
     "part-time-youtube-review-job",
     "fedex-narcotics-customs-parcel",
     "aadhaar-pan-update-identity-theft",
-    "fake-upi-autopay-mandate-scam"
+    "fake-upi-autopay-mandate-scam",
+    "pensioner-jeevan-pramaan-kyc"
   ],
   "sentRealityIds": [
     4,
@@ -22,7 +23,8 @@
     20,
     5,
     18,
-    15
+    15,
+    19
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -34,7 +36,8 @@
     "TTS",
     "Promptfoo",
     "open design",
-    "FluidVoice"
+    "FluidVoice",
+    "OWASP ZAP"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -46,11 +49,15 @@
     "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
     "Binance Reopens 87 Crypto Networks After $6.3B Hack, Targets Full Withdrawals Next Week",
     "SEBI assures continuous evolving mechanism to thwart possible cyberattack",
-    "US judge clears MIT-educated brothers of $25 million cryptocurrency heist charges"
+    "US judge clears MIT-educated brothers of $25 million cryptocurrency heist charges",
+    "World hockey governing body hit by cyberattack after Russia exclusion"
   ],
   "sentQuickHitTitles": [
     "Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned",
     "178 Websites Including Zoom, CNN, IKEA Hit By Cyberattack; Malware Targets iPhones, Steals Crypto",
-    "In a first, Google detects AI-automated cyberattack"
+    "In a first, Google detects AI-automated cyberattack",
+    "America's spy agency goes dark: NSA's classified internal network goes down; no cyberattack evidence yet",
+    "Lighter Reopens Withdrawals, Hands 5 Million USDC Back to Drained Trader",
+    "Hackers behind record Binance breach move $63 million in ether following DOJ seizures"
   ]
 }
