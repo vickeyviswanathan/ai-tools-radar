@@ -1017,5 +1017,185 @@ export const SCAMS_DATA = [
         { name: "Local Cyber Police Station", detail: "Follow up in person with your 14-digit cybercrime.gov.in acknowledgement number." }
       ]
     }
+  },
+  {
+    id: "boss-scam-executive-whatsapp-takeover",
+    category: "banking",
+    platform: "WhatsApp / Corporate Finance",
+    tag: "Boss BEC Scam",
+    severity: "critical",
+    title: "The \"Boss Scam\" / Executive WhatsApp Takeover Fraud",
+    scam: "Fraudsters infect a company director, CFO, or Chartered Accountant's computer using a malicious archive file (such as Statement_of_Account.zip or RBI_Notice.zip) to hijack their active WhatsApp Web session. Using the executive's real WhatsApp number and chat history, the attackers then order the finance or accounts team to execute urgent high-value vendor or escrow transfers to mule bank accounts.",
+    protection: "Mandate a strict two-person voice callback rule before releasing any bank transfer requested over WhatsApp or email, never open unexpected .zip/.exe files on work PCs, and audit WhatsApp Linked Devices regularly.",
+    sourceName: "I4C & PIB Cyber Security Advisory",
+    sourceUrl: "https://cybercrime.gov.in/",
+    verifiedDate: "2026-11-18",
+    actionLinkText: "Report Corporate Fraud: 1930 ↗",
+    actionUrl: "https://cybercrime.gov.in/",
+    playbook: {
+      overview: "Highlighted by I4C and PIB advisories, the 'Boss Scam' combines infostealer malware with Business Email/Messaging Compromise (BEC). Unlike crude impersonation from unknown numbers, attackers hijack the actual executive's live WhatsApp session—meaning the finance employee sees the real boss's name, photo, phone number, and prior office chat history.",
+      initialContact: {
+        channel: "Malicious .ZIP to Executive → Live WhatsApp Message to Finance Team",
+        message: "[Illustrative Educational Example]\nFrom Managing Director's real WhatsApp: \"Ramesh, I am in a confidential board/auditor meeting and cannot take calls. Please process an urgent RTGS of ₹18,50,000 to this new vendor settlement account immediately—will share the invoice by 5 PM. Treat as priority.\""
+      },
+      howItWorks: [
+        "Initial compromise: A director, CFO, or CA receives a compressed archive ('Statement of Account.zip', 'MCA_Audit.zip', or 'RBI.zip') via WhatsApp or email and opens the executable inside on a Windows PC.",
+        "Session theft: The malware silently exfiltrates active WhatsApp Web / browser session tokens to the attacker's server without logging the executive out.",
+        "Reconnaissance: Attackers quietly read recent company finance chats to learn internal payment workflows, vendor names, and the executive's writing tone.",
+        "The Boss command: Posing as the executive from their genuine WhatsApp number, the attacker instructs an accountant or finance manager to make an urgent RTGS/IMPS transfer while claiming to be 'in a meeting'.",
+        "Rapid layering: Funds land in a mule corporate or savings account and are split across multiple accounts within minutes."
+      ],
+      whatVictimSees: {
+        screenTitle: "Finance Employee's WhatsApp Chat (Simulated Educational Example)",
+        screenBody: "Contact: Rajesh Sharma (MD — Verified Company Number)\n\n\"Need ₹18.5L transferred before 3:30 PM RTGS cutoff for confidential acquisition retainer. Send UTR screenshot here once done. Do not call, inside investor briefing.\"",
+        caption: "Because the message comes from the executive's genuine saved contact—with months of real chat history above it—finance staff rarely suspect a takeover."
+      },
+      psychology: "Workplace authority, urgency, and social proof. Junior and mid-level finance staff hesitate to question an urgent directive from the MD or CFO, especially when told not to disturb them in a meeting.",
+      redFlags: [
+        "Urgent high-value transfer or new beneficiary bank account requests sent over WhatsApp with an explicit instruction 'not to call'.",
+        "Changes to existing vendor bank details or requests to bypass normal ERP/PO approval workflows.",
+        "An executive's PC recently opening an unexpected .zip/.rar archive or showing an unfamiliar session under WhatsApp → Linked Devices."
+      ],
+      consequences: [
+        "Multi-lakh or multi-crore corporate treasury loss in a single RTGS/NEFT transfer.",
+        "Exposure of confidential board, tax, and client conversations synced to WhatsApp Web.",
+        "Operational disruption, audit scrutiny, and vendor payment disputes."
+      ],
+      prevention: [
+        "Enforce a mandatory out-of-band voice/in-person callback policy for every payment above a set threshold or any new bank beneficiary.",
+        "Block .zip/.exe/.scr attachments from external WhatsApp/email downloads on corporate finance endpoints.",
+        "Audit WhatsApp → Settings → Linked Devices weekly on all leadership phones and enable Two-Step Verification."
+      ],
+      immediateAction: [
+        "Log out all Linked Devices on the executive's WhatsApp immediately and isolate the affected PC from the corporate network for malware scanning.",
+        "Call your corporate bank's relationship manager and fraud desk immediately to recall/freeze the RTGS/NEFT/IMPS transfer.",
+        "Dial 1930 within the Golden Hour and file a formal corporate cybercrime report at cybercrime.gov.in with UTR numbers and bank logs.",
+        "Preserve the malicious .zip file and PC logs for CERT-In / Cyber Police forensics."
+      ],
+      reportingChannels: [
+        { name: "National Cyber Crime Helpline 1930 & Portal", detail: "Report immediately with UTR numbers to freeze recipient mule accounts.", url: "https://cybercrime.gov.in/" },
+        { name: "CERT-In Incident Response", detail: "Report corporate malware infection and executive account compromise.", url: "https://www.cert-in.org.in/" },
+        { name: "Corporate Bank Fraud Desk", detail: "Request an immediate SWIFT/RTGS/NEFT beneficiary freeze." }
+      ]
+    }
+  },
+  {
+    id: "android-accessibility-overlay-banking-malware",
+    category: "apk-malware",
+    platform: "Android APK / Accessibility Abuse",
+    tag: "Overlay RAT Malware",
+    severity: "critical",
+    title: "The Android Accessibility & Overlay Banking Malware Scam",
+    scam: "Fraudsters distribute disguised Android APK files (posing as banking KYC updates, reward apps, courier trackers, or government portals) that trick users into enabling Android 'Accessibility Services'. Once granted, the malware draws invisible fake screens over genuine banking and UPI apps, captures your PINs/passwords via keylogging, and silently drains accounts in the background.",
+    protection: "NEVER grant Android 'Accessibility Services' permission to any sideloaded app or newly installed utility, disable 'Install unknown apps' for browsers and WhatsApp, and keep Google Play Protect enabled.",
+    sourceName: "CERT-In & RBI Digital Payment Safety",
+    sourceUrl: "https://www.cert-in.org.in/",
+    verifiedDate: "2026-11-18",
+    actionLinkText: "CERT-In Security Advisories ↗",
+    actionUrl: "https://www.cert-in.org.in/",
+    playbook: {
+      overview: "Overlay and Accessibility-abuse Remote Access Trojans (RATs) represent a major shift from simple SMS-stealing APKs. Instead of just reading OTPs, these malicious Android apps abuse Android's Accessibility API—designed for visually impaired users—to read everything on your screen, simulate taps, hide bank SMS alerts, and display fake 'System Update in Progress' overlays while executing unauthorised UPI or netbanking transfers.",
+      initialContact: {
+        channel: "WhatsApp / SMS APK Link + Guided Setup Call",
+        message: "[Illustrative Educational Example]\n\"Dear Customer, your bank reward points & eKYC app requires a mandatory security patch. Download BankGuard_Update.apk and turn ON 'Accessibility Service' under Settings so automatic verification can complete.\""
+      },
+      howItWorks: [
+        "Sideloading the dropper: The victim installs a malicious .apk sent over WhatsApp, Telegram, or a phishing website.",
+        "Accessibility permission trap: On launch, the app claims it cannot proceed unless you enable its Accessibility Service in Android Settings.",
+        "Screen & keystroke capture: With Accessibility enabled, the malware records every PIN, pattern, and banking password you type.",
+        "Overlay & silent transfer: When you open your real banking/UPI app—or while your phone is idle—the malware projects a black 'Updating System' overlay on your screen while automated background taps transfer funds out and dismiss OTP notifications."
+      ],
+      whatVictimSees: {
+        screenTitle: "Android Settings & Fake Overlay Screen (Simulated Educational Example)",
+        screenBody: "Android Prompt: \"Allow BankGuard_Update to have full control of your device? View and control screen, view and perform actions.\" [ALLOW]\n\nLater, phone freezes on a dark overlay:\n\"System Security Verification — 42% Complete. Do not turn off your phone.\"",
+        caption: "While the victim waits for the fake '42% verification' screen to finish, the malware is actively tapping through their banking app underneath."
+      },
+      psychology: "Compliance with perceived technical instructions. Users accustomed to granting app permissions for camera or location do not realise that Android Accessibility grants near-total control over every app on the phone.",
+      redFlags: [
+        "Any app distributed as a .apk file outside the official Google Play Store.",
+        "A banking, delivery, utility, or PDF app asking you to enable 'Accessibility Services' or 'Display over other apps'.",
+        "Your phone suddenly turning unresponsive, showing a fake 'System Updating' screen, or overheating while idle."
+      ],
+      consequences: [
+        "Silent draining of multiple bank accounts and UPI apps without the victim seeing real-time alerts.",
+        "Theft of corporate email, authenticator codes, and saved passwords visible on screen.",
+        "Persistence: Some variants resist normal uninstallation if Device Admin rights were also granted."
+      ],
+      prevention: [
+        "Keep 'Install unknown apps' disabled for WhatsApp, Telegram, Chrome, and all file managers.",
+        "Never grant Android Accessibility permissions to any app unless it is a trusted assistive/screen-reader tool you deliberately installed.",
+        "Check Settings → Accessibility → Downloaded Apps periodically and remove anything unfamiliar."
+      ],
+      immediateAction: [
+        "Switch the phone to Airplane Mode / turn off Wi-Fi and mobile data immediately to cut off the attacker's remote control.",
+        "Using a separate clean device, call your banks immediately to freeze netbanking, UPI, and cards.",
+        "Boot into Android Safe Mode to revoke Accessibility/Device Admin permissions and uninstall the malicious APK, or perform a full factory reset after backing up clean photos.",
+        "Dial 1930 and file a complaint at cybercrime.gov.in."
+      ],
+      reportingChannels: [
+        { name: "National Cyber Crime Helpline 1930 & Portal", detail: "Dial 1930 immediately to freeze outgoing fraud funds.", url: "https://cybercrime.gov.in/" },
+        { name: "CERT-In", detail: "Report malicious banking APK files and distribution domains.", url: "https://www.cert-in.org.in/" },
+        { name: "Your Bank's 24x7 Fraud Helpline", detail: "Block UPI/netbanking immediately from another phone." }
+      ]
+    }
+  },
+  {
+    id: "overseas-cyber-slavery-fake-job-scam",
+    category: "messaging",
+    platform: "Job Portals / Telegram / Overseas",
+    tag: "Overseas Job Trap",
+    severity: "critical",
+    title: "The Overseas \"Cyber-Slavery\" Fake Tech Job Scam",
+    scam: "Syndicates advertise lucrative overseas IT, data-entry, digital marketing, or customer-support roles in Southeast Asia (Thailand, Cambodia, Myanmar, or Laos) offering $1,200–$2,000/month, free flights, and accommodation. Victims are flown out on tourist visas, have their passports confiscated on arrival, and are coerced inside guarded compounds into running cyber scams against Indians and global targets.",
+    protection: "Never travel abroad for employment on a tourist or visa-on-arrival pass, verify every foreign recruiter through the Ministry of External Affairs eMigrate portal, and confirm company legitimacy independently before boarding any flight.",
+    sourceName: "MHA & I4C Overseas Employment Advisory",
+    sourceUrl: "https://cybercrime.gov.in/",
+    verifiedDate: "2026-11-18",
+    actionLinkText: "Verify on MEA / Report I4C ↗",
+    actionUrl: "https://cybercrime.gov.in/",
+    playbook: {
+      overview: "Highlighted by MHA, I4C, and India's East Asia Summit diplomatic crackdowns, overseas 'cyber-slavery' syndicates target Indian IT graduates, BPO workers, and unemployed youth. Unlike simple ₹999 domestic registration-fee scams, these networks arrange actual flight tickets to Bangkok or neighbouring hubs before trafficking recruits across borders into scam compounds.",
+      initialContact: {
+        channel: "Telegram / WhatsApp / LinkedIn / Unregistered Recruitment Agent",
+        message: "[Illustrative Educational Example]\n\"Urgent Hiring: Data Entry & Client Support Executives for E-Commerce Hub in Thailand/Dubai. Salary $1,500/month + free flight & stay. Immediate joining—we will process tourist visa first and convert to work permit on arrival!\""
+      },
+      howItWorks: [
+        "Lucrative job bait: Unregistered agents advertise high-paying tech/support roles abroad with minimal interview screening.",
+        "Tourist visa shortcut: Instead of a genuine employer-sponsored work visa, agents book a tourist visa or visa-on-arrival claiming 'HR will convert it locally'.",
+        "Cross-border trafficking: Upon landing, handlers transport recruits by road across remote borders into guarded compounds.",
+        "Passport seizure & coercion: Passports and personal phones are confiscated; victims are forced to run romance, investment, or digital-arrest scams under threat of violence or debt bondage."
+      ],
+      whatVictimSees: {
+        screenTitle: "Agent Chat & Fake Travel Itinerary (Simulated Educational Example)",
+        screenBody: "\"Congratulations! Flight booked for Friday. Carry ₹30,000 cash for immigration show-money. Tell airport officers you are travelling for tourism—our supervisor will meet you outside arrival gate with your work contract.\"",
+        caption: "Any recruiter telling you to lie to immigration officers and travel on a tourist visa for a job is a major trafficking red flag."
+      },
+      psychology: "Career ambition, financial pressure, and trust in 'all-expenses-paid' flight bookings that appear too real to be a scam.",
+      redFlags: [
+        "Foreign job offers requiring you to travel on a tourist visa or lie to airport immigration about your purpose of visit.",
+        "Recruiting agents not registered on the Ministry of External Affairs (MEA) eMigrate portal.",
+        "High USD salaries ($1,200+) for basic typing/chat-support work with vague company addresses."
+      ],
+      consequences: [
+        "Loss of personal freedom, passport confiscation, and physical/psychological abuse inside illegal scam compounds.",
+        "Extortion of victim's family in India for 'ransom/release fees' to return home.",
+        "Risk of legal complications for unwitting involvement in cross-border cybercrime."
+      ],
+      prevention: [
+        "Accept overseas employment ONLY with an official work visa stamped before departure and a verified employer contract.",
+        "Verify every overseas recruiting agent on the Government of India's eMigrate portal (emigrate.gov.in) and MEA advisories.",
+        "Share full itinerary, recruiter details, and passport copies with family before any international travel."
+      ],
+      immediateAction: [
+        "If someone you know is trapped abroad, contact the Indian Embassy's 24x7 emergency helpline in that country and the Ministry of External Affairs (MADAD portal) immediately.",
+        "Report the recruiting agents, phone numbers, and Telegram/WhatsApp handles at cybercrime.gov.in and dial 1930 if money was extorted.",
+        "Do NOT pay ransoms to unverified intermediaries without coordinating with MEA / local police."
+      ],
+      reportingChannels: [
+        { name: "MEA Consular / MADAD & Indian Embassies", detail: "Emergency assistance for Indians trapped by fake overseas job syndicates.", url: "https://www.mea.gov.in/" },
+        { name: "National Cyber Crime Portal & Helpline 1930", detail: "Report fake overseas job recruiters and extortion demands.", url: "https://cybercrime.gov.in/" },
+        { name: "eMigrate Portal (MEA)", detail: "Verify licensed overseas recruitment agents before accepting any offer.", url: "https://emigrate.gov.in/" }
+      ]
+    }
   }
 ];

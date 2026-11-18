@@ -1061,7 +1061,14 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
       {
         q: `What should I do if I already lost money or clicked a suspicious link in India?`,
         a: `Immediately dial the National Cyber Crime Helpline 1930 (Toll-Free) within the Golden Hour (first 2 hours) to trigger an inter-bank freeze on the scammer's mule account, and file a formal complaint at https://cybercrime.gov.in/.`
-      }
+      },
+      ...(scam.playbook
+        ? [
+            { q: `What are the key red flags of "${scam.title}"?`, a: scam.playbook.redFlags.join(" ") },
+            { q: `What happens if an employee or citizen falls for "${scam.title}"?`, a: scam.playbook.consequences.join(" ") },
+            { q: `Where should "${scam.title}" be reported in India?`, a: scam.playbook.reportingChannels.map((ch) => `${ch.name}: ${ch.detail}`).join(" ") }
+          ]
+        : [])
     ];
 
     const jsonLd = {
