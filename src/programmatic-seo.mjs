@@ -1116,7 +1116,10 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
         </div>
         <div class="cta-row">
           <a href="${esc(scam.actionUrl || scam.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="btn-primary">${esc(scam.actionLinkText || "Verify Official Government Portal ↗")}</a>
-          <a href="/scam-alerts.html" class="btn-secondary">← View All ${scams.length} Scam Alerts</a>
+          <a href="https://wa.me/?text=${encodeURIComponent(`🚨 Cyber Scam Alert: ${scam.title}\n\n⚠️ Trap: ${scam.scam}\n\n✅ Rule: ${scam.protection}\n\n📞 Dial 1930 (Golden Hour) | Full Playbook: https://cipherati.com/${canonicalPath}`)}" target="_blank" rel="noopener noreferrer" class="btn-secondary">📲 Share on WhatsApp</a>
+          <button type="button" class="btn-secondary" data-copy-alert="${esc(`🚨 Cyber Scam Alert: ${scam.title}\n⚠️ ${scam.scam}\n✅ Defense: ${scam.protection}\n📞 Dial 1930 | Full Playbook: https://cipherati.com/${canonicalPath}`)}" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.dataset.copyAlert).then(()=>{const t=this.textContent;this.textContent='✓ Alert Copied!';setTimeout(()=>this.textContent=t,2000)})">📋 Copy Alert</button>
+          <a href="/poster.html" class="btn-secondary">🖨️ 1-Page Office Poster</a>
+          <a href="/scam-alerts.html" class="btn-secondary">← All ${scams.length} Alerts</a>
         </div>
       </article>
 
@@ -1445,6 +1448,83 @@ export function generateProgrammaticSeoPages({ tools = [], scams = [], realities
       })
     });
   }
+
+  // 5. Generate Printable 1-Page Office & Family Cyber Hygiene Poster (/poster.html)
+  const posterScams = scams.slice(0, 12);
+  const posterHtml = renderPageShell({
+    title: "India Cyber Scam & 1930 Golden Hour Poster (Printable PDF) | Cipherati",
+    description: "Free 1-page printable corporate & family cyber safety poster for India: 1930 helpline, Golden Hour steps, and top scam rules.",
+    canonicalPath: "poster.html",
+    keywords: "cyber security poster India, 1930 helpline poster, corporate cyber awareness poster, printable scam guide",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@graph": [
+        orgNode,
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Cipherati", "item": SITE_URL },
+            { "@type": "ListItem", "position": 2, "name": "Scam Alerts (1930)", "item": `${SITE_URL}scam-alerts.html` },
+            { "@type": "ListItem", "position": 3, "name": "Printable Safety Poster", "item": `${SITE_URL}poster.html` }
+          ]
+        }
+      ]
+    },
+    activeNav: "scams",
+    breadcrumbs: [
+      { name: "Scam Alerts (1930)", url: "/scam-alerts.html" },
+      { name: "Printable Office & Family Poster" }
+    ],
+    mainHtml: `
+      <style>
+        @media print {
+          .topbar, .breadcrumbs, .cta-row, .footer, .theme-toggle { display: none !important; }
+          body { background: #fff !important; color: #000 !important; }
+          .page-shell { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+          .panel, .hero-card { box-shadow: none !important; border: 1px solid #cbd5e1 !important; break-inside: avoid; }
+        }
+      </style>
+      <article class="hero-card">
+        <span class="kicker">🖨️ Printable Corporate &amp; Family Cyber Safety Poster</span>
+        <h1>India Cyber Fraud Defense &amp; 1930 Golden Hour Poster</h1>
+        <p class="subtitle">Print or save as PDF for office noticeboards, HR onboarding kits, and apartment/family WhatsApp groups.</p>
+        <div class="cta-row">
+          <button type="button" class="btn-primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
+          <a href="https://wa.me/?text=${encodeURIComponent("📌 Free 1-Page India Cyber Scam & 1930 Golden Hour Poster for your office & family: https://cipherati.com/poster.html")}" target="_blank" rel="noopener noreferrer" class="btn-secondary">📲 Share Poster on WhatsApp</a>
+          <a href="/scam-alerts.html" class="btn-secondary">← All ${scams.length} Scam Playbooks</a>
+        </div>
+      </article>
+
+      <section class="panel">
+        <h2>🚨 Golden Hour Emergency Protocol (First 2 Hours)</h2>
+        <div class="alert-box alert-red">
+          <strong>1. Dial 1930 Immediately (Toll-Free):</strong> Trigger an inter-bank freeze on mule accounts.<br>
+          <strong>2. File e-FIR:</strong> <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a> &nbsp;·&nbsp; <strong>3. Report Scam Calls/SMS:</strong> <a href="https://sancharsaathi.gov.in/" target="_blank" rel="noopener noreferrer">sancharsaathi.gov.in</a> (Chakshu)<br>
+          <strong>4. Save Evidence:</strong> Uncropped screenshots of chats, 12-digit UPI UTR numbers, and bank SMS alerts.
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>🛡️ 12 Critical Scam Rules Every Employee &amp; Family Member Must Know</h2>
+        <div class="alt-list">
+          ${posterScams
+            .map(
+              (ps) => `<a href="/scams/${esc(scamSlugMap.get(ps.id || ps.title))}.html" class="alt-card" style="text-decoration:none;">
+            <strong style="color:var(--text);font-size:14px;">${esc(ps.title)}</strong>
+            <span style="font-size:12.5px;color:var(--text-secondary);line-height:1.5;">${esc(ps.protection)}</span>
+            <span style="font-size:12px;color:var(--accent);font-weight:700;">Read Playbook →</span>
+          </a>`
+            )
+            .join("")}
+        </div>
+      </section>
+    `
+  });
+  writeFileSync("./public/poster.html", posterHtml, "utf8");
+  generatedUrls.push({
+    loc: `${SITE_URL}poster.html`,
+    lastmod: stamp(`${SITE_URL}poster.html`, { count: posterScams.length, ids: posterScams.map((p) => p.id) })
+  });
 
   return {
     generatedUrls,
