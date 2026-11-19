@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-19",
+  "lastUpdatedDate": "2026-11-20",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -12,7 +12,8 @@
     "aadhaar-pan-update-identity-theft",
     "fake-upi-autopay-mandate-scam",
     "pensioner-jeevan-pramaan-kyc",
-    "traffic-echallan-apk"
+    "traffic-echallan-apk",
+    "work-from-home-registration-fee-scam"
   ],
   "sentRealityIds": [
     4,
@@ -26,7 +27,8 @@
     18,
     15,
     19,
-    6
+    6,
+    7
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -40,7 +42,8 @@
     "open design",
     "FluidVoice",
     "OWASP ZAP",
-    "LocalAI"
+    "LocalAI",
+    "InvokeAI"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -54,7 +57,8 @@
     "SEBI assures continuous evolving mechanism to thwart possible cyberattack",
     "US judge clears MIT-educated brothers of $25 million cryptocurrency heist charges",
     "World hockey governing body hit by cyberattack after Russia exclusion",
-    "Reental's Polygon Contracts Drained of $454K After Admin Upgrade"
+    "Reental's Polygon Contracts Drained of $454K After Admin Upgrade",
+    "JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack"
   ],
   "sentQuickHitTitles": [
     "Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned",
@@ -65,6 +69,9 @@
     "Hackers behind record Binance breach move $63 million in ether following DOJ seizures",
     "Delhi Police busts Rs 2 crore 'digital arrest' cyber fraud; three arrested",
     "A Hacker Who Stole $270 Million Is Moving It Into Tornado Cash. Can Stolen Crypto Ever Be Recovered?",
-    "RBI asks lenders to tighten API security amid rising cyberattack risks"
+    "RBI asks lenders to tighten API security amid rising cyberattack risks",
+    "As cyberattack hits European Commission, FBI's AI tool warning in focus",
+    "Equinor says cyberattack still ongoing but output unaffected",
+    "43 Soldiers Re-Enlisted In The Army In Exchange For Time Off To Play Grand Theft Auto 6: 'I'm All About The Heist'"
   ]
 }
