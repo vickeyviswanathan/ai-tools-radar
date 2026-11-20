@@ -1,6 +1,6 @@
 {
   "https://cipherati.com/": {
-    "hash": "dbb4ac59955d1d8d",
+    "hash": "77792c502a01215f",
     "lastmod": "2026-11-20"
   },
   "https://cipherati.com/ai-realities.html": {
@@ -8,7 +8,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/ai-tools.html": {
-    "hash": "ca8cfe432a4e84ea",
+    "hash": "b6ac991d961363a7",
     "lastmod": "2026-11-20"
   },
   "https://cipherati.com/compare/autogpt-vs-dify.html": {
@@ -72,16 +72,16 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/compare/firecrawl-vs-ghidra.html": {
-    "hash": "06622c9900bf9cd4",
-    "lastmod": "2026-11-18"
+    "hash": "464a889b54b32276",
+    "lastmod": "2026-11-20"
   },
   "https://cipherati.com/compare/firecrawl-vs-ragflow.html": {
-    "hash": "7d1c4c61285d0a48",
-    "lastmod": "2026-11-18"
+    "hash": "880f2554608b3eff",
+    "lastmod": "2026-11-20"
   },
   "https://cipherati.com/compare/firecrawl-vs-scrapling.html": {
-    "hash": "c5ad08f172f3b565",
-    "lastmod": "2026-11-18"
+    "hash": "3d92ececb4c1c112",
+    "lastmod": "2026-11-20"
   },
   "https://cipherati.com/compare/ghidra-vs-ragflow.html": {
     "hash": "a674d9b40688bd70",
@@ -176,8 +176,8 @@
     "lastmod": "2026-11-18"
   },
   "https://cipherati.com/compare/public-apis-vs-firecrawl.html": {
-    "hash": "88c9de896375e388",
-    "lastmod": "2026-11-18"
+    "hash": "a4e8dd44be8509b9",
+    "lastmod": "2026-11-20"
   },
   "https://cipherati.com/compare/public-apis-vs-ghidra.html": {
     "hash": "5b9010918fb0ae44",
@@ -196,8 +196,8 @@
     "lastmod": "2026-11-18"
   },
   "https://cipherati.com/compare/rea-vs-firecrawl.html": {
-    "hash": "2dead67b217ae36c",
-    "lastmod": "2026-11-18"
+    "hash": "d7afaae490b6d01b",
+    "lastmod": "2026-11-20"
   },
   "https://cipherati.com/compare/rea-vs-ghidra.html": {
     "hash": "1f477852564d5683",
@@ -272,11 +272,11 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/cybersecurity-news.html": {
-    "hash": "170469c243b3447f",
+    "hash": "8b3b01954a7374bd",
     "lastmod": "2026-11-20"
   },
   "https://cipherati.com/newsletter/today.html": {
-    "hash": "bc7d79d24dfb8721",
+    "hash": "b9369ee2b443c9c6",
     "lastmod": "2026-11-20"
   },
   "https://cipherati.com/poster.html": {
@@ -616,7 +616,7 @@
     "lastmod": "2026-11-20"
   },
   "https://cipherati.com/tools/chinese-llm-benchmark.html": {
-    "hash": "d9ce8fe334a99759",
+    "hash": "bed3ed22fe4da830",
     "lastmod": "2026-11-20"
   },
   "https://cipherati.com/tools/chrome-devtools-mcp.html": {
@@ -784,8 +784,8 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/firecrawl.html": {
-    "hash": "d81508778967f076",
-    "lastmod": "2026-11-18"
+    "hash": "e876660ff0867a1e",
+    "lastmod": "2026-11-20"
   },
   "https://cipherati.com/tools/flowise.html": {
     "hash": "bbfbcc3a3da65bd0",
@@ -908,7 +908,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/kirara-ai.html": {
-    "hash": "3cef46c8ea07ccd5",
+    "hash": "ebc04c96fa062b6c",
     "lastmod": "2026-11-20"
   },
   "https://cipherati.com/tools/kokoro.html": {
@@ -924,7 +924,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/langchain-chatchat.html": {
-    "hash": "9ac508a450e9d2c7",
+    "hash": "6b54e24da8c548bc",
     "lastmod": "2026-11-20"
   },
   "https://cipherati.com/tools/langchain4j.html": {
@@ -1112,7 +1112,7 @@
     "lastmod": "2026-11-18"
   },
   "https://cipherati.com/tools/nuwa-skill.html": {
-    "hash": "f1cfe12de6763d73",
+    "hash": "027b10feb8d9865e",
     "lastmod": "2026-11-20"
   },
   "https://cipherati.com/tools/nvidia-garak.html": {
@@ -1479,10 +1479,6 @@
     "hash": "b53fda149fb9f6c3",
     "lastmod": "2026-11-13"
   },
-  "https://cipherati.com/tools/wan2-2-14b-fast.html": {
-    "hash": "1f827bcdeff6989a",
-    "lastmod": "2026-11-18"
-  },
   "https://cipherati.com/tools/wazuh.html": {
     "hash": "e971a9d098eb3d9d",
     "lastmod": "2026-11-18"
@@ -1512,7 +1508,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/yft-design.html": {
-    "hash": "df6c3255251678e3",
+    "hash": "5bdf05711f103381",
     "lastmod": "2026-11-20"
   },
   "https://cipherati.com/tools/yogurt.html": {

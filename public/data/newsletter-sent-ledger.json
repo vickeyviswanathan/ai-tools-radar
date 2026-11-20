@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-20",
+  "lastUpdatedDate": "2026-11-21",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -13,7 +13,8 @@
     "fake-upi-autopay-mandate-scam",
     "pensioner-jeevan-pramaan-kyc",
     "traffic-echallan-apk",
-    "work-from-home-registration-fee-scam"
+    "work-from-home-registration-fee-scam",
+    "sim-swap-esim-hijack-scam"
   ],
   "sentRealityIds": [
     4,
@@ -28,7 +29,8 @@
     15,
     19,
     6,
-    7
+    7,
+    1
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -43,7 +45,8 @@
     "FluidVoice",
     "OWASP ZAP",
     "LocalAI",
-    "InvokeAI"
+    "InvokeAI",
+    "radare2"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -58,7 +61,8 @@
     "US judge clears MIT-educated brothers of $25 million cryptocurrency heist charges",
     "World hockey governing body hit by cyberattack after Russia exclusion",
     "Reental's Polygon Contracts Drained of $454K After Admin Upgrade",
-    "JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack"
+    "JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack",
+    "Britain secures commercial fridges from cyberattack in secret operation"
   ],
   "sentQuickHitTitles": [
     "Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned",
@@ -72,6 +76,9 @@
     "RBI asks lenders to tighten API security amid rising cyberattack risks",
     "As cyberattack hits European Commission, FBI's AI tool warning in focus",
     "Equinor says cyberattack still ongoing but output unaffected",
-    "43 Soldiers Re-Enlisted In The Army In Exchange For Time Off To Play Grand Theft Auto 6: 'I'm All About The Heist'"
+    "43 Soldiers Re-Enlisted In The Army In Exchange For Time Off To Play Grand Theft Auto 6: 'I'm All About The Heist'",
+    "Hard Lessons To Learn From Crypto Heist",
+    "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
+    "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control"
   ]
 }
