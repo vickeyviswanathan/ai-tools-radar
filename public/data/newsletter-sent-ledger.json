@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-21",
+  "lastUpdatedDate": "2026-11-22",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -14,7 +14,8 @@
     "pensioner-jeevan-pramaan-kyc",
     "traffic-echallan-apk",
     "work-from-home-registration-fee-scam",
-    "sim-swap-esim-hijack-scam"
+    "sim-swap-esim-hijack-scam",
+    "customer-care-screen-share-hijack"
   ],
   "sentRealityIds": [
     4,
@@ -30,7 +31,8 @@
     19,
     6,
     7,
-    1
+    1,
+    12
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -46,7 +48,8 @@
     "OWASP ZAP",
     "LocalAI",
     "InvokeAI",
-    "radare2"
+    "radare2",
+    "Duix Avatar"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -62,7 +65,8 @@
     "World hockey governing body hit by cyberattack after Russia exclusion",
     "Reental's Polygon Contracts Drained of $454K After Admin Upgrade",
     "JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack",
-    "Britain secures commercial fridges from cyberattack in secret operation"
+    "Britain secures commercial fridges from cyberattack in secret operation",
+    "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access"
   ],
   "sentQuickHitTitles": [
     "Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned",
@@ -79,6 +83,9 @@
     "43 Soldiers Re-Enlisted In The Army In Exchange For Time Off To Play Grand Theft Auto 6: 'I'm All About The Heist'",
     "Hard Lessons To Learn From Crypto Heist",
     "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
-    "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control"
+    "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control",
+    "XMR1 Hack News Today: Did a Deleted Server Hold the Stolen Key?",
+    "FBI's criminal database hacked in another cyberattack targeting the agency: Report",
+    "How a group-chat crypto scam drained $37M from Americans"
   ]
 }

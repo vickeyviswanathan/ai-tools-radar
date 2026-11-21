@@ -1,6 +1,6 @@
 {
   "https://cipherati.com/": {
-    "hash": "57eed66e051de649",
+    "hash": "6f04767b1e2e1616",
     "lastmod": "2026-11-21"
   },
   "https://cipherati.com/ai-realities.html": {
@@ -8,7 +8,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/ai-tools.html": {
-    "hash": "28c7d8d77befb9d2",
+    "hash": "898c8f1e2d1bd0e3",
     "lastmod": "2026-11-21"
   },
   "https://cipherati.com/compare/autogpt-vs-dify.html": {
@@ -272,11 +272,11 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/cybersecurity-news.html": {
-    "hash": "59d82d18ac3013ed",
+    "hash": "3c85cc5d157cd1ff",
     "lastmod": "2026-11-21"
   },
   "https://cipherati.com/newsletter/today.html": {
-    "hash": "b207b48295926eef",
+    "hash": "0e0d88854514b09d",
     "lastmod": "2026-11-21"
   },
   "https://cipherati.com/poster.html": {
@@ -616,7 +616,7 @@
     "lastmod": "2026-11-21"
   },
   "https://cipherati.com/tools/chinese-llm-benchmark.html": {
-    "hash": "d9ce8fe334a99759",
+    "hash": "6139e4449147fd87",
     "lastmod": "2026-11-21"
   },
   "https://cipherati.com/tools/chrome-devtools-mcp.html": {
@@ -924,8 +924,8 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/langchain-chatchat.html": {
-    "hash": "6b54e24da8c548bc",
-    "lastmod": "2026-11-20"
+    "hash": "9ac508a450e9d2c7",
+    "lastmod": "2026-11-21"
   },
   "https://cipherati.com/tools/langchain4j.html": {
     "hash": "2b0d489667304797",
@@ -1112,7 +1112,7 @@
     "lastmod": "2026-11-18"
   },
   "https://cipherati.com/tools/nuwa-skill.html": {
-    "hash": "027b10feb8d9865e",
+    "hash": "f1cfe12de6763d73",
     "lastmod": "2026-11-21"
   },
   "https://cipherati.com/tools/nvidia-garak.html": {
@@ -1146,6 +1146,10 @@
   "https://cipherati.com/tools/onlook.html": {
     "hash": "6becaa69f3291231",
     "lastmod": "2026-11-18"
+  },
+  "https://cipherati.com/tools/open-asr-leaderboard.html": {
+    "hash": "d6de696b60db8ccd",
+    "lastmod": "2026-11-21"
   },
   "https://cipherati.com/tools/open-design.html": {
     "hash": "0096c8f1e2c68195",
@@ -1288,7 +1292,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/rea-video.html": {
-    "hash": "971f9e1d7689ccc2",
+    "hash": "3d976236b08639e6",
     "lastmod": "2026-11-21"
   },
   "https://cipherati.com/tools/rea.html": {
@@ -1412,7 +1416,7 @@
     "lastmod": "2026-11-18"
   },
   "https://cipherati.com/tools/trendradar.html": {
-    "hash": "145b82227ef3fa98",
+    "hash": "d739906893433c89",
     "lastmod": "2026-11-21"
   },
   "https://cipherati.com/tools/trivy.html": {
