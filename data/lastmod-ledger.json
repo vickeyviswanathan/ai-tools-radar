@@ -1,15 +1,15 @@
 {
   "https://cipherati.com/": {
-    "hash": "c6916601055d8fc8",
-    "lastmod": "2026-11-22"
+    "hash": "788f182538caf583",
+    "lastmod": "2026-11-23"
   },
   "https://cipherati.com/ai-realities.html": {
     "hash": "5fec507a401efc99",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/ai-tools.html": {
-    "hash": "21c76758493e0b5d",
-    "lastmod": "2026-11-22"
+    "hash": "147cf48f06a5bd9f",
+    "lastmod": "2026-11-23"
   },
   "https://cipherati.com/compare/autogpt-vs-dify.html": {
     "hash": "97d2cf600a666d38",
@@ -272,12 +272,12 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/cybersecurity-news.html": {
-    "hash": "d0bf6f430bf79943",
-    "lastmod": "2026-11-22"
+    "hash": "2c77bd7eb45aa69b",
+    "lastmod": "2026-11-23"
   },
   "https://cipherati.com/newsletter/today.html": {
-    "hash": "6784fa88b6aed7a6",
-    "lastmod": "2026-11-22"
+    "hash": "4845b70c1b132a94",
+    "lastmod": "2026-11-23"
   },
   "https://cipherati.com/poster.html": {
     "hash": "0dacff9eac90c1f9",
@@ -612,12 +612,12 @@
     "lastmod": "2026-11-18"
   },
   "https://cipherati.com/tools/chinese-llama-alpaca.html": {
-    "hash": "7502e802f63b7c6e",
-    "lastmod": "2026-11-22"
+    "hash": "3e32a03dd42a67f2",
+    "lastmod": "2026-11-23"
   },
   "https://cipherati.com/tools/chinese-llm-benchmark.html": {
-    "hash": "bed3ed22fe4da830",
-    "lastmod": "2026-11-22"
+    "hash": "0d1bc8eed3b0475f",
+    "lastmod": "2026-11-23"
   },
   "https://cipherati.com/tools/chrome-devtools-mcp.html": {
     "hash": "1605d8770d18fc73",
@@ -846,6 +846,10 @@
   "https://cipherati.com/tools/hindsight.html": {
     "hash": "501a002a65247d0e",
     "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/hyperframes.html": {
+    "hash": "e8ab7acd0560cb46",
+    "lastmod": "2026-11-23"
   },
   "https://cipherati.com/tools/hypit.html": {
     "hash": "8a8c3ac48f0c55a2",
@@ -1083,10 +1087,6 @@
     "hash": "ce993d0adb416b67",
     "lastmod": "2026-11-18"
   },
-  "https://cipherati.com/tools/mroffice.html": {
-    "hash": "f540c94685f67b55",
-    "lastmod": "2026-11-22"
-  },
   "https://cipherati.com/tools/ms-swift.html": {
     "hash": "8da519add07b5948",
     "lastmod": "2026-11-13"
@@ -1116,8 +1116,8 @@
     "lastmod": "2026-11-18"
   },
   "https://cipherati.com/tools/nuwa-skill.html": {
-    "hash": "abb94f556b762ae9",
-    "lastmod": "2026-11-22"
+    "hash": "e8c27f2bbd047d78",
+    "lastmod": "2026-11-23"
   },
   "https://cipherati.com/tools/nvidia-garak.html": {
     "hash": "5f99ec3a81b91873",
@@ -1150,10 +1150,6 @@
   "https://cipherati.com/tools/onlook.html": {
     "hash": "6becaa69f3291231",
     "lastmod": "2026-11-18"
-  },
-  "https://cipherati.com/tools/open-asr-leaderboard.html": {
-    "hash": "d6de696b60db8ccd",
-    "lastmod": "2026-11-21"
   },
   "https://cipherati.com/tools/open-design.html": {
     "hash": "0096c8f1e2c68195",
@@ -1296,8 +1292,8 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/rea-video.html": {
-    "hash": "c4e1652b2381240e",
-    "lastmod": "2026-11-22"
+    "hash": "971f9e1d7689ccc2",
+    "lastmod": "2026-11-23"
   },
   "https://cipherati.com/tools/rea.html": {
     "hash": "f5be4096ed30171f",
