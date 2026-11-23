@@ -187,8 +187,8 @@ async function fetchRssFeed(url, defaultSource = "") {
 }
 
 // Non-news filter: drops op-eds, PR listicles, corporate alliances, MoUs, and advice columns
-const JUNK_TITLE_REGEX = /\b(influential cisos|top cisos|ciso of the year|awards? 202\d|how to recover|can ai make|why india needs|opinion:|explainer:|sponsored|quiz:|how to avoid|here is how|things to know|key takeaways|expanding its ambitions|join forces to advance|cybersecurity 100|signs mou|signs pact|training program|expert thinks|denies cyber fraud|bond ruling|boost cybersecurity spending)\b|^how to\b/i;
-const JUNK_SOURCE_REGEX = /\b(vajiram|drishti|byjus|testbook|clearias|iasbaba)\b/i;
+const JUNK_TITLE_REGEX = /\b(influential cisos|top cisos|ciso of the year|awards? 202\d|how to recover|can ai make|why india needs|opinion:|explainer:|sponsored|quiz:|how to avoid|here is how|things to know|key takeaways|expanding its ambitions|join forces to advance|cybersecurity 100|signs mou|signs pact|training program|expert thinks|denies cyber fraud|bond ruling|boost cybersecurity spending|this webinar|webinar explains|aliyev)\b|^how to\b/i;
+const JUNK_SOURCE_REGEX = /\b(vajiram|drishti|byjus|testbook|clearias|iasbaba|azerbaijan)\b/i;
 const NON_LATIN_SCRIPT_REGEX = /[\u0400-\u04FF\u0600-\u06FF\u3040-\u30FF\u3400-\u9FFF\uAC00-\uD7AF]/;
 
 function classifyNewsSector(title, category) {
@@ -275,6 +275,15 @@ function getEventSignatureAndCategory(title, originalCategory) {
     return {
       category: "crypto-heists",
       clusterKey: "crypto:binance-6.3b-heist",
+      isSpecific: true
+    };
+  }
+
+  // 1d. Optimizely / Optimjack 178-website supply-chain skimmer & iOS crypto malware
+  if (lower.includes("optimizely") || lower.includes("optimjack") || (lower.includes("178") && (lower.includes("website") || lower.includes("site")) && (lower.includes("crypto") || lower.includes("malware") || lower.includes("cnn") || lower.includes("iphone")))) {
+    return {
+      category: "global-ransomware",
+      clusterKey: "global:optimizely-178-sites",
       isSpecific: true
     };
   }
@@ -544,7 +553,7 @@ export async function getLiveCyberRss() {
       );
 
       for (const [existingKey, existingCluster] of clusterMap.entries()) {
-        if (existingCluster.primary.category !== category) continue;
+        const sameCat = existingCluster.primary.category === category;
         const existTokens = existingCluster.primary.title.toLowerCase()
           .replace(/[^a-z0-9\s]/g, "")
           .split(/\s+/)
@@ -554,8 +563,8 @@ export async function getLiveCyberRss() {
         for (const t of existTokens) {
           if (itemTokens.has(t)) shared++;
         }
-        // If 2 or more distinct significant entity tokens overlap in the same category, merge into that cluster!
-        if (shared >= 2) {
+        // Merge if >=2 significant tokens overlap in same category, OR >=3 overlap across any category
+        if ((sameCat && shared >= 2) || shared >= 3) {
           targetKey = existingKey;
           break;
         }

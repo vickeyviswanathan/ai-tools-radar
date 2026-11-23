@@ -1,4 +1,4 @@
-THE CIPHERATI BRIEFING — Wed, Nov 18, 2026
+THE CIPHERATI BRIEFING — Mon, Nov 23, 2026
 The 60-second morning intelligence scan: Cybersecurity News, Scam Alerts, AI Tools & AI Realities.
 Read online: https://cipherati.com/
 
@@ -6,16 +6,16 @@ Read online: https://cipherati.com/
 1. CYBERSECURITY NEWS
 ------------------------------------------------------------
 
-LEAD: Delhi NBFC Loses ₹41.27 Crore In Cyberattack, Police Trace Suspected Links To Hong Kong (The 420.in)
-• Why it matters: Primary source reporting.
-• Sector: Banking & Financial Services
-• Read article: https://news.google.com/rss/articles/CBMiswFBVV95cUxOMmYtSHdYOHQxMUlyZDNSaWZFalFadWdJc1VPV0c1dk83bWtEX0RWRWhKLW1OZmlKUWdzMzNaTVZDUUhlTWR2WUQzRVhuZy1qZHpyQWtyTWJabERYV1FpTVRRdEl0ODhLNTkwT19sLTZlaHEzNWFQMXNldGVmMUhvVm12NXQ3aWxvUjktN1F2REgxOTBpQ3Y1VTdxLWtHMEtIdUlNX2w0b0kzbUw2R0ZOdlBjUQ?oc=5
-• View on Cipherati: https://cipherati.com/cybersecurity-news.html#threat-live-india-bfsi-3627047687
+LEAD: Chainflip Hack : $12M Stolen In Bitcoin, Ethereum And Stablecoins, 10% Bounty Offered (Crowdfund Insider)
+• Why it matters: Chainflip offers hacker $1.2M bounty after $12M crypto theft; Chainflip loses $12M in crypto hack, suspends a....
+• Sector: Crypto & Digital Assets
+• Read article: https://news.google.com/rss/articles/CBMixwFBVV95cUxNelVRM0JqZ1JmMnMtaVU2ckhjYWxxcFluSUpzWHlyd2xiWGdzdkZIS3llWlhzNDJackprNDlOc2pBLV9sRlE1QUh4czRzNjhGOHZQVTJwWEhMOEZlN3gtVndyd2FEUWJZek9JTDVHak1sV2pHVWVURmQ3MzhSV2N2OEdEVXJmVUNXOWVfbDJYcWU1NDNEZncyY3IzX3JJNFQ5OGh5NnMzc2lzMEY5UC1jTUZFS2ZMYXoxNFhCX1ZUM0dtdDF4amRr?oc=5
+• View on Cipherati: https://cipherati.com/cybersecurity-news.html#threat-live-crypto-heists-6343737460
 
 More on the Radar:
-• America's spy agency goes dark: NSA's classified internal network goes down; no cyberattack evidence yet (The Times of India) — https://news.google.com/rss/articles/CBMiigJBVV95cUxOWUJLQldFNFdMSlEtY0EzOWRtQ1RZNUNRaEhSTTZTblRlamNvZElFZm1IcVBZVUxCWVlNMGJRMEFnN2l2QTViR0RfYWphMHlyZnRuc3dyeFU1SWJXczNYRWdreVpzWUlxeXU1aWFKWnBLaVpVNDgza201NXducFlJQUJxSzNMdWxEOE9BQkdlejFHT1VpSTU1VFhKQ2RJRDJXOWVuUS1WUGVtUGpLQkJLX3A3RVJ4T1RqUWw1R2R0VDJpUmxHZVRoaE02SjdpXzNUb0xFY0lyem5RYXBIMURoVkplT3RhZnpkVXJOYW9ZdWttQ3ZCYUh5MHFTcFNwWkVKdHYwcXNxWXBCUdIBjwJBVV95cUxQdG8tQ2JWT2FrS0prakxuLUVWQ3hvTTFxTjZzRnJjSnpTdWNGR1pLQlNTN1g3aGZXUWxsSU5rLW9PeWp1QXZNWXVoejljd3ZDN0NVenZsbU9TM2NwMl9mMUFPZF9yNXhwY1pLQUZzTlRRdkFnbks5VEVja0dyOEdWRXpqaXAtaV9HbWZaU0pQamUxYzEtOWV0NjgwOTIxZ3E3M1lyMzdfX1d0YjNtOGtZNFM0a0c2TFhuNUx0OW1jNENKTXZWVG9OQURSQzUtZndMNkdweWtPR2hZZnJQSWY3OWtzR0laWXQ3WUUtZWxzaGxaVENfOE9zT2c3OXFrRncyOU1jektTbEU3Tl9Zb1JZ?oc=5
-• Lighter Reopens Withdrawals, Hands 5 Million USDC Back to Drained Trader (unchainedcrypto.com) — https://news.google.com/rss/articles/CBMiogFBVV95cUxNYlhYcm9uNm02UWY1UGRLeGs3SzBEbVhjSUNLblMyN0xhVTFscVVEMUJrRlR3cEJ2cjJTMElBaHVEOHVDV3lIRlVqSHFIbHRseWZuUUZrNGJVa3prTlQzV2hKUUY5dnQ2cXgwMDg3YjNyOF9Md2VkME54dVFnZDJSRWtoS0N4eFkzb0lZY0NsbzZ4MmJiRi1UcElYUTJneWcwb2c?oc=5
-• Hackers behind record Binance breach move $63 million in ether following DOJ seizures (CoinDesk) — https://news.google.com/rss/articles/CBMivwFBVV95cUxQQllHTTFzTmlhVkVaOGh5bnM5UTNyejh0WG5TZWpsYi1OMXFuRTRGejZDX2Z5Z0syVC1uUy1UUVF5UGtEWF9hWTF5RjU4TGZUNEE1WkVWS191UjFQdXVlTW4yMXR2MTJhU0RIeVpWYXBhWVNQNzNpaHA0X1lMcFc0VHhLWWRlQUJDUXBMR0pKQ3FXTkFjam1kc3pvYmt3SEdMd2tHZ0JmYlA3TktNYU81Z0s2dDVUay1jUmxUSVA3MA?oc=5
+• India Emerges as Global Hub for Financial Cybersecurity Operations as Banks Expand GCCs (Siliconindia) — https://news.google.com/rss/articles/CBMi5gFBVV95cUxPUUs0RHR5RTlTcHI2WFdxMllUNlJPVjRaYUVIS2lCRFVQYWJfdTdCRHZhNEpwRjZrUV8zdGhiXzRJMm1jLXNCM2pIZl9aWjRuVldGRjRmUlpWZnlTRzBRa0hEUWlsSVJ5RnlSdmJHUkwzU2dLaXJMX093RGFaeWNFYy1EZDFqaXNDbE5UUTJIT3BacHBtNHhxNDl0V1oxdFpITllFWHZJa1I0cTNDeHlzN01kdlZsNTdNN0liMW0yQi14NGZIODNmNWhpMTA5X3BrcE0wRjJ2MTlxQk5HWXJva2J3MW05QQ?oc=5
+• Crypto crime: Fusionist's ACE bridge emptied of $3.7 million as traders follow a $2 million exploit (investingLive) — https://news.google.com/rss/articles/CBMi1AFBVV95cUxPalhTUXd6VWVMcXZ1dS0wMHVBeVFQYU5rV0hsRkRRWGJNN3k1NFB0VkxUZGZfYzdkTWg1ZkVvcm96U2RqeG9pWEFFZVM0WmZ1OUdQRXU1ZzhHRzJodnhaclotcHJndXlUTXJ0M3NlbkNYazFQRkhLZGtuVDJqNmFmXzBvNmtnSndWdVhTQkt0ZnNnbkRDaWtfcWlpSG10LWhtdndXdThDdWx4WkZLSHgyeEZtUzhfcW9PNVRxY0tKZTJQb25MbWFwakRhQUtuNjdSVndzNA?oc=5
+• South Korea's Upbit, Bithumb suspend CYBER transfers amid suspected bridge exploit (Crypto News) — https://news.google.com/rss/articles/CBMib0FVX3lxTE9vVTk5aHpCYlVnVXRqQXVlcFctT3FNYXFRYnE4c2R4ZjJlN3JFNngtak9IT0dmelB2RWJZeTFwbnZfSk45Vjh4ZzBfbkhEeTZDWjBoU2JYVG1BVmNpRDV1c2FyVVdSUGg2R21OQzR4Yw?oc=5
 
 Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 
@@ -23,30 +23,30 @@ Explore all live incidents: https://cipherati.com/cybersecurity-news.html
 2. SCAM ALERTS
 ------------------------------------------------------------
 
-The Bogus Stock Market "VIP Institutional IPO" Group [Vector: WhatsApp / Fake App]
-• How it works: You are added to a WhatsApp group named after a famous global brokerage. "Mentors" promise guaranteed 100% allocation in blockbuster IPOs and instruct you to trade through a customized app. The app shows massive fake profits, but when you attempt to withdraw, they demand a 20% "tax release fee" and freeze your account.
-• Defense rule: SEBI-registered brokerages never conduct institutional IPO bidding or accept investments via WhatsApp groups. Never deposit money into personal accounts for stock market trading.
-• Full playbook: https://cipherati.com/scams/stock-market-whatsapp-ipo-group.html
+The FASTag Highway Blacklist Trap [Vector: SMS / Web Clone]
+• How it works: You get an urgent SMS saying your FASTag is blacklisted or KYC is expired, demanding a ₹45 pending fee within 2 hours or your vehicle will be stopped at the next toll plaza. The link opens a fake cloned website that captures your bank account and debit card details.
+• Defense rule: Highway authorities never send SMS links to collect ₹45 or update KYC. Never click links in SMS. If you want to check your FASTag, open your own banking app or Paytm directly.
+• Full playbook: https://cipherati.com/scams/fastag-blacklist-panic.html
 • Helpline: Dial 1930 (National Cyber Helpline) or view all 34 alerts at https://cipherati.com/scam-alerts.html
 
 ------------------------------------------------------------
 3. AI TOOLS
 ------------------------------------------------------------
 
-Featured Tool: Kokoro
-• What it does: Open-weight 82M parameter text-to-speech voice model licensed under Apache 2.0.
-• Open tool: https://github.com/hexgrad/kokoro
-• Engineering review: https://cipherati.com/tools/kokoro.html
+Featured Tool: LLaVA
+• What it does: [NeurIPS'23 Oral] Visual Instruction Tuning (LLaVA) built towards GPT-4V level capabilities and beyond.
+• Open tool: https://github.com/haotian-liu/LLaVA
+• Engineering review: https://cipherati.com/tools/llava.html
 • Browse 218 indexed tools: https://cipherati.com/ai-tools.html
 
 ------------------------------------------------------------
 4. AI REALITIES
 ------------------------------------------------------------
 
-Reality #19: The "Replace Junior Engineers" Fallacy
-• The Hype Myth: "AI coding agents write code 5x faster, so we can freeze junior hiring and cut our engineering headcount by 30-40% this fiscal year."
-• What Actually Works: Treat AI as leverage to elevate junior engineers to mid-level velocity, not a headcount reduction tool. Enforce strict diff-budget caps, automated test-coverage gates, and mandatory human architectural review boundaries.
-• Full breakdown: https://cipherati.com/realities/the-replace-junior-engineers-fallacy.html
+Reality #17: The Proprietary Vendor Lock-In Squeeze
+• The Hype Myth: "Building exclusively on a single proprietary LLM API is the fastest and safest path to market!"
+• What Actually Works: Deploy an intelligent open-source API gateway with automatic multi-provider failover, unified routing, and drop-in open-weight model fallbacks.
+• Full breakdown: https://cipherati.com/realities/the-proprietary-vendor-lock-in-squeeze.html
 • Read all 22 production realities: https://cipherati.com/ai-realities.html
 
 ------------------------------------------------------------
