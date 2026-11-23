@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-23",
+  "lastUpdatedDate": "2026-11-24",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -16,7 +16,8 @@
     "work-from-home-registration-fee-scam",
     "sim-swap-esim-hijack-scam",
     "customer-care-screen-share-hijack",
-    "esim-5g-upgrade-hijack"
+    "esim-5g-upgrade-hijack",
+    "fastag-blacklist-panic"
   ],
   "sentRealityIds": [
     4,
@@ -34,7 +35,8 @@
     7,
     1,
     12,
-    10
+    10,
+    9
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -52,7 +54,8 @@
     "InvokeAI",
     "radare2",
     "Duix Avatar",
-    "diffusionbee stable diffusion ui"
+    "diffusionbee stable diffusion ui",
+    "Auto Photoshop StableDiffusion Plugin"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -70,7 +73,8 @@
     "JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack",
     "Britain secures commercial fridges from cyberattack in secret operation",
     "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
-    "Delhi Police bust pan-India network supplying bank accounts for cyber fraud; one held"
+    "Delhi Police bust pan-India network supplying bank accounts for cyber fraud; one held",
+    "CPI | CrowdStrike to Acquire Zscaler in $43.9 Billion Cybersecurity Deal"
   ],
   "sentQuickHitTitles": [
     "Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned",
@@ -93,6 +97,9 @@
     "How a group-chat crypto scam drained $37M from Americans",
     "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
     "AI Finds Bitcoin Core Security Flaw That Could Temporarily Freeze Nodes",
-    "India's cyber security agency Cert-IN flags payment fraud in govt-linked platforms"
+    "India's cyber security agency Cert-IN flags payment fraud in govt-linked platforms",
+    "One cyberattack, thousands of claims: Could a cloud outage overwhelm India's insurance industry?",
+    "Chainflip Hack : $12M Stolen In Bitcoin, Ethereum And Stablecoins, 10% Bounty Offered",
+    "RBI discusses with NBFCs, HFCs the need to strengthen cybersecurity, manage IT risks and fair practices better"
   ]
 }
