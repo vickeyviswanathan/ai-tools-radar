@@ -187,7 +187,7 @@ async function fetchRssFeed(url, defaultSource = "") {
 }
 
 // Non-news filter: drops op-eds, PR listicles, corporate alliances, MoUs, and advice columns
-const JUNK_TITLE_REGEX = /\b(influential cisos|top cisos|ciso of the year|awards? 202\d|how to recover|can ai make|why india needs|opinion:|explainer:|sponsored|quiz:|how to avoid|here is how|things to know|key takeaways|expanding its ambitions|join forces to advance|cybersecurity 100|signs mou|signs pact|training program|expert thinks|denies cyber fraud|bond ruling|boost cybersecurity spending|this webinar|webinar explains|aliyev)\b|^how to\b/i;
+const JUNK_TITLE_REGEX = /\b(influential cisos|top cisos|ciso of the year|awards? 202\d|how to recover|can ai make|why india needs|opinion:|explainer:|sponsored|quiz:|how to avoid|here is how|things to know|key takeaways|expanding its ambitions|join forces to advance|cybersecurity 100|signs mou|signs pact|training program|expert thinks|denies cyber fraud|bond ruling|boost cybersecurity spending|this webinar|webinar explains|aliyev|sec investigation|accounting is a focus|startups you should know|companies you should know)\b|^how to\b/i;
 const JUNK_SOURCE_REGEX = /\b(vajiram|drishti|byjus|testbook|clearias|iasbaba|azerbaijan)\b/i;
 const NON_LATIN_SCRIPT_REGEX = /[\u0400-\u04FF\u0600-\u06FF\u3040-\u30FF\u3400-\u9FFF\uAC00-\uD7AF]/;
 
@@ -275,6 +275,22 @@ function getEventSignatureAndCategory(title, originalCategory) {
     return {
       category: "crypto-heists",
       clusterKey: "crypto:binance-6.3b-heist",
+      isSpecific: true
+    };
+  }
+
+  // 1e. Chainflip exploit & FBI NCIC breach clusters
+  if (lower.includes("chainflip")) {
+    return {
+      category: "crypto-heists",
+      clusterKey: "crypto:chainflip-exploit",
+      isSpecific: true
+    };
+  }
+  if (/\bfbi\b/.test(lower) && (lower.includes("ncic") || lower.includes("criminal information") || lower.includes("data breach") || lower.includes("hacked"))) {
+    return {
+      category: "global-ransomware",
+      clusterKey: "global:fbi-ncic-breach",
       isSpecific: true
     };
   }
@@ -547,7 +563,8 @@ export async function getLiveCyberRss() {
       const STOPWORDS = new Set(["with", "from", "after", "over", "into", "their", "under", "probe", "about", "could", "claims", "group", "probes", "report", "first", "says", "cyber", "cybersecurity", "news", "bank", "banks", "banking", "fraud", "cases", "police", "stolen", "crore", "lakhs", "money", "alert", "alerts", "loss", "losses", "network", "arrested", "arrest"]);
       const itemTokens = new Set(
         item.title.toLowerCase()
-          .replace(/[^a-z0-9\s]/g, "")
+          .replace(/['’]s\b/g, "")
+          .replace(/[^a-z0-9\s]/g, " ")
           .split(/\s+/)
           .filter(w => w.length > 3 && !STOPWORDS.has(w))
       );
@@ -555,7 +572,8 @@ export async function getLiveCyberRss() {
       for (const [existingKey, existingCluster] of clusterMap.entries()) {
         const sameCat = existingCluster.primary.category === category;
         const existTokens = existingCluster.primary.title.toLowerCase()
-          .replace(/[^a-z0-9\s]/g, "")
+          .replace(/['’]s\b/g, "")
+          .replace(/[^a-z0-9\s]/g, " ")
           .split(/\s+/)
           .filter(w => w.length > 3 && !STOPWORDS.has(w));
         

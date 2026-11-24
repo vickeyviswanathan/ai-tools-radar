@@ -5,15 +5,127 @@
     <link>https://cipherati.com/</link>
     <description>Independent cybersecurity news desk, 1930 citizen scam defense playbooks, 22 production AI engineering realities, and 218 verified open-source AI developer tools.</description>
     <language>en-in</language>
-    <lastBuildDate>Mon, 23 Nov 2026 05:11:38 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 06:18:08 GMT</lastBuildDate>
     <atom:link href="https://cipherati.com/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Cyber News] India Emerges as Global Hub for Financial Cybersecurity Operations as Banks Expand GCCs</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-india-bfsi-28173155817</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-india-bfsi-28173155817</guid>
-      <pubDate>Mon, 23 Nov 2026 04:46:07 GMT</pubDate>
+      <title>[Cyber News] Trezor Wallet Drained? What Onchain Lens Found in $600K iPhone Loss</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-crypto-heists-7095156285</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-crypto-heists-7095156285</guid>
+      <pubDate>Tue, 24 Nov 2026 05:50:00 GMT</pubDate>
       <category>Cybersecurity News</category>
-      <description>Key updates: CyberSec Connect India to Bring Global Cybersecurity Ecosystem to Bengaluru in April 2027. (Source: Siliconindia · Sector: Banking &amp; Financial Services)</description>
+      <description>Trezor Wallet Drained? What Onchain Lens Found in $600K iPhone Loss (Source: Coin Gabbar · Sector: Crypto &amp; Digital Assets)</description>
+    </item>
+    <item>
+      <title>[Cyber News] US files action to recover over $1 billion in cryptocurrency stolen in Binance hack</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-crypto-heists-2332211240</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-crypto-heists-2332211240</guid>
+      <pubDate>Tue, 24 Nov 2026 05:47:02 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Key updates: US seeks forfeiture of $1B in Binance crypto stolen by North Korean hackers; US moves to recover over $1B in crypto stolen by North Korean hackers in Binance heist. (Source: Reuters · Sector: Crypto &amp; Digital Assets)</description>
+    </item>
+    <item>
+      <title>[Cyber News] AI risks, Reserve Bank of India nudge spur a cybersecurity talent rush</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-india-bfsi-270610537</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-india-bfsi-270610537</guid>
+      <pubDate>Tue, 24 Nov 2026 05:20:40 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Key updates: RBI discusses with NBFCs, HFCs the need to strengthen cybersecurity, manage IT risks and fair practices better; RBI Guv meets UCB Leaders; Stresses Cybersecurity, Prudent Lending. (Source: Business Standard · Sector: AI &amp; Cloud Security)</description>
+    </item>
+    <item>
+      <title>[Cyber News] Law firm K&amp;L Gates notifies clients, state authorities about data security breach</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-10613144074</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-10613144074</guid>
+      <pubDate>Tue, 24 Nov 2026 04:07:40 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Key updates: SBI has told the stock exchanges about its data breach, but not the customers whose data was leaked; After cyberattack, SBI is hiring AI experts at salaries up to ₹1.6 crore - People Matters. (Source: Reuters · Sector: Enterprise &amp; Critical Infrastructure)</description>
+    </item>
+    <item>
+      <title>[Cyber News] Optimizely Hack Targets Crypto and Card Data</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-1511974489</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-1511974489</guid>
+      <pubDate>Tue, 24 Nov 2026 03:18:27 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Key updates: Optimizely hack swapped crypto wallet addresses; Optimizely Hack: Is Your Crypto Wallet or iPhone at Risk?. (Source: Briefs Finance · Sector: Crypto &amp; Digital Assets)</description>
+    </item>
+    <item>
+      <title>[Cyber News] US probes Iran, Russia link after 50 vessels face cyberattack: Report</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-4672510794</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-4672510794</guid>
+      <pubDate>Tue, 24 Nov 2026 02:47:00 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Key updates: World hockey governing body hit by cyberattack after Russia exclusion. (Source: The Times of India · Sector: Enterprise &amp; Critical Infrastructure)</description>
+    </item>
+    <item>
+      <title>[Cyber News] South Korea probes data breach affecting 1.52 million at KEPCO</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-10701587249</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-10701587249</guid>
+      <pubDate>Tue, 24 Nov 2026 01:05:25 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Key updates: Ethiopian Airlines investigates data breach affecting its loyalty programme; Java Flaw Leaves Systems Open to Hackers, Say US, South Korea, China&#39;s Tencent. (Source: United Press International · Sector: Enterprise &amp; Critical Infrastructure)</description>
+    </item>
+    <item>
+      <title>[Cyber News] US sues to seize $1.1 billion in crypto stolen by North Korean hackers</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-crypto-heists-9099094606</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-crypto-heists-9099094606</guid>
+      <pubDate>Tue, 24 Nov 2026 00:21:00 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Key updates: South Korean crypto wallet DCENT to shut down app service after September hack; Hackers Plant &#39;Crypto-Stealing Code&#39; On Websites Worldwide. (Source: Chosunbiz · Sector: Crypto &amp; Digital Assets)</description>
+    </item>
+    <item>
+      <title>[Cyber News] Gujarat Cyber Police Bust ₹8.46 Crore Interstate Cyber Fraud Syndicate, Arrest 13. India&#39;s Growing Cyber Fraud Crisis</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-india-bfsi-15958609204</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-india-bfsi-15958609204</guid>
+      <pubDate>Mon, 23 Nov 2026 20:22:16 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Gujarat Cyber Police Bust ₹8.46 Crore Interstate Cyber Fraud Syndicate, Arrest 13. India&#39;s Growing Cyber Fraud Crisis (Source: Inventiva · Sector: Banking &amp; Financial Services)</description>
+    </item>
+    <item>
+      <title>[Cyber News] CrowdStrike snaps up Zscaler in $44 billion deal as cyber threats mount</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-20644336998</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-20644336998</guid>
+      <pubDate>Mon, 23 Nov 2026 18:31:10 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Key updates: Cybersecurity firms CrowdStrike, Zscaler to merge in deal worth $43.9B; CrowdStrike in talks to acquire Zscaler, sources say. (Source: Reuters · Sector: Enterprise &amp; Critical Infrastructure)</description>
+    </item>
+    <item>
+      <title>[Cyber News] WhatsApp Web users, beware: Centre warns of account hijacking, cyber fraud risk on public computers</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-2705381022</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-2705381022</guid>
+      <pubDate>Mon, 23 Nov 2026 17:35:20 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>WhatsApp Web users, beware: Centre warns of account hijacking, cyber fraud risk on public computers (Source: India TV News · Sector: Enterprise &amp; Critical Infrastructure)</description>
+    </item>
+    <item>
+      <title>[Cyber News] Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-2238186457</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-2238186457</guid>
+      <pubDate>Mon, 23 Nov 2026 13:22:20 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions (Source: The Hacker News · Sector: Enterprise &amp; Critical Infrastructure)</description>
+    </item>
+    <item>
+      <title>[Cyber News] Treat cybersecurity, data governance as core business risks, CAG to PSUs</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-22737251989</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-22737251989</guid>
+      <pubDate>Mon, 23 Nov 2026 13:11:41 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Treat cybersecurity, data governance as core business risks, CAG to PSUs (Source: The Financial Express · Sector: Enterprise &amp; Critical Infrastructure)</description>
+    </item>
+    <item>
+      <title>[Cyber News] India&#39;s CERT-In says attackers are pushing unauthorised payments through vendors and government-linked payment providers</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-india-bfsi-17622491563</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-india-bfsi-17622491563</guid>
+      <pubDate>Mon, 23 Nov 2026 10:54:04 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Key updates: CERT-In Warns of Payment Fraud and AI-Driven Cyberattacks in India; India asks CERT-In to assess emerging cybersecurity vulnerabilities: Report. (Source: MLQ.ai · Sector: Banking &amp; Financial Services)</description>
+    </item>
+    <item>
+      <title>[Cyber News] India - Vietnam Security Cooperation 2026: Strengthening Maritime and Cybersecurity Partnerships in the Indo-Pacific</title>
+      <link>https://cipherati.com/cybersecurity-news.html#live-india-bfsi-8504517996</link>
+      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-india-bfsi-8504517996</guid>
+      <pubDate>Mon, 23 Nov 2026 08:54:13 GMT</pubDate>
+      <category>Cybersecurity News</category>
+      <description>Key updates: India, ASEAN announce maritime, cybersecurity and space initiatives during PM Modi&#39;s Manila visit; India&#39;s CERT-In issues AI Security Auditing guidelines targeting model poisoning, prompt injection, agentic AI threats. (Source: IMPRI Impact and Policy Research Institute · Sector: Enterprise &amp; Critical Infrastructure)</description>
     </item>
     <item>
       <title>[Cyber News] Chainflip Hack : $12M Stolen In Bitcoin, Ethereum And Stablecoins, 10% Bounty Offered</title>
@@ -21,125 +133,13 @@
       <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-crypto-heists-6343737460</guid>
       <pubDate>Mon, 23 Nov 2026 04:21:49 GMT</pubDate>
       <category>Cybersecurity News</category>
-      <description>Key updates: Chainflip offers hacker $1.2M bounty after $12M crypto theft; Chainflip loses $12M in crypto hack, suspends a.... (Source: Crowdfund Insider · Sector: Crypto &amp; Digital Assets)</description>
-    </item>
-    <item>
-      <title>[Cyber News] Crypto crime: Fusionist&#39;s ACE bridge emptied of $3.7 million as traders follow a $2 million exploit</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-crypto-heists-6820019404</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-crypto-heists-6820019404</guid>
-      <pubDate>Mon, 23 Nov 2026 03:22:20 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Key updates: MoldyRoost Used iPhone Exploit Chain to Steal Crypto Wallet Seed Phrases; A $2 million exploit leads to a $3.7 million free-for-all as traders empty Fusionist&#39;s ACE bridge. (Source: investingLive · Sector: Crypto &amp; Digital Assets)</description>
-    </item>
-    <item>
-      <title>[Cyber News] Stolen XRP Linked to $149M Bitcoin Mixing After Binance&#39;s $6.4B Hack</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-crypto-heists-602543989</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-crypto-heists-602543989</guid>
-      <pubDate>Mon, 23 Nov 2026 02:20:14 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Key updates: Binance Wins $6.5bn Freezing Order Over October&#39;s Record Crypto Hack; Binance hack laundering ramps up as $149 million in bitcoin mixed through coinjoins: Elliptic. (Source: Coinpaper · Sector: Crypto &amp; Digital Assets)</description>
-    </item>
-    <item>
-      <title>[Cyber News] South Korea&#39;s Upbit, Bithumb suspend CYBER transfers amid suspected bridge exploit</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-crypto-heists-9404903366</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-crypto-heists-9404903366</guid>
-      <pubDate>Sun, 22 Nov 2026 21:04:00 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Key updates: Monero&#39;s Price Rebounds 10% Amid Exploit News and Short Easing; Cyber investigating suspected $1 million bridge exploit as Upbit, Bithumb freeze transfers. (Source: Crypto News · Sector: Crypto &amp; Digital Assets)</description>
-    </item>
-    <item>
-      <title>[Cyber News] Chainflip&#39;s losses climb to $12 million after protocol discloses 122.9 BTC theft, offers hacker bounty</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-crypto-heists-15517970713</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-crypto-heists-15517970713</guid>
-      <pubDate>Sun, 22 Nov 2026 18:58:00 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Chainflip&#39;s losses climb to $12 million after protocol discloses 122.9 BTC theft, offers hacker bounty (Source: The Block · Sector: Crypto &amp; Digital Assets)</description>
-    </item>
-    <item>
-      <title>[Cyber News] Gujarat Cyber Police Bust ₹8.46 Crore Interstate Cyber Fraud Syndicate, Arrest 13. India&#39;s Growing Cyber Fraud Crisis</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-india-bfsi-15958609204</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-india-bfsi-15958609204</guid>
-      <pubDate>Sun, 22 Nov 2026 15:45:01 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Gujarat Cyber Police Bust ₹8.46 Crore Interstate Cyber Fraud Syndicate, Arrest 13. India&#39;s Growing Cyber Fraud Crisis (Source: Inventiva · Sector: Banking &amp; Financial Services)</description>
-    </item>
-    <item>
-      <title>[Cyber News] Delhi Police bust pan-India network supplying bank accounts for cyber fraud; one held</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-india-bfsi-3683492178</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-india-bfsi-3683492178</guid>
-      <pubDate>Sun, 22 Nov 2026 14:11:14 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Key updates: Delhi Police Uncovers Pan-India Cyber Fraud Network Duping Investors; Delhi Police Arrest 24-Year-Old In Pan-India Cyber Fraud Network Supplying Mule Accounts. (Source: The Hindu · Sector: Banking &amp; Financial Services)</description>
-    </item>
-    <item>
-      <title>[Cyber News] Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-21691178187</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-21691178187</guid>
-      <pubDate>Sun, 22 Nov 2026 05:03:41 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps (Source: The Hacker News · Sector: Enterprise &amp; Critical Infrastructure)</description>
-    </item>
-    <item>
-      <title>[Cyber News] Chainflip&#39;s Second Exploit in 10 Weeks Sends FLIP Down 31%, About Twice September&#39;s Drop</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-crypto-heists-734829962</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-crypto-heists-734829962</guid>
-      <pubDate>Sun, 22 Nov 2026 03:48:00 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Key updates: Chainflip&#39;s Second Exploit in 10 Weeks Hits Its Token Twice as Hard. (Source: TradingView · Sector: Crypto &amp; Digital Assets)</description>
-    </item>
-    <item>
-      <title>[Cyber News] AI Finds Bitcoin Core Security Flaw That Could Temporarily Freeze Nodes</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-crypto-heists-2601785613</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-crypto-heists-2601785613</guid>
-      <pubDate>Sun, 22 Nov 2026 01:02:42 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Key updates: Bitcoin Core Patches AI-Discovered Flaw That Let One Peer Freeze a Node for Seconds at a Time; AI uncovers Bitcoin Core flaw that can freeze n.... (Source: Cryptonews.net · Sector: AI &amp; Cloud Security)</description>
-    </item>
-    <item>
-      <title>[Cyber News] India&#39;s cyber security agency Cert-IN flags payment fraud in govt-linked platforms</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-india-bfsi-1900539397</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-india-bfsi-1900539397</guid>
-      <pubDate>Sat, 21 Nov 2026 23:08:00 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Key updates: CERT-In flags unauthorised transactions, AI-driven cyberattacks in India; CERT-In Warns of Payment Fraud and AI-Driven Cyberattacks in India. (Source: The Times of India · Sector: Banking &amp; Financial Services)</description>
-    </item>
-    <item>
-      <title>[Cyber News] Trump downplays FBI data breach of NCIC, adds &#39;positive spin&#39;</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-1992334158</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-1992334158</guid>
-      <pubDate>Sat, 21 Nov 2026 22:02:34 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Trump downplays FBI data breach of NCIC, adds &#39;positive spin&#39; (Source: United Press International · Sector: Enterprise &amp; Critical Infrastructure)</description>
-    </item>
-    <item>
-      <title>[Cyber News] FBI&#39;s criminal information database hacked, CNN reports</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-global-ransomware-14668605043</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-global-ransomware-14668605043</guid>
-      <pubDate>Sat, 21 Nov 2026 20:55:22 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Key updates: FBI&#39;s criminal database hacked in another cyberattack targeting the agency: Report; As cyberattack hits European Commission, FBI&#39;s AI tool warning in focus. (Source: Reuters · Sector: Enterprise &amp; Critical Infrastructure)</description>
-    </item>
-    <item>
-      <title>[Cyber News] Political tensions rise between Tamil Nadu and Andhra Pradesh over investment data leak - India Today</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-india-bfsi-9913004295</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-india-bfsi-9913004295</guid>
-      <pubDate>Sat, 21 Nov 2026 16:59:56 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Key updates: Fifteen officials sacked in Tamil Nadu over alleged data leak to Andhra Pradesh - India Today; Tamil Nadu, Andhra Pradesh clash over investment espionage, data leak claims - India Today. (Source: India Today · Sector: Enterprise &amp; Critical Infrastructure)</description>
-    </item>
-    <item>
-      <title>[Cyber News] RBI To Meet NBFCs On November 23: Microfinance Stress, Gold Loans And Cybersecurity Risks On Agenda</title>
-      <link>https://cipherati.com/cybersecurity-news.html#live-india-bfsi-5486464649</link>
-      <guid isPermaLink="false">https://cipherati.com/cybersecurity-news.html#live-india-bfsi-5486464649</guid>
-      <pubDate>Sat, 21 Nov 2026 12:08:16 GMT</pubDate>
-      <category>Cybersecurity News</category>
-      <description>Key updates: ​RBI Tightens API Security Rules for Banks and NBFCs Amid Cyberattack Risks; Odisha&#39;s new Data Centre and Cybersecurity Training Institute facilities of the RBI reflect a new priority for India: PM Modi. (Source: Times Now · Sector: Banking &amp; Financial Services)</description>
+      <description>Key updates: Chainflip loses $12M in crypto hack, suspends a...; Chainflip loses $4.86M in crypto hack; stolen f.... (Source: Crowdfund Insider · Sector: Crypto &amp; Digital Assets)</description>
     </item>
     <item>
       <title>[Scam Alert] The &quot;Digital Arrest&quot; Police Video Call (WhatsApp / Video Call)</title>
       <link>https://cipherati.com/scam-alerts.html#digital-arrest-video-call</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#digital-arrest-video-call</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: A caller in uniform claims your Aadhaar or passport was found in an illegal parcel or money laundering probe. They place you on a fraudulent WhatsApp video call or custom video link with a backdrop resembling a police station, CBI, or ED cyber cell, declaring you are under &#39;Digital Arrest&#39; and coercing you to transfer savings into a fake &#39;RBI verification escrow&#39;. | Defense Rule: Indian law and law enforcement agencies have NO legal concept of &#39;Digital Arrest&#39;. Police, CBI, ED, and customs NEVER conduct interrogations, trials, or arrests over video calls. Hang up immediately, block the number, and report to the National Cybercrime Portal or dial 1930. (Verified by I4C &amp; PM Mann Ki Baat Cyber Alert · Emergency Helpline: 1930)</description>
     </item>
@@ -147,7 +147,7 @@
       <title>[Scam Alert] The Fake Traffic Fine Message (e-Challan APK) (SMS / Android APK)</title>
       <link>https://cipherati.com/scam-alerts.html#traffic-echallan-apk</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#traffic-echallan-apk</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You get an SMS claiming your vehicle was caught overspeeding on camera with a pending fine of ₹1,000, and a link to download an app (echallan.apk) to pay before court action. If you install it, the app silently reads all your incoming SMS, steals your bank OTPs, and drains your account. | Defense Rule: Traffic police never send app files to pay fines. Never install any file ending in .apk. Always check and pay traffic fines only on the official government website: echallan.parivahan.gov.in. (Verified by I4C (Ministry of Home Affairs) Cyber Alert · Emergency Helpline: 1930)</description>
     </item>
@@ -155,7 +155,7 @@
       <title>[Scam Alert] The WhatsApp &quot;Wedding Card&quot; Virus (APK Trojan) (WhatsApp / Android APK)</title>
       <link>https://cipherati.com/scam-alerts.html#whatsapp-wedding-card-apk</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#whatsapp-wedding-card-apk</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You receive a message from a friend or relative on WhatsApp saying: &quot;My cousin is getting married next week, wedding card and venue attached.&quot; The attached file looks like an invite, but ends in .apk. Installing it infects your phone with a virus that hijacks your WhatsApp, sends the same scam to all your family contacts, and steals your net banking logins. | Defense Rule: Real wedding cards are always photos or PDFs, never an .apk software file. If someone sends an APK file, do not tap it. Call that person on a regular call to tell them their WhatsApp is compromised. (Verified by CERT-In Cyber Security Advisory · Emergency Helpline: 1930)</description>
     </item>
@@ -163,7 +163,7 @@
       <title>[Scam Alert] The &quot;Wrong UPI Transfer&quot; Crying Call (UPI / Phone Call)</title>
       <link>https://cipherati.com/scam-alerts.html#accidental-upi-transfer-trap</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#accidental-upi-transfer-trap</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You get a genuine bank alert that ₹30,000 was credited to your account. Seconds later, a crying person calls saying: &quot;Sir, my child is in the hospital, I sent money to your number by mistake. Please send it back to my UPI ID.&quot; If you send the money back yourself, you lose your own money—because the original transfer was made using stolen funds. Within 48 hours, cyber police freeze your bank account for receiving criminal money. | Defense Rule: Never transfer the money back yourself. Tell the caller: &quot;I will not touch this money. Please call your bank and file a wrong-transfer dispute. My bank will reverse it officially.&quot; (Verified by Reserve Bank of India (RBI Sachet Advisory) · Emergency Helpline: 1930)</description>
     </item>
@@ -171,7 +171,7 @@
       <title>[Scam Alert] The Fake QR Code &quot;To Receive Payment&quot; Trap (OLX / UPI QR Code)</title>
       <link>https://cipherati.com/scam-alerts.html#olx-qr-code-receive-trap</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#olx-qr-code-receive-trap</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You list furniture or a vehicle for sale on OLX or Marketplace. A buyer immediately agrees to the price without negotiation and sends you a UPI QR code saying: &quot;Scan this QR code and enter your UPI PIN to receive the advance payment of ₹15,000.&quot; The moment you enter your PIN, ₹15,000 is debited from your account. | Defense Rule: Remember the golden rule of UPI: You NEVER need to enter your UPI PIN or scan a QR code to RECEIVE money. Entering a PIN is only required when money leaves your bank account. (Verified by NPCI &amp; National Cyber Crime Reporting Portal · Emergency Helpline: 1930)</description>
     </item>
@@ -179,7 +179,7 @@
       <title>[Scam Alert] The &quot;5G Plus Upgrade&quot; Number Steal (eSIM / SMS)</title>
       <link>https://cipherati.com/scam-alerts.html#esim-5g-upgrade-hijack</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#esim-5g-upgrade-hijack</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: A caller claiming to be from Airtel or Jio says they are upgrading your SIM to 5G for free. They tell you to send a simple SMS like eSIM &lt;email&gt; to 121. The moment you do this, your physical SIM card stops working permanently, and your phone number transfers to the scammer&#39;s phone. All your bank SMS OTPs now go to them. | Defense Rule: Never send an eSIM request to any email given by a caller. Telecom companies never call you to set up an eSIM. To upgrade your SIM, always visit an official Airtel/Jio store in person. (Verified by DoT (Department of Telecommunications) / Sanchar Saathi · Emergency Helpline: 1930)</description>
     </item>
@@ -187,7 +187,7 @@
       <title>[Scam Alert] The FASTag Highway Blacklist Trap (SMS / Web Clone)</title>
       <link>https://cipherati.com/scam-alerts.html#fastag-blacklist-panic</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#fastag-blacklist-panic</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You get an urgent SMS saying your FASTag is blacklisted or KYC is expired, demanding a ₹45 pending fee within 2 hours or your vehicle will be stopped at the next toll plaza. The link opens a fake cloned website that captures your bank account and debit card details. | Defense Rule: Highway authorities never send SMS links to collect ₹45 or update KYC. Never click links in SMS. If you want to check your FASTag, open your own banking app or Paytm directly. (Verified by NPCI &amp; Cyber Crime Coordination Centre · Emergency Helpline: 1930)</description>
     </item>
@@ -195,7 +195,7 @@
       <title>[Scam Alert] The &quot;Look-Alike Voice&quot; AI Deepfake Distress Call (Phone Call / Audio AI)</title>
       <link>https://cipherati.com/scam-alerts.html#ai-deepfake-voice-clone</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#ai-deepfake-voice-clone</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: An elderly parent receives a call that sounds identically like their son or daughter crying in panic: &quot;Dad, I was in a car crash / police detained me, please send ₹50,000 to this inspector&#39;s UPI immediately to avoid lockup.&quot; The voice is an AI clone generated from a 5-second public Instagram clip. | Defense Rule: Establish a family secret safe-word. Never transfer money under emotional pressure. Hang up immediately and dial your child&#39;s number directly on a normal voice call or video call. (Verified by CERT-In AI Threat Advisory · Emergency Helpline: 1930)</description>
     </item>
@@ -203,7 +203,7 @@
       <title>[Scam Alert] The Fake Electricity Bill Disconnection Warning (SMS / Remote App)</title>
       <link>https://cipherati.com/scam-alerts.html#electricity-bill-disconnection-sms</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#electricity-bill-disconnection-sms</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You get an urgent SMS: &quot;Dear consumer, your electricity connection will be disconnected tonight at 9:30 PM due to unpaid balance. Call power officer immediately.&quot; If you call, they tell you to install QuickSupport or AnyDesk to pay ₹11 for KYC update, which gives them full control to drain your bank account. | Defense Rule: Power boards never threaten same-night power cuts over SMS or ask you to call personal mobile numbers. Never install screen-sharing apps on advice from a stranger. Pay bills only via authorized electricity board portals. (Verified by Ministry of Power &amp; I4C Advisory · Emergency Helpline: 1930)</description>
     </item>
@@ -211,7 +211,7 @@
       <title>[Scam Alert] The WhatsApp Part-Time &quot;Hotel Review / Like&quot; Job (WhatsApp / Telegram)</title>
       <link>https://cipherati.com/scam-alerts.html#part-time-youtube-review-job</link>
       <guid isPermaLink="false">https://cipherati.com/scam-alerts.html#part-time-youtube-review-job</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>Scam Defense</category>
       <description>Trap: You get a WhatsApp message offering ₹2,000–₹5,000 per day to like YouTube videos or review hotels. You complete initial tasks and receive ₹300 genuine payout to build trust. Then you are added to a Telegram VIP group and convinced to deposit ₹50,000 to &quot;unlock&quot; higher commissions, which you can never withdraw. | Defense Rule: Legitimate businesses never recruit over WhatsApp to pay for video likes. Any scheme paying small token amounts upfront to lure you into depositing larger &quot;prepaid&quot; funds is a scam. (Verified by Indian Cyber Crime Coordination Centre (I4C) · Emergency Helpline: 1930)</description>
     </item>
@@ -219,7 +219,7 @@
       <title>[AI Reality #1] The Context Window Lie</title>
       <link>https://cipherati.com/ai-realities.html#reality-0</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-0</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;1-million-token context window! Dump your entire company wiki or codebase into one prompt!&quot; | Reality: Loss-in-the-middle degradation causes LLMs to ignore needle-in-the-haystack facts once context exceeds 32K tokens. High Time-To-First-Token (TTFT) and linear token costs make unindexed raw-file prompting unusable in production. | Production Fix: Never dump raw unindexed documents into an LLM prompt. Use prompt compression to discard low-entropy tokens and targeted cross-encoder rerankers on small, precise retrieved chunks.</description>
     </item>
@@ -227,7 +227,7 @@
       <title>[AI Reality #2] The Token Cost Bleed</title>
       <link>https://cipherati.com/ai-realities.html#reality-1</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-1</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Per-token prices are dropping 10x every year — don&#39;t worry about cost optimization!&quot; | Reality: Agentic tool runs, compiler output dumps, and large git diffs consume millions of tokens in minutes. Automated CI/CD agents burn budgets on whitespace and noisy terminal logs. | Production Fix: Strip stack traces, memory addresses, and repetitive logs before tokenization using specialized CLI proxies (RTK) and pre-LLM output compressors (headroom).</description>
     </item>
@@ -235,7 +235,7 @@
       <title>[AI Reality #3] The Coding Agent Benchmark Myth</title>
       <link>https://cipherati.com/ai-realities.html#reality-2</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-2</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Our autonomous coding agent resolves 60% of GitHub issues end-to-end without humans!&quot; | Reality: High benchmark scores test synthetic micro-tasks on cherry-picked repositories. In real messy codebases, unsupervised agents invent fake dependencies, delete critical tests, or claim a bug is fixed by deleting the failing test suite. | Production Fix: Restrict agents to tight loops with mandatory git rollback checkpoints, deterministic test validation, and human-in-the-loop diff approvals.</description>
     </item>
@@ -243,7 +243,7 @@
       <title>[AI Reality #4] The Fine-Tuning Money Pit</title>
       <link>https://cipherati.com/ai-realities.html#reality-3</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-3</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Fine-tune a private custom model on your company&#39;s proprietary data to teach it your domain!&quot; | Reality: Fine-tuning adjusts style, tone, and grammar format — it does NOT reliably store retrievable factual knowledge. It induces catastrophic forgetting of base capabilities while rapidly growing stale when company documents update. | Production Fix: Keep the base model frozen. Use high-accuracy RAG with hybrid search for proprietary knowledge, and run open-weight models on-premise for zero ongoing API fees.</description>
     </item>
@@ -251,7 +251,7 @@
       <title>[AI Reality #5] The Agent Security Blindspot</title>
       <link>https://cipherati.com/ai-realities.html#reality-4</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-4</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Give your AI agent terminal access, browser control, and API keys to automate your entire workflow!&quot; | Reality: An LLM interpreting external web pages or untrusted user inputs can be hijacked via indirect prompt injection to execute `rm -rf`, clone malicious packages, or curl environment secrets to external attacker servers. | Production Fix: Run agents inside disposable, ephemeral Docker sandboxes with no access to production credentials, and enforce human approval on destructive operations.</description>
     </item>
@@ -259,7 +259,7 @@
       <title>[AI Reality #6] The Structured JSON Illusion</title>
       <link>https://cipherati.com/ai-realities.html#reality-5</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-5</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Just tell the LLM to output valid JSON matching your schema — instant API integration!&quot; | Reality: Under latency pressure or novel input tokens, LLMs will prepend conversational preamble, output trailing commas, or truncate JSON arrays when nearing token limits, breaking downstream backend parsers. | Production Fix: Never rely on raw prompting for JSON. Use constrained grammar sampling at the model engine level (forcing logits to only output valid schema tokens).</description>
     </item>
@@ -267,7 +267,7 @@
       <title>[AI Reality #7] The Pure Vector Search Trap</title>
       <link>https://cipherati.com/ai-realities.html#reality-6</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-6</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Embed your documents into a vector database and semantic search will magically find every answer!&quot; | Reality: Dense embeddings compress semantic meaning into float vectors, entirely erasing exact matches for error codes, part numbers, stock tickers, and proper names where semantic proximity is useless. | Production Fix: Use hybrid search combining BM25 exact keyword matching with dense vectors, followed by a cross-encoder reranker.</description>
     </item>
@@ -275,7 +275,7 @@
       <title>[AI Reality #8] The Silent Model Regression Trap</title>
       <link>https://cipherati.com/ai-realities.html#reality-7</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-7</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Auto-upgrade to the newest flagship model release for instant free intelligence!&quot; | Reality: New model checkpoints regularly regress on edge cases: system prompt adherence shifts, refusal behaviors change, and structured output formatting alters slightly, breaking brittle production parsers. | Production Fix: Never upgrade production model versions without an automated CI/CD eval suite testing against a frozen golden dataset of edge cases.</description>
     </item>
@@ -283,7 +283,7 @@
       <title>[AI Reality #9] The Multi-Agent Runaway Loop Trap</title>
       <link>https://cipherati.com/ai-realities.html#reality-8</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-8</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Deploy autonomous swarms of agents that critique and coordinate with each other 24/7!&quot; | Reality: Autonomous agent swarms rapidly descend into recursive critique loops, infinite agreement deadlocks, or hallucination cascades. Without strict iteration counters and cycle detection, two agents can burn through thousands of dollars in minutes. | Production Fix: Enforce strict hard-stop turn budgets (max 5-8 iterations), acyclic execution graphs (DAGs), and deterministic exit criteria for all subagents.</description>
     </item>
@@ -291,7 +291,7 @@
       <title>[AI Reality #10] The PDF &amp; Table Chunking Shredder</title>
       <link>https://cipherati.com/ai-realities.html#reality-9</link>
       <guid isPermaLink="false">https://cipherati.com/ai-realities.html#reality-9</guid>
-      <pubDate>Mon, 23 Nov 2026 05:11:38 GMT</pubDate>
+      <pubDate>Tue, 24 Nov 2026 06:18:08 GMT</pubDate>
       <category>AI Engineering Realities</category>
       <description>Vendor Myth: &quot;Simple character or sentence RAG chunking easily handles enterprise PDFs and balance sheets!&quot; | Reality: Standard text chunkers slice documents at arbitrary token limits, severing table rows from headers. Financial figures end up mapped to wrong columns, causing RAG models to confidently invert financial reports and legal contract numbers. | Production Fix: Replace text-based chunking with layout-aware vision-OCR parsers that reconstruct multi-column layouts and tables into structured Markdown tables prior to vector embedding.</description>
     </item>
