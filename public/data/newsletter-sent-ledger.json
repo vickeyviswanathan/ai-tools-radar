@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-24",
+  "lastUpdatedDate": "2026-11-25",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -17,7 +17,8 @@
     "sim-swap-esim-hijack-scam",
     "customer-care-screen-share-hijack",
     "esim-5g-upgrade-hijack",
-    "fastag-blacklist-panic"
+    "fastag-blacklist-panic",
+    "stock-market-whatsapp-ipo-group"
   ],
   "sentRealityIds": [
     4,
@@ -36,7 +37,8 @@
     1,
     12,
     10,
-    9
+    9,
+    17
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -55,7 +57,8 @@
     "radare2",
     "Duix Avatar",
     "diffusionbee stable diffusion ui",
-    "Auto Photoshop StableDiffusion Plugin"
+    "Auto Photoshop StableDiffusion Plugin",
+    "SwarmUI"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -74,7 +77,8 @@
     "Britain secures commercial fridges from cyberattack in secret operation",
     "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
     "Delhi Police bust pan-India network supplying bank accounts for cyber fraud; one held",
-    "CPI | CrowdStrike to Acquire Zscaler in $43.9 Billion Cybersecurity Deal"
+    "CPI | CrowdStrike to Acquire Zscaler in $43.9 Billion Cybersecurity Deal",
+    "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation"
   ],
   "sentQuickHitTitles": [
     "Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned",
@@ -100,6 +104,9 @@
     "India's cyber security agency Cert-IN flags payment fraud in govt-linked platforms",
     "One cyberattack, thousands of claims: Could a cloud outage overwhelm India's insurance industry?",
     "Chainflip Hack : $12M Stolen In Bitcoin, Ethereum And Stablecoins, 10% Bounty Offered",
-    "RBI discusses with NBFCs, HFCs the need to strengthen cybersecurity, manage IT risks and fair practices better"
+    "RBI discusses with NBFCs, HFCs the need to strengthen cybersecurity, manage IT risks and fair practices better",
+    "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+    "US sues to seize $1.1 billion in crypto stolen by North Korean hackers",
+    "Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold"
   ]
 }
