@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-25",
+  "lastUpdatedDate": "2026-11-26",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -18,7 +18,8 @@
     "customer-care-screen-share-hijack",
     "esim-5g-upgrade-hijack",
     "fastag-blacklist-panic",
-    "stock-market-whatsapp-ipo-group"
+    "stock-market-whatsapp-ipo-group",
+    "money-mule-bank-account-rental"
   ],
   "sentRealityIds": [
     4,
@@ -38,7 +39,8 @@
     12,
     10,
     9,
-    17
+    17,
+    8
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -58,7 +60,8 @@
     "Duix Avatar",
     "diffusionbee stable diffusion ui",
     "Auto Photoshop StableDiffusion Plugin",
-    "SwarmUI"
+    "SwarmUI",
+    "OpenMontage"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -78,7 +81,8 @@
     "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
     "Delhi Police bust pan-India network supplying bank accounts for cyber fraud; one held",
     "CPI | CrowdStrike to Acquire Zscaler in $43.9 Billion Cybersecurity Deal",
-    "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation"
+    "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
+    "Retailers face rising AI cyberattack threat ahead of Black Friday, many uninsured"
   ],
   "sentQuickHitTitles": [
     "Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned",
@@ -107,6 +111,9 @@
     "RBI discusses with NBFCs, HFCs the need to strengthen cybersecurity, manage IT risks and fair practices better",
     "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
     "US sues to seize $1.1 billion in crypto stolen by North Korean hackers",
-    "Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold"
+    "Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold",
+    "'Digital Dacoity': CJI Surya Kant Warns Courts Against Emerging AI Threats, Cyber Fraud",
+    "RBI governor asks NBFCs and housing finance companies to strengthen cybersecurity oversight",
+    "Bithumb Says October Hack Exposed Passports, Bank Accounts and Wallet Addresses"
   ]
 }
