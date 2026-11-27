@@ -1,6 +1,6 @@
 {
   "https://cipherati.com/": {
-    "hash": "a69bcad9d3556bf1",
+    "hash": "af7be20feeb2aa7a",
     "lastmod": "2026-11-27"
   },
   "https://cipherati.com/ai-realities.html": {
@@ -8,7 +8,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/ai-tools.html": {
-    "hash": "59c9c0e434dbf9b5",
+    "hash": "5c4d3f5833931ed9",
     "lastmod": "2026-11-27"
   },
   "https://cipherati.com/compare/autogpt-vs-dify.html": {
@@ -272,11 +272,11 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/cybersecurity-news.html": {
-    "hash": "4c252087a380aa55",
+    "hash": "a9c37d2f689eccc3",
     "lastmod": "2026-11-27"
   },
   "https://cipherati.com/newsletter/today.html": {
-    "hash": "526fc66079679fec",
+    "hash": "8e3386f9c86f47f2",
     "lastmod": "2026-11-27"
   },
   "https://cipherati.com/poster.html": {
@@ -844,8 +844,8 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/hyperframes.html": {
-    "hash": "e8ab7acd0560cb46",
-    "lastmod": "2026-11-24"
+    "hash": "e1bfb355165db0bb",
+    "lastmod": "2026-11-27"
   },
   "https://cipherati.com/tools/hypit.html": {
     "hash": "8a8c3ac48f0c55a2",
@@ -1271,6 +1271,10 @@
     "hash": "3f250735e56604d0",
     "lastmod": "2026-11-13"
   },
+  "https://cipherati.com/tools/qwen-2511-flux-2-klein.html": {
+    "hash": "99ac3a05f80e3bc3",
+    "lastmod": "2026-11-27"
+  },
   "https://cipherati.com/tools/qwen-code.html": {
     "hash": "eeaac26d5673a0d8",
     "lastmod": "2026-11-13"
@@ -1288,7 +1292,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/rea-video.html": {
-    "hash": "971f9e1d7689ccc2",
+    "hash": "995775dac8fb2172",
     "lastmod": "2026-11-27"
   },
   "https://cipherati.com/tools/rea.html": {
@@ -1416,8 +1420,8 @@
     "lastmod": "2026-11-24"
   },
   "https://cipherati.com/tools/trendradar.html": {
-    "hash": "190f8d379ba926d2",
-    "lastmod": "2026-11-26"
+    "hash": "a605cc4814639f49",
+    "lastmod": "2026-11-27"
   },
   "https://cipherati.com/tools/trivy.html": {
     "hash": "079997c20adde102",
