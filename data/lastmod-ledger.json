@@ -1,15 +1,15 @@
 {
   "https://cipherati.com/": {
-    "hash": "248fb4197d05d1c1",
-    "lastmod": "2026-11-26"
+    "hash": "a69bcad9d3556bf1",
+    "lastmod": "2026-11-27"
   },
   "https://cipherati.com/ai-realities.html": {
     "hash": "5fec507a401efc99",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/ai-tools.html": {
-    "hash": "1b68aacb510b0989",
-    "lastmod": "2026-11-26"
+    "hash": "59c9c0e434dbf9b5",
+    "lastmod": "2026-11-27"
   },
   "https://cipherati.com/compare/autogpt-vs-dify.html": {
     "hash": "97d2cf600a666d38",
@@ -272,12 +272,12 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/cybersecurity-news.html": {
-    "hash": "27b038a785c682ab",
-    "lastmod": "2026-11-26"
+    "hash": "4c252087a380aa55",
+    "lastmod": "2026-11-27"
   },
   "https://cipherati.com/newsletter/today.html": {
-    "hash": "f89b81420bb221c6",
-    "lastmod": "2026-11-26"
+    "hash": "526fc66079679fec",
+    "lastmod": "2026-11-27"
   },
   "https://cipherati.com/poster.html": {
     "hash": "0dacff9eac90c1f9",
@@ -1112,8 +1112,8 @@
     "lastmod": "2026-11-24"
   },
   "https://cipherati.com/tools/nuwa-skill.html": {
-    "hash": "e8c27f2bbd047d78",
-    "lastmod": "2026-11-26"
+    "hash": "f1cfe12de6763d73",
+    "lastmod": "2026-11-27"
   },
   "https://cipherati.com/tools/nvidia-garak.html": {
     "hash": "5f99ec3a81b91873",
@@ -1288,8 +1288,8 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/rea-video.html": {
-    "hash": "3d976236b08639e6",
-    "lastmod": "2026-11-26"
+    "hash": "971f9e1d7689ccc2",
+    "lastmod": "2026-11-27"
   },
   "https://cipherati.com/tools/rea.html": {
     "hash": "f5be4096ed30171f",
@@ -1478,6 +1478,10 @@
   "https://cipherati.com/tools/vs-code-with-in-built-ai-agents.html": {
     "hash": "b53fda149fb9f6c3",
     "lastmod": "2026-11-13"
+  },
+  "https://cipherati.com/tools/wan2-2-14b-fast.html": {
+    "hash": "1f827bcdeff6989a",
+    "lastmod": "2026-11-27"
   },
   "https://cipherati.com/tools/wazuh.html": {
     "hash": "e971a9d098eb3d9d",
