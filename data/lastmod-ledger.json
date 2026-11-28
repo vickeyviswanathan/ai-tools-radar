@@ -1,6 +1,6 @@
 {
   "https://cipherati.com/": {
-    "hash": "24cc5d0f69f026be",
+    "hash": "d31b23f203b3dff2",
     "lastmod": "2026-11-28"
   },
   "https://cipherati.com/ai-realities.html": {
@@ -8,7 +8,7 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/ai-tools.html": {
-    "hash": "13f5fb58e3092778",
+    "hash": "5f7dc3c5613f69bf",
     "lastmod": "2026-11-28"
   },
   "https://cipherati.com/compare/autogpt-vs-dify.html": {
@@ -272,11 +272,11 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/cybersecurity-news.html": {
-    "hash": "8c74f1e66fb579d8",
+    "hash": "5d2ed997bebf9db5",
     "lastmod": "2026-11-28"
   },
   "https://cipherati.com/newsletter/today.html": {
-    "hash": "4ef9be7c5eac782f",
+    "hash": "32d64f6636375188",
     "lastmod": "2026-11-28"
   },
   "https://cipherati.com/poster.html": {
@@ -1080,8 +1080,12 @@
     "lastmod": "2026-11-14"
   },
   "https://cipherati.com/tools/moss-ttsd.html": {
-    "hash": "ce993d0adb416b67",
-    "lastmod": "2026-11-24"
+    "hash": "c4a6497dc02a8124",
+    "lastmod": "2026-11-28"
+  },
+  "https://cipherati.com/tools/mova.html": {
+    "hash": "7ec6ba60c0bb76f7",
+    "lastmod": "2026-11-28"
   },
   "https://cipherati.com/tools/ms-swift.html": {
     "hash": "8da519add07b5948",
@@ -1112,7 +1116,7 @@
     "lastmod": "2026-11-24"
   },
   "https://cipherati.com/tools/nuwa-skill.html": {
-    "hash": "b828951e0c5b8d10",
+    "hash": "2993f6634cb570c0",
     "lastmod": "2026-11-28"
   },
   "https://cipherati.com/tools/nvidia-garak.html": {
@@ -1288,8 +1292,8 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/tools/rea-video.html": {
-    "hash": "971f9e1d7689ccc2",
-    "lastmod": "2026-11-27"
+    "hash": "4040124d7a4415c8",
+    "lastmod": "2026-11-28"
   },
   "https://cipherati.com/tools/rea.html": {
     "hash": "f5be4096ed30171f",
