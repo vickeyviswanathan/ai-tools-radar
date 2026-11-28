@@ -1,15 +1,15 @@
 {
   "https://cipherati.com/": {
-    "hash": "933473826384bdb3",
-    "lastmod": "2026-11-27"
+    "hash": "24cc5d0f69f026be",
+    "lastmod": "2026-11-28"
   },
   "https://cipherati.com/ai-realities.html": {
     "hash": "5fec507a401efc99",
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/ai-tools.html": {
-    "hash": "ca190a7cfbdfd63b",
-    "lastmod": "2026-11-27"
+    "hash": "13f5fb58e3092778",
+    "lastmod": "2026-11-28"
   },
   "https://cipherati.com/compare/autogpt-vs-dify.html": {
     "hash": "97d2cf600a666d38",
@@ -272,12 +272,12 @@
     "lastmod": "2026-11-13"
   },
   "https://cipherati.com/cybersecurity-news.html": {
-    "hash": "c0703ceae290a4e7",
-    "lastmod": "2026-11-27"
+    "hash": "8c74f1e66fb579d8",
+    "lastmod": "2026-11-28"
   },
   "https://cipherati.com/newsletter/today.html": {
-    "hash": "6e639771a5b1b9e2",
-    "lastmod": "2026-11-27"
+    "hash": "4ef9be7c5eac782f",
+    "lastmod": "2026-11-28"
   },
   "https://cipherati.com/poster.html": {
     "hash": "0dacff9eac90c1f9",
@@ -1112,8 +1112,8 @@
     "lastmod": "2026-11-24"
   },
   "https://cipherati.com/tools/nuwa-skill.html": {
-    "hash": "abb94f556b762ae9",
-    "lastmod": "2026-11-27"
+    "hash": "b828951e0c5b8d10",
+    "lastmod": "2026-11-28"
   },
   "https://cipherati.com/tools/nvidia-garak.html": {
     "hash": "5f99ec3a81b91873",
@@ -1270,10 +1270,6 @@
   "https://cipherati.com/tools/qdrant.html": {
     "hash": "3f250735e56604d0",
     "lastmod": "2026-11-13"
-  },
-  "https://cipherati.com/tools/qwen-2511-flux-2-klein.html": {
-    "hash": "99ac3a05f80e3bc3",
-    "lastmod": "2026-11-27"
   },
   "https://cipherati.com/tools/qwen-code.html": {
     "hash": "eeaac26d5673a0d8",

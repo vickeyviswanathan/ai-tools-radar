@@ -1,5 +1,5 @@
 {
-  "lastUpdatedDate": "2026-11-27",
+  "lastUpdatedDate": "2026-11-28",
   "sentScamIds": [
     "ai-deepfake-voice-clone",
     "electricity-bill-disconnection-sms",
@@ -20,7 +20,8 @@
     "fastag-blacklist-panic",
     "stock-market-whatsapp-ipo-group",
     "money-mule-bank-account-rental",
-    "whatsapp-wedding-card-apk"
+    "whatsapp-wedding-card-apk",
+    "cyber-fraud-recovery-agent-scam"
   ],
   "sentRealityIds": [
     4,
@@ -42,7 +43,8 @@
     9,
     17,
     8,
-    2
+    2,
+    3
   ],
   "sentToolNames": [
     "X AnyLabeling",
@@ -64,7 +66,8 @@
     "Auto Photoshop StableDiffusion Plugin",
     "SwarmUI",
     "OpenMontage",
-    "jaaz"
+    "jaaz",
+    "Voicebox"
   ],
   "sentLeadTitles": [
     "Cybersecurity Is Becoming Central to Trust in India's Fintech Sector",
@@ -86,7 +89,8 @@
     "CPI | CrowdStrike to Acquire Zscaler in $43.9 Billion Cybersecurity Deal",
     "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
     "Retailers face rising AI cyberattack threat ahead of Black Friday, many uninsured",
-    "'Imported' for cyber fraud: 164 foreigners rescued, Malaysian arrested - INDIA - GENERAL"
+    "'Imported' for cyber fraud: 164 foreigners rescued, Malaysian arrested - INDIA - GENERAL",
+    "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access"
   ],
   "sentQuickHitTitles": [
     "Lighter Crypto Exchange Traders Hacked: Keys Computed From Public Signatures, $5M Returned",
@@ -121,6 +125,9 @@
     "Bithumb Says October Hack Exposed Passports, Bank Accounts and Wallet Addresses",
     "FIFA targeted in cyberattack, hackers access personal and business data",
     "EXCLUSIVE: StanChart's crypto unit Zodia Custody hit by security breach, some client data exposed",
-    "7th Suspect Arrested From Bihar In Cyber Fraud Case In Assam"
+    "7th Suspect Arrested From Bihar In Cyber Fraud Case In Assam",
+    "Can a Crypto Wallet Keep Funds Safe Even If Its Provider Gets Hacked?",
+    "1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
+    "India Inc tightens third-party vendor checks over data breach liability ahead of DPDP Act deadline"
   ]
 }
